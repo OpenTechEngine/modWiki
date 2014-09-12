@@ -1,0 +1,672 @@
+Scripting basics
+================
+
+<div id="attention" class="boilerplate metadata" style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa">
+**This page is in urgent need of attention because: *Unfinished sections***
+
+If you disagree with this, please explain why on [its talk page](http://web.archive.org/web/20080719222243/http://www.modwiki.net/wiki/Talk:Scripting_basics).
+
+</div>
+[SCRIPT\_(file\_format).html SCRIPT] files define a scripted sequence of events, the behavior of weapons, or the AI of actors. The files themselves are ascii (plain text) and can be edited/created in a text editor like notepad.
+
+Scripts use a proprietary language similar to C++, Java, and other languages but it's very rudimentary and nowhere near as complex.
+
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                                                                                    
+ Contents                                                                                                                                                                
+ --------                                                                                                                                                                
+                                                                                                                                                                         
+ </div>                                                                                                                                                                  
+ -   [Scripting\_basics.html\#Basics\_of\_Programming <span class="tocnumber">1</span> <span class="toctext">Basics of Programming</span>]                               
+ -   [Scripting\_basics.html\#General\_Syntax <span class="tocnumber">2</span> <span class="toctext">General Syntax</span>]                                              
+ -   [Scripting\_basics.html\#Getting\_started <span class="tocnumber">3</span> <span class="toctext">Getting started</span>]                                            
+ -   [Scripting\_basics.html\#Variables <span class="tocnumber">4</span> <span class="toctext">Variables</span>]                                                         
+     -   [Scripting\_basics.html\#Declaration <span class="tocnumber">4.1</span> <span class="toctext">Declaration</span>]                                               
+     -   [Scripting\_basics.html\#Operations <span class="tocnumber">4.2</span> <span class="toctext">Operations</span>]                                                 
+ -   [Scripting\_basics.html\#Logical\_structures <span class="tocnumber">5</span> <span class="toctext">Logical structures</span>]                                      
+     -   [Scripting\_basics.html\#If\_structure <span class="tocnumber">5.1</span> <span class="toctext">If structure</span>]                                            
+     -   [Scripting\_basics.html\#Logical\_Operations <span class="tocnumber">5.2</span> <span class="toctext">Logical Operations</span>]                                
+     -   [Scripting\_basics.html\#While\_structure <span class="tocnumber">5.3</span> <span class="toctext">While structure</span>]                                      
+     -   [Scripting\_basics.html\#For\_structure <span class="tocnumber">5.4</span> <span class="toctext">For structure</span>]                                          
+ -   [Scripting\_basics.html\#Functions\_or\_Methods <span class="tocnumber">6</span> <span class="toctext">Functions or Methods</span>]                                 
+     -   [Scripting\_basics.html\#Declaration\_2 <span class="tocnumber">6.1</span> <span class="toctext">Declaration</span>]                                            
+         -   [Scripting\_basics.html\#Simple <span class="tocnumber">6.1.1</span> <span class="toctext">Simple</span>]                                                   
+         -   [Scripting\_basics.html\#Using\_parameters <span class="tocnumber">6.1.2</span> <span class="toctext">Using parameters</span>]                              
+         -   [Scripting\_basics.html\#Return\_values <span class="tocnumber">6.1.3</span> <span class="toctext">Return values</span>]                                    
+     -   [Scripting\_basics.html\#More\_examples <span class="tocnumber">6.2</span> <span class="toctext">More examples</span>]                                          
+ -   [Scripting\_basics.html\#Entities <span class="tocnumber">7</span> <span class="toctext">Entities</span>]                                                           
+     -   [Scripting\_basics.html\#The\_calling <span class="tocnumber">7.1</span> <span class="toctext">The calling</span>]                                              
+     -   [Scripting\_basics.html\#The\_other\_way\_to\_reference <span class="tocnumber">7.2</span> <span class="toctext">The other way to reference</span>]             
+     -   [Scripting\_basics.html\#sys <span class="tocnumber">7.3</span> <span class="toctext">sys</span>]                                                               
+     -   [Scripting\_basics.html\#Spawning\_entities <span class="tocnumber">7.4</span> <span class="toctext">Spawning entities</span>]                                  
+     -   [Scripting\_basics.html\#Example <span class="tocnumber">7.5</span> <span class="toctext">Example</span>]                                                       
+     -   [Scripting\_basics.html\#Overview\_of\_script\_events <span class="tocnumber">7.6</span> <span class="toctext">Overview of script events</span>]                
+ -   [Scripting\_basics.html\#Threads <span class="tocnumber">8</span> <span class="toctext">Threads</span>]                                                             
+     -   [Scripting\_basics.html\#Special\_uses <span class="tocnumber">8.1</span> <span class="toctext">Special uses</span>]                                            
+ -   [Scripting\_basics.html\#Namespaces <span class="tocnumber">9</span> <span class="toctext">Namespaces</span>]                                                       
+ -   [Scripting\_basics.html\#Objects <span class="tocnumber">10</span> <span class="toctext">Objects</span>]                                                            
+     -   [Scripting\_basics.html\#Working\_on\_objects <span class="tocnumber">10.1</span> <span class="toctext">Working on objects</span>]                              
+     -   [Scripting\_basics.html\#Creating\_your\_own\_script\_object <span class="tocnumber">10.2</span> <span class="toctext">Creating your own script object</span>]  
+ -   [Scripting\_basics.html\#Advanced\_aspects <span class="tocnumber">11</span> <span class="toctext">Advanced aspects</span>]                                         
+     -   [Scripting\_basics.html\#virtual\_functions <span class="tocnumber">11.1</span> <span class="toctext">virtual functions</span>]                                 |
+
+Basics of Programming
+---------------------
+
+Programming and scripting are essentially the same task. The only distinguishable difference between the two is scripting is instructing a specific program to perform a task where as programming involves writing a program itself.
+
+The general concept behind scripting is the same and so, in order to script you need to learn to program. But, it's not nearly as scary as it sounds.
+
+When you are scripting you are telling objects to perform certain tasks. But these objects don’t understand English. You need to talk to them in a manner that they can understand.
+
+For the time being we will relate to the way people perform tasks. Let’s say you want to open a door. We all know how to do so but this simple task can be broken down into a series of basic steps.
+
+**Opening a Door**
+
+1.  Extend your hand to reach the door.
+2.  Grasp the knob.
+3.  Turn the knob.
+4.  Pull the knob.
+
+ To even make things worse those basic steps can be broken down even further.
+
+**Extend your hand to reach the door.**
+
+1.  Raise your arm.
+2.  Rotate your forearm.
+3.  Open your hand.
+
+ You can see how even a simple task like opening a door is actually comprised of a lengthy list of basic actions. This is the basis of scripting in Doom 3 and programming in general. You cannot just tell a machine to run. You have to tell all its moving parts to perform basic actions.
+
+General Syntax
+--------------
+
+The following is a list of special characters with a special meaning; they need to be remembered.
+
+;  
+Follows all commands. More than one command may exist on a single line. Informs the engine that the following is the end of a command.
+
+<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`print`</font>`;`
+
+//  
+Comment. Declares the text from this point to the end of the line a comment and is not executed. Can also be used to null out a line of code for debugging.
+
+<font color="#339900">`// This text will not be executed. `</font>
+` `
+
+/\* and \*/  
+Comment. Declares the text from /\* to \*/ a comment and the text contained therein is not executed. Can also be used to null out a portion of code for debugging.
+
+*<font color="#339900">`/*` `This` `text` `will` `not` `be` `executed.` `*/`</font>*
+
+Getting started
+---------------
+
+First of all, it is recommended to use a good editor with syntax highlighting. This allows you to see typing errors because the highlighted color changes if the editor doesn't know your input. To find a suitable text editor, see [SCRIPT\_(file\_format).html\#Editing\_tools tools for editing script files].
+
+Now to start with something, we will make a small and easy level script. These are the easiest to start with and make a nice introduction to scripting. What do we need?
+
+-   A map with a player spawn point in it. (Use anything you have, be it a simple box with a light in it.)
+-   A script file with the same name as the map, placed in the maps folder.
+
+Open the map and create a new brush. Select it, then open the "Entities" inspector/window. Now add a key "call" with the value "main". What this means for this example is that a function named "main" will be called when the map loads.
+
+Now open the script file and paste this code fragment in it.
+
+<font color="#0000ff">`void`</font>` main`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`    `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`print`</font><font color="#000000">`(`</font><font color="#666666">`"^1Hello "`</font><font color="#000000">`)`</font>`;`
+`    `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font><font color="#666666">`"^3World!"`</font><font color="#000000">`)`</font>`;`
+<font color="#000000">`}`</font>
+
+If you now run the map, open your console by pressing Ctrl + Alt + ~. If all went well, there should be a line with the text "Hello World!" in two different colors. This example might be far from impressive, but it should be enough to let you experiment once you have read more about scripting.
+
+With that out of the way, let's look at some theory first. If you already know C or some other procedure-based language, feel free to quickly read the following 2 parts. If you are completely new to it, these sections should teach you the basics.
+
+Variables
+---------
+
+A variable is a container used to store a value. Think of it as an alias used to refer to a value without referencing the value directly.
+
+### Declaration
+
+Before a variable can be used it must be declared for a specific [Data\_types.html data type]. By assigning a data type you are defining what kind of values can be stored in a specific variable.
+
+Say we want to create a variable called "foo" and store a number in it. The variable declaration would look like this:
+
+<font color="#0000ff">`float`</font>` foo;`
+
+If you would need more then one variable of the same type, you could write
+
+<font color="#0000ff">`float`</font>` foo1;`
+<font color="#0000ff">`float`</font>` foo2;`
+
+like this:
+
+<font color="#0000ff">`float`</font>` foo1, foo2;`
+
+To actually put a number in it, you would do this:
+
+`foo = `<font color="#0000dd">`2`</font>`;`
+
+More examples of can be found on the [Data\_types.html Data types] page, see the common types.
+
+Now, how to put variables to use? The nice thing is that you can write the variable's name where you would normally put a value of that type. This way, you can use the same code over and over without changing that line of code. You just assign a new value to the variable instead of copying your code and changing the value there.
+
+### Operations
+
+Now you basically know what a variable does. However, the assignment operation is just one of many.
+
+Imagine that you want to make a counter. You would first need to check the old value and then assign the new one to it. Of course, this would take a lot of work.
+
+Luckily, we can do basic operations with values. They can be as easy as this:
+
+<font color="#0000dd">`1`</font>` + `<font color="#0000dd">`1`</font>
+
+A few of the supported operations are:
+
+-   \*; +
+
+  
+Addition
+
+-   \*; -
+
+  
+Subtraction
+
+-   \*; \*
+
+  
+Multiplication
+
+-   \*; /
+
+  
+Division
+
+-   \*; %
+
+  
+Modulo (Results in the remainder of a division)
+
+Since an operation results in a value of the same type, you can store the results of an operation in a variable:
+
+`foo = `<font color="#0000dd">`1`</font>` + `<font color="#0000dd">`1`</font>`;`
+
+Now back to the counter example:
+
+Remember that a variable is an alias to a value? That way, we can use a variable with an operation:
+
+`foo = foo + `<font color="#0000dd">`1`</font>`;`
+
+Variables are especially useful in functions, so make sure you understand this part before going to that section.
+
+Logical structures
+------------------
+
+So far we explained how to define variables and do a little arithmetic with them. While this is certainly useful for making counters, those counters can never be put to use if you couldn't compare their value against another to do something. This is where logical structures come in. They allow you to exclude or repeat certain instructions based on a logical condition.
+
+We'll start with a basic one, the **if** structure.
+
+### If structure
+
+The name says all: "**if** the condition is true, **do** ...". Take the following code for example:
+
+<font color="#0000ff">`boolean`</font>` condition1 = true;`
+<font color="#0000ff">`boolean`</font>` condition2 = false;`
+<font color="#0000ff">`float`</font>` var1 = `<font color="#0000dd">`0`</font>`;`
+` `
+<font color="#0000ff">`if`</font><font color="#000000">`(`</font>` condition1 `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`    var1 = var1 + `<font color="#0000dd">`2`</font>`;`
+<font color="#000000">`}`</font>
+<font color="#0000ff">`if`</font><font color="#000000">`(`</font>` condition2 `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`    var1 = var1 - `<font color="#0000dd">`2`</font>`;`
+<font color="#000000">`}`</font>
+
+Seeing how only *condition1* is set to true, only the statements inside the first **if** structure will be executed. In this case, *var1* will be set to '2'. Of course, using static variables as conditions is not of great use because we could as well comment out all statements for which the condition was false. To really harness the power of logical structures we need logical operations, which we'll discuss next.
+
+### Logical Operations
+
+Logical operators are symbols which return a boolean value, just like the arithmetic operators return a number. However, these operators work on more than just **float**-type variables. See the list below for details, the data types the operators work on are between parentheses.
+
+-   \*; ==
+
+  
+Equals (float, boolean, string?, entity?)
+
+-   \*; \<
+
+  
+Less than (float)
+
+-   \*; \<=
+
+  
+Lesser or equals (float)
+
+-   \*; \>
+
+  
+Greater than (float)
+
+-   \*; \>=
+
+  
+Greater or equals (float)
+
+-   \*; !
+
+  
+Negation (boolean)
+
+-   \*; &&
+
+  
+Logical And (boolean)
+
+-   \*; ||
+
+  
+Logical Or (boolean)
+
+Here are some examples:
+
+<font color="#0000ff">`float`</font>` var1 = `<font color="#0000dd">`5`</font>`;`
+<font color="#0000ff">`float`</font>` var2 = `<font color="#0000dd">`10`</font>`;`
+<font color="#0000ff">`float`</font>` var3 = `<font color="#0000dd">`5`</font>`;`
+` `
+<font color="#0000ff">`if`</font><font color="#000000">`(`</font>` var1 == var3 `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`    `<font color="#339900">`// Execute statements`</font>
+<font color="#000000">`}`</font>
+<font color="#0000ff">`if`</font><font color="#000000">`(`</font>` var1 >= var2 `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`    `<font color="#339900">`// Will never get executed`</font>
+<font color="#000000">`}`</font>
+<font color="#0000ff">`if`</font><font color="#000000">`(`</font>` var1 <= var2 && var3 <= var2 `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`    `<font color="#339900">`// Execute this one as well`</font>
+<font color="#000000">`}`</font>
+` `
+<font color="#339900">`// etc. `</font>
+` `
+
+Also note that you can mix arithmetic and boolean operators, for example:
+
+` var1 + 5 == var2`
+
+The script compiler will process *var1* + 5 first and the compare the float values. Because they're both 10, the resulting value will be **true**.
+
+### While structure
+
+A *while* structure executes a set of instructions as long as a given statement is true. It analyses conditions the same way *if* structures do. For example:
+
+` `
+<font color="#0000ff">`float`</font>` myVar = `<font color="#0000dd">`0`</font>`;`
+` `
+<font color="#0000ff">`while`</font>` `<font color="#000000">`(`</font>`myVar < `<font color="#0000dd">`10`</font><font color="#000000">`)`</font>
+<font color="#000000">`{`</font>
+`   `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`print`</font><font color="#000000">`(`</font><font color="#666666">`"myVar: "`</font>` + myVar + `<font color="#666666">`"`**<font color="#666666">`\n`</font>**`"`</font><font color="#000000">`)`</font>`;`
+`   myVar++;`
+<font color="#000000">`}`</font>
+
+myVar starts out with a value of 0. As long as its value is smaller than 10, it will be displayed in the console, then incremented by 1.
+
+ The *while* loop will do two things:
+
+-   First, it will print the text "myVar:" followed by myVar's value, then start a new line.
+-   Then, it will add 1 to myVar's value. The "++" after the variable name means the variable will be incremented by 1. (This is like typing *myVar = myVar + 1*.)
+
+### For structure
+
+This structure is the odd one because it combines the repeat condition of the **while** structure with the initializer statements, the condition and the increment combined.
+
+TODO: elaborate use and examples
+
+Functions or Methods
+--------------------
+
+Functions are used to group certain statements and let you reuse them in other parts of the code.
+
+You will use them for one of the following reasons:
+
+-   They can just group some statements so that you don't need to copy/paste them over again.
+-   They group statements which will need to be called by a map entity.
+-   They can execute some statements which needs different input values from time to time. (The input values will be called *parameters*, read on for more.)
+-   They can execute a few statements to calculate or generate one value.
+
+### Declaration
+
+#### Simple
+
+Just like a variable needs a declaration, a function needs to be declared to be used by the script parser. We will start with the first use, grouping statements. (Which is the easiest) You should be able to figure out what the folowing function does as a whole.
+
+<font color="#0000ff">`void`</font>` printHello`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`    `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`print`</font><font color="#000000">`(`</font><font color="#666666">`"Hello "`</font><font color="#000000">`)`</font>`;`
+`    `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font><font color="#666666">`"World"`</font><font color="#000000">`)`</font>`;`
+<font color="#000000">`}`</font>
+
+Let's take a look at it in detail:
+
+-   The first line defines the return type, function's name and parameters. (More on those later on.)
+-   The function consists of everything enclosed in the first set of curly brackets ('{' and '}') after the function's definition.
+
+These functions can also be called by map entitities. Just give them a key "call" with your function's name as a value.
+
+#### Using parameters
+
+Another reason to use funtions is reusability. What this means is that you can reuse parts of your script instead of writing it again. Reusing code helps in reducing mistakes since you only have to fix a mistake once. If you would have copied and pasted the code, you might need to fix it multiple times.
+
+To make a function be reusable, it will need to operate on different things. So, we'll simply put those in variables and feed those to the function. You could define all variables globally, but functions have a nicer way of doing things using *parameters*. Example:
+
+` `
+<font color="#339900">`// This function makes an entity rotate around the Z axis, it takes spinTime seconds to complete one turn`</font>
+<font color="#0000ff">`void`</font>` spinZ`<font color="#000000">`(`</font><font color="#0000ff">`float`</font>` spinTime, `<font color="#0000ff">`entity`</font>` target`<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`    target.`<font color="#ff0000">`time`</font><font color="#000000">`(`</font>`spinTime`<font color="#000000">`)`</font>`;   `<font color="#339900">`// Set the time each spin takes in this example`</font>
+`    target.`<font color="#ff0000">`rotate`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>` `<font color="#0000dd">`90`</font>`'`<font color="#000000">`)`</font>`; `<font color="#339900">`// Rotate around the Z axis.`</font>
+<font color="#000000">`}`</font>
+` `
+<font color="#0000ff">`void`</font>` main`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`    spinZ`<font color="#000000">`(`</font><font color="#0000dd">`5`</font>`,  `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`getEntity`</font><font color="#000000">`(`</font><font color="#666666">`"func_mover_1"`</font><font color="#000000">`)`</font><font color="#000000">`)`</font>`;`
+`    spinZ`<font color="#000000">`(`</font><font color="#0000dd">`10`</font>`, `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`getEntity`</font><font color="#000000">`(`</font><font color="#666666">`"func_mover_2"`</font><font color="#000000">`)`</font><font color="#000000">`)`</font>`;`
+<font color="#000000">`}`</font>
+
+As you can see, the first line now can have one or more *variable* definitions between the round brackets. The calling statements set the values accordingly.
+
+#### Return values
+
+Finally the last reason: calculating or choosing values. Sometimes you will need to do some math in several places, or check a few conditions. Wouldn't it be handy to place them in a function and get one nice value instead of duplicating the code everywhere?
+
+Return values let you do that -- the function does its magic and returns one single value. Here is an example:
+
+` `
+<font color="#339900">`// Returns true when entities are near each other`</font>
+<font color="#0000ff">`boolean`</font>` isNear`<font color="#000000">`(`</font><font color="#0000ff">`entity`</font>` first, `<font color="#0000ff">`entity`</font>` second`<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`    `<font color="#0000ff">`float`</font>` dist = first.`<font color="#ff0000">`distanceTo`</font><font color="#000000">`(`</font>` second `<font color="#000000">`)`</font>`; `<font color="#339900">`// Returns their distance in units`</font>
+`    `<font color="#0000ff">`boolean`</font>` near = `<font color="#000000">`(`</font>`dist < `<font color="#0000dd">`20`</font><font color="#000000">`)`</font>`;`
+`    return near;`
+<font color="#000000">`}`</font>
+` `
+<font color="#0000ff">`void`</font>` main`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`    `<font color="#0000ff">`entity`</font>` ent1 = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`getEntity`</font><font color="#000000">`(`</font><font color="#666666">`"func_mover_1"`</font><font color="#000000">`)`</font>`;`
+`    `<font color="#339900">`// Does the same as the statement above, but for "func_mover_2"`</font>
+`    `<font color="#0000ff">`entity`</font>` ent2 = `<font color="#000055">`$func_mover_`<font color="#0000dd">`2`</font></font>`;`
+` `
+`    `<font color="#0000ff">`if`</font><font color="#000000">`(`</font>` isNear`<font color="#000000">`(`</font>` ent1, ent2`<font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`        `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font><font color="#666666">`"They are near each other"`</font><font color="#000000">`)`</font>`;`
+`    `<font color="#000000">`}`</font>` `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>
+`        `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font><font color="#666666">`"They are away from each other"`</font><font color="#000000">`)`</font>`;`
+`    `<font color="#000000">`}`</font>
+<font color="#000000">`}`</font>
+
+Note that this is just an example: it is only written to show how return values work. Also take a look at the entites: this example shows the use of **$entityname** and the **if**/**else** structure.
+
+### More examples
+
+Here is a somewhat longer example, combining a few of the discussed things.
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+<font color="#0000ff">`boolean`</font>` doorisunlocked;`
+` `
+<font color="#0000ff">`void`</font>` main`<font color="#000000">`(`</font><font color="#000000">`)`</font>
+<font color="#000000">`{`</font>
+` doorisunlocked = `<font color="#0000dd">`0`</font>`; `<font color="#339900">`//initialize to 0=false...not really necessary`</font>
+<font color="#000000">`}`</font>
+` `
+<font color="#0000ff">`void`</font>` func_door_`<font color="#0000dd">`001`</font>`_unlock`<font color="#000000">`(`</font><font color="#000000">`)`</font>
+<font color="#000000">`{`</font>
+` doorisunlocked = `<font color="#0000dd">`1`</font>`; `<font color="#339900">`//set to 1=true`</font>
+<font color="#000000">`}`</font>
+` `
+<font color="#0000ff">`boolean`</font>` doorcheck`<font color="#000000">`(`</font><font color="#000000">`)`</font>
+<font color="#000000">`{`</font>
+` `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>`doorisunlocked`<font color="#000000">`)`</font>
+` `<font color="#000000">`{`</font>
+`  return `<font color="#0000dd">`1`</font>`;`
+` `<font color="#000000">`}`</font>
+` `<font color="#0000ff">`else`</font>
+` `<font color="#000000">`{`</font>
+`  return `<font color="#0000dd">`0`</font>`;`
+` `<font color="#000000">`}`</font>
+<font color="#000000">`}`</font>
+` `
+<font color="#0000ff">`void`</font>` checkdoor`<font color="#000000">`(`</font><font color="#000000">`)`</font>
+<font color="#000000">`{`</font>
+` `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>`doorcheck`<font color="#000000">`(`</font><font color="#000000">`)`</font><font color="#000000">`)`</font>
+` `<font color="#000000">`{`</font>
+`  `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font><font color="#666666">`"door is unlocked"`</font><font color="#000000">`)`</font>`;`
+` `<font color="#000000">`}`</font>
+` `<font color="#0000ff">`else`</font>
+` `<font color="#000000">`{`</font>
+`  `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font><font color="#666666">`"door is still locked"`</font><font color="#000000">`)`</font>`;`
+` `<font color="#000000">`}`</font>
+<font color="#000000">`}`</font>
+
+Entities
+--------
+
+If you play a map, nearly everything you see is actually an entity. They form movable furniture, working machines, weapon, monsters and even the player itself. If they are used in so many places, wouldn't it be logical to have control over them through scripting? The answer is 'yes', of course. You can control entities through scripts, as long as you know their name.
+
+Now all we need is an exact way to "talk" to those entities. That is what **script events** do: send a certain message to an entity, and the entity can do something with it. If you look at them in the script, they look a lot like functions. The only difference is that you always need to specify which entity you are sending 'the message' to. Now let's look at an example, shall we:
+
+<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`setWorldOrigin`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`57`</font>` `<font color="#0000dd">`68`</font>` `<font color="#0000dd">`19`</font>`'`<font color="#000000">`)`</font>`;`
+
+The first part before the dot is the reference to the entity we want to affect. This is called a reference.
+
+In this example we were using an *Immediate reference*.
+
+Immediate references are simple: if you know the name of the entity in the map, then you just stick a $ and write the name.
+
+In this case there would have to be an entity named "my\_entity" in the map.
+
+<div>
+![Image:Etqwsquare\_25.png](images_7_7e_Etqwsquare_25.png "fig:Image:Etqwsquare_25.png") **Note:** Enemy Territory: Quake Wars only:
+
+  
+*(Enemy Territory does not have support for immediate references.)*
+
+</div>
+### The calling
+
+Next, the dot .
+
+It simply indicates that the following will be a function call on the referenced entity.
+
+In this case it's a script event. setWorldOrigin is an event that sets the position of the entity in the world. We won't worry further about this because it's not a functional example.
+
+### The other way to reference
+
+Using a named reference. We can declare a variable as an entity reference.
+
+` `
+<font color="#0000ff">`entity`</font>` myEntityReference;`
+
+Then we'll be able to set it to what we want, reset it to reference another entity, or set it to references returned from functions.
+
+In this case we are going to set it to our pal named "my\_entity" which we know is in the map (theoretically, for this example).
+
+` `
+`myEntityReference = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`getEntity`</font><font color="#000000">`(`</font>` `<font color="#666666">`"my_entity"`</font>` `<font color="#000000">`)`</font>`;`
+
+What sys.getEntity does is look for the entity name we pass in, and returns a reference to it, which we are catching in our own reference.
+
+Now we have our reference set we can call a function on it like in the first example.
+
+` `
+`myEntityReference.`<font color="#ff0000">`setWorldOrigin`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`57`</font>` `<font color="#0000dd">`68`</font>` `<font color="#0000dd">`19`</font>`'`<font color="#000000">`)`</font>`;`
+
+Fantastic.
+
+### sys
+
+In a similar way to accessing entities we can access the system events on the current thread using the sys identifier. It is for events that don't really make much sense being part of an entity, like game functions and utilities.
+
+Looking at the list for Doom 3 [Script\_events\_(Doom\_3).html\#System\_Events Doom 3 System events] we can see there's a lot of sys events.
+
+In this example we call two events via sys:
+
+getTime, which returns the time in seconds since the game started.
+
+println, which prints a line of text to the console.
+
+<font color="#0000ff">`void`</font>` printTime`<font color="#000000">`(`</font><font color="#000000">`)`</font>
+<font color="#000000">`{`</font>
+` `<font color="#0000ff">`float`</font>` tempfloat;`
+` tempfloat = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`getTime`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+` `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font><font color="#666666">`"Current game time is "`</font>` + tempfloat + `<font color="#666666">`" seconds."`</font><font color="#000000">`)`</font>`;`
+<font color="#000000">`}`</font>
+
+You'll see in the first part we stored the game time in a variable, then added it to the string we were creating as the parameter for println.
+
+The scripting system makes it easy to work with strings, you can append other strings, different variables simply with the + operator.
+
+### Spawning entities
+
+(More info on sys.spawn() and an example. See Q4 wiki @ [[1](http://web.archive.org/web/20121115111639/http://www.iddevnet.com/quake4/BasicScriptTutorial)])
+
+### Example
+
+<font color="#0000ff">`void`</font>` moveEntity`<font color="#000000">`(`</font><font color="#0000ff">`entity`</font>` tempentity`<font color="#000000">`)`</font>
+<font color="#000000">`{`</font>
+` `<font color="#0000ff">`vector`</font>` tempvector='-`<font color="#0000dd">`128`</font>` -`<font color="#0000dd">`128`</font>` `<font color="#0000dd">`0`</font>`';`
+` tempentity.`<font color="#ff0000">`moveToPos`</font><font color="#000000">`(`</font>`tempvector`<font color="#000000">`)`</font>`;`
+<font color="#000000">`}`</font>
+<font color="#339900">`//note: the entity must be a func_mover or this won't work.`</font>
+` `
+<font color="#0000ff">`void`</font>` printEntityLocation`<font color="#000000">`(`</font><font color="#0000ff">`entity`</font>` tempentity`<font color="#000000">`)`</font>
+<font color="#000000">`{`</font>
+` `<font color="#0000ff">`vector`</font>` tempvector;`
+` `<font color="#0000ff">`string`</font>` tempstring=`<font color="#666666">`"Entity is at map location: "`</font>`;`
+` tempvector=tempentity.`<font color="#ff0000">`getOrigin`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+` `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font>`tempstring + tempvector`<font color="#000000">`)`</font>`;`
+<font color="#000000">`}`</font>
+` `
+<font color="#339900">`//the following script can use the preceding examples`</font>
+<font color="#0000ff">`void`</font>` main`<font color="#000000">`(`</font><font color="#000000">`)`</font>
+<font color="#000000">`{`</font>` `
+` `<font color="#0000ff">`entity`</font>` funcmover;`
+` funcmover=`<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`getEntity`</font><font color="#000000">`(`</font><font color="#666666">`"func_mover_1"`</font><font color="#000000">`)`</font>`;`
+` printEntityLocation`<font color="#000000">`(`</font>`funcmover`<font color="#000000">`)`</font>`; `<font color="#339900">`//display the original location`</font>
+` moveEntity`<font color="#000000">`(`</font>`funcmover`<font color="#000000">`)`</font>`;`
+` `<font color="#339900">`//now pause so that the game can move the entity using either`</font>
+` `<font color="#339900">`//the following statement to allow just one game frame...`</font>
+` `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`waitFrame`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`; `<font color="#339900">`//so that the mover has moved some, but not all the way.`</font>
+` `<font color="#339900">`//or with this one`</font>
+` `<font color="#339900">`//sys.waitFor(funcmover); //to wait until the entire move is completed.`</font>
+` printEntityLocation`<font color="#000000">`(`</font>`funcmover`<font color="#000000">`)`</font>`; `<font color="#339900">`//display the current location`</font>
+<font color="#000000">`}`</font>
+
+### Overview of script events
+
+A reference of scripting commands (events) can be found on the [Script\_events.html script events] page.
+
+Keep in mind that all commands are case sensitive.
+
+Threads
+-------
+
+In all previous parts of code, we assumed that a called function would always return. What if we call a function which will never end, but still want to run some other code?
+
+Let's take a closer look by means of an example. Suppose we want to make two machines run and write the following code:
+
+` `
+<font color="#0000ff">`void`</font>` runMachine1`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`    `<font color="#0000ff">`vector`</font>` up = '`<font color="#0000dd">`0`</font>` -`<font color="#0000dd">`128`</font>` `<font color="#0000dd">`0`</font>`';`
+`    `<font color="#0000ff">`vector`</font>` down = '`<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>`';`
+`    `<font color="#0000ff">`entity`</font>` part = `<font color="#000055">`$machinemover1`</font>`;`
+`    `<font color="#0000ff">`while`</font><font color="#000000">`(`</font>` `<font color="#0000dd">`1`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`        part .`<font color="#ff0000">`moveToPos`</font><font color="#000000">`(`</font>` up `<font color="#000000">`)`</font>`;`
+`        `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`waitFor`</font><font color="#000000">`(`</font>` part `<font color="#000000">`)`</font>`;`
+`        part.`<font color="#ff0000">`moveToPos`</font><font color="#000000">`(`</font>`down`<font color="#000000">`)`</font>`;`
+`        `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`waitFor`</font><font color="#000000">`(`</font>` part `<font color="#000000">`)`</font>`;`
+`    `<font color="#000000">`}`</font>
+<font color="#000000">`}`</font>
+` `
+<font color="#0000ff">`void`</font>` runMachine2`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`    `<font color="#0000ff">`vector`</font>` up = '-`<font color="#0000dd">`128`</font>` -`<font color="#0000dd">`128`</font>` `<font color="#0000dd">`0`</font>`';`
+`    `<font color="#0000ff">`vector`</font>` down = '-`<font color="#0000dd">`128`</font>` `<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>`';`
+`    `<font color="#0000ff">`entity`</font>` part = `<font color="#000055">`$machinemover1`</font>`;`
+`    `<font color="#0000ff">`while`</font><font color="#000000">`(`</font>` `<font color="#0000dd">`1`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`        part .`<font color="#ff0000">`moveToPos`</font><font color="#000000">`(`</font>` up `<font color="#000000">`)`</font>`;`
+`        `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`waitFor`</font><font color="#000000">`(`</font>` part `<font color="#000000">`)`</font>`;`
+`        part.`<font color="#ff0000">`moveToPos`</font><font color="#000000">`(`</font>`down`<font color="#000000">`)`</font>`;`
+`        `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`waitFor`</font><font color="#000000">`(`</font>` part `<font color="#000000">`)`</font>`;`
+`    `<font color="#000000">`}`</font>
+<font color="#000000">`}`</font>
+` `
+<font color="#0000ff">`void`</font>` main`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`    runMachine1`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+`    runMachine2`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+<font color="#000000">`}`</font>
+
+Making them run for the duration of the map might not be so obvious as it appears. The **while** loop will keep on running. However, this will stop the code for machine 2 to be called because *runMachine1*() is still running. Switching the order of the function calls in the *main* routine is not an option either. So how to make both code blocks execute separated from each other?
+
+That is where [Thread\_(scripting).html threads] come into play. Threads execute code without disturbing the flow of other threads. (Exceptions exist, which will be discussed later.) If we would now call a never-ending function, we would run it in a different thread so the function calling it can still execute other statements.
+
+Doom 3 can't change random parts of code into threads, only functions can be run as a thread. In fact, it is only a matter of putting the **thread** statement in front of a normal function call.
+
+The updated *main* routine for the previous example:
+
+<font color="#0000ff">`void`</font>` main`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`    `<font color="#0000ff">`thread`</font>` runMachine1`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+`    `<font color="#0000ff">`thread`</font>` runMachine2`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+<font color="#000000">`}`</font>
+
+Now both functions run in a separate thread and run happily ever after.
+
+### Special uses
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+TODO: explain threadnames, killThread, thread-ids and terminate.
+
+Namespaces
+----------
+
+These Declare a block which can include functions and variables, avoiding name conflicts. (similar to C++ namespaces)
+
+These are used in Doom 3 to isolate a map script's functions and variables from the others.
+
+To get access to a member of a namespace, the following syntax is used:
+
+`namespace::member`
+
+The main.script and attendant event.script are part of the default, global namespace.
+
+Objects
+-------
+
+A script object is a way of organizing variables and functions that are related to an [Entity.html entity]. It is analogous to a class in object orientated programming terms.
+
+Its uses are wide, ranging from weapons and AI, to extending existing entities.
+
+While an entity's [Spawn\_class.html spawn class] strongly defines runtime behavior, script objects are generally used to create variation on that behavior within its framework.
+
+The spawn class sets up and runs a script object if the key/value pair "scriptobject" on the entity's [SpawnArgs.html spawnArgs] is set to a valid object type.
+
+### Working on objects
+
+In order to call a function of a script object a valid object reference must be set up.
+
+Example:
+
+` `
+`monster_base myMonster; `
+`myMonster = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`getEntity`</font><font color="#000000">`(`</font><font color="#666666">`"monster_sam"`</font><font color="#000000">`)`</font>`;`
+`myMonster.`<font color="#ff0000">`wake_on_trigger`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+
+Line 1 declares an object reference of monster\_base type. The script compiler will issue an error if there is no script object of that type.
+
+ Line 2 sets the reference to an entity. For the sake of this example we are assuming the entity "monster\_sam" is an entity running a script object of monster\_base type, or one that inherits monster\_base. An object reference will be set to [$null\_entity\_(scripting).html $null\_entity] if the entity you are trying to set the variable to does not have a object of that type.
+
+ Line 3 calls the object function wake\_on\_trigger(), which we know is a function defined in the script object monster\_base. If the function was not declared in the script object the script interpreter would issue a warning.
+
+### Creating your own script object
+
+See [Script\_object.html\#Example Script object\#Example].
+
+Advanced aspects
+----------------
+
+(will be moved on page overhaul)
+
+### virtual functions
+
+Declares a function on base script object type. Used for more advanced scripting techniques. Should only be declared in global namespace.
+

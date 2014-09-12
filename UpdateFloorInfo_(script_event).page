@@ -1,0 +1,34 @@
+UpdateFloorInfo (script event)
+==============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Call after changing floor related key/values to update the floor information of the elevator
+
+Usage
+-----
+
+void updateFloorInfo( )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

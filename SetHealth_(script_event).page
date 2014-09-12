@@ -1,0 +1,57 @@
+SetHealth (script event)
+========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type [IdEntity\_(class).html idEntity]
+
+Description
+-----------
+
+Set the health of the associated entity via the health spawn argument. (i.e. item, NPC, etc.)
+
+Usage
+-----
+
+void setHealth( float health )
+
+Parameters
+----------
+
+-   health
+
+A value which specifies the health of the associated entity.
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+Along with setting the health variable, the event has the following implementation for different games:
+
+<div>
+![Image:D3square\_25.png](images_2_23_D3square_25.png "fig:Image:D3square_25.png") **Note:** Doom 3 only:
+
+  
+*Is an event on idAI only: Calling this event will set the **takesdamage** flag of the entity to **true**.*
+
+</div>
+<div>
+![Image:Q4square\_25.png](images_e_e8_Q4square_25.png "fig:Image:Q4square_25.png") **Note:** Quake 4 only:
+
+  
+*Event on idEntity.*Event on idPlayer: clamps to max health. Event on idAI: Calling this event will set the **takesdamage** flag of the entity to **true**.''''
+
+</div>
+<div>
+![Image:Etqwsquare\_25.png](images_7_7e_Etqwsquare_25.png "fig:Image:Etqwsquare_25.png") **Note:** Enemy Territory: Quake Wars only:
+
+  
+*Event on idPlayer, calls script object function OnHealed if health is set greater than current and greater than 0.*Event on idProjectile. sdScriptEntity: Calls script object function OnPostDamage''''
+
+</div>
+

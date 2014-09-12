@@ -1,0 +1,66 @@
+Gun level1 (entity)
+===================
+
+> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+
+Description
+-----------
+
+Generic gun - trigger to enable.
+
+Spawn Arguments
+---------------
+
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+
+| KEY               | DESCRIPTION                                           |
+|-------------------|-------------------------------------------------------|
+| burstRate         | Description not available.                            |
+| burstrate         | Time between bursts (in seconds)                      |
+| bursts            | Number of bursts in each fire                         |
+| coneAngle         | angle (in degrees) relative to forward to fire within |
+| def\_projectile   | Description not available.                            |
+| editor\_bool XXXX | Description not available.                            |
+| editor\_color     | Description not available.                            |
+| editor\_maxs      | Description not available.                            |
+| editor\_mins      | Description not available.                            |
+| editor\_usage     | Generic gun - trigger to enable.                      |
+| editor\_usage2    | Description not available.                            |
+| editor\_usage3    | Description not available.                            |
+| editor\_var XXXX  | Description not available.                            |
+| enabled           | Description not available.                            |
+| fireDeviation     | Description not available.                            |
+| fireRate          | Description not available.                            |
+| firedeviation     | Random deviation from firerate                        |
+| firerate          | Time between firings (in seconds)                     |
+| fx\_explosion     | Description not available.                            |
+| health            | health amount                                         |
+| inherit           | Description not available.                            |
+| matter            | Description not available.                            |
+| maxs              | Description not available.                            |
+| mins              | Description not available.                            |
+| showCone          | Description not available.                            |
+| snd\_explode      | Description not available.                            |
+| snd\_fire         | Description not available.                            |
+| spawnclass        | Description not available.                            |
+| targetOffset      | offset from origin of target to aim for (0 0 32)      |
+| targetRadius      | radius from gun that targets are valid within         |
+
+Inheritance
+-----------
+
+This entity is derived from the following:
+
+-   '' hhGun''
+    -   [Gun\_default\_(entity).html gun\_default]
+        -   *' gun\_level1*'
+
+**Note**: Entries marked in italics are classes defined in the SDK.
+
+Notes
+-----
+
+Notes not available.
+

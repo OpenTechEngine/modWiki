@@ -1,0 +1,34 @@
+Rotate (Material stage keyword)
+===============================
+
+Description
+-----------
+
+The **rotate** keyword rotates the given stage by the expressed amount.
+
+Usage
+-----
+
+`rotate [value]`
+
+Parameters
+----------
+
+-   [value] = The degree to rotate the stage
+
+Example
+-------
+
+Rotate at a constant rate...
+
+`{`
+`   rotate time`
+`   map    textures/custom/foo.tga`
+`}`
+
+Notes
+-----
+
+Not Available.
+
+

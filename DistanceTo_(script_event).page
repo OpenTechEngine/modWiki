@@ -1,0 +1,35 @@
+DistanceTo (script event)
+=========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the distance of this entity to another entity.
+
+Usage
+-----
+
+*float* distanceTo( *entity* **other** )
+
+Parameters
+----------
+
+-   [other] - The entity to trace the distance to.
+
+Examples
+--------
+
+` `
+`distance = `<font color="#000055">`$startObject`</font>`.`<font color="#ff0000">`distanceTo`</font><font color="#000000">`(`</font><font color="#000055">`$goalObject`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event returns the distance between the start and goal object as a float.
+
+

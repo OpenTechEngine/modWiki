@@ -1,0 +1,35 @@
+SetWorldOrigin (script event)
+=============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Sets the current position of this entity (regardless of any bind parent).
+
+Usage
+-----
+
+*void* setWorldOrigin( *vector* **origin** )
+
+Parameters
+----------
+
+-   [origin] - The position to apply to this entity.
+
+Examples
+--------
+
+` `
+<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`setWorldOrigin`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`57`</font>` `<font color="#0000dd">`68`</font>` `<font color="#0000dd">`19`</font>`'`<font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+

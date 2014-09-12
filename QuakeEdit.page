@@ -1,0 +1,69 @@
+QuakeEdit
+=========
+
+<div style="padding: 1px; border: 0px solid #000000" align="left">
+<font size="18px"><font color="black">![Image:Q4square\_bg.png](images_6_69_Q4square_bg.png "fig:Image:Q4square_bg.png") The information on this page is specific to [Quake\_4.html Quake 4].</font></font>
+
+</div>
+
+------------------------------------------------------------------------
+
+This page describes the Quake 4 specific functionality of the built-in map editor. For general information common to all [Id\_Tech\_4.html id Tech 4] games' editors please see the [Map\_editor.html map editor] page. QuakeEdit can be started by typing "[Editor\_(console\_command).html editor]" in the [Console.html console] or by starting Quake 4 with "+editor" in the shortcut's target command parameters. The best way to start QuakeEdit is from its own shortcut. See [Startup\_parameters.html\#Launching\_the\_editor launching the editor straight away].
+
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                                                                                                                              
+ Contents                                                                                                                                                                                                          
+ --------                                                                                                                                                                                                          
+                                                                                                                                                                                                                   
+ </div>                                                                                                                                                                                                            
+ -   [QuakeEdit.html\#Requirements <span class="tocnumber">1</span> <span class="toctext">Requirements</span>]                                                                                                     
+ -   [QuakeEdit.html\#Troubleshooting <span class="tocnumber">2</span> <span class="toctext">Troubleshooting</span>]                                                                                               
+     -   [QuakeEdit.html\#When\_compiling\_the\_map\_I\_get\_an\_error <span class="tocnumber">2.1</span> <span class="toctext">When compiling the map I get an error</span>]                                      
+     -   [QuakeEdit.html\#Grid\_lines\_don.27t\_show\_up <span class="tocnumber">2.2</span> <span class="toctext">Grid lines don't show up</span>]                                                                 
+     -   [QuakeEdit.html\#The\_windows\_taskbar\_and\_other\_windows\_are\_too\_bright <span class="tocnumber">2.3</span> <span class="toctext">The windows taskbar and other windows are too bright</span>]       
+     -   [QuakeEdit.html\#X\_doesn.27t\_show\_up\_in\_the\_editor\_but\_does\_in\_the\_game <span class="tocnumber">2.4</span> <span class="toctext">X doesn't show up in the editor but does in the game</span>]  
+     -   [QuakeEdit.html\#The\_main\_view\_is\_very\_sluggish\_when\_click-dragging <span class="tocnumber">2.5</span> <span class="toctext">The main view is very sluggish when click-dragging</span>]            
+     -   [QuakeEdit.html\#There\_are\_many\_black\_textures\_in\_the\_texture\_browser <span class="tocnumber">2.6</span> <span class="toctext">There are many black textures in the texture browser</span>]       |
+
+Requirements
+------------
+
+Despite the fact that Quake 4 runs on other platforms, QuakeEdit requires Windows 2000/XP. It's recommended that QuakeEdit is run on machines with better performance than the minimum system requirements of the game unless you only want to edit small maps and that you have a three-button mouse. A suggested minimum system specification for editing maps would be:
+
+-   2Ghz CPU or equivalent
+-   768mb RAM
+-   A video card capable of displaying [Vertex\_and\_fragment\_programs.html vertex and fragment programs]
+
+Troubleshooting
+---------------
+
+This section describes bugs or peculiar behaviour of QuakeEdit and any known solutions. If you find a bug not covered here you might try quitting the editor, deleting the [CFG\_(file\_format).html editor.cfg] file present in the /[Q4base\_(folder).html q4base (folder)] folder and restarting the editor. This will revert the editor to its defaults. If you have a problem with the toolbar and this doesn't fix your problem try also deleting the "toolsx86.ini" file in your windows directory.
+
+### When compiling the map I get an error
+
+Please check the [Common\_Mapping\_Issues.html Common Mapping Issues] page for all known compiler error messages and solutions.
+
+### Grid lines don't show up
+
+Make sure [Antialiasing.html antialiasing] is set to *Off* or *Application controlled* in your graphics driver control panel in Windows. Also make sure the [R\_multiSamples\_(cvar).html in-game AA] is set to off too.
+
+### The windows taskbar and other windows are too bright
+
+Quake 4's brightness defaults to 1.2 so you should start QuakeEdit with "+set [R\_brightness\_(cvar).html r\_brightness] 1".
+
+### X doesn't show up in the editor but does in the game
+
+Go to View \> Show and make sure X is selected.
+
+### The main view is very sluggish when click-dragging
+
+Press F2 to bring up Quake 4, bring down the console, close the Quake 4 window in the cross button on the top right.
+
+### There are many black textures in the texture browser
+
+Quake 4 comes with a lot of redundant, nonfunctional material shaders. The problem is that the declarations reference image files that were not shipped with the game.
+
+At present no level editor, including the built in editor, validates each shader to ensure the images exist. This results in a texture browser where half the textures listed are of no use.
+
+In the case of Doom 3, there is a workaround and the same solution could be applied to other games. Check [Eutectic's\_clean\_paks.html eutectic's clean paks] for more details.
+

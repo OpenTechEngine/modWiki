@@ -1,0 +1,55 @@
+Shaderparm
+==========
+
+Shaderparms are a common set of variables, applicable to most all entities, whose values represent a property or state. These values can be retrieved and used in expressions within a [Material\_(decl).html material shader] allowing for dynamic effects which otherwise would not be possible.
+
+There are 8 shaderparms. You can assign values to them via the [Map\_editor.html\#The\_entity\_inspector entity inspector] with the keys "parm0" through "parm7". You can also assign them in a [SCRIPT\_(file\_format).html script] using the event [SetShaderParm\_(script\_event).html setShaderParm] or with the entity [Target\_setshaderparm\_(entity).html target\_setshaderparm].
+
+In some cases however, namely in the case of shaderparm 7, the game will adjust the value internally. This is largely based on the intended purpose of each shaderparm as outlined in doom\_defs.script...
+
+`//`
+` // shader parms`
+` //`
+` #define SHADERPARM_RED            0`
+` #define SHADERPARM_GREEN         1`
+` #define SHADERPARM_BLUE            2`
+` #define SHADERPARM_ALPHA         3`
+` #define SHADERPARM_TIMESCALE      3`
+` #define SHADERPARM_TIMEOFFSET      4`
+` #define SHADERPARM_DIVERSITY      5   // random between 0.0 and 1.0 for some effects (muzzle flashes, etc)`
+` #define SHADERPARM_MODE            7   // for selecting which shader passes to enable`
+` #define SHADERPARM_TIME_OF_DEATH   7   // for the monster skin-burn-away effect enable and time offset`
+` `
+
+As you can see, parm0 - parm2 make up the red, green, and blue components of a color. You might also notice that a couple shaderparms appear to have multiple purposes. Which of the two is being used depends on the entity in question. A good example is the burnaway effect, which is only used by monsters, as evidenced below...
+
+`  {   // burning corpse effect`
+`     if   parm7         // only when dead`
+`     `
+`     // make a burned away alpha test for the normal skin`
+`     blend   gl_zero, gl_one         // don't draw anything`
+`     `
+`     map models/monsters/wraith/wraith_dis.tga   // replace this with a monster-specific texture`
+`     alphaTest 0.05 + 0.3 * (time - parm7)`
+`  }`
+
+Notice how the conditional in this material shader stage references "parm7"? Now look at the constants quoted from doom\_defs.script. parm7 is being used as either a mode or a time of death. Since we know from experience playing the game that monsters only burnaway after we've killed them, obviously parm7 represents the time of death.
+
+That being the case, parm7 is equal to 0 until a monster has died. It's at that point that the engine sets the value of parm7 to the current time. And since 0 equates to false and any other number equates to true, the conditional statement "if parm7" can only be true when a monster has died.
+
+It's also referenced later in the stage with the statement "alphaTest 0.05 + 0.3 \* (time - parm7)". In this case you have the keyword [AlphaTest\_(Material\_stage\_keyword).html alphaTest] followed by a mathematical expression involving parm7. This expression will be re-evaluated each frame and the result will be passed on to alphatest.
+
+For instance, in this expression you have two variables, time and parm7. time is a counter that starts when you begin playing a map and parm7 has already been discussed.
+
+That said, for the purpose of this example, let's say time equals 1234 and parm7 equals 234. The expression would evaluate like this ...
+
+`0.05 + 0.3 * (time - parm7)`
+`0.05 + 0.3 * (1234 - 234)`
+`0.05 + 0.3 * (1000)`
+`0.05 + 300`
+`300.05`
+
+... then alphatest would receive the value 300.05. It's this value that defines the progress of the dissolve effect. As it increases less and less of the material remains visible.
+
+This kind of thing isn't limited to just alphatest either. You can apply shaderparms and expressions to every material shader keyword that expects a numerical value. You could [Scroll\_(Material\_stage\_keyword).html scroll], [Scale\_(Material\_stage\_keyword).html scale], [Rotate\_(Material\_stage\_keyword).html rotate], and even [If\_(Material\_stage\_keyword).html disable entire stages]... all based on whatever the value of a given shaderparm is.
+

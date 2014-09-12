@@ -1,0 +1,39 @@
+FadeSound (script event)
+========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Fades the sound on this entity to a new level over a period of time.
+
+Usage
+-----
+
+*void* fadeSound( *float* **channel**, *float* **newLevel**, *float* **fadeTime** )
+
+Parameters
+----------
+
+-   [channel] - The channel to fade.
+-   [newLevel] - The level to fade to.
+-   [fadeTime] - The duration of the fade.
+
+Examples
+--------
+
+` `
+<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`fadeSound`</font><font color="#000000">`(`</font>`SND_CHANNEL_ANY, `<font color="#0000dd">`0`</font>`, `<font color="#0000dd">`10`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+Use SND\_CHANNEL\_ANY for all currently playing sounds.
+
+

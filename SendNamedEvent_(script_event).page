@@ -1,0 +1,35 @@
+SendNamedEvent (script event)
+=============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Send named event string to specified gui.
+
+Usage
+-----
+
+*void* sendNamedEvent("float" "guiEnum", "string" "namedEvent" )
+
+Parameters
+----------
+
+-   [guiEnum] - Valid guiEnums are: GUI\_PLAYERHUD, GUI\_CINEMATICHUD, GUI\_VEHICLEHUD
+-   [namedEvent] - Event name sent to gui.
+
+Examples
+--------
+
+none
+
+Notes
+-----
+
+This script event does not return any values.
+
+

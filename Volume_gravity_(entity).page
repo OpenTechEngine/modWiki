@@ -1,0 +1,58 @@
+Volume gravity (entity)
+=======================
+
+> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+
+Description
+-----------
+
+Variable sized gravity zone. Changes gravity of all physics objects who enter.
+
+Spawn Arguments
+---------------
+
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+
+| KEY                     | DESCRIPTION                                                                    |
+|-------------------------|--------------------------------------------------------------------------------|
+| allowSpiritWalkTouch    | Description not available.                                                     |
+| def\_monsterdamage      | Description not available.                                                     |
+| delay                   | Description not available.                                                     |
+| editor\_bool XXXX       | Description not available.                                                     |
+| editor\_color           | Description not available.                                                     |
+| editor\_material        | Description not available.                                                     |
+| editor\_maxs            | Description not available.                                                     |
+| editor\_mins            | Description not available.                                                     |
+| editor\_snd XXXX        | Description not available.                                                     |
+| editor\_usage           | Variable sized gravity zone. Changes gravity of all physics objects who enter. |
+| editor\_var XXXX        | Description not available.                                                     |
+| gravity                 | vector defining the new gravity (0 0 -1066)                                    |
+| interpTime              | Time in seconds to interpolate gravity changes (1.0)                           |
+| killmonsters            | Description not available.                                                     |
+| random                  | Description not available.                                                     |
+| reorient                | Description not available.                                                     |
+| showVector              | Description not available.                                                     |
+| snd\_gravity\_loop\_off | Description not available.                                                     |
+| snd\_gravity\_loop\_on  | Description not available.                                                     |
+| snd\_gravity\_off       | Description not available.                                                     |
+| snd\_gravity\_on        | Description not available.                                                     |
+| spawnclass              | Description not available.                                                     |
+| wait                    | Description not available.                                                     |
+
+Inheritance
+-----------
+
+This entity is derived from the following:
+
+-   '' hhGravityZone''
+    -   *' volume\_gravity*'
+
+**Note**: Entries marked in italics are classes defined in the SDK.
+
+Notes
+-----
+
+Notes not available.
+

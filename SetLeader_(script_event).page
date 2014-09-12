@@ -1,0 +1,35 @@
+SetLeader (script event)
+========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Get / Set the current leader.
+
+Usage
+-----
+
+void setLeader( entity leader )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+<font color="#339900">`// sets the player as leader for the npc`</font>
+<font color="#000055">`$npc_`<font color="#0000dd">`1`</font></font>`.`<font color="#ff0000">`setLeader`</font><font color="#000000">`(`</font>` `<font color="#000055">`$player1`</font>` `<font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+Setting the leader to $null\_entity will clear it.
+
+

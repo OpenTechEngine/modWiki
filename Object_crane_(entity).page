@@ -1,0 +1,61 @@
+Object crane (entity)
+=====================
+
+> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+
+Description
+-----------
+
+Crane: Target a crane gui at it.
+
+Spawn Arguments
+---------------
+
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+
+| KEY                 | DESCRIPTION                                        |
+|---------------------|----------------------------------------------------|
+| beam                | beam system to use as spring (default=beam\_crane) |
+| boundanim           | Description not available.                         |
+| def\_bindController | Description not available.                         |
+| disteast            | distance allowed in positive X direction           |
+| distnorth           | distance allowed in positive Y direction           |
+| distsouth           | distance allowed in negative Y direction           |
+| distwest            | distance allowed in negative X direction           |
+| editor\_color       | Description not available.                         |
+| editor\_maxs        | Description not available.                         |
+| editor\_mins        | Description not available.                         |
+| editor\_usage       | Crane: Target a crane gui at it.                   |
+| editor\_var XXXX    | Description not available.                         |
+| fx\_active          | Description not available.                         |
+| matter              | Description not available.                         |
+| maxLength           | maximum spring restlength (150)                    |
+| minLength           | minimum spring restlength (-75)                    |
+| model               | Description not available.                         |
+| movegran            | Description not available.                         |
+| raisetime           | time to raise/lower in MS (2000)                   |
+| snd\_beam           | Description not available.                         |
+| snd\_movestart      | Description not available.                         |
+| snd\_movestop       | Description not available.                         |
+| snd\_moving         | Description not available.                         |
+| spawnclass          | Description not available.                         |
+| tension             | tension of restoration force [0..1]                |
+| yawlimit            | Description not available.                         |
+
+Inheritance
+-----------
+
+This entity is derived from the following:
+
+-   '' hhCrane''
+    -   *' object\_crane*'
+
+**Note**: Entries marked in italics are classes defined in the SDK.
+
+Notes
+-----
+
+Notes not available.
+

@@ -1,0 +1,37 @@
+FadeTo (script event)
+=====================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Fades to the given color up to the given alpha over the given time in seconds.
+
+Usage
+-----
+
+*void* fadeTo( *vector* **color**, *float* **alpha**, *float* **time** )
+
+Parameters
+----------
+
+-   [color] - The color to fade to.
+-   [alpha] - The alpha value to fade to.
+-   [time] - The duration of the fade.
+
+Examples
+--------
+
+` `
+<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`fadeTo`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`1`</font>` `<font color="#0000dd">`1`</font>` `<font color="#0000dd">`1`</font>`', `<font color="#0000dd">`1`</font>`, `<font color="#0000dd">`10`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+

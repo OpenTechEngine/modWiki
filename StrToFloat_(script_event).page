@@ -1,0 +1,37 @@
+StrToFloat (script event)
+=========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Converts the string to a float value
+
+Usage
+-----
+
+sys.strToFloat(string text)
+
+Parameters
+----------
+
+-   text = the string to be converted to a float value
+
+Examples
+--------
+
+<font color="#0000ff">`string`</font>` test1=`<font color="#666666">`"33.333"`</font>`;`
+<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font>` `<font color="#000000">`(`</font>` `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`strToFloat`</font><font color="#000000">`(`</font>`test1`<font color="#000000">`)`</font><font color="#000000">`)`</font>`;`
+
+This would output "33.333" to the console. This allows key value's in entities to be used in scripts as float (normally they are all strings).
+
+Notes
+-----
+
+If the string contains non-numerals the result will always be zero.
+
+

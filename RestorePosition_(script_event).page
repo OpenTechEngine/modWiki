@@ -1,0 +1,37 @@
+RestorePosition (script event)
+==============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns this entity to the position stored in the "origin" spawn arg.
+
+Usage
+-----
+
+*void* restorePosition()
+
+Parameters
+----------
+
+This script event does not accept parameters.
+
+Examples
+--------
+
+` `
+<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`restorePosition`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+This is the position the entity was spawned in unless the "origin" key is changed. Note that there is no guarantee that the entity won't be stuck in another entity when moved, so care should be taken to make sure that isn't possible.
+
+

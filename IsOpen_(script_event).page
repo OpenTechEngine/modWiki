@@ -1,0 +1,44 @@
+IsOpen (script event)
+=====================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns true if the door is open.
+
+Usage
+-----
+
+float isOpen( )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+<font color="#339900">`// Opens or closes a door depending on it's current state ...`</font>
+` `
+<font color="#0000ff">`void`</font>` doorToggle`<font color="#000000">`(`</font>`ent door`<font color="#000000">`)`</font>
+<font color="#000000">`{`</font>
+`        `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>`door.`<font color="#ff0000">`isOpen`</font><font color="#000000">`(`</font><font color="#000000">`)`</font><font color="#000000">`)`</font>
+`        `<font color="#000000">`{`</font>
+`                door.`<font color="#ff0000">`close`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+`        `<font color="#000000">`}`</font>` `<font color="#0000ff">`else`</font>`  `<font color="#000000">`{`</font>
+`                door.`<font color="#ff0000">`open`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+`        `<font color="#000000">`}`</font>
+<font color="#000000">`}`</font>
+
+Notes
+-----
+
+This script event does not report the correct status for doors with the "start\_open" key/value pair set to 1. Instead it reports true when the door is closed and vice versa.
+
+

@@ -1,0 +1,35 @@
+Unbind (script event)
+=====================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Detaches this entity from its master.
+
+Usage
+-----
+
+*void* unbind()
+
+Parameters
+----------
+
+This script event does accept parameters.
+
+Examples
+--------
+
+` `
+<font color="#000055">`$bound_entity`</font>`.`<font color="#ff0000">`unbind`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+

@@ -1,0 +1,35 @@
+GetEntity (script event)
+========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type [Thread\_(scripting).html idThread], accessible via [Scripting\_basics.html\#sys sys] identifier.
+
+Description
+-----------
+
+Returns a reference to the entity with the specified name.
+
+Usage
+-----
+
+*[Data\_types.html\#entity entity]* getEntity( *[Data\_types.html\#string string]* **name** )
+
+Parameters
+----------
+
+-   [name] - The name of the entity to return.
+
+Examples
+--------
+
+` `
+`ent = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`getEntity`</font><font color="#000000">`(`</font><font color="#666666">`"func_door_1"`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event returns the entity that matches the given name or [$null\_entity\_(scripting).html null] if not found.
+
+

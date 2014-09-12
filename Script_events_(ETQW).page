@@ -1,0 +1,1103 @@
+Script events (ETQW)
+====================
+
+Script events are the commands used in ET:QW's native scripting language.
+
+Existing script events as of version 1.1.
+
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                                                                                        
+ Contents                                                                                                                                                                    
+ --------                                                                                                                                                                    
+                                                                                                                                                                             
+ </div>                                                                                                                                                                      
+ -   [Script\_events\_(ETQW).html\#System\_Events <span class="tocnumber">1</span> <span class="toctext">System Events</span>]                                               
+ -   [Script\_events\_(ETQW).html\#Entity\_Events <span class="tocnumber">2</span> <span class="toctext">Entity Events</span>]                                               
+     -   [Script\_events\_(ETQW).html\#idLight\_Events <span class="tocnumber">2.1</span> <span class="toctext">idLight Events</span>]                                       
+     -   [Script\_events\_(ETQW).html\#idForcefield\_Events <span class="tocnumber">2.2</span> <span class="toctext">idForcefield Events</span>]                             
+     -   [Script\_events\_(ETQW).html\#Animate\_Events <span class="tocnumber">2.3</span> <span class="toctext">Animate Events</span>]                                       
+     -   [Script\_events\_(ETQW).html\#idDoor\_Events <span class="tocnumber">2.4</span> <span class="toctext">idDoor Events</span>]                                         
+     -   [Script\_events\_(ETQW).html\#idMoveable\_Events <span class="tocnumber">2.5</span> <span class="toctext">idMoveable Events</span>]                                 
+     -   [Script\_events\_(ETQW).html\#sdGeneralMover\_Events <span class="tocnumber">2.6</span> <span class="toctext">sdGeneralMover Events</span>]                         
+     -   [Script\_events\_(ETQW).html\#idAnimatedEntity\_Events <span class="tocnumber">2.7</span> <span class="toctext">idAnimatedEntity Events</span>]                     
+     -   [Script\_events\_(ETQW).html\#idWeapon\_Events <span class="tocnumber">2.8</span> <span class="toctext">idWeapon Events</span>]                                     
+     -   [Script\_events\_(ETQW).html\#idProjectile\_Events <span class="tocnumber">2.9</span> <span class="toctext">idProjectile Events</span>]                             
+     -   [Script\_events\_(ETQW).html\#idActor\_Events <span class="tocnumber">2.10</span> <span class="toctext">idActor Events</span>]                                      
+     -   [Script\_events\_(ETQW).html\#idPlayer\_Events <span class="tocnumber">2.11</span> <span class="toctext">idPlayer Events</span>]                                    
+         -   [Script\_events\_(ETQW).html\#Bots\_Player\_Interface\_Events <span class="tocnumber">2.11.1</span> <span class="toctext">Bots Player Interface Events</span>]  
+     -   [Script\_events\_(ETQW).html\#sdAtmosphere\_Events <span class="tocnumber">2.12</span> <span class="toctext">sdAtmosphere Events</span>]                            
+     -   [Script\_events\_(ETQW).html\#sdWalker\_Events <span class="tocnumber">2.13</span> <span class="toctext">sdWalker Events</span>]                                    
+     -   [Script\_events\_(ETQW).html\#sdTransport\_Events <span class="tocnumber">2.14</span> <span class="toctext">sdTransport Events</span>]                              
+     -   [Script\_events\_(ETQW).html\#sdVehicle\_Rigidbody\_Events <span class="tocnumber">2.15</span> <span class="toctext">sdVehicle\_Rigidbody Events</span>]            
+     -   [Script\_events\_(ETQW).html\#sdVehicleWeapon\_Events <span class="tocnumber">2.16</span> <span class="toctext">sdVehicleWeapon Events</span>]                      
+     -   [Script\_events\_(ETQW).html\#sdJetPack\_Events <span class="tocnumber">2.17</span> <span class="toctext">sdJetPack Events</span>]                                  
+     -   [Script\_events\_(ETQW).html\#sdScriptEntity\_Events <span class="tocnumber">2.18</span> <span class="toctext">sdScriptEntity Events</span>]                        
+     -   [Script\_events\_(ETQW).html\#sdDeployZone\_Events <span class="tocnumber">2.19</span> <span class="toctext">sdDeployZone Events</span>]                            
+     -   [Script\_events\_(ETQW).html\#Animated\_Client\_Entity\_Events <span class="tocnumber">2.20</span> <span class="toctext">Animated Client Entity Events</span>]      
+     -   [Script\_events\_(ETQW).html\#sdTeleporter\_Events <span class="tocnumber">2.21</span> <span class="toctext">sdTeleporter Events</span>]                            
+     -   [Script\_events\_(ETQW).html\#sdRepairDrone\_Events <span class="tocnumber">2.22</span> <span class="toctext">sdRepairDrone Events</span>]                          
+     -   [Script\_events\_(ETQW).html\#sdParachute\_Events <span class="tocnumber">2.23</span> <span class="toctext">sdParachute Events</span>]                              
+     -   [Script\_events\_(ETQW).html\#sdDefenceTurret\_Events <span class="tocnumber">2.24</span> <span class="toctext">sdDefenceTurret Events</span>]                      
+     -   [Script\_events\_(ETQW).html\#sdDeliveryVehicle\_Events <span class="tocnumber">2.25</span> <span class="toctext">sdDeliveryVehicle Events</span>]                  
+ -   [Script\_events\_(ETQW).html\#Game\_Class\_Events <span class="tocnumber">3</span> <span class="toctext">Game Class Events</span>]                                      
+     -   [Script\_events\_(ETQW).html\#Objective\_Manager\_Events <span class="tocnumber">3.1</span> <span class="toctext">Objective Manager Events</span>]                  
+         -   [Script\_events\_(ETQW).html\#Bot\_Objective\_Manager\_Events <span class="tocnumber">3.1.1</span> <span class="toctext">Bot Objective Manager Events</span>]   
+     -   [Script\_events\_(ETQW).html\#Team\_Events <span class="tocnumber">3.2</span> <span class="toctext">Team Events</span>]                                             
+         -   [Script\_events\_(ETQW).html\#Bot\_Team\_Events <span class="tocnumber">3.2.1</span> <span class="toctext">Bot Team Events</span>]                              
+     -   [Script\_events\_(ETQW).html\#Task\_Events <span class="tocnumber">3.3</span> <span class="toctext">Task Events</span>]                                             
+ -   [Script\_events\_(ETQW).html\#CVar\_Events <span class="tocnumber">4</span> <span class="toctext">CVar Events</span>]                                                   
+ -   [Script\_events\_(ETQW).html\#Mask\_Edit-session\_Events <span class="tocnumber">5</span> <span class="toctext">Mask Edit-session Events</span>]                        |
+
+System Events
+-------------
+
+Events declared in idThread, accessible via [Scripting\_basics.html\#sys sys] identifier.
+
+-   addCheapDecal
+-   createMaskEditSession
+-   handleToString
+-   stringToHandle
+-   toWStr
+-   pushLocString
+-   pushLocStringIndex
+-   localizeStringIndexArgs
+-   localizeStringArgs
+-   localizeString
+-   getNetworkKey
+-   fromNetworkKey
+-   [Terminate\_(script\_event).html terminate]
+-   [Wait\_(script\_event).html wait]
+-   [WaitFrame\_(script\_event).html waitFrame]
+-   [Print\_(script\_event).html print]
+-   [Println\_(script\_event).html println]
+-   debugln
+-   [Say\_(script\_event).html say]
+-   [Assert\_(script\_event).html assert]
+-   <span class="deadlink"> getCVar</span>
+-   [Random\_(script\_event).html random]
+-   [GetTime\_(script\_event).html getTime]
+-   killThread
+-   threadName
+-   getEntityByID
+-   [GetEntity\_(script\_event).html getEntity]
+-   [Spawn\_(script\_event).html spawn]
+-   spawnClient
+-   spawnType
+-   [AngToForward\_(script\_event).html angToForward]
+-   [AngToRight\_(script\_event).html angToRight]
+-   [AngToUp\_(script\_event).html angToUp]
+-   [Sin\_(script\_event).html sin]
+-   asin
+-   [Cos\_(script\_event).html cos]
+-   acos
+-   atan
+-   atan2
+-   getRoot
+-   solveRoots
+-   angleNormalize180
+-   fabs
+-   [Floor\_(script\_event).html floor]
+-   [Ceil\_(script\_event).html ceil]
+-   mod
+-   fmod
+-   [Sqrt\_(script\_event).html sqrt]
+-   [VecNormalize\_(script\_event).html vecNormalize]
+-   [VecLength\_(script\_event).html vecLength]
+-   vecLengthSquared
+-   [CrossProduct\_(script\_event).html crossProduct]
+-   [VecToAngles\_(script\_event).html vecToAngles]
+-   rotateVecByAngles
+-   rotateAngles
+-   rotateVec
+-   toLocalSpace
+-   toWorldSpace
+-   checkContents
+-   [Trace\_(script\_event).html trace]
+-   [TracePoint\_(script\_event).html tracePoint]
+-   traceOriented
+-   saveTrace
+-   freeTrace
+-   [GetTraceFraction\_(script\_event).html getTraceFraction]
+-   [GetTraceEndPos\_(script\_event).html getTraceEndPos]
+-   getTracePoint
+-   [GetTraceNormal\_(script\_event).html getTraceNormal]
+-   [GetTraceEntity\_(script\_event).html getTraceEntity]
+-   getTraceSurfaceFlags
+-   getTraceSurfaceType
+-   getTraceSurfaceColor
+-   [GetTraceJoint\_(script\_event).html getTraceJoint]
+-   [GetTraceBody\_(script\_event).html getTraceBody]
+-   [FadeIn\_(script\_event).html fadeIn]
+-   [FadeOut\_(script\_event).html fadeOut]
+-   [FadeTo\_(script\_event).html fadeTo]
+-   [Music\_(script\_event).html music]
+-   startSoundDirect
+-   [Error\_(script\_event).html error]
+-   [Warning\_(script\_event).html warning]
+-   [StrLength\_(script\_event).html strLength]
+-   [StrLeft\_(script\_event).html strLeft]
+-   [StrRight\_(script\_event).html strRight]
+-   [StrSkip\_(script\_event).html strSkip]
+-   [StrMid\_(script\_event).html strMid]
+-   [StrToFloat\_(script\_event).html strToFloat]
+-   [IsClient\_(script\_event).html isClient]
+-   isServer
+-   doClientSideStuff
+-   [GetFrameTime\_(script\_event).html getFrameTime]
+-   [GetTicsPerSecond\_(script\_event).html getTicsPerSecond]
+-   [DebugLine\_(script\_event).html debugLine]
+-   [DebugArrow\_(script\_event).html debugArrow]
+-   [DebugCircle\_(script\_event).html debugCircle]
+-   [DebugBounds\_(script\_event).html debugBounds]
+-   allocCMIcon
+-   freeCMIcon
+-   setCMIconSize
+-   setCMIconUnknownSize
+-   setCMIconSize2d
+-   setCMIconUnknownSize2d
+-   setCMIconSizeMode
+-   setCMIconSort
+-   setCMIconPositionMode
+-   setCMIconOrigin
+-   setCMIconColor
+-   setCMIconColorMode
+-   setCMIconDrawMode
+-   setCMIconAngle
+-   setCMIconSides
+-   showCMIcon
+-   hideCMIcon
+-   addCMIconRequirement
+-   setCMIconMaterial
+-   setCMIconUnknownMaterial
+-   setCMIconFireteamMaterial
+-   setCMIconGuiMessage
+-   setCMIconFlag
+-   clearCMIconFlag
+-   setCMIconArcAngle
+-   setCMIconShaderParm
+-   getCMIconFlags
+-   flashCMIcon
+-   [DrawText\_(script\_event).html drawText]
+-   broadcastToolTip
+-   getDeclType
+-   getDeclCount
+-   getDeclIndex
+-   getDeclName
+-   applyRadiusDamage
+-   filterEntity
+-   getTableCount
+-   getTableValue
+-   getTableValueExact
+-   getObjectTitle
+-   allocDecal
+-   projectDecal
+-   freeDecal
+-   resetDecal
+-   getTypeHandle
+-   argc
+-   argv
+-   argvf
+-   setActionCommand
+-   getTeam
+-   setWinningTeam
+-   endGame
+-   setEndGameCamera
+-   [PlayWorldEffect\_(script\_event).html playWorldEffect ]
+-   playWorldEffectRotate
+-   playWorldEffectRotateAlign
+-   playWorldBeamEffect
+-   setGUIFloat
+-   setGUIHandle
+-   setGUIVec2
+-   setGUIVec3
+-   setGUIVec4
+-   setGUIString
+-   setGUIWString
+-   getGUIFloat
+-   clearDeployRequest
+-   getDeployMask
+-   checkDeployMask
+-   getWorldPlayZoneIndex
+-   consoleCommand
+-   allocTargetTimer
+-   getTargetTimerValue
+-   setTargetTimerValue
+-   getEntityDefKey
+-   getEntityDefIntKey
+-   getEntityDefFloatKey
+-   getEntityDefVectorKey
+-   getMaxClients
+-   getClient
+-   getTerritoryForPoint
+-   getMatchTimeRemaining
+-   getMatchState
+-   allocStatInt
+-   allocStatFloat
+-   increaseStatInt
+-   increaseStatFloat
+-   getStatValue
+-   getClimateSkin
+-   sendQuickChat
+-   getContextEntity
+-   pushEndGameStat
+-   sendEndGameStats
+-   heightMapTrace
+-   enableBotReachability
+-   getNextBotActionIndex
+-   getBotActionOrigin
+-   getBotActionDeployableType
+-   getBotActionBaseGoalType
+
+Entity Events
+-------------
+
+Events declared in the base [Spawn\_class.html spawn class] [IdEntity\_(class).html idEntity].
+
+All entities inherit these events, though some may be overridden to produce different behaviour.
+
+-   [Remove\_(script\_event).html remove]
+-   isClass
+-   [GetName\_(script\_event).html getName]
+-   [SetName\_(script\_event).html setName]
+-   getMaster
+-   [Activate\_(script\_event).html activate]
+-   [ActivateTargets\_(script\_event).html activateTargets]
+-   [NumTargets\_(script\_event).html numTargets]
+-   [GetTarget\_(script\_event).html getTarget]
+-   [RandomTarget\_(script\_event).html randomTarget]
+-   [Bind\_(script\_event).html bind]
+-   enableAxisBind
+-   [BindPosition\_(script\_event).html bindPosition]
+-   [BindToJoint\_(script\_event).html bindToJoint]
+-   [Unbind\_(script\_event).html unbind]
+-   [RemoveBinds\_(script\_event).html removeBinds]
+-   [SetModel\_(script\_event).html setModel]
+-   [SetSkin\_(script\_event).html setSkin]
+-   setCoverage
+-   getWorldAxis
+-   setWorldAxis
+-   getGravityNormal
+-   [GetWorldOrigin\_(script\_event).html getWorldOrigin]
+-   [SetWorldOrigin\_(script\_event).html setWorldOrigin]
+-   [GetOrigin\_(script\_event).html getOrigin]
+-   [SetOrigin\_(script\_event).html setOrigin]
+-   [GetAngles\_(script\_event).html getAngles]
+-   getLocalAngles
+-   [SetAngles\_(script\_event).html setAngles]
+-   setGravity
+-   alignToAxis
+-   [GetLinearVelocity\_(script\_event).html getLinearVelocity]
+-   [SetLinearVelocity\_(script\_event).html setLinearVelocity]
+-   [GetAngularVelocity\_(script\_event).html getAngularVelocity]
+-   [SetAngularVelocity\_(script\_event).html setAngularVelocity]
+-   getMass
+-   getCenterOfMass
+-   setFriction
+-   [GetSize\_(script\_event).html getSize]
+-   [SetSize\_(script\_event).html setSize]
+-   [GetMins\_(script\_event).html getMins]
+-   [GetMaxs\_(script\_event).html getMaxs]
+-   getAbsMins
+-   getAbsMaxs
+-   getRenderMins
+-   getRenderMaxs
+-   setRenderBounds
+-   [IsHidden\_(script\_event).html isHidden]
+-   [Hide\_(script\_event).html hide]
+-   [Show\_(script\_event).html show]
+-   [Touches\_(script\_event).html touches]
+-   touchesBounds
+-   [GetShaderParm\_(script\_event).html getShaderParm]
+-   [SetShaderParm\_(script\_event).html setShaderParm]
+-   [SetShaderParms\_(script\_event).html setShaderParms]
+-   [SetColor\_(script\_event).html setColor]
+-   [GetColor\_(script\_event).html getColor]
+-   [StopSound\_(script\_event).html stopSound]
+-   [StartSound\_(script\_event).html startSound]
+-   [FadeSound\_(script\_event).html fadeSound]
+-   setChannelPitchShift
+-   setChannelFlags
+-   clearChannelFlags
+-   [GetNextKey\_(script\_event).html getNextKey]
+-   [SetKey\_(script\_event).html setKey]
+-   [GetKey\_(script\_event).html getKey]
+-   [GetIntKey\_(script\_event).html getIntKey]
+-   [GetFloatKey\_(script\_event).html getFloatKey]
+-   [GetVectorKey\_(script\_event).html getVectorKey]
+-   [GetEntityKey\_(script\_event).html getEntityKey]
+-   getKeyWithDefault
+-   getIntKeyWithDefault
+-   getFloatKeyWithDefault
+-   getVectorKeyWithDefault
+-   getClassKey
+-   [RestorePosition\_(script\_event).html restorePosition]
+-   [DistanceTo\_(script\_event).html distanceTo]
+-   [DistanceToPoint\_(script\_event).html distanceToPoint]
+-   [Wait\_(script\_event).html wait]
+-   disablePhysics
+-   enablePhysics
+-   entitiesInTranslation
+-   entitiesInBounds
+-   entitiesInLocalBounds
+-   entitiesInRadius
+-   entitiesOfType
+-   entitiesOfClass
+-   entitiesOfCollection
+-   filterEntitiesByRadius
+-   filterEntitiesByClass
+-   filterEntitiesByAllegiance
+-   filterEntitiesByDisguiseAllegiance
+-   filterEntitiesByFilter
+-   filterEntitiesByTouching
+-   getBoundsCacheCount
+-   getBoundsCacheEntity
+-   getSavedCacheCount
+-   getSavedCacheEntity
+-   saveCachedEntities
+-   freeSavedCache
+-   getEntityAllegiance
+-   inCollection
+-   getEntityContents
+-   getMaskedEntityContents
+-   <span class="deadlink"> takesDamage</span>
+-   <span class="deadlink"> setTakesDamage</span>
+-   applyDamage
+-   setNetworkSynced
+-   hasAbility
+-   sync
+-   syncBroadcast
+-   syncCallback
+-   playMaterialEffect
+-   playJointEffect
+-   playJointEffectViewSuppress
+-   [PlayEffect\_(script\_event).html playEffect]
+-   playEffectViewSuppress
+-   playOriginEffect
+-   playEffectMaxVisDist
+-   playOriginEffectMaxVisDist
+-   playBeamEffect
+-   lookupEffect
+-   [StopEffect\_(script\_event).html stopEffect]
+-   killEffect
+-   stopEffectHandle
+-   unBindEffectHandle
+-   setEffectAttenuation
+-   setEffectRenderBounds
+-   setEffectColor
+-   setEffectOrigin
+-   setEffectAngles
+-   stopAllEffects
+-   detachRotationBind
+-   clearContacts
+-   [SetContents\_(script\_event).html setContents]
+-   setClipmask
+-   putToRest
+-   hasForceDisableClip
+-   forceDisableClip
+-   forceEnableClip
+-   hasGroundContacts
+-   [DisableGravity\_(script\_event).html disableGravity]
+-   setComeToRest
+-   [ApplyImpulse\_(script\_event).html applyImpulse]
+-   addForce
+-   addForceAt
+-   addTorque
+-   activatePhysics
+-   [IsAtRest\_(script\_event).html isAtRest]
+-   isBound
+-   turnTowards
+-   [GetGameTeam\_(script\_event).html getGameTeam]
+-   [SetGameTeam\_(script\_event).html setGameTeam]
+-   launchMissileSimple
+-   launchBullet
+-   getLocalPlayer
+-   getLocalViewPlayer
+-   getGUI
+-   setGUITheme
+-   guiPostNamedEvent
+-   pointInRadar
+-   disableImpact
+-   enableImpact
+-   disableKnockback
+-   enableKnockback
+-   sendNetworkCommand
+-   sendNetworkEvent
+-   preventDeployment
+-   allocBeam
+-   updateBeam
+-   freeBeam
+-   freeAllBeams
+-   getNextTeamEntity
+-   allocHudModule
+-   freeHudModule
+-   requestDeployment
+-   requestCheckedDeployment
+-   getWorldMins
+-   getWorldMaxs
+-   setDeploymentObject
+-   setDeploymentState
+-   setDeploymentMode
+-   getDeploymentMode
+-   getDeploymentRotation
+-   allowDeploymentRotation
+-   getDefaultFov
+-   [SetHealth\_(script\_event).html setHealth]
+-   [GetHealth\_(script\_event).html getHealth]
+-   <span class="deadlink"> setMaxHealth</span>
+-   getMaxHealth
+-   [GetEnemy\_(script\_event).html getEnemy]
+-   setCanCollideWithTeam
+-   spawnClientEffect
+-   spawnClientCrawlEffect
+-   setEffectEndOrigin
+-   setEffectLooping
+-   endEffect
+-   getSpawnID
+-   getDeployableObject
+-   isSpotted
+-   setSpotted
+-   forceNetworkUpdate
+-   getEntityNumber
+-   disableCrosshairTrace
+-   isInWater
+-   getDamageScale
+-   getDefaultSurfaceType
+
+### idLight Events
+
+-   turnOn
+-   turnOff
+
+### idForcefield Events
+
+-   [Toggle\_(script\_event).html Toggle]
+
+### Animate Events
+
+-   [LaunchMissiles\_(script\_event).html launchMissiles]
+-   [StartRagdoll\_(script\_event).html startRagdoll]
+
+### idDoor Events
+
+-   [Enable\_(script\_event).html enable]
+-   [Disable\_(script\_event).html disable]
+-   [Open\_(script\_event).html open]
+-   [Close\_(script\_event).html close]
+-   [IsOpen\_(script\_event).html isOpen]
+-   isClosed
+-   isOpening
+-   isClosing
+-   getMoveMaster
+-   getNextSlave
+
+### idMoveable Events
+
+-   [BecomeNonSolid\_(script\_event).html becomeNonSolid]
+-   [EnableDamage\_(script\_event).html enableDamage]
+
+### sdGeneralMover Events
+
+**Note:** This spawn class does not have any entityDef referencing it and wasn't used in the retail maps.
+
+-   startTimedMove
+-   stopCurrentMove
+-   setPosition
+-   getNumPositions
+-   addPosition
+-   getMoverState
+-   killBlockingEntity
+
+### idAnimatedEntity Events
+
+Skeletal Animation Events
+
+-   [GetJointHandle\_(script\_event).html getJointHandle]
+-   [ClearAllJoints\_(script\_event).html clearAllJoints]
+-   [ClearJoint\_(script\_event).html clearJoint]
+-   [SetJointPos\_(script\_event).html setJointPos]
+-   [SetJointAngle\_(script\_event).html setJointAngle]
+-   [GetJointPos\_(script\_event).html getJointPos]
+-   getLocalJointPos
+-   getJointAxis
+-   [GetJointAngle\_(script\_event).html getJointAngle]
+-   [PlayAnim\_(script\_event).html playAnim]
+-   isAnimating
+-   getAnimatingOnChannel
+-   animationName
+-   isAnimatingOnChannel
+-   jointToWorldSpace
+-   worldToModelSpace
+-   [HideSurface\_(script\_event).html hideSurface]
+-   [ShowSurface\_(script\_event).html showSurface]
+-   getSurfaceId
+-   isSurfaceHidden
+
+### idWeapon Events
+
+-   getOwner
+-   nextWeapon
+-   [WeaponState\_(script\_event).html weaponState]
+-   getWeaponState
+-   [AddToClip\_(script\_event).html addToClip]
+-   ammoInClip
+-   ammoAvailable
+-   [ClipSize\_(script\_event).html clipSize]
+-   ammoRequired
+-   ammoType
+-   [UseAmmo\_(script\_event).html useAmmo]
+-   fired
+-   [PlayAnim\_(script\_event).html playAnim]
+-   [PlayCycle\_(script\_event).html playCycle]
+-   [AnimDone\_(script\_event).html animDone]
+-   [SetBlendFrames\_(script\_event).html setBlendFrames]
+-   [GetBlendFrames\_(script\_event).html getBlendFrames]
+-   [WeaponReady\_(script\_event).html weaponReady]
+-   [WeaponOutOfAmmo\_(script\_event).html weaponOutOfAmmo]
+-   weaponReloading
+-   weaponHolstered
+-   weaponRising
+-   weaponLowering
+-   <span class="deadlink"> launchProjectiles</span>
+-   createProjectile
+-   melee
+-   meleeAttack
+-   [SetLightParm\_(script\_event).html setLightParm]
+-   [SetLightParms\_(script\_event).html setLightParms]
+-   saveMeleeTrace
+-   getMeleeFraction
+-   getMeleeEndPos
+-   getMeleePoint
+-   getMeleeNormal
+-   getMeleeEntity
+-   getMeleeSurfaceFlags
+-   getMeleeSurfaceType
+-   getMeleeSurfaceColor
+-   getMeleeJoint
+-   getMeleeBody
+-   enableTargetLock
+-   setFovStart
+-   setFov
+-   clearFov
+-   getFov
+-   enableClamp
+-   disableClamp
+-   disableModel
+-   getCurrentSpread
+-   increaseSpread
+-   setSpreadModifier
+-   getWorldModel
+-   setDriftScale
+-   resetTracerCounter
+-   getLastTracer
+-   setupAnimClass
+-   enableSway
+-   enableSpreadEvals
+-   setStatName
+
+### idProjectile Events
+
+-   getDamagePower
+-   getOwner
+-   [SetOwner\_(script\_event).html setOwner]
+-   getLaunchTime
+-   launch
+-   addOwner
+-   [SetEnemy\_(script\_event).html setEnemy]
+-   isOwner
+
+### idActor Events
+
+-   [SetConstraintPosition\_(script\_event).html setConstraintPosition]
+-   [StopAnim\_(script\_event).html stopAnim]
+-   [PlayAnim\_(script\_event).html playAnim]
+-   playAnimBlended
+-   getAnimLength
+-   [PlayCycle\_(script\_event).html playCycle]
+-   [IdleAnim\_(script\_event).html idleAnim]
+-   [SetSyncedAnimWeight\_(script\_event).html setSyncedAnimWeight]
+-   [SetBlendFrames\_(script\_event).html setBlendFrames]
+-   [GetBlendFrames\_(script\_event).html getBlendFrames]
+-   animState
+-   getAnimState
+-   inAnimState
+-   [AnimDone\_(script\_event).html animDone]
+-   [OverrideAnim\_(script\_event).html overrideAnim]
+-   [PreventPain\_(script\_event).html preventPain]
+-   [EnableAnim\_(script\_event).html enableAnim]
+-   [DisablePain\_(script\_event).html disablePain]
+-   [EnablePain\_(script\_event).html enablePain]
+-   getPainAnim
+-   setPrefix
+-   hasAnim
+-   hasWeaponAnim
+-   checkAnim
+-   chooseAnim
+-   animLength
+-   animDistance
+-   setNextState
+-   setState
+-   getState
+-   syncAnim
+-   getDeployResult
+
+### idPlayer Events
+
+-   getButton
+-   [GetMove\_(script\_event).html getMove]
+-   getUserCmdAngles
+-   [GetViewAngles\_(script\_event).html getViewAngles]
+-   [SetViewAngles\_(script\_event).html setViewAngles]
+-   getCameraViewAngles
+-   getRenderViewAngles
+-   getViewOrigin
+-   [GetWeaponEntity\_(script\_event).html getWeaponEntity]
+-   freeze
+-   freezeTurning
+-   setRemoteCamera
+-   getRemoteCamera
+-   setRemoteCameraViewOffset
+-   getViewingEntity
+-   isGunHidden
+-   giveProficiency
+-   giveClassProficiency
+-   getProficiency
+-   getXP
+-   clearAmmo
+-   resetWeapon
+-   heal
+-   unheal
+-   repair
+-   makeInvulnerable
+-   giveClass
+-   givePackage
+-   setClassOption
+-   sendToolTip
+-   cancelToolTips
+-   selectBestWeapon
+-   setWeapon
+-   [GetCurrentWeapon\_(script\_event).html getCurrentWeapon]
+-   hasWeapon
+-   getVehicle
+-   getAmmoFraction
+-   getUserName
+-   getClassName
+-   getCachedClassName
+-   getPlayerClass
+-   getRankName
+-   getShortRankName
+-   getActiveWeapon
+-   getMaxHealth
+-   getCrosshairEntity
+-   getCrosshairDistance
+-   getCrosshairEndPos
+-   getCrosshairStartTime
+-   enterDeploymentMode
+-   exitDeploymentMode
+-   getDeploymentActive
+-   setSpawnPoint
+-   getSpawnPoint
+-   setSpeedModifier
+-   setSprintScale
+-   setSwayScale
+-   needsRevive
+-   canRevive
+-   isDead
+-   isInvulnerable
+-   revive
+-   setProxyEntity
+-   getProxyEntity
+-   getProxyAllowWeapon
+-   setSniperAOR
+-   getKilledTime
+-   forceRespawn
+-   enter
+-   createIcon
+-   freeIcon
+-   getAmmo
+-   getMaxAmmo
+-   setAmmo
+-   setMaxAmmo
+-   setTargetTimeScale
+-   disableSprint
+-   disableRun
+-   disableFootsteps
+-   disableFallingDamage
+-   disguise
+-   setSpectateClient
+-   getDisguiseClient
+-   isDisguised
+-   setViewSkin
+-   getViewSkin
+-   setGUIClipIndex
+-   getDeploymentRequest
+-   getDeploymentPosition
+-   getActiveTask
+-   getItemIndexByName
+-   getItemNameByIndex
+-   binAdd
+-   binGet
+-   binGetSize
+-   binRemove
+-   disableShadows
+-   inhibitGuis
+-   getPostArmFindBestWeapon
+-   sameFireTeam
+-   isFireTeamLeader
+-   isLocalPlayer
+-   isToolTipPlaying
+-   resetTargetLock
+-   isLocking
+-   enableClientModelSights
+-   disableClientModelSights
+-   getCrosshairTitle
+-   adjustDeathYaw
+-   setCarryingObjective
+
+#### Bots Player Interface Events
+
+-   setPlayerChargeOrigin
+-   setPlayerChargeArmed
+-   setPlayerItemState
+-   setPlayerGrenadeState
+-   setPlayerMineState
+-   setPlayerMineArmed
+-   setPlayerSupplyCrateState
+-   setPlayerAirstrikeState
+-   setPlayerCovertToolState
+-   setPlayerSpawnHostState
+-   setSmokeNadeState
+-   setArtyAttackLocation
+-   setPlayerRepairTarget
+-   setPlayerKillTarget
+-   setPlayerPickupRequestTime
+-   setPlayerCommandRequestTime
+-   setTeleporterState
+
+### sdAtmosphere Events
+
+-   resetPostProcess
+-   getDefaultPostProcessSaturation
+-   getDefaultPostProcessGlareSourceBrightness
+-   getDefaultPostProcessGlareBlurBrightness
+-   getDefaultPostProcessGlareBrightnessThreshold
+-   getDefaultPostProcessGlareThresholdDependency
+-   setPostProcessTint
+-   setPostProcessSaturation
+-   setPostProcessContrast
+-   setPostProcessGlareParms
+-   isNight
+
+### sdWalker Events
+
+-   getMoveDelta
+-   setDelta
+-   setViewAxis
+-   setCompressionScale
+-   groundPound
+
+### sdTransport Events
+
+Events used in regular vehicles
+
+-   repair
+-   getLastRepairOrigin
+-   resupply
+-   inputSetPlayer
+-   inputGetCollective
+-   [GetDriver\_(script\_event).html getDriver]
+-   isEmpty
+-   updateEngine
+-   setLightsEnabled
+-   disableSuspension
+-   getPassengerNames
+-   [Lock\_(script\_event).html lock]
+-   kickPlayer
+-   disableTimeout
+-   getSteerAngle
+-   destroyParts
+-   decayParts
+-   decayLeftWheels
+-   decayRightWheels
+-   decayNonWheels
+-   resetDecayTime
+-   hasHiddenParts
+-   disableModel
+-   swapPosition
+-   getNumPositions
+-   getNumOccupiedPositions
+-   getPositionPlayer
+-   getSurfaceType
+-   selectVehicleWeapon
+-   getObject
+-   setThrust
+-   getJoint
+-   getParent
+-   setDeathThroeHealth
+-   getMinDisplayHealth
+-   updateThrusters
+-   isEMPed
+-   isWeaponEMPed
+-   applyEMPDamage
+-   getRemainingEMP
+-   setLockAlarmActive
+-   setImmobilized
+-   setActive
+-   getLandingGearDown
+-   inSiegeMode
+-   getArmor
+-   [SetArmor\_(script\_event).html setArmor]
+-   getNumVehicleWeapons
+-   getVehicleWeapon
+-   setOverDriveScale
+-   setTrackerEntity
+-   isPlayerBanned
+-   banPlayer
+-   clearLastAttacker
+-   enablePart
+-   disablePart
+-   destructionTime
+-   directionWarning
+-   isTeleporting
+
+### sdVehicle\_Rigidbody Events
+
+-   setDamageDealtScale
+
+### sdVehicleWeapon Events
+
+-   getPlayer
+-   setTarget
+
+### sdJetPack Events
+
+-   getChargeFraction
+
+### sdScriptEntity Events
+
+-   addHelper
+-   getBoundPlayer
+-   removeBoundPlayer
+-   chSetNumLines
+-   chAddLine
+-   chSetOrigin
+-   chGetDistance
+-   chSetLineText
+-   chSetLineTextIndex
+-   chSetLineMaterial
+-   chSetLineColor
+-   chSetLineBackColor
+-   chSetLineSize
+-   chSetLineFraction
+-   chSetLineType
+-   freeLayers
+-   allocRadarLayer
+-   allocJammerLayer
+-   radarSetLayerRange
+-   radarSetLayerMaxAngle
+-   radarSetLayerJammer
+-   radarSetLayerMask
+-   setRemoteViewAngles
+-   getRemoteViewAngles
+-   pathFind
+-   pathFindVampire
+-   pathLevel
+-   pathStraighten
+-   pathGetNumPoints
+-   pathGetPoint
+-   pathGetLength
+-   pathGetPosition
+-   pathGetDirection
+-   pathGetAngles
+-   getVampireBombPosition
+-   getVampireBombAcceleration
+-   getVampireBombFallTime
+-   forceRunPhysics
+-   setGroundPosition
+-   setXPShareInfo
+-   setBoxClipModel
+-   getTeamDamageDone
+-   setTeamDamageDone
+-   forceAnimUpdate
+-   setIKTarget
+-   hideInLocalView
+-   showInLocalView
+-   setClipOriented
+
+### sdDeployZone Events
+
+Territory Events
+
+-   setActive
+
+### Animated Client Entity Events
+
+-   setAnimFrame
+-   getNumFrames
+-   dispose
+
+### sdTeleporter Events
+
+-   enableTeam
+-   disableTeam
+
+### sdRepairDrone Events
+
+-   setTargetPosition
+-   setEffectOrigins
+-   setEntities
+-   getRepairTarget
+-   getOwnerEntity
+-   hideThrusters
+
+### sdParachute Events
+
+-   applyParachute
+-   [SetOwner\_(script\_event).html setOwner]
+-   setDeployStart
+-   isMovingTooSlow
+
+### sdDefenceTurret Events
+
+-   setDisabled
+-   isDisabled
+-   getTargetPosition
+-   [GetEnemy\_(script\_event).html getEnemy]
+-   [SetEnemy\_(script\_event).html setEnemy]
+
+### sdDeliveryVehicle Events
+
+-   startJotunDelivery
+-   startJotunReturn
+-   startMagogDelivery
+-   startMagogReturn
+
+Game Class Events
+-----------------
+
+The game sets up several [Game\_class.html game classes] to manage different things.
+
+### Objective Manager Events
+
+-   setObjectiveState
+-   setObjectiveIcon
+-   setObjectiveWorldIcon
+-   getObjectiveState
+-   setNextObjective
+-   getNextObjective
+-   setShortDescription
+-   getShortDescription
+-   createMapScript
+-   logObjectiveCompletion
+
+#### Bot Objective Manager Events
+
+-   deactivateBotActionGroup
+-   activateBotActionGroup
+-   setBotActionStateForEvent
+-   deactivateBotAction
+-   activateBotAction
+-   setBotCriticalClass
+-   botUpdateForEvent
+-   setAttackingTeam
+-   setPrimaryTeamAction
+-   setSecondaryTeamAction
+-   setTeamNeededClass
+-   setBotSightDist
+-   disableRouteGroup
+-   enableRouteGroup
+-   enableRoute
+-   disableRoute
+-   setMapHasMCPGoal
+-   setSpawnActionOwner
+-   setActionObjState
+-   enableNode
+-   disableNode
+-   setNodeTeam
+-   teamSuicideIfNotNearAction
+-   isActionGroupActive
+-   isActionActive
+-   switchTeamWeapons
+-   killBotActionGroup
+-   killBotAction
+-   setTeamUseRearSpawn
+-   setTeamUseRearSpawnPercentage
+-   getNumBotsOnTeam
+-   setActionPriority
+-   setTeamAttacksDeployables
+-   setActionHumanGoal
+-   setActionStroggGoal
+-   clearTeamBotBoundEntities
+-   setBotTeamRetreatTime
+-   setTeamMinePlantIsPriority
+-   setBotActionVehicleType
+-   setBotActionGroupVehicleType
+-   disableAASAreaInLocation
+
+### Team Events
+
+-   [GetName\_(script\_event).html getName]
+-   getTitle
+-   registerDeployable
+-   unRegisterDeployable
+-   registerSpawnPoint
+-   unRegisterSpawnPoint
+-   getMaxDeployables
+-   getNumDeployables
+-   getDeployable
+
+#### Bot Team Events
+
+-   setTeamRearSpawn
+
+### Task Events
+
+-   allocEntityTask
+-   complete
+-   uncomplete
+-   setTimeout
+-   free
+-   getTaskEntity
+-   getPriority
+-   setPriority
+-   setUserCreated
+-   isUserCreated
+-   setLocation
+-   setWayPointState
+-   [GetKey\_(script\_event).html getKey]
+-   [GetIntKey\_(script\_event).html getIntKey]
+-   [GetFloatKey\_(script\_event).html getFloatKey]
+-   [GetVectorKey\_(script\_event).html getVectorKey]
+-   [GetEntityKey\_(script\_event).html getEntityKey]
+-   getKeyWithDefault
+-   getIntKeyWithDefault
+-   getFloatKeyWithDefault
+-   getVectorKeyWithDefault
+-   giveObjectiveProficiency
+
+CVar Events
+-----------
+
+The game creates a cvar wrapper to support the following events on a cvar object returned by sys.<span class="deadlink"> getCVar</span>
+
+-   getFloatValue
+-   getStringValue
+-   getIntValue
+-   getBoolValue
+-   getVectorValue
+-   setFloatValue
+-   setStringValue
+-   setIntValue
+-   setBoolValue
+-   setVectorValue
+-   setCallback
+
+Mask Edit-session Events
+------------------------
+
+-   openMask
+-   updateProjection
+-   setDecalMaterial
+-   setStampSize
+-   stamp
+-   saveAll
+

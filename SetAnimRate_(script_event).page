@@ -1,0 +1,34 @@
+SetAnimRate (script event)
+==========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+adjust the animation rate for an actor, it will be multiplied by the passed in parameter.
+
+Usage
+-----
+
+void setAnimRate( float multiplier )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

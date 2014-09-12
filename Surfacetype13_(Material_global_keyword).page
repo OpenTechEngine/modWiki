@@ -1,0 +1,26 @@
+Surfacetype13 (Material global keyword)
+=======================================
+
+Description
+-----------
+
+Flags the surface as made of *surfacetype13* to define the type of hit sound and debris.
+
+Usage
+-----
+
+In the global section of your material shader type...
+
+`surfacetype13`
+
+Parameters
+----------
+
+None.
+
+Notes
+-----
+
+The material will play the snd\_surfacetype13 soundshader when shot and show mtr\_wound\_surfacetype13 as a decal.
+
+

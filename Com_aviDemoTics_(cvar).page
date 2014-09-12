@@ -1,0 +1,60 @@
+Com aviDemoTics (cvar)
+======================
+
+Description
+-----------
+
+This determines the framerate to capture .[TGA\_(file\_format).html TGA] frames generated with the [AviDemo\_(console\_command).html aviDemo] command.
+
+Usage
+-----
+
+At the console type...
+
+`com_aviDemoTics [int]`
+
+Parameters
+----------
+
+-   [int] - The framerate to capture at.
+    -   1 = 15fps
+    -   2 = 30fps
+    -   3 = 45fps
+    -   4 = 60fps
+
+Flags
+-----
+
+| Flag              | Enabled | Description                                  |
+|-------------------|---------|----------------------------------------------|
+| CVAR\_ALL         |         | all flags                                    |
+| CVAR\_BOOL        |         | variable is a boolean                        |
+| CVAR\_INTEGER     | X       | variable is an integer                       |
+| CVAR\_FLOAT       |         | variable is a float                          |
+| CVAR\_SYSTEM      | X       | system variable                              |
+| CVAR\_RENDERER    |         | renderer variable                            |
+| CVAR\_SOUND       |         | sound variable                               |
+| CVAR\_GUI         |         | gui variable                                 |
+| CVAR\_GAME        |         | game variable                                |
+| CVAR\_TOOL        |         | tool variable                                |
+| CVAR\_USERINFO    |         | sent to servers, available to menu           |
+| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
+| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
+| CVAR\_STATIC      | X       | statically declared, not user created        |
+| CVAR\_CHEAT       | X       | variable is considered a cheat               |
+| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
+| CVAR\_INIT        |         | can only be set from the command-line        |
+| CVAR\_ROM         |         | display only, cannot be set by user at all   |
+| CVAR\_ARCHIVE     |         | set to cause it to be saved to a config file |
+| CVAR\_MODIFIED    | X       | set when the variable is modified            |
+
+Notes
+-----
+
+Any number above four seems to have no effect. It's not 100% clear if this it based on the engine's in-game clock of 60fps or if it's based on the refresh rate. Related CVars:
+
+-   [Com\_aviDemoHeight\_(cvar).html com\_aviDemoHeight] - You can select the height of each frame.
+-   [Com\_aviDemoSamples\_(cvar).html com\_aviDemoSamples] - You can select the [Antialiasing.html antialiasing] factor of each frame.
+-   [Com\_aviDemoWidth\_(cvar).html com\_aviDemoWidth] - You can select the width of each frame.
+
+

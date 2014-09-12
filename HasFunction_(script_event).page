@@ -1,0 +1,34 @@
+HasFunction (script event)
+==========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Checks if an entity has a specific function in it's associated script object.
+
+Usage
+-----
+
+*boolean* hasFunction( *string* **functionName** )
+
+Parameters
+----------
+
+-   [functionName] - The name of the function to check for.
+
+Examples
+--------
+
+<font color="#0000ff">`boolean`</font>` doesFire = `<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`hasFunction`</font><font color="#000000">`(`</font><font color="#666666">`"fire"`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+Also see [CallFunction\_(script\_event).html callFunction].
+
+

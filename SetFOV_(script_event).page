@@ -1,0 +1,34 @@
+SetFOV (script event)
+=====================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+RAVEN BEGIN // bdube: added // Set the cameras FOV
+
+Usage
+-----
+
+void setFOV( float fov )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

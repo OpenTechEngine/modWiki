@@ -1,0 +1,12 @@
+GUI variable types
+==================
+
+Variables can be declared before the actual code blocks on a item, usually right after the item properties. They are meant to be used by [GUI\_commands.html command statements] inside [GUI\_item\_events.html event blocks].
+
+Available variables types
+-------------------------
+
+-   definefloat
+-   definevec4
+-   float
+

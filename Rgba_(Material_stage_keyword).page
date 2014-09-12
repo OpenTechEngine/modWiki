@@ -1,0 +1,42 @@
+Rgba (Material stage keyword)
+=============================
+
+Description
+-----------
+
+The **rgba** keyword multiples all channels of the associated map by the given value.
+
+Usage
+-----
+
+`rgba <val>`
+
+Parameters
+----------
+
+-   *val* - the value by which all channels of the image map should be multiplied
+
+Example
+-------
+
+The following stage reduces the intensity of all channels by half.
+
+`{`
+`   map path/to/image.tga`
+`   rgba 0.5`
+`}`
+
+Notes
+-----
+
+This keyword is a shorthand way to accomplish the following...
+
+`{`
+`   map path/to/image.tga`
+`   red 0.5`
+`   green 0.5`
+`   blue 0.5`
+`   alpha 0.5`
+`}`
+
+

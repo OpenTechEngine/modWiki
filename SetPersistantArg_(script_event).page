@@ -1,0 +1,34 @@
+SetPersistantArg (script event)
+===============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Sets a key/value pair that persists between maps
+
+Usage
+-----
+
+void setPersistantArg( string key, string value )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

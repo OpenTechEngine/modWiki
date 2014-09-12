@@ -1,0 +1,41 @@
+IsA (script event)
+==================
+
+<div style="padding: 1px; border: 0px solid #000000" align="left">
+<font size="18px"><font color="black">![Image:Q4square\_bg.png](images_6_69_Q4square_bg.png "fig:Image:Q4square_bg.png") The information on this page is specific to [Quake\_4.html Quake 4].</font></font>
+
+</div>
+
+------------------------------------------------------------------------
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Determines if an entity is of a certain type.
+
+Usage
+-----
+
+*float* isA( *string* **className** )
+
+Parameters
+----------
+
+-   [className] - Type of entity you're comparing to.
+
+Examples
+--------
+
+<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`isA`</font><font color="#000000">`(`</font>` `<font color="#666666">`"info_player_start"`</font>` `<font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+Returns 0 if false, 1 if true.
+
+

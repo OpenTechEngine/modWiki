@@ -1,0 +1,35 @@
+MoveToPos (script event)
+========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Moves this entity to the specified XYZ coordinates within a level.
+
+Usage
+-----
+
+*void* moveToPos( *vector* **coord** )
+
+Parameters
+----------
+
+-   [coord] - a vector that describes the XYZ coordinates to move to.
+
+Examples
+--------
+
+` `
+<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`moveToPos`</font><font color="#000000">`(`</font>` '`<font color="#0000dd">`300`</font>` -`<font color="#0000dd">`144`</font>` `<font color="#0000dd">`90`</font>`' `<font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+

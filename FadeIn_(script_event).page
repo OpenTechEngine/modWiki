@@ -1,0 +1,36 @@
+FadeIn (script event)
+=====================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Fades towards the given color over the given time in seconds.
+
+Usage
+-----
+
+*void* fadeIn( *vector* **color**, *float* **time** )
+
+Parameters
+----------
+
+-   [color] - The color to fade to.
+-   [time] - The duration of the fade.
+
+Examples
+--------
+
+` `
+<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`fadeIn`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>`', `<font color="#0000dd">`10`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+

@@ -1,0 +1,63 @@
+Ammo rocketlauncher moveable (entity)
+=====================================
+
+> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+
+Description
+-----------
+
+Rocket Launcher Ammo
+
+Spawn Arguments
+---------------
+
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+
+| KEY                       | DESCRIPTION                |
+|---------------------------|----------------------------|
+| bouncyness                | Description not available. |
+| density                   | Description not available. |
+| editor\_color             | Description not available. |
+| editor\_ignore            | Description not available. |
+| editor\_maxs              | Description not available. |
+| editor\_menu              | Description not available. |
+| editor\_mins              | Description not available. |
+| editor\_rotatable         | Description not available. |
+| editor\_usage             | Rocket Launcher Ammo       |
+| friction                  | Description not available. |
+| fx\_respawn               | Description not available. |
+| inherit                   | Description not available. |
+| inherit2                  | Description not available. |
+| inv\_ammo\_rocketlauncher | Description not available. |
+| inv\_icon                 | Description not available. |
+| inv\_name                 | Description not available. |
+| mass                      | Description not available. |
+| model                     | Description not available. |
+| nodrop                    | Description not available. |
+| noimpact                  | Description not available. |
+| notPushable               | Description not available. |
+| respawn                   | Description not available. |
+| size                      | Description not available. |
+| snd\_acquire              | Description not available. |
+| spawnclass                | Description not available. |
+| triggerSize               | Description not available. |
+
+Inheritance
+-----------
+
+This entity is derived from the following:
+
+-   [Ammo\_triggersize\_SP\_(entity).html ammo\_triggersize\_SP]
+    -   [Ammo\_default\_(entity).html ammo\_default]
+        -   [Ammo\_rocketlauncher\_(entity).html ammo\_rocketlauncher]
+            -   *' ammo\_rocketlauncher\_moveable*'
+
+**Note**: Entries marked in italics are classes defined in the SDK.
+
+Notes
+-----
+
+Notes not available.
+

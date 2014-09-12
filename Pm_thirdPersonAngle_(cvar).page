@@ -1,0 +1,54 @@
+Pm thirdPersonAngle (cvar)
+==========================
+
+Description
+-----------
+
+This CVar adjust the viewing position of the third person perspective camera.
+
+Usage
+-----
+
+At the console type...
+
+`pm_thirdPersonAngle [float]`
+
+Parameters
+----------
+
+-   [float] - The angle in degrees to view the player from.
+
+Flags
+-----
+
+| Flag              | Enabled | Description                                  |
+|-------------------|---------|----------------------------------------------|
+| CVAR\_ALL         |         | all flags                                    |
+| CVAR\_BOOL        |         | variable is a boolean                        |
+| CVAR\_INTEGER     |         | variable is an integer                       |
+| CVAR\_FLOAT       | X       | variable is a float                          |
+| CVAR\_SYSTEM      |         | system variable                              |
+| CVAR\_RENDERER    |         | renderer variable                            |
+| CVAR\_SOUND       |         | sound variable                               |
+| CVAR\_GUI         |         | gui variable                                 |
+| CVAR\_GAME        | X       | game variable                                |
+| CVAR\_TOOL        |         | tool variable                                |
+| CVAR\_USERINFO    |         | sent to servers, available to menu           |
+| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
+| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
+| CVAR\_STATIC      | X       | statically declared, not user created        |
+| CVAR\_CHEAT       |         | variable is considered a cheat               |
+| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
+| CVAR\_INIT        |         | can only be set from the command-line        |
+| CVAR\_ROM         |         | display only, cannot be set by user at all   |
+| CVAR\_ARCHIVE     |         | set to cause it to be saved to a config file |
+| CVAR\_MODIFIED    | X       | set when the variable is modified            |
+
+Notes
+-----
+
+0-360 is the range. 0 being from behind and 180 being from the front.
+
+This CVar only applies to the heading. It does not affect pitch or bank.
+
+

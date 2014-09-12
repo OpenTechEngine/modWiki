@@ -1,0 +1,35 @@
+Wait (script event)
+===================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type [Thread\_(scripting).html idThread], accessible via [Scripting\_basics.html\#sys sys] identifier.
+
+Description
+-----------
+
+Suspends execution of the current thread for the given number of seconds.
+
+Usage
+-----
+
+*[Data\_types.html\#void void]* wait( *[Data\_types.html\#float float]* **time** )
+
+Parameters
+----------
+
+-   [time] - The duration in seconds to suspend execution.
+
+Examples
+--------
+
+` `
+<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`wait`</font><font color="#000000">`(`</font><font color="#0000dd">`5`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+**time** parameter values less than one game frame are not recommended. See [Thread\_(scripting).html threads] for more information.
+
+

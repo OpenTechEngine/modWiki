@@ -1,0 +1,34 @@
+SetNextAction (script event)
+============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+use this to set the bosses' next action
+
+Usage
+-----
+
+'float' setNextAction( string strAction )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

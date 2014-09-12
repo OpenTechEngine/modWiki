@@ -1,0 +1,32 @@
+MakeMegaTexture (console command)
+=================================
+
+<div style="background: #FFFFCC; padding: 5px; border: 1px solid #000000">
+<center>
+**NOTE:** Megatexture functionality is broken in the stock versions of Doom 3, Quake 4, and Prey due to a missing fragment program, megatexture.vfp. However, with a suitable replacement, the information documented in this article is still applicable. At present, you can find a mod that provides you with the necessary file [here](http://web.archive.org/web/20120126043703/http://doom3.filefront.com/file/Megatexture_Technology_Mod;72779).
+
+</center>
+</div>
+Description
+-----------
+
+This command generates a MegaTexture.
+
+Usage
+-----
+
+At the console type...
+
+`makemegatexture [Filename]`
+
+Parameters
+----------
+
+[Filename] - Name of .[TGA\_(file\_format).html TGA] file (without the extension).
+
+Notes
+-----
+
+This command will take a .TGA file present in the \\megatexture folder and generate a new texture with four components named \<filename\>\_preview.tga and a \<filename\>.MEGA file. This console command seems to be not entirely functional in Doom 3.
+
+

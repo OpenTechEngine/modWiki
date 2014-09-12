@@ -1,0 +1,29 @@
+Linear (Material stage keyword)
+===============================
+
+Description
+-----------
+
+The **linear** keyword defines that a linear type of texture filtering is to be used on this stage.
+
+Usage
+-----
+
+`linear`
+
+Parameters
+----------
+
+This keyword does not accept parameters.
+
+Example
+-------
+
+{
+
+`   linear`
+`   map     textures/custom/foo.tga`
+`}`
+
+Notes
+-----

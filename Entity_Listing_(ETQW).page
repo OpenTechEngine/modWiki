@@ -1,0 +1,1984 @@
+Entity Listing (ETQW)
+=====================
+
+<div style="padding: 1px; border: 0px solid #000000" align="left">
+<font size="18px"><font color="black">![Image:Etqwsquare\_bg.png](images_f_f9_Etqwsquare_bg.png "fig:Image:Etqwsquare_bg.png") The information on this page is specific to [Enemy Territory: Quake Wars](http://web.archive.org/web/20121206024939/http://www.modwiki.net:80/wiki/Enemy_Territory:_Quake_Wars).</font></font>
+
+</div>
+
+------------------------------------------------------------------------
+
+|----------------------------------------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                                                          
+ Contents                                                                                                                                      
+ --------                                                                                                                                      
+                                                                                                                                               
+ </div>                                                                                                                                        
+ -   [Entity\_Listing\_(ETQW).html\#Inheritance\_Overview <span class="tocnumber">1</span> <span class="toctext">Inheritance Overview</span>]  
+ -   [Entity\_Listing\_(ETQW).html\#Entities <span class="tocnumber">2</span> <span class="toctext">Entities</span>]                           
+     -   [Entity\_Listing\_(ETQW).html\#A <span class="tocnumber">2.1</span> <span class="toctext">A</span>]                                   
+     -   [Entity\_Listing\_(ETQW).html\#B <span class="tocnumber">2.2</span> <span class="toctext">B</span>]                                   
+     -   [Entity\_Listing\_(ETQW).html\#C <span class="tocnumber">2.3</span> <span class="toctext">C</span>]                                   
+     -   [Entity\_Listing\_(ETQW).html\#D <span class="tocnumber">2.4</span> <span class="toctext">D</span>]                                   
+     -   [Entity\_Listing\_(ETQW).html\#E <span class="tocnumber">2.5</span> <span class="toctext">E</span>]                                   
+     -   [Entity\_Listing\_(ETQW).html\#F <span class="tocnumber">2.6</span> <span class="toctext">F</span>]                                   
+     -   [Entity\_Listing\_(ETQW).html\#G <span class="tocnumber">2.7</span> <span class="toctext">G</span>]                                   
+     -   [Entity\_Listing\_(ETQW).html\#H <span class="tocnumber">2.8</span> <span class="toctext">H</span>]                                   
+     -   [Entity\_Listing\_(ETQW).html\#I <span class="tocnumber">2.9</span> <span class="toctext">I</span>]                                   
+     -   [Entity\_Listing\_(ETQW).html\#J <span class="tocnumber">2.10</span> <span class="toctext">J</span>]                                  
+     -   [Entity\_Listing\_(ETQW).html\#L <span class="tocnumber">2.11</span> <span class="toctext">L</span>]                                  
+     -   [Entity\_Listing\_(ETQW).html\#M <span class="tocnumber">2.12</span> <span class="toctext">M</span>]                                  
+     -   [Entity\_Listing\_(ETQW).html\#P <span class="tocnumber">2.13</span> <span class="toctext">P</span>]                                  
+     -   [Entity\_Listing\_(ETQW).html\#R <span class="tocnumber">2.14</span> <span class="toctext">R</span>]                                  
+     -   [Entity\_Listing\_(ETQW).html\#S <span class="tocnumber">2.15</span> <span class="toctext">S</span>]                                  
+     -   [Entity\_Listing\_(ETQW).html\#T <span class="tocnumber">2.16</span> <span class="toctext">T</span>]                                  
+     -   [Entity\_Listing\_(ETQW).html\#V <span class="tocnumber">2.17</span> <span class="toctext">V</span>]                                  
+     -   [Entity\_Listing\_(ETQW).html\#W <span class="tocnumber">2.18</span> <span class="toctext">W</span>]                                  |
+
+Inheritance Overview
+--------------------
+
+The following diagram depicts the inheritance of [Entitydef\_(decl).html entities] all the way down to their root classes in the [Coding.html game code].
+
+-   **HASHINDEX\_TEMPLATE\_TAG**
+-   **HASHMAP\_TEMPLATE\_TAG**
+-   bot\_action
+-   bot\_action\_bbox
+-   bot\_action\_target
+-   bot\_locationremap
+-   bot\_locationremap\_target
+-   bot\_reachability
+-   bot\_reachability\_target
+-   bot\_route\_link
+-   bot\_route\_start
+-   bot\_vehicle\_pathnode
+-   **clientNetworkInfo\_t**
+-   deployable\_awacs\_gdf\_awacs
+-   deployable\_base
+    -   deployable\_amt\_gdf
+        -   deployable\_amt\_gdf\_cc
+            -   deployable\_amt\_gdf\_cc\_arctic
+        -   placement\_d\_antimiss\_gdf
+    -   deployable\_antiarmour\_gdf
+        -   placement\_d\_antiveh\_gdf
+    -   deployable\_antiarmour\_strogg
+        -   placement\_d\_antiveh\_strogg
+    -   deployable\_antipersonnel\_gdf
+        -   placement\_d\_antiper\_gdf
+    -   deployable\_antipersonnel\_strogg
+        -   placement\_d\_antiper\_strogg
+    -   deployable\_artillery
+        -   placement\_d\_artillery\_gdf
+    -   deployable\_basedefence
+        -   deployable\_basedefence\_gdf
+        -   deployable\_basedefence\_strogg
+    -   deployable\_plasmamortar
+        -   placement\_d\_plasmamortar\_strogg
+    -   deployable\_psi
+        -   placement\_d\_psiradar\_strogg
+    -   deployable\_radar
+        -   placement\_d\_radar\_gdf
+    -   deployable\_railhowitzer
+        -   placement\_d\_railhowitzer\_strogg
+    -   deployable\_rockets
+        -   placement\_d\_rockets\_gdf
+    -   deployable\_shield\_generator
+        -   deployable\_shield\_generator\_domihub
+        -   placement\_d\_shield\_generator\_strogg
+    -   deployable\_ssg
+        -   placement\_d\_ssg\_strogg
+    -   deployable\_ssm
+        -   placement\_d\_ssm\_gdf
+-   deployable\_gdf
+-   deployable\_osr\_strogg\_arm
+-   deployable\_osr\_strogg\_base
+-   deployable\_osr\_strogg\_top
+-   deployable\_strogg
+-   e3\_temp\_temp\_0
+-   e3\_temp\_temp\_1
+-   e3\_temp\_temp\_10
+-   e3\_temp\_temp\_11
+-   e3\_temp\_temp\_12
+-   e3\_temp\_temp\_13
+-   e3\_temp\_temp\_14
+-   e3\_temp\_temp\_15
+-   e3\_temp\_temp\_16
+-   e3\_temp\_temp\_17
+-   e3\_temp\_temp\_18
+-   e3\_temp\_temp\_19
+-   e3\_temp\_temp\_2
+-   e3\_temp\_temp\_20
+-   e3\_temp\_temp\_21
+-   e3\_temp\_temp\_22
+-   e3\_temp\_temp\_23
+-   e3\_temp\_temp\_24
+-   e3\_temp\_temp\_25
+-   e3\_temp\_temp\_26
+-   e3\_temp\_temp\_27
+-   e3\_temp\_temp\_28
+-   e3\_temp\_temp\_29
+-   e3\_temp\_temp\_3
+-   e3\_temp\_temp\_30
+-   e3\_temp\_temp\_31
+-   e3\_temp\_temp\_32
+-   e3\_temp\_temp\_4
+-   e3\_temp\_temp\_5
+-   e3\_temp\_temp\_6
+-   e3\_temp\_temp\_7
+-   e3\_temp\_temp\_8
+-   e3\_temp\_temp\_9
+-   func\_activator
+-   func\_bobbing
+-   func\_cameraview
+-   func\_elevator
+-   func\_group
+-   func\_pendulum
+-   func\_riser
+-   func\_rotating
+-   **function\_t**
+-   globalConstants
+-   **idAAS**
+-   **idAASCallback\_AvoidLocation**
+-   **idAASCallback\_FindAreaOutOfRange**
+-   **idAASCallback\_FindCoverArea**
+-   **idAASCallback\_FindFlaggedArea**
+-   **idAASLocal**
+-   **idAF**
+-   **idAFBody**
+-   **idAFConstraint**
+-   **idAFConstraint\_BallAndSocketJoint**
+-   **idAFConstraint\_BallAndSocketJointFriction**
+-   **idAFConstraint\_ConeLimit**
+-   **idAFConstraint\_Contact**
+-   **idAFConstraint\_ContactFriction**
+-   **idAFConstraint\_CylindricalJoint**
+-   **idAFConstraint\_Fixed**
+-   **idAFConstraint\_Hinge**
+-   **idAFConstraint\_HingeFriction**
+-   **idAFConstraint\_HingeSteering**
+-   **idAFConstraint\_Line**
+-   **idAFConstraint\_Plane**
+-   **idAFConstraint\_PyramidLimit**
+-   **idAFConstraint\_Slider**
+-   **idAFConstraint\_Spring**
+-   **idAFConstraint\_Suspension**
+-   **idAFConstraint\_UniversalJoint**
+-   **idAFConstraint\_UniversalJointFriction**
+-   **idAFPoseJointMod**
+-   **idAFTree**
+-   **idAngles**
+-   **idAnim**
+-   **idAnimBlend**
+-   **idAnimBlendNetworkInfo\_Minimal**
+-   **idAnimManager**
+-   **idAnimState**
+-   **idAnimator**
+-   **idBase64**
+-   **idBitMsg**
+-   **idBitMsgDelta**
+-   **idBotAI**
+-   **idBotActions**
+-   **idBotNode**
+-   **idBotNodeGraph**
+-   **idBotObstacle**
+    -   bot\_dynamic\_obstacle
+-   **idBotRoutes**
+-   **idBotThread**
+-   **idBotThreadData**
+-   **idBounds**
+-   **idBoundsShort**
+-   **idBox**
+-   **idCQuat**
+-   **idCVar**
+-   **idCamera**
+    -   **sdCamera\_Placement**
+        -   placement\_camera
+        -   radiant\_camera
+-   **idCamera\_MD5**
+-   **idClass**
+    -   **idClipModel**
+    -   **idForce**
+        -   **idForce\_Constant**
+        -   **idForce\_Drag**
+        -   **idForce\_Field**
+        -   **idForce\_Spring**
+    -   **idIK**
+        -   **idIK\_Reach**
+        -   **idIK\_Walk**
+        -   **sdIK\_Aim**
+        -   **sdIK\_Walker**
+        -   **sdIK\_WheeledVehicle**
+    -   **sdCVarWrapper**
+    -   **sdDeployMaskEditSession**
+    -   **sdLoggedTrace**
+    -   **sdObjectiveManagerLocal**
+    -   **sdPlayerTask**
+    -   **sdTaskManagerLocal**
+    -   **sdTeamInfo**
+-   **idClip**
+-   **idCmdArgs**
+-   **idCmdSystem**
+-   **idCompiler**
+-   **idComplex**
+-   **idCompressedJointQuat**
+-   **idDebugGraph**
+-   **idDeclModelDef**
+-   **idDeclType**
+-   **idDict**
+-   **idDragEntity**
+-   **idDrawVert**
+-   **idEditEntities**
+-   **idEntity**
+    -   **idAASObstacleEntity**
+        -   func\_aasobstacle
+    -   **idAnimatedEntity**
+        -   **idAFEntity\_Base**
+            -   **idAFEntity\_Generic**
+            -   **idAnimated**
+                -   env\_oil\_pump
+                -   env\_oil\_pump\_b
+                -   env\_oil\_pump\_c
+                -   env\_oil\_pump\_old
+                -   env\_refinery\_final\_objective\_b
+                -   func\_animate
+                -   island\_buoy
+                -   strogg\_scarab
+        -   **idActor**
+            -   **idPlayer**
+                -   **idBot**
+                -   player\_base
+                    -   cameraman
+                    -   player\_edf
+                        -   bot\_edf
+                    -   player\_gdf\_covertops
+                    -   player\_gdf\_engineer
+                    -   player\_gdf\_fieldops
+                    -   player\_gdf\_medic
+                    -   player\_gdf\_soldier
+                    -   player\_strogg\_aggressor
+                    -   player\_strogg\_constructor
+                    -   player\_strogg\_infiltrator
+                    -   player\_strogg\_oppressor
+                    -   player\_strogg\_technician
+        -   **idTestModel**
+        -   **idWeapon**
+        -   placement\_player
+            -   placement\_player\_gdf
+            -   placement\_player\_strogg
+        -   placement\_vehicle
+        -   placement\_weapon
+        -   **sdPlayerBody**
+            -   dead\_body\_gdf
+            -   dead\_body\_strogg
+        -   **sdScriptEntity**
+            -   carryable\_item\_base
+                -   carryable\_item\_dropped
+                -   carryable\_item\_enercell
+                    -   carryable\_item\_quarry\_1
+                    -   carryable\_item\_quarry\_2
+                    -   carryable\_item\_quarry\_3
+            -   carryable\_item\_caller
+            -   constructible\_base
+                -   constructible\_emp\_disruptor\_gdf
+                -   constructible\_tower\_gdf
+                -   constructible\_tower\_gdf\_all
+                    -   gun\_emplacement\_bracket\_gdf
+                -   constructible\_tower\_gdf\_base
+                -   constructible\_tower\_gdf\_top
+                -   constructible\_tower\_strogg
+                -   gameplay\_ark\_bridge\_stage1
+                -   gameplay\_ark\_bridge\_stage2
+                -   gameplay\_bottest\_generator
+                -   gameplay\_canyon\_bridge\_constructed
+                -   gameplay\_canyon\_bridge\_fixer
+                -   gameplay\_canyon\_bridge\_frame
+                -   gameplay\_canyon\_bridge\_platform
+                -   gameplay\_canyon\_bridge\_stage1
+                -   gameplay\_canyon\_bridge\_stage2
+                -   gameplay\_island\_generator
+                -   gameplay\_valley\_bridge\_constructed
+                -   gameplay\_valley\_bridge\_destroyed
+                -   gameplay\_valley\_bridge\_fixer
+                -   gameplay\_valley\_bridge\_frame
+                -   gameplay\_valley\_bridge\_platform
+                -   gameplay\_valley\_bridge\_stage1
+                -   gameplay\_valley\_bridge\_stage2
+                -   strogg\_mining\_laser\_repaired
+            -   constructible\_base\_etqwmap
+            -   constructible\_door\_relay
+            -   constructible\_materials\_neutral
+                -   constructible\_materials\_gdf
+                    -   constructible\_materials\_gun\_gdf
+                    -   constructible\_materials\_secondary\_gdf
+                    -   constructible\_materials\_tower\_gdf
+                    -   gameplay\_bottest\_generator\_materials
+                    -   gameplay\_island\_generator\_materials
+                -   constructible\_materials\_strogg
+            -   deployable\_autodeployer
+            -   env\_strogg\_test\_subject
+            -   env\_strogg\_test\_subject\_a
+            -   firesupport\_marker\_artillery
+            -   firesupport\_marker\_railhowitzer
+            -   firesupport\_marker\_ssg
+            -   firesupport\_marker\_ssm
+            -   firesupport\_marker\_vampire
+            -   firesupport\_marker\_violator
+            -   func\_door\_switch
+            -   func\_fx
+            -   func\_synced\_fx
+                -   jammer\_tower\_effects\_idle
+            -   gameplay\_bottest\_storage\_room\_door
+            -   gameplay\_canyon\_bioreactor
+            -   gameplay\_destructible\_trigger
+            -   gameplay\_generic\_destructible\_objective
+            -   gameplay\_hackable\_objective
+            -   gameplay\_island\_storage\_room\_door
+            -   gameplay\_slipgate\_effects
+            -   gameplay\_strogg\_shield\_generator
+            -   gameplay\_strogg\_shield\_generator\_caller
+            -   gameplay\_strogg\_shield\_generator\_trigger
+            -   hint\_flyerdrone
+            -   **idDoor**
+                -   func\_door
+                    -   func\_door\_gdf
+                        -   func\_door\_gdf\_breakable
+                    -   func\_door\_slave
+                        -   func\_door\_gdf\_slave
+                        -   func\_door\_strogg\_slave
+                    -   func\_door\_strogg
+                        -   func\_door\_strogg\_breakable
+            -   **idMover\_Binary**
+                -   **idPlat**
+                    -   func\_plat
+            -   info\_objective
+            -   island\_beacon
+            -   item\_capturepoint
+            -   item\_capturepoint\_use
+            -   item\_drop\_pod
+                -   item\_drop\_pod\_quarry\_1
+                -   item\_drop\_pod\_quarry\_2
+                -   item\_drop\_pod\_quarry\_3
+            -   lightning
+            -   mapobjects\_flag
+            -   mapobjects\_windsock
+            -   misc\_mcp\_marker
+            -   misc\_particle\_trigger
+                -   jammer\_tower\_effects\_shutdown
+            -   misc\_scripted
+            -   misc\_supplycrate\_base
+                -   misc\_supplycrate\_health
+            -   mountable\_gdf\_gpmg
+            -   mountable\_strogg\_hyperblaster
+            -   mountable\_weapon\_base
+                -   mountable\_weapon\_gdf
+                -   mountable\_weapon\_strogg
+            -   placement\_rotator
+            -   projectile\_landmine
+                -   projectile\_landmine\_strogg
+            -   projectile\_third\_eye
+            -   **sdDefenceTurret**
+            -   **sdDeliveryVehicle**
+                -   vehicle\_cargoplane
+                    -   placement\_jotun
+                -   vehicle\_magog\_npc
+                    -   placement\_magog
+            -   **sdDeployZone**
+                -   deployzone
+            -   **sdDynamicSpawnPoint**
+                -   spawn\_host
+            -   **sdGeneralMover**
+            -   **sdParachute**
+                -   parachute
+                    -   round\_parachute
+                    -   strogg\_parachute
+            -   **sdRepairDrone**
+                -   flyer\_hive
+                -   strogg\_repair\_drone
+            -   **sdScriptEntity\_Projectile**
+                -   projectile\_teleporter
+            -   **sdSpawnController**
+                -   info\_capturable\_spawn
+                    -   info\_capturable\_spawn\_gdf
+                    -   info\_capturable\_spawn\_strogg
+                -   info\_spawn\_master
+            -   speaker\_assaultrifle\_test
+            -   speaker\_distance\_loop\_test
+            -   speaker\_distance\_loop\_test2
+            -   speaker\_distance\_test
+            -   speaker\_distance\_test2
+            -   speaker\_gpmg\_test
+            -   speaker\_machinepistol\_test
+            -   speaker\_pistol\_test
+            -   speaker\_shotgun\_test
+            -   speaker\_sniperrifle\_test
+            -   ssm\_barrel\_clip\_entity
+            -   structure\_base
+                -   structure\_gdf
+                    -   structure\_cc
+                -   structure\_strogg
+                    -   structure\_domihub
+                    -   structure\_replicator
+                    -   structure\_replicator\_test
+            -   structure\_module\_construction
+                -   structure\_module\_construction\_anansi
+                    -   deployable\_spawn\_anansi
+                -   structure\_module\_construction\_badger
+                    -   deployable\_spawn\_badger
+                -   structure\_module\_construction\_bumblebee
+                    -   deployable\_spawn\_bumblebee
+                -   structure\_module\_construction\_desecrator
+                    -   deployable\_spawn\_desecrator
+                -   structure\_module\_construction\_goliath
+                    -   deployable\_spawn\_goliath
+                -   structure\_module\_construction\_hog
+                    -   deployable\_spawn\_hog
+                -   structure\_module\_construction\_hornet
+                    -   deployable\_spawn\_hornet
+                -   structure\_module\_construction\_husky
+                    -   deployable\_spawn\_husky
+                -   structure\_module\_construction\_icarus
+                    -   deployable\_spawn\_icarus
+                -   structure\_module\_construction\_mcp
+                    -   deployable\_spawn\_mcp
+                -   structure\_module\_construction\_platypus
+                    -   deployable\_spawn\_platypus
+                -   structure\_module\_construction\_titan
+                    -   deployable\_spawn\_titan
+                -   structure\_module\_construction\_trojan
+                    -   deployable\_spawn\_trojan
+            -   trigger\_mcp
+            -   trigger\_mcp\_bot
+            -   trigger\_noplant
+            -   trigger\_scripted
+            -   vehicle\_mcp\_caller
+            -   vehicle\_strogg\_drop
+            -   vehicle\_vampire
+                -   placement\_d\_vampire\_gdf
+            -   vehicle\_violator
+            -   vo\_manager\_base
+            -   waypoint\_info\_base
+                -   waypoint\_info\_gdf
+                -   waypoint\_info\_strogg
+    -   **idCursor3D**
+    -   **idForceField**
+        -   func\_forcefield
+    -   **idItem**
+        -   **idMoveableItem**
+            -   projectile\_ammopack
+                -   projectile\_ammopack\_mega
+            -   projectile\_healthpack
+            -   projectile\_stroyentcells
+    -   **idLight**
+        -   light
+            -   light\_inside
+            -   light\_interior
+            -   light\_night
+    -   **idMoveable**
+        -   **idBarrel**
+        -   moveable\_base
+            -   moveable\_item\_ball
+            -   moveable\_item\_ballbouncy
+            -   moveable\_item\_barrel01
+            -   moveable\_item\_barrel02
+            -   moveable\_item\_beerbottle
+            -   moveable\_item\_beercan
+            -   moveable\_item\_cone
+            -   moveable\_item\_foldupchair\_a
+            -   moveable\_item\_foldupchair\_b
+            -   moveable\_item\_jerrycan
+            -   moveable\_item\_metalbox01
+            -   moveable\_item\_plasticcrate
+            -   moveable\_item\_refinerybarrel01
+            -   moveable\_item\_refinerybarrel02
+            -   moveable\_item\_refinerybarrier01
+            -   moveable\_item\_roadsign\_rock
+            -   moveable\_item\_stone1
+            -   moveable\_item\_stone2
+            -   moveable\_item\_stone3
+    -   **idPlayerStart**
+        -   info\_generic\_spawn
+        -   info\_player\_deathmatch
+        -   info\_player\_start
+        -   info\_spectator\_spawn
+        -   info\_team\_gdf\_spawn
+        -   info\_team\_strogg\_spawn
+    -   **idProjectile**
+        -   **idProjectile\_RigidBody**
+            -   projectile\_decoy
+                -   projectile\_decoy\_anansi
+                -   projectile\_decoy\_badger
+                -   projectile\_decoy\_bumblebee
+                -   projectile\_decoy\_desecrator
+                -   projectile\_decoy\_goliath
+                -   projectile\_decoy\_hog
+                -   projectile\_decoy\_hornet
+                -   projectile\_decoy\_husky
+                -   projectile\_decoy\_icarus
+                -   projectile\_decoy\_magog
+                -   projectile\_decoy\_mcp
+                -   projectile\_decoy\_platypus
+                -   projectile\_decoy\_titan
+                -   projectile\_decoy\_trojan
+            -   projectile\_deployable\_plasmamortar
+            -   projectile\_deployable\_rockets
+            -   projectile\_deployable\_ssg
+            -   projectile\_deployable\_ssm
+            -   projectile\_fafff
+            -   projectile\_grenade
+                -   projectile\_assaultrifle\_gren
+                -   projectile\_grenade\_airstrike\_marker\_base
+                    -   projectile\_grenade\_airstrike\_marker\_gdf
+                    -   projectile\_grenade\_airstrike\_marker\_strogg
+                -   projectile\_grenade\_emp
+                    -   projectile\_grenade\_emp\_roll
+                -   projectile\_grenade\_frag
+                    -   projectile\_grenade\_frag\_roll
+                -   projectile\_grenade\_scrambler
+                    -   projectile\_grenade\_scrambler\_sticky
+                -   projectile\_grenade\_shrap
+                    -   projectile\_grenade\_shrap\_sticky
+                -   projectile\_grenade\_smoke
+                -   projectile\_grenade\_supply\_marker\_base
+                    -   projectile\_grenade\_supply\_marker\_medic
+                -   projectile\_lacerator\_gren
+                -   projectile\_stroybomb
+            -   projectile\_haw
+                -   projectile\_haw\_anansi
+            -   projectile\_plasmacannon
+                -   projectile\_plasmacannon\_desecrator
+                -   projectile\_plasmacannon\_goliath
+                -   projectile\_plasmacannon\_small
+            -   projectile\_sbc
+            -   projectile\_scud
+        -   **sdProjectile\_Parabolic**
+            -   projectile\_deployable\_railhowitzer
+            -   projectile\_rocket\_base
+                -   projectile\_deployable\_antiarmour
+                -   projectile\_deployable\_antiarmour\_dumb
+                -   projectile\_deployable\_antiarmour\_strogg
+                -   projectile\_deployable\_artillery
+                -   projectile\_deployable\_artillery\_foreffect
+                -   projectile\_law
+                    -   projectile\_anansi\_law
+                    -   projectile\_strocket
+                    -   projectile\_trojan\_law
+                -   projectile\_law\_arcing
+                -   projectile\_obliterator
+                -   projectile\_obliterator\_arcing
+                -   projectile\_vampire
+                    -   projectile\_vampire\_client
+    -   **idSound**
+        -   speaker
+    -   **idSpawnableEntity**
+    -   **idSplinePath**
+        -   func\_splinemover
+    -   **idStaticEntity**
+        -   func\_static
+    -   **idTarget**
+        -   **idTarget\_Null**
+            -   target\_null
+                -   light\_vis\_dummy
+                -   vis\_dummy
+        -   misc\_teleporter\_angles
+        -   path\_corner
+    -   **idTrigger**
+        -   **idTrigger\_Hurt**
+            -   trigger\_barbedwire
+            -   trigger\_hurt
+                -   trigger\_hurt\_strogg\_shield
+                -   trigger\_hurt\_strogg\_wall
+        -   **idTrigger\_Multi**
+            -   **sdJumpPad**
+                -   gameplay\_jumppad
+                    -   gameplay\_jumppad\_gdf
+                    -   gameplay\_jumppad\_strogg
+            -   trigger\_multiple
+    -   **idWorldspawn**
+        -   worldspawn
+    -   **rvClientPhysics**
+    -   **sdAdEntity**
+        -   misc\_advert
+    -   **sdAmbientLight**
+        -   light\_ambient
+    -   **sdAtmosphere**
+        -   atmosphere
+        -   atmosphere\_landfall
+        -   atmosphere\_low
+    -   **sdEnvBoundsEntity**
+        -   info\_envbound
+    -   **sdEnvDefinitionEntity**
+        -   info\_envmap
+    -   **sdImposterEntity**
+        -   misc\_imposter
+        -   misc\_imposter\_spawner
+    -   **sdInstStatic**
+        -   misc\_instance\_spawner
+    -   **sdLODEntity**
+        -   lodentity
+    -   **sdLadderEntity**
+        -   func\_ladder
+    -   **sdLiquid**
+        -   liquid\_water
+    -   **sdLocationMarker**
+        -   info\_location
+    -   **sdMiscFlare**
+        -   func\_flare
+    -   **sdModelStatic**
+        -   model\_static
+    -   **sdPlayZoneEntity**
+        -   playzone\_all
+        -   playzone\_commandmap
+        -   playzone\_deploy
+        -   playzone\_path\_and\_heightmap
+        -   playzone\_play
+    -   **sdPlayZoneMarker**
+        -   playzone\_marker
+    -   **sdRainEffect**
+        -   rainEffect
+    -   **sdRouteConstraintController**
+        -   vehicle\_route\_constraint\_controller
+    -   **sdRouteConstraintMarker**
+        -   vehicle\_route\_constraint\_marker
+    -   **sdSnowEffect**
+        -   snowEffect
+    -   **sdStuffSystem**
+        -   stuffsystem
+    -   **sdTeleporter**
+        -   misc\_teleporter
+-   **idEvent**
+-   **idEventDef**
+-   **idEventDefInternal**
+-   **idFixedWinding**
+-   **idFrustum**
+-   **idGameEdit**
+-   **idGameLocal**
+-   **idGrowingWinding**
+-   **idHeap**
+-   **idImage**
+-   **idInterpreter**
+-   **idJointMat**
+-   **idLCP**
+-   **idLCP\_Square**
+-   **idLCP\_Symmetric**
+-   **idLangDict**
+-   **idLexer**
+-   **idLexerBinary**
+-   **idLib**
+-   **idMD5Anim**
+-   **idMapBrush**
+-   **idMapBrushSide**
+-   **idMapEntity**
+-   **idMapFile**
+-   **idMapPatch**
+-   **idMat2**
+-   **idMat3**
+-   **idMat3x4**
+-   **idMat4**
+-   **idMat5**
+-   **idMat6**
+-   **idMatX**
+-   **idMath**
+-   **idModelExport**
+-   **idODE\_Euler**
+-   **idODE\_Midpoint**
+-   **idODE\_RK4**
+-   **idODE\_RK4Adaptive**
+-   **idObstacleAvoidance**
+-   **idPVS**
+-   **idParser**
+-   **idPhysics**
+    -   **idPhysics\_Base**
+        -   **idPhysics\_AF**
+        -   **idPhysics\_Actor**
+            -   **idPhysics\_Monster**
+            -   **idPhysics\_Player**
+            -   **sdPhysics\_JetPack**
+            -   **sdPhysics\_Simple**
+        -   **idPhysics\_Parametric**
+        -   **idPhysics\_RigidBody**
+        -   **sdPhysics\_Linear**
+        -   **sdPhysics\_Parabola**
+        -   **sdPhysics\_RigidBodyMultiple**
+        -   **sdPhysics\_SimpleRigidBody**
+        -   **sdPhysics\_SimpleSpline**
+    -   **idPhysics\_Static**
+    -   **idPhysics\_StaticMulti**
+-   **idPlane**
+-   **idPlaneSet**
+-   **idPlayerIcon**
+-   **idPlayerView**
+-   **idPluecker**
+-   **idPolar3**
+-   **idPolynomial**
+-   **idPort**
+-   **idProgram**
+-   **idProgramTypeObject**
+-   **idPush**
+-   **idQuat**
+-   **idRandom**
+-   **idRandom2**
+-   **idRestoreGame**
+-   **idRotation**
+-   **idRoutingCache**
+-   **idSIMD**
+-   **idSIMD\_3DNow**
+-   **idSIMD\_AltiVec**
+-   **idSIMD\_Generic**
+-   **idSIMD\_MMX**
+-   **idSIMD\_SSE**
+-   **idSIMD\_SSE2**
+-   **idSIMD\_SSE3**
+-   **idSIMD\_Xenon**
+-   **idSaveGame**
+-   **idScriptObject**
+-   **idSimpleStr**
+-   **idSphere**
+-   **idStr**
+-   **idStrList**
+-   **idStrPool**
+-   **idSurface**
+-   **idSurface\_Patch**
+-   **idSurface\_Polytope**
+-   **idSurface\_SweptSpline**
+-   **idSurface\_Traceable**
+-   **idTimer**
+-   **idTimerReport**
+-   **idToken**
+-   **idTokenCache**
+-   **idTraceModel**
+-   **idTraceModelCache**
+-   **idTypeDef**
+-   **idTypeInfo**
+-   **idVarDef**
+-   **idVarDefName**
+-   **idVec2**
+-   **idVec3**
+-   **idVec4**
+-   **idVec5**
+-   **idVec6**
+-   **idVecX**
+-   **idWLexer**
+-   **idWStr**
+-   **idWStrList**
+-   **idWToken**
+-   **idWinding**
+-   **idWinding2D**
+-   **imageParams\_t**
+-   misc\_reverb
+-   mountable\_gdf\_weapon\_cockpit
+-   **nameofclass**
+-   **pathNode\_t**
+-   projectile\_bullet\_base
+    -   projectile\_assaultrifle
+        -   projectile\_assaultrifle\_gren\_bullet
+    -   projectile\_assaultrifle\_scoped
+    -   projectile\_bullet\_base\_big
+        -   projectile\_blaster
+        -   projectile\_deployable\_antipersonnel
+            -   projectile\_deployable\_basedefence
+        -   projectile\_deployable\_antipersonnel\_strogg
+            -   projectile\_deployable\_basedefence\_strogg
+        -   projectile\_gatling
+            -   projectile\_gatling\_anansi
+            -   projectile\_gatling\_bumblebee
+            -   projectile\_gatling\_titan
+        -   projectile\_gpmg
+            -   projectile\_gpmg\_mount
+        -   projectile\_gpmg\_vehicle
+            -   projectile\_gpmg\_aircraft
+                -   projectile\_gpmg\_anansi
+                -   projectile\_gpmg\_bumblebee
+            -   projectile\_gpmg\_badger
+            -   projectile\_gpmg\_mcp
+            -   projectile\_gpmg\_platypus
+            -   projectile\_gpmg\_titan
+            -   projectile\_gpmg\_trojan
+        -   projectile\_hyperblaster
+            -   projectile\_hyperblaster\_desecrator
+            -   projectile\_hyperblaster\_hog
+            -   projectile\_hyperblaster\_hornet
+        -   projectile\_hyperblaster\_twin
+    -   projectile\_lacerator
+        -   projectile\_lacerator\_gren\_bullet
+        -   projectile\_lacerator\_scoped
+    -   projectile\_machinepistol
+    -   projectile\_machinepistol\_silenced
+    -   projectile\_nailgun
+    -   projectile\_pistol
+    -   projectile\_pistol\_akimbo
+    -   projectile\_pistol\_akimbo\_silenced
+    -   projectile\_pistol\_silenced
+    -   projectile\_railgun
+    -   projectile\_railgun\_scoped
+    -   projectile\_shotgun
+    -   projectile\_sniperrifle
+    -   projectile\_sniperrifle\_scoped
+-   projectile\_obliterator\_arcing\_firesound
+-   **radialItem\_t**
+-   radiant\_group
+-   **rvAngles**
+-   **rvClientEntity**
+    -   **rvClientMoveable**
+    -   **sdClientScriptEntity**
+        -   **rvClientEffect**
+            -   **rvClientCrawlEffect**
+        -   **sdClientAnimated**
+            -   deploy\_mission\_hint
+            -   deploy\_mission\_hint\_mines\_gdf
+            -   deploy\_mission\_hint\_mines\_strogg
+            -   ram\_hog
+            -   scope\_binoculars
+            -   scope\_law
+            -   scope\_sniperrifle
+            -   **sdJetPackVisuals**
+                -   vehicle\_icarus\_visuals
+            -   target\_marker
+            -   targetdirection\_marker
+        -   **sdClientLight**
+        -   **sdClientProjectile**
+            -   **sdClientProjectile\_Parabolic**
+    -   **sdGuiSurface**
+-   **rvRandom**
+-   **sdAFPhysicsNetworkData**
+-   **sdAORManagerLocal**
+-   **sdAbilityProvider**
+-   **sdAbstractTemplatedParticlePrecipitationSystem**
+-   **sdAdEntityCallback**
+-   **sdAdminProperties**
+-   **sdAdminSystemCommand**
+-   **sdAdminSystemCommand\_AddBot**
+-   **sdAdminSystemCommand\_AdjustBots**
+-   **sdAdminSystemCommand\_Ban**
+-   **sdAdminSystemCommand\_ChangeUserGroup**
+-   **sdAdminSystemCommand\_ExecConfig**
+-   **sdAdminSystemCommand\_GlobalMute**
+-   **sdAdminSystemCommand\_GlobalVOIPMute**
+-   **sdAdminSystemCommand\_Kick**
+-   **sdAdminSystemCommand\_KickAllBots**
+-   **sdAdminSystemCommand\_Login**
+-   **sdAdminSystemCommand\_PlayerMute**
+-   **sdAdminSystemCommand\_PlayerVOIPMute**
+-   **sdAdminSystemCommand\_RestartCampaign**
+-   **sdAdminSystemCommand\_RestartMap**
+-   **sdAdminSystemCommand\_SetCampaign**
+-   **sdAdminSystemCommand\_SetObjectiveMap**
+-   **sdAdminSystemCommand\_SetStopWatchMap**
+-   **sdAdminSystemCommand\_SetTeam**
+-   **sdAdminSystemCommand\_SetTimeLimit**
+-   **sdAdminSystemCommand\_ShuffleTeams**
+-   **sdAdminSystemCommand\_StartMatch**
+-   **sdAdminSystemCommand\_Warn**
+-   **sdAdminSystemLocal**
+-   **sdAdminSystemOnOffCommand**
+-   **sdAirVehicleControl**
+-   **sdAnansiControl**
+-   **sdAnimFrameCommand**
+-   **sdAnimFrameCommand\_DemoScript**
+-   **sdAnimFrameCommand\_Effect**
+-   **sdAnimFrameCommand\_Event**
+-   **sdAnimFrameCommand\_Fade**
+-   **sdAnimFrameCommand\_FootStep**
+-   **sdAnimFrameCommand\_ScriptFunction**
+-   **sdAnimFrameCommand\_ScriptObjectFunction**
+-   **sdAnimFrameCommand\_Skin**
+-   **sdAnimFrameCommand\_Sound**
+-   **sdAnimFrameCommand\_WeaponState**
+-   **sdAntiLagEntity**
+-   **sdAntiLagManagerLocal**
+-   **sdAntiLagPlayer**
+-   **sdAntiLagSet**
+-   **sdAntiLagSetGeneric**
+-   **sdAntiLagSetPlayer**
+-   **sdAtmosphereInstance**
+-   **sdAtmosphereRenderable**
+-   **sdAtomic**
+-   **sdBindNetworkData**
+-   **sdBounds2D**
+-   **sdCallVote**
+-   **sdCallVoteAdminCommand**
+-   **sdCallVoteMapChange**
+-   **sdChatLine**
+-   **sdChatMenu**
+-   **sdClipModelCollection**
+-   **sdColor3**
+-   **sdColor4**
+-   **sdColorNetworkData**
+-   **sdCommandMapInfo**
+-   **sdCommandMapInfoManagerLocal**
+-   **sdCommandMapPost**
+-   **sdCompiledScriptType\_Boolean**
+-   **sdCompiledScriptType\_String**
+-   **sdCompiledScriptType\_WString**
+-   **sdCompiledScript\_Class**
+-   **sdCompiledScript\_Event**
+-   **sdConsumable\_Ammo**
+-   **sdConsumable\_Health**
+-   **sdCrosshairInfo**
+-   **sdDLLClassFunction**
+-   **sdDLLClassVariable**
+-   **sdDLLFunction**
+-   **sdDLLProgram**
+-   **sdDLLScriptInterface**
+-   **sdDLLTypeObject**
+-   **sdDamageLogNumbers**
+-   **sdDampedVehicleView**
+-   **sdDampedVehicleView\_FreePivot**
+-   **sdDampedVehicleView\_Pivot**
+-   **sdDampedVehicleView\_Player**
+-   **sdDeclAOR**
+-   **sdDeclAmmoType**
+-   **sdDeclCampaign**
+-   **sdDeclDamage**
+-   **sdDeclDamageFilter**
+-   **sdDeclDeployMask**
+-   **sdDeclDeployableObject**
+-   **sdDeclDeployableZone**
+-   **sdDeclGUI**
+-   **sdDeclGUIEvent**
+-   **sdDeclGUIProperty**
+-   **sdDeclGUITheme**
+-   **sdDeclGUITimeEvent**
+-   **sdDeclGUITimelineHolder**
+-   **sdDeclGUIWindow**
+-   **sdDeclHeightMap**
+-   **sdDeclInvItem**
+-   **sdDeclInvItemType**
+-   **sdDeclInvSlot**
+-   **sdDeclItemPackage**
+-   **sdDeclItemPackageNode**
+-   **sdDeclKeyBinding**
+-   **sdDeclMapInfo**
+-   **sdDeclParseHelper**
+-   **sdDeclPlayerClass**
+-   **sdDeclPlayerTask**
+-   **sdDeclProficiencyItem**
+-   **sdDeclProficiencyType**
+-   **sdDeclQuickChat**
+-   **sdDeclRadialMenu**
+-   **sdDeclRank**
+-   **sdDeclRating**
+-   **sdDeclRenderBinding**
+-   **sdDeclRequirement**
+-   **sdDeclStringMap**
+-   **sdDeclTargetInfo**
+-   **sdDeclToolTip**
+-   **sdDeclToolTipOptionKey**
+-   **sdDeclTypeHolder**
+-   **sdDeclVehicleEngineSound**
+-   **sdDeclVehicleExit**
+-   **sdDeclVehicleLight**
+-   **sdDeclVehiclePart**
+-   **sdDeclVehiclePath**
+-   **sdDeclVehiclePosition**
+-   **sdDeclVehicleScript**
+-   **sdDeclWrapper**
+-   **sdDeliveryVehicleBroadcastData**
+-   **sdDemo**
+-   **sdDemoAnalyzer**
+-   **sdDemoCamera**
+-   **sdDemoCamera\_Anim**
+-   **sdDemoCamera\_Fixed**
+-   **sdDemoManagerLocal**
+-   **sdDemoProperties**
+-   **sdDemoScript**
+-   **sdDeployMask**
+-   **sdDeployMaskInstance**
+-   **sdDeployMenu**
+-   **sdDeployRequest**
+-   **sdDeployZoneBroadcastData**
+-   **sdDesecratorControl**
+-   **sdDoorNetworkData**
+-   **sdDoorPhysicsNetworkData**
+-   **sdDynamicBlockManagerBase**
+-   **sdEffect**
+-   **sdEntityCollection**
+-   **sdEntityDebugInfo**
+-   **sdEntityNetEvent**
+-   **sdFireTeam**
+-   **sdFireTeamManagerLocal**
+-   **sdFireTeamMenu**
+-   **sdFireTeamSystemCommand**
+-   **sdFireTeamSystemCommand\_Create**
+-   **sdFireTeamSystemCommand\_Disband**
+-   **sdFireTeamSystemCommand\_Invite**
+-   **sdFireTeamSystemCommand\_Join**
+-   **sdFireTeamSystemCommand\_Kick**
+-   **sdFireTeamSystemCommand\_Leave**
+-   **sdFireTeamSystemCommand\_Name**
+-   **sdFireTeamSystemCommand\_Private**
+-   **sdFireTeamSystemCommand\_Promote**
+-   **sdFireTeamSystemCommand\_Propose**
+-   **sdFireTeamSystemCommand\_Public**
+-   **sdFloatParmExpression**
+-   **sdFootPrintManagerLocal**
+-   **sdFunctionCompileState**
+-   **sdFunctionExpression**
+-   **sdGUIDFile**
+-   **sdGUIDInfo**
+-   **sdGameRules**
+    -   **sdGameRulesCampaign**
+    -   **sdGameRulesObjective**
+    -   **sdGameRulesStopWatch**
+-   **sdGameRulesCampaignNetworkState**
+-   **sdGameRulesNetworkState**
+-   **sdGameRulesObjectiveNetworkState**
+-   **sdGameRulesStopWatchNetworkState**
+-   **sdGeneralMoverPhysicsNetworkData**
+-   **sdGlobalProperties**
+-   **sdGlobalPropertiesNameSpace**
+-   **sdGuiSurfaceRenderable**
+-   **sdHardcodedParticleFlare**
+-   **sdHardcodedParticleSystem**
+-   **sdHeightMap**
+-   **sdHeightMapInstance**
+-   **sdHogControl**
+-   **sdHornetControl**
+-   **sdHovercopterControl**
+-   **sdHudModule**
+-   **sdHuskyControl**
+-   **sdIcarusVehicleView**
+-   **sdImagePacker**
+-   **sdImagePackerNode**
+-   **sdInputMode**
+-   **sdInputModeCar**
+-   **sdInputModeHeli**
+-   **sdInputModeHovertank**
+-   **sdInputModePlayer**
+-   **sdInventory**
+-   **sdInventoryBroadcastData**
+-   **sdInventoryItemStateData**
+-   **sdInventoryPlayerStateData**
+-   **sdItemPoolEntry**
+-   **sdJetPackNetworkData**
+-   **sdJetPackPhysicsBroadcastData**
+-   **sdJetPackPhysicsNetworkData**
+-   **sdLimboMenu**
+-   **sdLimboProperties**
+-   **sdLock**
+-   **sdMonsterPhysicsBroadcastData**
+-   **sdMonsterPhysicsNetworkData**
+-   **sdMotorSound**
+-   **sdMotorSoundGroup**
+-   **sdMoveableBroadcastData**
+-   **sdMoveableItemNetworkData**
+-   **sdMoveableNetworkData**
+-   **sdMoverBinaryBroadcastState**
+-   **sdNetManager**
+-   **sdNetProperties**
+-   **sdNetUser**
+-   **sdNetworkData**
+-   **sdNetworkStateObject**
+-   **sdObjectiveObject**
+-   **sdOnTime**
+-   **sdPerlin**
+-   **sdPerlin2**
+-   **sdPerlin3**
+-   **sdPersistentRankInfo**
+-   **sdPhysicsEvent\_RadiusPush**
+-   **sdPhysicsLinearBroadcastData**
+-   **sdPhysicsParabolaBroadcastData**
+-   **sdPhysicsStaticBroadcastData**
+-   **sdPhysicsStaticNetworkData**
+-   **sdPhysics\_Door**
+-   **sdPhysics\_GeneralMover**
+-   **sdPlatypusControl**
+-   **sdPlayZone**
+-   **sdPlayerArmIK**
+-   **sdPlayerBodyInteractiveInterface**
+-   **sdPlayerBodyNetworkData**
+-   **sdPlayerBroadcastData**
+-   **sdPlayerClassContextCallback**
+-   **sdPlayerClassSetup**
+-   **sdPlayerInteractiveInterface**
+-   **sdPlayerNetworkData**
+-   **sdPlayerPhysicsBroadcastData**
+-   **sdPlayerPhysicsNetworkData**
+-   **sdPlayerProperties**
+-   **sdPlayerStatEntry\_Float**
+-   **sdPlayerStatEntry\_Integer**
+-   **sdPlayerStateBroadcast**
+-   **sdPlayerStateData**
+-   **sdPlayerVote**
+-   **sdPortalState**
+-   **sdPosition**
+-   **sdPostProcess**
+-   **sdPredictionErrorDecay\_Angles**
+-   **sdPredictionErrorDecay\_Origin**
+-   **sdProficiencyManagerLocal**
+-   **sdProficiencyTable**
+-   **sdProfileHelper**
+-   **sdProfileHelperManagerLocal**
+-   **sdProgram**
+-   **sdProjectileBroadcastData**
+-   **sdProjectileNetworkData**
+-   **sdPropertyBinder**
+-   **sdPropertyExpressionField**
+-   **sdPropertyExpressionSingle**
+-   **sdPseudoHoverBroadcastData**
+-   **sdPseudoHoverNetworkData**
+-   **sdQuickChatMenu**
+-   **sdRBMultipleBroadcastState**
+-   **sdRBMultipleNetworkState**
+-   **sdRadialMenuModule**
+-   **sdRainPrecipitation**
+-   **sdRenderEntityBundle**
+-   **sdRepairDroneBroadcastData**
+-   **sdRequirementCheck**
+-   **sdRequirementCheck\_Ability**
+-   **sdRequirementCheck\_AbilityOther**
+-   **sdRequirementCheck\_Allegiance**
+-   **sdRequirementCheck\_EntityBin**
+-   **sdRequirementCheck\_Property**
+-   **sdRequirementCheck\_Radar**
+-   **sdRequirementCheck\_RadarOther**
+-   **sdRequirementCheck\_Team**
+-   **sdRequirementCondition**
+-   **sdRequirementContainer**
+-   **sdRequirementManagerLocal**
+-   **sdRigidBodyBroadcastState**
+-   **sdRigidBodyMulti\_Body**
+-   **sdRigidBodyNetworkState**
+-   **sdRouteConstraintTracker**
+-   **sdRoutePoint**
+-   **sdScriptEntityBroadcastData**
+-   **sdScriptEntityNetworkData**
+-   **sdScriptEntity\_ProjectileBroadcastData**
+-   **sdScriptExporter**
+-   **sdScriptHelper**
+-   **sdScriptObjectNetworkData**
+-   **sdScriptedCrosshairInterface**
+-   **sdScriptedEntityHelper**
+-   **sdScriptedEntityHelper\_Aimer**
+-   **sdScriptedEntityHelper\_LegIk**
+-   **sdScriptedEntityHelper\_PlayerIK**
+-   **sdScriptedGuiInterface**
+-   **sdScriptedInteractiveInterface**
+-   **sdScriptedNetworkInterface**
+-   **sdScriptedRadarInterface**
+-   **sdScriptedUsableInterface**
+-   **sdSignal**
+-   **sdSimplePhysicsBroadcastData**
+-   **sdSimplePhysicsNetworkData**
+-   **sdSimpleRigidBodyBroadcastState**
+-   **sdSimpleRigidBodyNetworkState**
+-   **sdSmoothVehicleView**
+-   **sdSmoothVehicleView\_Free**
+-   **sdSmoothVehicleView\_Locked**
+-   **sdSnowPrecipitation**
+-   **sdSoundBroadcastData**
+-   **sdSpawnPoint**
+-   **sdStaticEntityBroadcastData**
+-   **sdStaticEntityNetworkData**
+-   **sdStatsCommand\_Display**
+-   **sdStatsCommand\_Get**
+-   **sdStatsCommand\_Request**
+-   **sdStatsTracker**
+-   **sdStringParmExpression**
+-   **sdSysCallThread**
+    -   **idThread**
+    -   **sdDLLThread**
+-   **sdSysLock**
+-   **sdSysSignal**
+-   **sdSysThread**
+-   **sdTakeViewNoteMenu**
+-   **sdTaskInterface**
+-   **sdTeamInfoGameState**
+-   **sdTeamManagerGameState**
+-   **sdTeamManagerLocal**
+-   **sdTextDimensionHelper**
+-   **sdTextLine**
+-   **sdTextUtilities**
+-   **sdThread**
+-   **sdTireTread**
+-   **sdTireTreadManagerLocal**
+-   **sdTitanControl**
+-   **sdTraceSurface**
+-   **sdTraceableTriangleHash**
+-   **sdTransition**
+-   **sdTransport**
+    -   **sdJetPack**
+-   **sdTransportBroadcastData**
+-   **sdTransportEngine**
+-   **sdTransportNetworkData**
+-   **sdTransportPositionManager**
+-   **sdTransportUsableInterface**
+-   **sdTransport\_AF**
+    -   **sdWalker**
+-   **sdTransport\_RB**
+    -   **sdVehicle\_RigidBody**
+-   **sdTrojanControl**
+-   **sdUIBinder**
+-   **sdUICinematic**
+-   **sdUICreditScroll**
+-   **sdUICrosshairInfo**
+-   **sdUIEdit**
+-   **sdUIEditW**
+-   **sdUIEvaluator**
+-   **sdUIEventTable**
+-   **sdUIExpression**
+-   **sdUIFunctionStack**
+-   **sdUIIconNotification**
+-   **sdUILayout\_Horizontal**
+-   **sdUILayout\_Static**
+-   **sdUILayout\_StaticBase**
+-   **sdUILayout\_Vertical**
+-   **sdUIList**
+-   **sdUIMarquee**
+-   **sdUINotifyIcon**
+-   **sdUIObject**
+-   **sdUIProgress**
+-   **sdUIRadialMenu**
+-   **sdUIRenderCamera**
+-   **sdUIRenderCamera\_Animated**
+-   **sdUIRenderLight**
+-   **sdUIRenderModel**
+-   **sdUIRenderWorld**
+-   **sdUIScopeParser**
+-   **sdUIScript**
+-   **sdUIScriptEvent**
+-   **sdUISlider**
+-   **sdUITimeline**
+-   **sdUITimelineManager**
+-   **sdUITransitionFloat**
+-   **sdUITransitionVec2**
+-   **sdUITransitionVec3**
+-   **sdUITransitionVec4**
+-   **sdUITypeInfo**
+-   **sdUIWindow**
+-   **sdUIWindowState**
+-   **sdUIWindow\_Shaped**
+-   **sdUTF8**
+-   **sdUnreliableEntityNetEvent**
+-   **sdUpdateManager**
+-   **sdUpgradeItemPool**
+-   **sdUserGroup**
+-   **sdUserGroupManagerLocal**
+-   **sdUserInterfaceLocal**
+-   **sdUserInterfaceManagerLocal**
+-   **sdUserInterfaceState**
+-   **sdVehicleControl**
+-   **sdVehicleControlBase**
+-   **sdVehicleDriveObject**
+    -   **sdVehicleAirBrake**
+    -   **sdVehicleSuspensionPoint**
+    -   **sdVehicleThruster**
+    -   **sdVehicleTrack**
+-   **sdVehicleIKSystem**
+    -   **sdVehicleIKArms**
+    -   **sdVehicleIK\_Steering**
+    -   **sdVehicleJointAimer**
+    -   **sdVehicleSwivel**
+    -   **sdVehicleWeaponAimer**
+-   **sdVehicleInput**
+-   **sdVehicleLightSystem**
+-   **sdVehiclePart**
+    -   **sdVehicleAntiPitch**
+    -   **sdVehicleAntiRoll**
+    -   **sdVehiclePartSimple**
+        -   **sdVehiclePartScripted**
+        -   **sdVehicleRigidBodyAntiGrav**
+    -   **sdVehicleRigidBodyDragPlane**
+        -   **sdVehicleRigidBodyRudder**
+    -   **sdVehicleRigidBodyHurtZone**
+    -   **sdVehicleRigidBodyPart**
+        -   **sdVehicleRigidBodyWheel**
+    -   **sdVehicleRigidBodyPartSimple**
+        -   **sdVehicleRigidBodyHoverPad**
+        -   **sdVehicleRigidBodyRotor**
+        -   **sdVehicleRigidBodyVtol**
+    -   **sdVehicleRigidBodyPseudoHover**
+-   **sdVehiclePathGrid**
+-   **sdVehiclePosition**
+-   **sdVehicleScriptControl**
+-   **sdVehicleSoundControlBase**
+-   **sdVehicleSoundControl\_CrossFade**
+-   **sdVehicleSoundControl\_Helicopter**
+-   **sdVehicleSoundControl\_JetPack**
+-   **sdVehicleSoundControl\_Simple**
+-   **sdVehicleSoundControl\_SpeedBoat**
+-   **sdVehicleSoundControl\_Tracked**
+-   **sdVehicleSoundControl\_Wheeled**
+-   **sdVehicleSuspension**
+-   **sdVehicleSuspension\_2JointLeg**
+-   **sdVehicleSuspension\_DoubleWishbone**
+-   **sdVehicleSuspension\_Pivot**
+-   **sdVehicleSuspension\_Vertical**
+-   **sdVehicleView**
+-   **sdVehicleWeapon**
+    -   **sdVehicleWeaponFixedMinigun**
+    -   **sdVehicleWeaponLocked**
+-   **sdVehicleWeaponFactory**
+-   **sdVoteFinalizer\_Script**
+-   **sdVoteManagerLocal**
+-   **sdVoteModeGlobal**
+-   **sdVoteModePrivate**
+-   **sdVoteModeTeam**
+-   **sdWake**
+-   **sdWakeLayer**
+-   **sdWakeManagerLocal**
+-   **sdWakeParms**
+-   **sdWalkerControl**
+-   **sdWalkerNetworkData**
+-   **sdWaterEffects**
+-   **sdWayPoint**
+-   **sdWayPointManagerLocal**
+-   **sdWeaponLockInfo**
+-   **sdWeaponNetworkInterface**
+-   **sdWeaponSelectionMenu**
+-   **sdWheeledControlNetworkData**
+-   **sdWheeledVehicleControl**
+-   **sdWikiFormatter**
+-   **sdWorldToScreenConverter**
+-   **snapshot\_t**
+-   teh\_zappor\_beacon
+-   trigger\_tooltip
+-   **userInfo\_t**
+-   vehicle\_anansi\_cockpit
+-   vehicle\_anansi\_cockpit\_gunner
+-   vehicle\_badger\_cockpit
+-   vehicle\_badger\_cockpit\_noarms
+-   vehicle\_badger\_gpmg\_cockpit
+-   vehicle\_base
+    -   vehicle\_base\_gdf
+        -   vehicle\_anansi
+            -   placement\_anansi
+        -   vehicle\_badger
+            -   placement\_badger
+        -   vehicle\_bumblebee
+            -   placement\_bumblebee
+        -   vehicle\_husky
+            -   placement\_husky
+        -   vehicle\_mcp
+            -   placement\_mcp
+        -   vehicle\_platypus
+            -   placement\_platypus
+        -   vehicle\_titan
+            -   placement\_titan
+        -   vehicle\_trojan
+            -   placement\_trojan
+    -   vehicle\_base\_strogg
+        -   vehicle\_desecrator
+            -   placement\_desecrator
+        -   vehicle\_goliath
+            -   placement\_goliath
+        -   vehicle\_hog
+            -   placement\_hog
+        -   vehicle\_hornet
+            -   placement\_hornet
+        -   vehicle\_icarus
+            -   placement\_icarus
+-   vehicle\_desecrator\_cockpit\_driver
+-   vehicle\_desecrator\_cockpit\_gunner
+-   vehicle\_hornet\_cockpit
+-   vehicle\_hornet\_cockpit\_gunner
+-   volcano\_console
+-   volcano\_transformer
+-   waypoint\_base
+
+Entities
+--------
+
+For more detailed information on specific entities, including available key/value pairs, usage, and notes see the corresponding article listed below.
+
+Existing Entities as of version 1.2
+
+### A
+
+-   atmosphere
+-   atmosphere\_landfall
+-   atmosphere\_low
+
+### B
+
+-   bot\_action
+-   bot\_action\_bbox
+-   bot\_action\_target
+-   bot\_dynamic\_obstacle
+-   bot\_edf
+-   bot\_locationremap
+-   bot\_locationremap\_target
+-   bot\_reachability
+-   bot\_reachability\_target
+-   bot\_route\_link
+-   bot\_route\_start
+-   bot\_vehicle\_pathnode
+
+### C
+
+-   cameraman
+-   carryable\_item\_base
+-   carryable\_item\_caller
+-   carryable\_item\_dropped
+-   carryable\_item\_enercell
+-   carryable\_item\_quarry\_1
+-   carryable\_item\_quarry\_2
+-   carryable\_item\_quarry\_3
+-   constructible\_base
+-   constructible\_base\_etqwmap
+-   constructible\_door\_relay
+-   constructible\_emp\_disruptor\_gdf
+-   constructible\_materials\_gdf
+-   constructible\_materials\_gun\_gdf
+-   constructible\_materials\_neutral
+-   constructible\_materials\_secondary\_gdf
+-   constructible\_materials\_strogg
+-   constructible\_materials\_tower\_gdf
+-   constructible\_tower\_gdf
+-   constructible\_tower\_gdf\_all
+-   constructible\_tower\_gdf\_base
+-   constructible\_tower\_gdf\_top
+-   constructible\_tower\_strogg
+
+### D
+
+-   dead\_body\_gdf
+-   dead\_body\_strogg
+-   deploy\_mission\_hint
+-   deploy\_mission\_hint\_mines\_gdf
+-   deploy\_mission\_hint\_mines\_strogg
+-   deployable\_amt\_gdf
+-   deployable\_amt\_gdf\_cc
+-   deployable\_amt\_gdf\_cc\_arctic
+-   deployable\_antiarmour\_gdf
+-   deployable\_antiarmour\_strogg
+-   deployable\_antipersonnel\_gdf
+-   deployable\_antipersonnel\_strogg
+-   deployable\_artillery
+-   deployable\_autodeployer
+-   deployable\_awacs\_gdf\_awacs
+-   deployable\_base
+-   deployable\_basedefence
+-   deployable\_basedefence\_gdf
+-   deployable\_basedefence\_strogg
+-   deployable\_gdf
+-   deployable\_osr\_strogg\_arm
+-   deployable\_osr\_strogg\_base
+-   deployable\_osr\_strogg\_top
+-   deployable\_plasmamortar
+-   deployable\_psi
+-   deployable\_radar
+-   deployable\_railhowitzer
+-   deployable\_rockets
+-   deployable\_shield\_generator
+-   deployable\_shield\_generator\_domihub
+-   deployable\_spawn\_anansi
+-   deployable\_spawn\_badger
+-   deployable\_spawn\_bumblebee
+-   deployable\_spawn\_desecrator
+-   deployable\_spawn\_goliath
+-   deployable\_spawn\_hog
+-   deployable\_spawn\_hornet
+-   deployable\_spawn\_husky
+-   deployable\_spawn\_icarus
+-   deployable\_spawn\_mcp
+-   deployable\_spawn\_platypus
+-   deployable\_spawn\_titan
+-   deployable\_spawn\_trojan
+-   deployable\_ssg
+-   deployable\_ssm
+-   deployable\_strogg
+-   deployzone
+
+### E
+
+-   e3\_temp\_temp\_0
+-   e3\_temp\_temp\_1
+-   e3\_temp\_temp\_10
+-   e3\_temp\_temp\_11
+-   e3\_temp\_temp\_12
+-   e3\_temp\_temp\_13
+-   e3\_temp\_temp\_14
+-   e3\_temp\_temp\_15
+-   e3\_temp\_temp\_16
+-   e3\_temp\_temp\_17
+-   e3\_temp\_temp\_18
+-   e3\_temp\_temp\_19
+-   e3\_temp\_temp\_2
+-   e3\_temp\_temp\_20
+-   e3\_temp\_temp\_21
+-   e3\_temp\_temp\_22
+-   e3\_temp\_temp\_23
+-   e3\_temp\_temp\_24
+-   e3\_temp\_temp\_25
+-   e3\_temp\_temp\_26
+-   e3\_temp\_temp\_27
+-   e3\_temp\_temp\_28
+-   e3\_temp\_temp\_29
+-   e3\_temp\_temp\_3
+-   e3\_temp\_temp\_30
+-   e3\_temp\_temp\_31
+-   e3\_temp\_temp\_32
+-   e3\_temp\_temp\_4
+-   e3\_temp\_temp\_5
+-   e3\_temp\_temp\_6
+-   e3\_temp\_temp\_7
+-   e3\_temp\_temp\_8
+-   e3\_temp\_temp\_9
+-   env\_oil\_pump
+-   env\_oil\_pump\_b
+-   env\_oil\_pump\_c
+-   env\_oil\_pump\_old
+-   env\_refinery\_final\_objective\_b
+-   env\_strogg\_test\_subject
+-   env\_strogg\_test\_subject\_a
+
+### F
+
+-   firesupport\_marker\_artillery
+-   firesupport\_marker\_railhowitzer
+-   firesupport\_marker\_ssg
+-   firesupport\_marker\_ssm
+-   firesupport\_marker\_vampire
+-   firesupport\_marker\_violator
+-   flyer\_hive
+-   func\_aasobstacle
+-   [Func\_activator\_(entity).html func\_activator]
+-   [Func\_animate\_(entity).html func\_animate]
+-   [Func\_bobbing\_(entity).html func\_bobbing]
+-   [Func\_cameraview\_(entity).html func\_cameraview]
+-   [Func\_door\_(entity).html func\_door]
+-   func\_door\_gdf
+-   func\_door\_gdf\_breakable
+-   func\_door\_gdf\_slave
+-   func\_door\_slave
+-   func\_door\_strogg
+-   func\_door\_strogg\_breakable
+-   func\_door\_strogg\_slave
+-   func\_door\_switch
+-   [Func\_elevator\_(entity).html func\_elevator]
+-   func\_flare
+-   [Func\_forcefield\_(entity).html func\_forcefield]
+-   [Func\_fx\_(entity).html func\_fx]
+-   [Func\_group\_(entity).html func\_group]
+-   [Func\_ladder\_(entity).html func\_ladder]
+-   [Func\_pendulum\_(entity).html func\_pendulum]
+-   [Func\_plat\_(entity).html func\_plat]
+-   [Func\_riser\_(entity).html func\_riser]
+-   [Func\_rotating\_(entity).html func\_rotating]
+-   [Func\_splinemover\_(entity).html func\_splinemover]
+-   [Func\_static\_(entity).html func\_static]
+-   func\_synced\_fx
+
+### G
+
+-   gameplay\_ark\_bridge\_stage1
+-   gameplay\_ark\_bridge\_stage2
+-   gameplay\_bottest\_generator
+-   gameplay\_bottest\_generator\_materials
+-   gameplay\_bottest\_storage\_room\_door
+-   gameplay\_canyon\_bioreactor
+-   gameplay\_canyon\_bridge\_constructed
+-   gameplay\_canyon\_bridge\_fixer
+-   gameplay\_canyon\_bridge\_frame
+-   gameplay\_canyon\_bridge\_platform
+-   gameplay\_canyon\_bridge\_stage1
+-   gameplay\_canyon\_bridge\_stage2
+-   gameplay\_destructible\_trigger
+-   gameplay\_generic\_destructible\_objective
+-   gameplay\_hackable\_objective
+-   gameplay\_island\_generator
+-   gameplay\_island\_generator\_materials
+-   gameplay\_island\_storage\_room\_door
+-   gameplay\_jumppad
+-   gameplay\_jumppad\_gdf
+-   gameplay\_jumppad\_strogg
+-   gameplay\_slipgate\_effects
+-   gameplay\_strogg\_shield\_generator
+-   gameplay\_strogg\_shield\_generator\_caller
+-   gameplay\_strogg\_shield\_generator\_trigger
+-   gameplay\_valley\_bridge\_constructed
+-   gameplay\_valley\_bridge\_destroyed
+-   gameplay\_valley\_bridge\_fixer
+-   gameplay\_valley\_bridge\_frame
+-   gameplay\_valley\_bridge\_platform
+-   gameplay\_valley\_bridge\_stage1
+-   gameplay\_valley\_bridge\_stage2
+-   globalConstants
+-   gun\_emplacement\_bracket\_gdf
+
+### H
+
+-   hint\_flyerdrone
+
+### I
+
+-   info\_capturable\_spawn
+-   info\_capturable\_spawn\_gdf
+-   info\_capturable\_spawn\_strogg
+-   info\_envbound
+-   info\_envmap
+-   info\_generic\_spawn
+-   [Info\_location\_(entity).html info\_location]
+-   info\_objective
+-   [Info\_player\_deathmatch\_(entity).html info\_player\_deathmatch]
+-   [Info\_player\_start\_(entity).html info\_player\_start]
+-   info\_spawn\_master
+-   info\_spectator\_spawn
+-   info\_team\_gdf\_spawn
+-   info\_team\_strogg\_spawn
+-   island\_beacon
+-   island\_buoy
+-   item\_capturepoint
+-   item\_capturepoint\_use
+-   item\_drop\_pod
+-   item\_drop\_pod\_quarry\_1
+-   item\_drop\_pod\_quarry\_2
+-   item\_drop\_pod\_quarry\_3
+
+### J
+
+-   jammer\_tower\_effects\_idle
+-   jammer\_tower\_effects\_shutdown
+
+### L
+
+-   [Light\_(entity).html light]
+-   light\_ambient
+-   light\_inside
+-   light\_interior
+-   light\_night
+-   light\_vis\_dummy
+-   lightning
+-   liquid\_water
+-   lodentity
+
+### M
+
+-   mapobjects\_flag
+-   mapobjects\_windsock
+-   misc\_advert
+-   misc\_imposter
+-   misc\_imposter\_spawner
+-   misc\_instance\_spawner
+-   misc\_mcp\_marker
+-   misc\_particle\_trigger
+-   misc\_reverb
+-   misc\_scripted
+-   misc\_supplycrate\_base
+-   misc\_supplycrate\_health
+-   misc\_teleporter
+-   misc\_teleporter\_angles
+-   model\_static
+-   mountable\_gdf\_gpmg
+-   mountable\_gdf\_weapon\_cockpit
+-   mountable\_strogg\_hyperblaster
+-   mountable\_weapon\_base
+-   mountable\_weapon\_gdf
+-   mountable\_weapon\_strogg
+-   [Moveable\_base\_(entity).html moveable\_base]
+-   moveable\_item\_ball
+-   moveable\_item\_ballbouncy
+-   moveable\_item\_barrel01
+-   moveable\_item\_barrel02
+-   moveable\_item\_beerbottle
+-   moveable\_item\_beercan
+-   moveable\_item\_cone
+-   moveable\_item\_foldupchair\_a
+-   moveable\_item\_foldupchair\_b
+-   moveable\_item\_jerrycan
+-   moveable\_item\_metalbox01
+-   moveable\_item\_plasticcrate
+-   moveable\_item\_refinerybarrel01
+-   moveable\_item\_refinerybarrel02
+-   moveable\_item\_refinerybarrier01
+-   moveable\_item\_roadsign\_rock
+-   moveable\_item\_stone1
+-   moveable\_item\_stone2
+-   moveable\_item\_stone3
+
+### P
+
+-   parachute
+-   [Path\_corner\_(entity).html path\_corner]
+-   placement\_anansi
+-   placement\_badger
+-   placement\_bumblebee
+-   placement\_camera
+-   placement\_d\_antimiss\_gdf
+-   placement\_d\_antiper\_gdf
+-   placement\_d\_antiper\_strogg
+-   placement\_d\_antiveh\_gdf
+-   placement\_d\_antiveh\_strogg
+-   placement\_d\_artillery\_gdf
+-   placement\_d\_plasmamortar\_strogg
+-   placement\_d\_psiradar\_strogg
+-   placement\_d\_radar\_gdf
+-   placement\_d\_railhowitzer\_strogg
+-   placement\_d\_rockets\_gdf
+-   placement\_d\_shield\_generator\_strogg
+-   placement\_d\_ssg\_strogg
+-   placement\_d\_ssm\_gdf
+-   placement\_d\_vampire\_gdf
+-   placement\_desecrator
+-   placement\_goliath
+-   placement\_hog
+-   placement\_hornet
+-   placement\_husky
+-   placement\_icarus
+-   placement\_jotun
+-   placement\_magog
+-   placement\_mcp
+-   placement\_platypus
+-   placement\_player
+-   placement\_player\_gdf
+-   placement\_player\_strogg
+-   placement\_rotator
+-   placement\_titan
+-   placement\_trojan
+-   placement\_vehicle
+-   placement\_weapon
+-   [Player\_base\_(entity).html player\_base]
+-   player\_edf
+-   player\_gdf\_covertops
+-   player\_gdf\_engineer
+-   player\_gdf\_fieldops
+-   player\_gdf\_medic
+-   player\_gdf\_soldier
+-   player\_strogg\_aggressor
+-   player\_strogg\_constructor
+-   player\_strogg\_infiltrator
+-   player\_strogg\_oppressor
+-   player\_strogg\_technician
+-   playzone\_all
+-   playzone\_commandmap
+-   playzone\_deploy
+-   playzone\_marker
+-   playzone\_path\_and\_heightmap
+-   playzone\_play
+-   projectile\_ammopack
+-   projectile\_ammopack\_mega
+-   projectile\_anansi\_law
+-   projectile\_assaultrifle
+-   projectile\_assaultrifle\_gren
+-   projectile\_assaultrifle\_gren\_bullet
+-   projectile\_assaultrifle\_scoped
+-   [Projectile\_blaster\_(entity).html projectile\_blaster]
+-   [Projectile\_bullet\_base\_(entity).html projectile\_bullet\_base]
+-   projectile\_bullet\_base\_big
+-   projectile\_decoy
+-   projectile\_decoy\_anansi
+-   projectile\_decoy\_badger
+-   projectile\_decoy\_bumblebee
+-   projectile\_decoy\_desecrator
+-   projectile\_decoy\_goliath
+-   projectile\_decoy\_hog
+-   projectile\_decoy\_hornet
+-   projectile\_decoy\_husky
+-   projectile\_decoy\_icarus
+-   projectile\_decoy\_magog
+-   projectile\_decoy\_mcp
+-   projectile\_decoy\_platypus
+-   projectile\_decoy\_titan
+-   projectile\_decoy\_trojan
+-   projectile\_deployable\_antiarmour
+-   projectile\_deployable\_antiarmour\_dumb
+-   projectile\_deployable\_antiarmour\_strogg
+-   projectile\_deployable\_antipersonnel
+-   projectile\_deployable\_antipersonnel\_strogg
+-   projectile\_deployable\_artillery
+-   projectile\_deployable\_artillery\_foreffect
+-   projectile\_deployable\_basedefence
+-   projectile\_deployable\_basedefence\_strogg
+-   projectile\_deployable\_plasmamortar
+-   projectile\_deployable\_railhowitzer
+-   projectile\_deployable\_rockets
+-   projectile\_deployable\_ssg
+-   projectile\_deployable\_ssm
+-   projectile\_fafff
+-   projectile\_gatling
+-   projectile\_gatling\_anansi
+-   projectile\_gatling\_bumblebee
+-   projectile\_gatling\_titan
+-   projectile\_gpmg
+-   projectile\_gpmg\_aircraft
+-   projectile\_gpmg\_anansi
+-   projectile\_gpmg\_badger
+-   projectile\_gpmg\_bumblebee
+-   projectile\_gpmg\_mcp
+-   projectile\_gpmg\_mount
+-   projectile\_gpmg\_platypus
+-   projectile\_gpmg\_titan
+-   projectile\_gpmg\_trojan
+-   projectile\_gpmg\_vehicle
+-   [Projectile\_grenade\_(entity).html projectile\_grenade]
+-   projectile\_grenade\_airstrike\_marker\_base
+-   projectile\_grenade\_airstrike\_marker\_gdf
+-   projectile\_grenade\_airstrike\_marker\_strogg
+-   projectile\_grenade\_emp
+-   projectile\_grenade\_emp\_roll
+-   projectile\_grenade\_frag
+-   projectile\_grenade\_frag\_roll
+-   projectile\_grenade\_scrambler
+-   projectile\_grenade\_scrambler\_sticky
+-   projectile\_grenade\_shrap
+-   projectile\_grenade\_shrap\_sticky
+-   projectile\_grenade\_smoke
+-   projectile\_grenade\_supply\_marker\_base
+-   projectile\_grenade\_supply\_marker\_medic
+-   projectile\_haw
+-   projectile\_haw\_anansi
+-   projectile\_healthpack
+-   [Projectile\_hyperblaster\_(entity).html projectile\_hyperblaster]
+-   projectile\_hyperblaster\_desecrator
+-   projectile\_hyperblaster\_hog
+-   projectile\_hyperblaster\_hornet
+-   projectile\_hyperblaster\_twin
+-   projectile\_lacerator
+-   projectile\_lacerator\_gren
+-   projectile\_lacerator\_gren\_bullet
+-   projectile\_lacerator\_scoped
+-   projectile\_landmine
+-   projectile\_landmine\_strogg
+-   projectile\_law
+-   projectile\_law\_arcing
+-   projectile\_machinepistol
+-   projectile\_machinepistol\_silenced
+-   projectile\_nailgun
+-   projectile\_obliterator
+-   projectile\_obliterator\_arcing
+-   projectile\_obliterator\_arcing\_firesound
+-   projectile\_pistol
+-   projectile\_pistol\_akimbo
+-   projectile\_pistol\_akimbo\_silenced
+-   projectile\_pistol\_silenced
+-   projectile\_plasmacannon
+-   projectile\_plasmacannon\_desecrator
+-   projectile\_plasmacannon\_goliath
+-   projectile\_plasmacannon\_small
+-   [Projectile\_railgun\_(entity).html projectile\_railgun]
+-   projectile\_railgun\_scoped
+-   [Projectile\_rocket\_base\_(entity).html projectile\_rocket\_base]
+-   projectile\_sbc
+-   projectile\_scud
+-   projectile\_shotgun
+-   projectile\_sniperrifle
+-   projectile\_sniperrifle\_scoped
+-   projectile\_strocket
+-   projectile\_stroybomb
+-   projectile\_stroyentcells
+-   projectile\_teleporter
+-   projectile\_third\_eye
+-   projectile\_trojan\_law
+-   projectile\_vampire
+-   projectile\_vampire\_client
+
+### R
+
+-   radiant\_camera
+-   radiant\_group
+-   rainEffect
+-   ram\_hog
+-   round\_parachute
+
+### S
+
+-   scope\_binoculars
+-   scope\_law
+-   scope\_sniperrifle
+-   snowEffect
+-   spawn\_host
+-   [Speaker\_(entity).html speaker]
+-   speaker\_assaultrifle\_test
+-   speaker\_distance\_loop\_test
+-   speaker\_distance\_loop\_test2
+-   speaker\_distance\_test
+-   speaker\_distance\_test2
+-   speaker\_gpmg\_test
+-   speaker\_machinepistol\_test
+-   speaker\_pistol\_test
+-   speaker\_shotgun\_test
+-   speaker\_sniperrifle\_test
+-   ssm\_barrel\_clip\_entity
+-   strogg\_mining\_laser\_repaired
+-   strogg\_parachute
+-   strogg\_repair\_drone
+-   strogg\_scarab
+-   structure\_base
+-   structure\_cc
+-   structure\_domihub
+-   structure\_gdf
+-   structure\_module\_construction
+-   structure\_module\_construction\_anansi
+-   structure\_module\_construction\_badger
+-   structure\_module\_construction\_bumblebee
+-   structure\_module\_construction\_desecrator
+-   structure\_module\_construction\_goliath
+-   structure\_module\_construction\_hog
+-   structure\_module\_construction\_hornet
+-   structure\_module\_construction\_husky
+-   structure\_module\_construction\_icarus
+-   structure\_module\_construction\_mcp
+-   structure\_module\_construction\_platypus
+-   structure\_module\_construction\_titan
+-   structure\_module\_construction\_trojan
+-   structure\_replicator
+-   structure\_replicator\_test
+-   structure\_strogg
+-   stuffsystem
+
+### T
+
+-   target\_marker
+-   [Target\_null\_(entity).html target\_null]
+-   targetdirection\_marker
+-   teh\_zappor\_beacon
+-   trigger\_barbedwire
+-   [Trigger\_hurt\_(entity).html trigger\_hurt]
+-   trigger\_hurt\_strogg\_shield
+-   trigger\_hurt\_strogg\_wall
+-   trigger\_mcp
+-   trigger\_mcp\_bot
+-   [Trigger\_multiple\_(entity).html trigger\_multiple]
+-   trigger\_noplant
+-   trigger\_scripted
+-   trigger\_tooltip
+
+### V
+
+-   vehicle\_anansi
+-   vehicle\_anansi\_cockpit
+-   vehicle\_anansi\_cockpit\_gunner
+-   vehicle\_badger
+-   vehicle\_badger\_cockpit
+-   vehicle\_badger\_cockpit\_noarms
+-   vehicle\_badger\_gpmg\_cockpit
+-   vehicle\_base
+-   vehicle\_base\_gdf
+-   vehicle\_base\_strogg
+-   vehicle\_bumblebee
+-   vehicle\_cargoplane
+-   vehicle\_desecrator
+-   vehicle\_desecrator\_cockpit\_driver
+-   vehicle\_desecrator\_cockpit\_gunner
+-   vehicle\_goliath
+-   vehicle\_hog
+-   vehicle\_hornet
+-   vehicle\_hornet\_cockpit
+-   vehicle\_hornet\_cockpit\_gunner
+-   vehicle\_husky
+-   vehicle\_icarus
+-   vehicle\_icarus\_visuals
+-   vehicle\_magog\_npc
+-   vehicle\_mcp
+-   vehicle\_mcp\_caller
+-   vehicle\_platypus
+-   vehicle\_route\_constraint\_controller
+-   vehicle\_route\_constraint\_marker
+-   vehicle\_strogg\_drop
+-   vehicle\_titan
+-   vehicle\_trojan
+-   vehicle\_vampire
+-   vehicle\_violator
+-   vis\_dummy
+-   vo\_manager\_base
+-   volcano\_console
+-   volcano\_transformer
+
+### W
+
+-   waypoint\_base
+-   waypoint\_info\_base
+-   waypoint\_info\_gdf
+-   waypoint\_info\_strogg
+-   [Worldspawn\_(entity).html worldspawn]
+

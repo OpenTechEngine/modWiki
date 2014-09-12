@@ -1,0 +1,34 @@
+SetPassivePrefix (script event)
+===============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Set the prefix used on all passive key/values such as "anim\_\<prefix\>\_idle" and "lipsync\_\<prefix\>\_talk\_primary"
+
+Usage
+-----
+
+void setPassivePrefix( string prefix )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

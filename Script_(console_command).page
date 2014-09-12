@@ -1,0 +1,28 @@
+Script (console command)
+========================
+
+Description
+-----------
+
+This command will execute the specified script function.
+
+Usage
+-----
+
+At the console type...
+
+`script [cmd]`
+
+Parameters
+----------
+
+-   [cmd] - the script function to execute.
+
+Notes
+-----
+
+It is not possible to pass parameters.
+
+It may be possible to execute script events as well. This has yet to be verified.
+
+

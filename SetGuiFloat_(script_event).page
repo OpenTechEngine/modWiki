@@ -1,0 +1,36 @@
+SetGuiFloat (script event)
+==========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Sets a parameter on this entity's GUI.
+
+Usage
+-----
+
+*void* setGuiFloat( *string* **key**, *float* **value** )
+
+Parameters
+----------
+
+-   [key] - The parameter to assign a value to.
+-   [value] - The value to assign to the key.
+
+Examples
+--------
+
+` `
+<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`setGuiFloat`</font><font color="#000000">`(`</font><font color="#666666">`"health"`</font>`, `<font color="#0000dd">`100`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+

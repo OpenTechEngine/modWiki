@@ -1,0 +1,34 @@
+Shakes (Sound shader keyword)
+=============================
+
+|------------------------------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                                                
+ Contents                                                                                                                            
+ --------                                                                                                                            
+                                                                                                                                     
+ </div>                                                                                                                              
+ -   [Shakes\_(Sound\_shader\_keyword).html\#Description <span class="tocnumber">1</span> <span class="toctext">Description</span>]  
+ -   [Shakes\_(Sound\_shader\_keyword).html\#Usage <span class="tocnumber">2</span> <span class="toctext">Usage</span>]              
+ -   [Shakes\_(Sound\_shader\_keyword).html\#Example <span class="tocnumber">3</span> <span class="toctext">Example</span>]          
+ -   [Shakes\_(Sound\_shader\_keyword).html\#Notes <span class="tocnumber">4</span> <span class="toctext">Notes</span>]              |
+
+Description
+-----------
+
+Shake the screen when this sound plays.
+
+Usage
+-----
+
+`shakes [<amount>]`
+
+The shake intensity is calculated by multiplying the [Volume\_(Sound\_shader\_keyword).html volume] setting with *amount*. The value is optional, it defaults to **1**.
+
+Example
+-------
+
+Notes
+-----
+
+**This keyword should not be used with .ogg files.**
+

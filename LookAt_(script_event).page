@@ -1,0 +1,34 @@
+LookAt (script event)
+=====================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Instruct the ai to look at the given target.
+
+Usage
+-----
+
+void lookAt( entity target )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+Setting the leader to $null\_entity will clear it.
+
+

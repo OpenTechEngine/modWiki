@@ -1,0 +1,119 @@
+GUI item properties
+===================
+
+Properties say how the item will be drawn or work. They are defined on the script source, but can have their values changed at runtime.
+
+Properties are featured somewhere inside each of a GUI's [GUI\_items.html items], and use the following syntax:
+
+*`property_name`*` `*`property_values`*
+
+There are different value types used - as a whole, though, they're either numeric (used for integers, floats and booleans) or string (used for filenames, always between quotes). For example,
+
+`needsRender    1`
+`background "gui/mainmenu/star"`
+
+Some of the properties can also have several different values (or parameters) on the same line - they're usually separated by commands. For example,
+
+`shear      0, 1`
+`rect       0, 0, 640, 480`
+`matcolor   0.7, 0.7, 0.7, 0`
+
+Also, notice that the property values aren't simply set when the GUI is shown. Instead, their initial values are updated on each frame, acting as a *live* property. This makes no difference when a property has a constant value like *10* or *"Lorem Ipsum"*, but when you are using GUI variables or parameters, the properties themselves will have their values changed when their variable or parameters change.
+
+For example, using the *gui::name* format for GUI parameters:
+
+`text   "gui::chat2"`
+
+Or using internal calculations:
+
+`matcolor   0.25, 0.45, 0.4, pdflick2 [ time * .0025 ] / 2.5`
+
+On both cases, properties will change to reflect the change on their variables or parameters over time. The list of available parameters depends on how each different GUI works, though, as most of them come from hard-coded interaction with other [Scripting.html scripting] systems. Check the [Guis\_(folder).html Guis (folder)] list to see how most of Doom 3's built-in GUIs work on that aspect.
+
+Available item properties
+-------------------------
+
+The following item properties are known. Most of them apply to all kinds of [GUI\_items.html GUI items], although a few of them are reserved for specific types and are noted as so. Also, due to their names, the task each of them perform is pretty much obvious.
+
+Apparently, the GUI system makes no differentiation for uppercase and lowercase property names.
+
+Most of the examples featured on the following documentation come straight from Doom 3.
+
+-   anim
+-   animClass
+-   [Backcolor\_(GUI\_item\_property).html backcolor]
+-   [Background\_(GUI\_item\_property).html background]
+-   [Bind\_(GUI\_item\_property).html bind]
+-   [Bordercolor\_(GUI\_item\_property).html bordercolor]
+-   [Bordersize\_(GUI\_item\_property).html bordersize]
+-   [ChoiceType\_(GUI\_item\_property).html choiceType]
+-   [Choices\_(GUI\_item\_property).html choices]
+-   [Comment\_(GUI\_item\_property).html comment]
+-   [CurrentChoice\_(GUI\_item\_property).html currentChoice]
+-   [Cursor\_(GUI\_item\_property).html cursor]
+-   [Cursorvar\_(GUI\_item\_property).html cursorvar]
+-   [Cvar\_(GUI\_item\_property).html cvar]
+-   cvarGroup
+-   [Font\_(GUI\_item\_property).html font]
+-   forceScroll
+-   [Forceaspectheight\_(GUI\_item\_property).html forceaspectheight]
+-   [Forceaspectwidth\_(GUI\_item\_property).html forceaspectwidth]
+-   [Forecolor\_(GUI\_item\_property).html forecolor]
+-   [Gui\_(GUI\_item\_property).html gui]
+-   [High\_(GUI\_item\_property).html high]
+-   horizontal
+-   [Invertrect\_(GUI\_item\_property).html invertrect]
+-   [LightColor\_(GUI\_item\_property).html lightColor]
+-   [LightOrigin\_(GUI\_item\_property).html lightOrigin]
+-   [ListName\_(GUI\_item\_property).html listName]
+-   [LiveUpdate\_(GUI\_item\_property).html liveUpdate]
+-   [Low\_(GUI\_item\_property).html low]
+-   [Matcolor\_(GUI\_item\_property).html matcolor]
+-   [Matscalex\_(GUI\_item\_property).html matscalex]
+-   [Matscaley\_(GUI\_item\_property).html matscaley]
+-   [Maxchars\_(GUI\_item\_property).html maxchars]
+-   [Menugui\_(GUI\_item\_property).html menugui]
+-   [Modal\_(GUI\_item\_property).html modal]
+-   [Model\_(GUI\_item\_property).html model]
+-   [ModelOrigin\_(GUI\_item\_property).html modelOrigin]
+-   [ModelRotate\_(GUI\_item\_property).html modelRotate]
+-   [MultipleSel\_(GUI\_item\_property).html multipleSel]
+-   name
+-   naturalmatscale
+-   [NeedsRender\_(GUI\_item\_property).html needsRender]
+-   [Noclip\_(GUI\_item\_property).html noclip]
+-   [Nocursor\_(GUI\_item\_property).html nocursor]
+-   [Noevents\_(GUI\_item\_property).html noevents]
+-   [Notime\_(GUI\_item\_property).html notime]
+-   [Nowrap\_(GUI\_item\_property).html nowrap]
+-   numeric
+-   password
+-   play
+-   [Readonly\_(GUI\_item\_property).html readonly]
+-   [Rect\_(GUI\_item\_property).html rect]
+-   <span class="deadlink">rotate</span>
+-   scrollbar
+-   [Shadow\_(GUI\_item\_property).html shadow]
+-   [Shear\_(GUI\_item\_property).html shear]
+-   showcoords
+-   showtime
+-   source
+-   [Step\_(GUI\_item\_property).html step]
+-   [Stepsize\_(GUI\_item\_property).html stepsize]
+-   [TabAligns\_(GUI\_item\_property).html tabAligns]
+-   [TabStops\_(GUI\_item\_property).html tabStops]
+-   [Text\_(GUI\_item\_property).html text]
+-   [Textalign\_(GUI\_item\_property).html textalign]
+-   [Textalignx\_(GUI\_item\_property).html textalignx]
+-   [Textaligny\_(GUI\_item\_property).html textaligny]
+-   [Textscale\_(GUI\_item\_property).html textscale]
+-   [ThumbShader\_(GUI\_item\_property).html thumbShader]
+-   [UpdateGroup\_(GUI\_item\_property).html updateGroup]
+-   [Values\_(GUI\_item\_property).html values]
+-   [Variablebackground\_(GUI\_item\_property).html variablebackground]
+-   vertical
+-   [ViewOffset\_(GUI\_item\_property).html viewOffset]
+-   [Visible\_(GUI\_item\_property).html visible]
+-   [Wantenter\_(GUI\_item\_property).html wantenter]
+-   [Wrap\_(GUI\_item\_property).html wrap]
+

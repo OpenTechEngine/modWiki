@@ -1,0 +1,35 @@
+AngToRight (script event)
+=========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns a right vector for the given Euler angles
+
+Usage
+-----
+
+*vector* angToRight( *vector* **angles** )
+
+Parameters
+----------
+
+-   [angles] - A vector who's components correspond with heading, pitch, and bank.
+
+Examples
+--------
+
+` `
+`rtVec = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`angToRight`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`45`</font>` `<font color="#0000dd">`10`</font>` `<font color="#0000dd">`54`</font>`'`<font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event returns a right vector.
+
+

@@ -1,0 +1,52 @@
+Ui showGun (cvar)
+=================
+
+Description
+-----------
+
+This CVar controls whether or not gun is drawn in first person view
+
+Usage
+-----
+
+At the console type...
+
+`ui_showGun [bool]`
+
+Parameters
+----------
+
+-   [bool] - ( 0 = false, 1 = true )
+
+Flags
+-----
+
+| Flag              | Enabled | Description                                  |
+|-------------------|---------|----------------------------------------------|
+| CVAR\_ALL         |         | all flags                                    |
+| CVAR\_BOOL        | X       | variable is a boolean                        |
+| CVAR\_INTEGER     |         | variable is an integer                       |
+| CVAR\_FLOAT       |         | variable is a float                          |
+| CVAR\_SYSTEM      |         | system variable                              |
+| CVAR\_RENDERER    |         | renderer variable                            |
+| CVAR\_SOUND       |         | sound variable                               |
+| CVAR\_GUI         |         | gui variable                                 |
+| CVAR\_GAME        | X       | game variable                                |
+| CVAR\_TOOL        |         | tool variable                                |
+| CVAR\_USERINFO    | X       | sent to servers, available to menu           |
+| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
+| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
+| CVAR\_STATIC      |         | statically declared, not user created        |
+| CVAR\_CHEAT       |         | variable is considered a cheat               |
+| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
+| CVAR\_INIT        |         | can only be set from the command-line        |
+| CVAR\_ROM         |         | display only, cannot be set by user at all   |
+| CVAR\_ARCHIVE     |         | set to cause it to be saved to a config file |
+| CVAR\_MODIFIED    |         | set when the variable is modified            |
+
+Notes
+-----
+
+This CVar is incredibly useful in conjunction with [R\_showSkel\_(cvar).html r\_showSkel] because weapon viewmodels tend to obstruct your view.
+
+

@@ -1,0 +1,35 @@
+GetOrigin (script event)
+========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the current position of this entity (relative to bind parent if any).
+
+Usage
+-----
+
+*vector* getOrigin()
+
+Parameters
+----------
+
+This script event does not accept parameters.
+
+Examples
+--------
+
+` `
+<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`getOrigin`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event returns the value of this entity's origin key/value pair as a vector.
+
+

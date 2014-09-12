@@ -1,0 +1,34 @@
+SetLightParms (script event)
+============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Sets the red/green/blue/alpha shader parms on the light and the model.
+
+Usage
+-----
+
+void setLightParms( float parm0, float parm1, float parm2, float parm3 )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

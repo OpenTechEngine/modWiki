@@ -1,0 +1,28 @@
+Devmap (console command)
+========================
+
+Description
+-----------
+
+This command loads a .[MAP\_(file\_format).html MAP] file for development testing. See notes for details.
+
+Usage
+-----
+
+At the console type...
+
+`devmap [Filename]`
+
+Parameters
+----------
+
+-   [Filename] - The name of the .MAP (without the extension).
+
+Notes
+-----
+
+The map must have been previously compiled. See also the [Testmap\_(console\_command).html testmap] and [Map\_(console\_command).html map] console commands.
+
+The devmap command appears to do the same thing as the map command. However, the name implies that it is used for development testing in which case there may be some benefit to it's use although currently any difference between the commands is not known.
+
+

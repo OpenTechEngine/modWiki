@@ -1,0 +1,65 @@
+Aas showAreas (cvar)
+====================
+
+Description
+-----------
+
+This displays the contents flags and debug outline for the current [AAS.html AAS] area.
+
+Usage
+-----
+
+At the console type...
+
+`aas_showAreas [float]`
+
+Parameters
+----------
+
+-   [float] - 0 doesn't shows area, 1 shows area
+
+Flags
+-----
+
+| Flag              | Enabled | Description                                  |
+|-------------------|---------|----------------------------------------------|
+| CVAR\_ALL         |         | all flags                                    |
+| CVAR\_BOOL        |         | variable is a boolean                        |
+| CVAR\_INTEGER     |         | variable is an integer                       |
+| CVAR\_FLOAT       | X       | variable is a float                          |
+| CVAR\_SYSTEM      |         | system variable                              |
+| CVAR\_RENDERER    |         | renderer variable                            |
+| CVAR\_SOUND       |         | sound variable                               |
+| CVAR\_GUI         |         | gui variable                                 |
+| CVAR\_GAME        | X       | game variable                                |
+| CVAR\_TOOL        |         | tool variable                                |
+| CVAR\_USERINFO    |         | sent to servers, available to menu           |
+| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
+| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
+| CVAR\_STATIC      | X       | statically declared, not user created        |
+| CVAR\_CHEAT       | X       | variable is considered a cheat               |
+| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
+| CVAR\_INIT        |         | can only be set from the command-line        |
+| CVAR\_ROM         |         | display only, cannot be set by user at all   |
+| CVAR\_ARCHIVE     |         | set to cause it to be saved to a config file |
+| CVAR\_MODIFIED    | X       | set when the variable is modified            |
+
+Notes
+-----
+
+Walk to an area on the map & bring down the console. The console will display the area \# and it's contents flags.
+
+While viewing the game, the outline of the current area the player is in will be outlined in red, with reachabilities to adjoining areas shown with cyan arrows and ids.
+
+If the current position of the player isn't in an area and a PushPointIntoArea succeeds you will see yellow player bounds.
+
+See [AAS.html AAS] for more information on creating the AAS map.
+
+<div>
+![Image:Etqwsquare\_25.png](images_7_7e_Etqwsquare_25.png "fig:Image:Etqwsquare_25.png") **Note:** Enemy Territory: Quake Wars only:
+
+  
+*(the cvar bot\_threading must be set to 0)*
+
+</div>
+

@@ -1,0 +1,34 @@
+RandomInt (script event)
+========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns a random integer value X where 0 \<= X \<= range.
+
+Usage
+-----
+
+float randomInt( float range )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

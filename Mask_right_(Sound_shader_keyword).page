@@ -1,0 +1,34 @@
+Mask right (Sound shader keyword)
+=================================
+
+<div style="padding: 1px; border: 0px solid #000000" align="left">
+<font size="18px"><font color="black">![Image:D3square\_bg.png](images_c_cb_D3square_bg.png "fig:Image:D3square_bg.png") The information on this page is specific to [Doom\_3.html Doom 3].</font></font>
+
+</div>
+
+------------------------------------------------------------------------
+
+Description
+-----------
+
+The mask\_right keywork only allows sound from the shader to be outbut through the right surround sound speaker in a 5.1 setup or the right speaker in a 2 channel (stereo) setup.
+
+Usage
+-----
+
+`mask_right`
+
+Example
+-------
+
+`ship_engine_rumble`
+`{`
+`   mindistance 100`
+`   maxdistance 1000`
+`   volume 10`
+`   looping`
+`   mask_backleft`
+`   shakes .1`
+`   sound/last_stand/loop_rumble_right_b.wav`
+`}`
+

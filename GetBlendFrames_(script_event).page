@@ -1,0 +1,34 @@
+GetBlendFrames (script event)
+=============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the number of frames to blend between animations on the given channel.
+
+Usage
+-----
+
+float getBlendFrames( float channel )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

@@ -1,0 +1,34 @@
+MaskBlue (Material stage keyword)
+=================================
+
+Description
+-----------
+
+The **maskBlue** keyword causes the blue channel of the current stage to be ignored.
+
+Usage
+-----
+
+`maskBlue`
+
+Parameters
+----------
+
+This keyword does not accept parameters.
+
+Example
+-------
+
+Masking the blue channel
+
+`{`
+`   maskBlue`
+`   map path/to/image.tga`
+`}`
+
+Notes
+-----
+
+Not available.
+
+

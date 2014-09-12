@@ -1,0 +1,34 @@
+SpeakRandom (script event)
+==========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Speak using the given voice definition, with random suffix
+
+Usage
+-----
+
+void speakRandom( string speechDecl )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

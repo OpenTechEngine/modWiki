@@ -1,0 +1,52 @@
+S maxSoundsPerShader (cvar)
+===========================
+
+Description
+-----------
+
+This Cvar defines how many different sounds are played for each [Sound\_(decl).html sound shader].
+
+Usage
+-----
+
+At the console type...
+
+`s_maxSoundsPerShader [Int]`
+
+Parameters
+----------
+
+-   [Int] - Sets the number of sounds.
+
+Flags
+-----
+
+| Flag              | Enabled | Description                                  |
+|-------------------|---------|----------------------------------------------|
+| CVAR\_ALL         |         | all flags                                    |
+| CVAR\_BOOL        |         | variable is a boolean                        |
+| CVAR\_INTEGER     |         | variable is an integer                       |
+| CVAR\_FLOAT       |         | variable is a float                          |
+| CVAR\_SYSTEM      | X       | system variable                              |
+| CVAR\_RENDERER    |         | renderer variable                            |
+| CVAR\_SOUND       | X       | sound variable                               |
+| CVAR\_GUI         |         | gui variable                                 |
+| CVAR\_GAME        |         | game variable                                |
+| CVAR\_TOOL        |         | tool variable                                |
+| CVAR\_USERINFO    |         | sent to servers, available to menu           |
+| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
+| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
+| CVAR\_STATIC      | X       | statically declared, not user created        |
+| CVAR\_CHEAT       |         | variable is considered a cheat               |
+| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
+| CVAR\_INIT        |         | can only be set from the command-line        |
+| CVAR\_ROM         |         | display only, cannot be set by user at all   |
+| CVAR\_ARCHIVE     | X       | set to cause it to be saved to a config file |
+| CVAR\_MODIFIED    | X       | set when the variable is modified            |
+
+Notes
+-----
+
+If set to 0 there is no limit and the engine will randomly choose which sound to play from the sound shader whenever that shader is triggered. Any other number means that only from the first up to the \<number chosen\> sounds are loaded into memory and used by the engine. In this case the order in which the sound files are defined in the sound shader matters.
+
+

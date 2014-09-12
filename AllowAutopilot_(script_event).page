@@ -1,0 +1,34 @@
+AllowAutopilot (script event)
+=============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+allow the AI to control landing and flying-- this will likely NOT work for you. Just sayin.
+
+Usage
+-----
+
+'void' allowAutopilot( float f )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

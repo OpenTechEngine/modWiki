@@ -1,0 +1,34 @@
+GetPersistantString (script event)
+==================================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the string for the given persistant arg
+
+Usage
+-----
+
+string getPersistantString( string key )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

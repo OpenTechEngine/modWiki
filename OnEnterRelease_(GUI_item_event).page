@@ -1,0 +1,14 @@
+OnEnterRelease (GUI item event)
+===============================
+
+Called when the user lets go of the enter key on an [EditDef\_(GUI\_item\_type).html editDef].
+
+*Must check if this works in normal windowDefs!*
+
+Example(s)
+----------
+
+`onEnteRelease {`
+`   ...`
+`}`
+

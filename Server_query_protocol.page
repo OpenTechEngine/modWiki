@@ -1,0 +1,146 @@
+Server query protocol
+=====================
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+All [Id\_Tech\_4.html id Tech 4] engines have a means of querying servers to gather info about a particular server. Mostly the protocol is slightly different for different games.
+
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                                                                              
+ Contents                                                                                                                                                          
+ --------                                                                                                                                                          
+                                                                                                                                                                   
+ </div>                                                                                                                                                            
+ -   [Server\_query\_protocol.html\#Doom\_3\_version <span class="tocnumber">1</span> <span class="toctext">Doom 3 version</span>]                                 
+     -   [Server\_query\_protocol.html\#Querying\_the\_master\_server <span class="tocnumber">1.1</span> <span class="toctext">Querying the master server</span>]  
+         -   [Server\_query\_protocol.html\#Request <span class="tocnumber">1.1.1</span> <span class="toctext">Request</span>]                                     
+         -   [Server\_query\_protocol.html\#Response <span class="tocnumber">1.1.2</span> <span class="toctext">Response</span>]                                   
+     -   [Server\_query\_protocol.html\#Querying\_a\_server <span class="tocnumber">1.2</span> <span class="toctext">Querying a server</span>]                     
+ -   [Server\_query\_protocol.html\#ET:QW\_version <span class="tocnumber">2</span> <span class="toctext">ET:QW version</span>]                                    
+     -   [Server\_query\_protocol.html\#Server\_Feed <span class="tocnumber">2.1</span> <span class="toctext">Server Feed</span>]                                  
+     -   [Server\_query\_protocol.html\#Data\_Block <span class="tocnumber">2.2</span> <span class="toctext">Data Block</span>]                                    
+     -   [Server\_query\_protocol.html\#Source <span class="tocnumber">2.3</span> <span class="toctext">Source</span>]                                             |
+
+<span align="absbottom">![Image:D3square\_25.png](images_2_23_D3square_25.png "fig:Image:D3square_25.png") Doom 3 version</span>
+--------------------------------------------------------------------------------------------------------------------------------
+
+  
+*The information in this section is specific to [Doom\_3.html Doom 3].*
+
+### Querying the master server
+
+Doom 3 - Master Server communications [<http://dev.kquery.com/index.php?article=44>](http://web.archive.org/web/20120923052254/http://dev.kquery.com/index.php?article=44)
+
+#### Request
+
+Send a UDP packet to master server for query a list of Doom 3 servers. The known master sever is **idnet.ua-corp.com:27650**.
+
+Data block
+
+`struct request_t { // 19 bytes`
+`  uint16_t magic;              // 0xFFFF`
+`  uint8_t get_servers_sig[11]; // "getServers\0"`
+`  uint8_t ver;                 // 0x21 means Version 1.0`
+`                               // 0x23 means Version 1.1`
+`                               // 0x27 means Version 1.2`
+`                               // 0x28 means Version 1.3`
+`  uint8_t xxx1; // not tested yet`
+`  uint8_t xxx2; // not tested yet`
+`  uint8_t xxx3; // not tested yet`
+`  uint8_t xxx4; // not tested yet`
+`  uint8_t xxx5; // not tested yet`
+` };`
+
+Query packet representation in C launguage
+
+`static const uint8_t cMasterv_10[] = { // Query version 1.0 server (19 bytes)`
+`   "\xFF\xFF" "getServers\0" "\x21\x00\x01\x00\x00\x0A"`
+`};`
+`static const uint8_t cMasterv_11[] = { // Query version 1.1 server (19 bytes)`
+`   "\xFF\xFF" "getServers\0" "\x23\x00\x01\x00\x00\x0A"`
+`};`
+`static const uint8_t cMasterv_12[] = { // Query version 1.2 server (19 bytes)`
+`   "\xFF\xFF" "getServers\0" "\x27\x00\x01\x00\x00\x0A"`
+`};`
+`static const uint8_t cMasterv_13[] = { // Query version 1.3 server (19 bytes)`
+`   "\xFF\xFF" "getServers\0" "\x28\x00\x01\x00\x00\x0A"`
+`};`
+
+#### Response
+
+Receive a UDP packet from the master server.
+
+Data block
+
+`struct server_addr_t { // 6 bytes`
+`  uint32_t addr;  // network byte order: 45 0c 12 34 is 69.12.18.52`
+`  uint16_t port;  // intel byte order: 12 6c is 27666`
+` };`
+`struct response_t { // 10+ bytes`
+`  uint16_t magic;          // 0xFFFF`
+`  uint8_t servers_sig[8];  // "servers\0"`
+`  server_addr_t servers[]; // cnt is arbitary. Read until end of packet.`
+` };`
+
+### Querying a server
+
+<span align="absbottom">![Image:Etqwsquare\_25.png](images_7_7e_Etqwsquare_25.png "fig:Image:Etqwsquare_25.png") ET:QW version</span>
+-------------------------------------------------------------------------------------------------------------------------------------
+
+  
+*The information in this section is specific to [Enemy Territory: Quake Wars](http://web.archive.org/web/20121206024939/http://www.modwiki.net:80/wiki/Enemy_Territory:_Quake_Wars).*
+
+The version used in Enemy Territory: Quake Wars works slightly different. Because users are required to login, access to the master servers doesn't seem to be possible for unauthenticated users.
+
+### Server Feed
+
+Luckily, the list of servers is available from a second source. The current URLs for server lists are:
+
+| Demo server list | [<http://etqwdemo-ipgetter.demonware.net/ipgetter/>](http://web.archive.org/web/20120923052254/http://etqwdemo-ipgetter.demonware.net/ipgetter/) |
+|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| Full game        | [<http://etqw-ipgetter.demonware.net/ipgetter/>](http://web.archive.org/web/20120923052254/http://etqw-ipgetter.demonware.net/ipgetter/)         |
+
+Sending an HTTP GET request to one of these URLs will return an HTTP message with as content a list of \<IP\>:\<PORT\> pairs per line. Each entry is a functioning server and needs to be polled for extra information.
+
+### Data Block
+
+`The data block for each client is:`
+`Code:`
+`struct client_t {`
+`  short ping;`
+`  int rate;`
+`  char name[32]; // NULL-terminated`
+`  byte clanTagPosition; // 0: prefix, 1: suffix`
+`  char clanTag[32]; // NULL-terminated`
+`  byte isBot;`
+` };`
+`The data block following all 32 clients is:`
+`Code:`
+` struct serverInfo_t {`
+`  int osMask;`
+`  byte isRanked;`
+`  int timeLeft;`
+`  byte gameState;`
+` };`
+`gameState is a bitfield of the following possible items:`
+`For all gametypes (these are three mutually-exclusive):`
+`1 = Warmup/Warmup countdown`
+`2 = Game in progress`
+`4 = Game over, in review screen`
+`For stopwatch:`
+`8 = The return match is active (ie, the second play of the map)`
+
+In Version 1.0 and 1.1 the Client Data Block was
+
+`struct client_t {`
+`  short ping;`
+`  int rate;`
+`  char name[32]; // NULL-terminated`
+`  byte isBot;`
+` };`
+
+### Source
+
+-   [community forums: SD Post Data Block](http://web.archive.org/web/20120923052254/http://community.enemyterritory.com/forums/showpost.php?p=129140&postcount=50)
+-   [community forums: SD Post Client Datablock Patch 1.2](http://web.archive.org/web/20120923052254/http://community.enemyterritory.com/forums/showpost.php?p=198258&postcount=56)
+-   [Enemy Territory Quake Wars protocol documented](http://web.archive.org/web/20120923052254/http://www.return1.net/site/news/read/13/) - it has some great hex examples to show how a dump of the traffic looks like.
+

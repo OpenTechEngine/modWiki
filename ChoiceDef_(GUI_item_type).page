@@ -1,0 +1,47 @@
+ChoiceDef (GUI item type)
+=========================
+
+<div class="thumb tright">
+<div style="width: 182px">
+![A choiceDef from Doom3](images_thumb_c_c7_Gui_example_choicedef.png_180px-Gui_example_choicedef.png "A choiceDef from Doom3")
+
+<div class="thumbcaption">
+<div class="magnify" style="float: right">
+![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
+
+</div>
+A choiceDef from Doom3
+
+</div>
+</div>
+</div>
+A choice field. It lets the user select from a range of choices by clicking on the item to cycle through the different options.
+
+Additional properties
+---------------------
+
+-   [Choices\_(GUI\_item\_property).html choices]
+-   [Cvar\_(GUI\_item\_property).html cvar]
+-   cvarGroup
+-   [ChoiceType\_(GUI\_item\_property).html choiceType]
+-   [CurrentChoice\_(GUI\_item\_property).html currentChoice]
+-   [Gui\_(GUI\_item\_property).html gui]
+-   [LiveUpdate\_(GUI\_item\_property).html liveUpdate]
+-   [UpdateGroup\_(GUI\_item\_property).html updateGroup]
+-   [Values\_(GUI\_item\_property).html values]
+
+Example(s)
+----------
+
+`choiceDef OG10Primary {`
+`   rect        220, 1, 50, 14`
+`   choices     "#str_04221"`
+`   cvar        "in_freeLook"`
+`   choiceType  0`
+`   font        "fonts/bank"`
+`   textscale   0.25`
+`   textalign   1`
+`   textaligny  -6`
+`   forecolor   0.6, 0.8, 0.8, 1`
+`}`
+

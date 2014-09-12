@@ -1,0 +1,50 @@
+Mask backleft (Sound shader keyword)
+====================================
+
+<div style="padding: 1px; border: 0px solid #000000" align="left">
+<font size="18px"><font color="black">![Image:D3square\_bg.png](images_c_cb_D3square_bg.png "fig:Image:D3square_bg.png") The information on this page is specific to [Doom\_3.html Doom 3].</font></font>
+
+</div>
+
+------------------------------------------------------------------------
+
+|--------------------------------------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                                                        
+ Contents                                                                                                                                    
+ --------                                                                                                                                    
+                                                                                                                                             
+ </div>                                                                                                                                      
+ -   [Mask\_backleft\_(Sound\_shader\_keyword).html\#Description <span class="tocnumber">1</span> <span class="toctext">Description</span>]  
+ -   [Mask\_backleft\_(Sound\_shader\_keyword).html\#Usage <span class="tocnumber">2</span> <span class="toctext">Usage</span>]              
+ -   [Mask\_backleft\_(Sound\_shader\_keyword).html\#Example <span class="tocnumber">3</span> <span class="toctext">Example</span>]          
+ -   [Mask\_backleft\_(Sound\_shader\_keyword).html\#Notes <span class="tocnumber">4</span> <span class="toctext">Notes</span>]              |
+
+Description
+-----------
+
+The mask\_backleft keywork only allows sound from the shader to be outbut through the rear left surround sound speaker in a 5.1 setup.
+
+Usage
+-----
+
+`mask_backleft`
+
+Example
+-------
+
+`ship_engine_rumble`
+`{`
+`   mindistance 100`
+`   maxdistance 1000`
+`   volume 10`
+`   looping`
+`   mask_backleft`
+`   shakes .1`
+`   sound/last_stand/loop_rumble_backleft_b.wav`
+`}`
+
+Notes
+-----
+
+When this is in use, sound only comes from that channel when 5.1 surround is used. If you use 2 channel (stereo) sound the channel will be muted and this sound will not be played.
+

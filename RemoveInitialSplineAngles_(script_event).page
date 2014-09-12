@@ -1,0 +1,34 @@
+RemoveInitialSplineAngles (script event)
+========================================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Subtracts the initial spline angles to maintain the initial orientation of the mover.
+
+Usage
+-----
+
+void removeInitialSplineAngles( )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

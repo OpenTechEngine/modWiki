@@ -1,0 +1,26 @@
+GfxInfo (console command)
+=========================
+
+Description
+-----------
+
+Reports OpenGL version, extensions found, rendering paths enabled and other graphics card related information.
+
+Usage
+-----
+
+At the console type...
+
+`gfxinfo`
+
+Parameters
+----------
+
+This console command does not accept parameters.
+
+Notes
+-----
+
+You can use this command to see which rendering paths are potentially available in your video card for use with the [R\_renderer\_(cvar).html r\_renderer] CVar.
+
+

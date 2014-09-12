@@ -1,0 +1,42 @@
+GetKey (script event)
+=====================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Retrieves the value of a specific spawn arg.
+
+Usage
+-----
+
+*string* getKey( *string* **key** )
+
+Parameters
+----------
+
+-   [key] - The spawn argument to return the value of.
+
+Examples
+--------
+
+` `
+<font color="#0000ff">`void`</font>` double_monster_gravity `<font color="#000000">`(`</font><font color="#0000ff">`entity`</font>` ent_mon_this`<font color="#000000">`)`</font><font color="#000000">`{`</font>
+<font color="#0000ff">`string`</font>` mon_class;`
+` `
+`    mon_class=ent_mon_this.`<font color="#ff0000">`getKey`</font><font color="#000000">`(`</font><font color="#666666">`"className"`</font><font color="#000000">`)`</font>`;`
+`    `<font color="#339900">`//more code here`</font>
+`    `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`spawn`</font><font color="#000000">`(`</font>`mon_class`<font color="#000000">`)`</font>`;`
+` `
+<font color="#000000">`}`</font>
+
+Notes
+-----
+
+This script event returns the value of the specified spawn argument as a string.
+
+

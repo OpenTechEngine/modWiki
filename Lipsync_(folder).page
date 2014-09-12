@@ -1,0 +1,50 @@
+Lipsync (folder)
+================
+
+<div style="padding: 1px; border: 0px solid #000000" align="left">
+<font size="18px"><font color="black">![Image:Q4square\_bg.png](images_6_69_Q4square_bg.png "fig:Image:Q4square_bg.png") The information on this page is specific to [Quake\_4.html Quake 4].</font></font>
+
+</div>
+
+------------------------------------------------------------------------
+
+<div id="delete" class="boilerplate metadata" style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa">
+**This page is a candidate for deletion, because: <font style="background: transparent; padding: 2px">*Page is orphaned and this stuff should probably in the decl article*</font>**
+
+If you disagree with its speedy deletion, please explain why on [its talk page](http://web.archive.org/web/20081015151323/http://www.modwiki.net/wiki/Talk:Lipsync_%28folder%29).
+
+</div>
+This folder contains .[LIPSYNC\_(file\_format).html LIPSYNC] files that control the mouth movement to be in sync with the audiofiles played. Lip syncronisation data is supplied for english, french, italian and spanish. In addition the files also control the general mimic by including parameters such as pain, idle, death, happy etc.
+
+The visemes prameter and the required model animation are not yet understood.
+
+See also models/lipsync/marinehead
+
+#### Generic Mimic List
+
+-   angry
+-   blink (not lipsync controlled? automated?)
+-   confused
+-   death
+-   happy
+-   idle
+-   pain
+-   phonemes (used to extract phonemes from individual frames?)
+-   puzzled
+-   scared
+-   sleep
+
+#### Example
+
+Taken from airdefense.lipsync
+
+`lipSync vo_1_1_3_40_3`
+`{`
+`   description "Yeah! Got ya!!"`
+`   text        "#str_300115"`
+`   visemes "english"   "x9c <Yeah> y9s AE35z <Got> g12o AA13u t12k <ya> y5q AA8r x22l "`
+`   visemes "french"    "<Ouais> w8r EH24z <je> j4q UW3q x23l <tai> t12r AH4q <eu> UW27z x15f "`
+`   visemes "italian"   "x4c `<s>` s9r IY36z <Preso> p15p r3q EH18y s5r OW11t x15c "`
+`   visemes "spanish"   "<Sí> s7t IY49z <Te> t8q EY12u x11e <pillé> p6u IY14v l7w l11v EY14v x25h "`
+`}`</s>
+

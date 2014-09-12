@@ -1,0 +1,35 @@
+Show (script event)
+===================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Makes this entity visible if it has a model.
+
+Usage
+-----
+
+*void* show()
+
+Parameters
+----------
+
+This script event does not accept parameters.
+
+Examples
+--------
+
+` `
+<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`show`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+

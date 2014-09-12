@@ -1,0 +1,34 @@
+ScriptedPlaybackAim (script event)
+==================================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Starts a scripted playback aim
+
+Usage
+-----
+
+void scriptedPlaybackAim( string playback, float flags, float numFrames )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

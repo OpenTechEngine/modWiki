@@ -1,0 +1,8 @@
+VP (file format)
+================
+
+Description
+===========
+
+The .VP files are used for [Vertex\_and\_fragment\_programs.html visual special effects]. They are regular ASCII text files written in assembler which are parsed and compiled by the engine and OpenGL driver and executed on each vertex. They are similar to .[VFP\_(file\_format).html VFP] files except they only include a vertex program instead of a vertex and fragment program object.
+

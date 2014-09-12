@@ -1,0 +1,34 @@
+FadeOutLight (script event)
+===========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Turns the light out over the given time in seconds.
+
+Usage
+-----
+
+void fadeOutLight( float time )
+
+Parameters
+----------
+
+-   *float* **time**: Number of seconds over which to fade out the light.
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

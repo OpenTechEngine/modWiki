@@ -1,0 +1,22 @@
+NeedsRender (GUI item property)
+===============================
+
+??
+
+This property is restricted to the [RenderDef\_(GUI\_item\_type).html renderDef] item type.
+
+Syntax
+------
+
+`needsRender `*`flag`*
+
+Default value
+-------------
+
+`Unknown`
+
+Example(s)
+----------
+
+`needsRender    1`
+

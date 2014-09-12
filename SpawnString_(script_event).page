@@ -1,0 +1,34 @@
+SpawnString (script event)
+==========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the string for the given spawn argument.
+
+Usage
+-----
+
+string SpawnString( string key, string default )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

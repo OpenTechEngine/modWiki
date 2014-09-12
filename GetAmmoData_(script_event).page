@@ -1,0 +1,34 @@
+GetAmmoData (script event)
+==========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns data about how much ammo a player has for a given ammoClass. x = current ammo, y = capacity, z = x/y;
+
+Usage
+-----
+
+vector getAmmoData( string ammoClass)
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

@@ -1,0 +1,34 @@
+GetWeaponEntity (script event)
+==============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the entity of the weapon which the player is currently carrying.
+
+Usage
+-----
+
+*entity* getWeaponEntity( )
+
+Parameters
+----------
+
+None.
+
+Examples
+--------
+
+<font color="#000055">`$player1`</font>`.`<font color="#ff0000">`getWeaponEntity`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+None.
+
+

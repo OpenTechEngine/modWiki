@@ -1,0 +1,25 @@
+LightColor (GUI item property)
+==============================
+
+Color used to light the 3d model.
+
+This property is restricted to the [RenderDef\_(GUI\_item\_type).html renderDef] item type.
+
+Syntax
+------
+
+`lightColor `*`r`*`, `*`g`*`, `*`b`*`, `*`a`*
+
+Each of the RGB values define the ammount of color coming from each of the Red, Green, and Blue channels, respectively - ranging from 0 or no value, to 1 or full value. The a (or alpha) value is the ammount or opacity the backcolor will have - 0 being totally transparent and 1 being totally opaque.
+
+Default value
+-------------
+
+`Unknown`
+
+Example(s)
+----------
+
+`lightColor 1, 1, 1, 1`
+
+

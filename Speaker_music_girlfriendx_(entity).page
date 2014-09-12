@@ -1,0 +1,98 @@
+Speaker music girlfriendx (entity)
+==================================
+
+> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+
+Description
+-----------
+
+Music manager. Scripting calls this to play music
+
+Spawn Arguments
+---------------
+
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+
+| KEY                           | DESCRIPTION                                       |
+|-------------------------------|---------------------------------------------------|
+| accepts\_wounds               | Description not available.                        |
+| accurateguitrace              | Description not available.                        |
+| alignToJoint                  | Description not available.                        |
+| angle                         | Description not available.                        |
+| anim                          | Description not available.                        |
+| applyDamageEffects            | Description not available.                        |
+| bind                          | Description not available.                        |
+| bindOrientated                | Description not available.                        |
+| bindToBody                    | Description not available.                        |
+| bindToJoint                   | Description not available.                        |
+| bindanim                      | Description not available.                        |
+| cameraTarget                  | Description not available.                        |
+| cinematic                     | Description not available.                        |
+| classname                     | Description not available.                        |
+| clipmodel                     | Description not available.                        |
+| cone                          | Description not available.                        |
+| cylinder                      | Description not available.                        |
+| dispose\_delay                | Description not available.                        |
+| editor\_color                 | Description not available.                        |
+| editor\_material              | Description not available.                        |
+| editor\_maxs                  | Description not available.                        |
+| editor\_mins                  | Description not available.                        |
+| editor\_snd XXXX              | Description not available.                        |
+| editor\_usage                 | Music manager. Scripting calls this to play music |
+| editor\_var XXXX              | Description not available.                        |
+| gravity                       | Description not available.                        |
+| guiTarget                     | Description not available.                        |
+| health                        | Description not available.                        |
+| hide                          | Description not available.                        |
+| ignoreGravityZones            | Description not available.                        |
+| inherit                       | Description not available.                        |
+| maxs                          | Description not available.                        |
+| mins                          | Description not available.                        |
+| model                         | Description not available.                        |
+| moveToJoint                   | Description not available.                        |
+| name                          | Description not available.                        |
+| networkSync                   | Description not available.                        |
+| neverDormant                  | Description not available.                        |
+| noJawFlap                     | Description not available.                        |
+| noPortal                      | Description not available.                        |
+| noclipmodel                   | Description not available.                        |
+| offset\_aim                   | Description not available.                        |
+| origin                        | Description not available.                        |
+| push\_cosine                  | Description not available.                        |
+| pushes                        | Description not available.                        |
+| rotation                      | Description not available.                        |
+| scriptobject                  | Description not available.                        |
+| size                          | Description not available.                        |
+| snd\_gfx\_boss\_battle\_end   | Description not available.                        |
+| snd\_gfx\_boss\_battle\_loop  | Description not available.                        |
+| snd\_gfx\_boss\_battle\_start | Description not available.                        |
+| snd\_gfx\_boss\_intro         | Description not available.                        |
+| snd\_gfx\_boss\_jen\_dead     | Description not available.                        |
+| snd\_gfx\_boss\_jen\_dialog   | Description not available.                        |
+| snd\_gfx\_combat              | Description not available.                        |
+| snd\_gfx\_start               | Description not available.                        |
+| solidForTeam                  | Description not available.                        |
+| spawnclass                    | Description not available.                        |
+| target                        | Description not available.                        |
+
+Inheritance
+-----------
+
+This entity is derived from the following:
+
+-   '' idEntity''
+    -   '' idSound''
+        -   '' hhSound''
+            -   [Speaker\_(entity).html speaker]
+                -   [Speaker\_music\_(entity).html speaker\_music]
+                    -   *' speaker\_music\_girlfriendx*'
+
+**Note**: Entries marked in italics are classes defined in the SDK.
+
+Notes
+-----
+
+Notes not available.
+

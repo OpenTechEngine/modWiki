@@ -1,0 +1,22 @@
+Menugui (GUI item property)
+===========================
+
+Whether or not this item should be fullscreen. Should be used on the topmost, desktop item.
+
+The value of this property cannot be changed at runtime.
+
+Syntax
+------
+
+`menugui `*`flag`*
+
+Default value
+-------------
+
+`0`
+
+Example(s)
+----------
+
+`menugui    1`
+

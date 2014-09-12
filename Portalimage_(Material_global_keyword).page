@@ -1,0 +1,33 @@
+Portalimage (Material global keyword)
+=====================================
+
+<div style="padding: 1px; border: 0px solid #000000" align="left">
+<font size="18px"><font color="black">![Image:Q4square\_bg.png](images_6_69_Q4square_bg.png "fig:Image:Q4square_bg.png") The information on this page is specific to [Quake\_4.html Quake 4].</font></font>
+
+</div>
+
+------------------------------------------------------------------------
+
+Description
+-----------
+
+Controls which image to blend a [Visportal.html visportals] to when it's closing.
+
+Usage
+-----
+
+In the global section of your material shader type...
+
+`portalImage [map]`
+
+Parameters
+----------
+
+-   [map] - the relative path and file name to the specified portal image.
+
+Notes
+-----
+
+Usually the image used is "\_black". See also the [Portaldistancefar\_(Material\_global\_keyword).html portaldistancefar] and [Portaldistancenear\_(Material\_global\_keyword).html portaldistancenear] keywords.
+
+

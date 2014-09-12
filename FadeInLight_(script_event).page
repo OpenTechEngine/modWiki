@@ -1,0 +1,35 @@
+FadeInLight (script event)
+==========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Turns the light on over the given time in seconds..
+
+Usage
+-----
+
+*void* fadeInLight( float time )
+
+Parameters
+----------
+
+-   [time] - The duration of fade in.
+
+Examples
+--------
+
+` `
+`none`
+
+Notes
+-----
+
+This script event does not return any values.
+
+

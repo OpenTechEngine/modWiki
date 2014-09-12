@@ -1,0 +1,82 @@
+Worldspawn (entity)
+===================
+
+> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+
+Description
+-----------
+
+Every map should have exactly one worldspawn.
+
+Spawn Arguments
+---------------
+
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+
+| KEY              | DESCRIPTION                                                                  |
+|------------------|------------------------------------------------------------------------------|
+| angle            | Description not available.                                                   |
+| anim             | Description not available.                                                   |
+| bind             | Description not available.                                                   |
+| bindOrientated   | Description not available.                                                   |
+| bindToBody       | Description not available.                                                   |
+| bindToJoint      | Description not available.                                                   |
+| bindanim         | Description not available.                                                   |
+| cameraTarget     | Description not available.                                                   |
+| cinematic        | Description not available.                                                   |
+| classname        | Description not available.                                                   |
+| clipmodel        | Description not available.                                                   |
+| cone             | Description not available.                                                   |
+| cylinder         | Description not available.                                                   |
+| editor\_color    | Description not available.                                                   |
+| editor\_maxs     | Description not available.                                                   |
+| editor\_mins     | Description not available.                                                   |
+| editor\_usage    | Every map should have exactly one worldspawn.                                |
+| editor\_var XXXX | Description not available.                                                   |
+| gravity          | gravity value for the level.                                                 |
+| guiTarget        | Description not available.                                                   |
+| health           | Description not available.                                                   |
+| hide             | Description not available.                                                   |
+| maxs             | Description not available.                                                   |
+| mins             | Description not available.                                                   |
+| model            | Description not available.                                                   |
+| name             | Description not available.                                                   |
+| networkSync      | Description not available.                                                   |
+| neverDormant     | Description not available.                                                   |
+| noGrab           | Description not available.                                                   |
+| noclipmodel      | Description not available.                                                   |
+| origin           | Description not available.                                                   |
+| player           | Set to player\_strogg in Quake 4 to spawn stroggified Kane. See notes below. |
+| rotation         | Description not available.                                                   |
+| scriptobject     | Description not available.                                                   |
+| size             | Description not available.                                                   |
+| skin\_xray       | Description not available.                                                   |
+| slowmo           | Description not available.                                                   |
+| solidForTeam     | Description not available.                                                   |
+| spawnclass       | Description not available.                                                   |
+| target           | Description not available.                                                   |
+
+Inheritance
+-----------
+
+This entity is derived from the following:
+
+-   *[IdEntity\_(class).html idEntity]*
+    -   '' idWorldspawn''
+        -   *' worldspawn*'
+
+**Note**: Entries marked in italics are classes defined in the SDK.
+
+Notes
+-----
+
+<div>
+![Image:Q4square\_25.png](images_e_e8_Q4square_25.png "fig:Image:Q4square_25.png") **Note:** Quake 4 only:
+
+  
+*To spawn the player as a strogg set the key **player** to **player\_strogg***
+
+</div>
+

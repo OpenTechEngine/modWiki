@@ -1,0 +1,34 @@
+BecomeNonSolid (script event)
+=============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Become non solid
+
+Usage
+-----
+
+void becomeNonSolid( )
+
+Parameters
+----------
+
+none
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+This event is defined twice in the SDK. Once in moveable.cpp and again in inAI\_events.cpp. This means that it's possible that the behavoir of this event may differ when used on a moveable versus an AI although currently no differences have been noted.
+
+

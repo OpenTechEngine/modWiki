@@ -1,0 +1,43 @@
+PlayWorldEffect (script event)
+==============================
+
+<div style="padding: 1px; border: 0px solid #000000" align="left">
+<font size="18px"><font color="black">![Image:Q4square\_bg.png](images_6_69_Q4square_bg.png "fig:Image:Q4square_bg.png") The information on this page is specific to [Quake\_4.html Quake 4].</font></font>
+
+</div>
+
+------------------------------------------------------------------------
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Plays an effect.
+
+Usage
+-----
+
+*void* playWorldEffect( *string* **effectName**, *vector* **org**, *vector* **angle** )
+
+Parameters
+----------
+
+-   [effectName] - Name of effect to play.
+-   [org] - Origin where the effect will appear.
+-   [angle] - Direction of the effect.
+
+Examples
+--------
+
+<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`playWorldEffect`</font><font color="#000000">`(`</font>` `<font color="#666666">`"fire64"`</font>`, '`<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>` `<font color="#0000dd">`90`</font>`', '`<font color="#0000dd">`0`</font>` `<font color="#0000dd">`90`</font>` `<font color="#0000dd">`0`</font>`' `<font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values. Effect name is an actual string, not a dictionary entry. Make sure to precache the effect. Also note that these can't loop.
+
+

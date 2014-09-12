@@ -1,0 +1,34 @@
+StrRight (script event)
+=======================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns a string composed of the last num characters
+
+Usage
+-----
+
+string strRight( string text, float num )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

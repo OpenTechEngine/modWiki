@@ -1,0 +1,56 @@
+Com aviDemoSamples (cvar)
+=========================
+
+Description
+-----------
+
+Software rendered [Antialiasing.html antialiasing] for use when using the [AviDemo\_(console\_command).html aviDemo] command.
+
+Usage
+-----
+
+At the console type...
+
+`com_aviDemoSamples [int]`
+
+Parameters
+----------
+
+-   [int] - A positive value for the amount shots to blend into a single frame.
+
+Flags
+-----
+
+| Flag              | Enabled | Description                                  |
+|-------------------|---------|----------------------------------------------|
+| CVAR\_ALL         |         | all flags                                    |
+| CVAR\_BOOL        |         | variable is a boolean                        |
+| CVAR\_INTEGER     | X       | variable is an integer                       |
+| CVAR\_FLOAT       |         | variable is a float                          |
+| CVAR\_SYSTEM      | X       | system variable                              |
+| CVAR\_RENDERER    |         | renderer variable                            |
+| CVAR\_SOUND       |         | sound variable                               |
+| CVAR\_GUI         |         | gui variable                                 |
+| CVAR\_GAME        |         | game variable                                |
+| CVAR\_TOOL        |         | tool variable                                |
+| CVAR\_USERINFO    |         | sent to servers, available to menu           |
+| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
+| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
+| CVAR\_STATIC      | X       | statically declared, not user created        |
+| CVAR\_CHEAT       |         | variable is considered a cheat               |
+| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
+| CVAR\_INIT        |         | can only be set from the command-line        |
+| CVAR\_ROM         |         | display only, cannot be set by user at all   |
+| CVAR\_ARCHIVE     |         | set to cause it to be saved to a config file |
+| CVAR\_MODIFIED    | X       | set when the variable is modified            |
+
+Notes
+-----
+
+The number you specify is how many times the engine will re-draw the current image in order to "soften" it. However, the AA capabilities on your video card are far superior in quality and speed so this is not normally needed. Set the value to 1 to use your video card's antialiasing. Related CVars:
+
+-   [Com\_aviDemoHeight\_(cvar).html com\_aviDemoHeight] - You can select the height of each frame.
+-   [Com\_aviDemoTics\_(cvar).html com\_aviDemoTics] - You can select how many frames per second should be generated.
+-   [Com\_aviDemoWidth\_(cvar).html com\_aviDemoWidth] - You can select the width of each frame.
+
+

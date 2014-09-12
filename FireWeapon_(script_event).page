@@ -1,0 +1,34 @@
+FireWeapon (script event)
+=========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Sets the follow offset from the leading vehicle.
+
+Usage
+-----
+
+'void' fireWeapon( float weapon\_index, float time )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

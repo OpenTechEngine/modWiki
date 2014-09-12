@@ -1,0 +1,128 @@
+Entitydef (decl)
+================
+
+Entity definitions are simply a list of key/value pairs or spawn arguments.
+
+When the engine spawns an [Entity.html entity], the entityDef is looked up to build the [SpawnArgs.html spawnArgs] dictionary of the [Spawn\_class.html spawn class].
+
+So entityDefs conceptually define the default attributes of an entity - in combination with the key/value pairs for the map entity set in the level editor.
+
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                                                                                         
+ Contents                                                                                                                                                                     
+ --------                                                                                                                                                                     
+                                                                                                                                                                              
+ </div>                                                                                                                                                                       
+ -   [Entitydef\_(decl).html\#Syntax <span class="tocnumber">1</span> <span class="toctext">Syntax</span>]                                                                    
+ -   [Entitydef\_(decl).html\#Important\_Key.2FValues <span class="tocnumber">2</span> <span class="toctext">Important Key/Values</span>]                                     
+ -   [Entitydef\_(decl).html\#Inheritance\_and\_Spawn\_Classes\_Example <span class="tocnumber">3</span> <span class="toctext">Inheritance and Spawn Classes Example</span>]  
+ -   [Entitydef\_(decl).html\#Script\_Objects\_Example <span class="tocnumber">4</span> <span class="toctext">Script Objects Example</span>]                                  
+ -   [Entitydef\_(decl).html\#Practical\_Example <span class="tocnumber">5</span> <span class="toctext">Practical Example</span>]                                             |
+
+Syntax
+------
+
+`entityDef [entitydeftype] {`
+`   [key_1] [value_1]`
+`   [key_2] [value_2]`
+`   [key_3] [value_3]`
+`   ...`
+`}`
+
+Entity definitions begin with a header which consists of the keyword "entityDef" followed by the name of the entityDef type.
+
+The header is followed by the body of the declaration which is enclosed in curly brackets.
+
+The body is composed of a series of keys and values. Keys and values are enclosed by quotation marks.
+
+Important Key/Values
+--------------------
+
+While most of the key/value pairs are just data to be used by the entity spawn class, script object or level script there are a few that should be mentioned.
+
+`"inherit" [entitydef type]`
+
+The "inherit" key/value pair can be used in any entity definition. It's purpose is to instruct the engine to inherit key/value pairs from the specified entityDef type to reduce redundancy.
+
+`"spawnclass" [spawn class type]`
+
+The spawnclass key/value pair defines the [Spawn\_class.html spawn class] type of this entity. An entity will fail to spawn if it doesn't have a spawnclass key/value set via an entityDef or map entity.
+
+`"scriptobject" [script object type]`
+
+The "scriptobject" key/value pair key/value pair is used to assign a [Script\_object.html script object] type to this entity type to control its behavior.
+
+Inheritance and Spawn Classes Example
+-------------------------------------
+
+Using a paraphrased snippet from the monster\_zombie\_fat entity definition in Doom 3:
+
+`entityDef monster_zombie_fat {`
+`   "inherit"       "zombie_default"`
+`   "scriptobject"      "monster_zombie"`
+`   "size"          "48 48 68"`
+`   "use_aas"       "aas48"`
+`   "team"          "1"`
+`   "rank"          "0"`
+`   "health"        "100"`
+`   "melee_range"       "32"`
+`   "walk_on_sight"     "1"`
+`   "mass"          "200"`
+`   ...`
+`}`
+
+Here, the inherit value means is that when the monster\_zombie\_fat is looked up it will be combined with the key/value pairs defined in zombie\_default.
+
+By looking at zombie\_default we can see the key/value pairs that are inherited:
+
+`entityDef zombie_default {`
+`   "inherit"       "monster_default"`
+`   "blink_min"     "2.0s"`
+`   "blink_max"     "8.0"`
+`   ...`
+`}`
+
+Notice that this entity definition also inherits key/value pairs from another entityDef, in this case from monster\_default:
+
+`entityDef monster_default {`
+`   "editor_color"      "1 .5 0"`
+`   "editor_mins"       "-24 -24 0"`
+`   "editor_maxs"       "24 24 64"`
+`   "editor_showangle"  "1"`
+`   "editor_copy"       "anim"`
+`   ...`
+`   "spawnclass"        "idAI"`
+`   ...`
+`}`
+
+And at this point the inheritance stops because there is no other "inherit" key/value pair. However, there is a "spawnclass" key/value pair. In this example the [Spawn\_class.html spawn class] idAI.
+
+Script Objects Example
+----------------------
+
+In this example, the scriptobject key/value is defining what AI [Script\_object.html script object] type to use to control this entity.
+
+`entityDef monster_zombie_fat {`
+`   "inherit"       "zombie_default"`
+`   "scriptobject"      "monster_zombie"`
+`   "size"          "48 48 68"`
+`   "use_aas"       "aas48"`
+`   "team"          "1"`
+`   "rank"          "0"`
+`   "health"        "100"`
+`   "melee_range"       "32"`
+`   "walk_on_sight"     "1"`
+`   "mass"          "200"`
+`   ...`
+`}`
+
+Practical Example
+-----------------
+
+If you wanted to create a new type of monster\_zombie\_fat with a health value of 200 you simply create a new entity definition that inherits from monster\_zombie\_fat and set a new health key/value pair...
+
+`entityDef monster_zombie_fat_200 {`
+`   "inherit"       "monster_zombie_fat"`
+`   "health"        "200"`
+`}`
+

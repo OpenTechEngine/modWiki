@@ -1,0 +1,14 @@
+OnTrigger (GUI item event)
+==========================
+
+Called when the entity this GUI is attached to is triggered.
+
+Should be used on the [Desktop\_GUI\_item.html Desktop GUI item].
+
+Example(s)
+----------
+
+`onTrigger {`
+`   ...`
+`}`
+

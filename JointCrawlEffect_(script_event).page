@@ -1,0 +1,34 @@
+JointCrawlEffect (script event)
+===============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+plays specified effect (must be precached ("fx\_whatever") in entitydef or map spawnArgs) crawling down joints for specified number of seconds
+
+Usage
+-----
+
+void jointCrawlEffect( string effectKeyName, float seconds )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

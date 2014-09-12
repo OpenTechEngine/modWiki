@@ -1,0 +1,26 @@
+Surfacetype15 (Material global keyword)
+=======================================
+
+Description
+-----------
+
+Flags the surface as made of *surfacetype15* to define the type of hit sound and debris.
+
+Usage
+-----
+
+In the global section of your material shader type...
+
+`surfacetype15`
+
+Parameters
+----------
+
+None.
+
+Notes
+-----
+
+The material will play the snd\_surfacetype15 soundshader when shot and show mtr\_wound\_surfacetype15 as a decal.
+
+

@@ -1,0 +1,58 @@
+Com preciseTic (cvar)
+=====================
+
+Description
+-----------
+
+This CVar enables/disables the running of multiple updates in a single tic to keep the main and async threads in sync.
+
+Usage
+-----
+
+At the console type...
+
+`com_preciseTic [bool]`
+
+Parameters
+----------
+
+-   [bool]
+    -   0 - Disable.
+    -   1 - Enable.
+
+Flags
+-----
+
+| Flag              | Enabled | Description                                  |
+|-------------------|---------|----------------------------------------------|
+| CVAR\_ALL         |         | all flags                                    |
+| CVAR\_BOOL        | X       | variable is a boolean                        |
+| CVAR\_INTEGER     |         | variable is an integer                       |
+| CVAR\_FLOAT       |         | variable is a float                          |
+| CVAR\_SYSTEM      | X       | system variable                              |
+| CVAR\_RENDERER    |         | renderer variable                            |
+| CVAR\_SOUND       |         | sound variable                               |
+| CVAR\_GUI         |         | gui variable                                 |
+| CVAR\_GAME        |         | game variable                                |
+| CVAR\_TOOL        |         | tool variable                                |
+| CVAR\_USERINFO    |         | sent to servers, available to menu           |
+| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
+| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
+| CVAR\_STATIC      | X       | statically declared, not user created        |
+| CVAR\_CHEAT       | X       | variable is considered a cheat               |
+| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
+| CVAR\_INIT        |         | can only be set from the command-line        |
+| CVAR\_ROM         |         | display only, cannot be set by user at all   |
+| CVAR\_ARCHIVE     |         | set to cause it to be saved to a config file |
+| CVAR\_MODIFIED    | X       | set when the variable is modified            |
+
+Notes
+-----
+
+There are two threads running in Doom 3, the main thread, and the 'async' thread. The main thread runs the game code, networking, physics, renderer, etc... The async thread takes care of sound if [Com\_asyncSound\_(cvar).html com\_asyncSound] is 1 or 3 (windows & linux), it also takes care of input if [Com\_asyncInput\_(cvar).html com\_asyncInput] is 1 (it defaults to 0).
+
+The async thread wakes up every 16 milliseconds (60fps) to run an update. If more than 16ms have elapsed since the last update, it will run multiple updates to catch up (for example if 51ms have elapsed, it will run 3 updates). Similarly, if the update is called too soon, it gets ignored. When com\_preciseTic is set to 0, it skips this bit of logic and always runs a single update no matter what.
+
+--from binaryc post @ [<http://web.archive.org/web/20100407101237/http://www.doom3world.org/phpbb2/viewtopic.php?p=106823&highlight>=\#106823 <http://www.doom3world.org/phpbb2/viewtopic.php?p=106823&highlight>=\#106823]
+
+

@@ -1,0 +1,37 @@
+FragmentProgram (Material stage keyword)
+========================================
+
+Description
+-----------
+
+The **fragmentProgram** keyword instructs Doom 3 to execute the given fragement program to produce the image map for this stage.
+
+Usage
+-----
+
+`fragmentProgram [prog]`
+
+Parameters
+----------
+
+-   [prog] - The vfp to execute.
+
+Example
+-------
+
+distort the current frame using the normal map helmet\_local.tga and heatHazeWithMaskAndVertex.vfp
+
+`{`
+`   program                 heatHazeWithMaskAndVertex.vfp`
+`   vertexParm              0               0                                          // texture scrolling`
+`   vertexParm              1               10                                         // magnitude of the distortion`
+`   fragmentMap             0               _currentRender`
+`   fragmentMap             1               models/characters/sarge2/helmet_local.tga  // the normal map for distortion`
+`}`
+
+Notes
+-----
+
+None.
+
+

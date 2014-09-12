@@ -1,0 +1,34 @@
+Sway (script event)
+===================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Initiates a rotation back and forth along the given angles with the given speed and phase.
+
+Usage
+-----
+
+void sway( float speed, float phase, vector angles )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

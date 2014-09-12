@@ -1,0 +1,37 @@
+Soundmap (Material stage keyword)
+=================================
+
+This stage uses a sound meter from the sound system as an image map. Specify 'waveform' to get a scope rather than bars.
+
+Description
+-----------
+
+The **soundMap** keyword renders a visual representation of sounds, played by the entity to which this material is assigned, into a buffer.
+
+Usage
+-----
+
+`soundMap [type]`
+
+Parameters
+----------
+
+-   [type] = The type of visualization to render.
+    -   [meter] = Renders a series of bars.
+    -   [waveform] = Renders a waveform.
+
+Example
+-------
+
+Render a waveform...
+
+`{`
+`   soundMap waveform`
+`}`
+
+Notes
+-----
+
+Not Available.
+
+

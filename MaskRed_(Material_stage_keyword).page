@@ -1,0 +1,34 @@
+MaskRed (Material stage keyword)
+================================
+
+Description
+-----------
+
+The **maskRed** keyword causes the red channel of this stage to be ignored.
+
+Usage
+-----
+
+`maskRed`
+
+Parameters
+----------
+
+This keyword does not accept parameters.
+
+Example
+-------
+
+Masking the red channel.
+
+`{`
+`   maskRed`
+`   map path/to/image.tga`
+`}`
+
+Notes
+-----
+
+Not available.
+
+

@@ -1,0 +1,26 @@
+ConDump (console command)
+=========================
+
+Description
+-----------
+
+This command dumps the contents of the console to a text file.
+
+Usage
+-----
+
+At the console type...
+
+`conDump [filename]`
+
+Parameters
+----------
+
+-   [filename] - The name of the file you wish to create.
+
+Notes
+-----
+
+The resulting text file can be found in the base directory.
+
+

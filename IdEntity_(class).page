@@ -1,0 +1,140 @@
+IdEntity (class)
+================
+
+|------------------------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                                          
+ Contents                                                                                                                      
+ --------                                                                                                                      
+                                                                                                                               
+ </div>                                                                                                                        
+ -   [IdEntity\_(class).html\#Description <span class="tocnumber">1</span> <span class="toctext">Description</span>]           
+ -   [IdEntity\_(class).html\#Spawn\_Arguments <span class="tocnumber">2</span> <span class="toctext">Spawn Arguments</span>]  
+ -   [IdEntity\_(class).html\#Inheritance <span class="tocnumber">3</span> <span class="toctext">Inheritance</span>]           
+ -   [IdEntity\_(class).html\#Events <span class="tocnumber">4</span> <span class="toctext">Events</span>]                     
+ -   [IdEntity\_(class).html\#Notes <span class="tocnumber">5</span> <span class="toctext">Notes</span>]                       |
+
+Description
+-----------
+
+idEntity is the base [Spawn\_class.html spawn class] of [Entity.html entities].
+
+All other spawn classes inherit its functions, variables and events, but may override them to produce different behavior than idEntity.
+
+Spawn Arguments
+---------------
+
+The following is a list of key/value pairs, also known as [SpawnArgs.html spawn arguments], that function with this entity.
+
+| KEY                   | DESCRIPTION                                                                                       |
+|-----------------------|---------------------------------------------------------------------------------------------------|
+| angle                 | Yaw angle of entity.                                                                              |
+| bind                  | Entity to bind to.                                                                                |
+| bindOrientated        | Description not available.                                                                        |
+| bindToBody            | Description not available.                                                                        |
+| bindToJoint           | Description not available.                                                                        |
+| bindanim              | Description not available.                                                                        |
+| cameraTarget          | Description not available.                                                                        |
+| cinematic             | Description not available.                                                                        |
+| classname             | [Entitydef\_(decl).html EntityDef] to load [SpawnArgs.html spawnArgs] from.                       |
+| clipmodel             | Name of clip model to load.                                                                       |
+| cone                  | Set up clip model as cone with this number of sides. Use mins/maxs to set bounds.                 |
+| cylinder              | Set up clip model as cone with this number of sides. Use mins/maxs to set bounds.                 |
+| guiTarget             | Description not available.                                                                        |
+| health                | Health.                                                                                           |
+| hide                  | Hide visual model and disable clip.                                                               |
+| maxs                  | Max bounds of clip model.                                                                         |
+| mins                  | Min bounds of clip model.                                                                         |
+| model                 | name of visual model.                                                                             |
+| name                  | Unique name of entity.                                                                            |
+| networkSync           | Description not available.                                                                        |
+| neverDormant          | Description not available.                                                                        |
+| noclipmodel           | Do not set up a clip model.                                                                       |
+| origin                | Initial world coordinates of entity.                                                              |
+| rotation              | rotation matrix.                                                                                  |
+| scriptobject          | Type of [Script\_object.html script object] for entity to use.                                    |
+| size                  | Size of clip model, alternative to mins/maxs.                                                     |
+| solidForTeam          | Description not available.                                                                        |
+| spawnclass            | The [Spawn\_class.html spawn class] type as string.                                               |
+| target                | Prefix, entity to add to target list.                                                             |
+| noDynamicInteractions | Don't create any light and shadow interactions for this entity after the level load is completed. |
+
+Inheritance
+-----------
+
+This entity is derived from the following:
+
+-   *[IdClass\_(class).html idClass]*
+    -   **'' idEntity**''
+
+**Note**: Entries marked in italics are classes defined in the [Coding.html\#Game\_code game code].
+
+Events
+------
+
+-   [Activate\_(script\_event).html activate]
+-   [ActivateTargets\_(script\_event).html activateTargets]
+-   [Bind\_(script\_event).html bind]
+-   [BindPosition\_(script\_event).html bindPosition]
+-   [BindToJoint\_(script\_event).html bindToJoint]
+-   [CacheSoundShader\_(script\_event).html cacheSoundShader]
+-   [CallFunction\_(script\_event).html callFunction]
+-   [ClearSignal\_(script\_event).html clearSignal]
+-   [DistanceTo\_(script\_event).html distanceTo]
+-   [DistanceToPoint\_(script\_event).html distanceToPoint]
+-   [FadeSound\_(script\_event).html fadeSound]
+-   [GetAngles\_(script\_event).html getAngles]
+-   [GetAngularVelocity\_(script\_event).html getAngularVelocity]
+-   [GetColor\_(script\_event).html getColor]
+-   [GetEntityKey\_(script\_event).html getEntityKey]
+-   [GetFloatKey\_(script\_event).html getFloatKey]
+-   [GetIntKey\_(script\_event).html getIntKey]
+-   [GetKey\_(script\_event).html getKey]
+-   [GetLinearVelocity\_(script\_event).html getLinearVelocity]
+-   [GetMaxs\_(script\_event).html getMaxs]
+-   [GetMins\_(script\_event).html getMins]
+-   [GetName\_(script\_event).html getName]
+-   [GetNextKey\_(script\_event).html getNextKey]
+-   [GetOrigin\_(script\_event).html getOrigin]
+-   [GetShaderParm\_(script\_event).html getShaderParm]
+-   [GetSize\_(script\_event).html getSize]
+-   [GetTarget\_(script\_event).html getTarget]
+-   [GetVectorKey\_(script\_event).html getVectorKey]
+-   [GetWorldOrigin\_(script\_event).html getWorldOrigin]
+-   [HasFunction\_(script\_event).html hasFunction]
+-   [Hide\_(script\_event).html hide]
+-   [IsHidden\_(script\_event).html isHidden]
+-   [NumTargets\_(script\_event).html numTargets]
+-   [RandomTarget\_(script\_event).html randomTarget]
+-   [Remove\_(script\_event).html remove]
+-   [RemoveBinds\_(script\_event).html removeBinds]
+-   [RestorePosition\_(script\_event).html restorePosition]
+-   [SetAngles\_(script\_event).html setAngles]
+-   [SetAngularVelocity\_(script\_event).html setAngularVelocity]
+-   [SetColor\_(script\_event).html setColor]
+-   [SetGuiFloat\_(script\_event).html setGuiFloat]
+-   [SetGuiParm\_(script\_event).html setGuiParm]
+-   [SetKey\_(script\_event).html setKey]
+-   [SetLinearVelocity\_(script\_event).html setLinearVelocity]
+-   [SetModel\_(script\_event).html setModel]
+-   [SetName\_(script\_event).html setName]
+-   [SetNeverDormant\_(script\_event).html setNeverDormant]
+-   [SetOrigin\_(script\_event).html setOrigin]
+-   [SetOwner\_(script\_event).html setOwner]
+-   [SetShaderParm\_(script\_event).html setShaderParm]
+-   [SetShaderParms\_(script\_event).html setShaderParms]
+-   [SetSize\_(script\_event).html setSize]
+-   [SetSkin\_(script\_event).html setSkin]
+-   [SetWorldOrigin\_(script\_event).html setWorldOrigin]
+-   [Show\_(script\_event).html show]
+-   [StartFx\_(script\_event).html startFx]
+-   [StartSound\_(script\_event).html startSound]
+-   [StartSoundShader\_(script\_event).html startSoundShader]
+-   [StopSound\_(script\_event).html stopSound]
+-   [Touches\_(script\_event).html touches]
+-   [Unbind\_(script\_event).html unbind]
+
+Notes
+-----
+
+Notes not available.
+

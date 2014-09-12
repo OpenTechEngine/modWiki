@@ -1,0 +1,34 @@
+StartSpline (script event)
+==========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Starts moving along a spline stored on the given entity.
+
+Usage
+-----
+
+void startSpline( entity spline )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` `<font color="#000055">`$my_mover`</font>`.`<font color="#ff0000">`startspline`</font>` `<font color="#000000">`(`</font><font color="#000055">`$my_spline`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+tba
+
+

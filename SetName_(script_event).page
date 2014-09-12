@@ -1,0 +1,35 @@
+SetName (script event)
+======================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Sets the name of this entity.
+
+Usage
+-----
+
+*void* setName( *string* **name** )
+
+Parameters
+----------
+
+-   [name] - The name to apply to this entity.
+
+Examples
+--------
+
+` `
+<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`setName`</font><font color="#000000">`(`</font><font color="#666666">`"foo"`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+

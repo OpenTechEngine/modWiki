@@ -1,0 +1,27 @@
+Materialtype (decl)
+===================
+
+<div style="padding: 1px; border: 0px solid #000000" align="left">
+<font size="18px"><font color="black">![Image:Q4square\_bg.png](images_6_69_Q4square_bg.png "fig:Image:Q4square_bg.png") The information on this page is specific to [Quake\_4.html Quake 4].</font></font>
+
+</div>
+
+------------------------------------------------------------------------
+
+MaterialTypes are declarations that dictate how a particular surface that references them reacts to impacts. This special declaration replaces the more simplistic surface type global keyword system (like [Metal\_(Material\_global\_keyword).html metal], plastic or [Stone\_(Material\_global\_keyword).html stone] for instance) used in [Doom\_3.html Doom 3].
+
+Syntax
+------
+
+`materialType [name]`
+`{`
+`   description "[optional summary]"`
+`   rgb     [red],[green],[blue]`
+`}`
+
+MaterialType declarations are started with a header which consists of the keyword materialType followed by the *name* of the type. They are then followed by the body of the declaration which is enclosed in curly brackets.
+
+The rgb values (0 through 255) control the impact effects and sounds (if any) of the surface. The entire surface will react the same way though so if you'd like a little more control you should use a MaterialImage instead.
+
+MaterialType declarations should be put in a .MTT in the /[Materials\_(folder).html materials] folder. The name of the material type is then referred from inside a [Material\_(decl).html material] declaration with the materialType global material keyword.
+

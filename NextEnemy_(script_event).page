@@ -1,0 +1,34 @@
+NextEnemy (script event)
+========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the next enemy the actor has acquired.
+
+Usage
+-----
+
+entity nextEnemy( entity lastEnemy )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

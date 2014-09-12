@@ -1,0 +1,16 @@
+OnAction (GUI item event)
+=========================
+
+On most item types, called when the user clicks on a [GUI\_items.html GUI item] with the mouse.
+
+On [EditDef\_(GUI\_item\_type).html editDefs], this is called when the text changes.
+
+On [ChoiceDef\_(GUI\_item\_type).html choiceDefs], this is called when the selected option changes.
+
+Example(s)
+----------
+
+`onAction {`
+`   ...`
+`}`
+

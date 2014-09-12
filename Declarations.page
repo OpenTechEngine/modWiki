@@ -1,0 +1,118 @@
+Declarations
+============
+
+<div class="thumb tright">
+<div style="width: 302px">
+![Illustration depicting the relationship between various declarations and media assets](images_thumb_a_a9_Declarations.gif_300px-Declarations.gif "Illustration depicting the relationship between various declarations and media assets")
+
+<div class="thumbcaption">
+<div class="magnify" style="float: right">
+![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
+
+</div>
+Illustration depicting the relationship between various declarations and media assets
+
+</div>
+</div>
+</div>
+The general purpose of a declaration is to define a name for a reuseable asset that shares a common set of properties. A few examples would be...
+
+-   A material shader declaration defines a material name which when referenced by brushes in a level, model, skin, or particle dictate what images to use and how they should be rendered.
+-   A sound shader declaration defines a sound name which when referenced by a speaker entity, AI script or effect dictates what sounds to use and how loud they should be played.
+-   A skin declaration defines <span class="plainlinks">[<http://web.archive.org/web/20120817101235/http://twitter.com/>\#!/RhinoDeck <span style="font-weight: normal; text-decoration: none!important; background: none!important; text-decoration: none"><font color="black">Rhino Deck</font></span>] a skin name which when referenced by models or entities dictates what material shaders to replace and what material shaders to replace them with. </span>
+-   An entity declaration defines an entity name which when referenced by the game itself dictates what key/value pairs should be used by default.
+
+Declarations often times reference other declarations. A key example would be entity declarations which can reference nearly every declaration type including other entity declarations.
+
+When a declaration references another declaration, it inherits those properties. Case in point, an entity references a given model declaration. The entity is assigned a model based on that model declaration rather than explicitly specifiying which file to use in the entity declaration itself.
+
+The same is true of key/value pairs (a.k.a. spawn arguments). Case in point, [Monster\_demon\_imp\_(entity).html monster\_demon\_imp] does not explicitly define a **bleed** key/value pair. But because it inherits properties from [Monster\_default\_(entity).html monster\_default], it has a **bleed** key/value pair.
+
+This inheritance is useful because it allows you to create a declaration that is nearly identical to another without the need to copy and paste it or modify the original. You simply reference the original declaration and add whatever unique properties you wish.
+
+|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                                                              
+ Contents                                                                                                                                          
+ --------                                                                                                                                          
+                                                                                                                                                   
+ </div>                                                                                                                                            
+ -   [Declarations.html\#Syntax <span class="tocnumber">1</span> <span class="toctext">Syntax</span>]                                              
+ -   [Declarations.html\#Universal\_declaration\_types <span class="tocnumber">2</span> <span class="toctext">Universal declaration types</span>]  
+ -   [Declarations.html\#D3\_Declaration\_types <span class="tocnumber">3</span> <span class="toctext">D3 Declaration types</span>]                
+ -   [Declarations.html\#Q4\_Declaration\_types <span class="tocnumber">4</span> <span class="toctext">Q4 Declaration types</span>]                
+ -   [Declarations.html\#Editing\_tools <span class="tocnumber">5</span> <span class="toctext">Editing tools</span>]                               |
+
+Syntax
+------
+
+A single declaration consists of a header and body. The header is composed of a name and sometimes a descriptor that defines the type of declaration (descriptors are not needed if the declaration is put in its respective [File\_formats.html\#Declaration\_containers file format]; for example you wouldn't need to put "material" before your material decls in an .[MTR\_(file\_format).html MTR] file). The body of a definition is enclosed in curly brackets.
+
+<div>
+![Image:Etqwsquare\_25.png](images_7_7e_Etqwsquare_25.png "fig:Image:Etqwsquare_25.png") **Note:** Enemy Territory: Quake Wars only:
+
+  
+*Declaration descriptors are always needed*
+
+</div>
+.[DEF\_(file\_format).html DEF] files are the standard container for declarations.
+
+A few examples of headers would be...
+
+`textures/common/npc_pda`
+
+`articulatedFigure char_campbell_bfg`
+
+`entityDef aas_types`
+
+The purpose of a declaration is to define the properties and behavior of game content. More than one type of decl can be included in a single file however, for organizational purposes it's recommended that they are kept separate. Alternatively you can also put just one decl in a single file, allowing you to use the operating system's own file system to navigate the declarations.
+
+Universal declaration types
+---------------------------
+
+These declarations are handled by the engine:
+
+-   addondef
+-   [Af\_(decl).html af]
+-   [Entitydef\_(decl).html entitydef]
+-   [Export\_(decl).html export]
+-   [Mapdef\_(decl).html mapdef]
+-   [Material\_(decl).html material]
+-   [Modeldef\_(decl).html modeldef]
+-   [Skin\_(decl).html skin]
+-   [Sound\_(decl).html sound]
+-   [Table\_(decl).html table]
+
+<span align="absbottom">![Image:D3square\_25.png](images_2_23_D3square_25.png "fig:Image:D3square_25.png") D3 Declaration types</span>
+--------------------------------------------------------------------------------------------------------------------------------------
+
+  
+*The information in this section is specific to [Doom\_3.html Doom 3].*
+
+Along with the universal decls Doom 3 provides the following:
+
+-   audio
+-   email
+-   [Fx\_(decl).html fx]
+-   [Particle\_(decl).html particle]
+-   pda
+-   video
+
+<span align="absbottom">![Q4](images_e_e8_Q4square_25.png "fig:Q4") Q4 Declaration types</span>
+-----------------------------------------------------------------------------------------------
+
+  
+*The information in this section is specific to [Quake\_4.html Quake 4].*
+
+Along with the universal decls Quake 4 provides the following:
+
+-   effect
+-   [Guide\_(decl).html guide]
+-   [Lipsync\_(decl).html lipsync]
+-   [Materialtype\_(decl).html materialtype]
+-   playback
+
+Editing tools
+-------------
+
+Since declarations are plain-text files, a simple [Text\_editor.html text editor] can be used to edit or create declarations.
+

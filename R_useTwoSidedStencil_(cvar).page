@@ -1,0 +1,54 @@
+R useTwoSidedStencil (cvar)
+===========================
+
+Description
+-----------
+
+This CVar sets an optimisation to execute more stencils operations in a single pass.
+
+Usage
+-----
+
+At the console type...
+
+`r_useTwoSidedStencil [Boolean]`
+
+Parameters
+----------
+
+-   [Boolean]
+    -   0 - Disable.
+    -   1 - Enable.
+
+Flags
+-----
+
+| Flag              | Enabled | Description                                  |
+|-------------------|---------|----------------------------------------------|
+| CVAR\_ALL         |         | all flags                                    |
+| CVAR\_BOOL        | X       | variable is a boolean                        |
+| CVAR\_INTEGER     |         | variable is an integer                       |
+| CVAR\_FLOAT       |         | variable is a float                          |
+| CVAR\_SYSTEM      |         | system variable                              |
+| CVAR\_RENDERER    | X       | renderer variable                            |
+| CVAR\_SOUND       |         | sound variable                               |
+| CVAR\_GUI         |         | gui variable                                 |
+| CVAR\_GAME        |         | game variable                                |
+| CVAR\_TOOL        |         | tool variable                                |
+| CVAR\_USERINFO    |         | sent to servers, available to menu           |
+| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
+| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
+| CVAR\_STATIC      | X       | statically declared, not user created        |
+| CVAR\_CHEAT       | X       | variable is considered a cheat               |
+| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
+| CVAR\_INIT        |         | can only be set from the command-line        |
+| CVAR\_ROM         |         | display only, cannot be set by user at all   |
+| CVAR\_ARCHIVE     |         | set to cause it to be saved to a config file |
+| CVAR\_MODIFIED    | X       | set when the variable is modified            |
+
+Notes
+-----
+
+Instead of submitting each stencil volume twice, once with front faces and once with back faces, this optimisation allows the renderer to submit the stencil volume once with two sets of stencil operations which helps reduce vertex bottlenecks.
+
+

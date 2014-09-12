@@ -1,0 +1,34 @@
+FindEnemy (script event)
+========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+finds an enemy for the AI
+
+Usage
+-----
+
+entity findEnemy( float distSquared )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

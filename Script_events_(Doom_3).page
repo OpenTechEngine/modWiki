@@ -1,0 +1,575 @@
+Script events (Doom 3)
+======================
+
+<div style="padding: 1px; border: 0px solid #000000" align="left">
+<font size="18px"><font color="black">![Image:D3square\_bg.png](images_c_cb_D3square_bg.png "fig:Image:D3square_bg.png") The information on this page is specific to [Doom\_3.html Doom 3].</font></font>
+
+</div>
+
+------------------------------------------------------------------------
+
+Script events are commands used in Doom 3's native scripting language.
+
+Existing script events as of version 1.3.1302 (1.3).
+
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                                                                                        
+ Contents                                                                                                                                                                    
+ --------                                                                                                                                                                    
+                                                                                                                                                                             
+ </div>                                                                                                                                                                      
+ -   [Script\_events\_(Doom\_3).html\#System\_Events <span class="tocnumber">1</span> <span class="toctext">System Events</span>]                                            
+ -   [Script\_events\_(Doom\_3).html\#Entity\_Events <span class="tocnumber">2</span> <span class="toctext">Entity Events</span>]                                            
+ -   [Script\_events\_(Doom\_3).html\#idActor\_Events <span class="tocnumber">3</span> <span class="toctext">idActor Events</span>]                                          
+ -   [Script\_events\_(Doom\_3).html\#idAFEntity\_ClawFourFingers\_Events <span class="tocnumber">4</span> <span class="toctext">idAFEntity\_ClawFourFingers Events</span>]  
+ -   [Script\_events\_(Doom\_3).html\#idAI\_Events <span class="tocnumber">5</span> <span class="toctext">idAI Events</span>]                                                
+     -   [Script\_events\_(Doom\_3).html\#idAI\_Vagary\_Events <span class="tocnumber">5.1</span> <span class="toctext">idAI\_Vagary Events</span>]                          
+ -   [Script\_events\_(Doom\_3).html\#idAnimated\_Events <span class="tocnumber">6</span> <span class="toctext">idAnimated Events</span>]                                    
+ -   [Script\_events\_(Doom\_3).html\#idAnimatedEntity\_Events <span class="tocnumber">7</span> <span class="toctext">idAnimatedEntity Events</span>]                        
+ -   [Script\_events\_(Doom\_3).html\#idCameraAnim\_Events <span class="tocnumber">8</span> <span class="toctext">idCameraAnim Events</span>]                                
+ -   [Script\_events\_(Doom\_3).html\#idCombatNode\_Events <span class="tocnumber">9</span> <span class="toctext">idCombatNode Events</span>]                                
+ -   [Script\_events\_(Doom\_3).html\#idDoor\_Events <span class="tocnumber">10</span> <span class="toctext">idDoor Events</span>]                                           
+ -   [Script\_events\_(Doom\_3).html\#idForcefield\_Events <span class="tocnumber">11</span> <span class="toctext">idForcefield Events</span>]                               
+ -   [Script\_events\_(Doom\_3).html\#idLight\_Events <span class="tocnumber">12</span> <span class="toctext">idLight Events</span>]                                         
+ -   [Script\_events\_(Doom\_3).html\#idMoveable\_Events <span class="tocnumber">13</span> <span class="toctext">idMoveable Events</span>]                                   
+ -   [Script\_events\_(Doom\_3).html\#idMover\_Events <span class="tocnumber">14</span> <span class="toctext">idMover Events</span>]                                         
+ -   [Script\_events\_(Doom\_3).html\#idPlayer\_Events <span class="tocnumber">15</span> <span class="toctext">idPlayer Events</span>]                                       
+ -   [Script\_events\_(Doom\_3).html\#idProjectile\_Events <span class="tocnumber">16</span> <span class="toctext">idProjectile Events</span>]                               
+ -   [Script\_events\_(Doom\_3).html\#idWeapon\_Events <span class="tocnumber">17</span> <span class="toctext">idWeapon Events</span>]                                       
+ -   [Script\_events\_(Doom\_3).html\#Utility\_Functions <span class="tocnumber">18</span> <span class="toctext">Utility Functions</span>]                                   |
+
+System Events
+-------------
+
+Events declared in idThread, accessible via [Scripting\_basics.html\#sys sys] identifier.
+
+-   [AngToForward\_(script\_event).html angToForward]
+-   [AngToRight\_(script\_event).html angToRight]
+-   [AngToUp\_(script\_event).html angToUp]
+-   [Assert\_(script\_event).html assert]
+-   [ClearPersistantArgs\_(script\_event).html clearPersistantArgs]
+-   [ClearSignalThread\_(script\_event).html clearSignalThread]
+-   [CopySpawnArgs\_(script\_event).html copySpawnArgs]
+-   [Cos\_(script\_event).html cos]
+-   [CrossProduct\_(script\_event).html CrossProduct]
+-   [DebugArrow\_(script\_event).html debugArrow]
+-   [DebugBounds\_(script\_event).html debugBounds]
+-   [DebugCircle\_(script\_event).html debugCircle]
+-   [DebugLine\_(script\_event).html debugLine]
+-   [DotProduct\_(script\_event).html DotProduct]
+-   [DrawText\_(script\_event).html drawText]
+-   [Error\_(script\_event).html error]
+-   [FadeIn\_(script\_event).html fadeIn]
+-   [FadeOut\_(script\_event).html fadeOut]
+-   [FadeTo\_(script\_event).html fadeTo]
+-   [FirstPerson\_(script\_event).html firstPerson]
+-   [Getcvar\_(script\_event).html getcvar]
+-   [GetEntity\_(script\_event).html getEntity]
+-   [GetFrameTime\_(script\_event).html getFrameTime]
+-   [GetPersistantFloat\_(script\_event).html getPersistantFloat]
+-   [GetPersistantString\_(script\_event).html getPersistantString]
+-   [GetPersistantVector\_(script\_event).html getPersistantVector]
+-   [GetTicsPerSecond\_(script\_event).html getTicsPerSecond]
+-   [GetTime\_(script\_event).html getTime]
+-   [GetTraceBody\_(script\_event).html getTraceBody]
+-   [GetTraceEndPos\_(script\_event).html getTraceEndPos]
+-   [GetTraceEntity\_(script\_event).html getTraceEntity]
+-   [GetTraceFraction\_(script\_event).html getTraceFraction]
+-   [GetTraceJoint\_(script\_event).html getTraceJoint]
+-   [GetTraceNormal\_(script\_event).html getTraceNormal]
+-   [InfluenceActive\_(script\_event).html influenceActive]
+-   [IsClient\_(script\_event).html isClient]
+-   [IsMultiplayer\_(script\_event).html isMultiplayer]
+-   [Killthread\_(script\_event).html killthread]
+-   [Music\_(script\_event).html music]
+-   [OnSignal\_(script\_event).html onSignal]
+-   [Pause\_(script\_event).html pause]
+-   [Print\_(script\_event).html print]
+-   [Println\_(script\_event).html println]
+-   [RadiusDamage\_(script\_event).html radiusDamage]
+-   [Random\_(script\_event).html random]
+-   [Respawn\_(script\_event).html respawn]
+-   [Say\_(script\_event).html say]
+-   [SetCamera\_(script\_event).html setCamera]
+-   [Setcvar\_(script\_event).html setcvar]
+-   [SetPersistantArg\_(script\_event).html setPersistantArg]
+-   [SetSpawnArg\_(script\_event).html setSpawnArg]
+-   [Sin\_(script\_event).html sin]
+-   [Spawn\_(script\_event).html spawn]
+-   [SpawnFloat\_(script\_event).html SpawnFloat]
+-   [SpawnString\_(script\_event).html SpawnString]
+-   [SpawnVector\_(script\_event).html SpawnVector]
+-   [Sqrt\_(script\_event).html sqrt]
+-   [StrLeft\_(script\_event).html strLeft]
+-   [StrLength\_(script\_event).html strLength]
+-   [StrMid\_(script\_event).html strMid]
+-   [StrRight\_(script\_event).html strRight]
+-   [StrSkip\_(script\_event).html strSkip]
+-   [StrToFloat\_(script\_event).html strToFloat]
+-   [Terminate\_(script\_event).html terminate]
+-   [Threadname\_(script\_event).html threadname]
+-   [Trace\_(script\_event).html trace]
+-   [TracePoint\_(script\_event).html tracePoint]
+-   [Trigger\_(script\_event).html trigger]
+-   [VecLength\_(script\_event).html vecLength]
+-   [VecNormalize\_(script\_event).html vecNormalize]
+-   [VecToAngles\_(script\_event).html VecToAngles]
+-   [Wait\_(script\_event).html wait]
+-   [WaitFor\_(script\_event).html waitFor]
+-   [WaitForThread\_(script\_event).html waitForThread]
+-   [WaitFrame\_(script\_event).html waitFrame]
+-   [Warning\_(script\_event).html warning]
+
+Entity Events
+-------------
+
+Events declared in the base spawn class [IdEntity\_(class).html idEntity]
+
+All entities have these events.
+
+-   [Activate\_(script\_event).html activate]
+-   [ActivateTargets\_(script\_event).html activateTargets]
+-   [Bind\_(script\_event).html bind]
+-   [BindPosition\_(script\_event).html bindPosition]
+-   [BindToJoint\_(script\_event).html bindToJoint]
+-   [CacheSoundShader\_(script\_event).html cacheSoundShader]
+-   [CallFunction\_(script\_event).html callFunction]
+-   [ClearSignal\_(script\_event).html clearSignal]
+-   [DistanceTo\_(script\_event).html distanceTo]
+-   [DistanceToPoint\_(script\_event).html distanceToPoint]
+-   [FadeSound\_(script\_event).html fadeSound]
+-   [GetAngles\_(script\_event).html getAngles]
+-   [GetAngularVelocity\_(script\_event).html getAngularVelocity]
+-   [GetColor\_(script\_event).html getColor]
+-   [GetEntityKey\_(script\_event).html getEntityKey]
+-   [GetFloatKey\_(script\_event).html getFloatKey]
+-   [GetIntKey\_(script\_event).html getIntKey]
+-   [GetKey\_(script\_event).html getKey]
+-   [GetLinearVelocity\_(script\_event).html getLinearVelocity]
+-   [GetMaxs\_(script\_event).html getMaxs]
+-   [GetMins\_(script\_event).html getMins]
+-   [GetName\_(script\_event).html getName]
+-   [GetNextKey\_(script\_event).html getNextKey]
+-   [GetOrigin\_(script\_event).html getOrigin]
+-   [GetShaderParm\_(script\_event).html getShaderParm]
+-   [GetSize\_(script\_event).html getSize]
+-   [GetTarget\_(script\_event).html getTarget]
+-   [GetVectorKey\_(script\_event).html getVectorKey]
+-   [GetWorldOrigin\_(script\_event).html getWorldOrigin]
+-   [HasFunction\_(script\_event).html hasFunction]
+-   [Hide\_(script\_event).html hide]
+-   [IsHidden\_(script\_event).html isHidden]
+-   [NumTargets\_(script\_event).html numTargets]
+-   [RandomTarget\_(script\_event).html randomTarget]
+-   [Remove\_(script\_event).html remove]
+-   [RemoveBinds\_(script\_event).html removeBinds]
+-   [RestorePosition\_(script\_event).html restorePosition]
+-   [SetAngles\_(script\_event).html setAngles]
+-   [SetAngularVelocity\_(script\_event).html setAngularVelocity]
+-   [SetColor\_(script\_event).html setColor]
+-   [SetGuiFloat\_(script\_event).html setGuiFloat]
+-   [SetGuiParm\_(script\_event).html setGuiParm]
+-   [SetKey\_(script\_event).html setKey]
+-   [SetLinearVelocity\_(script\_event).html setLinearVelocity]
+-   [SetModel\_(script\_event).html setModel]
+-   [SetName\_(script\_event).html setName]
+-   [SetNeverDormant\_(script\_event).html setNeverDormant]
+-   [SetOrigin\_(script\_event).html setOrigin]
+-   [SetOwner\_(script\_event).html setOwner]
+-   [SetShaderParm\_(script\_event).html setShaderParm]
+-   [SetShaderParms\_(script\_event).html setShaderParms]
+-   [SetSize\_(script\_event).html setSize]
+-   [SetSkin\_(script\_event).html setSkin]
+-   [SetWorldOrigin\_(script\_event).html setWorldOrigin]
+-   [Show\_(script\_event).html show]
+-   [StartFx\_(script\_event).html startFx]
+-   [StartSound\_(script\_event).html startSound]
+-   [StartSoundShader\_(script\_event).html startSoundShader]
+-   [StopSound\_(script\_event).html stopSound]
+-   [Touches\_(script\_event).html touches]
+-   [Unbind\_(script\_event).html unbind]
+-   [Wait\_(script\_event).html wait]
+-   [WaitFrame\_(script\_event).html waitFrame]
+
+idActor Events
+--------------
+
+Events declared in the [Spawn\_class.html spawn class] idActor
+
+-   animDistance
+-   animLength
+-   animState
+-   checkAnim
+-   chooseAnim
+-   [ClosestEnemyToPoint\_(script\_event).html closestEnemyToPoint]
+-   [DisableEyeFocus\_(script\_event).html disableEyeFocus]
+-   [DisablePain\_(script\_event).html disablePain]
+-   [EnableAnim\_(script\_event).html enableAnim]
+-   [EnableEyeFocus\_(script\_event).html enableEyeFocus]
+-   [EnablePain\_(script\_event).html enablePain]
+-   finishAction
+-   getAnimState
+-   [GetHead\_(script\_event).html getHead]
+-   getPainAnim
+-   getState
+-   hasAnim
+-   [HasEnemies\_(script\_event).html hasEnemies]
+-   [IdleAnim\_(script\_event).html idleAnim]
+-   inAnimState
+-   [NextEnemy\_(script\_event).html nextEnemy]
+-   [OverrideAnim\_(script\_event).html overrideAnim]
+-   [PreventPain\_(script\_event).html preventPain]
+-   [SetAnimPrefix\_(script\_event).html setAnimPrefix]
+-   [SetConstraintPosition\_(script\_event).html SetConstraintPosition]
+-   setNextState
+-   setState
+-   [SetSyncedAnimWeight\_(script\_event).html setSyncedAnimWeight]
+-   [StopAnim\_(script\_event).html stopAnim]
+
+idAFEntity\_ClawFourFingers Events
+----------------------------------
+
+Events declared in the [Spawn\_class.html spawn class] idAFEntity\_ClawFourFingers
+
+-   [SetFingerAngle\_(script\_event).html setFingerAngle]
+-   [StopFingers\_(script\_event).html stopFingers]
+
+idAI Events
+-----------
+
+Events declared in the [Spawn\_class.html spawn class] idAI
+
+-   allowDamage
+-   allowHiddenMovement
+-   allowMovement
+-   animTurn
+-   attackBegin
+-   attackEnd
+-   attackMelee
+-   attackMissile
+-   [BecomeNonSolid\_(script\_event).html becomeNonSolid]
+-   [BecomeRagdoll\_(script\_event).html becomeRagdoll]
+-   [BecomeSolid\_(script\_event).html becomeSolid]
+-   burn
+-   [CanBecomeSolid\_(script\_event).html canBecomeSolid]
+-   canHitEnemy
+-   canHitEnemyFromAnim
+-   canHitEnemyFromJoint
+-   canReachEnemy
+-   canReachEntity
+-   canReachPosition
+-   canSee
+-   chargeAttack
+-   clearBurn
+-   clearEnemy
+-   clearFlyOffset
+-   closestReachableEnemyOfEntity
+-   createMissile
+-   [DirectDamage\_(script\_event).html directDamage]
+-   [DisableAFPush\_(script\_event).html disableAFPush]
+-   [DisableClip\_(script\_event).html disableClip]
+-   [DisableGravity\_(script\_event).html disableGravity]
+-   [EnableAFPush\_(script\_event).html enableAFPush]
+-   [EnableClip\_(script\_event).html enableClip]
+-   [EnableGravity\_(script\_event).html enableGravity]
+-   enemyInCombatCone
+-   enemyPositionValid
+-   enemyRange
+-   enemyRange2D
+-   entityInAttackCone
+-   faceEnemy
+-   faceEntity
+-   facingIdeal
+-   findActorsInBounds
+-   [FindEnemy\_(script\_event).html findEnemy]
+-   findEnemyAI
+-   findEnemyInCombatNodes
+-   fireMissileAtTarget
+-   getClosestHiddenTarget
+-   getCombatNode
+-   getCurrentYaw
+-   [GetEnemy\_(script\_event).html getEnemy]
+-   getEnemyEyePos
+-   getEnemyPos
+-   [GetHealth\_(script\_event).html getHealth]
+-   getJumpVelocity
+-   getMoveType
+-   getObstacle
+-   getRandomTarget
+-   getReachableEntityPosition
+-   getTalkTarget
+-   getTurnDelta
+-   getTurnRate
+-   heardSound
+-   ignoreDamage
+-   kickObstacles
+-   [Kill\_(script\_event).html kill]
+-   launchMissile
+-   locateEnemy
+-   [LookAt\_(script\_event).html lookAt]
+-   lookAtEnemy
+-   meleeAttackToJoint
+-   <span class="deadlink"> moveOutOfRange</span>
+-   moveStatus
+-   moveToAttackPosition
+-   moveToCover
+-   <span class="deadlink"> moveToEnemy</span>
+-   moveToEnemyHeight
+-   moveToEntity
+-   moveToPosition
+-   muzzleFlash
+-   numSmokeEmitters
+-   preBurn
+-   predictEnemyPos
+-   pushPointIntoAAS
+-   randomPath
+-   radiusDamageFromJoint
+-   restoreMove
+-   saveMove
+-   setBoneMod
+-   [SetEnemy\_(script\_event).html setEnemy]
+-   setFlyOffset
+-   setFlySpeed
+-   [SetHealth\_(script\_event).html setHealth]
+-   setMoveType
+-   setSmokeVisibility
+-   [SetTalkState\_(script\_event).html setTalkState]
+-   setTalkTarget
+-   setTurnRate
+-   shrivel
+-   slideTo
+-   stopMove
+-   stopRagdoll
+-   [StopThinking\_(script\_event).html stopThinking]
+-   testAnimAttack
+-   testAnimMove
+-   testAnimMoveTowardEnemy
+-   testChargeAttack
+-   testMeleeAttack
+-   testMoveToPosition
+-   travelDistanceBetweenEntities
+-   travelDistanceBetweenPoints
+-   travelDistanceToEntity
+-   travelDistanceToPoint
+-   turnTo
+-   turnToEntity
+-   turnToPos
+-   waitAction
+-   waitMove
+-   wakeOnFlashlight
+-   wander
+
+### idAI\_Vagary Events
+
+Events declared in the [Spawn\_class.html spawn class] idAI\_Vagary
+
+-   vagary\_ChooseObjectToThrow
+-   vagary\_ThrowObjectAtEnemy
+
+idAnimated Events
+-----------------
+
+Events declared in the [Spawn\_class.html spawn class] idAnimated
+
+-   [LaunchMissiles\_(script\_event).html launchMissiles]
+-   [LeftFoot\_(script\_event).html leftFoot]
+-   [RightFoot\_(script\_event).html rightFoot]
+-   [StartRagdoll\_(script\_event).html startRagdoll]
+
+idAnimatedEntity Events
+-----------------------
+
+Events declared in the [Spawn\_class.html spawn class] idAnimatedEntity
+
+-   [ClearAllJoints\_(script\_event).html clearAllJoints]
+-   [ClearJoint\_(script\_event).html clearJoint]
+-   [GetJointAngle\_(script\_event).html getJointAngle]
+-   [GetJointHandle\_(script\_event).html getJointHandle]
+-   [GetJointPos\_(script\_event).html getJointPos]
+-   [SetJointAngle\_(script\_event).html setJointAngle]
+-   [SetJointPos\_(script\_event).html setJointPos]
+
+idCameraAnim Events
+-------------------
+
+Events declared in the [Spawn\_class.html spawn class] idCameraAnim
+
+-   [Start\_(script\_event).html start]
+-   [Stop\_(script\_event).html stop]
+
+idCombatNode Events
+-------------------
+
+Events declared in the [Spawn\_class.html spawn class] idCombatNode
+
+-   [MarkUsed\_(script\_event).html markUsed]
+
+idDoor Events
+-------------
+
+Events declared in the [Spawn\_class.html spawn class] idDoor
+
+-   [Close\_(script\_event).html close]
+-   [Disable\_(script\_event).html disable]
+-   [Enable\_(script\_event).html enable]
+-   [IsLocked\_(script\_event).html isLocked]
+-   [IsOpen\_(script\_event).html isOpen]
+-   [Lock\_(script\_event).html lock]
+-   [Open\_(script\_event).html open]
+
+idForcefield Events
+-------------------
+
+Events declared in the [Spawn\_class.html spawn class] idForceField
+
+-   [Toggle\_(script\_event).html Toggle]
+
+idLight Events
+--------------
+
+Events declared in the [Spawn\_class.html spawn class] idLight
+
+-   [FadeInLight\_(script\_event).html fadeInLight]
+-   [FadeOutLight\_(script\_event).html fadeOutLight]
+-   [GetLightParm\_(script\_event).html getLightParm]
+-   [Off\_(script\_event).html Off]
+-   [On\_(script\_event).html On]
+-   [SetLightParm\_(script\_event).html setLightParm]
+-   [SetLightParms\_(script\_event).html setLightParms]
+-   [SetRadius\_(script\_event).html setRadius]
+-   [SetRadiusXYZ\_(script\_event).html setRadiusXYZ]
+-   [SetShader\_(script\_event).html setShader]
+
+idMoveable Events
+-----------------
+
+Events declared in the [Spawn\_class.html spawn class] idMoveAble
+
+-   [BecomeNonSolid\_(script\_event).html becomeNonSolid]
+-   [EnableDamage\_(script\_event).html enableDamage]
+-   [IsAtRest\_(script\_event).html isAtRest]
+
+idMover Events
+--------------
+
+Events declared in the [Spawn\_class.html spawn class] idMover
+
+-   [AccelSound\_(script\_event).html accelSound]
+-   [AccelTime\_(script\_event).html accelTime]
+-   [AccelTo\_(script\_event).html accelTo]
+-   [Bob\_(script\_event).html bob]
+-   [ClosePortal\_(script\_event).html closePortal]
+-   [DecelSound\_(script\_event).html decelSound]
+-   [DecelTime\_(script\_event).html decelTime]
+-   [DecelTo\_(script\_event).html decelTo]
+-   [DisableSplineAngles\_(script\_event).html disableSplineAngles]
+-   [EnableSplineAngles\_(script\_event).html enableSplineAngles]
+-   [IsMoving\_(script\_event).html isMoving]
+-   [IsRotating\_(script\_event).html isRotating]
+-   [Move\_(script\_event).html move]
+-   [MoveSound\_(script\_event).html moveSound]
+-   [MoveTo\_(script\_event).html moveTo]
+-   [MoveToPos\_(script\_event).html moveToPos]
+-   [OpenPortal\_(script\_event).html openPortal]
+-   [RemoveInitialSplineAngles\_(script\_event).html removeInitialSplineAngles]
+-   [Rotate\_(script\_event).html rotate]
+-   [RotateDownTo\_(script\_event).html rotateDownTo]
+-   [RotateOnce\_(script\_event).html rotateOnce]
+-   [RotateTo\_(script\_event).html rotateTo]
+-   [RotateUpTo\_(script\_event).html rotateUpTo]
+-   [Speed\_(script\_event).html speed]
+-   [StartSpline\_(script\_event).html startSpline]
+-   [StopMoving\_(script\_event).html stopMoving]
+-   [StopRotating\_(script\_event).html stopRotating]
+-   [StopSpline\_(script\_event).html stopSpline]
+-   [Sway\_(script\_event).html sway]
+-   [Time\_(script\_event).html time]
+
+idPlayer Events
+---------------
+
+Events declared in the [Spawn\_class.html spawn class] idPlayer
+
+-   [DisableWeapon\_(script\_event).html disableWeapon]
+-   [EnableWeapon\_(script\_event).html enableWeapon]
+-   [GetButtons\_(script\_event).html getButtons]
+-   [GetCurrentWeapon\_(script\_event).html getCurrentWeapon]
+-   [GetMove\_(script\_event).html getMove]
+-   [GetPreviousWeapon\_(script\_event).html getPreviousWeapon]
+-   [GetViewAngles\_(script\_event).html getViewAngles]
+-   [GetWeaponEntity\_(script\_event).html getWeaponEntity]
+-   [InPDA\_(script\_event).html inPDA]
+-   [OpenPDA\_(script\_event).html openPDA]
+-   [SelectWeapon\_(script\_event).html selectWeapon]
+
+idProjectile Events
+-------------------
+
+Events declared in the [Spawn\_class.html spawn class] idProjectile
+
+-   [GetProjectileState\_(script\_event).html getProjectileState]
+
+idWeapon Events
+---------------
+
+Events declared in the [Spawn\_class.html spawn class] idWeapon
+
+-   [AddToClip\_(script\_event).html addToClip]
+-   allowDrop
+-   ammoAvailable
+-   ammoInClip
+-   [AnimDone\_(script\_event).html animDone]
+-   autoReload
+-   [ClipSize\_(script\_event).html clipSize]
+-   createProjectile
+-   [Flashlight\_(script\_event).html flashlight]
+-   [GetBlendFrames\_(script\_event).html getBlendFrames]
+-   getOwner
+-   getWorldModel
+-   isInvisible
+-   <span class="deadlink"> launchProjectiles</span>
+-   melee
+-   netEndReload
+-   netReload
+-   nextWeapon
+-   [PlayAnim\_(script\_event).html playAnim]
+-   [PlayCycle\_(script\_event).html playCycle]
+-   [SetBlendFrames\_(script\_event).html setBlendFrames]
+-   totalAmmoCount
+-   [UseAmmo\_(script\_event).html useAmmo]
+-   weaponHolstered
+-   weaponLowering
+-   [WeaponOutOfAmmo\_(script\_event).html weaponOutOfAmmo]
+-   [WeaponReady\_(script\_event).html weaponReady]
+-   weaponReloading
+-   weaponRising
+-   [WeaponState\_(script\_event).html weaponState]
+
+Utility Functions
+-----------------
+
+These functions can be found in *doom\_util.script*.
+
+-   abs
+-   anglemod180
+-   anglemod360
+-   CalcTimeForRotationAroundEntity
+-   clearSmoke
+-   <span class="deadlink"> crossFadeEnt</span>
+-   delayRemove
+-   delayRemoveThread
+-   DelayTime
+-   <span class="deadlink"> fadeInEnt</span>
+-   <span class="deadlink"> fadeOutEnt</span>
+-   func\_clipmodel
+-   headlook\_off
+-   headlook\_on
+-   interpolateShaderParm
+-   overrideLegs
+-   overrideTorso
+-   RandomDelay
+-   RandomTime
+-   setShaderTime
+-   unpause
+-   waitForButtonPress
+

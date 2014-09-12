@@ -1,0 +1,34 @@
+RadiusDamage (script event)
+===========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+damages entities within a radius defined by the damageDef. inflictor is the entity causing the damage and can be the same as the attacker (in the case // of projectiles, the projectile is the inflictor, while the attacker is the character that fired the projectile). ignore is an entity to not cause damage to. // dmgPower scales the damage (for cases where damage is dependent on time).
+
+Usage
+-----
+
+void radiusDamage( vector origin, entity inflictor, entity attacker, entity ignore, string damageDefName, float dmgPower )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

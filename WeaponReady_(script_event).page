@@ -1,0 +1,40 @@
+WeaponReady (script event)
+==========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Enables the ability of the weapon to fire.
+
+Usage
+-----
+
+*void* weaponReady()
+
+Parameters
+----------
+
+This event does not accept parameters.
+
+Examples
+--------
+
+`  `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` !`<font color="#0000ff">`ammoInClip`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`    `<font color="#0000ff">`weaponOutOfAmmo`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+`  `<font color="#000000">`}`</font>` `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>
+`    `<font color="#0000ff">`weaponReady`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+`  `<font color="#000000">`}`</font>
+
+Notes
+-----
+
+This script event does not return any values.
+
+It can be found in every weapon script in code similar to that depicted in the example.
+
+

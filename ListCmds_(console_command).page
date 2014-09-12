@@ -1,0 +1,26 @@
+ListCmds (console command)
+==========================
+
+Description
+-----------
+
+This command displays a list of [Console.html console] commands followed by a short description of what they do.
+
+Usage
+-----
+
+At the console type...
+
+`listCmds [search string]`
+
+Parameters
+----------
+
+-   [search string] - A search string that narrows the list of console commands displayed to those that partially match the specified string.
+
+Notes
+-----
+
+This console command is very useful when writing an article for the console commands section of the wiki.
+
+

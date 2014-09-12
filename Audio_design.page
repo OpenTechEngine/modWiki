@@ -1,0 +1,63 @@
+Audio design
+============
+
+Audio design is the art of creating audio-content for a game. This field is generally seperated into the following categories:
+
+Sound Design  
+The creation of sound effects such as gun shots and audio-rumbling machinery to be used either as parts of actors and objects or as looping background sounds <span class="plainlinks">[<span style="font-weight: normal; text-decoration: none!important; background: none!important; text-decoration: none"><font color="black">casino</font></span>](http://web.archive.org/web/20120918175150/http://www.casinos-jackpots.net/) for the environment. </span>
+
+<!-- -->
+
+Musical Composition  
+The writing and creation of muscial tracks and scores for a game. This includes menu music, level tracks, sounds for credits, cutscenes etc. Depending <span class="plainlinks">[<span style="font-weight: normal; text-decoration: none!important; background: none!important; text-decoration: none"><font color="black">international portfolio inc</font></span>](http://web.archive.org/web/20120918175150/http://www.firetown.com/blog/2012/01/11/minimize-investment-risk-with-an-international-portfolio-inc/) on the scope of the game the musical design can become very complex. </span>
+
+|-----------------------------------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                                                     
+ Contents                                                                                                                                 
+ --------                                                                                                                                 
+                                                                                                                                          
+ </div>                                                                                                                                   
+ -   [Audio\_design.html\#Audio\_Format <span class="tocnumber">1</span> <span class="toctext">Audio Format</span>]                       
+ -   [Audio\_design.html\#Sound\_Shaders <span class="tocnumber">2</span> <span class="toctext">Sound Shaders</span>]                     
+ -   [Audio\_design.html\#Sound\_Editor <span class="tocnumber">3</span> <span class="toctext">Sound Editor</span>]                       
+ -   [Audio\_design.html\#Sound\_Editing\_Sites <span class="tocnumber">4</span> <span class="toctext">Sound Editing Sites</span>]        
+ -   [Audio\_design.html\#Sound\_Editing\_Software <span class="tocnumber">5</span> <span class="toctext">Sound Editing Software</span>]  |
+
+Audio Format
+------------
+
+All audio files used by the id Tech 4 engine employ either the .[OGG\_(file\_format).html OGG] or the .[WAV\_(file\_format).html WAV] file format. All valid sound files have to be either 1 (mono) or 2 (stereo) channel, 16 bit at 11025, 22050 or 44100 Hz. Any sound made with the intention of being used for surround sound should be in mono. Any sound intended to be used with [Shakes\_(Sound\_shader\_keyword).html shakes] should be a .[WAV\_(file\_format).html WAV] file if using Doom 3 (the game, not the engine). If you are using Quake 4 an .[OGG\_(file\_format).html OGG] is perfectly fine as long as you run shakesGen to create the [ShakeData\_(Sound\_shader\_keyword).html shakeData] first.
+
+Sound Shaders
+-------------
+
+Creating Sounds for the id Tech 4 engine has been refined compared to older games. This is similar to the [Texturing.html Texturing] process which has become more complicated and powerful through the addition of [Material\_(decl).html material shaders]. Something similar was introduced for sound design, the so called [Sound\_(decl).html sound shaders] which are contained within .[SNDSHD\_(file\_format).html SNDSHD] files.
+
+Sound Editor
+------------
+
+Doom 3 includes an editor which allows sounds to be placed in a level, and immediately tested in game. To launch the Sound Editor, type [EditSounds\_(console\_command).html editSounds] in the console. Sound Shaders [SNDSHD\_(file\_format).html SNDSHD] or individual sound files are played by speakers dropped in level by the player. Some parameters of the Sound Shader are editable in the tool, and sounds can be manually triggered. The s\_drawSounds [S\_drawSounds\_(cvar).html s\_drawSounds] command is useful to view speakers already in the level. These can be selected by placing your crosshairs over the speaker and pressing the mouse button.
+
+Sound Editing Sites
+-------------------
+
+-   [vox feminae](http://web.archive.org/web/20120918175150/http://voxfeminae.planetquake.gamespy.com/) A sound website created by Raven's "Hellchick". Includes sound tips, free sound samples and articles by several people in the game indsutry.
+-   [Sound Snap](http://web.archive.org/web/20120918175150/http://www.soundsnap.com/) A phenomenal resource of free to use sound effects.
+-   [Freesound](http://web.archive.org/web/20120918175150/http://www.freesound.org/) A large Creative Commons sample resource.
+-   [Acid Planet](http://web.archive.org/web/20120918175150/http://www.acidplanet.com/) They give away 8 royalty free sound loops every week. They also include info on making your own music with Sony Acid software.
+-   [Sound Dogs](http://web.archive.org/web/20120918175150/http://www.sounddogs.com/) Large sound effects and royalty free music for online purchase. Download samples and pay per channel, per quality, per length and per sample.
+-   [Sound Rangers](http://web.archive.org/web/20120918175150/http://www.soundrangers.com/) A collection of original, broadcast-quality sound effects and royalty-free music, optimized for interactive environments.
+
+Sound Editing Software
+----------------------
+
+Many people pay thousands of dollars for top notch modeling/animation software while just looking for cheap/free audio software. The Sony (formerly Sound Forge) line of audio software is top notch and it all comes in "Home" and "Profesional" versions.
+
+-   [Sony Soundforge](http://web.archive.org/web/20120918175150/http://www.sonymediasoftware.com/products/soundforgefamily.asp) Excellent two track sound editing software. Used for mastering trimming and looping.
+-   [Sony Acid](http://web.archive.org/web/20120918175150/http://www.sonymediasoftware.com/products/acidfamily.asp) Excellent loop based music creation. Obtain free loops from Acid Planet. There's even a free version of Acid for use.
+-   [Sony Vegas](http://web.archive.org/web/20120918175150/http://www.sonymediasoftware.com/products/vegasfamily.asp) Excellent multi-track audio/video editor.
+-   [Audacity](http://web.archive.org/web/20120918175150/http://audacity.sourceforge.net/) The Free, Cross-Platform Sound Editor. Audacity is free, open source software for recording and editing sounds. It is available for Mac OS X, Microsoft Windows, GNU/Linux, and other operating systems.
+-   [Logic Studio](http://web.archive.org/web/20120918175150/http://www.apple.com/logicstudio/) Apple's Logic Studio audio editing suite. Comes with several virtual instruments, and a large sample library.
+-   [Cubase](http://web.archive.org/web/20120918175150/http://www.steinberg.net/) Steinberg's Cubase audio editing application. Professional Quality editing/mastering/tracking
+-   [ProTools](http://web.archive.org/web/20120918175150/http://www.digidesign.com/) The industry standard for audio editing/recording.
+

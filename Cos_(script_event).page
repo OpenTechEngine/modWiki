@@ -1,0 +1,35 @@
+Cos (script event)
+==================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the cosine of the given angle in degrees.
+
+Usage
+-----
+
+*float* cos( *float* **degrees** )
+
+Parameters
+----------
+
+-   [degrees] - The angle to calculate the cosine of.
+
+Examples
+--------
+
+` `
+`cosAng = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`cos`</font><font color="#000000">`(`</font><font color="#0000dd">`90`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event returns the cosine of the given angle.
+
+

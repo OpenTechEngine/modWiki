@@ -1,0 +1,36 @@
+ClearSignalThread (script event)
+================================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Clears the script callback function set for when the given signal is raised on the given entity.
+
+Usage
+-----
+
+*void* clearSignalThread( *float* **signalNum**, *entity* **ent** )
+
+Parameters
+----------
+
+-   [signalNum] - The signal to clear.
+-   [ent] - The entity to clear these signals from.
+
+Examples
+--------
+
+` `
+<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`clearSignalThread`</font><font color="#000000">`(`</font><font color="#0000dd">`1`</font>`, door2a`<font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+

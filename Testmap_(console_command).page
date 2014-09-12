@@ -1,0 +1,28 @@
+Testmap (console command)
+=========================
+
+Description
+-----------
+
+This command compiles a level so it can be played and automatically loads it.
+
+Usage
+-----
+
+At the console type...
+
+`testmap [Filename]`
+
+Parameters
+----------
+
+-   [Filename] - Name of .[MAP\_(file\_format).html MAP] file (without the extension). If your map is in a subfolder of the /[Maps\_(folder).html maps] directory you will need to include the relative path to it, for instance:
+
+`testmap <subfolder>/<mapname>`
+
+Notes
+-----
+
+See the [Dmap\_(console\_command).html dmap] console command for more information on map compilation. Testmap automatically tries to load .[AAS\_(file\_format).html AAS] files so you may see the error "WARNING: Couldn't load AAS file".
+
+

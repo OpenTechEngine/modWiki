@@ -1,0 +1,86 @@
+Console arcadegame (entity)
+===========================
+
+> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+
+Description
+-----------
+
+Geometry or a model for applying a GUI
+
+Spawn Arguments
+---------------
+
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+
+| KEY                    | DESCRIPTION                                                                                                       |
+|------------------------|-------------------------------------------------------------------------------------------------------------------|
+| ai\_can\_use           | Description not available.                                                                                        |
+| ai\_max\_uses          | Description not available.                                                                                        |
+| ai\_reuse\_wait        | How many secs to wait before AI can use this console again (5)                                                    |
+| ai\_use\_anim          | The anim mood to set on the AI user of this console. Ex: 'console' would play the anim 'console\_use' ('console') |
+| ai\_use\_once          | Description not available.                                                                                        |
+| ai\_use\_time          | Once the AI starts using this console, it will spend this many secs. at this console(3.0)                         |
+| ai\_use\_trigger\_wait | How many secs to wait before firing this consoles triggers. (2)                                                   |
+| def\_perch             | Description not available.                                                                                        |
+| def\_perchSquawk       | Description not available.                                                                                        |
+| editor\_bool XXXX      | Description not available.                                                                                        |
+| editor\_color          | Description not available.                                                                                        |
+| editor\_def XXXX       | Description not available.                                                                                        |
+| editor\_gui XXXX       | Description not available.                                                                                        |
+| editor\_maxs           | Description not available.                                                                                        |
+| editor\_mins           | Description not available.                                                                                        |
+| editor\_rotatable      | Description not available.                                                                                        |
+| editor\_showangle      | Description not available.                                                                                        |
+| editor\_usage          | Geometry or a model for applying a GUI                                                                            |
+| editor\_usage9         | Description not available.                                                                                        |
+| editor\_var XXXX       | Description not available.                                                                                        |
+| gui                    | Description not available.                                                                                        |
+| gui2                   | Description not available.                                                                                        |
+| health                 | the amount of damage the console can take before becoming damaged (1)                                             |
+| hide                   | Description not available.                                                                                        |
+| inherit                | Description not available.                                                                                        |
+| matter                 | Description not available.                                                                                        |
+| maxs                   | Description not available.                                                                                        |
+| maze1                  | Description not available.                                                                                        |
+| mins                   | Description not available.                                                                                        |
+| model                  | Description not available.                                                                                        |
+| noTalonSquawk          | Description not available.                                                                                        |
+| noTalonTarget          | Description not available.                                                                                        |
+| numMazes               | Description not available.                                                                                        |
+| offset\_perch          | Offset from origin of where talon perches (0 0 32)                                                                |
+| snd\_coin              | Description not available.                                                                                        |
+| snd\_die               | Description not available.                                                                                        |
+| snd\_eatmonster        | Description not available.                                                                                        |
+| snd\_fruit             | Description not available.                                                                                        |
+| snd\_intro             | Description not available.                                                                                        |
+| snd\_leveldone         | Description not available.                                                                                        |
+| snd\_lifeboost         | Description not available.                                                                                        |
+| snd\_pellet            | Description not available.                                                                                        |
+| snd\_powerup           | Description not available.                                                                                        |
+| snd\_poweruploop       | Description not available.                                                                                        |
+| snd\_translate         | Description not available.                                                                                        |
+| snd\_victory           | Description not available.                                                                                        |
+| solid                  | Description not available.                                                                                        |
+| spawnclass             | Description not available.                                                                                        |
+| translate              | Description not available.                                                                                        |
+| victory                | Fires targets when this level is achieved (2)                                                                     |
+
+Inheritance
+-----------
+
+This entity is derived from the following:
+
+-   '' hhConsole''
+    -   [Func\_console\_(entity).html func\_console]
+        -   *' console\_arcadegame*'
+
+**Note**: Entries marked in italics are classes defined in the SDK.
+
+Notes
+-----
+
+Notes not available.
+

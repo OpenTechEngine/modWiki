@@ -1,0 +1,26 @@
+ForceOverlays (Material global keyword)
+=======================================
+
+Description
+-----------
+
+Forces blood and gun decals to be drawn on this material.
+
+Usage
+-----
+
+In the global section of your material shader type...
+
+`forceOverlays`
+
+Parameters
+----------
+
+None.
+
+Notes
+-----
+
+Opaque textures enable decals by default. This only useful for transparent textures because these have decals disabled. (Blood and gun decals don't look that good on most transparent textures, eg. grates.)
+
+

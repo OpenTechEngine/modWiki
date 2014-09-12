@@ -1,0 +1,35 @@
+SetTalkState (script event)
+===========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Sets whether the player can talk to this character or not. The 'idleAnim' is used when switching to TALK\_OK, it will be the animation to play when not talking. If none is given the anim specified in the "anim" key/value will be used.
+
+Usage
+-----
+
+*void* setTalkState( "float" "talkState")
+
+Parameters
+----------
+
+-   none
+
+Examples
+--------
+
+` `
+`none`
+
+Notes
+-----
+
+This script event does not return any values.
+
+

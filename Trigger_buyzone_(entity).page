@@ -1,0 +1,87 @@
+Trigger buyzone (entity)
+========================
+
+> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+
+Description
+-----------
+
+Buy Zone for SquirrelQuake MP mode
+
+Spawn Arguments
+---------------
+
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+
+| KEY                   | DESCRIPTION                                         |
+|-----------------------|-----------------------------------------------------|
+| angle                 | Description not available.                          |
+| anim                  | Description not available.                          |
+| anyTouch              | Description not available.                          |
+| bind                  | Description not available.                          |
+| bindOrientated        | Description not available.                          |
+| bindToBody            | Description not available.                          |
+| bindToJoint           | Description not available.                          |
+| bindanim              | Description not available.                          |
+| buyZone               | Must add this key! 1 = Marine, 2 = Strogg, 3 = Both |
+| cameraTarget          | Description not available.                          |
+| cinematic             | Description not available.                          |
+| classname             | Description not available.                          |
+| clipmodel             | Description not available.                          |
+| cone                  | Description not available.                          |
+| cylinder              | Description not available.                          |
+| def\_persona          | Description not available.                          |
+| delay                 | Description not available.                          |
+| dodecahedron          | Description not available.                          |
+| editor\_color         | Description not available.                          |
+| editor\_material      | Description not available.                          |
+| editor\_maxs          | Description not available.                          |
+| editor\_mins          | Description not available.                          |
+| editor\_usage         | Buy Zone for SquirrelQuake MP mode                  |
+| editor\_var XXXX      | Description not available.                          |
+| guiTarget             | Description not available.                          |
+| health                | Description not available.                          |
+| hide                  | Description not available.                          |
+| hidesurface           | Description not available.                          |
+| instance              | Description not available.                          |
+| maxs                  | Description not available.                          |
+| mins                  | Description not available.                          |
+| model                 | Description not available.                          |
+| name                  | Description not available.                          |
+| networkSync           | Description not available.                          |
+| neverDormant          | Description not available.                          |
+| noClient              | Description not available.                          |
+| noTouch               | Description not available.                          |
+| noclipmodel           | Description not available.                          |
+| origin                | Description not available.                          |
+| random                | Description not available.                          |
+| rotation              | Description not available.                          |
+| scriptobject          | Description not available.                          |
+| shadow\_lod\_distance | Description not available.                          |
+| size                  | Description not available.                          |
+| solidForTeam          | Description not available.                          |
+| spawnclass            | Description not available.                          |
+| target                | Description not available.                          |
+| trigger\_anim         | Description not available.                          |
+| usable                | Description not available.                          |
+| wait                  | Description not available.                          |
+
+Inheritance
+-----------
+
+This entity is derived from the following:
+
+-   '' idEntity''
+    -   '' idTrigger''
+        -   '' idTrigger\_Multi''
+            -   *' trigger\_buyzone*'
+
+**Note**: Entries marked in italics are classes defined in the SDK.
+
+Notes
+-----
+
+Notes not available.
+

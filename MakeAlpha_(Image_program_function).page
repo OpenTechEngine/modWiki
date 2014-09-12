@@ -1,0 +1,35 @@
+MakeAlpha (Image program function)
+==================================
+
+Description
+-----------
+
+This function will set the alpha channel of the specified image to an average of the red, green, and blue channels. The color channels will be set to white.
+
+Usage
+-----
+
+`makeAlpha ([map])`
+
+Parameters
+----------
+
+-   [map] - The image to be altered.
+
+Example
+-------
+
+Convert the rgb image into an alpha channel...
+
+`textures/converted_alpha`
+`{       `
+`   blend gl_zero, gl_one_minus_src_alpha`
+`   map   makeAlpha(textures/decals/plasma_burn.tga)`
+`{`
+
+Notes
+-----
+
+None.
+
+

@@ -1,0 +1,23 @@
+Model (GUI item property)
+=========================
+
+The model to the 3D object to be rendered. This must be an object using the [LWO\_(file\_format).html LWO file format].
+
+This property is restricted to the [RenderDef\_(GUI\_item\_type).html renderDef] item type.
+
+Syntax
+------
+
+`model `*`object`*
+
+Default value
+-------------
+
+`""`
+
+Example(s)
+----------
+
+`model "models/wipes/planet2.lwo"`
+
+

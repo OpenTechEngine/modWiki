@@ -1,0 +1,32 @@
+LWO (file format)
+=================
+
+Overview
+--------
+
+LWO: LightWave Object file format is a propriatary binary file format and is the standard export format used with [LightWave 3D](http://web.archive.org/web/20121001071555/http://www.newtek.com/) and [Modo](http://web.archive.org/web/20121001071555/http://www.luxology.com/modo/). Support in other applications is dependant on import/export scripts or plugins. LWO files cannot be editied outside of a 3D application that supports the format, i.e. they cannot be edited in Notepad or similar.
+
+The id Tech 4 engine uses the LWO format for static meshes.
+
+More information on the LWO format can be found in the [LightWave SDK](http://web.archive.org/web/20121001071555/http://www.newtek.com/products/lightwave/developer/LW80/index.html).
+
+Export
+------
+
+-   [iddevnet model export page](http://web.archive.org/web/20121001071555/http://www.iddevnet.com/doom3/modelexport.php)
+
+Notes
+-----
+
+A LWO to MD5 conversion utitlity can be obtained at [www.doom3world.org](http://web.archive.org/web/20121001071555/http://www.doom3world.org/phpbb2/viewtopic.php?t=4595).
+
+An MD5camera export script can be downloaded from [www.pcgamemods.com](http://web.archive.org/web/20121001071555/http://www.pcgamemods.com/8120/)
+
+-   Subpatch a.k.a. subdivision surfaces are not supported.
+-   Surface properties are not parsed by Doom 3.
+-   Models must be composed entirely of triangles.
+-   All mesh data must be on a single layer.
+-   Each mesh must have exactly one UV map. Doom 3 will not crash if you have more, but textures will behave in unexpected ways, mixing UV maps, using the wrong UV map, etc.
+-   Smoothing angle is not supported. In game, smoothing occurs across welded triangles. Seams must be created manually by unwelding vertices.
+-   The surface name of each surface in LightWave 3D must match the name of the corresponding material shader in Doom 3.
+

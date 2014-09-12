@@ -1,0 +1,34 @@
+AccelTime (script event)
+========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+accelTime specifies the duration an object takes to accelerate up to its specified speed.
+
+Usage
+-----
+
+*void* accelTime( *float* **time** )
+
+Parameters
+----------
+
+-   [time] - Duration of the acceleration in seconds.
+
+Examples
+--------
+
+<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`accelTime`</font><font color="#000000">`(`</font><font color="#0000dd">`3`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values. In the example above it will cause the entity to take 3 seconds to accelerate up to its maximum speed for its particular movement. An entity's accelTime should not be higher than the entity's time. Logically, you can't take 4 seconds to accelerate, when the time for an object is only 2 seconds long.
+
+

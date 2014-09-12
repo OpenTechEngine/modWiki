@@ -1,0 +1,41 @@
+AppendTarget (script event)
+===========================
+
+<div style="padding: 1px; border: 0px solid #000000" align="left">
+<font size="18px"><font color="black">![Image:Q4square\_bg.png](images_6_69_Q4square_bg.png "fig:Image:Q4square_bg.png") The information on this page is specific to [Quake\_4.html Quake 4].</font></font>
+
+</div>
+
+------------------------------------------------------------------------
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Used to add to an entity's list of targets.
+
+Usage
+-----
+
+*float* appendTarget( *entity* **target** )
+
+Parameters
+----------
+
+-   [target] - Entity to be targetted.
+
+Examples
+--------
+
+<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`appendTarget`</font><font color="#000000">`(`</font>` `<font color="#000055">`$my_entity2`</font>` `<font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+Not available.
+
+

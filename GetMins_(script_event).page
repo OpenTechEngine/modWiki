@@ -1,0 +1,35 @@
+GetMins (script event)
+======================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Gets the minimum corner of this entity's bounding box.
+
+Usage
+-----
+
+*vector* getMins()
+
+Parameters
+----------
+
+This script event does not accept parameters.
+
+Examples
+--------
+
+` `
+`minBB = `<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`getMins`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event returns the minimum corner of this entity's bounding box as a vector.
+
+

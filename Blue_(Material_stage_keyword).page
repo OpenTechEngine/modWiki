@@ -1,0 +1,34 @@
+Blue (Material stage keyword)
+=============================
+
+Description
+-----------
+
+The **blue** keyword multiples the blue channel of the associated map by the given value.
+
+Usage
+-----
+
+`blue <blueval>`
+
+Parameters
+----------
+
+-   *blueval* - the value by which the blue channel of the image map should be multiplied
+
+Example
+-------
+
+The following stage reduces the intensity of the blue channel by half.
+
+`{`
+`   map path/to/image.tga`
+`   blue 0.5`
+`}`
+
+Notes
+-----
+
+Not Available.
+
+

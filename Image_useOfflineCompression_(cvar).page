@@ -1,0 +1,54 @@
+Image useOfflineCompression (cvar)
+==================================
+
+Description
+-----------
+
+Enables writing a batch file for offline compression of .[DDS\_(file\_format).html DDS] and .[OGG\_(file\_format).html OGG] files.
+
+Usage
+-----
+
+At the console type...
+
+`image_useOfflineCompression [Boolean]`
+
+Parameters
+----------
+
+-   [Boolean]
+    -   0 - Doesn't write the batch file.
+    -   1 - Allows writing the batch file.
+
+Flags
+-----
+
+| Flag              | Enabled | Description                                  |
+|-------------------|---------|----------------------------------------------|
+| CVAR\_ALL         |         | all flags                                    |
+| CVAR\_BOOL        | X       | variable is a boolean                        |
+| CVAR\_INTEGER     |         | variable is an integer                       |
+| CVAR\_FLOAT       |         | variable is a float                          |
+| CVAR\_SYSTEM      |         | system variable                              |
+| CVAR\_RENDERER    | X       | renderer variable                            |
+| CVAR\_SOUND       |         | sound variable                               |
+| CVAR\_GUI         |         | gui variable                                 |
+| CVAR\_GAME        |         | game variable                                |
+| CVAR\_TOOL        |         | tool variable                                |
+| CVAR\_USERINFO    |         | sent to servers, available to menu           |
+| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
+| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
+| CVAR\_STATIC      | X       | statically declared, not user created        |
+| CVAR\_CHEAT       | X       | variable is considered a cheat               |
+| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
+| CVAR\_INIT        |         | can only be set from the command-line        |
+| CVAR\_ROM         |         | display only, cannot be set by user at all   |
+| CVAR\_ARCHIVE     |         | set to cause it to be saved to a config file |
+| CVAR\_MODIFIED    | X       | set when the variable is modified            |
+
+Notes
+-----
+
+This CVar by itself is not very useful and has to be used with the [Com\_makingBuild\_(cvar).html com\_makingBuild] CVar and the startbuild and [Map\_(console\_command).html map] console commands. See the [Modding.html modding] page for a wholesome use of this CVar.
+
+

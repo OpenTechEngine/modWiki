@@ -1,0 +1,32 @@
+OpenPDA (script event)
+======================
+
+Description
+-----------
+
+Shows or hides the player's PDA.
+
+Usage
+-----
+
+In your script type...
+
+*`void`*` openPDA( )`
+
+Parameters
+----------
+
+None, the script event toggles automatically.
+
+Examples
+--------
+
+<font color="#0000ff">`if`</font><font color="#000000">`(`</font>` ! `<font color="#000055">`$player1`</font>`.`<font color="#ff0000">`inPDA`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>
+`    `<font color="#000055">`$player1`</font>`.`<font color="#ff0000">`openPDA`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event will only work when playing in single player mode.
+
+

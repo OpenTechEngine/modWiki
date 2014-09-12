@@ -1,0 +1,38 @@
+BindDef (GUI item type)
+=======================
+
+<div class="thumb tright">
+<div style="width: 182px">
+![A bindDef from Doom3](images_thumb_9_95_Gui_example_binddef.png_180px-Gui_example_binddef.png "A bindDef from Doom3")
+
+<div class="thumbcaption">
+<div class="magnify" style="float: right">
+![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
+
+</div>
+A bindDef from Doom3
+
+</div>
+</div>
+</div>
+Used to create bindings to keys -- think of it as an [EditDef\_(GUI\_item\_type).html editDef] that only takes one key as input and that automatically binds that key to some command; the GUI system itself performs the input detection and command assigment handling.
+
+This is, of course, used on GUIs that allow the user to change its keyboard bindings, like the control config menus on Doom 3.
+
+Additional properties
+---------------------
+
+-   [Bind\_(GUI\_item\_property).html bind]
+
+Example(s)
+----------
+
+`bindDef CM1Primary {`
+`   rect        121, 1, 195, 14`
+`   bind        "_forward"`
+`   font        "fonts/bank"`
+`   textscale   0.25`
+`   textaligny  -6`
+`   forecolor   0.6, 0.8, 0.8, 1`
+`}`
+

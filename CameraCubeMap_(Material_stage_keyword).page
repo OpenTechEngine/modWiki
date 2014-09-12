@@ -1,0 +1,36 @@
+CameraCubeMap (Material stage keyword)
+======================================
+
+Description
+-----------
+
+The **cameraCubeMap** keyword is used instead of a **map** keyword to specify that the associated stage should render a [Cube\_maps.html cube map] rather than an ordinary image. Typically a cube map stage would be blended into a material to present the appearance of environmental reflection.
+
+Usage
+-----
+
+`cubeMap env/name_without_prefix`
+
+Parameters
+----------
+
+The path to the cube map images should be given, including the name up to but not including the directional suffixes (\_forward, \_back, \_left, ect...)
+
+Example
+-------
+
+The following stage blends the env/cloudy environment map onto a material...
+
+`{`
+`   blend           gl_dst_alpha , gl_one`
+`   cameraCubeMap   env/cloudy  `
+`   texgen          reflect`
+`   rgb             .6`
+`}`
+
+Notes
+-----
+
+This keyword expects the six environment map images to use the filename suffixes \_forward, \_back, \_left, \_right, \_up, and \_down.
+
+

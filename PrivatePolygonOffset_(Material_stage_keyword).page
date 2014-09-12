@@ -1,0 +1,29 @@
+PrivatePolygonOffset (Material stage keyword)
+=============================================
+
+Description
+-----------
+
+The **privatePolygonOffset** keyword is used to combat z-fighting by rendering this stage at the specified offset.
+
+Usage
+-----
+
+`privatePolygonOffset [offset]`
+
+Parameters
+----------
+
+-   [offset] - a floating point value that defines the distance to offset this stage.
+
+Example
+-------
+
+Not available.
+
+Notes
+-----
+
+Not available.
+
+

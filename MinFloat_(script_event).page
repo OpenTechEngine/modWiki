@@ -1,0 +1,42 @@
+MinFloat (script event)
+=======================
+
+<div style="padding: 1px; border: 0px solid #000000" align="left">
+<font size="18px"><font color="black">![Image:Q4square\_bg.png](images_6_69_Q4square_bg.png "fig:Image:Q4square_bg.png") The information on this page is specific to [Quake\_4.html Quake 4].</font></font>
+
+</div>
+
+------------------------------------------------------------------------
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Compares two numbers and returns the lower one.
+
+Usage
+-----
+
+*float* minFloat( *float* **val1**, *float* **val2** )
+
+Parameters
+----------
+
+-   [val1] - First value.
+-   [val2] - Second value.
+
+Examples
+--------
+
+<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`minFloat`</font><font color="#000000">`(`</font>` my_float, `<font color="#0000dd">`10`</font>` `<font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+Returns the lower value of the two.
+
+

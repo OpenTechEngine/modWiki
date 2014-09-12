@@ -1,0 +1,37 @@
+RandomTarget (script event)
+===========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns a random targeted entity.
+
+Usage
+-----
+
+*entity* randomTarget( *string* ignoreName )
+
+Parameters
+----------
+
+-   [ignoreName] - The name of an entity to ignore.
+
+Examples
+--------
+
+` `
+<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`randomTarget`</font><font color="#000000">`(`</font><font color="#666666">`"player"`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event returns a random targeted entity as an entity.
+
+Pass an entity name as ignoreName to skip that entity.
+
+

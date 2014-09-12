@@ -1,0 +1,61 @@
+Fireinfo lightninggun (entity)
+==============================
+
+> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+
+Description
+-----------
+
+Description not available.
+
+Spawn Arguments
+---------------
+
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+
+| KEY              | DESCRIPTION                |
+|------------------|----------------------------|
+| ammoRequired     | Description not available. |
+| ammoType         | Description not available. |
+| beamTime         | Description not available. |
+| beam\_1          | Description not available. |
+| beam\_2          | Description not available. |
+| beam\_3          | Description not available. |
+| beam\_4          | Description not available. |
+| clipSize         | Description not available. |
+| crosshair        | Description not available. |
+| crosshairType    | Description not available. |
+| def\_projectile  | Description not available. |
+| fireRate         | Description not available. |
+| flashColor       | Description not available. |
+| flashSize        | Description not available. |
+| joint\_barrel    | Description not available. |
+| lowAmmo          | Description not available. |
+| mtr\_flashShader | Description not available. |
+| muzzlelocation   | Description not available. |
+| numProjectiles   | Description not available. |
+| persist          | Description not available. |
+| spawnclass       | Description not available. |
+| spread           | Description not available. |
+| tracelength      | Description not available. |
+| weapontype       | Description not available. |
+
+Inheritance
+-----------
+
+This entity is derived from the following:
+
+-   '' hhFireController''
+    -   '' hhWeaponFireController''
+        -   '' hhBeamBasedFireController''
+            -   *' fireinfo\_lightninggun*'
+
+**Note**: Entries marked in italics are classes defined in the SDK.
+
+Notes
+-----
+
+Notes not available.
+

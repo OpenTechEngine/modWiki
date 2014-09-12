@@ -1,0 +1,36 @@
+CrossProduct (script event)
+===========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the cross product of the two vectors.
+
+Usage
+-----
+
+*vector* CrossProduct( *vector* **vec1**, *vector* **vec2** )
+
+Parameters
+----------
+
+-   [vec1] - The first of two vectors to multiply.
+-   [vec1] - The second of two vectors to multiply.
+
+Examples
+--------
+
+` `
+`crsVec = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`CrossProduct`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`120`</font>` `<font color="#0000dd">`54`</font>` `<font color="#0000dd">`21`</font>`', '`<font color="#0000dd">`66`</font>` `<font color="#0000dd">`54`</font>` `<font color="#0000dd">`87`</font>`'`<font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+None.
+
+

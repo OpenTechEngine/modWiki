@@ -1,0 +1,53 @@
+Volume velocity (entity)
+========================
+
+> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+
+Description
+-----------
+
+Variable sized velocity zone. Changes velocity of all physics objects who enter.
+
+Spawn Arguments
+---------------
+
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+
+| KEY                  | DESCRIPTION                                                                      |
+|----------------------|----------------------------------------------------------------------------------|
+| allowSpiritWalkTouch | Description not available.                                                       |
+| def\_monsterdamage   | Description not available.                                                       |
+| delay                | Description not available.                                                       |
+| editor\_bool XXXX    | Description not available.                                                       |
+| editor\_color        | Description not available.                                                       |
+| editor\_material     | Description not available.                                                       |
+| editor\_maxs         | Description not available.                                                       |
+| editor\_mins         | Description not available.                                                       |
+| editor\_usage        | Variable sized velocity zone. Changes velocity of all physics objects who enter. |
+| editor\_usage1       | Description not available.                                                       |
+| editor\_var XXXX     | Description not available.                                                       |
+| interpTime           | Time in seconds to interpolate gravity changes                                   |
+| killmonsters         | Description not available.                                                       |
+| random               | Description not available.                                                       |
+| showVector           | Description not available.                                                       |
+| spawnclass           | Description not available.                                                       |
+| velocity             | vector defining the new velocity                                                 |
+| wait                 | Description not available.                                                       |
+
+Inheritance
+-----------
+
+This entity is derived from the following:
+
+-   '' hhVelocityZone''
+    -   *' volume\_velocity*'
+
+**Note**: Entries marked in italics are classes defined in the SDK.
+
+Notes
+-----
+
+Notes not available.
+

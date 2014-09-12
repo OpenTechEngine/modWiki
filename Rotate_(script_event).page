@@ -1,0 +1,34 @@
+Rotate (script event)
+=====================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+This function causes an entity to continuously rotate N degrees in one second.
+
+Usage
+-----
+
+*void* rotate( *vector* **rotateAxis** )
+
+Parameters
+----------
+
+[rotateAxis] - The axis around which the entity will rotate in order Y Z X.
+
+Examples
+--------
+
+<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`rotate`</font><font color="#000000">`(`</font>` '`<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>` `<font color="#0000dd">`90`</font>`' `<font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values. This event differs from [RotateOnce\_(script\_event).html rotateOnce] in that rotate will force an entity to continuing rotating for the duration of the game. The above example will cause the entity to complete a 90 degree rotation on the x-axis in one second then repeat endlessly. The [Time\_(script\_event).html time] function has no effect here except in combination with something like [DecelTime\_(script\_event).html decelTime] when the time value will then define the duration that the entity continues to rotate.
+
+

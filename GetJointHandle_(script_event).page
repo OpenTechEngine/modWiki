@@ -1,0 +1,34 @@
+GetJointHandle (script event)
+=============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Looks up the number of the specified joint. Returns INVALID\_JOINT if the joint is not found.
+
+Usage
+-----
+
+float getJointHandle( string jointname )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

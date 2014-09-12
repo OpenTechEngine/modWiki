@@ -1,0 +1,328 @@
+Modelling
+=========
+
+Modelling, short for 3D modelling, is the creation of three-dimensional objects, so-called (3D) models. This is done by using a modelling suite: a program to create, manipulate and animate these models. These are then exported to different file formats to be used in the id Tech 4 engine where they portray objects and characters.
+
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                                                                         
+ Contents                                                                                                                                                     
+ --------                                                                                                                                                     
+                                                                                                                                                              
+ </div>                                                                                                                                                       
+ -   [Modelling.html\#Model\_Prerequisites <span class="tocnumber">1</span> <span class="toctext">Model Prerequisites</span>]                                 
+ -   [Modelling.html\#Model\_types <span class="tocnumber">2</span> <span class="toctext">Model types</span>]                                                 
+     -   [Modelling.html\#Static\_meshes <span class="tocnumber">2.1</span> <span class="toctext">Static meshes</span>]                                       
+         -   [Modelling.html\#Moveable\_Physics\_Objects <span class="tocnumber">2.1.1</span> <span class="toctext">Moveable Physics Objects</span>]          
+     -   [Modelling.html\#Animated\_meshes <span class="tocnumber">2.2</span> <span class="toctext">Animated meshes</span>]                                   
+         -   [Modelling.html\#Articulated\_Figures <span class="tocnumber">2.2.1</span> <span class="toctext">Articulated Figures</span>]                     
+ -   [Modelling.html\#MD5.2FLWO.2FASE\_Import.2FExport\_Tools <span class="tocnumber">3</span> <span class="toctext">MD5/LWO/ASE Import/Export Tools</span>]  
+     -   [Modelling.html\#3D\_Studio\_Max <span class="tocnumber">3.1</span> <span class="toctext">3D Studio Max</span>]                                      
+     -   [Modelling.html\#Maya <span class="tocnumber">3.2</span> <span class="toctext">Maya</span>]                                                          
+     -   [Modelling.html\#LightWave\_3D <span class="tocnumber">3.3</span> <span class="toctext">LightWave 3D</span>]                                         
+     -   [Modelling.html\#Modo <span class="tocnumber">3.4</span> <span class="toctext">Modo</span>]                                                          
+     -   [Modelling.html\#Blender <span class="tocnumber">3.5</span> <span class="toctext">Blender</span>]                                                    
+     -   [Modelling.html\#XSI <span class="tocnumber">3.6</span> <span class="toctext">XSI</span>]                                                            
+     -   [Modelling.html\#ZBrush <span class="tocnumber">3.7</span> <span class="toctext">ZBrush</span>]                                                      
+     -   [Modelling.html\#trueSpace <span class="tocnumber">3.8</span> <span class="toctext">trueSpace</span>]                                                
+ -   [Modelling.html\#Game\_polycount\_budget <span class="tocnumber">4</span> <span class="toctext">Game polycount budget</span>]                            
+ -   [Modelling.html\#Q4\_Guidelines <span class="tocnumber">5</span> <span class="toctext">Q4 Guidelines</span>]                                             
+ -   [Modelling.html\#See\_also <span class="tocnumber">6</span> <span class="toctext">See also</span>]                                                       |
+
+Model Prerequisites
+-------------------
+
+All models used by the engine must be constructed entirely of triangles. No subdivision surfaces, nurbs, splines, or anything of that sort is supported.
+
+Model types
+-----------
+
+The engine generally differentiates between static and animated meshes. These two types use different file formats and serve different purposes.
+
+### Static meshes
+
+Static meshes are 3D models that are not animated by the use of an internal skeleton. This means that these models do not change their geometry. Even though they are called static they can however still be moved, rotated and scaled by the engine. They are typically used to augment brushwork placed in a map, i.e. details that are traditionally difficult to make with brushwork will often be models. Examples of objects represented in this format are wall and floor panels, crates and pieces of debris.
+
+Static meshes can be used for 'conditionally moveable objects'; that is, objects that do a specific function in game either by being directly triggered with trigger\_*[function]* or indirectly using scripted events controlled from an external file; for instance a lift, falling debris or a door.
+
+The file formats that the id Tech 4 engine loads for static meshes are:
+
+.[ASE\_(file\_format).html ASE]   
+3DS Max ascii text based format
+
+.[LWO\_(file\_format).html LWO]   
+native file format for Newtek's Lightwave
+
+#### Moveable Physics Objects
+
+Moveable physics objects are static meshes with the exception that they can be physically interacted with.
+
+These objects require two models. A visual model and a [CM\_(file\_format).html collision mesh] both of which are assigned to a moveable\_base entity.
+
+To create a collision mesh for a custom moveable
+
+1.  Load your visual model in the level editor as a func\_static.
+2.  Build a hull of brushes around it.
+3.  Texture these brushes with textures/common/collision.
+4.  With all these brushes selected, create a func\_clipmodel.
+5.  Adjust the origin of the func\_clipmodel so that it matches that of your func\_static.
+6.  With the func\_clipmodel selected, click Selection \> Export \> To CM.
+
+**Note:** When you create your moveable\_base entity, it will not need an explicit reference to the clipmodel provided the \*.CM file has the same name and is in the same folder as your visual model.
+
+### Animated meshes
+
+Animated meshes are allowed to deform themselves during the game. Examples of this type are first person weapons and player models. Animated models should be used within where more complex movements and actions are required than is possible to achieve using triggered models (scripted brushwork), but the use of which type will be dependent on what effect is trying to be achieved; for example a door could be a simple .ASE model which is 'bound' to the entity func\_door allowing for a simple 'open' and 'close' action. Or as an MD5 the door could include a 'lock' which activates and plays an animated sequence before opening.
+
+Animated meshes use the [MD5\_(file\_format).html MD5] file formats unique to the id Tech 4 engine. The format is split into:
+
+.[MD5MESH\_(file\_format).html MD5MESH]   
+Low resolution polygonal mesh exported from a 3D application.
+
+.[MD5ANIM\_(file\_format).html MD5ANIM]   
+Contains animation sequence data, the positions of bones etc. during animation.
+
+.[MD5CAMERA\_(file\_format).html MD5CAMERA]   
+Animated cameras for use in cutscenes.
+
+**Note:** Animated meshes must have an "idle" animation defined in the [Modeldef\_(decl).html model declaration] in order to show up properly in the level editor.
+
+#### Articulated Figures
+
+Articulated figures are what is often called ragdolls. They are systems using the bone structure within the MD5 format to simulate physics by using joints and constraints. They are created by using a .MD5MESH file and an articulated figure definition. Further info on this topic can be found in the [Af\_(decl).html AF declaration] article.
+
+MD5/LWO/ASE Import/Export Tools
+-------------------------------
+
+A list of available Modelling Programs can be found below along with the corresponding tools to assist in working with the model formats used by idTech 4 games.
+
+### 3D Studio Max
+
+-   [3D Studio Max](http://web.archive.org/web/20120917050651/http://www.autodesk.com/)
+
+  
+**MD5(anim/camera/mesh)**
+
+-   [3D Studio Max to MD5 Exporter](http://web.archive.org/web/20120917050651/http://www.doom3world.org/phpbb2/viewtopic.php?t=1914) - der\_ton
+-   [3D Studio Max to Md5 Exporter](http://web.archive.org/web/20120917050651/http://www.doom3world.org/phpbb2/viewtopic.php?t=4618) - BeRSeRKeR
+-   [MD5 to 3D Studio Max Importer](http://web.archive.org/web/20120917050651/http://www.doom3world.org/phpbb2/viewtopic.php?t=3229) - der\_ton
+
+<!-- -->
+
+  
+**LWO**
+
+-   Add Links Here
+
+<!-- -->
+
+  
+**ASE**
+
+-   Natively supported.
+
+### Maya
+
+-   [Maya](http://web.archive.org/web/20120917050651/http://www.alias.com/)
+
+  
+**MD5(anim/camera/mesh)**
+
+-   [Exportmodels\_(console\_command).html internal conversion by idTech 4 engine]
+
+<!-- -->
+
+  
+**LWO**
+
+-   Add Links Here
+
+<!-- -->
+
+  
+**ASE**
+
+-   Add Links Here
+
+### LightWave 3D
+
+-   [LightWave 3D](http://web.archive.org/web/20120917050651/http://www.newtek.com/)
+
+  
+**MD5(anim/camera/mesh)**
+
+-   Add Links Here
+-   [<http://www.clintons3d.com/lightwave/lwplug.html>](http://web.archive.org/web/20120917050651/http://www.clintons3d.com/lightwave/lwplug.html)
+-   [Lightwave python scripts](http://web.archive.org/web/20120917050651/http://www.clintons3d.com/plugins/lightwave/index.html)
+
+<!-- -->
+
+  
+**LWO**
+
+-   Natively supported.
+
+<!-- -->
+
+  
+**ASE**
+
+-   Add Links Here
+
+### Modo
+
+-   [Modo](http://web.archive.org/web/20120917050651/http://www.modo3d.com/)
+
+  
+**MD5(anim/camera/mesh)**
+
+-   Add Links Here
+
+<!-- -->
+
+  
+**LWO**
+
+-   Natively supported.
+
+<!-- -->
+
+  
+**ASE**
+
+-   Add Links Here
+-   [Exporter](http://web.archive.org/web/20120917050651/http://www.moddb.com/engines/unreal-engine-3/downloads/modo-ase-exporter-for-unreal-3) (Should export .ase file that works with Doom 3 as well as UE3.)
+
+### Blender
+
+-   [Blender](http://web.archive.org/web/20120917050651/http://www.blender.org/) (Free!)
+
+  
+**MD5(anim/camera/mesh)**
+
+-   [importer](http://web.archive.org/web/20120917050651/http://doom3world.org/phpbb2/viewtopic.php?t=6901) (by der\_ton) (needs both, md5mesh + md5anim files)
+-   [exporter](http://web.archive.org/web/20120917050651/http://doom3world.org/phpbb2/viewtopic.php?t=1711) (by der\_ton)
+
+<div>
+![Image:Etqwsquare\_25.png](images_7_7e_Etqwsquare_25.png "fig:Image:Etqwsquare_25.png") **Note:** Enemy Territory: Quake Wars only:
+
+  
+*In ETQW the md5anim files were compiled to binary animb files and md5anim files were not included in the SDK.*
+
+</div>
+You may however convert the binary animb files from the animb folder (which is inside the generated folder inside the official pk4 game files) to md5anim files with [animb2md5anim](http://web.archive.org/web/20120917050651/http://www.splashdamage.com/forums/showthread.php/31253-Animb2MD5anim-amp-other-tools).
+
+  
+**LWO**
+
+-   Natively supported.
+
+<!-- -->
+
+  
+**ASE**
+
+-   [importer](http://web.archive.org/web/20120917050651/http://doom3world.org/phpbb2/viewtopic.php?t=15404) (by Goofos)
+-   [exporter](http://web.archive.org/web/20120917050651/http://doom3world.org/phpbb2/viewtopic.php?t=9275) (by Goofos)
+
+### XSI
+
+-   [XSI](http://web.archive.org/web/20120917050651/http://www.softimage.com/)
+
+  
+**MD5(anim/camera/mesh)**
+
+-   Add Links Here
+
+<!-- -->
+
+  
+**LWO**
+
+-   Add Links Here
+
+<!-- -->
+
+  
+**ASE**
+
+-   Add Links Here
+
+### ZBrush
+
+-   [ZBrush](http://web.archive.org/web/20120917050651/http://www.pixologic.com/)
+
+  
+**MD5(anim/camera/mesh)**
+
+-   Add Links Here
+
+<!-- -->
+
+  
+**LWO**
+
+-   Add Links Here
+
+<!-- -->
+
+  
+**ASE**
+
+-   Add Links Here
+
+### trueSpace
+
+The trueSpace website is gone, but the software can be downloaded from [Mod DB](http://web.archive.org/web/20120917050651/http://www.moddb.com/downloads/truespace-76).
+
+-   [trueSpace](http://web.archive.org/web/20120917050651/http://www.caligari.com/)
+
+  
+**MD5(anim/camera/mesh)**
+
+-   Add Links Here
+-   [<http://www.clintons3d.com/vr/truespace2doom3_scripts.html>](http://web.archive.org/web/20120917050651/http://www.clintons3d.com/vr/truespace2doom3_scripts.html)
+
+<!-- -->
+
+  
+**LWO**
+
+-   Add Links Here
+
+<!-- -->
+
+  
+**ASE**
+
+-   Add Links Here
+-   [<http://www.clintons3d.com/plugins/truespace/importexport/index.html>](http://web.archive.org/web/20120917050651/http://www.clintons3d.com/plugins/truespace/importexport/index.html)
+
+Game polycount budget
+---------------------
+
+A polycount is the total number of individual polygons a model is made up of. These are usually limited for performance reasons as each triangle adds to the total rendering time for the model. For gaming engines the required count is that of triangled faces (so called tris').
+
+<span align="absbottom">![Q4](images_e_e8_Q4square_25.png "fig:Q4") Q4 Guidelines</span>
+----------------------------------------------------------------------------------------
+
+  
+*The information in this section is specific to [Quake\_4.html Quake 4].*
+
+The following numbers are rough guidelines based on the numbers taken from the Quake 4 models. These numbers had been generated by importing different models and using the modelling software to list the amount of triangles.
+
+-   1st Person Weapon Total: 2000 - 2800
+    -   Both Arms: 1300
+    -   Weapon (Faces not visible deleted): 700 - 1500
+-   3rd Person Player Total: 2500
+    -   Player Body(Without Gun or Head): 1500
+    -   Player Head: 600
+    -   Player Head\_up (high LOD model?): 800
+    -   Player World Weapon: 200-400
+
+ Static models in Quake 4 may be moved/rotated along a path defined by a .playback as a func\_playback.
+
+See also
+--------
+
+-   [Models\_vs\_brushes.html Models vs brushes]
+

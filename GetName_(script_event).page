@@ -1,0 +1,45 @@
+GetName (script event)
+======================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the name of this entity.
+
+Usage
+-----
+
+*string* getName()
+
+Parameters
+----------
+
+This script event does not accept parameters.
+
+Examples
+--------
+
+` `
+<font color="#0000ff">`void`</font>` remix_monster_gravity `<font color="#000000">`(`</font><font color="#0000ff">`entity`</font>` ent_mon_this`<font color="#000000">`)`</font><font color="#000000">`{`</font>
+<font color="#0000ff">`string`</font>` mon_class;`
+<font color="#0000ff">`string`</font>` mon_name_new;`
+` `
+`    mon_name_new=ent_mon_this.`<font color="#ff0000">`getName`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+`    `<font color="#339900">`//more code here`</font>
+`    mon_name_new=`<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`strLeft`</font><font color="#000000">`(`</font>`mon_name_new,mon_name_len-`<font color="#0000dd">`1`</font><font color="#000000">`)`</font>`+`<font color="#666666">`"r"`</font>`;`
+`    `<font color="#339900">`//more code here`</font>
+`    `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`spawn`</font><font color="#000000">`(`</font>`mon_class`<font color="#000000">`)`</font>`;`
+` `
+<font color="#000000">`}`</font>
+
+Notes
+-----
+
+This script returns the value of this entity's name spawn argument as a string.
+
+

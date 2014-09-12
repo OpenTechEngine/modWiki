@@ -1,0 +1,28 @@
+Echo (console command)
+======================
+
+Description
+-----------
+
+Writes a line to the console.
+
+Usage
+-----
+
+At the console type...
+
+`echo [text]`
+
+Parameters
+----------
+
+-   [text] - The text that will be written to the console/echoed in the text-area.
+
+Notes
+-----
+
+Text that require spaces should be enclosed in quotation marks like so...
+
+`echo "^1Hello World!"`
+
+

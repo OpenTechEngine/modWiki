@@ -1,0 +1,34 @@
+GetTicsPerSecond (script event)
+===============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+returns the number of game frames per second. this is not related to renderer frame rate.
+
+Usage
+-----
+
+float getTicsPerSecond( )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

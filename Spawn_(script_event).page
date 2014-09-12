@@ -1,0 +1,34 @@
+Spawn (script event)
+====================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Creates an entity of the specified classname and returns a reference to the entity.
+
+Usage
+-----
+
+entity spawn( string classname )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

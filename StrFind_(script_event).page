@@ -1,0 +1,42 @@
+StrFind (script event)
+======================
+
+<div style="padding: 1px; border: 0px solid #000000" align="left">
+<font size="18px"><font color="black">![Image:Q4square\_bg.png](images_6_69_Q4square_bg.png "fig:Image:Q4square_bg.png") The information on this page is specific to [Quake\_4.html Quake 4].</font></font>
+
+</div>
+
+------------------------------------------------------------------------
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Checks whether a substring exists in a string.
+
+Usage
+-----
+
+*float* strFind( *string* **source**, *string* **sub** )
+
+Parameters
+----------
+
+-   [source] - Original string to perform the search on.
+-   [sub] - Substring to search for.
+
+Examples
+--------
+
+<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`strFind`</font><font color="#000000">`(`</font>` `<font color="#666666">`"The quick brown fox jumps over the lazy dog"`</font>`, `<font color="#666666">`"fox"`</font>` `<font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+Returns 0 if substring is not found, if found returns the position in the original string where the substring starts at.
+
+

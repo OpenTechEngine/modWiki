@@ -1,0 +1,43 @@
+FirstPerson (script event)
+==========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns view control to the player entity.
+
+Usage
+-----
+
+*void* firstPerson()
+
+Parameters
+----------
+
+This script event does not accept parameters.
+
+Examples
+--------
+
+` `
+<font color="#0000ff">`void`</font>` cam_imp_start_`<font color="#0000dd">`1`</font><font color="#000000">`(`</font><font color="#000000">`)`</font><font color="#000000">`{`</font>
+` `
+`    `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`setCamera`</font><font color="#000000">`(`</font><font color="#000055">`$func_cameraview_imp_`<font color="#0000dd">`1`</font></font><font color="#000000">`)`</font>`; `<font color="#339900">`//set view to the camera bound to an imp`</font>
+`    `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`wait`</font><font color="#000000">`(`</font><font color="#0000dd">`4`</font><font color="#000000">`)`</font>`; `<font color="#339900">`//use this view for 4 seconds`</font>
+`    `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`firstPerson`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`; `<font color="#339900">`//return to player's first person view`</font>
+` `
+<font color="#000000">`}`</font>
+
+Notes
+-----
+
+This script event does not return any values.
+
+This is an excellent way to revert to first person view after using an alternate perspective, such as a camera view.
+
+

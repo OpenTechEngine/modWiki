@@ -1,0 +1,66 @@
+Net serverDlTable (cvar)
+========================
+
+<div id="attention" class="boilerplate metadata" style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa">
+**This page is in urgent need of attention because: '' This article is missing the CVar flags.**''
+
+If you disagree with this, please explain why on its talk page.
+
+</div>
+Description
+-----------
+
+A semi-colon delimited list comprised of the relative paths to each custom PK4 for autodownload.
+
+Usage
+-----
+
+At the console type...
+
+`net_serverDlTable [STRING]`
+
+Parameters
+----------
+
+-   [STRING] - A semi-colon delimited list or an asterix "\*" as a wildcard character.
+
+Flags
+-----
+
+| Flag              | Enabled | Description                                  |
+|-------------------|---------|----------------------------------------------|
+| CVAR\_ALL         |         | all flags                                    |
+| CVAR\_BOOL        |         | variable is a boolean                        |
+| CVAR\_INTEGER     |         | variable is an integer                       |
+| CVAR\_FLOAT       |         | variable is a float                          |
+| CVAR\_SYSTEM      |         | system variable                              |
+| CVAR\_RENDERER    |         | renderer variable                            |
+| CVAR\_SOUND       |         | sound variable                               |
+| CVAR\_GUI         |         | gui variable                                 |
+| CVAR\_GAME        |         | game variable                                |
+| CVAR\_TOOL        |         | tool variable                                |
+| CVAR\_USERINFO    |         | sent to servers, available to menu           |
+| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
+| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
+| CVAR\_STATIC      |         | statically declared, not user created        |
+| CVAR\_CHEAT       |         | variable is considered a cheat               |
+| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
+| CVAR\_INIT        |         | can only be set from the command-line        |
+| CVAR\_ROM         |         | display only, cannot be set by user at all   |
+| CVAR\_ARCHIVE     |         | set to cause it to be saved to a config file |
+| CVAR\_MODIFIED    |         | set when the variable is modified            |
+
+Notes
+-----
+
+An example list would look like so ...
+
+`net_serverDlTable "base/map_swd3dm1.pk4;base/map_swd3dm2.pk4"`
+
+You can also use a wildcard character like so...
+
+`net_serverDlTable "*"`
+
+In which case any file not found on the client will be assumed to be available on the file server.
+
+

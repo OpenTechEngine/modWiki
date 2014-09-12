@@ -1,0 +1,38 @@
+Heightmap (Image program function)
+==================================
+
+Description
+-----------
+
+This function will convert a height map into a normal map.
+
+Usage
+-----
+
+`heightmap ([map], [strength])`
+
+Parameters
+----------
+
+-   [map] - The heightmap to convert.
+-   [strength] - The strength or scale of the resulting normal map as a float.
+
+Example
+-------
+
+Convert a height map into a normal map...
+
+`textures/heightmap`
+`{`
+`   {`
+`      blend bumpmap`
+`      map   heightmap(textures/custom/image_1.tga, 10)`
+`   }`
+`}`
+
+Notes
+-----
+
+None.
+
+

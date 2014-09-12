@@ -1,0 +1,34 @@
+Lock (script event)
+===================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Locks or unlocks the vehicle
+
+Usage
+-----
+
+void lock( float locked )
+
+Parameters
+----------
+
+-   Locked: 1 for that the door opens when triggered, 2 for just unlock the door when triggered, and 0 for unlocked
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

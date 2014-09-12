@@ -1,0 +1,43 @@
+IgnoreAlphaTest (Material stage keyword)
+========================================
+
+Description
+-----------
+
+This particular keyword prevents the global effect of the [AlphaTest\_(Material\_stage\_keyword).html alphaTest] stage keyword from being applied to the current stage.
+
+Usage
+-----
+
+`ignoreAlphaTest`
+
+Parameters
+----------
+
+This keyword does not accept parameters.
+
+Example
+-------
+
+`textures/modwiki/exIgnoreAlphaTest {`
+`  DECAL_MACRO`
+`  noshadows`
+`  noselfshadow`
+`  {`
+`    blend diffusemap`
+`    map textures/learning/tst3.tga`
+`    alphaTest 0.5`
+`  }`
+`  {`
+`    blend add`
+`    map textures/decals/blood_drip1`
+`    ignoreAlphaTest`
+`  }`
+`}`
+
+Notes
+-----
+
+To elaborate: [AlphaTest\_(Material\_stage\_keyword).html alphaTest] is a stage specific keyword (i.e. it can only be put in a certain stage, never in the global section) but it has an effect on all stages. So, ignoreAlphaTest disables this effect on the stages where it is specified.
+
+

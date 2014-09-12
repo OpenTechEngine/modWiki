@@ -1,0 +1,42 @@
+MaskAlpha (Material stage keyword)
+==================================
+
+Description
+-----------
+
+The **maskAlpha** keyword causes the alpha channel of this stage to be ignored.
+
+Usage
+-----
+
+`maskAlpha`
+
+Parameters
+----------
+
+This keyword does not accept parameters.
+
+Example
+-------
+
+Using another image as the alpha channel...
+
+`textures/custom/maskedAlpha`
+`{`
+`   {`
+`      maskcolor`
+`      map textures/custom/usethisalpha.tga`
+`   }`
+`   {`
+`      blend blend`
+`      maskalpha`
+`      map textures/custom/dontusethisalpha.tga`
+`   }`
+`}`
+
+Notes
+-----
+
+This keyword is useful in cases where you would like to use the alpha channel from another stage.
+
+

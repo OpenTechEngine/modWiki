@@ -1,0 +1,13 @@
+$null entity (scripting)
+========================
+
+Means null.
+
+0.
+
+Entity references are initialized null, so can be used to compare to see if they have not been set.
+
+Can be used for object type checking as an object reference will be set to null if its entity does not have a script object of that type.
+
+![Image:Etqwsquare\_25.png](images/images_7_7e_Etqwsquare_25.png "fig:Image:Etqwsquare_25.png") **Note:** Enemy Territory: Quake Wars only:
+*(Entity pointers are now equivalent to object pointers. $null is equivalent to $null\_entity.)*

@@ -1,0 +1,42 @@
+Mirror (Material global keyword)
+================================
+
+Description
+-----------
+
+The surface acts as a mirror reflecting the world around it.
+
+Usage
+-----
+
+In the global section of your material shader type...
+
+`mirror`
+
+Parameters
+----------
+
+Not Available.
+
+Notes
+-----
+
+This turns the entire surface into a mirror (see also the [MirrorRenderMap\_(Material\_stage\_keyword).html mirrorRenderMap] stage keyword). Mirrors have certain limitations; the following situations can provoke visual artefacts:
+
+-   They act as portals which mean they cannot be broken by any other surfaces whose materials have the [Areaportal\_(Material\_global\_keyword).html areaportal] global keyword.
+-   Two mirror surfaces which are within line of sight with each other.
+-   Used with the [TwoSided\_(Material\_global\_keyword).html twoSided] global keyword.
+
+<div class="thumb tright">
+<div style="width: 377px">
+![By using visportals to divide a map into areas, one can prevent the space immediately behind a mirror from affecting the mirror.](images_b_b8_Mirror.png "By using visportals to divide a map into areas, one can prevent the space immediately behind a mirror from affecting the mirror.")
+
+<div class="thumbcaption">
+By using visportals to divide a map into areas, one can prevent the space immediately behind a mirror from affecting the mirror.
+
+</div>
+</div>
+</div>
+In the image to the right, two visportals divide the space into three areas. Because of this, the space with the mirror is independant from the area behind it and thus the mirror renders correctly.
+
+

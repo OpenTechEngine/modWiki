@@ -1,0 +1,68 @@
+Com aviDemoHeight (cvar)
+========================
+
+Description
+-----------
+
+Select the height of the .[TGA\_(file\_format).html TGA] frames generated with the [AviDemo\_(console\_command).html aviDemo] command.
+
+Usage
+-----
+
+At the console type...
+
+`com_aviDemoHeight [int]`
+
+Parameters
+----------
+
+-   [int] - A positive value for the amount of vertical pixels.
+
+Flags
+-----
+
+| Flag              | Enabled | Description                                  |
+|-------------------|---------|----------------------------------------------|
+| CVAR\_ALL         |         | all flags                                    |
+| CVAR\_BOOL        |         | variable is a boolean                        |
+| CVAR\_INTEGER     | X       | variable is an integer                       |
+| CVAR\_FLOAT       |         | variable is a float                          |
+| CVAR\_SYSTEM      |         | system variable                              |
+| CVAR\_RENDERER    | X       | renderer variable                            |
+| CVAR\_SOUND       |         | sound variable                               |
+| CVAR\_GUI         |         | gui variable                                 |
+| CVAR\_GAME        |         | game variable                                |
+| CVAR\_TOOL        |         | tool variable                                |
+| CVAR\_USERINFO    |         | sent to servers, available to menu           |
+| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
+| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
+| CVAR\_STATIC      | X       | statically declared, not user created        |
+| CVAR\_CHEAT       |         | variable is considered a cheat               |
+| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
+| CVAR\_INIT        |         | can only be set from the command-line        |
+| CVAR\_ROM         |         | display only, cannot be set by user at all   |
+| CVAR\_ARCHIVE     |         | set to cause it to be saved to a config file |
+| CVAR\_MODIFIED    | X       | set when the variable is modified            |
+
+Notes
+-----
+
+You should have no problem specifying resolutions higher then your desktop/game resolution. Here is a list of common resolutions (width x height) & their uses:
+
+`352 x 240   NTSC Video CD`
+`352 x 288   PAL Video CD`
+`640 x 480   NTSC Analog`
+`720 x 480   NTSC DV Widescreen and Fullscreen`
+`720 x 486   NTSC Standard`
+`720 x 576   PAL DV & Standard Widescreen and Fullscreen`
+`1280 x 720  HD Video`
+`1440 x 1080 HD Video`
+`1920 x 1080 HD`
+
+Related CVars:
+
+-   [Com\_aviDemoSamples\_(cvar).html com\_aviDemoSamples] - You can select the [Antialiasing.html antialiasing] factor of each frame.
+-   [Com\_aviDemoTics\_(cvar).html com\_aviDemoTics] - You can select how many frames per second should be generated.
+-   [Com\_aviDemoWidth\_(cvar).html com\_aviDemoWidth] - You can select the width of each frame.
+
+

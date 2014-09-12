@@ -1,0 +1,35 @@
+GetLinearVelocity (script event)
+================================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Gets the current linear velocity of this entity. The linear velocity of a physics object is a vector that defines the translation of the center of mass in units per second.
+
+Usage
+-----
+
+*vector* getLinearVelocity()
+
+Parameters
+----------
+
+This script event does not accept parameters.
+
+Examples
+--------
+
+` `
+`velocity = `<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`getLinearVelocity`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event returns the linear velocity of this entity as a vector.
+
+

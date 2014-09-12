@@ -1,0 +1,47 @@
+EditDef (GUI item type)
+=======================
+
+<div class="thumb tright">
+<div style="width: 182px">
+![An editDef from Doom3](images_thumb_9_98_Gui_example_editdef.png_180px-Gui_example_editdef.png "An editDef from Doom3")
+
+<div class="thumbcaption">
+<div class="magnify" style="float: right">
+![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
+
+</div>
+An editDef from Doom3
+
+</div>
+</div>
+</div>
+Just like a [WindowDef\_(GUI\_item\_type).html windowDef], but accepts a text input by the user. An editable text field. Can't be used as in-game GUI.
+
+Additional properties
+---------------------
+
+-   [Cursorvar\_(GUI\_item\_property).html cursorvar]
+-   [Cvar\_(GUI\_item\_property).html cvar]
+-   cvarGroup
+-   forceScroll
+-   [LiveUpdate\_(GUI\_item\_property).html liveUpdate]
+-   [Maxchars\_(GUI\_item\_property).html maxchars]
+-   numeric
+-   password
+-   [Readonly\_(GUI\_item\_property).html readonly]
+-   source
+-   [Wrap\_(GUI\_item\_property).html wrap]
+
+Example(s)
+----------
+
+`editDef OG2Primary {`
+`   rect        110, 1, 160, 14`
+`   cvar        "ui_name"`
+`   maxchars    40 `
+`   font        "fonts/bank"`
+`   textscale   0.25`
+`   textaligny  -6`
+`   forecolor   0.6, 0.8, 0.8, 1`
+`}`
+

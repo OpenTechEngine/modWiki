@@ -1,0 +1,35 @@
+CacheSoundShader (script event)
+===============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Ensure the specified sound shader is loaded by the system. Prevents cache hits when playing sound shaders.
+
+Usage
+-----
+
+*void* cacheSoundShader( *string* **shaderName** )
+
+Parameters
+----------
+
+-   [shaderName] - The name of the sound shader to cache.
+
+Examples
+--------
+
+` `
+<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`cacheSoundShader`</font>` `<font color="#000000">`(`</font><font color="#666666">`"broken_plat_2_5s"`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+

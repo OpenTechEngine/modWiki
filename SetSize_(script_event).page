@@ -1,0 +1,36 @@
+SetSize (script event)
+======================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Sets the size of this entity's bounding box.
+
+Usage
+-----
+
+*void* setSize( *vector* **min**, *vector* **max** )
+
+Parameters
+----------
+
+-   [min] - The new coordinates for the minimum corner of this entity's bounding box.
+-   [max] - The new coordinates for the maximum corner of this entity's bounding box.
+
+Examples
+--------
+
+` `
+<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`setSize`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`10`</font>` `<font color="#0000dd">`12`</font>` `<font color="#0000dd">`45`</font>`','`<font color="#0000dd">`51`</font>` `<font color="#0000dd">`84`</font>` `<font color="#0000dd">`62`</font>`'`<font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+

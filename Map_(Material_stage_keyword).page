@@ -1,0 +1,33 @@
+Map (Material stage keyword)
+============================
+
+Description
+-----------
+
+The **map** keyword assigns an image to the current stage.
+
+Usage
+-----
+
+`map [image]`
+
+Parameters
+----------
+
+-   [image] - the image to assign to this stage.
+
+Example
+-------
+
+The following simply assigns an image to a stage...
+
+`{`
+`   map path/to/image.tga`
+`}`
+
+Notes
+-----
+
+Not available.
+
+

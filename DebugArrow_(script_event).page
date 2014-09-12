@@ -1,0 +1,41 @@
+DebugArrow (script event)
+=========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Line drawing for debug visualization.
+
+Usage
+-----
+
+*void* debugArrow( *vector* **color**, *vector* **start**, *vector* **end**, *float* **size**, *float* **lifetime** )
+
+Parameters
+----------
+
+-   [color] - The color to draw the arrow.
+-   [start] - The starting point of the arrow.
+-   [end] - The ending point of the arrow.
+-   [size] - The size of the arrow.
+-   [lifetime] - The duration to display the arrow.
+
+Examples
+--------
+
+` `
+<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`debugArrow`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>` `<font color="#0000dd">`1`</font>`', '`<font color="#0000dd">`68`</font>` `<font color="#0000dd">`84`</font>` `<font color="#0000dd">`58`</font>`', '`<font color="#0000dd">`87`</font>` `<font color="#0000dd">`87`</font>` `<font color="#0000dd">`54`</font>`', `<font color="#0000dd">`4`</font>`, `<font color="#0000dd">`1`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+Lifetime of 0 == 1 frame.
+
+

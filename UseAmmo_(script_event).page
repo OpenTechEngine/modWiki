@@ -1,0 +1,35 @@
+UseAmmo (script event)
+======================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Removes the specified amount of ammo from the player's inventory.
+
+Usage
+-----
+
+*void* useAmmo( *value*' )
+
+Parameters
+----------
+
+-   [value] - The amount of ammo to consume.
+
+Examples
+--------
+
+` `
+<font color="#0000ff">`useAmmo`</font><font color="#000000">`(`</font>` `<font color="#0000dd">`1`</font>` `<font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+

@@ -1,0 +1,38 @@
+GetTime (script event)
+======================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the current time in seconds since the game was initialized.
+
+Usage
+-----
+
+*float* getTime()
+
+Parameters
+----------
+
+This script event does not accept parameters.
+
+Examples
+--------
+
+` `
+<font color="#0000ff">`void`</font>` weapon_pistol::Fire`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`        `<font color="#0000ff">`float`</font>` ammoClip;`
+` `
+`        next_attack = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`getTime`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` + PISTOL_FIRERATE;`
+
+Notes
+-----
+
+This is a system event and must be invoked using the sys object.
+
+

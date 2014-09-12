@@ -1,0 +1,40 @@
+Random (script event)
+=====================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns a random value X where 0 \<= X \< range.
+
+Usage
+-----
+
+float random( float range )
+
+Parameters
+----------
+
+-   [range] - a number value that represents the largest possble value to be returned.
+
+Examples
+--------
+
+This example generates a random number between `min` and `max`
+
+` `
+<font color="#0000ff">`float`</font>` min = `<font color="#0000dd">`10`</font>`;`
+<font color="#0000ff">`float`</font>` max = `<font color="#0000dd">`20`</font>`;`
+` `
+<font color="#0000ff">`float`</font>` rand = min + `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`random`</font><font color="#000000">`(`</font>`max - min`<font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+Returns the same set of random numbers every time the game is run. Just change the seed for a different set of numbers.
+
+

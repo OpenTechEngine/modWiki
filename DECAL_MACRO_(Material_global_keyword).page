@@ -1,0 +1,31 @@
+DECAL MACRO (Material global keyword)
+=====================================
+
+Description
+-----------
+
+This statement is merely a shortcut to make a material suited for decals.
+
+Usage
+-----
+
+In the global section of your material shader type...
+
+`DECAL_MACRO`
+
+Parameters
+----------
+
+None.
+
+Notes
+-----
+
+Because of this statement's nature as a shortcut, it is the same as writing:
+
+`polygonOffset 1`
+`discrete`
+`sort decal`
+`noShadows`
+
+

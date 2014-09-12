@@ -1,0 +1,18 @@
+Activate (GUI command)
+======================
+
+Used to make a GUI trigger any target entities attached to the GUI entity.
+
+Syntax
+------
+
+`activate`
+
+The command has no parameters, set the *target* key on the GUI entity to control the attached entities. It needs to be used with [Set\_(GUI\_command).html set].
+
+Example(s)
+----------
+
+`set "cmd" "activate";`
+
+

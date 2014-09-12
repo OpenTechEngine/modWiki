@@ -1,0 +1,100 @@
+MD5CAMERA (file format)
+=======================
+
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                                                                                   
+ Contents                                                                                                                                                               
+ --------                                                                                                                                                               
+                                                                                                                                                                        
+ </div>                                                                                                                                                                 
+ -   [MD5CAMERA\_(file\_format).html\#Overview <span class="tocnumber">1</span> <span class="toctext">Overview</span>]                                                  
+ -   [MD5CAMERA\_(file\_format).html\#Model\_Format\_Syntax <span class="tocnumber">2</span> <span class="toctext">Model Format Syntax</span>]                          
+     -   [MD5CAMERA\_(file\_format).html\#MD5\_Header <span class="tocnumber">2.1</span> <span class="toctext">MD5 Header</span>]                                       
+     -   [MD5CAMERA\_(file\_format).html\#Filetype\_Specific\_Parameters <span class="tocnumber">2.2</span> <span class="toctext">Filetype Specific Parameters</span>]  
+     -   [MD5CAMERA\_(file\_format).html\#Ordered\_Lists <span class="tocnumber">2.3</span> <span class="toctext">Ordered Lists</span>]                                 
+         -   [MD5CAMERA\_(file\_format).html\#Cuts <span class="tocnumber">2.3.1</span> <span class="toctext">Cuts</span>]                                              
+         -   [MD5CAMERA\_(file\_format).html\#Camera <span class="tocnumber">2.3.2</span> <span class="toctext">Camera</span>]                                          |
+
+Overview
+--------
+
+MD5Camera files are ascii (plain text) files that contain camera path data. This data controls the position, rotation, and field of view for cinematic cameras. They are part of the .[MD5\_(file\_format).html MD5] format system. The other MD5 formats are:
+
+.[MD5MESH\_(file\_format).html MD5MESH]   
+Low resolution polygonal mesh exported from a 3D application.
+
+.[MD5ANIM\_(file\_format).html MD5ANIM]   
+Contains animation sequence data, the positions of bones etc. during animation.
+
+Model Format Syntax
+-------------------
+
+### MD5 Header
+
+All MD5 format files start with the MD5 header, regardless the specific filetype. The header is the first section in the file and is as such...
+
+`MD5Version <integer>`
+`commandline "<string>"`
+
+-   MD5Version - An integer that defines the current MD5 specification version. This should always read 10.
+-   commandline - A string that contains the command line parameters passed to the [Exportmodels\_(console\_command).html exportmodels] console command.
+
+### Filetype Specific Parameters
+
+This section contains filetype specifc parameters. The filetype specific parameters make up the second section in the file.
+
+In the case of MD5Camera the filetype specific parameters are as such...
+
+`numFrames <integer>`
+`frameRate <integer>`
+`numCuts <integer>`
+
+-   numFrames - An integer that defines the total number of frames in the animation.
+-   frameRate - An integer that defines the rate of playback in frames per second.
+-   numCuts - An integer that defines the number of cuts in the animation.
+
+### Ordered Lists
+
+The third section in the file contains ordered lists. These lists contain data relevant to the type declared.
+
+`<string> {`
+`        [element 1]`
+`        [element 2]`
+`        [element 3]`
+`        ... ect ...`
+`}`
+
+First, the type of list is declared (\<string\>). Then the body of the list is contained within curly brackets.
+
+The list is constructed of a series of elements each on a new line. The number of elements varies depending on type.
+
+In the case of MD5Camera there are two ordered lists.
+
+#### Cuts
+
+Each element of the cuts ordered list is structured like so ...
+
+`[frameNumber]`
+
+-   frameNumber - An integer that defines the frame where a cut takes place.
+
+The number of elements is dependant on the number of cuts.
+
+For instance, if there are five cuts, there should be five frame indexes listed.
+
+#### Camera
+
+Each element of the camera ordered list is structured like so ...
+
+`( [X Pos] [Y Pos] [Z Pos] ) ( [Orientation] ) [FOV]`
+
+-   X Pos - a floating point number that defines the position of the camera on the X axis.
+-   Y Pos - a floating point number that defines the position of the camera on the Y axis.
+-   Z Pos - a floating point number that defines the position of the camera on the Z axis.
+-   Orientation - a rotational [quaternion](http://web.archive.org/web/20120330180004/http://www.gamedev.net/reference/articles/article1095.asp) that defines the orientation of the camera. (Only the X, Y, and Z components are stored. W is calculated on the fly.)
+-   FOV - a floating point number that defines the field of view of the camera.
+
+The number of elements is dependant on the number of frames.
+
+If there are five frames total, there should be five camera keyframes listed.
+

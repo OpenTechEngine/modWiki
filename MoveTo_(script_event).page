@@ -1,0 +1,34 @@
+MoveTo (script event)
+=====================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Initiates a translation to the position of an entity. // Uses the current speed/time and acceleration and deceleration settings.
+
+Usage
+-----
+
+void moveTo( entity targetEntity )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` `<font color="#000055">`$entityname`</font>`.`<font color="#ff0000">`moveTo`</font>` `<font color="#000000">`(`</font><font color="#000055">`$entityname`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+tba
+
+

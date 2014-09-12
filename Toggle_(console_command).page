@@ -1,0 +1,26 @@
+Toggle (console command)
+========================
+
+Description
+-----------
+
+This command toggles between all the possible values for the specified CVar.
+
+Usage
+-----
+
+At the console type...
+
+`toggle [CVar]`
+
+Parameters
+----------
+
+-   [CVar] - The CVar to toggle.
+
+Notes
+-----
+
+This console command is useful in conjunction with the [Bind\_(console\_command).html bind] console command. It makes it possible to toggle a CVar on and off with a single key press.
+
+

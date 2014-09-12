@@ -1,0 +1,33 @@
+Alphazeroclamp (Material stage keyword)
+=======================================
+
+Description
+-----------
+
+The **alphazeroclamp** keyword prevents the alpha channel of this stage from tiling by forcing 100% opacity outside normalized UV coordinates.
+
+Usage
+-----
+
+`alphazeroclamp`
+
+Parameters
+----------
+
+This keyword does not accept parameters.
+
+Example
+-------
+
+Not available.
+
+Notes
+-----
+
+The stage specific version of this keyword is used to override the effects of the global keywords...
+
+-   [Alphazeroclamp\_(Material\_global\_keyword).html alphazeroclamp]
+-   [Clamp\_(Material\_global\_keyword).html clamp]
+-   [Zeroclamp\_(Material\_global\_keyword).html zeroclamp]
+
+

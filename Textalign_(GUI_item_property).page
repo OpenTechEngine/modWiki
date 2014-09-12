@@ -1,0 +1,22 @@
+Textalign (GUI item property)
+=============================
+
+Alignment for the item's [Text\_(GUI\_item\_property).html text], when available: 0 is for left alignment, 1 for center alignment, and 2 for right aligment.
+
+The value of this property cannot be changed at runtime.
+
+Syntax
+------
+
+`textalign `*`alignment`*
+
+Default value
+-------------
+
+`0`
+
+Example(s)
+----------
+
+`textalign 1`
+

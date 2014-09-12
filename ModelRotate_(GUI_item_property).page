@@ -1,0 +1,23 @@
+ModelRotate (GUI item property)
+===============================
+
+Rotation of the 3D model inside the item.
+
+This property is restricted to the [RenderDef\_(GUI\_item\_type).html renderDef] item type.
+
+Syntax
+------
+
+`modelRotate `*`x`*`, `*`y`*`, `*`z`*`, `*`?`*
+
+Default value
+-------------
+
+`0, 0, 0, 0`
+
+Example(s)
+----------
+
+`modelRotate    0, time * 0.001, 0, 0`
+
+

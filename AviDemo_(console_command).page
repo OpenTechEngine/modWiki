@@ -1,0 +1,33 @@
+AviDemo (console command)
+=========================
+
+Description
+-----------
+
+This command will play a .[DEMO\_(file\_format).html DEMO] and output the frames as a .[TGA\_(file\_format).html TGA] images.
+
+Usage
+-----
+
+At the console type...
+
+`aviDemo [Filename]`
+
+Parameters
+----------
+
+-   [Filename] - Name of .DEMO file (without the extension).
+
+Notes
+-----
+
+This command will generate a lot of .[TGA\_(file\_format).html TGA] files, be sure to free up disk space before running it. Related CVars:
+
+-   [Com\_aviDemoHeight\_(cvar).html com\_aviDemoHeight] - You can select the height of each frame.
+-   [Com\_aviDemoSamples\_(cvar).html com\_aviDemoSamples] - You can select the [Antialiasing.html antialiasing] factor of each frame.
+-   [Com\_aviDemoTics\_(cvar).html com\_aviDemoTics] - You can select how many frames per second should be generated.
+-   [Com\_aviDemoWidth\_(cvar).html com\_aviDemoWidth] - You can select the width of each frame.
+
+Tutorial on creating Avi demos: [Recording Avi Demos](http://web.archive.org/web/20120126050326/http://doom.freakygaming.com/tutorials/record_avi_videos_in_doom_3.html)
+
+

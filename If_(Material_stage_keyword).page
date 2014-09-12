@@ -1,0 +1,44 @@
+If (Material stage keyword)
+===========================
+
+Description
+-----------
+
+The **if** keyword causes an entire stage to be ignored if the provided condition evaluates to false.
+
+Usage
+-----
+
+`if ([cond])`
+
+Parameters
+----------
+
+[cond] = a boolean expression that evaluates to true or false.
+
+Example
+-------
+
+Render one stage or the other depending on the value of a shaderparm...
+
+`{`
+`   if ( parm7 == 0 ) `
+`   blend   add`
+`   map     textures/object/modconsole6driveyel_add.tga`
+`   rgb     (.3 * sintable [.2 + time ]) +.2`
+`}`
+`{`
+`   if ( parm7 == 1 )`
+`   blend   add`
+`   map     textures/object/modconsole6drivegrn_add.tga`
+`   rgb     5`
+`}`
+
+Notes
+-----
+
+The uses of conditional statments are endless. Some examples would be textures that react to events or cycle through a series of frames.
+
+The variables which can be referenced, including shaderparms, are defined in doom\_defs.script
+
+

@@ -1,0 +1,35 @@
+BindPosition (script event)
+===========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Fixes this entity's position (but not orientation) relative to another entity, such that when the master entity moves, so does this entity.
+
+Usage
+-----
+
+*void* bindPosition( *entity* **master** )
+
+Parameters
+----------
+
+-   [master] - The entity that this entity should be bound to.
+
+Examples
+--------
+
+` `
+<font color="#000055">`$childEntity`</font>`.`<font color="#ff0000">`bindPosition`</font><font color="#000000">`(`</font><font color="#000055">`$parentEntity`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+

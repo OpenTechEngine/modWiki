@@ -1,0 +1,27 @@
+Touch (console command)
+=======================
+
+Description
+-----------
+
+This command will verify the specified declaration exists and/or is loaded.
+
+Usage
+-----
+
+At the console type...
+
+`touch [type] [name]`
+
+Parameters
+----------
+
+-   [type] - the type of declaration to search for.
+-   [name] - the name of the declaration.
+
+Notes
+-----
+
+This command will only return results if the specified declaration cannot be found in memory.
+
+

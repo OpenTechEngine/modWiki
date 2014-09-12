@@ -1,0 +1,34 @@
+SetSpawnArg (script event)
+==========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Sets a key/value pair to be used when a new entity is spawned.
+
+Usage
+-----
+
+void setSpawnArg( string key, string value )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

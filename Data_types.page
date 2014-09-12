@@ -1,0 +1,101 @@
+Data types
+==========
+
+|------------------------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                                          
+ Contents                                                                                                                      
+ --------                                                                                                                      
+                                                                                                                               
+ </div>                                                                                                                        
+ -   [Data\_types.html\#Overview <span class="tocnumber">1</span> <span class="toctext">Overview</span>]                       
+ -   [Data\_types.html\#Common\_types <span class="tocnumber">2</span> <span class="toctext">Common types</span>]              
+     -   [Data\_types.html\#float <span class="tocnumber">2.1</span> <span class="toctext">float</span>]                       
+     -   [Data\_types.html\#vector <span class="tocnumber">2.2</span> <span class="toctext">vector</span>]                     
+     -   [Data\_types.html\#entity <span class="tocnumber">2.3</span> <span class="toctext">entity</span>]                     
+     -   [Data\_types.html\#string <span class="tocnumber">2.4</span> <span class="toctext">string</span>]                     
+     -   [Data\_types.html\#boolean <span class="tocnumber">2.5</span> <span class="toctext">boolean</span>]                   
+     -   [Data\_types.html\#void <span class="tocnumber">2.6</span> <span class="toctext">void</span>]                         
+ -   [Data\_types.html\#Special\_types <span class="tocnumber">3</span> <span class="toctext">Special types</span>]            
+     -   [Data\_types.html\#object <span class="tocnumber">3.1</span> <span class="toctext">object</span>]                     
+     -   [Data\_types.html\#.5Bobject\_type.5D <span class="tocnumber">3.2</span> <span class="toctext">[object type]</span>]  |
+
+Overview
+--------
+
+A data type specifies what type of data a variable can hold and must always be present at a variable's declaration.
+
+The script parser uses this to speed up certain operations or complain about impossible operations.
+
+For an introduction on declaring and using variables, see [Scripting\_basics.html\#Variables Variables].
+
+Common types
+------------
+
+### float
+
+A float type variable can contain any number whether it's an [integer](http://web.archive.org/web/20120418101203/http://en.wikipedia.org/wiki/Integer) or a [real number](http://web.archive.org/web/20120418101203/http://en.wikipedia.org/wiki/Real_number).
+
+<font color="#0000ff">`float`</font>` my_var = `<font color="#0000dd">`23`</font>`;`
+<font color="#0000ff">`float`</font>` my_second_var = `<font color="#0000dd">`0`</font>`.`<font color="#0000dd">`5`</font>`;`
+
+### vector
+
+A vector type contains three float values, representing a vector. The engine uses this type to store map locations (vector from world origin to position), directions or angles.
+
+When used in a normal assignment, the floats are in the order of 'X Y Z' indicating 3D space coordinates. To access one vector's axis component, append \_x, \_y, or \_z to the variable's name. It should also be possible to use a vector's projection on 1 axis by using the same syntax.
+
+<font color="#0000ff">`vector`</font>` tempvector = '-`<font color="#0000dd">`128`</font>` -`<font color="#0000dd">`128`</font>` `<font color="#0000dd">`0`</font>`';`
+` `
+<font color="#339900">`// Changing the x axis value`</font>
+`tempvector_x = `<font color="#0000dd">`10`</font>`;`
+` `
+<font color="#339900">`// Assigning a projected vector to another vector`</font>
+<font color="#0000ff">`vector`</font>` xcomp = tempvector_x;    `<font color="#339900">`// xcomp = '10 0 0' `</font>
+` `
+
+**Note**: Vectors do not automatically convert to strings, and can't be set to equal floats. In these cases, the separate axis components need to be used. [[1](http://web.archive.org/web/20120418101203/http://www.iddevnet.com/quake4/ScriptVariable#vector)]
+
+### entity
+
+An [Entity.html entity] reference. Everything in the world is an entity, so this type is used extensively. (See the info on [Scripting\_basics.html\#Entities entities] in scripting basics)
+
+<font color="#0000ff">`entity`</font>` funcmover;`
+`funcmover = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`getEntity`</font><font color="#000000">`(`</font><font color="#666666">`"func_mover_1"`</font><font color="#000000">`)`</font>`;`
+
+### string
+
+A string type contains nothing more then text.
+
+<font color="#0000ff">`string`</font>` blabla = `<font color="#666666">`"Put text here"`</font>`;`
+
+**Note:** A string variable can be no longer than 256 characters.
+
+### boolean
+
+A boolean type contains a state, true or false. It can't be initialized at declaration, but the un-initialized variable will return zero and be interpreted as false.
+
+<font color="#0000ff">`boolean`</font>` flag;`
+`flag = `<font color="#0000dd">`1`</font>`;`
+`flag = `<font color="#0000dd">`0`</font>`;`
+
+### void
+
+Void basically means *nothing*.
+
+**Only to be used with functions!**
+
+Special types
+-------------
+
+### object
+
+Named base type of [Script\_object.html script object]. Used for more advanced scripting techniques.
+
+### [object type]
+
+Combined entity reference and [Script\_object.html script object] type reference. Will be set to [$null\_entity\_(scripting).html null] if the entity you are trying to set the reference to does not have a object of that type.
+
+`monster_base myMonster;`
+`myMonster = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`getEntity`</font><font color="#000000">`(`</font><font color="#666666">`"monster_sam"`</font><font color="#000000">`)`</font>`;`
+`myMonster.`<font color="#ff0000">`wake_on_trigger`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+

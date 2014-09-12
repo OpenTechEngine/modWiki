@@ -1,0 +1,34 @@
+SetAnimPrefix (script event)
+============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Sets a string which is placed in front of any animation names.
+
+Usage
+-----
+
+void setAnimPrefix( string prefix )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

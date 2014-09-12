@@ -1,0 +1,26 @@
+LANG (file format)
+==================
+
+.LANG files are used for localization purposes. For every language there is a different set of files available. Each of these files contains a numbered string that is referenced from within code, GUIs or maps. Each string has to have a unique number so there are no conflicts when referenced. Language strings are simply referenced by typing "\#str\_20000" in the textfield. Replace 20000 with the intended string number.
+
+Syntax
+------
+
+`{`
+`   "#str_20000"    "Placeholder"`
+`   "#str_20001"    "Placeholder2"`
+`}`
+
+<span align="absbottom">![Q4](images_e_e8_Q4square_25.png "fig:Q4") Used String Ranges</span>
+---------------------------------------------------------------------------------------------
+
+  
+*The information in this section is specific to [Quake\_4.html Quake 4].*
+
+String number ranges used in Q4 are:
+
+-   101991 is the start of Code used strings (english\_code.lang)
+-   200000 is the start of GUI used strings (english\_guis.lang)
+-   300000 is the start of Lipsync used strings (english\_lips.lang)
+-   400000 is the start of Map used strings (english\_maps.lang)
+

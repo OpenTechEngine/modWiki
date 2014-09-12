@@ -1,0 +1,39 @@
+StartSound (script event)
+=========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Plays the sound specified by the snd\_\* key/value pair on the channel and returns the length of the sound.
+
+Usage
+-----
+
+*float* startSound( *string* **sound**, *float* **channel**, *float* **netSync** )
+
+Parameters
+----------
+
+-   [sound] - The sound to play from this entity.
+-   [channel] - The channel to play this sound on.
+-   [netSync] - Whether to play this sound across the network or not.
+
+Examples
+--------
+
+` `
+<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`startSound`</font><font color="#000000">`(`</font><font color="#666666">`"snd_target_lost"`</font>`, `<font color="#0000dd">`1`</font>`, `<font color="#0000dd">`1`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+This is the preferred method for playing sounds on an entity since it ensures that the sound is precached.
+
+

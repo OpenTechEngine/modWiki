@@ -1,0 +1,26 @@
+ListImages (console command)
+============================
+
+Description
+-----------
+
+Reports on how many images are being used, which ones and some of their properties.
+
+Usage
+-----
+
+At the console type...
+
+`listImages`
+
+Parameters
+----------
+
+This console command does not accept parameters.
+
+Notes
+-----
+
+The properties include *width* and *height* measured in pixels, the type of filtering used (nearest, linear, etc.), the format the image is being used in ([DDS\_(file\_format).html DXTn compression], [TGA\_(file\_format).html .TGA], internal, etc.), wrap type (repeat, clamp), size measured in Kb and the image's path. At the end there is a listing of the total number of images and the total amount of memory used by the images. They could be in system ram, agp ram, or video ram (the engine just gives the data to the OpenGL driver and lets it decide).
+
+

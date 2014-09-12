@@ -1,0 +1,26 @@
+NoSelfShadow (Material global keyword)
+======================================
+
+Description
+-----------
+
+Prevents surfaces with this material from casting shadows onto themselves but they still cast onto other surfaces.
+
+Usage
+-----
+
+In the global section of your material shader type...
+
+`noSelfShadow`
+
+Parameters
+----------
+
+Not Available.
+
+Notes
+-----
+
+Because of the way the [Id\_Tech\_4.html engine] works, surfaces which have NoSelfShadow set also don't cast any shadows onto any other surface which also has the NoSelfShadow keyword. See also the [NoShadows\_(Material\_global\_keyword).html NoShadows] keyword.
+
+

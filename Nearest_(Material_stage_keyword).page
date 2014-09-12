@@ -1,0 +1,29 @@
+Nearest (Material stage keyword)
+================================
+
+Description
+-----------
+
+The **nearest** keyword defines that a nearest type of texture filtering is to be used on this stage.
+
+Usage
+-----
+
+`nearest`
+
+Parameters
+----------
+
+This keyword does not accept parameters.
+
+Example
+-------
+
+{
+
+`   nearest`
+`   map     textures/custom/foo.tga`
+`}`
+
+Notes
+-----

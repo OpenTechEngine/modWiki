@@ -1,0 +1,34 @@
+AccelTo (script event)
+======================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Initiates an acceleration to the given speed over the given time in seconds.
+
+Usage
+-----
+
+void accelTo( float speed, float time )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

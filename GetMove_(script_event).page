@@ -1,0 +1,34 @@
+GetMove (script event)
+======================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the movement relative to the player's view angles from the current user command. // vector\_x = forward, vector\_y = right, vector\_z = up
+
+Usage
+-----
+
+vector getMove( )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

@@ -1,0 +1,222 @@
+SCRIPT (file format)
+====================
+
+Script files define a sequence of events grouped into 1 or more blocks. They are used in [Scripting.html\#Different\_fields different fields] like eg. level scripting or GUI actions. Scripts use a custom language with a syntax similar to C++ and are stored in plain-text ASCII files.
+
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                                                                                      
+ Contents                                                                                                                                                                  
+ --------                                                                                                                                                                  
+                                                                                                                                                                           
+ </div>                                                                                                                                                                    
+ -   [SCRIPT\_(file\_format).html\#Syntax <span class="tocnumber">1</span> <span class="toctext">Syntax</span>]                                                            
+     -   [SCRIPT\_(file\_format).html\#General\_Syntax <span class="tocnumber">1.1</span> <span class="toctext">General Syntax</span>]                                     
+     -   [SCRIPT\_(file\_format).html\#Operators <span class="tocnumber">1.2</span> <span class="toctext">Operators</span>]                                                
+         -   [SCRIPT\_(file\_format).html\#Simple\_Operators <span class="tocnumber">1.2.1</span> <span class="toctext">Simple Operators</span>]                           
+         -   [SCRIPT\_(file\_format).html\#Conditional\_Operators <span class="tocnumber">1.2.2</span> <span class="toctext">Conditional Operators</span>]                 
+         -   [SCRIPT\_(file\_format).html\#Bit\_Operators <span class="tocnumber">1.2.3</span> <span class="toctext">Bit Operators</span>]                                 
+         -   [SCRIPT\_(file\_format).html\#Special\_Assignment\_Operators <span class="tocnumber">1.2.4</span> <span class="toctext">Special Assignment Operators</span>]  
+     -   [SCRIPT\_(file\_format).html\#Conditional\_Structures <span class="tocnumber">1.3</span> <span class="toctext">Conditional Structures</span>]                     
+     -   [SCRIPT\_(file\_format).html\#Loop\_Structures <span class="tocnumber">1.4</span> <span class="toctext">Loop Structures</span>]                                   
+     -   [SCRIPT\_(file\_format).html\#Code\_grouping <span class="tocnumber">1.5</span> <span class="toctext">Code grouping</span>]                                       
+     -   [SCRIPT\_(file\_format).html\#Special <span class="tocnumber">1.6</span> <span class="toctext">Special</span>]                                                    
+ -   [SCRIPT\_(file\_format).html\#Editing\_tools <span class="tocnumber">2</span> <span class="toctext">Editing tools</span>]                                             |
+
+Syntax
+------
+
+The following should be a quick reference for scripting constructs. If you are new, read [Scripting\_basics.html Scripting basics] for more text and examples.
+
+### General Syntax
+
+The following is a list of special characters and general syntax information.
+
+;   
+Follows all commands. More than one command may exist on a single line. Informs the engine that the following is the end of a command.
+
+<!-- -->
+
+//   
+Single line comment. Declares the text from this point to the end of the line a comment and is not executed. Can also be used to null out a line of code for debugging.
+
+<!-- -->
+
+/\* and \*/   
+Comment. Declares the text from /\* to \*/ a comment and the text contained therein is not executed. Can also be used to null out a portion of code for debugging.
+
+<!-- -->
+
+{ and }   
+Script block. These show the start and end points of a group of commands. See the more complex structures further down.
+
+<!-- -->
+
+( and )   
+Group. Used to fix operator precedence or grouping conditional expressions.
+
+<!-- -->
+
+$   
+Precedes all direct entity references. Informs the engine that the following is an entity reference. See [Scripting\_basics.html\#Entities basic scripting with entities]
+
+<!-- -->
+
+.   
+Precedes a [Script\_events.html script event] or [Script\_object.html script object] function. Informs the engine that the following function-like call is a script event or object function.
+
+### Operators
+
+#### Simple Operators
+
+=   
+Assignment
+
++   
+Add
+
+-   
+Subtract
+
+\*   
+Multiply
+
+/   
+Divide
+
+%   
+Modulo / Remainder
+
+++   
+Add 1 / Increment
+
+--   
+Subtract 1 / Decrement
+
+#### Conditional Operators
+
+==   
+Equals
+
+\>=   
+Greater or Equal
+
+\<=   
+Lesser or Equal
+
+&&   
+And
+
+||   
+Or
+
+!    
+Not
+
+#### Bit Operators
+
+&   
+Bitwise And
+
+|   
+Bitwise Or
+
+~   
+Bitwise XOr (?)
+
+#### Special Assignment Operators
+
++=   
+Add and Assign
+
+-=   
+Subtract and Assign
+
+\*=   
+Multiply and Assign
+
+/=   
+Divide and Assign
+
+%=   
+Calculate Remainder and Assign
+
+&=   
+Bitwise And and Assign
+
+|=   
+Bitwise Or and Assign
+
+### Conditional Structures
+
+if ( \<condition\> ) {
+}   
+Checks if the condition is true, if so it executes the code block between { and } after the condition.
+
+<!-- -->
+
+if ( \<condition\> ) {
+} else {
+}   
+Check if the condition is true, if so execute the code block just behind the condition. If not, execute the code block after the else keyword.
+
+### Loop Structures
+
+while ( \<condition\> ) {
+}   
+Execute the code block behind the condition for as long as the condition is true.
+
+<!-- -->
+
+for ( [start code]; [condition]; [loop code] ) {
+}   
+When the structure is entered, the [start code] will be executed. Then the condition will be checked. At the end of the code block, the [loop code] is executed. After this, the condition is checked again and the loop will go on for as long as the condition is true.
+
+### Code grouping
+
+\<return type\> \<function name\> ( [variable list] ) {
+}   
+Function structure. Used to group commands which need to be called more than once. The variable list is separated with commas can be empty. A return type is required, use [Data\_types.html\#void void] if nothing is returned.
+
+<!-- -->
+
+object \<object name\> [  
+\<base object\>] {
+
+}   
+Object structure. Used to describe the behavior of an entity. It can inherit from other object definitions. See [Script\_object.html script object] for more information.
+
+<!-- -->
+
+namespace \<name\> {
+}   
+Namespace group. All variable and function names are then isolated from the global namespace. Used to avoid conflicts when [SCRIPT\_(file\_format).html\#Include including] more then 1 script.
+
+### Special
+
+These are various statements which no real relation.
+
+\#define \<constant name\> \<value\>   
+Defines a read-only global value. The name is mostly written uppercase.
+
+<!-- -->
+
+\#ifdef \<constant name\>
+\#endif   
+Conditional inclusion block. The contents will only be parsed if the constant is defined using \#define.
+
+<!-- -->
+
+\#ifndef \<constant name\>
+\#endif   
+Conditional inclusion block. The contents will only be parsed if the constant is *not* defined.
+
+<!-- -->
+
+\#include "\<name of script file\>"   
+Will define all global variables and functions used in the specified script file. Mostly reserved for scripts which need functions from other scripts to increase code reuse.
+
+Editing tools
+-------------
+
+Since scripts are plain-text files, a simple [Text\_editor.html text editor] can be used to edit or create scripts.
+

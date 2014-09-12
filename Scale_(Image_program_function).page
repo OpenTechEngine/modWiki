@@ -1,0 +1,38 @@
+Scale (Image program function)
+==============================
+
+Description
+-----------
+
+This function will scale the specified image by a defined amount.
+
+Usage
+-----
+
+`scale ([map], [scalar])`
+
+Parameters
+----------
+
+-   [map] - The image to be scaled.
+-   [scalar] - The amount to scale the image.
+
+Example
+-------
+
+Reduce the size by half...
+
+`textures/half_size`
+`{`
+`  {      `
+`    blend diffusemap`
+`    map   scale(textures/decals/plasma_burn.tga, 0.5)`
+`  }`
+`}`
+
+Notes
+-----
+
+None.
+
+

@@ -1,0 +1,43 @@
+ClampFloat (script event)
+=========================
+
+<div style="padding: 1px; border: 0px solid #000000" align="left">
+<font size="18px"><font color="black">![Image:Q4square\_bg.png](images_6_69_Q4square_bg.png "fig:Image:Q4square_bg.png") The information on this page is specific to [Quake\_4.html Quake 4].</font></font>
+
+</div>
+
+------------------------------------------------------------------------
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the clamped result of a number.
+
+Usage
+-----
+
+*float* clampFloat( *float* **min**, *float* **max**, *float* **val** )
+
+Parameters
+----------
+
+-   [min] - The lower clamp factor.
+-   [max] - The upper clamp factor.
+-   [val] - The number to clamp.
+
+Examples
+--------
+
+<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`clampFloat`</font><font color="#000000">`(`</font>` `<font color="#0000dd">`1`</font>`, `<font color="#0000dd">`10`</font>`, my_float`<font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+Not available.
+
+

@@ -1,0 +1,151 @@
+Quake 4
+=======
+
+<div style="margin-top: -3em; margin-bottom: 1em; padding-top: 1px">
+<font size="200%">Welcome to ![Image:Q4square\_bg.png](images_6_69_Q4square_bg.png "fig:Image:Q4square_bg.png") modwiki.net</font>
+
+<font size="94%">We currently have [9,284](http://web.archive.org/web/20121205063603/http://www.modwiki.net:80/wiki/Special:Statistics) articles.</font>
+
+</div>
+<table>
+<colgroup>
+<col width="40%" />
+<col width="49%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><p><font color="#000"></p>
+<div style="padding: .4em .9em .9em">
+<h3>Editing Categories:</h3>
+<dl>
+<dt>[Modding.html Modding] </dt>
+<dd>General information about producing and distributing mods
+</dd>
+<dt>[Coding.html Coding] </dt>
+<dd>Modification of the engine's source code
+</dd>
+<dt>[Mapping.html Mapping] </dt>
+<dd>Information about level design and the tools
+</dd>
+<dt>[Modelling.html Modelling] </dt>
+<dd>Modelling and file format information
+</dd>
+<dt>[Texturing.html Texturing] </dt>
+<dd>Explanation of material shaders and image files
+</dd>
+<dt>[Scripting.html Scripting] </dt>
+<dd>Information about Scripting for GUIs and Levels
+</dd>
+<dt>[Declarations.html Declarations] </dt>
+<dd>Declarations define the properties and behavior of game content
+</dd>
+<dt>[Audio_design.html Audio design] </dt>
+<dd>The creation of musical tracks and sound effects
+</dd>
+</dl>
+</div>
+<p></font></p></td>
+<td align="left"><p><font color="#000"></p>
+<div style="padding: .4em .9em .9em">
+<h3>Featured Articles:</h3>
+<dl>
+<dt>[How_to_get_help.html How to get help] </dt>
+<dd>A good introduction to the use of this wiki
+</dd>
+<dt>[Console.html Console] </dt>
+<dd>Everything you need to know about the Doom 3 engine console
+<ul>
+<li>[CVars_(Quake_4).html CVars]</li>
+<li>[Commands_(Quake_4).html Commands]</li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>[Script_events_(Quake_4).html Script events] </dt>
+<dd>Quake 4 relevant script events
+</dd>
+<dt>[Startup_parameters.html Startup parameters] </dt>
+<dd>Parameters you can add when starting Quake 4
+</dd>
+<dt>[Folder_structure_(Quake_4).html Folder structure] </dt>
+<dd>An overview over the folders used by Quake 4
+</dd>
+<dt>[File_formats.html File formats] </dt>
+<dd>All the different file formats used by the Doom 3 engine
+</dd>
+<dt>[Tutorial_list.html Tutorial list] </dt>
+<dd>An extensive list to tutorials on a wide range of topics
+</dd>
+</dl>
+</div>
+<p></font></p></td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<colgroup>
+<col width="49%" />
+<col width="40%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><p><font color="#000"></p>
+<div style="padding: .4em .9em .9em">
+<h3>New to the site?</h3>
+<p>This wiki is focused on documenting the various aspects involved with developing assets, levels and modifications based on the [Id_Tech.html id Tech] engines. If you're new to the site or a wiki in general, please visit the <a href="http://web.archive.org/web/20121106083726/http://www.modwiki.net:80/wiki/modwiki:About">about</a> page to learn more about this project.</p>
+<h3>Want to help?</h3>
+<p>As modwiki is a community project, feel free to <a href="http://web.archive.org/web/20121122032104/http://modwiki.net:80/wiki/Special:Userlogin">register</a> and join us on this great endeavor! Please check out the <a href="http://web.archive.org/web/20121122072258/http://www.modwiki.net:80/wiki/modwiki:Style_guide">style guide</a> for some general editing guidelines. Visit <a href="http://web.archive.org/web/20121122032134/http://www.modwiki.net:80/wiki/modwiki:Open_tasks">open tasks</a> to find out which pages need help. You can also visit the <a href="http://web.archive.org/web/20121208101551/http://www.modwiki.net:80/wiki/modwiki:Sandbox">sandbox</a> to experiment with the wiki markup language. To learn how to edit or create pages, please take a look <a href="http://web.archive.org/web/20121122082152/http://www.modwiki.net:80/wiki/Help:Editing">here</a>.</p>
+<p>But most importantly, if you gain something from this resource, please give back.</p>
+<h3>High quality links:</h3>
+<p>Other interesting id Tech engine editing sites:</p>
+<dl>
+<dt><a href="http://web.archive.org/web/20120919085849/http://www.doom3world.org/">www.doom3world.org</a> </dt>
+<dd>The premier discussion forum for all Doom 3 engine games
+</dd>
+<dt><a href="http://web.archive.org/web/20120919085849/http://www.iddevnet.com/quake4/">www.iddevnet.com/quake4</a> </dt>
+<dd>The official id Software website for Quake 4 engine editing
+</dd>
+</dl>
+</div>
+<p></font></p></td>
+<td align="left"><p><font color="#000"></p>
+<div style="padding: .4em .9em .9em">
+<h3>Quake 4 game and engine:</h3>
+<p>Quake 4 introduces new editors, cvars, events, file formats, directories, and the following functionality:</p>
+<ul>
+<li>Lipsync support</li>
+<li>Guides for easier material creation</li>
+<li>Improved ambient lighting</li>
+<li>Squad based AI</li>
+<li>Portal Skies</li>
+<li><span class="plainlinks"><a href="http://web.archive.org/web/20120919085849/http://www.mfadegree.net/"><span style="font-weight: normal; text-decoration: none!important; background: none!important; text-decoration: none"><font color="black">MFA Degree</font></span></a> </span></li>
+<li>CG/HLSL Shaders</li>
+<li>Playback editor/entities</li>
+<li>Gravity related entities</li>
+<li>FX files/editor (improved particles)</li>
+<li>Improved Level Editor</li>
+<li>Bugfixes in GUI editor</li>
+<li>Improved Networking</li>
+<li>New script events</li>
+<li>Tools moved into separate .dll</li>
+</ul>
+<p>Much of the AI and weapon functionality moved into compiled code.</p>
+<p>Quake 4 was created by <a href="http://web.archive.org/web/20120919085849/http://www.ravensoft.com/">Raven Software</a> and published by <a href="http://web.archive.org/web/20120919085849/http://www.activision.com/">Activision</a>. Release date for the PC version was October 18, 2005.</p>
+<h3>System Requirements:</h3>
+<ul>
+<li>Operating System: Windows 2000/XP, Mac OSX, Linux</li>
+<li>CPU: Pentium 4 2.0 or Athlon XP 2000+</li>
+<li>Memory: 512MB</li>
+<li>Storage: 2.8GB</li>
+<li>Sound: 100% DirectX 9.0c Compliant / 16-bit</li>
+<li>Video: 100% DirectX 9.0c Compliant / 64MB RAM</li>
+</ul>
+<p>&lt;/div&gt;</p>
+</div>
+<p></font></p></td>
+</tr>
+</tbody>
+</table>
+
+

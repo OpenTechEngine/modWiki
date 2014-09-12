@@ -1,0 +1,35 @@
+GetFloatKey (script event)
+==========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Retrieves the floating point value of a specific spawn arg.
+
+Usage
+-----
+
+*float* getFloatKey( *string* **key** )
+
+Parameters
+----------
+
+-   [key] - The spawn argument to return the value of.
+
+Examples
+--------
+
+` `
+<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`getFloatKey`</font><font color="#000000">`(`</font><font color="#666666">`"blink_min"`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event returns the value of a spawn argument as a float.
+
+

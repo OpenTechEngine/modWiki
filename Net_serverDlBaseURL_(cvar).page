@@ -1,0 +1,68 @@
+Net serverDlBaseURL (cvar)
+==========================
+
+<div id="attention" class="boilerplate metadata" style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa">
+**This page is in urgent need of attention because: '' This article is missing the CVar flags.**''
+
+If you disagree with this, please explain why on its talk page.
+
+</div>
+Description
+-----------
+
+This CVar specifies the URL where custom content can be autodownloaded.
+
+Usage
+-----
+
+At the console type...
+
+`net_serverDrawClient [INTEGER]`
+
+Parameters
+----------
+
+-   [STRING] - URL to base folder on ftp or http server for custom content.
+
+Flags
+-----
+
+| Flag              | Enabled | Description                                  |
+|-------------------|---------|----------------------------------------------|
+| CVAR\_ALL         |         | all flags                                    |
+| CVAR\_BOOL        |         | variable is a boolean                        |
+| CVAR\_INTEGER     |         | variable is an integer                       |
+| CVAR\_FLOAT       |         | variable is a float                          |
+| CVAR\_SYSTEM      |         | system variable                              |
+| CVAR\_RENDERER    |         | renderer variable                            |
+| CVAR\_SOUND       |         | sound variable                               |
+| CVAR\_GUI         |         | gui variable                                 |
+| CVAR\_GAME        |         | game variable                                |
+| CVAR\_TOOL        |         | tool variable                                |
+| CVAR\_USERINFO    |         | sent to servers, available to menu           |
+| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
+| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
+| CVAR\_STATIC      |         | statically declared, not user created        |
+| CVAR\_CHEAT       |         | variable is considered a cheat               |
+| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
+| CVAR\_INIT        |         | can only be set from the command-line        |
+| CVAR\_ROM         |         | display only, cannot be set by user at all   |
+| CVAR\_ARCHIVE     |         | set to cause it to be saved to a config file |
+| CVAR\_MODIFIED    |         | set when the variable is modified            |
+
+Notes
+-----
+
+Each custom PK4 must be stored on the file server in a relative mirror folder structure of that on the game server. Case in point, a PK4 from the game server might be located at ...
+
+`C:\Program Files\Doom 3\base\map_swd3dm1.pk4`
+
+This same file must be stored in a relative location on your file server such as ...
+
+[`http://www.your-web-server.com/doom3/base/map_swd3dm1.pk4`](http://www.your-web-server.com/doom3/base/map_swd3dm1.pk4)
+
+In this case the correct setting for net\_serverDlBaseURL would be ...
+
+`net_serverDlBaseURL "`[`http://www.your-web-server.com/doom3`](http://www.your-web-server.com/doom3)`"`
+
+

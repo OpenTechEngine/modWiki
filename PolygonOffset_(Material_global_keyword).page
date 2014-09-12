@@ -1,0 +1,30 @@
+PolygonOffset (Material global keyword)
+=======================================
+
+Description
+-----------
+
+Offsets this surface in the depth buffer to prevent z-fighting.
+
+Usage
+-----
+
+In the global section of your material shader type...
+
+`polygonOffset [float]`
+
+Parameters
+----------
+
+-   [float] - The amount of offsetting to apply.
+
+Notes
+-----
+
+This keyword is useful for decals that are placed on top of other surfaces like walls, floors, and ceilings.
+
+Under normal circumstances, since both the decal and the surface are placed on the same space, the game would not be able to determine which surface should be rendered in front of the other. Instead, the game tries to render both and this is called z-fighting.
+
+By offsetting the depth of the decal slightly, you give the decal precedence and avoid the issue.
+
+

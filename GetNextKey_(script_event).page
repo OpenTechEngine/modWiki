@@ -1,0 +1,46 @@
+GetNextKey (script event)
+=========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Searches for the name of a spawn arg that matches the prefix.
+
+Usage
+-----
+
+*string* getNextKey( *string* **prefix**, *string* **lastMatch** )
+
+Parameters
+----------
+
+-   [prefix] - The prefix string to search for.
+-   [lastMatch] - The last matching value returned.
+
+Examples
+--------
+
+` `
+<font color="#339900">`// ???`</font>
+
+Notes
+-----
+
+This script event returns the name of a spawn arument that matches the prefix as a string.
+
+Passing "attack\_target" as the prefix, matches "attack\_target1", "attack\_targetx", "attack\_target\_enemy", etc.
+
+The returned string is the name of the key which can then be passed into functions like getKey() to lookup the value of that spawn arg.
+
+This is usefull for when you have multiple values to look up, like when you target multiple objects.
+
+To find the next matching key, pass in the previous result and the next key returned will be the first one that matches after the previous result. Pass in "" to get the first match. Returns "" when no more keys match.
+
+Note to coders: this is the same as MatchPrefix in the game code.
+
+

@@ -1,0 +1,34 @@
+DamageEffect (script event)
+===========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+MCG: damage effect direct call, damageFromEnt is the entity the damage should appear to come from on the indicator, it can be NULL/"none"
+
+Usage
+-----
+
+void damageEffect( string damageDefName, entity damageFromEnt )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

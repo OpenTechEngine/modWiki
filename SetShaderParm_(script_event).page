@@ -1,0 +1,37 @@
+SetShaderParm (script event)
+============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Sets the value of the specified shader parm.
+
+Usage
+-----
+
+*void* setShaderParm( *float* **parm**, *float* **value** )
+
+Parameters
+----------
+
+-   \<parm\> - The shader parm to set the value of.
+-   \<value\> - The value to set the shader parm to.
+
+Examples
+--------
+
+<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`setShaderParm`</font><font color="#000000">`(`</font><font color="#0000dd">`1`</font>`, `<font color="#0000dd">`0`</font>`.`<font color="#0000dd">`5`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+The **parm** parameter can be specified explicitly like in the example, or by using one of the **SHADERPARM\_** constants found in *doom\_defs.script*.
+
+

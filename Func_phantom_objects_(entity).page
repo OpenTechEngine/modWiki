@@ -1,0 +1,81 @@
+Func phantom objects (entity)
+=============================
+
+> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+
+Description
+-----------
+
+Causes moveable objects to fly at player when triggered. triggering toggles it on/off.
+
+Spawn Arguments
+---------------
+
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+
+| KEY              | DESCRIPTION                                                                            |
+|------------------|----------------------------------------------------------------------------------------|
+| angle            | Description not available.                                                             |
+| anim             | Description not available.                                                             |
+| bind             | Description not available.                                                             |
+| bindOrientated   | Description not available.                                                             |
+| bindToBody       | Description not available.                                                             |
+| bindToJoint      | Description not available.                                                             |
+| bindanim         | Description not available.                                                             |
+| cameraTarget     | Description not available.                                                             |
+| cinematic        | Description not available.                                                             |
+| classname        | Description not available.                                                             |
+| clipmodel        | Description not available.                                                             |
+| cone             | Description not available.                                                             |
+| cylinder         | Description not available.                                                             |
+| editor\_color    | Description not available.                                                             |
+| editor\_maxs     | Description not available.                                                             |
+| editor\_mins     | Description not available.                                                             |
+| editor\_usage    | Causes moveable objects to fly at player when triggered. triggering toggles it on/off. |
+| editor\_var XXXX | Description not available.                                                             |
+| end\_time        | How long to throw objects. set to 0 to throw each object once                          |
+| guiTarget        | Description not available.                                                             |
+| health           | Description not available.                                                             |
+| hide             | Description not available.                                                             |
+| max\_wait        | Maximum time to wait before tossing object again                                       |
+| maxs             | Description not available.                                                             |
+| min\_wait        | Minimum time to wait before tossing object again                                       |
+| mins             | Description not available.                                                             |
+| model            | Description not available.                                                             |
+| name             | Description not available.                                                             |
+| networkSync      | Description not available.                                                             |
+| neverDormant     | Description not available.                                                             |
+| noGrab           | Description not available.                                                             |
+| noclipmodel      | Description not available.                                                             |
+| origin           | Description not available.                                                             |
+| rotation         | Description not available.                                                             |
+| scriptobject     | Description not available.                                                             |
+| shake\_ang       | Angles to shake object                                                                 |
+| shake\_time      | How long objects shake before thrown                                                   |
+| size             | Description not available.                                                             |
+| skin\_xray       | Description not available.                                                             |
+| slowmo           | Description not available.                                                             |
+| solidForTeam     | Description not available.                                                             |
+| spawnclass       | Description not available.                                                             |
+| speed            | How fast objects should fly at player                                                  |
+| target           | Description not available.                                                             |
+| time             | How long it takes to toss all objects                                                  |
+
+Inheritance
+-----------
+
+This entity is derived from the following:
+
+-   *[IdEntity\_(class).html idEntity]*
+    -   '' idPhantomObjects''
+        -   *' func\_phantom\_objects*'
+
+**Note**: Entries marked in italics are classes defined in the SDK.
+
+Notes
+-----
+
+Notes not available.
+

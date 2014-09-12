@@ -1,0 +1,22 @@
+GUI item events
+===============
+
+Events are blocks with [GUI\_commands.html commands] that are executed when a certain condition is met. This can be a condition created by the user - for example, moving the mouse over a windowDef element - or a noninteractive event - for example, when a certain time is reached.
+
+Available events
+----------------
+
+-   [OnAction\_(GUI\_item\_event).html onAction]
+-   [OnActionRelease\_(GUI\_item\_event).html onActionRelease]
+-   [OnActivate\_(GUI\_item\_event).html onActivate]
+-   [OnDeactivate\_(GUI\_item\_event).html onDeactivate]
+-   [OnEvent\_(GUI\_item\_event).html onEvent]
+-   [OnEnter\_(GUI\_item\_event).html onEnter]
+-   [OnEnterRelease\_(GUI\_item\_event).html onEnterRelease]
+-   [OnEsc\_(GUI\_item\_event).html onEsc]
+-   [OnMouseEnter\_(GUI\_item\_event).html onMouseEnter]
+-   [OnMouseExit\_(GUI\_item\_event).html onMouseExit]
+-   [OnNamedEvent\_(GUI\_item\_event).html onNamedEvent]
+-   [OnTime\_(GUI\_item\_event).html onTime]
+-   [OnTrigger\_(GUI\_item\_event).html onTrigger]
+

@@ -1,0 +1,38 @@
+SetShaderParms (script event)
+=============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Sets shader parms Parm0, Parm1, Parm2, and Parm3 (red, green, blue, and alpha respectively).
+
+Usage
+-----
+
+*void* setShaderParms( *float* **parm0**, *float* **parm1**, *float* **parm2**, *float* **parm3** )
+
+Parameters
+----------
+
+-   [parm0] - The value to assign to the red shader parm.
+-   [parm1] - The value to assign to the green shader parm.
+-   [parm2] - The value to assign to the blue shader parm.
+-   [parm3] - The value to assign to the alpha shader parm.
+
+Examples
+--------
+
+` `
+<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`setShaderParms`</font><font color="#000000">`(`</font><font color="#0000dd">`0`</font>`.`<font color="#0000dd">`5`</font>`,`<font color="#0000dd">`0`</font>`.`<font color="#0000dd">`4`</font>`,`<font color="#0000dd">`0`</font>`.`<font color="#0000dd">`5`</font>`,`<font color="#0000dd">`1`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+

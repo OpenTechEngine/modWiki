@@ -1,0 +1,40 @@
+If...else (GUI command)
+=======================
+
+Evaluates a condition block and, depending on the evaluation, executes certain statement(s). An standard if..else block. The *if..else if* format is also accepted.
+
+Syntax
+------
+
+`if (`*`condition`*`) {`
+`   `*`statement(s)`*
+`[ } else {`
+`   `*`statement(s)`*` ]`
+`}`
+
+*condition* is a logical condition.
+
+*statement(s) is one or more statements or blocks of statements.*
+
+Example(s)
+----------
+
+`if ("gui::newweapon" == 1) {`
+`   resetTime "WeapIcon1Large" "0" ;`
+`}`
+`if ("MultiplayerLANParent::selected" == 1) {`
+`   resetTime "AnimLANGameDown" "0" ;`
+`} else {`
+`   resetTime "AnimLANCreateDown" "0" ;`
+`   set "MultiplayerLANParent::selected" "1" ;`
+`}`
+`if ( "gui::aim_color" == 1 ) {`
+`   resetTime "AimingRect1" "0" ;`
+`} else if ( "gui::aim_color" == 2 ) {`
+`   resetTime "AimingRect2" "0" ;`
+`} else if ( "gui::aim_color" == 3 ) {`
+`   resetTime "AimingRect3" "0" ;`
+`} else if ( "gui::aim_color" == 4 ) {`
+`   resetTime "AimingRect4" "0" ;`
+`}`
+

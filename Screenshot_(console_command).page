@@ -1,0 +1,32 @@
+Screenshot (console command)
+============================
+
+Description
+-----------
+
+This command takes a snapshot of the current screen and saves it to file.
+
+Usage
+-----
+
+At the console type...
+
+`screenshot [Width] [Height] [Samples]`
+
+Parameters
+----------
+
+All the parameters are optional.
+
+-   [Width] - Screen size in pixels.
+-   [Height] - Screen size in pixels.
+-   [Samples] - Number of shots taken.
+
+Notes
+-----
+
+This command will generate a .[TGA\_(file\_format).html TGA]. The [Samples] value will provide artificial [Antialiasing.html Antialiasing] by blending all the shots together. If you'd like to simulate soft shadows in a Doom 3 screenshot you can set the following in your [CFG\_(file\_format).html autoexec.cfg]:
+
+`bind F11 "[R_useOptimizedShadows_(cvar).html r_useOptimizedShadows] 0;[R_lightSourceRadius_(cvar).html r_lightSourceRadius] 5;screenshot 1024 768 64"`
+
+

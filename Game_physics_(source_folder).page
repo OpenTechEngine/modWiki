@@ -1,0 +1,92 @@
+Game physics (source folder)
+============================
+
+|----------------------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                                        
+ Contents                                                                                                                    
+ --------                                                                                                                    
+                                                                                                                             
+ </div>                                                                                                                      
+ -   <span class="deadlink"><span class="tocnumber">1</span> <span class="toctext">game/physics</span></span>                
+     -   <span class="deadlink"><span class="tocnumber">1.1</span> <span class="toctext">Main physics classes</span></span>  
+     -   <span class="deadlink"><span class="tocnumber">1.2</span> <span class="toctext">Force classes</span></span>         
+     -   <span class="deadlink"><span class="tocnumber">1.3</span> <span class="toctext">AF Classes</span></span>            
+     -   <span class="deadlink"><span class="tocnumber">1.4</span> <span class="toctext">Clip Classes</span></span>          
+     -   <span class="deadlink"><span class="tocnumber">1.5</span> <span class="toctext">Overall Inheritance</span></span>   |
+
+game/physics
+============
+
+This folder contains all of the classes and headers used for running the majority of the physics engine in Doom3.
+
+The following images show the class inheritance. Black lines denote children; red lines denote class friendship. These images are in [PNG\_(file\_format).html PNG] format.
+
+Main physics classes
+--------------------
+
+<div class="thumb tnone">
+<div style="width: 182px">
+![](images_thumb_1_12_Physics_main_inhertance.png_180px-Physics_main_inhertance.png "images_thumb_1_12_Physics_main_inhertance.png_180px-Physics_main_inhertance.png")
+
+<div class="thumbcaption">
+<div class="magnify" style="float: right">
+![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
+
+</div>
+</div>
+</div>
+</div>
+Force classes
+-------------
+
+<div class="thumb tnone">
+<div style="width: 182px">
+![](images_thumb_9_90_Physics_force_inheritance.png_180px-Physics_force_inheritance.png "images_thumb_9_90_Physics_force_inheritance.png_180px-Physics_force_inheritance.png")
+
+<div class="thumbcaption">
+<div class="magnify" style="float: right">
+![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
+
+</div>
+</div>
+</div>
+</div>
+AF Classes
+----------
+
+<div class="thumb tnone">
+<div style="width: 182px">
+![](images_thumb_4_4f_Physics_af_inheritance.png_180px-Physics_af_inheritance.png "images_thumb_4_4f_Physics_af_inheritance.png_180px-Physics_af_inheritance.png")
+
+<div class="thumbcaption">
+<div class="magnify" style="float: right">
+![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
+
+</div>
+</div>
+</div>
+</div>
+*Large image!*
+
+Clip Classes
+------------
+
+![Image:Physics clip inheritance.png](images_0_06_Physics_clip_inheritance.png "Image:Physics clip inheritance.png")
+
+Overall Inheritance
+-------------------
+
+<div class="thumb tnone">
+<div style="width: 182px">
+![](images_thumb_e_e7_Physics_overall_inheritance.png_180px-Physics_overall_inheritance.png "images_thumb_e_e7_Physics_overall_inheritance.png_180px-Physics_overall_inheritance.png")
+
+<div class="thumbcaption">
+<div class="magnify" style="float: right">
+![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
+
+</div>
+</div>
+</div>
+</div>
+*Large image!*
+

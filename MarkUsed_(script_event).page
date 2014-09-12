@@ -1,0 +1,34 @@
+MarkUsed (script event)
+=======================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Disables the combat node if "use\_once" is set on the entity.
+
+Usage
+-----
+
+*void* markUsed( );
+
+Parameters
+----------
+
+None.
+
+Examples
+--------
+
+`node.`<font color="#ff0000">`markUsed`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+None.
+
+

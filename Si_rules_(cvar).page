@@ -1,0 +1,75 @@
+Si rules (cvar)
+===============
+
+<div style="padding: 1px; border: 0px solid #000000" align="left">
+<font size="18px"><font color="black">![Image:Etqwsquare\_bg.png](images_f_f9_Etqwsquare_bg.png "fig:Image:Etqwsquare_bg.png") The information on this page is specific to [Enemy Territory: Quake Wars](http://web.archive.org/web/20121206024939/http://www.modwiki.net:80/wiki/Enemy_Territory:_Quake_Wars).</font></font>
+
+</div>
+
+------------------------------------------------------------------------
+
+<div id="attention" class="boilerplate metadata" style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa">
+**This page is in urgent need of attention because: *this CVar's flags are unknown***
+
+If you disagree with this, please explain why on its talk page.
+
+</div>
+Description
+-----------
+
+Defines the game's rule set. The main purpose of this CVar is to change the game type.
+
+Usage
+-----
+
+At the console type...
+
+`si_rules <rule set>`
+
+Parameters
+----------
+
+Rule set (String)  
+This parameter specifies the name of the ruleset the game should use. Currently, the following values are defined:
+
+-   \*; sdGameRulesObjective  
+    Each map is played on its own, no XP can be passed on to the next map.
+
+-   \*; sdGameRulesStopWatch  
+    Each map is played on its own, no XP can be passed on to the next map. After completing the map the first time, the teams are switched and the attacking team must try to beat the previous time set by the other team.
+
+-   \*; sdGameRulesCampaign  
+    Each default campaign consists of 3 maps (custom maps may contain more or less) which are played in succession. XP is carried from one map to the other until all maps in a given campaign are completed. At this point, a new campaign is started and all XP is reset.
+
+Flags
+-----
+
+| Flag              | Enabled | Description                                  |
+|-------------------|---------|----------------------------------------------|
+| CVAR\_ALL         |         | all flags                                    |
+| CVAR\_BOOL        |         | variable is a boolean                        |
+| CVAR\_INTEGER     |         | variable is an integer                       |
+| CVAR\_FLOAT       |         | variable is a float                          |
+| CVAR\_SYSTEM      |         | system variable                              |
+| CVAR\_RENDERER    |         | renderer variable                            |
+| CVAR\_SOUND       |         | sound variable                               |
+| CVAR\_GUI         |         | gui variable                                 |
+| CVAR\_GAME        |         | game variable                                |
+| CVAR\_TOOL        |         | tool variable                                |
+| CVAR\_USERINFO    |         | sent to servers, available to menu           |
+| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
+| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
+| CVAR\_STATIC      |         | statically declared, not user created        |
+| CVAR\_CHEAT       |         | variable is considered a cheat               |
+| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
+| CVAR\_INIT        |         | can only be set from the command-line        |
+| CVAR\_ROM         |         | display only, cannot be set by user at all   |
+| CVAR\_ARCHIVE     |         | set to cause it to be saved to a config file |
+| CVAR\_MODIFIED    |         | set when the variable is modified            |
+
+Notes
+-----
+
+None
+
+

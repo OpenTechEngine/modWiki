@@ -1,0 +1,34 @@
+BlendFOV (script event)
+=======================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Blend the cameras FOV from the beingFOV to the endFOV over the given blendTime
+
+Usage
+-----
+
+void blendFOV( float beginFOV, float endFOV, float blendTime )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

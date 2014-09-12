@@ -1,0 +1,37 @@
+Color (Material stage keyword)
+==============================
+
+Description
+-----------
+
+The **color** keyword multiples all channels of the associated map by the given values.
+
+Usage
+-----
+
+`color <redval>, <greenval>, <blueval>, <alphaval>`
+
+Parameters
+----------
+
+-   *redval* - the value by which the red channel of the image map should be multiplied
+-   *greenval* - the value by which the green channel of the image map should be multiplied
+-   *blueval* - the value by which the blue channel of the image map should be multiplied
+-   *alphaval* - the value by which the alpha channel of the image map should be multiplied
+
+Example
+-------
+
+The following stage reduces the intensity of the blue and alpha channels by half. The red and green channels remain unchanged.
+
+`{`
+`   map path/to/image.tga`
+`   color 1, 1, 0.5, 0.5`
+`}`
+
+Notes
+-----
+
+This keyword is a shorthand way of using the [Red\_(Material\_stage\_keyword).html red], [Green\_(Material\_stage\_keyword).html green], [Blue\_(Material\_stage\_keyword).html blue] and [Alpha\_(Material\_stage\_keyword).html alpha] keywords.
+
+

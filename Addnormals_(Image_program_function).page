@@ -1,0 +1,58 @@
+Addnormals (Image program function)
+===================================
+
+Description
+-----------
+
+This function will add the normals of two normal map images and normalize the result.
+
+Usage
+-----
+
+`addnormals ([map_1], [map_2])`
+
+Parameters
+----------
+
+-   [map\_1] - The first of the two images to add.
+-   [map\_2] - The second of the two images to add.
+
+Example
+-------
+
+Add two normal maps...
+
+Combining both a height and a normal bump map using this function. This is the most common usage of addnormals.
+
+`textures/height_and_normal`
+`{`
+`       bumpmap addnormals ( textures/custom/image_1_local.tga, heightmap ( textures/custom/image_1_h.tga, 4 ))`
+`}`
+
+Adding two different normalmaps together.
+
+`textures/add_two`
+`{`
+`   {`
+`      blend bumpmap`
+`      map   addnormals(textures/custom/image_1.tga, textures/custom/image_2.tga)`
+`   }`
+`}`
+
+Add three or more normal maps by nesting...
+
+`textures/add_three`
+`{`
+`   {`
+`      blend bumpmap`
+`      map   addnormals(textures/custom/image_1.tga, addnormals(textures/custom/image_2.tga,`
+`                textures/custom/image_3.tga))`
+`   }`
+`}`
+
+Notes
+-----
+
+None.
+
+

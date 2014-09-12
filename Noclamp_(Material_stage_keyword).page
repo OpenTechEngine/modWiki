@@ -1,0 +1,33 @@
+Noclamp (Material stage keyword)
+================================
+
+Description
+-----------
+
+The **noclamp** keyword prevents the effects of a global clamping keyword from having an impact on this stage.
+
+Usage
+-----
+
+`noclamp`
+
+Parameters
+----------
+
+This keyword does not accept parameters.
+
+Example
+-------
+
+Not available.
+
+Notes
+-----
+
+This keyword is used to override the effects of the global keywords...
+
+-   [Alphazeroclamp\_(Material\_global\_keyword).html alphazeroclamp]
+-   [Clamp\_(Material\_global\_keyword).html clamp]
+-   [Zeroclamp\_(Material\_global\_keyword).html zeroclamp]
+
+

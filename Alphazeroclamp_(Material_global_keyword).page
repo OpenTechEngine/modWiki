@@ -1,0 +1,26 @@
+Alphazeroclamp (Material global keyword)
+========================================
+
+Description
+-----------
+
+The **alphazeroclamp** keyword prevents the alpha channel of this material from tiling by forcing 100% opacity outside normalized UV coordinates.
+
+Usage
+-----
+
+In the global section of your material shader type...
+
+`alphazeroclamp`
+
+Parameters
+----------
+
+This keyword does not accept parameters.
+
+Notes
+-----
+
+Not Available.
+
+

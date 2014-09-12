@@ -1,0 +1,37 @@
+GetFrameTime (script event)
+===========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the length of time between game frames.
+
+Usage
+-----
+
+*float* getFrameTime()
+
+Parameters
+----------
+
+This script event does not accept parameters.
+
+Examples
+--------
+
+` `
+`frmTime = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`getFrameTime`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event returns the length of time between game frames as a float.
+
+This is not related to renderer frame rate.
+
+

@@ -1,0 +1,55 @@
+R sb occluderFacing (cvar)
+==========================
+
+Description
+-----------
+
+This CVar sets which faces serve as occluders for shadow buffers.
+
+Usage
+-----
+
+At the console type...
+
+`r_sb_occluderfacing [Int]`
+
+Parameters
+----------
+
+-   [Int]
+    -   0 - Use front faces.
+    -   1 - Use back faces.
+    -   2 - Use midpoint between front and back faces.
+
+Flags
+-----
+
+| Flag              | Enabled | Description                                  |
+|-------------------|---------|----------------------------------------------|
+| CVAR\_ALL         |         | all flags                                    |
+| CVAR\_BOOL        |         | variable is a boolean                        |
+| CVAR\_INTEGER     | X       | variable is an integer                       |
+| CVAR\_FLOAT       |         | variable is a float                          |
+| CVAR\_SYSTEM      |         | system variable                              |
+| CVAR\_RENDERER    | X       | renderer variable                            |
+| CVAR\_SOUND       |         | sound variable                               |
+| CVAR\_GUI         |         | gui variable                                 |
+| CVAR\_GAME        |         | game variable                                |
+| CVAR\_TOOL        |         | tool variable                                |
+| CVAR\_USERINFO    |         | sent to servers, available to menu           |
+| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
+| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
+| CVAR\_STATIC      | X       | statically declared, not user created        |
+| CVAR\_CHEAT       | X       | variable is considered a cheat               |
+| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
+| CVAR\_INIT        |         | can only be set from the command-line        |
+| CVAR\_ROM         |         | display only, cannot be set by user at all   |
+| CVAR\_ARCHIVE     |         | set to cause it to be saved to a config file |
+| CVAR\_MODIFIED    | X       | set when the variable is modified            |
+
+Notes
+-----
+
+This CVar is for the use of shadow buffers and it's not used by Doom 3. With a usual shadow buffers implementation if you lights take snapshots of the world and save it as textures. Option "2" render two shadow buffers: one using the front facing triangles to the light and one using the back facing triangles to the light and then combines them together to find a midpoint value between all of the surfaces. Midpoint renderings is a higher quality option with a performance cost.
+
+

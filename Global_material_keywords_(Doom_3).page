@@ -1,0 +1,90 @@
+Global material keywords (Doom 3)
+=================================
+
+Global keywords used in material shaders.
+
+Existing keywords as of D3 version 1.3.1302 (1.3):
+
+General Keywords
+----------------
+
+-   [Alphazeroclamp\_(Material\_global\_keyword).html alphazeroclamp]
+-   [BackSided\_(Material\_global\_keyword).html backsided]
+-   [Bumpmap\_(Material\_global\_keyword).html bumpmap]
+-   [Clamp\_(Material\_global\_keyword).html clamp]
+-   [DECAL\_MACRO\_(Material\_global\_keyword).html DECAL\_MACRO]
+-   [DecalInfo\_(Material\_global\_keyword).html decalInfo]
+-   [Deform\_(Material\_global\_keyword).html deform]
+-   [Description\_(Material\_global\_keyword).html description]
+-   [Diffusemap\_(Material\_global\_keyword).html diffusemap]
+-   [ForceOpaque\_(Material\_global\_keyword).html forceOpaque]
+-   [ForceOverlays\_(Material\_global\_keyword).html forceOverlays]
+-   [ForceShadows\_(Material\_global\_keyword).html forceShadows]
+-   [Guisurf\_(Material\_global\_keyword).html guisurf]
+-   [Mirror\_(Material\_global\_keyword).html mirror]
+-   [NoFog\_(Material\_global\_keyword).html noFog]
+-   [NoOverlays\_(Material\_global\_keyword).html noOverlays]
+-   [NoSelfShadow\_(Material\_global\_keyword).html noSelfShadow]
+-   [NoShadows\_(Material\_global\_keyword).html noShadows]
+-   [PolygonOffset\_(Material\_global\_keyword).html polygonOffset]
+-   [Qer\_editorimage\_(Material\_global\_keyword).html qer\_editorimage]
+-   [Renderbump\_(Material\_global\_keyword).html renderbump]
+-   [Sort\_(Material\_global\_keyword).html sort]
+-   [Spectrum\_(Material\_global\_keyword).html spectrum]
+-   [Specularmap\_(Material\_global\_keyword).html specularmap]
+-   [Translucent\_(Material\_global\_keyword).html translucent]
+-   [TwoSided\_(Material\_global\_keyword).html twoSided]
+-   [UnsmoothedTangents\_(Material\_global\_keyword).html unsmoothedTangents]
+-   [Zeroclamp\_(Material\_global\_keyword).html zeroclamp]
+
+Light Keywords
+--------------
+
+-   <span class="deadlink">ambientLight</span>
+-   <span class="deadlink">blendLight</span>
+-   <span class="deadlink">fogLight</span>
+-   <span class="deadlink">lightFalloffImage</span>
+-   <span class="deadlink">noPortalFog</span>
+
+Surface Parameters
+------------------
+
+-   <span class="deadlink">aasobstacle</span>
+-   <span class="deadlink">aassolid</span>
+-   [Areaportal\_(Material\_global\_keyword).html areaportal]
+-   <span class="deadlink">blood</span>
+-   [Cardboard\_(Material\_global\_keyword).html cardboard]
+-   <span class="deadlink">collision</span>
+-   [Discrete\_(Material\_global\_keyword).html discrete]
+-   flashlight\_trigger
+-   [Flesh\_(Material\_global\_keyword).html flesh]
+-   [Glass\_(Material\_global\_keyword).html glass]
+-   <span class="deadlink">ikclip</span>
+-   <span class="deadlink">ladder</span>
+-   [Liquid\_(Material\_global\_keyword).html liquid]
+-   [Metal\_(Material\_global\_keyword).html metal]
+-   <span class="deadlink">monsterclip</span>
+-   <span class="deadlink">moveableclip</span>
+-   <span class="deadlink">nodamage</span>
+-   [NoFragment\_(Material\_global\_keyword).html noFragment]
+-   noimpact
+-   nonsolid
+-   nosteps
+-   nullnormal
+-   [Plastic\_(Material\_global\_keyword).html plastic]
+-   <span class="deadlink">playerclip</span>
+-   [Qer\_nocarve\_(Material\_global\_keyword).html qer\_nocarve]
+-   [Ricochet\_(Material\_global\_keyword).html ricochet]
+-   <span class="deadlink">slick</span>
+-   solid
+-   [Stone\_(Material\_global\_keyword).html stone]
+-   [Surfacetype10\_(Material\_global\_keyword).html surfacetype10]
+-   [Surfacetype11\_(Material\_global\_keyword).html surfacetype11]
+-   [Surfacetype12\_(Material\_global\_keyword).html surfacetype12]
+-   [Surfacetype13\_(Material\_global\_keyword).html surfacetype13]
+-   [Surfacetype14\_(Material\_global\_keyword).html surfacetype14]
+-   [Surfacetype15\_(Material\_global\_keyword).html surfacetype15]
+-   trigger
+-   <span class="deadlink">water</span>
+-   [Wood\_(Material\_global\_keyword).html wood]
+

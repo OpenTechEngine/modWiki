@@ -1,0 +1,34 @@
+OverrideAnim (script event)
+===========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Disables the animation currently playing on the given channel and syncs // the animation with the animation of the nearest animating channel.
+
+Usage
+-----
+
+void overrideAnim( float channel )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

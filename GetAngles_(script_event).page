@@ -1,0 +1,35 @@
+GetAngles (script event)
+========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the current orientation of this entity (relative to bind parent if any).
+
+Usage
+-----
+
+*vector* getAngles()
+
+Parameters
+----------
+
+This script event does not accept parameters.
+
+Examples
+--------
+
+` `
+`angles = `<font color="#000055">`$player1`</font>`.`<font color="#ff0000">`getAngles`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event returns the orientation of this entity as a vector.
+
+

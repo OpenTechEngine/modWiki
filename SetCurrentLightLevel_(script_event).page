@@ -1,0 +1,34 @@
+SetCurrentLightLevel (script event)
+===================================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Set current light level (range is 0 to "levels")
+
+Usage
+-----
+
+void setCurrentLightLevel( float level )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

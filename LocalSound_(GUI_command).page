@@ -1,0 +1,20 @@
+LocalSound (GUI command)
+========================
+
+Plays a sound on the player (client) machine.
+
+This seems to be just a shortcut to the [Set\_(GUI\_command).html set command] using *cmd* and *play* parameters. If I had to guess, I'd say this command was added later in development on the Doom 3 engine, as id Software seems to use the set version most of the times instead.
+
+Syntax
+------
+
+`localSound `*`sound`*
+
+*sound* is a reference to a sound or sound shader on the game.
+
+Example(s)
+----------
+
+`localSound "guisounds_ping2";`
+
+

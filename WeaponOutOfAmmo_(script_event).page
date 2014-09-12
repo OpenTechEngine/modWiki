@@ -1,0 +1,42 @@
+WeaponOutOfAmmo (script event)
+==============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Disables the ability of the weapon to fire.
+
+Usage
+-----
+
+*void* weaponOutOfAmmo()
+
+Parameters
+----------
+
+This event does not accept parameters.
+
+Examples
+--------
+
+<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` !`<font color="#0000ff">`ammoInClip`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`       `<font color="#0000ff">`playCycle`</font><font color="#000000">`(`</font>` ANIMCHANNEL_ALL, `<font color="#666666">`"idle_empty"`</font>` `<font color="#000000">`)`</font>`;`
+`       `<font color="#0000ff">`weaponOutOfAmmo`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+`   `<font color="#000000">`}`</font>` `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>
+`       `<font color="#0000ff">`playCycle`</font><font color="#000000">`(`</font>` ANIMCHANNEL_ALL, `<font color="#666666">`"idle"`</font>` `<font color="#000000">`)`</font>`;`
+`       `<font color="#0000ff">`weaponReady`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+`   `<font color="#000000">`}`</font>
+
+Notes
+-----
+
+This script event is present in every weapon script, specifically the if/then statement depicted in the example.
+
+This script event does not return any values.
+
+

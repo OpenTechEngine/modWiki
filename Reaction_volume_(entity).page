@@ -1,0 +1,43 @@
+Reaction volume (entity)
+========================
+
+> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+
+Description
+-----------
+
+Entities that send reaction messages can use this volume to filter which monsters receive a reaction and which targets this reaction will consider valid
+
+Spawn Arguments
+---------------
+
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+
+| KEY              | DESCRIPTION                                                                                                                                              |
+|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| editor\_color    | Description not available.                                                                                                                               |
+| editor\_material | Description not available.                                                                                                                               |
+| editor\_maxs     | Description not available.                                                                                                                               |
+| editor\_mins     | Description not available.                                                                                                                               |
+| editor\_usage    | Entities that send reaction messages can use this volume to filter which monsters receive a reaction and which targets this reaction will consider valid |
+| monsters         | Description not available.                                                                                                                               |
+| players          | Description not available.                                                                                                                               |
+| spawnclass       | Description not available.                                                                                                                               |
+
+Inheritance
+-----------
+
+This entity is derived from the following:
+
+-   '' hhReactionVolume''
+    -   *' reaction\_volume*'
+
+**Note**: Entries marked in italics are classes defined in the SDK.
+
+Notes
+-----
+
+Notes not available.
+

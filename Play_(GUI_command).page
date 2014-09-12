@@ -1,0 +1,18 @@
+Play (GUI command)
+==================
+
+Used to make a GUI trigger a sound shader to play.
+
+Syntax
+------
+
+`play <sound shader>`
+
+*sound shader* is the name of the sound shader to play. The command needs to be used with [Set\_(GUI\_command).html set].
+
+Example(s)
+----------
+
+`set "cmd" "play guisounds_click3";`
+
+

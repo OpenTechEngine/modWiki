@@ -1,0 +1,22 @@
+Variablebackground (GUI item property)
+======================================
+
+This may be needed when the [Background\_(GUI\_item\_property).html background property] uses a variable instead of a constant value, but it does not appear to be a real property. Variable-based [Background\_(GUI\_item\_property).html background properties] do function without this property, but the texture referred to draws absolutely-last, even drawing on top of the GUI cursor. This property would appear to be a workaround, but it does not appear to function, and is not referenced on iddevnet.com.
+
+Syntax
+------
+
+`variablebackground `*`flag`*
+
+Default value
+-------------
+
+`0`
+
+Example(s)
+----------
+
+`background     "gui::itemicon"`
+`variablebackground     1`
+
+

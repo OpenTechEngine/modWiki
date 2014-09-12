@@ -1,0 +1,34 @@
+Bob (script event)
+==================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Initiates a translation back and forth along the given vector with the given speed and sphase.
+
+Usage
+-----
+
+void bob( float speed, float phase, vector distance )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

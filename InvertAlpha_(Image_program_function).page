@@ -1,0 +1,37 @@
+InvertAlpha (Image program function)
+====================================
+
+Description
+-----------
+
+This function will invert the alpha channel of the specified image.
+
+Usage
+-----
+
+`invertAlpha ([map])`
+
+Parameters
+----------
+
+-   [map] - The image containing the alpha channel to invert.
+
+Example
+-------
+
+Invert the alpha channel...
+
+`textures/inverted_alpha`
+`{`
+`   {`
+`      blend blend`
+`      map   invertAlpha(textures/custom/image_1.tga)`
+`   }`
+`}`
+
+Notes
+-----
+
+None.
+
+

@@ -1,0 +1,34 @@
+Stop (script event)
+===================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Stops a func\_camera\_anim if it was playing an [MD5ANIM\_(file\_format).html MD5Anim] file.
+
+Usage
+-----
+
+*void* stop( )
+
+Parameters
+----------
+
+None.
+
+Examples
+--------
+
+<font color="#000055">`$mycamera`</font>`.`<font color="#ff0000">`stop`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>
+
+Notes
+-----
+
+This script event does not return any values.
+
+

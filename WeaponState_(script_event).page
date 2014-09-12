@@ -1,0 +1,38 @@
+WeaponState (script event)
+==========================
+
+<div id="attention" class="boilerplate metadata" style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa">
+**This page is in urgent need of attention because: '' The information presented in this article is incomplete.**''
+
+If you disagree with this, please explain why on [its talk page](http://web.archive.org/web/20081120152438/http://www.modwiki.net/wiki/Talk:WeaponState_%28script_event%29).
+
+</div>
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type idWeapon
+
+Description
+-----------
+
+Set the state of the [Script\_object.html script objects] [Finite\_State\_Machine\_(scripting).html Finite State Machine].
+
+Usage
+-----
+
+*void* weaponState( *string* **stateFunction**, *float* **blendFrames** )
+
+Parameters
+----------
+
+-   [stateFunction] - Name of the state to set. This is simply the name of a function in the script object.
+-   [blendFrames] - Frames of animation to blend over state change.
+
+Examples
+--------
+
+<font color="#0000ff">`weaponState`</font><font color="#000000">`(`</font>` `<font color="#666666">`"Idle"`</font>`, PLASMAGUN_FIRE_TO_IDLE `<font color="#000000">`)`</font>
+<font color="#0000ff">`weaponState`</font><font color="#000000">`(`</font>` `<font color="#666666">`"Raise"`</font>`, `<font color="#0000dd">`0`</font>` `<font color="#000000">`)`</font>
+
+Notes
+-----

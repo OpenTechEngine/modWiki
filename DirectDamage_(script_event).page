@@ -1,0 +1,36 @@
+DirectDamage (script event)
+===========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Directly damages the given entity using the given damage def.
+
+Usage
+-----
+
+*void* directDamage( "entity" "damageTarget", "string" "damageDef" )
+
+Parameters
+----------
+
+-   damageTarget
+-   damageDef
+
+Examples
+--------
+
+` `
+`none`
+
+Notes
+-----
+
+This script event does not return any values.
+
+

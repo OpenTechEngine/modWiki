@@ -1,0 +1,92 @@
+GetButtons (script event)
+=========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the button state from the current user command.
+
+Usage
+-----
+
+float getButtons( )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+<font color="#0000ff">`float`</font>` userbuttons,`
+`   btn0,`
+`   btn1,`
+`   btn2,`
+`   btn3,`
+`   btn4,`
+`   btn5,`
+`   btn6,`
+`   btn7;`
+` `
+`userbuttons = `<font color="#000055">`$player1`</font>`.`<font color="#ff0000">`getButtons`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+` `
+`btn0 = `<font color="#0000dd">`1`</font>` & userbuttons;`
+`btn1 = `<font color="#0000dd">`2`</font>` & userbuttons;`
+`btn2 = `<font color="#0000dd">`4`</font>` & userbuttons;`
+`btn3 = `<font color="#0000dd">`8`</font>` & userbuttons;`
+`btn4 = `<font color="#0000dd">`16`</font>` & userbuttons;`
+`btn5 = `<font color="#0000dd">`32`</font>` & userbuttons;`
+`btn6 = `<font color="#0000dd">`64`</font>` & userbuttons;`
+`btn7 = `<font color="#0000dd">`128`</font>` & userbuttons;`
+` `
+<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>`btn0`<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`   `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font><font color="#666666">`"Attack was pressed."`</font><font color="#000000">`)`</font>`;`
+<font color="#000000">`}`</font>
+<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>`btn1`<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`   `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font><font color="#666666">`"Run was pressed."`</font><font color="#000000">`)`</font>`;`
+<font color="#000000">`}`</font>
+<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>`btn2`<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`   `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font><font color="#666666">`"Zoom was pressed."`</font><font color="#000000">`)`</font>`;`
+<font color="#000000">`}`</font>
+<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>`btn3`<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`   `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font><font color="#666666">`"Scores was pressed."`</font><font color="#000000">`)`</font>`;`
+<font color="#000000">`}`</font>
+<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>`btn4`<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`   `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font><font color="#666666">`"Mouse look was pressed."`</font><font color="#000000">`)`</font>`;`
+<font color="#000000">`}`</font>
+<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>`btn5`<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`   `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font><font color="#666666">`"Button 5 was pressed."`</font><font color="#000000">`)`</font>`;`
+<font color="#000000">`}`</font>
+<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>`btn6`<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`   `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font><font color="#666666">`"Button 6 was pressed."`</font><font color="#000000">`)`</font>`;`
+<font color="#000000">`}`</font>
+<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>`btn7`<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`   `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font><font color="#666666">`"Button 7 was pressed."`</font><font color="#000000">`)`</font>`;`
+<font color="#000000">`}`</font>
+
+Notes
+-----
+
+The value returned bares relation to the status of eight possible buttons as defined in the SDK under UsercmdGen.h...
+
+`// usercmd_t->button bits`
+`const int BUTTON_ATTACK            = BIT(0);`
+`const int BUTTON_RUN           = BIT(1);`
+`const int BUTTON_ZOOM          = BIT(2);`
+`const int BUTTON_SCORES            = BIT(3);`
+`const int BUTTON_MLOOK         = BIT(4);`
+`const int BUTTON_5             = BIT(5);`
+`const int BUTTON_6             = BIT(6);`
+`const int BUTTON_7             = BIT(7);`
+
+Each button's status is stored as a single bit in a eight bit binary number. Each button is represented by either a 1 or 0 which corresponds with either an on or off state. The resulting binary number therefore represents the status of each button.
+
+The example above depicts a way to determine which buttons are being pressed via getButtons.
+
+

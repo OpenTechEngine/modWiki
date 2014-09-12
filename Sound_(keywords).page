@@ -1,0 +1,53 @@
+Sound (keywords)
+================
+
+Sound shader keywords:
+
+Non-game Specific
+-----------------
+
+-   [AltSound\_(Sound\_shader\_keyword).html altSound]
+-   [Description\_(Sound\_shader\_keyword).html description]
+-   [Global\_(Sound\_shader\_keyword).html global]
+-   [LeadinVolume\_(Sound\_shader\_keyword).html leadinVolume]
+-   [Looping\_(Sound\_shader\_keyword).html looping]
+-   [MaxDistance\_(Sound\_shader\_keyword).html maxDistance]
+-   [MinDistance\_(Sound\_shader\_keyword).html minDistance]
+-   [MinSamples\_(Sound\_shader\_keyword).html minSamples]
+-   [No\_dups\_(Sound\_shader\_keyword).html no\_dups]
+-   [No\_flicker\_(Sound\_shader\_keyword).html no\_flicker]
+-   [No\_occlusion\_(Sound\_shader\_keyword).html no\_occlusion]
+-   [Omnidirectional\_(Sound\_shader\_keyword).html omnidirectional]
+-   [Private\_(Sound\_shader\_keyword).html private]
+-   [Shakes\_(Sound\_shader\_keyword).html shakes]
+-   [SoundClass\_(Sound\_shader\_keyword).html soundClass]
+-   [Unclamped\_(Sound\_shader\_keyword).html unclamped]
+
+Doom 3 specific
+---------------
+
+-   [Leadin\_(Sound\_shader\_keyword).html leadin]
+-   [Mask\_backleft\_(Sound\_shader\_keyword).html mask\_backleft]
+-   [Mask\_backright\_(Sound\_shader\_keyword).html mask\_backright]
+-   [Mask\_center\_(Sound\_shader\_keyword).html mask\_center]
+-   [Mask\_left\_(Sound\_shader\_keyword).html mask\_left]
+-   [Mask\_lfe\_(Sound\_shader\_keyword).html mask\_lfe]
+-   [Mask\_right\_(Sound\_shader\_keyword).html mask\_right]
+-   [Volume\_(Sound\_shader\_keyword).html volume]
+
+Quake 4 specific
+----------------
+
+-   antiPrivate
+-   causeRumble
+-   center
+-   frequencyshift
+-   frequentlyUsed
+-   no\_shakes
+-   noRandomStart
+-   onDemand
+-   playonce
+-   [ShakeData\_(Sound\_shader\_keyword).html shakeData]
+-   voForPlayer
+-   volumeDb
+

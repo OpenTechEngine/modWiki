@@ -1,0 +1,34 @@
+GetCurrentWeapon (script event)
+===============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns "weaponX" where X is the number of the weapon the player is currently holding.
+
+Usage
+-----
+
+string getCurrentWeapon( )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

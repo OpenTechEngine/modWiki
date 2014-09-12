@@ -1,0 +1,64 @@
+Particle (decl)
+===============
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+Particle declarations reference a material and provide the parameters needed to reproduce a particle stream in game.
+
+|----------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                            
+ Contents                                                                                                        
+ --------                                                                                                        
+                                                                                                                 
+ </div>                                                                                                          
+ -   [Particle\_(decl).html\#Syntax <span class="tocnumber">1</span> <span class="toctext">Syntax</span>]        
+ -   [Particle\_(decl).html\#Keywords <span class="tocnumber">2</span> <span class="toctext">Keywords</span>]    
+     -   [Particle\_(decl).html\#Global <span class="tocnumber">2.1</span> <span class="toctext">Global</span>]  
+     -   [Particle\_(decl).html\#Stage <span class="tocnumber">2.2</span> <span class="toctext">Stage</span>]    |
+
+Syntax
+------
+
+`particle [name] {`
+`  [global]`
+`    {`
+`      [stage]`
+`    }`
+`    ...`
+`}`
+
+Keywords
+--------
+
+### Global
+
+| Keywords & Usage   | Description |
+|--------------------|-------------|
+| depthHack \<bool\> | ???         |
+
+### Stage
+
+| Keywords & Usage                               | Description |
+|------------------------------------------------|-------------|
+| count \<number\>                               | ???         |
+| material \<name\>                              | ???         |
+| time \<time\>                                  | ???         |
+| cycles \<number\>                              | ???         |
+| bunching \<number\>                            | ???         |
+| distribution \<shape\> \<x\> \<y\> \<z\>       | ???         |
+| direction \<shape\> \<number\>                 | ???         |
+| orientation \<type\>                           | ???         |
+| speed \<number\>                               | ???         |
+| size \<number\>                                | ???         |
+| aspect \<number\>                              | ???         |
+| fadeIn \<number\>                              | ???         |
+| fadeOut \<number\>                             | ???         |
+| fadeIndex \<number\>                           | ???         |
+| color \<red\> \<green\> \<blue\> \<alpha\>     | ???         |
+| fadeColor \<red\> \<green\> \<blue\> \<alpha\> | ???         |
+| offset \<x\> \<y\> \<z\>                       | ???         |
+| gravity \<type\> \<value\>                     | ???         |
+| rotation \<value\> to \<value\>                | ???         |
+| randomDistribution \<bool\>                    | ???         |
+| boundsExpansion \<value\>                      | ???         |
+
+

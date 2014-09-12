@@ -1,0 +1,53 @@
+ListDef (GUI item type)
+=======================
+
+<div class="thumb tright">
+<div style="width: 182px">
+![A listDef from Doom3](images_thumb_4_40_Gui_example_listdef.png_180px-Gui_example_listdef.png "A listDef from Doom3")
+
+<div class="thumbcaption">
+<div class="magnify" style="float: right">
+![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
+
+</div>
+A listDef from Doom3
+
+</div>
+</div>
+</div>
+A list of textual items for selection. Most lists in generated in the engine, including the list of saved games, the multiplayer server list, the list of maps, the mods list, and several others. In Doom 3, the lists used in the PDA (PDAs, emails, audio logs, videos) are generated dynamically in the game code, allowing dynamic addition of new assets.
+
+Additional properties
+---------------------
+
+-   [ListName\_(GUI\_item\_property).html listName]
+-   horizontal
+-   [MultipleSel\_(GUI\_item\_property).html multipleSel]
+-   [TabStops\_(GUI\_item\_property).html tabStops]
+-   [TabAligns\_(GUI\_item\_property).html tabAligns]
+-   tabTextScales
+-   tabValigns
+-   itemheight
+
+Example(s)
+----------
+
+`listDef MMCLoadList {`
+`   rect    0, 0, 306, 212`
+`   foreColor   1, 1, 1, 1`
+`   bordercolor 0.3 ,0.52 ,0.5 ,0.5`
+`   textscale   0.25`
+`   listName    "modsList"`
+`   font    "fonts/an"`
+`   `
+`   onAction {`
+`       set "cmd" "play guisounds_click3" ;`
+`       resetTime "MMCBtn1" "0" ;`
+`   }`
+`   onEnter {`
+`       set "cmd" "play guisounds_menuclickup" ; `
+`       set "cmd" "loadMod" ;`
+`   }`
+`}`
+
+

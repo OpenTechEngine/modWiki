@@ -1,0 +1,34 @@
+ForcePosture (script event)
+===========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+force the posture of a tactical ai entity (posture list is in defs.h as AIPOSTURE\_\* )
+
+Usage
+-----
+
+void forcePosture( float posture )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

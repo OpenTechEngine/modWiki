@@ -1,0 +1,90 @@
+Prop pda (entity)
+=================
+
+> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+
+Description
+-----------
+
+Object that changes animation when triggered.
+
+Spawn Arguments
+---------------
+
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+
+| KEY               | DESCRIPTION                                                                       |
+|-------------------|-----------------------------------------------------------------------------------|
+| angle             | Description not available.                                                        |
+| angles            | Description not available.                                                        |
+| anim              | anim to play when triggered. (unless 'num\_anims' is set)                         |
+| bind              | Description not available.                                                        |
+| bindOrientated    | Description not available.                                                        |
+| bindToBody        | Description not available.                                                        |
+| bindToJoint       | Description not available.                                                        |
+| bindanim          | Description not available.                                                        |
+| blend\_in         | how long to transition from the start\_anim to the triggered anim.                |
+| cameraTarget      | Description not available.                                                        |
+| cinematic         | Description not available.                                                        |
+| classname         | Description not available.                                                        |
+| clipmodel         | Description not available.                                                        |
+| cone              | Description not available.                                                        |
+| cycle             | how many times to play the animation after being triggered (use -1 for infinite). |
+| cylinder          | Description not available.                                                        |
+| editor\_bool XXXX | Description not available.                                                        |
+| editor\_color     | Description not available.                                                        |
+| editor\_copy2     | Description not available.                                                        |
+| editor\_maxs      | Description not available.                                                        |
+| editor\_mins      | Description not available.                                                        |
+| editor\_usage     | Object that changes animation when triggered.                                     |
+| editor\_var XXXX  | Description not available.                                                        |
+| guiTarget         | Description not available.                                                        |
+| health            | Description not available.                                                        |
+| hide              | Description not available.                                                        |
+| inherit           | Description not available.                                                        |
+| joint             | Description not available.                                                        |
+| maxs              | Description not available.                                                        |
+| mins              | Description not available.                                                        |
+| model             | Description not available.                                                        |
+| name              | Description not available.                                                        |
+| networkSync       | Description not available.                                                        |
+| neverDormant      | Description not available.                                                        |
+| noGrab            | Description not available.                                                        |
+| noclipmodel       | Description not available.                                                        |
+| origin            | Description not available.                                                        |
+| pose\_frame       | Description not available.                                                        |
+| remove            | Description not available.                                                        |
+| rotation          | Description not available.                                                        |
+| scriptobject      | Description not available.                                                        |
+| size              | Description not available.                                                        |
+| skin\_xray        | Description not available.                                                        |
+| slowmo            | Description not available.                                                        |
+| solidForTeam      | Description not available.                                                        |
+| sound\_bone       | Bone to play sounds from.                                                         |
+| spawnclass        | Description not available.                                                        |
+| target            | all entities with a matching name will be used after anim plays.                  |
+| wait              | how long to wait before auto activating. -1 means only activate when triggered.   |
+
+Inheritance
+-----------
+
+This entity is derived from the following:
+
+-   *[IdEntity\_(class).html idEntity]*
+    -   '' idAnimatedEntity''
+        -   '' idAFEntity\_Base''
+            -   '' idAFEntity\_Gibbable''
+                -   '' idAnimated''
+                    -   [Func\_animate\_(entity).html func\_animate]
+                        -   [Cin\_base\_(entity).html cin\_base]
+                            -   *' prop\_pda*'
+
+**Note**: Entries marked in italics are classes defined in the SDK.
+
+Notes
+-----
+
+Notes not available.
+

@@ -1,0 +1,34 @@
+VecToAngles (script event)
+==========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns Euler angles for the given direction.
+
+Usage
+-----
+
+vector VecToAngles( vector vec )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

@@ -1,0 +1,44 @@
+Close (script event)
+====================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Closes the door.
+
+Usage
+-----
+
+void close( )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+<font color="#339900">`// Opens or closes a door depending on it's current state ...`</font>
+` `
+<font color="#0000ff">`void`</font>` doorToggle`<font color="#000000">`(`</font>`ent door`<font color="#000000">`)`</font>
+<font color="#000000">`{`</font>
+`        `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>`door.`<font color="#ff0000">`isOpen`</font><font color="#000000">`(`</font><font color="#000000">`)`</font><font color="#000000">`)`</font>
+`        `<font color="#000000">`{`</font>
+`                door.`<font color="#ff0000">`close`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+`        `<font color="#000000">`}`</font>` `<font color="#0000ff">`else`</font>`  `<font color="#000000">`{`</font>
+`                door.`<font color="#ff0000">`open`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+`        `<font color="#000000">`}`</font>
+<font color="#000000">`}`</font>
+
+Notes
+-----
+
+tba
+
+

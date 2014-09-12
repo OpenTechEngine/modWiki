@@ -1,0 +1,64 @@
+The annotated API
+=================
+
+Quirks or points of interest in the game code.
+
+Articles
+--------
+
+[The\_Doom\_3\_AAS\_system.html The Doom 3 AAS system]
+
+<span class="deadlink">ParseEventArgPtr</span>
+
+### Enemy Territory: Quake Wars
+
+<span class="deadlink">Bot world state update issue</span>
+
+Files
+-----
+
+<div style="padding: .4em .9em .9em">
+<div style="text-align: left; margin-left: 60px">
+`
+
+* /src
+** /cm
+** /d3xp
+*** /ai
+*** /anim
+*** /gamesys
+*** /physics
+*** /script
+** /framework
+*** /async
+** /[Game_(source_folder).html game]
+*** /<span class="deadlink">ai</span>
+*** /anim
+*** /gamesys
+*** /<span class="deadlink">physics</span>
+*** /script
+** /idlib
+*** /bv
+*** /containers
+*** /geometry
+*** /hashing
+*** /<span class="deadlink">math</span>
+** /MayaImport
+*** /Maya4.5
+*** /maya5.0
+*** /Maya6.0
+** /[Renderer_(source_folder).html renderer]
+** /sound
+** /sys
+*** /linux
+*** /scons
+** /tools
+*** /compilers
+**** /aas
+** /ui
+
+`
+
+</div>
+</div>
+

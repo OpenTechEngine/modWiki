@@ -1,0 +1,181 @@
+Folder structure (ETQW)
+=======================
+
+<div style="padding: 1px; border: 0px solid #000000" align="left">
+<font size="18px"><font color="black">![Image:Etqwsquare\_bg.png](images_f_f9_Etqwsquare_bg.png "fig:Image:Etqwsquare_bg.png") The information on this page is specific to [Enemy Territory: Quake Wars](http://web.archive.org/web/20121206024939/http://www.modwiki.net:80/wiki/Enemy_Territory:_Quake_Wars).</font></font>
+
+</div>
+
+------------------------------------------------------------------------
+
+This is the folder structure of ETQW. It should be noted that these folders are not present in the base folder itself. Instead, these folders and the assets contained therein are stored in [PK4\_(file\_format).html PK4 archives].
+
+<table>
+<colgroup>
+<col width="2%" />
+<col width="8%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><p><font color="#000"></p>
+<div style="padding: .4em .9em .9em">
+<h3>Folder structure:</h3>
+<div style="text-align: left; margin-left: 10px">
+<p><font size="14px"><code>
+
+* /[Folder_structure_(ETQW).html#.2Fbase base]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Faf af]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fatlas atlas]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fatmosphere atmosphere]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fbindings bindings]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fbots bots]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fcommandmaps commandmaps]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fdecals decals]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fdef def]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fdemos demos]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Feffects effects]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fenv env]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fgenerated generated]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fguis guis]
+*** /[Folder_structure_(ETQW).html#.2Fbase.2Fguis.2Fthemes themes]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fheightmaps heightmaps]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fimposters imposters]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Flevelshots levelshots]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Flights lights]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Flocalization localization]
+*** /[Folder_structure_(ETQW).html#.2Fbase.2Flocalization.2Ffonts fonts]
+*** /[Folder_structure_(ETQW).html#.2Fbase.2Flocalization.2Flocstr locstr]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Flogs logs]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fmapinfo mapinfo]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fmaps maps]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fmasks masks]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fmaterials materials]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fmegatextures megatextures]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fmenus menus]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fmodels models]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fquickchat quickchat]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Frenderlight renderlight]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Frenderprogs renderprogs]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fscript script]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fscreenshots screenshots]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fskins skins]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fsounds sounds]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fspecs specs]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fsrc src]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fstuff stuff]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fsurfacetypes surfacetypes]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Ftemplates templates]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Ftextures textures]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Ftools tools]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fvehicles vehicles]
+** /[Folder_structure_(ETQW).html#.2Fbase.2Fvideo video]
+
+</code></font></p>
+</div>
+</div>
+<p></font></p></td>
+<td align="left"><h3>/base</h3>
+<p>This is the default ETQW mod directory. The contents of this directory include all the game assets used in the game. Mods for ETQW should be created in their own directory in the main ETQW installation folder as a brother folder to /base. In the engine code your mod base name is always called &quot;base&quot; no matter the actual physical name. You set the game to use a different folder as base with the [Fs_game_(cvar).html fs_game] cvar.</p>
+<p>You can also set the [Fs_game_base_(cvar).html fs_game_base] cvar to let you base a mod off base game and your own content as usual as well as an additional mod.</p>
+<p><strong>Note:</strong> While you probably want to work on your mod with the assets decompressed and available in the ETQW folder structure, when you release your mod you should put them into .[PK4_(file_format).html PK4] files.</p>
+<h3>/base/af</h3>
+<p>This folder contains .[AF_(file_format).html AF] files which setup the [Af_(decl).html articulated figure declarations].</p>
+<h3>/base/atlas</h3>
+<h3>/base/atmosphere</h3>
+<p>This folder contains .ATM files which setup the atmosphere declarations.</p>
+<h3>/base/bindings</h3>
+<p>This folder contains .BINDING files which setup the key bindings declarations.</p>
+<h3>/base/bots</h3>
+<p>This folder contains a .[DAT_(file_format).html DAT] file with the bots' names as a series of strings.</p>
+<h3>/base/commandmaps</h3>
+<p>This folder contains .[TGA_(file_format).html TGA] files for the various command maps.</p>
+<h3>/base/decals</h3>
+<p>This folder contains .DECAL files which setup the decal declarations.</p>
+<h3>/base/def</h3>
+<p>This folder contains .[DEF_(file_format).html DEF] files which contain [Declarations.html declarations] for entities, models and modelexport.</p>
+<h3>/base/demos</h3>
+<p>This folder contains .NDM files which are network gameplay recordings.</p>
+<h3>/base/effects</h3>
+<p>This folder contains .EFFECT files which setup the effect declarations.</p>
+<h3>/base/env</h3>
+<p>This folder contains [Images.html images] for [Cube_maps.html environment maps] which are textures applied to the inside faces of a skybox to give the appearance of large spaces and to ambient lights to simulate bounced light.</p>
+<h3>/base/generated</h3>
+<p>This folder contains compiled declarations, assets in binary format and hashed compressed textures for use with the retail game. Files here follow the same folder hierarchy.</p>
+<h3>/base/guis</h3>
+<p>This folder contains .[GUI_(file_format).html GUI] files which setup the gui declarations.</p>
+<h3>/base/guis</h3>
+<p>This folder contains .GUITHEME files which setup the gui theme declarations.</p>
+<h3>/base/heightmaps</h3>
+<p>This folder contains .[TGA_(file_format).html TGA] files for a map's height determination.</p>
+<h3>/base/imposters</h3>
+<p>This folder contains .IMP files which setup the imposter and imposter generator declarations.</p>
+<h3>/base/levelshots</h3>
+<p>This folder contains .[TGA_(file_format).html TGA] files for a map's screenshot in the server browser and loading screen.</p>
+<h3>/base/lights</h3>
+<p>This folder contains .[TGA_(file_format).html TGA] files which become available for use in [Material_(decl).html light materials] to create 'light styles' that modulate what light projects onto the surfaces of the world.</p>
+<h3>/base/localization</h3>
+<p>Contains .[LANG_(file_format).html LANG] Files for text and sound files for sound localization (.[OGG_(file_format).html OGG] or .[WAV_(file_format).html WAV]).</p>
+<h3>/base/localization/fonts</h3>
+<h3>/base/localization/locstr</h3>
+<p>This folder contains .LOCSTR files which setup the localization string declarations.</p>
+<h3>/base/logs</h3>
+<p>This folder contains .CSV files which store proficiency and experience point logs.</p>
+<h3>/base/mapinfo</h3>
+<p>This folder contains .MD files which setup the map information declarations.</p>
+<p><br /></p>
+<h3>/base/maps</h3>
+<p>This folder contains [Maps_(folder).html all the files] for each map.</p>
+<h3>/base/masks</h3>
+<p>This folder contains .[TGA_(file_format).html TGA] files for a map's game masks used for determining where the MCP can go, where players start suffering out of bounds damage, etc.</p>
+<h3>/base/materials</h3>
+<p>This folder contains .[MTR_(file_format).html MTR] files which setup the [Material_(decl).html material declarations].</p>
+<h3>/base/megatextures</h3>
+<p>This folder contains all the files for each megatexture.</p>
+<h3>/base/menus</h3>
+<p>This folder contains .RADIALMENU files which setup the radial menu declarations.</p>
+<h3>/base/models</h3>
+<p>This folder contains numerous sub-directories where the following file formats can be found:</p>
+<dl>
+<dt>Model formats</dt>
+<dd>.[ASE_(file_format).html ASE], .[LWO_(file_format).html LWO], .[MD5_(file_format).html MD5].
+</dd>
+<dt>Image formats</dt>
+<dd>.[TGA_(file_format).html TGA], .[DDS_(file_format).html DDS], .[JPG_(file_format).html JPG].
+</dd>
+<dt>Other formats</dt>
+<dd>.[CM_(file_format).html CM].
+</dd>
+</dl>
+<h3>/base/quickchat</h3>
+<p>This folder contains .QC files which setup the quickchat declarations.</p>
+<h3>/base/renderlight</h3>
+<p>This folder contains .RLT files which setup how to pre-light a megatexture.</p>
+<h3>/base/renderprogs</h3>
+<p>This folder contains .RPROG files which setup the render program declarations.</p>
+<h3>/base/script</h3>
+<p>This folder contains .[SCRIPT_(file_format).html SCRIPT] files.</p>
+<h3>/base/screenshots</h3>
+<h3>/base/skins</h3>
+<p>This folder contains .[SKIN_(file_format).html SKIN] files which setup the [Skin_(decl).html skin declarations].</p>
+<h3>/base/sounds</h3>
+<p>This folder contains .[SNDSHD_(file_format).html SNDSHD] files which setup the [Sound_(decl).html sound declarations].</p>
+<h3>/base/specs</h3>
+<h3>/base/src</h3>
+<h3>/base/stuff</h3>
+<p>This folder contains .STUFF files which setup the stuff type declarations.</p>
+<h3>/base/surfacetypes</h3>
+<p>This folder contains .STP files which setup the surface type declarations as well as the .STMAP files which are generated.</p>
+<h3>/base/templates</h3>
+<p>This folder contains .TEMPLATE files which setup the template declarations.</p>
+<h3>/base/textures</h3>
+<p>This folder contains .[TGA_(file_format).html TGA] or .[JPG_(file_format).html JPG] files which become available for use as assets in [Material_(decl).html material declarations].</p>
+<h3>/base/tools</h3>
+<h3>/base/vehicles</h3>
+<p>This folder contains .VSCRIPT files which setup the vehicle declarations.</p>
+<h3>/base/video</h3>
+<p>This folder contains .[BIK_(file_format).html BIK] files which are movies.</p></td>
+</tr>
+</tbody>
+</table>
+
+

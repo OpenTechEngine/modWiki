@@ -1,0 +1,71 @@
+Item armor shard moveable (entity)
+==================================
+
+> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+
+Description
+-----------
+
+1.  str\_107324
+
+Spawn Arguments
+---------------
+
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+
+| KEY                | DESCRIPTION                                                                  |
+|--------------------|------------------------------------------------------------------------------|
+| bouncyness         | Description not available.                                                   |
+| density            | Description not available.                                                   |
+| editor\_bool XXXX  | Description not available.                                                   |
+| editor\_color      | Description not available.                                                   |
+| editor\_copy100    | Description not available.                                                   |
+| editor\_ignore     | Description not available.                                                   |
+| editor\_maxs       | Description not available.                                                   |
+| editor\_menu       | Description not available.                                                   |
+| editor\_mins       | Description not available.                                                   |
+| editor\_model XXXX | Description not available.                                                   |
+| editor\_rotatable  | Description not available.                                                   |
+| editor\_snd XXXX   | Description not available.                                                   |
+| editor\_usage      | 1.  str\_107324                                                              |
+| editor\_var XXXX   | Description not available.                                                   |
+| friction           | Description not available.                                                   |
+| inherit            | Description not available.                                                   |
+| inv\_armor         | Description not available.                                                   |
+| inv\_icon          | icon name for hud graphics                                                   |
+| inv\_item          | Description not available.                                                   |
+| inv\_name          | name referenced for triggers etc.. requiring this to be in inventory to work |
+| itemclipmodel      | Description not available.                                                   |
+| mass               | Description not available.                                                   |
+| model              | Description not available.                                                   |
+| mtr\_highlight     | Description not available.                                                   |
+| nodrop             | Description not available.                                                   |
+| noimpact           | Description not available.                                                   |
+| notPushable        | Description not available.                                                   |
+| report\_stats      | Description not available.                                                   |
+| respawn            | Description not available.                                                   |
+| size               | Description not available.                                                   |
+| snd\_acquire       | Description not available.                                                   |
+| spawnclass         | Description not available.                                                   |
+| triggerSize        | Description not available.                                                   |
+
+Inheritance
+-----------
+
+This entity is derived from the following:
+
+-   [Item\_triggersize\_SP\_(entity).html item\_triggersize\_SP]
+    -   [Item\_default\_(entity).html item\_default]
+        -   [Item\_armor\_(entity).html item\_armor]
+            -   [Item\_armor\_shard\_(entity).html item\_armor\_shard]
+                -   *' item\_armor\_shard\_moveable*'
+
+**Note**: Entries marked in italics are classes defined in the SDK.
+
+Notes
+-----
+
+Notes not available.
+

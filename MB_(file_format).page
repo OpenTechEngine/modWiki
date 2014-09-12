@@ -1,0 +1,16 @@
+MB (file format)
+================
+
+Maya binary model format.
+
+This filetype is not directly useable by idTech4 games. However, it can be interpreted by the engine when converting models and animations into [MD5\_(file\_format).html MD5] formats using the [Exportmodels\_(console\_command).html exportmodels] console command.
+
+Sources where more detailed information on this format can be gathered are listed below.
+
+Links
+-----
+
+-   [The Maya Exporter Fact File](http://web.archive.org/web/20091216055943/http://www.robthebloke.org/research/index.htm)
+-   [gpExport - A Maya Exporter](http://web.archive.org/web/20091216055943/http://florian.loitsch.com/gpExport/)
+-   [How to Write a Simple Maya Model Exporter](http://web.archive.org/web/20091216055943/http://www.gamedev.net/reference/articles/article1906.asp)
+

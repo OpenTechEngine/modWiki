@@ -1,0 +1,34 @@
+DecelTo (script event)
+======================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Initiates a deceleration to the given speed over the given time in seconds.
+
+Usage
+-----
+
+void decelTo( float speed, float time )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

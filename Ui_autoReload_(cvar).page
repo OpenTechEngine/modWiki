@@ -1,0 +1,52 @@
+Ui autoReload (cvar)
+====================
+
+Description
+-----------
+
+This CVar controls automatic reload of weapons
+
+Usage
+-----
+
+At the console type...
+
+`ui_autoreload [bool]`
+
+Parameters
+----------
+
+-   [bool] (0/1)
+
+Flags
+-----
+
+| Flag              | Enabled | Description                                  |
+|-------------------|---------|----------------------------------------------|
+| CVAR\_ALL         |         | all flags                                    |
+| CVAR\_BOOL        | X       | variable is a boolean                        |
+| CVAR\_INTEGER     |         | variable is an integer                       |
+| CVAR\_FLOAT       |         | variable is a float                          |
+| CVAR\_SYSTEM      |         | system variable                              |
+| CVAR\_RENDERER    |         | renderer variable                            |
+| CVAR\_SOUND       |         | sound variable                               |
+| CVAR\_GUI         |         | gui variable                                 |
+| CVAR\_GAME        | X       | game variable                                |
+| CVAR\_TOOL        |         | tool variable                                |
+| CVAR\_USERINFO    | X       | sent to servers, available to menu           |
+| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
+| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
+| CVAR\_STATIC      |         | statically declared, not user created        |
+| CVAR\_CHEAT       |         | variable is considered a cheat               |
+| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
+| CVAR\_INIT        |         | can only be set from the command-line        |
+| CVAR\_ROM         |         | display only, cannot be set by user at all   |
+| CVAR\_ARCHIVE     | X       | set to cause it to be saved to a config file |
+| CVAR\_MODIFIED    |         | set when the variable is modified            |
+
+Notes
+-----
+
+this does not override manual reload. this command is only available to weapons that use ammunition. this command is only handled when attack is pressed, ammo is available in inventory, but weapons' clip is empty
+
+

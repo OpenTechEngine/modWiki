@@ -1,0 +1,34 @@
+GetTraceEndPos (script event)
+=============================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the position the trace stopped due to a collision with solid geometry during the last call to trace or tracePoint
+
+Usage
+-----
+
+vector getTraceEndPos( )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

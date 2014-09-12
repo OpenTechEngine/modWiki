@@ -1,0 +1,34 @@
+SetConstraintPosition (script event)
+====================================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Moves the constraint with the given name that binds this entity to another entity.
+
+Usage
+-----
+
+void SetConstraintPosition( string constraintName, vector position )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

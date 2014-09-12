@@ -1,0 +1,34 @@
+SetJointAngularVelocity (script event)
+======================================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+bdube: programmer controlled joint events
+
+Usage
+-----
+
+void setJointAngularVelocity( string jointName, float pitch, float yaw, float roll, float blendtime )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

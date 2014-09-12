@@ -1,0 +1,367 @@
+PyBot
+=====
+
+## NOTE: This is just for reference and doesn't work like this anymore!
+
+This is a backup of the old MediaWiki based modwiki User:PyBot page that references
+mediawiki bots etc, so it doesn't work like this with Githubs (gollum) Wiki.
+
+However, at least parts of the Python Code can probably be used to generate
+pages for this wiki as well (that could be mass-added via git).
+(Remember, that we use [Markdown](https://help.github.com/articles/github-flavored-markdown)
+instead of MediaWiki Syntax here, though).
+
+-----------
+
+# PyWikipediaBot
+
+It's assumed you already have Python installed and are familiar with it's use.
+
+## Download
+
+Download the Python Wikipedia Robot Framework from one of the sources listed
+at [the PyWikipediaBot project page](http://pywikipediabot.sourceforge.net/).
+
+The location of installation is not important. The only setback is that
+your python program must be stored in the same location in order to import the wikipedia module.
+
+## Configuration
+
+In order for the module to function with www.modwiki.net it must be configured properly.
+
+First, create a new python script with the name user-config.py in
+your PyWikipediaBot installation directory. Then copy and paste the 
+following code into this file and save it.
+
+```
+mylang = 'en'
+family = 'modwiki'
+usernames['modwiki']['en'] = u'PyBot'
+```
+Next, create a new python script with the name modwiki_family.py in 
+the families subfolder of your PyWikipediaBot installation directory. 
+Then copy and paste the following code into this file and save it.
+
+```python
+import family
+
+# Modwiki - idTech 4 and future engine reference
+
+class Family(family.Family):
+
+    def __init__(self):
+        family.Family.__init__(self)
+        self.name = 'modwiki' #Set the family name; this should be the same as in the filename.
+        self.langs = {
+            'en': 'www.modwiki.net', #Put the hostname here.
+        }
+        self.namespaces[4] = {
+            '_default': u'MediaWiki', #Specify the project namespace here. Other
+        }                               #namespaces will be set to MediaWiki default.
+
+        self.namespaces[5] = {
+            '_default': u'MediaWiki talk',
+        }
+
+    def version(self, code):
+        return "1.6.8"  #The MediaWiki version used. Not very important in most cases.
+
+    def path(self, code):
+        return '/w/index.php' #The path of index.php
+```
+Before you can use the bot you must login using this account.
+
+This can be done at the command line on your local machine by 
+browsing to the directory you've installed PyWikipediaBot and invoking 
+login.py with python like so...
+
+    C:\Python25\pywikipediabot\> python login.py
+
+~~Note you must obtain the password for this account from one of the following users: Rich~~
+
+From this point, you simply invoke your python program just as you did login.py above.
+
+## Code
+
+To make use of the module you must import it like so...
+
+    import wikipedia
+
+Then you can retrieve or submit articles like so ...
+
+```python
+site = wikipedia.getSite()
+page = wikipedia.Page(site, 'mypage')
+text = page.get()
+page.put(text, 'Added Article', None, False, False)
+```
+
+## Examples
+
+Source code for modules written specifically for this wiki can be found in this section.
+
+### Entity Listing
+
+The following python script was used to populate the Entity Listing.
+
+> _**NOTE** for Github Wiki:_ If you want to use that script to create pages
+> for this wiki, remember to replace the mediawiki/html stuff with
+> [Github Flavored Markdown (GFM)](https://help.github.com/articles/github-flavored-markdown)
+> for tables, sections etc!
+
+```python
+
+""" idTech 4 data visualization script """
+
+import os
+import fileinput
+import re
+import wikipedia
+
+# create compiled regex
+
+entdef = re.compile(r'entityDef\s(\w*)\s{([^}]*)}')
+kvpair = re.compile(r'\n\s{0,10}"([^"]*)"\s*"([^"]*)"')
+prefix = re.compile(r'(\w*)[\x20\t](\w*)')
+
+clsmethod = re.compile(r'(\w*)::\w*\([^)]*\)\s*(?:\w*\s)?{([^\xBF]*?(?&lt;=\n))}')
+spnarg = re.compile(r'spawnArgs\.[^(]*\(\s"(\w*)')
+clsdec = re.compile(r'CLASS_DECLARATION\(\s([^,]*),\s([^)]*?)\s\)')
+
+print 'Parsing entity declarations...'
+
+# create list of def files
+
+defpath = "E:\\Quake4 Assets\\def"
+deflist = list()
+
+for (path, dname, fnames) in os.walk(defpath):
+    for fn in fnames:
+        if fn.endswith(".def"):
+            deflist.append(os.path.join(path, fn))
+
+# load contents of all def files into string
+
+defstring = str()
+
+for line in fileinput.input(deflist):
+    defstring = defstring + line
+
+# create list comprised of entity name and body
+
+match = re.findall(entdef, defstring)
+
+# parse each element in match feeding a list of key names,
+# the value of inherit, and the value of spawnclass into
+# a dictionary entry under the name of the entity.
+
+entdata = dict()
+
+for x in match:
+    name = x[0]
+    temp = dict(re.findall(kvpair, x[1]))
+    keys = temp.keys()
+    if 'inherit' in temp:
+        inherit = temp['inherit']
+    else:
+        inherit = 'null'
+    if 'spawnclass' in temp:
+        spawnclass = temp['spawnclass']
+    else:
+        spawnclass = 'null'
+        sdk = 0
+    entdata[name] = [keys, inherit, spawnclass, sdk]
+
+print 'Parsing source code...'
+
+# create list of source files
+
+srcpath = "E:\\Q4_SDK\\source"
+srclist = list()
+
+for (path, dname, fnames) in os.walk(srcpath):
+    for fn in fnames:
+        if fn.endswith(".cpp"):
+            srclist.append(os.path.join(path, fn))
+
+# load contents of all source files into string
+
+srcstring = str()
+
+for line in fileinput.input(srclist):
+    srcstring = srcstring + line
+
+# create list comprised of classes and code to check for spawnargs
+
+match = re.findall(clsmethod, srcstring)
+
+# parse each element in match feeding a list of key names,
+# a null value for inherit, and a null value for spawnclass
+# into a dictionary entry under the name of the class.
+
+for x in match:
+    name = x[0]
+    keys = re.findall(spnarg, x[1])
+    if name in entdata:
+        keys += entdata[name][0]
+    inherit = 'null'
+    spawnclass = 'null'
+    sdk = 1
+    entdata[name] = [keys, inherit, spawnclass, sdk]
+
+# create list comprised of class declarations where one class is
+# derived from another.
+
+match = re.findall(clsdec, srcstring)
+
+# parse each element in match feeding the parent class name into
+# the inherit property.
+
+for x in match:
+    name = x[1]
+    inherit = x[0]
+    keys = []
+    spawnclass = 0
+    sdk = 1
+    entdata[name] = [keys, inherit, spawnclass, sdk]
+
+# recursive function to return a list depicting the inheritance of
+# an entity or class
+
+def getInherit(name = '', templist = None):
+    if templist is None:
+        templist = []
+    templist.append(name)
+    if name in entdata:
+        if entdata[name][1] == 'null':
+            if entdata[name][2] == 'null':
+                pass
+            else:
+                return getInherit(entdata[name][2], templist)
+        else:
+            return getInherit(entdata[name][1], templist)
+    return templist
+
+# compiles a list of all available keys including those inherited
+
+def getKeys(name = ''):
+    templist = getInherit(name)
+    keys = []
+    while templist:
+        name = templist.pop()
+        if name in entdata:
+            keys = keys + entdata[name][0]
+    temp = []
+    for x in keys:
+        if x in temp:
+            pass
+        else:
+            if re.match(prefix, x):
+                temp1 = re.findall(prefix, x)
+                if temp1[0][0] + ' XXXX' in temp:
+                    pass
+                else:
+                    temp.append(temp1[0][0] + ' XXXX')
+                    if temp1[0][0] in temp:
+                        temp.remove(temp1[0][0])
+            else:
+                temp.append(x)
+        temp.sort()
+    return temp
+
+def getKV(name = ''):
+    match = re.findall(entdef, defstring)
+    data = dict()
+    for x in match:
+        data[x[0]] = x[1]
+    hiarchy = getInherit(name)
+    kvdict = dict()
+    while hiarchy:
+        name = hiarchy.pop()
+        if name in entdata:
+            if entdata[name][3] == 0:
+                temp = dict(re.findall(kvpair, data[name]))
+                for x in temp:
+                    if re.match(prefix, x):
+                        temp1 = re.findall(prefix, x)
+                        if temp1[0][0] == 'editor_var':
+                            kvdict[temp1[0][1]] = temp[x]
+                    if x == 'editor_usage':
+                        kvdict[x] = temp[x]
+    return kvdict
+
+# present data formatted for wiki article
+
+def printArticle(name = ''):
+    keys = getKeys(name)
+    kvdict = getKV(name)
+    article = ''
+    article += '{{bot}}\n'
+    article += '{{stub}}\n'
+    article += '__NOTOC__\n'
+    article += '\n'
+    article += '==Description==\n'
+    article += '\n'
+    if 'editor_usage' in kvdict:
+        article += kvdict['editor_usage'] + '\n'
+    else:
+        article += 'Description not available.\n'
+    article += '\n'
+    article += '==Spawn Arguments==\n'
+    article += '\n'
+    article += 'The following is a list of key/value pairs, also known as spawn arguments, that function with this entity. &lt;br&gt;\n'
+    article += '{| class="listtable"\n'
+    article += '|-\n'
+    article += '! KEY&nbsp;!! DESCRIPTION\n'
+    for x in keys:
+        article += '|-\n'
+        if x in kvdict:
+            article += '| ' + x + ' || ' + kvdict[x] + '\n'
+        else:
+            article += '| ' + x + ' || Description not available.\n'
+    article += '|}\n'
+    article += '\n'
+    article += '==Inheritance==\n'
+    article += '\n'
+    article += 'This entity is derived from the following:\n'
+    article += '\n'
+    inherit = getInherit(name)
+    inherit.reverse()
+    for x in range(len(inherit)):
+        for y in range(x):
+            article += '*'
+        article += '*'
+        if inherit[x] in entdata and entdata[inherit[x]][3] == 0:
+            article += '[[' + inherit[x] + '_(entity) | ' + inherit[x] + ']]\n'
+        else:
+            article += '\'\'[[' + inherit[x] + '_(class) | '+ inherit[x] + ']]\'\'\n'
+    article += '\n'
+    article += '\'\'\'Note\'\'\': Entries marked in italics are classes defined in the SDK.\n'
+    article += '\n'
+    article += '==Notes==\n'
+    article += '\n'
+    article += 'Notes not available.\n'
+    article += '\n'
+    article += '[[Category:Mapping]][[Category:Coding]][[Category:Declarations]]'
+    return article
+
+def addArticle(name = ''):
+    site = wikipedia.getSite()
+    page = wikipedia.Page(site, name + '_(entity)')
+    if page.exists() == False:
+        text = printArticle(name)
+        page.put(text, 'Added Article', None, False, False)
+
+def genArticles():
+    print 'Uploading Articles...'
+    mylist = []
+    match = re.findall(entdef, defstring)
+    for x in match:
+        mylist.append(x[0])
+    mylist.sort()
+    for x in mylist:
+        print mylist.index(x) + 1, 'of', len(mylist), '-', x
+        addArticle(x)
+
+genArticles()
+```

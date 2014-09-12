@@ -1,0 +1,33 @@
+Guisurf (Material global keyword)
+=================================
+
+Description
+-----------
+
+Attaches a [GUIs.html GUI] to this material.
+
+Usage
+-----
+
+In the global section of your material shader type...
+
+`guisurf <gui file> | entity[2|3]`
+
+Parameters
+----------
+
+gui file  
+The path to the [GUI\_(file\_format).html GUI file] to attach to the surface.
+
+entity  
+Lets the mapper set the GUI file to be used on this material by selecting a GUI file for the entity which contains a surface with this material. (Check the "gui" key set on the entity.)
+
+entity2, entity3  
+Same as **entity**, except that it will use the GUI file set with the "gui2" or "gui3" parameter.
+
+Notes
+-----
+
+Rarely used. The prime example of a material using this keyword is common/entitygui and common/pda\_gui.
+
+

@@ -1,0 +1,43 @@
+DrawText (script event)
+=======================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Text drawing for debugging. align can be 0-left, 1-center, 2-right.
+
+Usage
+-----
+
+*void* drawText( *string* **text**, *vector* **origin**, *float* **scale**, *vector* **color**, *float* **align**, *float* **lifetime** )
+
+Parameters
+----------
+
+-   [text] - The text to draw.
+-   [origin] - The point in space to draw the text.
+-   [scale] - The size to draw the text.
+-   [color] - The color to draw the text.
+-   [align] - The alignment of the text.
+    -   0 - left
+    -   1 - center
+    -   2 - right
+-   [lifetime] - The duration to display the text.
+
+Examples
+--------
+
+` `
+<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`drawText`</font><font color="#000000">`(`</font><font color="#666666">`"Yeah. I can see you right behind me making corrections."`</font>`, '`<font color="#0000dd">`0`</font>` `<font color="#0000dd">`5`</font>` `<font color="#0000dd">`45`</font>`', `<font color="#0000dd">`5`</font>`, '`<font color="#0000dd">`1`</font>` `<font color="#0000dd">`1`</font>` `<font color="#0000dd">`1`</font>`', `<font color="#0000dd">`1`</font>`, `<font color="#0000dd">`1`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+

@@ -1,0 +1,34 @@
+MaskColor (Material stage keyword)
+==================================
+
+Description
+-----------
+
+The **maskColor** keyword causes the color channels of this stage to be ignored and only use the alpha channel.
+
+Usage
+-----
+
+`maskColor`
+
+Parameters
+----------
+
+This keyword does not accept parameters.
+
+Example
+-------
+
+Masking the color channels.
+
+`{`
+`   maskColor`
+`   map path/to/image.tga`
+`}`
+
+Notes
+-----
+
+This keyword is usefull in combination with [MaskAlpha\_(Material\_stage\_keyword).html maskAlpha] in case you want to use the alpha channel from some different image file.
+
+

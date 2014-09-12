@@ -1,0 +1,34 @@
+InPDA (script event)
+====================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns true if the player is viewing it's PDA.
+
+Usage
+-----
+
+*boolean* inPDA( )
+
+Parameters
+----------
+
+None.
+
+Examples
+--------
+
+<font color="#0000ff">`boolean`</font>` pdaview = `<font color="#000055">`$player1`</font>`.`<font color="#ff0000">`inPDA`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+None.
+
+

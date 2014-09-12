@@ -1,0 +1,14 @@
+OnDeactivate (GUI item event)
+=============================
+
+Called when the GUI is deactivated.
+
+Should be used on the [Desktop\_GUI\_item.html Desktop GUI item].
+
+Example(s)
+----------
+
+`onDeactivate{`
+`   ...`
+`}`
+

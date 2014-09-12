@@ -1,0 +1,70 @@
+Object shuttledock toponly (entity)
+===================================
+
+> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+
+Description
+-----------
+
+allows docking/recharging of shuttle
+
+Spawn Arguments
+---------------
+
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+
+| KEY                  | DESCRIPTION                             |
+|----------------------|-----------------------------------------|
+| amounthealth         | Description not available.              |
+| amountpower          | Description not available.              |
+| beam\_docking        | Description not available.              |
+| consolemaxs          | Description not available.              |
+| consolemins          | Description not available.              |
+| consolespawn         | Description not available.              |
+| def\_reaction        | Description not available.              |
+| def\_reaction1       | Description not available.              |
+| def\_shuttle         | What type of shuttle this dock produces |
+| def\_shuttle\_mp     | Description not available.              |
+| dockingforce         | Description not available.              |
+| dockingforce\_locked | Description not available.              |
+| dockingzonemaxs      | Description not available.              |
+| dockingzonemins      | Description not available.              |
+| editor\_bool XXXX    | Description not available.              |
+| editor\_color        | Description not available.              |
+| editor\_maxs         | Description not available.              |
+| editor\_mins         | Description not available.              |
+| editor\_rotatable    | Description not available.              |
+| editor\_showangle    | Description not available.              |
+| editor\_usage        | allows docking/recharging of shuttle    |
+| editor\_var XXXX     | Description not available.              |
+| inherit              | Description not available.              |
+| matter               | Description not available.              |
+| model                | Description not available.              |
+| offset\_console      | Description not available.              |
+| offset\_nozzle       | Description not available.              |
+| offset\_shuttlepoint | Description not available.              |
+| snd\_looper          | Description not available.              |
+| snd\_recharge        | Description not available.              |
+| snd\_spawn           | Description not available.              |
+| spawnclass           | Description not available.              |
+| speech\_name         | Description not available.              |
+
+Inheritance
+-----------
+
+This entity is derived from the following:
+
+-   '' hhShuttleDock''
+    -   [Object\_shuttledock\_destination\_(entity).html object\_shuttledock\_destination]
+        -   <span class="deadlink"> object\_shuttledock</span>
+            -   *' object\_shuttledock\_toponly*'
+
+**Note**: Entries marked in italics are classes defined in the SDK.
+
+Notes
+-----
+
+Notes not available.
+

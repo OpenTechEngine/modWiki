@@ -1,0 +1,28 @@
+WriteProgramImages (console command)
+====================================
+
+Description
+-----------
+
+This command will grab all the images created by [Stage\_material\_keywords\_(Doom\_3).html image program functions] from the video memory and export them to a folder named *progimg*.
+
+Usage
+-----
+
+At the console type...
+
+`writeProgramImages`
+
+Parameters
+----------
+
+This console command does not accept parameters.
+
+Notes
+-----
+
+This command is useful when you want to see the result an image program function has on a given stage of a material shader.
+
+This command takes a good while to execute as every image referenced by a image program function is exported.
+
+

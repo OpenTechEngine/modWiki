@@ -1,0 +1,54 @@
+Editing MIP Maps
+================
+
+|----------------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                                  
+ Contents                                                                                                              
+ --------                                                                                                              
+                                                                                                                       
+ </div>                                                                                                                
+ -   [Editing\_MIP\_Maps.html\#Overview <span class="tocnumber">1</span> <span class="toctext">Overview</span>]        
+ -   [Editing\_MIP\_Maps.html\#Examination <span class="tocnumber">2</span> <span class="toctext">Examination</span>]  
+ -   [Editing\_MIP\_Maps.html\#Editing <span class="tocnumber">3</span> <span class="toctext">Editing</span>]          
+ -   [Editing\_MIP\_Maps.html\#Saving <span class="tocnumber">4</span> <span class="toctext">Saving</span>]            
+ -   [Editing\_MIP\_Maps.html\#Result <span class="tocnumber">5</span> <span class="toctext">Result</span>]            |
+
+Overview
+--------
+
+Editing MIP Maps is done in the compressed ([DDS\_(file\_format).html DDS]) version of the image. This tutorial will be using [NVIDIA's DDS plug-in for Photoshop](http://web.archive.org/web/20120923043341/http://developer.nvidia.com/object/photoshop_dds_plugins.html). Authoring DDS files is, at this time, covered briefly in [Texturing.html Texturing].
+
+Examination
+-----------
+
+Open a DDS file in photoshop. Assure that "Load MIP maps" is enabled.
+
+![Image:EditMIP 1 dialog.png](images_d_dc_EditMIP_1_dialog.png "Image:EditMIP 1 dialog.png")
+
+The image with each MIP map level can now be seen. Defects identified in game should be readily visible. Depending on the compression method used, compression artifacts can be seen in just one MIP map, several, or all of them.
+
+![Image:EditMIP 2 MIPmaps.png](images_a_ac_EditMIP_2_MIPmaps.png "Image:EditMIP 2 MIPmaps.png")
+
+Editing
+-------
+
+The advantage to NVIDIA's DDS plug-in is the loaded DDS file can be edited as is. This might run counter to one's expectations, because the DDS format is described as a "lossy" format. However, this isn't quite true. While programs that save DDS files must utilize a lossy compression scheme, the format itself is losslessly compressed. As long as we're not editing outside of the DDS format (DXT1 in this example), no loss of data should be observed (i.e. one shouldn't see compounding artifacts as is evident when opening, editing, and recompressing a [JPG\_(file\_format).html jpg] image).
+
+![Image:EditMIP 3 edited.png](images_9_92_EditMIP_3_edited.png "Image:EditMIP 3 edited.png")
+
+Saving
+------
+
+Once the image has been edited to suit, save the image. In the save dialog, be sure to enable "Use Existing MIP maps". Make sure the correct format is selected (e.g. DXT1 for diffuse and specular, DXT5 for local).
+
+![Image:EditMIP 4 save.png](images_3_31_EditMIP_4_save.png "Image:EditMIP 4 save.png")
+
+Result
+------
+
+The example would look like this in game:
+
+![Image:EditMIP 5 result.jpg](images_7_77_EditMIP_5_result.jpg "Image:EditMIP 5 result.jpg")
+
+As you can see, anisotropic filtering results in a very smooth blend from one MIP map level to the next. However, different video cards apply this filtering in different ways. So please don't rely on MIP maps for large changes such we've done with this example. It's usually best to reserve MIP map editing for corrections to compression errors, or slightly stylizing an image to give it more or less sharpness as its distance from the player increases.
+

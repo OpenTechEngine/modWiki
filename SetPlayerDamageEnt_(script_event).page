@@ -1,0 +1,34 @@
+SetPlayerDamageEnt (script event)
+=================================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+toggle this on and off to assign the tramCar to be the forwardDamageEnt for the player.
+
+Usage
+-----
+
+void setPlayerDamageEnt( float set )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

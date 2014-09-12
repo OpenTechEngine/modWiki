@@ -1,0 +1,34 @@
+GetTraceBody (script event)
+===========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the number of the body part of the entity which was hit during the last call to trace or tracePoint
+
+Usage
+-----
+
+string getTraceBody( )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

@@ -1,0 +1,35 @@
+IsHidden (script event)
+=======================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Checks if the entity's model is invisible.
+
+Usage
+-----
+
+*float* isHidden()
+
+Parameters
+----------
+
+This script event does not accept parameters.
+
+Examples
+--------
+
+` `
+`entVis = `<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`isHidden`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event returns the hidden/unhidden status of this entity as a float.
+
+

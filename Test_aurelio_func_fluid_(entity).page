@@ -1,0 +1,58 @@
+Test aurelio func fluid (entity)
+================================
+
+> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+
+> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+
+Description
+-----------
+
+A brush model that simulates a fluid.
+
+Spawn Arguments
+---------------
+
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+
+| KEY                | DESCRIPTION                                                                              |
+|--------------------|------------------------------------------------------------------------------------------|
+| damping            | How much to dampen the fluid movement. (1.0 is none, 0.0 is completely dampend)          |
+| density            | The density of the fluid. (default: 1.0)                                                 |
+| editor\_bool XXXX  | Description not available.                                                               |
+| editor\_color      | Description not available.                                                               |
+| editor\_maxs       | Description not available.                                                               |
+| editor\_mins       | Description not available.                                                               |
+| editor\_usage      | A brush model that simulates a fluid.                                                    |
+| editor\_usage1     | Description not available.                                                               |
+| editor\_var XXXX   | Description not available.                                                               |
+| fluidType          | The type of simulation to run on the fluid height field.                                 |
+| fx\_splash\_large  | Description not available.                                                               |
+| fx\_splash\_medium | Description not available.                                                               |
+| fx\_splash\_small  | Description not available.                                                               |
+| gravity            | The gravity acting on this fluid. (default: quake standard - 1066)                       |
+| gridsize\_x        | The size/resolution of the grid on the x-axis. (default: 32)                             |
+| gridsize\_y        | The size/resolution of the grid on the y-axis. (default: 32)                             |
+| mtr\_foam          | Description not available.                                                               |
+| noFoam             | Description not available.                                                               |
+| noclipmodel        | Description not available.                                                               |
+| pipeArea           | Override for the cross-sectional area of the pipes that connect water across grid units. |
+| pipeLength         | Override for the length of the pipes that connect water across grid units.               |
+| solid              | Description not available.                                                               |
+| spawnclass         | Description not available.                                                               |
+
+Inheritance
+-----------
+
+This entity is derived from the following:
+
+-   '' rvFluid''
+    -   *' test\_aurelio\_func\_fluid*'
+
+**Note**: Entries marked in italics are classes defined in the SDK.
+
+Notes
+-----
+
+Notes not available.
+

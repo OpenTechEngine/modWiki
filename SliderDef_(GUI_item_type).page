@@ -1,0 +1,47 @@
+SliderDef (GUI item type)
+=========================
+
+<div class="thumb tright">
+<div style="width: 182px">
+![A sliderDef from Doom3](images_thumb_0_0f_Gui_example_sliderdef.png_180px-Gui_example_sliderdef.png "A sliderDef from Doom3")
+
+<div class="thumbcaption">
+<div class="magnify" style="float: right">
+![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
+
+</div>
+A sliderDef from Doom3
+
+</div>
+</div>
+</div>
+A slider that can hold numeric values from an specific range. Much like a scrollbar.
+
+Additional properties
+---------------------
+
+-   [Cvar\_(GUI\_item\_property).html cvar]
+-   cvarGroup
+-   [LiveUpdate\_(GUI\_item\_property).html liveUpdate]
+-   [Low\_(GUI\_item\_property).html low]
+-   [High\_(GUI\_item\_property).html high]
+-   scrollbar
+-   [Step\_(GUI\_item\_property).html step]
+-   [Stepsize\_(GUI\_item\_property).html stepsize]
+-   thumbshader
+-   vertical
+
+Example(s)
+----------
+
+`sliderDef OG8Primary {`
+`   rect        210, 5, 71, 8`
+`   forecolor   0.8, 1, 1, 1`
+`   matcolor    1, 1, 1, 1`
+`   low     1`
+`   high        8`
+`   step        1`
+`   thumbShader "guis/assets/mainmenu/slider_bar"`
+`   cvar        "m_smooth"  `
+`}`
+

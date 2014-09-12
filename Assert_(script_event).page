@@ -1,0 +1,35 @@
+Assert (script event)
+=====================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Breaks if the condition is zero in debug builds.
+
+Usage
+-----
+
+*void* assert( *float* **condition** )
+
+Parameters
+----------
+
+-   [condition] - value to evaluate to determine if a break is nessecary.
+
+Examples
+--------
+
+` `
+<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`assert`</font><font color="#000000">`(`</font>`count`<font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event does not return any values.
+
+

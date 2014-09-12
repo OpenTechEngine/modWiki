@@ -1,0 +1,136 @@
+Modeldef (decl)
+===============
+
+Model declarations define parameters for the engine to take into account when dealing with a specific animated model.
+
+|-----------------------------------------------------------------------------------------------------------------------------------------|
+| <div id="toctitle">                                                                                                                     
+ Contents                                                                                                                                 
+ --------                                                                                                                                 
+                                                                                                                                          
+ </div>                                                                                                                                   
+ -   [Modeldef\_(decl).html\#Syntax <span class="tocnumber">1</span> <span class="toctext">Syntax</span>]                                 
+     -   [Modeldef\_(decl).html\#Keywords <span class="tocnumber">1.1</span> <span class="toctext">Keywords</span>]                       
+         -   [Modeldef\_(decl).html\#Channel\_Syntax <span class="tocnumber">1.1.1</span> <span class="toctext">Channel Syntax</span>]    
+         -   [Modeldef\_(decl).html\#Anim\_Syntax <span class="tocnumber">1.1.2</span> <span class="toctext">Anim Syntax</span>]          
+             -   [Modeldef\_(decl).html\#Frame\_Events <span class="tocnumber">1.1.2.1</span> <span class="toctext">Frame Events</span>]  |
+
+Syntax
+------
+
+`model [name] {`
+` [keywords]`
+` [animation declarations]`
+`}`
+
+Model declarations begin with a header which consists of model followed by the *name* of the model declaration.
+
+The header is followed by the body of the declaration which is enclosed in curly brackets.
+
+The body is composed of several *keywords* and is followed by one or more *animation declarations*.
+
+### Keywords
+
+| Keyword & Usage                                            | Description                                                                                                                              |
+|------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| <font face="monospace">**anim** *name file [{...}]*</font> | A declarations that assigns a name to the specified md5anim and allows for the declaration of frame events enclosed in curly brackets.   |
+| <font face="monospace">**channel** *name (joints)*</font>  | Defines an animation channel or isolated region of the skeleton. Channels allow a character's legs to move independently of their torso. |
+| <font face="monospace">**inherit** *name*</font>           | Inherits properties from specified model declaration.                                                                                    |
+| <font face="monospace">**mesh** *file*</font>              | The md5model to use.                                                                                                                     |
+| <font face="monospace">**offset** *x, y, z*</font>         | Offsets the model from it's origin.                                                                                                      |
+| <font face="monospace">**skin** *name*</font>              | Default skin to apply. Can be overridden by entity declarations.                                                                         |
+| <font face="monospace">**remove** *name*</font>            | Removes an unwanted animation inherited via the inherit keyword.                                                                         |
+
+#### Channel Syntax
+
+Channels are defined by a list comprised of all the bones to be included in the group. Each bone can be listed individually or through the use of special characters like the astrix or minus signs, one can use the skeletal higharchy to include or exclude child bones.
+
+`channel torso ( *Waist )`
+`channel legs  ( *Hips Body origin ROT -*Waist)`
+
+The asterix is believed to be inclusive of child bones. In other words, all bones parented to the waist bone are included in the group through the statment "\*Waist".
+
+The minus sign is believed to negate a single bone or group when used in conjunction with the asterix.
+
+**NOTE**: No formal documentation exists to confirm the syntax described here is correct.
+
+#### Anim Syntax
+
+The animation keyword can be used to define a name for an animation file, or as a full blown declaration, in which case one can define frame events.
+
+`anim af_pose  models/md5/monsters/cyberdemon/af_pose.md5anim`
+`anim ik_pose  models/md5/monsters/cyberdemon/ik_pose.md5anim`
+
+`anim stand    models/md5/monsters/cyberdemon/idle.md5anim`
+`anim idle     models/md5/monsters/cyberdemon/idle.md5anim`
+`anim sight1   models/md5/monsters/cyberdemon/sight.md5anim {`
+`  frame 16.5  sound_voice    snd_sight1`
+`}`
+`anim walk     models/md5/monsters/cyberdemon/walk3.md5anim {`
+`  frame 17    sound_body snd_footstep`
+`  frame 17    triggerSmokeParticle cyber_rfoot_dust`
+`  frame 37    sound_body snd_footstep`
+`  frame 37    triggerSmokeParticle cyber_lfoot_dust`
+`}`
+`anim pain     models/md5/monsters/cyberdemon/pain_big1.md5anim {`
+`  frame 1    call overrideLegs`
+`  frame 1    sound_voice snd_pain`
+`  frame 16   sound_body  snd_footstep`
+`  frame 49   sound_body  snd_footstep`
+`}`
+
+##### Frame Events
+
+Frame events are used to syncronize special effects, sounds, or events with animation. Frame events consist of the keyword **frame** followed by the frame number (which does not have to be a whole number), and then the frame event to call.
+
+| Event & Usage                                             | Description                                                                                                                          |
+|-----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| <font face="monospace">**call** *function*</font>         | Calls the specified script function.                                                                                                 |
+| <font face="monospace">**object\_call** *function*</font> | Calls the specified script function on the entity                                                                                    |
+| <font face="monospace">**event** *event [args...]*</font> | Sends the specified event to the entity                                                                                              |
+| <font face="monospace">**sound** *snd*</font>             | Plays the specified sound on any available channel                                                                                   |
+| <font face="monospace">**sound\_voice** *snd*</font>      | Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.                   |
+| <font face="monospace">**sound\_voice2** *snd*</font>     | Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.                   |
+| <font face="monospace">**sound\_body** *snd*</font>       | Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.                   |
+| <font face="monospace">**sound\_body2** *snd*</font>      | Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.                   |
+| <font face="monospace">**sound\_body3** *snd*</font>      | Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.                   |
+| <font face="monospace">**sound\_weapon** *snd*</font>     | Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.                   |
+| <font face="monospace">**sound\_global** *snd*</font>     | Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.                   |
+| <font face="monospace">**sound\_item** *snd*</font>       | Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.                   |
+| <font face="monospace">**sound\_chatter** *snd*</font>    | Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.                   |
+| <font face="monospace">**skin** *skin*</font>             | Changes the model's skin to the specified skin. This setting acts as a default for when no skin is specified in entity declarations. |
+| <font face="monospace">**fx** *fx*</font>                 | Triggers the specified fx declaration.                                                                                               |
+| <font face="monospace">**trigger** *name*</font>          | Triggers the specified level trigger.                                                                                                |
+| <font face="monospace">**recordDemo** *name*</font>       | Starts recording a demo under the specified name. Stops recording if no name is specified.                                           |
+| <font face="monospace">**aviGame** *name*</font>          | Starts recording an avi under the specified name. Useful for making animations to be used on video screens.                          |
+
+The following events are aliases for hardcoded events that do not accept parameters
+
+| Event                     | Alias               |
+|---------------------------|---------------------|
+| triggerSmokeParticle      | triggerParticles    |
+| melee                     | attackMelee         |
+| direct\_damage            | directDamage        |
+| attack\_begin             | attackBegin         |
+| attack\_end               | attackEnd           |
+| muzzle\_flash             | muzzleFlash         |
+| create\_missile           | createMissile       |
+| launch\_missile           | launchMissile       |
+| fire\_missile\_at\_target | fireMissileAtTarget |
+| footstep                  | footstep            |
+| leftfoot                  | leftfoot            |
+| rightfoot                 | rightfoot           |
+| jump                      | jump                |
+| enableEyeFocus            | enableEyeFocus      |
+| disableEyeFocus           | disableEyeFocus     |
+| disableGravity            | disableGravity      |
+| enableGravity             | enableGravity       |
+| enableClip                | enableClip          |
+| disableClip               | disableClip         |
+| enableWalkIK              | enableWalkIK        |
+| disableWalkIK             | disableWalkIK       |
+| enableLegIK               | enableLegIK         |
+| disableLegIK              | disableLegIK        |
+| prevent\_idle\_override   | ???                 |
+
+

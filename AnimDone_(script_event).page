@@ -1,0 +1,34 @@
+AnimDone (script event)
+=======================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns true if the animation playing on the given channel // is completed considering a number of blend frames.
+
+Usage
+-----
+
+float animDone( float channel, float blendOutFrames )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+` none`
+
+Notes
+-----
+
+tba
+
+

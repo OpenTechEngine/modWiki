@@ -1,0 +1,35 @@
+AngToUp (script event)
+======================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Returns an up vector for the given Euler angles.
+
+Usage
+-----
+
+*vector* angToUp( *vector* **angles** )
+
+Parameters
+----------
+
+-   [angles] - A vector who's components correspond with heading, pitch, and bank.
+
+Examples
+--------
+
+` `
+`upVec = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`angToUp`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`12`</font>` `<font color="#0000dd">`56`</font>` `<font color="#0000dd">`78`</font>`'`<font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+This script event returns an up vector.
+
+

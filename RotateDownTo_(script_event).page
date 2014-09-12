@@ -1,0 +1,36 @@
+RotateDownTo (script event)
+===========================
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+
+Description
+-----------
+
+Initiates a rotation about the given axis by decreasing the current angle towards the given angle. // Uses the current speed/time and acceleration and deceleration settings.
+
+Usage
+-----
+
+void rotateDownTo( float axis, float angle )
+
+Parameters
+----------
+
+[axis] - The Axis to rotate around in float format. 0 (zero) = X, 1 = Y & 2 = Z
+
+[angle] = angle in degrees to rotate to
+
+Examples
+--------
+
+` `<font color="#000055">`$light_`<font color="#0000dd">`02`</font>`_rot`</font>`.`<font color="#ff0000">`rotateDownTo`</font><font color="#000000">`(`</font><font color="#0000dd">`0`</font>`, -`<font color="#0000dd">`70`</font><font color="#000000">`)`</font>`;`
+
+Notes
+-----
+
+Same usage as [RotateUpTo\_(script\_event).html rotateUpTo] except it of increasing the current angle to get to the destination, it decreases the angle.
+
+

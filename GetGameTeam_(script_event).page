@@ -1,0 +1,47 @@
+GetGameTeam (script event)
+==========================
+
+<div style="padding: 1px; border: 0px solid #000000" align="left">
+<font size="18px"><font color="black">![Image:Etqwsquare\_bg.png](images_f_f9_Etqwsquare_bg.png "fig:Image:Etqwsquare_bg.png") The information on this page is specific to [Enemy Territory: Quake Wars](http://web.archive.org/web/20121206024939/http://www.modwiki.net:80/wiki/Enemy_Territory:_Quake_Wars).</font></font>
+
+</div>
+
+------------------------------------------------------------------------
+
+Game class
+----------
+
+This event operates on an instance of the [Game\_class.html game class] type [IdEntity\_(class).html idEntity]. Has spawn class specific implementation.
+
+Description
+-----------
+
+Returns the script object of the entity's team, or [$null\_entity\_(scripting).html null] if none.
+
+Usage
+-----
+
+*string* getGameTeam()
+
+Parameters
+----------
+
+This event does not accept parameters.
+
+Examples
+--------
+
+<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` someEntity.`<font color="#ff0000">`getGameTeam`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` == teamStrogg `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+`   `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font>` `<font color="#666666">`"Makron is feeling peckish, harvest more humans!"`</font>` `<font color="#000000">`)`</font>`;`
+<font color="#000000">`}`</font>
+
+Notes
+-----
+
+Returns object pointer of team. Named object pointers for teams are **gdfTeam** and **stroggTeam** for comparison.
+
+The following [Spawn\_class.html spawn classes] can have their team set: **idActor**, **idItem**, **idProjectile**, **idPlayer**, **sdScriptEntity**.
+
+Has counterpart [SetGameTeam\_(script\_event).html setGameTeam].
+
+

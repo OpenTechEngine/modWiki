@@ -1,0 +1,16 @@
+OnEnter (GUI item event)
+========================
+
+On [EditDef\_(GUI\_item\_type).html editDefs], this is called when the user presses enter.
+
+On [ListDef\_(GUI\_item\_type).html listDefs], this is called when the user presses enter or double-clicks.
+
+*Must check if this works in normal windowDefs!*
+
+Example(s)
+----------
+
+`onEnter {`
+`   ...`
+`}`
+
