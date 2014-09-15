@@ -1,17 +1,6 @@
 ASE (file format)
 =================
 
-|---------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                   
- Contents                                                                                                                               
- --------                                                                                                                               
-                                                                                                                                        
- </div>                                                                                                                                 
- -   [ASE\_(file\_format).html\#Overview <span class="tocnumber">1</span> <span class="toctext">Overview</span>]                        
- -   [ASE\_(file\_format).html\#Export <span class="tocnumber">2</span> <span class="toctext">Export</span>]                            
- -   [ASE\_(file\_format).html\#File\_Format\_Syntax <span class="tocnumber">3</span> <span class="toctext">File Format Syntax</span>]  
- -   [ASE\_(file\_format).html\#Notes <span class="tocnumber">4</span> <span class="toctext">Notes</span>]                              |
-
 Overview
 --------
 
@@ -22,7 +11,7 @@ The Doom 3 engine uses the ASE format for static meshes.
 Export
 ------
 
--   [iddevnet model export page](http://web.archive.org/web/20120923050835/http://www.iddevnet.com/doom3/modelexport.php)
+-   [iddevnet model export page](http://www.iddevnet.com/doom3/modelexport.php)
 -   Maya can export ASE's using the ActorX plugin.
 -   Blender via [export plugin @doom3world](http://web.archive.org/web/20120923050835/http://www.doom3world.org/phpbb2/viewtopic.php?t=9275)
 
@@ -32,62 +21,51 @@ File Format Syntax
 Format: The format is based on identifiers, as in:
 
 `*AN_IDENTIFIER`
-` `
 
 This is followed by zero or more values, or a subset of more identifiers surrounded by curly braces.
 
 Most of the time when working with ASE's, you will find that you have to open them to manually link the materials to a specified [Material\_(decl).html material shader]. For example, the format for the material list may look like this when exported from actorx:
 
-` *MATERIAL_LIST {`
-`   *MATERIAL_COUNT 2`
-`   *MATERIAL 0 {`
-`       *MATERIAL_NAME "myMaterial"`
-`       *MATERIAL_CLASS "Standard"`
-`       *MAP_DIFFUSE {`
-`           *MAP_CLASS "Bitmap"`
-`           *BITMAP "None"`
-`      }`
-`   }`
-`}`
+```
+*MATERIAL_LIST {
+   *MATERIAL_COUNT 2
+   *MATERIAL 0 {
+       *MATERIAL_NAME "myMaterial"
+       *MATERIAL_CLASS "Standard"
+       *MAP_DIFFUSE {
+           *MAP_CLASS "Bitmap"
+           *BITMAP "None"
+      }
+   }
+}
+```
 
 Where it says:
 
 `*BITMAP "none"`
-` `
 
 You must replace this with a reference to a doom material shader, like so:
 
 `*BITMAP "//base/models/mapobjects/myModel/myShader"`
-` `
 
 Occasionally, for some unknown reason this reference doesn't work in which case you should try...
 
 `*BITMAP "//purgatory/purgatory/models/mapobjects/myModel/myShader"`
-` `
 
 ...or...
 
 `*BITMAP "//doom3/base/models/mapobjects/myModel/myShader"`
-` `
 
-<div>
-![Image:Q4square\_25.png](images_e_e8_Q4square_25.png "fig:Image:Q4square_25.png") **Note:** Quake 4 only:
+![](/images/images_e_e8_Q4square_25.png) Note: _Quake 4 only:_
+ ~  *instead of //base or //purgatory/purgatory Q4 seems to use C:\\Ritual\\Q4ritual\\game\\q4base*  
+    `*BITMAP "C:\Ritual\Q4ritual\game\q4base\material\name"`
 
-  
-*instead of //base or //purgatory/purgatory Q4 seems to use C:\\Ritual\\Q4ritual\\game\\q4base* <nowiki>
 
-`*BITMAP "C:\Ritual\Q4ritual\game\q4base\material\name"`</nowiki>`''''`
 
-</div>
-<div>
-![Image:Etqwsquare\_25.png](images_7_7e_Etqwsquare_25.png "fig:Image:Etqwsquare_25.png") **Note:** Enemy Territory: Quake Wars only:
+![](/images/images_7_7e_Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
+ ~  *use* `*MATERIAL_NAME "material/name"`  
+    eg `*MATERIAL_NAME "textures/models/mymodel"`
 
-  
-*use* \*MATERIAL\_NAME "*material/name*"
-
-eg \*MATERIAL\_NAME "*textures/models/mymodel*"''''
-
-</div>
 Notes
 -----
 
