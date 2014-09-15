@@ -47,13 +47,9 @@ Syntax
 
 A single declaration consists of a header and body. The header is composed of a name and sometimes a descriptor that defines the type of declaration (descriptors are not needed if the declaration is put in its respective [File\_formats.html\#Declaration\_containers file format]; for example you wouldn't need to put "material" before your material decls in an .[MTR\_(file\_format).html MTR] file). The body of a definition is enclosed in curly brackets.
 
-<div>
-![Image:Etqwsquare\_25.png](images_7_7e_Etqwsquare_25.png "fig:Image:Etqwsquare_25.png") **Note:** Enemy Territory: Quake Wars only:
+![](/images/images_7_7e_Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
+ ~  Declaration descriptors are always needed
 
-  
-*Declaration descriptors are always needed*
-
-</div>
 .[DEF\_(file\_format).html DEF] files are the standard container for declarations.
 
 A few examples of headers would be...
