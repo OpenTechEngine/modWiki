@@ -23,11 +23,13 @@ Example
 
 Forces the diffusemap stage to high quality:
 
-`{`
-`  blend diffusemap`
-`  map textures/path/to/image.tga`
-`  highquality`
-`}`
+```
+{
+  blend diffusemap
+  map textures/path/to/image.tga
+  highquality
+}
+```
 
 Notes
 -----
