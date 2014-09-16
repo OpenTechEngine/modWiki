@@ -2,28 +2,11 @@ How to build the SDK on Linux
 =============================
 
 <div style="padding: 1px; border: 0px solid #000000" align="left">
-<font size="18px"><font color="black">![Image:D3square\_bg.png](images_c_cb_D3square_bg.png "fig:Image:D3square_bg.png") The information on this page is specific to [Doom\_3.html Doom 3].</font></font>
+<font size="18px"><font color="black">![Image:D3square\_bg.png](/images/images_c_cb_D3square_bg.png "fig:Image:D3square_bg.png") The information on this page is specific to [Doom\_3.html Doom 3].</font></font>
 
 </div>
 
 ------------------------------------------------------------------------
-
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                                                                
- Contents                                                                                                                                                                            
- --------                                                                                                                                                                            
-                                                                                                                                                                                     
- </div>                                                                                                                                                                              
- -   [How\_to\_build\_the\_SDK\_on\_Linux.html\#Introduction <span class="tocnumber">1</span> <span class="toctext">Introduction</span>]                                             
- -   [How\_to\_build\_the\_SDK\_on\_Linux.html\#Requirements <span class="tocnumber">2</span> <span class="toctext">Requirements</span>]                                             
- -   [How\_to\_build\_the\_SDK\_on\_Linux.html\#Step\_1.\_Unpacking\_the\_SDK <span class="tocnumber">3</span> <span class="toctext">Step 1. Unpacking the SDK</span>]               
- -   [How\_to\_build\_the\_SDK\_on\_Linux.html\#Step\_2.\_Running\_scons <span class="tocnumber">4</span> <span class="toctext">Step 2. Running scons</span>]                        
-     -   [How\_to\_build\_the\_SDK\_on\_Linux.html\#Successful\_build <span class="tocnumber">4.1</span> <span class="toctext">Successful build</span>]                              
-     -   [How\_to\_build\_the\_SDK\_on\_Linux.html\#Missing\_OpenGL\_libraries <span class="tocnumber">4.2</span> <span class="toctext">Missing OpenGL libraries</span>]             
-     -   [How\_to\_build\_the\_SDK\_on\_Linux.html\#Wrong\_compiler\_version <span class="tocnumber">4.3</span> <span class="toctext">Wrong compiler version</span>]                 
-     -   [How\_to\_build\_the\_SDK\_on\_Linux.html\#Building\_on\_x86\_64\_.28AMD64.29 <span class="tocnumber">4.4</span> <span class="toctext">Building on x86\_64 (AMD64)</span>]  
- -   [How\_to\_build\_the\_SDK\_on\_Linux.html\#Packaging\_the\_file\_into\_a\_pk4 <span class="tocnumber">5</span> <span class="toctext">Packaging the file into a pk4</span>]      
- -   [How\_to\_build\_the\_SDK\_on\_Linux.html\#Wrap\_Up <span class="tocnumber">6</span> <span class="toctext">Wrap Up</span>]                                                      |
 
 Introduction
 ------------
