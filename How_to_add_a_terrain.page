@@ -5,32 +5,12 @@ This step-by-step tutorial will demonstrate how level designers, with no prior m
 
 If you have further questions about this tutorial please put them in this article's Talk page.
 
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                                                   
- Contents                                                                                                                                                               
- --------                                                                                                                                                               
-                                                                                                                                                                        
- </div>                                                                                                                                                                 
- -   [How\_to\_add\_a\_terrain.html\#Overview <span class="tocnumber">1</span> <span class="toctext">Overview</span>]                                                   
- -   [How\_to\_add\_a\_terrain.html\#Requirements <span class="tocnumber">2</span> <span class="toctext">Requirements</span>]                                           
- -   [How\_to\_add\_a\_terrain.html\#Step\_one:\_Generate\_heightmap <span class="tocnumber">3</span> <span class="toctext">Step one: Generate heightmap</span>]        
- -   [How\_to\_add\_a\_terrain.html\#Step\_two:\_Modify\_heightmap <span class="tocnumber">4</span> <span class="toctext">Step two: Modify heightmap</span>]            
- -   [How\_to\_add\_a\_terrain.html\#Step\_three:\_Generate\_Textures <span class="tocnumber">5</span> <span class="toctext">Step three: Generate Textures</span>]      
- -   [How\_to\_add\_a\_terrain.html\#Step\_four:\_Optimise\_and\_UV\_map <span class="tocnumber">6</span> <span class="toctext">Step four: Optimise and UV map</span>]  
-     -   [How\_to\_add\_a\_terrain.html\#Adding\_a\_terrain <span class="tocnumber">6.1</span> <span class="toctext">Adding a terrain</span>]                           
-     -   [How\_to\_add\_a\_terrain.html\#Scaling\_the\_terrain <span class="tocnumber">6.2</span> <span class="toctext">Scaling the terrain</span>]                     
-     -   [How\_to\_add\_a\_terrain.html\#Smoothing\_the\_terrain <span class="tocnumber">6.3</span> <span class="toctext">Smoothing the terrain</span>]                 
-     -   [How\_to\_add\_a\_terrain.html\#UV\_Mapping\_the\_terrain <span class="tocnumber">6.4</span> <span class="toctext">UV Mapping the terrain</span>]              
-     -   [How\_to\_add\_a\_terrain.html\#Exporting\_to\_ASE <span class="tocnumber">6.5</span> <span class="toctext">Exporting to ASE</span>]                           
- -   [How\_to\_add\_a\_terrain.html\#Getting\_it\_to\_the\_game <span class="tocnumber">7</span> <span class="toctext">Getting it to the game</span>]                   
- -   [How\_to\_add\_a\_terrain.html\#Wrapping\_it\_up <span class="tocnumber">8</span> <span class="toctext">Wrapping it up</span>]                                     |
-
 Overview
 --------
 
 This method has the following overarching structure:
 
-![Image:Terrain 01.png](images_d_d0_Terrain_01.png "Image:Terrain 01.png")
+![Image:Terrain 01.png](/images/images_d_d0_Terrain_01.png "Image:Terrain 01.png")
 
 This is an iterative process: you may need a couple of passes to get exactly what you want. Unfortunately, since the [Id\_Tech\_4.html id Tech 4] engine doesn't have a dedicated terrain editor some back-and-forth is inevitable.
 
@@ -271,16 +251,13 @@ All id Tech 4 engine games released so far have plenty of similar looking textur
 
 Finally, we add back the texture we used for the diffuse map to restore the original hue removed by the [Blend\_(Material\_stage\_keyword).html filter stage].
 
-<div>
-![Image:Etqwsquare\_25.png](images_7_7e_Etqwsquare_25.png "fig:Image:Etqwsquare_25.png") **Note:** Enemy Territory: Quake Wars only:
-
-  
-*If you intend to use a MegaTexture with your terrain you should reference the following material instead:*
-
-</div>
-`material megatextures/myterrainmat {`
-`   useTemplate megatextures/default_ambient< "myterrainmat" >`
-`}`
+![](/images/images_7_7e_Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
+ ~  If you intend to use a MegaTexture with your terrain you should reference the following material instead:  
+    ```  
+    material megatextures/myterrainmat {
+       useTemplate megatextures/default_ambient< "myterrainmat" >
+    }
+    ```
 
 Wrapping it up
 --------------
