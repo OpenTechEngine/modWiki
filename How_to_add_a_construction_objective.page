@@ -2,8 +2,7 @@ How to add a construction objective
 ===================================
 
 <div style="padding: 1px; border: 0px solid #000000" align="left">
-<font size="18px"><font color="black">![Image:Etqwsquare\_bg.png](images_f_f9_Etqwsquare_bg.png "fig:Image:Etqwsquare_bg.png") The information on this page is specific to [Enemy Territory: Quake Wars](http://web.archive.org/web/20121206024939/http://www.modwiki.net:80/wiki/Enemy_Territory:_Quake_Wars).</font></font>
-
+<font size="18px"><font color="black">![Image:Etqwsquare\_bg.png](/images/images_f_f9_Etqwsquare_bg.png "fig:Image:Etqwsquare_bg.png") The information on this page is specific to [Enemy Territory: Quake Wars](Enemy_Territory:_Quake_Wars).</font></font>
 </div>
 
 ------------------------------------------------------------------------
@@ -14,17 +13,6 @@ This tutorial should let you have a bare bones map with a GDF construction objec
 
 -   Since everyone's setup is different \<savepath\> means the path that you give the SDK launcher.
 -   Replace \<yourmap\> where it's mentioned below with the name of the map you're making. Think of a single word like "valley", "quarry", etc. CAPITALISATION MATTERS!
-
-|-------------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                       
- Contents                                                                                                                                   
- --------                                                                                                                                   
-                                                                                                                                            
- </div>                                                                                                                                     
- -   [How\_to\_add\_a\_construction\_objective.html\#Setup <span class="tocnumber">1</span> <span class="toctext">Setup</span>]             
- -   [How\_to\_add\_a\_construction\_objective.html\#Files <span class="tocnumber">2</span> <span class="toctext">Files</span>]             
- -   [How\_to\_add\_a\_construction\_objective.html\#The\_map <span class="tocnumber">3</span> <span class="toctext">The map</span>]        
- -   [How\_to\_add\_a\_construction\_objective.html\#The\_script <span class="tocnumber">4</span> <span class="toctext">The script</span>]  |
 
 Setup
 -----
@@ -46,42 +34,45 @@ Files
 
 In the **pakmeta.conf** you need to paste the following:
 
-`// Map Data`
-`mapMetaData maps/<yourmap>/<yourmap> {`
-`   "pretty_name"           "<whateveryourwant>"`
-`   "mapinfo"               "<yourmap>"`
-`   "massive_zone_name"     "<yourmap>"`
-`   "server_shot_thumb"     "levelshots/thumbs/area22.tga"`
-`   "show_in_browser"       "1" `
-`}`
+```
+// Map Data
+
+mapMetaData maps/<yourmap>/<yourmap> {
+	"pretty_name"			"<whateveryourwant>"
+	"mapinfo"				"<yourmap>"
+	"massive_zone_name"		"<yourmap>"
+	"server_shot_thumb"		"levelshots/thumbs/area22.tga"
+	"show_in_browser"		"1"	
+}
+```
 
 In the **\<yourmap\>.md** file paste the following:
 
-`#include <mapinfo/mapinfo.include>`
-` `
-` mapInfoDef <yourmap> {`
-`    _default_mapinfo( "<yourmap>" )`
-` `
-`    data {`
-`        "mapLocation"           "maps/<yourmap>/location"`
-`        "script_entrypoint"     "<yourmap>_MapScript"`
-`        "mapBriefing"           "maps/<yourmap>/briefing"`
-`        "campaignDescription"   "maps/<yourmap>/campaign"`
-`        "numObjectives"         "4"`
-`        "mtr_serverShot"        "levelshots/<yourmap>"`
-`        "mtr_backdrop"          "levelshots/campaigns/northamerica"`
-`        "mapPosition"           "311 140"`
-`        "snd_music"             "sounds/music/load1"`
-`        "strogg_endgame_pause"  "6.0"`
-`        "gdf_endgame_pause"     "5.0"`
-`    }`
-` }`
-` `
+```
+#include <mapinfo/mapinfo.include>
+
+mapInfoDef <yourmap> {
+	_default_mapinfo( "<yourmap>" )
+
+	data {
+		"mapLocation"			"maps/<yourmap>/location"
+		"script_entrypoint"		"<yourmap>_MapScript"
+		"mapBriefing"			"maps/<yourmap>/briefing"
+		"campaignDescription"	"maps/<yourmap>/campaign"
+		"numObjectives"			"4"
+		"mtr_serverShot"		"levelshots/<yourmap>"
+		"mtr_backdrop"			"levelshots/campaigns/northamerica"
+		"mapPosition"			"311 140"
+		"snd_music"				"sounds/music/load1"
+		"strogg_endgame_pause"	"6.0"
+		"gdf_endgame_pause"		"5.0"
+	}
+}
+```
 
 Create a text file called *'map.script* in your *\<savepath\>/base/script/* location. Edit it, and add the following line:
 
 `#include "script/maps/<yourmap>.script"`
-` `
 
 The map
 -------
@@ -94,11 +85,13 @@ Now place an "info\_team\_spawn\_gdf" somewhere inside the big box. This is wher
 
 Firstly add a "constructible\_materials\_gdf" entity onto your big box somewhere. With it selected, press N which will take you into the Properties Editor. Change the name to "construct\_materials" and add the following key/value pairs:
 
-`constructed   wall`
-`construction   wall_temp`
-`objective_index   0`
-`object_name   maps/generic/bridge`
-`task_name   maps/valley/task_bridge`
+```
+constructed   wall
+construction   wall_temp
+objective_index   0
+object_name   maps/generic/bridge
+task_name   maps/valley/task_bridge
+```
 
 You can also add sounds text and whatnot but for this bare-bones map this will be sufficient. Press Esc to deselect everything.
 
@@ -118,85 +111,112 @@ The script
 Let's now edit our *\<savepath\>/base/script/maps/***\<yourmap\>.script** file we had created at the start. I'm going to break this into sections so they're easier to follow but if you're not really that interested in the why just paste everything in order and find/replace \<yourmap\> there.
 
 `#define OBJECTIVE_<yourmap_inCAPS>_BUILD_WALL    0`
-` `
 
 This will define the first objective (numbered 0) and assign it a name so it can be easily retrieved without having to know whether its the first or last objective. In our case we only have one objective so this is mainly for future maps.
 
-`object mapObject_<yourmap> : mapObject_Default {`
-`   void        InitObjectives();`
-`   void        CompleteObjective( float index, entity p );`
-`   void        StartFirstObjective();`
-`   void        OnWallBuilt();`
-`   void        OnTimeLimitHit();`
-`   handle  GetObjectiveMessage( float index );`
-`   float       mainObjectiveIndex;`
-`   entity  wallConstruction;`
-`}`
+```
+object mapObject_<yourmap> : mapObject_Default {
+	void		InitObjectives();
+	void		CompleteObjective( float index, entity p );
+	void		StartFirstObjective();
+	void		OnWallBuilt();
+	void		OnTimeLimitHit();
+
+	handle	GetObjectiveMessage( float index );
+
+	float		mainObjectiveIndex;
+	entity	wallConstruction;
+}
+```
 
 This piece of code lets the game know that your map has a couple of properties and custom methods that you're going to be using. Of interest here are the "OnWallBuilt()" and wallConstruction. The first is an "event" which will be fired once the construction objective (our wall) is built. The later is a temporary entity that will reference our map construction entity.
 
-`mapObject_Base <yourmap>_MapScript() {`
-`   return new mapObject_<yourmap>;`
-`}`
+```
+mapObject_Base <yourmap>_MapScript() {
+   return new mapObject_<yourmap>;
+}
+```
 
 This block is used internally to generate a new map script.
 
-`void mapObject_<yourmap>::InitObjectives() {`
-`   gameRules.setWinningTeam( stroggTeam );`
-`   gdfTeam.SetRespawnWait( 20 );`
-`   stroggTeam.SetRespawnWait( 20 );`
-`   CreateRespawnTimeThread( gdfTeam );`
-`   wallConstruction = worldspawn.getEntityKey( "script_construct_entity" );`
-`   mainObjectiveIndex = OBJECTIVE_<yourmap_inCAPS>_BUILD_WALL;`
-`   thread  StartFirstObjective();`
-`   objManager.setNextObjective( gdfTeam, mainObjectiveIndex );`
-`   objManager.setNextObjective( stroggTeam, mainObjectiveIndex );`
-`}`
+```
+void mapObject_<yourmap>::InitObjectives() {
+	gameRules.setWinningTeam( stroggTeam );
+	gdfTeam.SetRespawnWait( 20 );
+	stroggTeam.SetRespawnWait( 20 );
+	CreateRespawnTimeThread( gdfTeam );
+
+	wallConstruction = worldspawn.getEntityKey( "script_construct_entity" );
+
+	mainObjectiveIndex = OBJECTIVE_<yourmap_inCAPS>_BUILD_WALL;
+
+	thread	StartFirstObjective();
+
+	objManager.setNextObjective( gdfTeam, mainObjectiveIndex );
+	objManager.setNextObjective( stroggTeam, mainObjectiveIndex );
+}
+```
 
 This piece of code initialises the objective system. The first four lines tell the game which team is defending, and sets up the spawn timers. Now this is important: the "wallConstruction" variable that we declared right at the top of the script will be assigned the value that you gave the key/value pair of the worldspawn. So when the game runs "wallConstruction" will become the same as the "constructible\_materials\_gdf" entity we placed on the map.
 
 Then the script fetches the objective number and sets it as the next objective for both teams. Meanwhile it also starts the first objective. Which is what the next block shows:
 
-`void mapObject_<yourmap>::StartFirstObjective() {`
-`   sys.wait( 5.f );`
-`   objManager.SetObjectiveEntity( wallConstruction, mainObjectiveIndex );`
-`   CreateInitialTimedMission( wallConstruction );`
-`   wallConstruction.vCreateMission();`
-`   wallConstruction.vStartObjective();`
-`}`
+```
+void mapObject_<yourmap>::StartFirstObjective() {
+	sys.wait( 5.f );
+
+	objManager.SetObjectiveEntity( wallConstruction, mainObjectiveIndex );
+
+	CreateInitialTimedMission( wallConstruction );
+	wallConstruction.vCreateMission();
+	wallConstruction.vStartObjective();
+}
+```
 
 Firstly the game will wait a bit and then set our wallConstruction entity as the first objective and say it has an index of 0. It will create the first mission (those missions on the top left of the screen), etc.
 
-`void mapObject_<yourmap>::CompleteObjective( float index, entity p ) {`
-`   if ( index == OBJECTIVE_<yourmap_inCAPS>_BUILD_WALL ) {`
-`       OnWallBuilt();`
-`   }`
-`}`
-`handle mapObject_<yourmap>::GetObjectiveMessage( float index ) {`
-`   if ( index == OBJECTIVE_<yourmap_inCAPS>_BUILD_WALL ) {`
-`       return sys.localizeString( "maps/valley/obj_bridge" );`
-`   }`
-`   return g_locStr_BadObjective;`
-`}`
+```
+void mapObject_<yourmap>::CompleteObjective( float index, entity p ) {
+	if ( index == OBJECTIVE_<yourmap_inCAPS>_BUILD_WALL ) {
+		OnWallBuilt();
+	}
+}
+
+handle mapObject_<yourmap>::GetObjectiveMessage( float index ) {
+	if ( index == OBJECTIVE_<yourmap_inCAPS>_BUILD_WALL ) {
+		return sys.localizeString( "maps/valley/obj_bridge" );
+	}
+
+	return g_locStr_BadObjective;
+}
+```
 
 The first block will fire off the "OnWallBuilt" event we declared earlier, the second is just for printing some text so don't worry about that one.
 
-`void mapObject_<yourmap>::OnWallBuilt() {`
-`   StopTimedMission();`
-`   wallConstruction.vCompleteMission();`
-`   wallConstruction.vFinishObjective();`
-`   gameRules.setWinningTeam( gdfTeam );`
-`   gameRules.endGame();`
-`   wallConstruction.vCompleteMission();`
-`}`
+```
+void mapObject_<yourmap>::OnWallBuilt() {
+	StopTimedMission();
+	wallConstruction.vCompleteMission();
+
+	wallConstruction.vFinishObjective();
+
+	gameRules.setWinningTeam( gdfTeam );
+	gameRules.endGame();
+
+	wallConstruction.vCompleteMission();
+}
+```
 
 Okay, this is the event that's fired when the wall is constructed. This is our only objective so after this we complete missions, objectives, set which team won the map and end the game. But what if the GDF can't construct this in the time limit?
 
-`void mapObject_<yourmap>::OnTimeLimitHit() {`
-`   FinishTimedMission();`
-`   objManager.SetObjectiveEntity( $null_entity, -1 );`
-`   gameRules.endGame();`
-`}`
+```
+void mapObject_<yourmap>::OnTimeLimitHit() {
+	FinishTimedMission();
+	objManager.SetObjectiveEntity( $null_entity, -1 );
+
+	gameRules.endGame();
+}
+```
 
 Since in this map the Strogg are defending they automatically win so no need to set the winning team (as we had already set it near the top). The other lines simply clean up the objectives a bit (setting them to nothing).
 
