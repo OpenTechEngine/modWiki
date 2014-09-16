@@ -1,23 +1,12 @@
 How to add CVar's
 =================
 
-Adding a new [Console.html console] variable (CVar):
+Adding a new [console](Console) variable (CVar):
 
 The files that must be modified are /src/gamesys/syscvar.\*
 
 Let's use the example of adding a CVar to globally lower the volume of sounds that AI hear. We want to add a CVar called dm\_ai\_sndvol so we can adjust the volume of sounds that AI hear in realtime in the console.
 
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                                                                                                                               
- Contents                                                                                                                                                                                                                                           
- --------                                                                                                                                                                                                                                           
-                                                                                                                                                                                                                                                    
- </div>                                                                                                                                                                                                                                             
- -   [How\_to\_add\_CVar's.html\#Step\_1.\_Add\_a\_declaration\_of\_the\_CVar\_in\_.2Fsrc.2Fgamesys.2Fsyscvar.cpp <span class="tocnumber">1</span> <span class="toctext">Step 1. Add a declaration of the CVar in /src/gamesys/syscvar.cpp</span>]  
-     -   [How\_to\_add\_CVar's.html\#Type\_Flags: <span class="tocnumber">1.1</span> <span class="toctext">Type Flags:</span>]                                                                                                                      
-     -   [How\_to\_add\_CVar's.html\#Info\_Flags: <span class="tocnumber">1.2</span> <span class="toctext">Info Flags:</span>]                                                                                                                      
- -   [How\_to\_add\_CVar's.html\#Step\_2.\_Adding\_extern\_declaration\_in\_.2Fsrc.2Fgamesys.2Fsyscvar.h <span class="tocnumber">2</span> <span class="toctext">Step 2. Adding extern declaration in /src/gamesys/syscvar.h</span>]                 
- -   [How\_to\_add\_CVar's.html\#Step\_3.\_Using\_the\_CVar\_in\_the\_SDK <span class="tocnumber">3</span> <span class="toctext">Step 3. Using the CVar in the SDK</span>]                                                                          |
 
 Step 1. Add a declaration of the CVar in /src/gamesys/syscvar.cpp
 -----------------------------------------------------------------
@@ -120,7 +109,7 @@ Similarly, to set it in the SDK; Code:
 
 Side note: Manipulating CVars ingame in the console:
 
-To see a list of CVars ingame, use "[ListCvars\_(console\_command).html listCvars] \<your search string\>" To see a description of a CVar, use "listcvars -help \<your search string\>" To see the current and default value of the CVar, just type the cvar name in the console. To set the value of a CVar, use "set (Command) \<cvar name\> \<value\>"
+To see a list of CVars ingame, use "[listCvars](ListCvars\_(console\_command)) \<your search string\>" To see a description of a CVar, use "listcvars -help \<your search string\>" To see the current and default value of the CVar, just type the cvar name in the console. To set the value of a CVar, use "set (Command) \<cvar name\> \<value\>"
 
 You can also omit the "set" and just type "\<cvar name\> \<value\>" to set the value with less typing.
 
