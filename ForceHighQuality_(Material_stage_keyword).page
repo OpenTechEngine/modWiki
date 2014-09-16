@@ -4,9 +4,9 @@ ForceHighQuality (Material stage keyword)
 Description
 -----------
 
-The **forceHighQuality** stage keyword causes the game to render the associated stage *without* using [Texturing.html\#Compressed\_and\_Uncompressed texture compression] in any quality mode. Without this keyword, the map would be compressed according to the defaults for the selected quality mode (bumpmaps only in High, bumpmaps and diffusemaps in Medium or Low).
+The **forceHighQuality** stage keyword causes the game to render the associated stage *without* using [texture compression](Texturing#Compressed\_and\_Uncompressed) in any quality mode. Without this keyword, the map would be compressed according to the defaults for the selected quality mode (bumpmaps only in High, bumpmaps and diffusemaps in Medium or Low).
 
-This keyword is stronger than [Highquality\_(Material\_stage\_keyword).html highquality] which only affects Medium and High quality modes. It should only be used for textures that absolutely must never be compressed.
+This keyword is stronger than [highquality](Highquality\_(Material\_stage\_keyword)) which only affects Medium and High quality modes. It should only be used for textures that absolutely must never be compressed.
 
 Usage
 -----
@@ -23,22 +23,18 @@ Example
 
 Forces the diffusemap stage to high quality:
 
-`{`
-`  blend diffusemap`
-`  map textures/path/to/image.tga`
-`  forceHighQuality`
-`}`
+```
+{
+  blend diffusemap
+  map textures/path/to/image.tga
+  forceHighQuality
+}
+```
 
 Notes
 -----
 
 One place where you could use this keyword is the HUD.
 
-<div>
-![Image:Q4square\_25.png](images_e_e8_Q4square_25.png "fig:Image:Q4square_25.png") **Note:** Quake 4 only:
-
-  
-*This keyword does not work with [Image\_ignoreHighQuality\_(cvar).html image\_ignoreHighQuality] set to 1. That may or not be the case with Doom 3.*
-
-</div>
-
+![](/images/images_e_e8_Q4square_25.png) Note: _Quake 4 only:_
+ ~  This keyword does not work with [image\_ignoreHighQuality](Image\_ignoreHighQuality\_(cvar)) set to 1. That may or not be the case with Doom 3.
