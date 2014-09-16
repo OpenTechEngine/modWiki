@@ -1,19 +1,6 @@
 How to build the SDK on OSX
 ===========================
 
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                                                                            
- Contents                                                                                                                                                                                        
- --------                                                                                                                                                                                        
-                                                                                                                                                                                                 
- </div>                                                                                                                                                                                          
- -   [How\_to\_build\_the\_SDK\_on\_OSX.html\#What\_You\_Will\_Need <span class="tocnumber">1</span> <span class="toctext">What You Will Need</span>]                                            
- -   [How\_to\_build\_the\_SDK\_on\_OSX.html\#Things\_you\_might\_want <span class="tocnumber">2</span> <span class="toctext">Things you might want</span>]                                      
- -   [How\_to\_build\_the\_SDK\_on\_OSX.html\#How\_to\_build\_it <span class="tocnumber">3</span> <span class="toctext">How to build it</span>]                                                  
-     -   [How\_to\_build\_the\_SDK\_on\_OSX.html\#Package\_your\_build <span class="tocnumber">3.1</span> <span class="toctext">Package your build</span>]                                       
-     -   [How\_to\_build\_the\_SDK\_on\_OSX.html\#Building\_for\_ppc\_and\_intel\_chipsets <span class="tocnumber">3.2</span> <span class="toctext">Building for ppc and intel chipsets</span>]  
- -   [How\_to\_build\_the\_SDK\_on\_OSX.html\#PearPC <span class="tocnumber">4</span> <span class="toctext">PearPC</span>]                                                                       |
-
 What You Will Need
 ------------------
 
@@ -50,11 +37,5 @@ PearPC
 
 You can build the SDK in a Win32 or Linux environment with PearPC (a PowerPC emulator.) The guide above is quite good and will show you how to setup a nice mac environment you can transfer files to and from etc. Only problem with this method is that builds can take a long time, plan to let it go overnight. This is extremely useful for those who don't own a mac.
 
-<div>
-![Image:Q4square\_25.png](images_e_e8_Q4square_25.png "fig:Image:Q4square_25.png") **Note:** Quake 4 only:
-
-  
-*There is an XCode project for the Quake 4 SDK. Gen. Meister has the project, and it was given to him by TTimo.*
-
-</div>
-
+![](/images/images_e_e8_Q4square_25.png) Note: _Quake 4 only:_
+ ~  There is an XCode project for the Quake 4 SDK. Gen. Meister has the project, and it was given to him by TTimo.
