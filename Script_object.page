@@ -9,32 +9,6 @@ While an entities' [Spawn\_class.html spawn class] strongly defines run time beh
 
 The spawn class sets up and runs a script object if the key/value pair "scriptobject" is set to a valid object type on the entities [SpawnArgs.html spawnArgs].
 
-|---------------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                         
- Contents                                                                                                                                     
- --------                                                                                                                                     
-                                                                                                                                              
- </div>                                                                                                                                       
- -   [Script\_object.html\#Working\_on\_objects <span class="tocnumber">1</span> <span class="toctext">Working on objects</span>]             
- -   [Script\_object.html\#Declaration <span class="tocnumber">2</span> <span class="toctext">Declaration</span>]                             
- -   [Script\_object.html\#Function\_Definition <span class="tocnumber">3</span> <span class="toctext">Function Definition</span>]            
- -   [Script\_object.html\#Important\_functions <span class="tocnumber">4</span> <span class="toctext">Important functions</span>]            
- -   [Script\_object.html\#Example <span class="tocnumber">5</span> <span class="toctext">Example</span>]                                     
-     -   [Script\_object.html\#Script <span class="tocnumber">5.1</span> <span class="toctext">Script</span>]                                 
-     -   [Script\_object.html\#Entity\_set\_up <span class="tocnumber">5.2</span> <span class="toctext">Entity set up</span>]                 
- -   [Script\_object.html\#Example\_Notes <span class="tocnumber">6</span> <span class="toctext">Example Notes</span>]                        
-     -   [Script\_object.html\#declare <span class="tocnumber">6.1</span> <span class="toctext">declare</span>]                               
-     -   [Script\_object.html\#debug\_print <span class="tocnumber">6.2</span> <span class="toctext">debug print</span>]                      
-     -   [Script\_object.html\#type\_check <span class="tocnumber">6.3</span> <span class="toctext">type check</span>]                        
-     -   [Script\_object.html\#warning <span class="tocnumber">6.4</span> <span class="toctext">warning</span>]                               
-     -   [Script\_object.html\#type\_check\_return <span class="tocnumber">6.5</span> <span class="toctext">type check return</span>]         
-     -   [Script\_object.html\#spawnargs\_performance <span class="tocnumber">6.6</span> <span class="toctext">spawnargs performance</span>]  
-     -   [Script\_object.html\#run-time\_function <span class="tocnumber">6.7</span> <span class="toctext">run-time function</span>]          
-     -   [Script\_object.html\#run\_time\_loop <span class="tocnumber">6.8</span> <span class="toctext">run time loop</span>]                 
-     -   [Script\_object.html\#ETQW\_event <span class="tocnumber">6.9</span> <span class="toctext">ETQW event</span>]                        
-     -   [Script\_object.html\#functions\_on\_self <span class="tocnumber">6.10</span> <span class="toctext">functions on self</span>]        
-     -   [Script\_object.html\#waiting <span class="tocnumber">6.11</span> <span class="toctext">waiting</span>]                              |
-
 Working on objects
 ------------------
 
@@ -42,9 +16,11 @@ In order to call a function of a script object a valid object reference must be 
 
 Example:
 
-`monster_base myMonster; `
-`myMonster = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`getEntity`</font><font color="#000000">`(`</font><font color="#666666">`"monster_sam"`</font><font color="#000000">`)`</font>`; /`
-`myMonster.`<font color="#ff0000">`wake_on_trigger`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+```doom3script
+monster_base myMonster; 
+myMonster = sys.getEntity("monster_sam"); /
+myMonster.wake_on_trigger();
+```
 
 Line 1 declares and object reference of monster\_base type. The script compiler will issue an error if there is no script object of that type.
 
@@ -58,22 +34,25 @@ Declaration
 -----------
 
 Syntax:
-
-<font color="#0000ff">`object`</font>` `<font color="#000000">`[`</font>`script `<font color="#0000ff">`object`</font>` type`<font color="#000000">`]`</font>` : `<font color="#000000">`[`</font>`base script `<font color="#0000ff">`object`</font>` type`<font color="#000000">`]`</font>` `<font color="#000000">`{`</font>
-`    `<font color="#000000">`[`</font>`function declaration`<font color="#000000">`]`</font>
-` `
-`    `<font color="#000000">`[`</font>`variable declaration`<font color="#000000">`]`</font>
-`    ...`
-<font color="#000000">`}`</font>
+```
+object [script object type] : [base script object type] {
+    [function declaration]
+ 
+    [variable declaration]
+    ...
+}
+```
 
 Function Definition
 -------------------
 
 Syntax:
 
-<font color="#000000">`[`</font>`return type`<font color="#000000">`]`</font>` `<font color="#000000">`[`</font>`script `<font color="#0000ff">`object`</font>` type`<font color="#000000">`]`</font>`::`<font color="#000000">`[`</font>`function name`<font color="#000000">`]`</font><font color="#000000">`(`</font><font color="#000000">`[`</font>`parameters`<font color="#000000">`]`</font><font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`   ...`
-<font color="#000000">`}`</font>
+```
+[return type] [script object type]::[function name]([parameters]) {
+   ...
+}
+```
 
 -   [script object type] - The name of the object type. Must be unique within compiled script
 -   [base script object type] - The object type to inherit from.
@@ -85,7 +64,7 @@ Important functions
 
 A number of functions are called by the entitys [Spawn\_class.html spawn class].
 
-`init`<font color="#000000">`(`</font><font color="#000000">`)`</font>
+`init()`
 
 The script object constructor. A [Thread\_(scripting).html thread] is created by the spawn class to run the init() script function at the end of the Spawn() function.
 
@@ -93,7 +72,7 @@ Use to set up initial state of the script object variables.
 
 **Note**: There is a bug in the scripting system where the init() function won't be able to call any functions of that object unless at least one variable is declared, or if the function in question is called through self.callFunction([function]);
 
-`destroy`<font color="#000000">`(`</font><font color="#000000">`)`</font>
+`destroy()`
 
 Destructor. Called early on in the spawn class destructor when the entity is removed.
 
@@ -114,91 +93,108 @@ TODO: find out if there is a way to escape wiki nonwikifying links in script/cod
 
 To simplify things conceptually while working on a script we can think of the script object as being an entity that is running a script object of this type.
 
-` `
-*<font color="#339900">`/***********************************************************************` `light_strobe` `A` `simple` `script` `object` `for` `use` `on` `entities` `of` `the` `spawn` `class` `idLight` `that` `fades` `in` `and` `out.` `***********************************************************************/`</font>*
-` `
-<font color="#0000ff">`object`</font>` light_strobe `<font color="#000000">`{`</font>` `<font color="#339900">`// [[#declare]]`</font>
-`   `<font color="#339900">`// declare functions`</font>
-`   `<font color="#0000ff">`void`</font>` init`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`   `
-`   `<font color="#0000ff">`void`</font>` main`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`   `
-`   `<font color="#339900">`// declare variables`</font>
-`   `<font color="#0000ff">`float`</font>` fadeOutTime;`
-`   `<font color="#0000ff">`float`</font>` fadeInTime;`
-`   `<font color="#0000ff">`float`</font>` delayTime;`
-`   `
-`   `<font color="#0000ff">`boolean`</font>` run;`
-<font color="#000000">`}`</font>`;`
-` `
-*<font color="#339900">`/*` `=====================` `light_strobe::init` `The` `first` `function` `called` `on` `entity` `spawn` `by` `the` `base` `spawn` `class` `Use` `it` `to` `set` `up` `the` `initial` `state` `of` `the` `script` `object` `=====================` `*/`</font>*
-<font color="#0000ff">`void`</font>` light_strobe::init`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`   `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font>` `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`getTime`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` + `<font color="#666666">`" init()"`</font>` `<font color="#000000">`)`</font>`; `<font color="#339900">`// [[#debug print]]`</font>
-`   `
-`   `<font color="#339900">`// [[#type check]]`</font>
-`   `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` `<font color="#0000ff">`getKey`</font><font color="#000000">`(`</font>` `<font color="#666666">`"spawnclass"`</font>` `<font color="#000000">`)`</font>` != `<font color="#666666">`"idLight"`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`   `<font color="#339900">`// [[#warning]]`</font>
-`       `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`warning`</font><font color="#000000">`(`</font>` `<font color="#666666">`"script object 'light_strobe' requires a the spawn class 'idLight', the entity it is running on '"`</font>` + `<font color="#0000ff">`getName`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` + `<font color="#666666">`"' is of type '"`</font>` + `<font color="#0000ff">`getKey`</font><font color="#000000">`(`</font>` `<font color="#666666">`"spawnclass"`</font>` `<font color="#000000">`)`</font>` + `<font color="#666666">`"'"`</font>` `<font color="#000000">`)`</font>`;`
-`       return; `<font color="#339900">`// [[#type check return]]`</font>
-`   `<font color="#000000">`}`</font>
-` `
-`   `<font color="#339900">`// set up variables`</font>
-`   `<font color="#339900">`// [[#spawnargs performance]]`</font>
-`   fadeOutTime = `<font color="#0000ff">`getFloatKey`</font><font color="#000000">`(`</font>` `<font color="#666666">`"fade_in_time"`</font>` `<font color="#000000">`)`</font>`;`
-`   fadeInTime = `<font color="#0000ff">`getFloatKey`</font><font color="#000000">`(`</font>` `<font color="#666666">`"fade_out_time"`</font>` `<font color="#000000">`)`</font>`;`
-`   delayTime = `<font color="#0000ff">`getFloatKey`</font><font color="#000000">`(`</font>` `<font color="#666666">`"delay_time"`</font>` `<font color="#000000">`)`</font>`;`
-`   `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` delayTime == `<font color="#0000dd">`0`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`warning`</font><font color="#000000">`(`</font>` `<font color="#0000ff">`getName`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` + `<font color="#666666">`" - light_strobe - delay_time should be greater than 0"`</font>` `<font color="#000000">`)`</font>`;`
-`       delayTime = `<font color="#0000dd">`1`</font>`;`
-`   `<font color="#000000">`}`</font>
-`   `
-`   `
-`   run = true; `<font color="#339900">`// we are using this to control our loop in main.`</font>
-`   `
-`   `<font color="#339900">`// [[#run time function]]`</font>
-`   main`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;   `
-<font color="#000000">`}`</font>
-` `
-*<font color="#339900">`/*` `=====================` `light_strobe::main` `=====================` `*/`</font>*
-<font color="#0000ff">`void`</font>` light_strobe::main`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`   `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font>` `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`getTime`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` + `<font color="#666666">`" main()"`</font>` `<font color="#000000">`)`</font>`; `<font color="#339900">`// [[#debug print]]`</font>
-`   `
-`   `<font color="#0000ff">`boolean`</font>` isOn = true; `<font color="#339900">`// light starts on`</font>
-` `
-`   `
-`   `<font color="#339900">`// [[#run time loop]]`</font>
-`   `<font color="#0000ff">`while`</font><font color="#000000">`(`</font>` run `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>` `<font color="#339900">`// we set run to true in init()`</font>
-`       `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font>` `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`getTime`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` + `<font color="#666666">`" loop top"`</font>` `<font color="#000000">`)`</font>`; `<font color="#339900">`// [[#debug print]]`</font>
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` isOn `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           `<font color="#339900">`//turnOff(); // [[#ETQW event]]`</font>
-`           `<font color="#0000ff">`fadeOutLight`</font><font color="#000000">`(`</font>` fadeOutTime `<font color="#000000">`)`</font>`;`
-`           `<font color="#339900">`//[[#functions on self]]`</font>
-`           isOn = false;`
-`       `<font color="#000000">`}`</font>` `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>
-`           `<font color="#339900">`//turnOn(); // [[#ETQW event]]`</font>
-`           `<font color="#0000ff">`fadeInLight`</font><font color="#000000">`(`</font>` fadeInTime `<font color="#000000">`)`</font>`;`
-`           isOn = true;`
-`       `<font color="#000000">`}`</font>
-`               `
-`       `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`wait`</font><font color="#000000">`(`</font>` delayTime `<font color="#000000">`)`</font>`;`<font color="#339900">`// [[#waiting]]`</font>
-`   `<font color="#000000">`}`</font>
-<font color="#000000">`}`</font>
-` `
-<font color="#339900">`// EOF`</font>
+```doom3script
+/***********************************************************************
+ 
+light_strobe
+A simple script object for use on entities of the spawn class idLight that fades in and out.
+ 
+***********************************************************************/
+ 
+object light_strobe { // [[#declare]]
+	// declare functions
+	void init();
+	
+	void main();
+	
+	// declare variables
+	float fadeOutTime;
+	float fadeInTime;
+	float delayTime;
+	
+	boolean run;
+};
+ 
+/*
+=====================
+light_strobe::init
+The first function called on entity spawn by the base spawn class
+Use it to set up the initial state of the script object
+=====================
+*/
+void light_strobe::init() {
+	sys.println( sys.getTime() + " init()" ); // [[#debug print]]
+	
+	// [[#type check]]
+	if ( getKey( "spawnclass" ) != "idLight" ) {
+	// [[#warning]]
+		sys.warning( "script object 'light_strobe' requires a the spawn class 'idLight', the entity it is running on '" + getName() + "' is of type '" + getKey( "spawnclass" ) + "'" );
+		return; // [[#type check return]]
+	}
+ 
+	// set up variables
+	// [[#spawnargs performance]]
+	fadeOutTime = getFloatKey( "fade_in_time" );
+	fadeInTime = getFloatKey( "fade_out_time" );
+	delayTime = getFloatKey( "delay_time" );
+	if ( delayTime == 0 ) {
+		sys.warning( getName() + " - light_strobe - delay_time should be greater than 0" );
+		delayTime = 1;
+	}
+	
+	
+	run = true; // we are using this to control our loop in main.
+	
+	// [[#run time function]]
+	main(); 	
+}
+ 
+/*
+=====================
+light_strobe::main
+=====================
+*/
+void light_strobe::main() {
+	sys.println( sys.getTime() + " main()" ); // [[#debug print]]
+	
+	boolean isOn = true; // light starts on
+ 
+	
+	// [[#run time loop]]
+	while( run ) { // we set run to true in init()
+		sys.println( sys.getTime() + " loop top" ); // [[#debug print]]
+		if ( isOn ) {
+			//turnOff(); // [[#ETQW event]]
+			fadeOutLight( fadeOutTime );
+			//[[#functions on self]]
+			isOn = false;
+		} else {
+			//turnOn(); // [[#ETQW event]]
+			fadeInLight( fadeInTime );
+			isOn = true;
+		}
+				
+		sys.wait( delayTime );// [[#waiting]]
+	}
+}
+ 
+// EOF
+```
 
 ### Entity set up
 
 Put script in scripts folder and include in main script.
 
 Set up on a light entity with the following key/value pairs:
-
-<font color="#666666">`"scriptobject"`</font>` `<font color="#666666">`"light_strobe"`</font>
-` `
-<font color="#666666">`"delay_time"`</font>` `<font color="#666666">`"2"`</font>
-` `
-<font color="#666666">`"fade_in_time"`</font>` `<font color="#666666">`"3"`</font>
-` `
-<font color="#666666">`"fade_out_time"`</font>` `<font color="#666666">`"1"`</font>
+```
+"scriptobject" "light_strobe"
+ 
+"delay_time" "2"
+ 
+"fade_in_time" "3"
+ 
+"fade_out_time" "1"
+```
 
 Note: While you could just add these keys to the map entity, setting up an entityDef for a spawn class/script object combination is the best way to set defaults for spawnArgs.
 
@@ -255,13 +251,9 @@ Once run time script object behavior gets to a certain point of complexity it's 
 
 ### ETQW event
 
-<div>
-![Image:Etqwsquare\_25.png](images_7_7e_Etqwsquare_25.png "fig:Image:Etqwsquare_25.png") **Note:** Enemy Territory: Quake Wars only:
+![](/images/images_7_7e_Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
+ ~  *Enemy Territory: Quake Wars does not have fadeIn and fadeOut events on the spawn class idLight, there are turnOn and turnOff events but as the names suggest, they do not fade over time.*
 
-  
-*(Enemy Territory: Quake Wars does not have fadeIn and fadeOut events on the spawn class idLight, there are turnOn and turnOff events but as the names suggest, they do not fade over time.)*
-
-</div>
 ### functions on self
 
 All function calls without a specific entity reference will be checked to see if it's a function declared in the script object, or a script event on the the spawn class.
