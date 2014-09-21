@@ -4,7 +4,7 @@ Com aviDemoWidth (cvar)
 Description
 -----------
 
-Select the width of the .[TGA\_(file\_format).html TGA] frames generated with the [AviDemo\_(console\_command).html aviDemo] command.
+Select the width of the .[TGA](TGA\_(file\_format)) frames generated with the [aviDemo](AviDemo\_(console\_command)) command.
 
 Usage
 -----
@@ -61,8 +61,8 @@ You should have no problem specifying resolutions higher then your desktop/game 
 
 Related CVars:
 
--   [Com\_aviDemoHeight\_(cvar).html com\_aviDemoHeight] - You can select the height of each frame.
--   [Com\_aviDemoSamples\_(cvar).html com\_aviDemoSamples] - You can select the [Antialiasing.html antialiasing] factor of each frame.
--   [Com\_aviDemoTics\_(cvar).html com\_aviDemoTics] - You can select how many frames per second should be generated.
+-   [com\_aviDemoHeight](Com\_aviDemoHeight\_(cvar)) - You can select the height of each frame.
+-   [com\_aviDemoSamples](Com\_aviDemoSamples\_(cvar)) - You can select the [antialiasing](Antialiasing) factor of each frame.
+-   [com\_aviDemoTics](Com\_aviDemoTics\_(cvar)) - You can select how many frames per second should be generated.
 
 

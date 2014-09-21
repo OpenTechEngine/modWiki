@@ -3,7 +3,7 @@ GUI item properties
 
 Properties say how the item will be drawn or work. They are defined on the script source, but can have their values changed at runtime.
 
-Properties are featured somewhere inside each of a GUI's [GUI\_items.html items], and use the following syntax:
+Properties are featured somewhere inside each of a GUI's [items](GUI\_items), and use the following syntax:
 
 *`property_name`*` `*`property_values`*
 
@@ -28,12 +28,12 @@ Or using internal calculations:
 
 `matcolor   0.25, 0.45, 0.4, pdflick2 [ time * .0025 ] / 2.5`
 
-On both cases, properties will change to reflect the change on their variables or parameters over time. The list of available parameters depends on how each different GUI works, though, as most of them come from hard-coded interaction with other [Scripting.html scripting] systems. Check the [Guis\_(folder).html Guis (folder)] list to see how most of Doom 3's built-in GUIs work on that aspect.
+On both cases, properties will change to reflect the change on their variables or parameters over time. The list of available parameters depends on how each different GUI works, though, as most of them come from hard-coded interaction with other [scripting](Scripting) systems. Check the [Guis (folder)](Guis\_(folder)) list to see how most of Doom 3's built-in GUIs work on that aspect.
 
 Available item properties
 -------------------------
 
-The following item properties are known. Most of them apply to all kinds of [GUI\_items.html GUI items], although a few of them are reserved for specific types and are noted as so. Also, due to their names, the task each of them perform is pretty much obvious.
+The following item properties are known. Most of them apply to all kinds of [GUI items](GUI\_items), although a few of them are reserved for specific types and are noted as so. Also, due to their names, the task each of them perform is pretty much obvious.
 
 Apparently, the GUI system makes no differentiation for uppercase and lowercase property names.
 

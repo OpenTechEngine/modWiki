@@ -61,8 +61,8 @@ The colours represent the number of light interactions as follows:
 `Purple = 5`
 `White = 6+`
 
-Please note that surfaces whose materials use [Vertex\_and\_fragment\_programs.html vertex and fragment programs] are coloured black.
+Please note that surfaces whose materials use [vertex and fragment programs](Vertex\_and\_fragment\_programs) are coloured black.
 
-It can also help to set "[R\_showTris\_(cvar).html r\_showTris] 3" and "[R\_showLightScissors\_(cvar).html r\_showLightScissors] 1".
+It can also help to set "[r\_showTris](R\_showTris\_(cvar)) 3" and "[r\_showLightScissors](R\_showLightScissors\_(cvar)) 1".
 
 

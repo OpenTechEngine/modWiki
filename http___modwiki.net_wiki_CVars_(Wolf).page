@@ -2,13 +2,13 @@ http modwiki.net wiki CVars (Wolf)
 ==================================
 
 <div style="padding: 1px; border: 0px solid #000000" align="left">
-<font size="18px"><font color="black">![Image:Rtcw2square\_bg.png](images_5_5d_Rtcw2square_bg.png "fig:Image:Rtcw2square_bg.png") The information on this page is specific to [Wolfenstein.html Wolfenstein].</font></font>
+<font size="18px"><font color="black">![Image:Rtcw2square\_bg.png](images_5_5d_Rtcw2square_bg.png "fig:Image:Rtcw2square_bg.png") The information on this page is specific to [Wolfenstein](Wolfenstein).</font></font>
 
 </div>
 
 ------------------------------------------------------------------------
 
-Existing [Console.html CVars] as of version 0.91.25.7022 (Single Player).
+Existing [CVars](Console) as of version 0.91.25.7022 (Single Player).
 
 To Be Sorted
 ------------
@@ -17,24 +17,24 @@ To Be Sorted
 | aa\_softLockAngleMax                                                       |     |
 | aa\_traceDist                                                              |     |
 | aa\_yawAccTime                                                             |     |
-| [Aas\_goalArea\_(cvar).html aas\_goalArea]                                 |     |
-| [Aas\_showAreas\_(cvar).html aas\_showAreas]                               |     |
-| [Aas\_showPath\_(cvar).html aas\_showPath]                                 |     |
+| [aas\_goalArea](Aas\_goalArea\_(cvar))                                 |     |
+| [aas\_showAreas](Aas\_showAreas\_(cvar))                               |     |
+| [aas\_showPath](Aas\_showPath\_(cvar))                                 |     |
 | aas\_showReachDetail                                                       |     |
 | aas\_showReachPlayer                                                       |     |
 | aas\_showReachWalkOnly                                                     |     |
-| [Aas\_showRevReach\_(cvar).html aas\_showRevReach]                         |     |
+| [aas\_showRevReach](Aas\_showRevReach\_(cvar))                         |     |
 | aas\_showSensors                                                           |     |
 | aas\_showSubClusters                                                       |     |
-| [Aas\_showWallEdges\_(cvar).html aas\_showWallEdges]                       |     |
+| [aas\_showWallEdges](Aas\_showWallEdges\_(cvar))                       |     |
 | aas\_startArea                                                             |     |
 | aas\_useClusters                                                           |     |
 | ai\_accelRate                                                              |     |
 | ai\_aimDisable                                                             |     |
 | ai\_aimForceAtPlayer                                                       |     |
-| [Ai\_allowOldAAS\_(cvar).html ai\_allowOldAAS]                             |     |
+| [ai\_allowOldAAS](Ai\_allowOldAAS\_(cvar))                             |     |
 | ai\_alwaysKickDoors                                                        |     |
-| [Ai\_animShow\_(cvar).html ai\_animShow]                                   |     |
+| [ai\_animShow](Ai\_animShow\_(cvar))                                   |     |
 | ai\_chatterOcclusionMaxDist                                                |     |
 | ai\_chatterOcclusionMaxValue                                               |     |
 | ai\_chatterOcclusionMinDist                                                |     |
@@ -69,13 +69,13 @@ To Be Sorted
 | ai\_debugDeathAnims                                                        |     |
 | ai\_debugDespoiledPrediction                                               |     |
 | ai\_debugDespoiledTargeting                                                |     |
-| [Ai\_debugEyeFocus\_(cvar).html ai\_debugEyeFocus]                         |     |
-| [Ai\_debugFilterString\_(cvar).html ai\_debugFilterString]                 |     |
+| [ai\_debugEyeFocus](Ai\_debugEyeFocus\_(cvar))                         |     |
+| [ai\_debugFilterString](Ai\_debugFilterString\_(cvar))                 |     |
 | ai\_debugFilterTeam                                                        |     |
 | ai\_debugFuzzyPerception                                                   |     |
 | ai\_debugGrenade                                                           |     |
-| [Ai\_debugHelpers\_(cvar).html ai\_debugHelpers]                           |     |
-| [Ai\_debugMove\_(cvar).html ai\_debugMove]                                 |     |
+| [ai\_debugHelpers](Ai\_debugHelpers\_(cvar))                           |     |
+| [ai\_debugMove](Ai\_debugMove\_(cvar))                                 |     |
 | ai\_debugMuzzleAim                                                         |     |
 | ai\_debugOcclusion                                                         |     |
 | ai\_debugOverrideCover                                                     |     |
@@ -83,19 +83,19 @@ To Be Sorted
 | ai\_debugSenses                                                            |     |
 | ai\_debugSight                                                             |     |
 | ai\_debugSpawners                                                          |     |
-| [Ai\_debugSquad\_(cvar).html ai\_debugSquad]                               |     |
-| [Ai\_debugStealth\_(cvar).html ai\_debugStealth]                           |     |
+| [ai\_debugSquad](Ai\_debugSquad\_(cvar))                               |     |
+| [ai\_debugStealth](Ai\_debugStealth\_(cvar))                           |     |
 | ai\_debugSwarmGraphics                                                     |     |
-| [Ai\_debugTactical\_(cvar).html ai\_debugTactical]                         |     |
-| [Ai\_debugTrajectory\_(cvar).html ai\_debugTrajectory]                     |     |
+| [ai\_debugTactical](Ai\_debugTactical\_(cvar))                         |     |
+| [ai\_debugTrajectory](Ai\_debugTrajectory\_(cvar))                     |     |
 | ai\_debugTurnSmoothing                                                     |     |
 | ai\_debugVOStreaming                                                       |     |
 | ai\_debugZoneActivation                                                    |     |
 | ai\_decelDist                                                              |     |
 | ai\_decelRate                                                              |     |
-| [Ai\_disableAttacks\_(cvar).html ai\_disableAttacks]                       |     |
+| [ai\_disableAttacks](Ai\_disableAttacks\_(cvar))                       |     |
 | ai\_disableBrainCache                                                      |     |
-| [Ai\_disableCover\_(cvar).html ai\_disableCover]                           |     |
+| [ai\_disableCover](Ai\_disableCover\_(cvar))                           |     |
 | ai\_disableEyeFocus                                                        |     |
 | ai\_disableGrenades                                                        |     |
 | ai\_disableHunt                                                            |     |
@@ -108,7 +108,7 @@ To Be Sorted
 | ai\_forceRun                                                               |     |
 | ai\_forceWalk                                                              |     |
 | ai\_forgetAboutEnemyTimer                                                  |     |
-| [Ai\_freeze\_(cvar).html ai\_freeze]                                       |     |
+| [ai\_freeze](Ai\_freeze\_(cvar))                                       |     |
 | ai\_fuzzyAlert                                                             |     |
 | ai\_fuzzyCrouch                                                            |     |
 | ai\_fuzzyDecRate                                                           |     |
@@ -176,19 +176,19 @@ To Be Sorted
 | ai\_sfxOcclusionWetMinDist                                                 |     |
 | ai\_sfxOcclusionWetMinValue                                                |     |
 | ai\_showBrainActivity                                                      |     |
-| [Ai\_showCombatNodes\_(cvar).html ai\_showCombatNodes]                     |     |
-| [Ai\_showCover\_(cvar).html ai\_showCover]                                 |     |
+| [ai\_showCombatNodes](Ai\_showCombatNodes\_(cvar))                     |     |
+| [ai\_showCover](Ai\_showCover\_(cvar))                                 |     |
 | ai\_showGrenades                                                           |     |
 | ai\_showHeadModelName                                                      |     |
 | ai\_showHealth                                                             |     |
 | ai\_showLastKnownPos                                                       |     |
-| [Ai\_showObstacleAvoidance\_(cvar).html ai\_showObstacleAvoidance]         |     |
-| [Ai\_showPaths\_(cvar).html ai\_showPaths]                                 |     |
-| [Ai\_showTacticalFeatures\_(cvar).html ai\_showTacticalFeatures]           |     |
+| [ai\_showObstacleAvoidance](Ai\_showObstacleAvoidance\_(cvar))         |     |
+| [ai\_showPaths](Ai\_showPaths\_(cvar))                                 |     |
+| [ai\_showTacticalFeatures](Ai\_showTacticalFeatures\_(cvar))           |     |
 | ai\_showTagInfo                                                            |     |
 | ai\_sightTraceBatch                                                        |     |
 | ai\_sightTraceMax                                                          |     |
-| [Ai\_speeds\_(cvar).html ai\_speeds]                                       |     |
+| [ai\_speeds](Ai\_speeds\_(cvar))                                       |     |
 | ai\_stayInAimDot                                                           |     |
 | ai\_stayInAimDotRestrictive                                                |     |
 | ai\_stayInAimNoLeanDot                                                     |     |
@@ -196,7 +196,7 @@ To Be Sorted
 | ai\_stepAsideMinDot                                                        |     |
 | ai\_testAASTrace                                                           |     |
 | ai\_testAASTraceZOffset                                                    |     |
-| [Ai\_testPredictPath\_(cvar).html ai\_testPredictPath]                     |     |
+| [ai\_testPredictPath](Ai\_testPredictPath\_(cvar))                     |     |
 | ai\_testRouteSensor                                                        |     |
 | ai\_timescale                                                              |     |
 | ai\_useChokePoints                                                         |     |
@@ -249,66 +249,66 @@ To Be Sorted
 | bsp\_menuitem8                                                             |     |
 | ToD                                                                        |     |
 | bsp\_menuitem9                                                             |     |
-| [Cl\_showEntityInfo\_(cvar).html cl\_showEntityInfo]                       |     |
+| [cl\_showEntityInfo](Cl\_showEntityInfo\_(cvar))                       |     |
 | cm\_bsp\_forcePatchSubdivide                                               |     |
 | cm\_bsp\_maxPatchSubdivide                                                 |     |
 | cm\_bsp\_skipPatches                                                       |     |
 | cm\_bsp\_usePatchSubdivide                                                 |     |
-| [Cm\_drawColor\_(cvar).html cm\_drawColor]                                 |     |
-| [Cm\_drawMask\_(cvar).html cm\_drawMask]                                   |     |
+| [cm\_drawColor](Cm\_drawColor\_(cvar))                                 |     |
+| [cm\_drawMask](Cm\_drawMask\_(cvar))                                   |     |
 | com\_allowAssetLoadOnFind                                                  |     |
 | com\_allowBadSavegameVersion                                               |     |
-| [Com\_allowConsole\_(cvar).html com\_allowConsole]                         |     |
-| [Com\_asyncSound\_(cvar).html com\_asyncSound]                             |     |
-| [Com\_aviDemoSamples\_(cvar).html com\_aviDemoSamples]                     |     |
-| [Com\_aviDemoTics\_(cvar).html com\_aviDemoTics]                           |     |
+| [com\_allowConsole](Com\_allowConsole\_(cvar))                         |     |
+| [com\_asyncSound](Com\_asyncSound\_(cvar))                             |     |
+| [com\_aviDemoSamples](Com\_aviDemoSamples\_(cvar))                     |     |
+| [com\_aviDemoTics](Com\_aviDemoTics\_(cvar))                           |     |
 | com\_BinaryRead                                                            |     |
 | com\_BinaryWrite                                                           |     |
-| [Com\_compressDemos\_(cvar).html com\_compressDemos]                       |     |
+| [com\_compressDemos](Com\_compressDemos\_(cvar))                       |     |
 | com\_cpuSpeed                                                              |     |
 | com\_deleteFlushedDeclsOnMapTransition                                     |     |
 | com\_emailErrors                                                           |     |
-| [Com\_fixedTic\_(cvar).html com\_fixedTic]                                 |     |
-| [Com\_forceGenericSIMD\_(cvar).html com\_forceGenericSIMD]                 |     |
-| [Com\_guid\_(cvar).html com\_guid]                                         |     |
-| [Com\_journal\_(cvar).html com\_journal]                                   |     |
-| [Com\_logDemos\_(cvar).html com\_logDemos]                                 |     |
+| [com\_fixedTic](Com\_fixedTic\_(cvar))                                 |     |
+| [com\_forceGenericSIMD](Com\_forceGenericSIMD\_(cvar))                 |     |
+| [com\_guid](Com\_guid\_(cvar))                                         |     |
+| [com\_journal](Com\_journal\_(cvar))                                   |     |
+| [com\_logDemos](Com\_logDemos\_(cvar))                                 |     |
 | com\_logMPStats                                                            |     |
-| [Com\_machineSpec\_(cvar).html com\_machineSpec]                           |     |
-| [Com\_makingBuild\_(cvar).html com\_makingBuild]                           |     |
-| [Com\_memoryMarker\_(cvar).html com\_memoryMarker]                         |     |
-| [Com\_minTics\_(cvar).html com\_minTics]                                   |     |
+| [com\_machineSpec](Com\_machineSpec\_(cvar))                           |     |
+| [com\_makingBuild](Com\_makingBuild\_(cvar))                           |     |
+| [com\_memoryMarker](Com\_memoryMarker\_(cvar))                         |     |
+| [com\_minTics](Com\_minTics\_(cvar))                                   |     |
 | com\_MultiTic                                                              |     |
-| [Com\_preciseTic\_(cvar).html com\_preciseTic]                             |     |
-| [Com\_preloadDemos\_(cvar).html com\_preloadDemos]                         |     |
-| [Com\_showAngles\_(cvar).html com\_showAngles]                             |     |
-| [Com\_showFPS\_(cvar).html com\_showFPS]                                   |     |
+| [com\_preciseTic](Com\_preciseTic\_(cvar))                             |     |
+| [com\_preloadDemos](Com\_preloadDemos\_(cvar))                         |     |
+| [com\_showAngles](Com\_showAngles\_(cvar))                             |     |
+| [com\_showFPS](Com\_showFPS\_(cvar))                                   |     |
 | com\_showMemAllocTags                                                      |     |
-| [Com\_showMemoryUsage\_(cvar).html com\_showMemoryUsage]                   |     |
-| [Com\_showSoundDecoders\_(cvar).html com\_showSoundDecoders]               |     |
-| [Com\_showTics\_(cvar).html com\_showTics]                                 |     |
+| [com\_showMemoryUsage](Com\_showMemoryUsage\_(cvar))                   |     |
+| [com\_showSoundDecoders](Com\_showSoundDecoders\_(cvar))               |     |
+| [com\_showTics](Com\_showTics\_(cvar))                                 |     |
 | com\_showVehicleData                                                       |     |
 | com\_SingleDeclFile                                                        |     |
-| [Com\_skipGameDraw\_(cvar).html com\_skipGameDraw]                         |     |
+| [com\_skipGameDraw](Com\_skipGameDraw\_(cvar))                         |     |
 | com\_skipIntro                                                             |     |
-| [Com\_skipRenderer\_(cvar).html com\_skipRenderer]                         |     |
-| [Com\_speeds\_(cvar).html com\_speeds]                                     |     |
+| [com\_skipRenderer](Com\_skipRenderer\_(cvar))                         |     |
+| [com\_speeds](Com\_speeds\_(cvar))                                     |     |
 | com\_syncGameFrame                                                         |     |
-| [Com\_systemRam\_(cvar).html com\_systemRam]                               |     |
-| [Com\_timestampPrints\_(cvar).html com\_timestampPrints]                   |     |
+| [com\_systemRam](Com\_systemRam\_(cvar))                               |     |
+| [com\_timestampPrints](Com\_timestampPrints\_(cvar))                   |     |
 | com\_uniqueWarnings                                                        |     |
-| [Com\_updateLoadSize\_(cvar).html com\_updateLoadSize]                     |     |
+| [com\_updateLoadSize](Com\_updateLoadSize\_(cvar))                     |     |
 | com\_userCommandHz                                                         |     |
-| [Com\_videoRam\_(cvar).html com\_videoRam]                                 |     |
+| [com\_videoRam](Com\_videoRam\_(cvar))                                 |     |
 | CompassSafeHouseIcon                                                       |     |
-| [Con\_noPrint\_(cvar).html con\_noPrint]                                   |     |
-| [Con\_notifyTime\_(cvar).html con\_notifyTime]                             |     |
-| [Con\_speed\_(cvar).html con\_speed]                                       |     |
+| [con\_noPrint](Con\_noPrint\_(cvar))                                   |     |
+| [con\_notifyTime](Con\_notifyTime\_(cvar))                             |     |
+| [con\_speed](Con\_speed\_(cvar))                                       |     |
 | debug\_langstrings                                                         |     |
 | decal\_debug                                                               |     |
 | decal\_longDecalCreateTimeMs                                               |     |
-| [Decl\_show\_(cvar).html decl\_show]                                       |     |
-| [Developer\_(cvar).html developer]                                         |     |
+| [decl\_show](Decl\_show\_(cvar))                                       |     |
+| [developer](Developer\_(cvar))                                         |     |
 | directInputJoystickDeadZone                                                |     |
 | dmap\_remoteEmailDomain                                                    |     |
 | dmap\_remoteInputPath                                                      |     |
@@ -323,22 +323,22 @@ To Be Sorted
 | fas\_timeOffset                                                            |     |
 | fas\_useStaticBlendTime                                                    |     |
 | fontLang                                                                   |     |
-| [Fs\_basepath\_(cvar).html fs\_basepath]                                   |     |
-| [Fs\_caseSensitiveOS\_(cvar).html fs\_caseSensitiveOS]                     |     |
-| [Fs\_cdpath\_(cvar).html fs\_cdpath]                                       |     |
-| [Fs\_copyfiles\_(cvar).html fs\_copyfiles]                                 |     |
-| [Fs\_debug\_(cvar).html fs\_debug]                                         |     |
-| [Fs\_devpath\_(cvar).html fs\_devpath]                                     |     |
+| [fs\_basepath](Fs\_basepath\_(cvar))                                   |     |
+| [fs\_caseSensitiveOS](Fs\_caseSensitiveOS\_(cvar))                     |     |
+| [fs\_cdpath](Fs\_cdpath\_(cvar))                                       |     |
+| [fs\_copyfiles](Fs\_copyfiles\_(cvar))                                 |     |
+| [fs\_debug](Fs\_debug\_(cvar))                                         |     |
+| [fs\_devpath](Fs\_devpath\_(cvar))                                     |     |
 | ings                                                                       |     |
 | fs\_disablePK4s                                                            |     |
-| [Fs\_game\_(cvar).html fs\_game]                                           |     |
-| [Fs\_game\_base\_(cvar).html fs\_game\_base]                               |     |
+| [fs\_game](Fs\_game\_(cvar))                                           |     |
+| [fs\_game\_base](Fs\_game\_base\_(cvar))                               |     |
 | fs\_importpath                                                             |     |
-| [Fs\_restrict\_(cvar).html fs\_restrict]                                   |     |
+| [fs\_restrict](Fs\_restrict\_(cvar))                                   |     |
 | fs\_restrict\_fileloading                                                  |     |
-| [Fs\_savepath\_(cvar).html fs\_savepath]                                   |     |
+| [fs\_savepath](Fs\_savepath\_(cvar))                                   |     |
 | ings                                                                       |     |
-| [Fs\_searchAddons\_(cvar).html fs\_searchAddons]                           |     |
+| [fs\_searchAddons](Fs\_searchAddons\_(cvar))                           |     |
 | g\_aimAssist                                                               |     |
 | g\_AimAssistFadeInBlendBonus                                               |     |
 | g\_AimAssistFadeInBlendRate                                                |     |
@@ -350,16 +350,16 @@ To Be Sorted
 | g\_animatorSkipCreateFrame                                                 |     |
 | g\_autoPickupSize                                                          |     |
 | g\_BaseTurnScale                                                           |     |
-| [G\_blobSize\_(cvar).html g\_blobSize]                                     |     |
-| [G\_blobTime\_(cvar).html g\_blobTime]                                     |     |
+| [g\_blobSize](G\_blobSize\_(cvar))                                     |     |
+| [g\_blobTime](G\_blobTime\_(cvar))                                     |     |
 | g\_bloodSplats                                                             |     |
 | g\_blur                                                                    |     |
-| [G\_brassTime\_(cvar).html g\_brassTime]                                   |     |
+| [g\_brassTime](G\_brassTime\_(cvar))                                   |     |
 | g\_cheatsAreOn                                                             |     |
-| [G\_cinematic\_(cvar).html g\_cinematic]                                   |     |
-| [G\_cinematicMaxSkipTime\_(cvar).html g\_cinematicMaxSkipTime]             |     |
+| [g\_cinematic](G\_cinematic\_(cvar))                                   |     |
+| [g\_cinematicMaxSkipTime](G\_cinematicMaxSkipTime\_(cvar))             |     |
 | g\_compassLerpFactor                                                       |     |
-| [G\_currentPlayback\_(cvar).html g\_currentPlayback]                       |     |
+| [g\_currentPlayback](G\_currentPlayback\_(cvar))                       |     |
 | g\_CurveWeight                                                             |     |
 | g\_DamageBloomBias                                                         |     |
 | g\_DamageKickScale                                                         |     |
@@ -368,54 +368,54 @@ To Be Sorted
 | g\_debugAimAssist                                                          |     |
 | g\_DebugAmbientManager                                                     |     |
 | g\_DebugBeam                                                               |     |
-| [G\_debugCinematic\_(cvar).html g\_debugCinematic]                         |     |
+| [g\_debugCinematic](G\_debugCinematic\_(cvar))                         |     |
 | g\_debugCollideDamage                                                      |     |
 | g\_debugCompass                                                            |     |
 | g\_debugCurves                                                             |     |
-| [G\_debugDamage\_(cvar).html g\_debugDamage]                               |     |
+| [g\_debugDamage](G\_debugDamage\_(cvar))                               |     |
 | g\_debugDoors                                                              |     |
 | g\_debugGUI                                                                |     |
 | g\_debugMelee                                                              |     |
-| [G\_debugMove\_(cvar).html g\_debugMove]                                   |     |
-| [G\_debugMover\_(cvar).html g\_debugMover]                                 |     |
+| [g\_debugMove](G\_debugMove\_(cvar))                                   |     |
+| [g\_debugMover](G\_debugMover\_(cvar))                                 |     |
 | g\_debugOrientedVehicle                                                    |     |
 | g\_debugParticleCannon                                                     |     |
 | g\_debugRunes                                                              |     |
-| [G\_debugScript\_(cvar).html g\_debugScript]                               |     |
+| [g\_debugScript](G\_debugScript\_(cvar))                               |     |
 | g\_debugSoulMachine                                                        |     |
-| [G\_debugState\_(cvar).html g\_debugState]                                 |     |
+| [g\_debugState](G\_debugState\_(cvar))                                 |     |
 | g\_DebugTesla                                                              |     |
 | g\_debugTeslaLights                                                        |     |
 | g\_debugTK                                                                 |     |
 | g\_debugTriggerChoice                                                      |     |
-| [G\_debugTriggers\_(cvar).html g\_debugTriggers]                           |     |
+| [g\_debugTriggers](G\_debugTriggers\_(cvar))                           |     |
 | g\_debugTriggersFilter                                                     |     |
 | g\_debugTurrets                                                            |     |
-| [G\_debugVehicle\_(cvar).html g\_debugVehicle]                             |     |
-| [G\_debugWeapon\_(cvar).html g\_debugWeapon]                               |     |
+| [g\_debugVehicle](G\_debugVehicle\_(cvar))                             |     |
+| [g\_debugWeapon](G\_debugWeapon\_(cvar))                               |     |
 | g\_debugWind                                                               |     |
 | g\_debugWindVolume                                                         |     |
 | g\_debugZones                                                              |     |
-| [G\_decals\_(cvar).html g\_decals]                                         |     |
+| [g\_decals](G\_decals\_(cvar))                                         |     |
 | g\_decalsProjected                                                         |     |
 | g\_disableJournal                                                          |     |
 | g\_disablePlayerFocus                                                      |     |
 | g\_disableZones                                                            |     |
-| [G\_disasm\_(cvar).html g\_disasm]                                         |     |
-| [G\_doubleVision\_(cvar).html g\_doubleVision]                             |     |
-| [G\_dragDamping\_(cvar).html g\_dragDamping]                               |     |
-| [G\_dragEntity\_(cvar).html g\_dragEntity]                                 |     |
-| [G\_dragShowSelection\_(cvar).html g\_dragShowSelection]                   |     |
-| [G\_dropItemRotation\_(cvar).html g\_dropItemRotation]                     |     |
-| [G\_dvAmplitude\_(cvar).html g\_dvAmplitude]                               |     |
+| [g\_disasm](G\_disasm\_(cvar))                                         |     |
+| [g\_doubleVision](G\_doubleVision\_(cvar))                             |     |
+| [g\_dragDamping](G\_dragDamping\_(cvar))                               |     |
+| [g\_dragEntity](G\_dragEntity\_(cvar))                                 |     |
+| [g\_dragShowSelection](G\_dragShowSelection\_(cvar))                   |     |
+| [g\_dropItemRotation](G\_dropItemRotation\_(cvar))                     |     |
+| [g\_dvAmplitude](G\_dvAmplitude\_(cvar))                               |     |
 | g\_dvBlurInitialValue                                                      |     |
 | g\_dvBlurOnly                                                              |     |
-| [G\_dvFrequency\_(cvar).html g\_dvFrequency]                               |     |
-| [G\_dvTime\_(cvar).html g\_dvTime]                                         |     |
+| [g\_dvFrequency](G\_dvFrequency\_(cvar))                               |     |
+| [g\_dvTime](G\_dvTime\_(cvar))                                         |     |
 | g\_earthquake                                                              |     |
-| [G\_editEntityDistance\_(cvar).html g\_editEntityDistance]                 |     |
-| [G\_editEntityMode\_(cvar).html g\_editEntityMode]                         |     |
-| [G\_editEntityTextDistance\_(cvar).html g\_editEntityTextDistance]         |     |
+| [g\_editEntityDistance](G\_editEntityDistance\_(cvar))                 |     |
+| [g\_editEntityMode](G\_editEntityMode\_(cvar))                         |     |
+| [g\_editEntityTextDistance](G\_editEntityTextDistance\_(cvar))         |     |
 | g\_enableCompassPathing                                                    |     |
 | g\_enableHintGUIs                                                          |     |
 | g\_enableMissionLog                                                        |     |
@@ -429,25 +429,25 @@ To Be Sorted
 | g\_entityEditorRotateAxis                                                  |     |
 | g\_entityEditorSuppressSpawnExpressions                                    |     |
 | g\_entityEditorTranslateRelative                                           |     |
-| [G\_exportMask\_(cvar).html g\_exportMask]                                 |     |
+| [g\_exportMask](G\_exportMask\_(cvar))                                 |     |
 | g\_filterEntityInfo                                                        |     |
 | g\_focusIntelTime                                                          |     |
 | g\_focusTraceBufferDist                                                    |     |
 | g\_focusTraceDebug                                                         |     |
 | g\_focusTraceDistance                                                      |     |
 | g\_focusTraceFOV                                                           |     |
-| [G\_forceUndying\_(cvar).html g\_forceUndying]                             |     |
-| [G\_fov\_(cvar).html g\_fov]                                               |     |
-| [G\_frametime\_(cvar).html g\_frametime]                                   |     |
+| [g\_forceUndying](G\_forceUndying\_(cvar))                             |     |
+| [g\_fov](G\_fov\_(cvar))                                               |     |
+| [g\_frametime](G\_frametime\_(cvar))                                   |     |
 | g\_gameFinished                                                            |     |
-| [G\_gravity\_(cvar).html g\_gravity]                                       |     |
+| [g\_gravity](G\_gravity\_(cvar))                                       |     |
 | g\_grenadeImplosionMax                                                     |     |
 | g\_grenadeThrowbackMaxDist                                                 |     |
 | g\_grenadeThrowbackMaxDistHard                                             |     |
 | g\_grenadeThrowbackMaxDistUber                                             |     |
-| [G\_gunX\_(cvar).html g\_gunX]                                             |     |
-| [G\_gunY\_(cvar).html g\_gunY]                                             |     |
-| [G\_gunZ\_(cvar).html g\_gunZ]                                             |     |
+| [g\_gunX](G\_gunX\_(cvar))                                             |     |
+| [g\_gunY](G\_gunY\_(cvar))                                             |     |
+| [g\_gunZ](G\_gunZ\_(cvar))                                             |     |
 | g\_HairTriggerThreshold                                                    |     |
 | g\_havokCharacterStrength                                                  |     |
 | g\_havokJumpTimerMS                                                        |     |
@@ -468,7 +468,7 @@ To Be Sorted
 | g\_journalTab                                                              |     |
 | g\_KeyboardTurnSpeed                                                       |     |
 | g\_KeyboardTurretTurnSpeed                                                 |     |
-| [G\_kickAmplitude\_(cvar).html g\_kickAmplitude]                           |     |
+| [g\_kickAmplitude](G\_kickAmplitude\_(cvar))                           |     |
 | g\_knockbackNormalize                                                      |     |
 | g\_knockbackPlaneDist                                                      |     |
 | g\_knockbackPowerMult                                                      |     |
@@ -482,16 +482,16 @@ To Be Sorted
 | g\_localCacheProfile                                                       |     |
 | g\_localCacheRadius                                                        |     |
 | g\_localCacheRange                                                         |     |
-| [G\_log\_(cvar).html g\_log]                                               |     |
+| [g\_log](G\_log\_(cvar))                                               |     |
 | g\_MaxBaseTurnRate                                                         |     |
-| [G\_maxShowDistance\_(cvar).html g\_maxShowDistance]                       |     |
+| [g\_maxShowDistance](G\_maxShowDistance\_(cvar))                       |     |
 | g\_mg42Exclusion                                                           |     |
 | g\_mg42Randomized                                                          |     |
 | g\_mg42Reload                                                              |     |
 | g\_MinBaseTurnRate                                                         |     |
 | g\_missionDebug                                                            |     |
 | g\_missionNoReqs                                                           |     |
-| [G\_monsters\_(cvar).html g\_monsters]                                     |     |
+| [g\_monsters](G\_monsters\_(cvar))                                     |     |
 | g\_MPPreorderMessageShown                                                  |     |
 | g\_multiplayerPromptVisible                                                |     |
 | g\_newDamageEffects                                                        |     |
@@ -504,14 +504,14 @@ To Be Sorted
 | g\_noInstancingModelPool                                                   |     |
 | g\_noViewBob                                                               |     |
 | g\_pauseMenuUpdate                                                         |     |
-| [G\_perfTest\_aiNoVisTrace\_(cvar).html g\_perfTest\_aiNoVisTrace]         |     |
-| [G\_perfTest\_noJointTransform\_(cvar).html g\_perfTest\_noJointTransform] |     |
-| [G\_perfTest\_noPlayerFocus\_(cvar).html g\_perfTest\_noPlayerFocus]       |     |
-| [G\_perfTest\_noProjectiles\_(cvar).html g\_perfTest\_noProjectiles]       |     |
+| [g\_perfTest\_aiNoVisTrace](G\_perfTest\_aiNoVisTrace\_(cvar))         |     |
+| [g\_perfTest\_noJointTransform](G\_perfTest\_noJointTransform\_(cvar)) |     |
+| [g\_perfTest\_noPlayerFocus](G\_perfTest\_noPlayerFocus\_(cvar))       |     |
+| [g\_perfTest\_noProjectiles](G\_perfTest\_noProjectiles\_(cvar))       |     |
 | g\_plasmaKillShake                                                         |     |
 | g\_playEndGameCredits                                                      |     |
 | g\_playerHealthPPFX                                                        |     |
-| [G\_playPlayback\_(cvar).html g\_playPlayback]                             |     |
+| [g\_playPlayback](G\_playPlayback\_(cvar))                             |     |
 | g\_playWaterEffect                                                         |     |
 | g\_PlotterScale                                                            |     |
 | g\_postProcessBloodyTunnelVision                                           |     |
@@ -546,9 +546,9 @@ To Be Sorted
 | g\_Proj\_LinearDampingPostBounce                                           |     |
 | g\_Proj\_Restitution                                                       |     |
 | g\_Proj\_ShowArc                                                           |     |
-| [G\_projectileLights\_(cvar).html g\_projectileLights]                     |     |
+| [g\_projectileLights](G\_projectileLights\_(cvar))                     |     |
 | g\_radiusDamageStyle                                                       |     |
-| [G\_recordPlayback\_(cvar).html g\_recordPlayback]                         |     |
+| [g\_recordPlayback](G\_recordPlayback\_(cvar))                         |     |
 | g\_ReplayCinematicsMask                                                    |     |
 | g\_rumble                                                                  |     |
 | g\_rvEffectThinkWhileActive                                                |     |
@@ -556,46 +556,46 @@ To Be Sorted
 | g\_ScaleformPauseGame                                                      |     |
 | g\_ScaleformPauseGUI                                                       |     |
 | g\_scaleformPlatform                                                       |     |
-| [G\_showActiveEntities\_(cvar).html g\_showActiveEntities]                 |     |
+| [g\_showActiveEntities](G\_showActiveEntities\_(cvar))                 |     |
 | g\_showAIEvaluateTimes                                                     |     |
 | g\_showAIOvercount                                                         |     |
-| [G\_showcamerainfo\_(cvar).html g\_showcamerainfo]                         |     |
+| [g\_showcamerainfo](G\_showcamerainfo\_(cvar))                         |     |
 | g\_showCheatMenuMsg                                                        |     |
 | g\_showCollisionFocus                                                      |     |
 | g\_showCollisionMaterials                                                  |     |
-| [G\_showCollisionModels\_(cvar).html g\_showCollisionModels]               |     |
-| [G\_showCollisionTraces\_(cvar).html g\_showCollisionTraces]               |     |
-| [G\_showCollisionWorld\_(cvar).html g\_showCollisionWorld]                 |     |
+| [g\_showCollisionModels](G\_showCollisionModels\_(cvar))               |     |
+| [g\_showCollisionTraces](G\_showCollisionTraces\_(cvar))               |     |
+| [g\_showCollisionWorld](G\_showCollisionWorld\_(cvar))                 |     |
 | g\_showDoorCollision                                                       |     |
-| [G\_showEnemies\_(cvar).html g\_showEnemies]                               |     |
+| [g\_showEnemies](G\_showEnemies\_(cvar))                               |     |
 | g\_showEntityFocus                                                         |     |
-| [G\_showEntityInfo\_(cvar).html g\_showEntityInfo]                         |     |
-| [G\_showFrameCmds\_(cvar).html g\_showFrameCmds]                           |     |
-| [G\_showHud\_(cvar).html g\_showHud]                                       |     |
+| [g\_showEntityInfo](G\_showEntityInfo\_(cvar))                         |     |
+| [g\_showFrameCmds](G\_showFrameCmds\_(cvar))                           |     |
+| [g\_showHud](G\_showHud\_(cvar))                                       |     |
 | g\_showItems                                                               |     |
 | g\_showPendant                                                             |     |
-| [G\_showPlayback\_(cvar).html g\_showPlayback]                             |     |
+| [g\_showPlayback](G\_showPlayback\_(cvar))                             |     |
 | g\_showPlayerBody                                                          |     |
 | g\_showPlayerEvaluateTimes                                                 |     |
 | g\_showPlayerLocation                                                      |     |
 | g\_showPlayerPVS                                                           |     |
-| [G\_showPlayerShadow\_(cvar).html g\_showPlayerShadow]                     |     |
+| [g\_showPlayerShadow](G\_showPlayerShadow\_(cvar))                     |     |
 | g\_showPlayerTurretInfo                                                    |     |
-| [G\_showProjectilePct\_(cvar).html g\_showProjectilePct]                   |     |
+| [g\_showProjectilePct](G\_showProjectilePct\_(cvar))                   |     |
 | g\_showSecrets                                                             |     |
 | g\_showShotTrace                                                           |     |
 | g\_showStreamTriggers                                                      |     |
-| [G\_showTargets\_(cvar).html g\_showTargets]                               |     |
-| [G\_showTriggers\_(cvar).html g\_showTriggers]                             |     |
+| [g\_showTargets](G\_showTargets\_(cvar))                               |     |
+| [g\_showTriggers](G\_showTriggers\_(cvar))                             |     |
 | g\_showVehicleContactmaterial                                              |     |
-| [G\_showviewpos\_(cvar).html g\_showviewpos]                               |     |
+| [g\_showviewpos](G\_showviewpos\_(cvar))                               |     |
 | g\_showWeaponCone                                                          |     |
 | g\_showzone                                                                |     |
 | g\_ShroudTurretSpringConstant                                              |     |
 | g\_ShroudTurretSpringPower                                                 |     |
 | g\_shroudVersion                                                           |     |
 | g\_silentWeapons                                                           |     |
-| [G\_skill\_(cvar).html g\_skill]                                           |     |
+| [g\_skill](G\_skill\_(cvar))                                           |     |
 | g\_skillDamageScale0                                                       |     |
 | g\_skillDamageScale1                                                       |     |
 | g\_skillDamageScale2                                                       |     |
@@ -608,15 +608,15 @@ To Be Sorted
 | g\_skillUndyingTime3                                                       |     |
 | g\_skipCinematics                                                          |     |
 | g\_SkipStartScreen                                                         |     |
-| [G\_skipViewEffects\_(cvar).html g\_skipViewEffects]                       |     |
+| [g\_skipViewEffects](G\_skipViewEffects\_(cvar))                       |     |
 | g\_spawnTimeProfile                                                        |     |
-| [G\_stopTime\_(cvar).html g\_stopTime]                                     |     |
+| [g\_stopTime](G\_stopTime\_(cvar))                                     |     |
 | g\_systemUIOpen                                                            |     |
 | g\_TestConsoleWeaponSlots                                                  |     |
-| [G\_testDeath\_(cvar).html g\_testDeath]                                   |     |
-| [G\_testHealthVision\_(cvar).html g\_testHealthVision]                     |     |
-| [G\_testPostProcess\_(cvar).html g\_testPostProcess]                       |     |
-| [G\_timeEntities\_(cvar).html g\_timeEntities]                             |     |
+| [g\_testDeath](G\_testDeath\_(cvar))                                   |     |
+| [g\_testHealthVision](G\_testHealthVision\_(cvar))                     |     |
+| [g\_testPostProcess](G\_testPostProcess\_(cvar))                       |     |
+| [g\_timeEntities](G\_timeEntities\_(cvar))                             |     |
 | g\_TurnRateAccel                                                           |     |
 | g\_TurnRateDecel                                                           |     |
 | g\_unlockedFlameDLC                                                        |     |
@@ -628,7 +628,7 @@ To Be Sorted
 | g\_vehicleNPCDmgScale                                                      |     |
 | g\_vehicleSpeeds                                                           |     |
 | g\_veilPoolIndicatorDist                                                   |     |
-| [G\_version\_(cvar).html g\_version]                                       |     |
+| [g\_version](G\_version\_(cvar))                                       |     |
 | [[ (cvar)|]]                                                               |     |
 | g\_WeaponAccuracySpring                                                    |     |
 | g\_WeaponAutoSwitch                                                        |     |
@@ -639,8 +639,8 @@ To Be Sorted
 | g\_zoneFullHideOnUnload                                                    |     |
 | g\_zoneHideOnUnload                                                        |     |
 | g\_zoomToggle                                                              |     |
-| [Gamedate\_(cvar).html gamedate]                                           |     |
-| [Gamename\_(cvar).html gamename]                                           |     |
+| [gamedate](Gamedate\_(cvar))                                           |     |
+| [gamename](Gamename\_(cvar))                                           |     |
 | gs\_bounceOnFirstCollision                                                 |     |
 | gs\_bouncePrintSpeed                                                       |     |
 | gs\_bounceScaleMax                                                         |     |
@@ -710,7 +710,7 @@ To Be Sorted
 | in\_guiActionButton                                                        |     |
 | in\_ignoreFocusLoss                                                        |     |
 | in\_joystick                                                               |     |
-| [In\_mouse\_(cvar).html in\_mouse]                                         |     |
+| [in\_mouse](In\_mouse\_(cvar))                                         |     |
 | in\_requestedJoystick                                                      |     |
 | in\_StickConfig                                                            |     |
 | IntelMissionSelection                                                      |     |
@@ -720,32 +720,32 @@ To Be Sorted
 | JournalAvailableMidtownWest                                                |     |
 | JournalMissionSelection                                                    |     |
 | JournalUpgradeSelection                                                    |     |
-| [LogFile\_(cvar).html logFile]                                             |     |
-| [LogFileName\_(cvar).html logFileName]                                     |     |
-| [M\_pitch\_(cvar).html m\_pitch]                                           |     |
+| [logFile](LogFile\_(cvar))                                             |     |
+| [logFileName](LogFileName\_(cvar))                                     |     |
+| [m\_pitch](M\_pitch\_(cvar))                                           |     |
 | m\_sensitivity                                                             |     |
-| [M\_yaw\_(cvar).html m\_yaw]                                               |     |
+| [m\_yaw](M\_yaw\_(cvar))                                               |     |
 | m\_yAxisInvert                                                             |     |
 | pitch                                                                      |     |
 | PlayerIsInDowntownWest                                                     |     |
 | pm\_allowsprint                                                            |     |
-| [Pm\_bboxwidth\_(cvar).html pm\_bboxwidth]                                 |     |
-| [Pm\_bobpitch\_(cvar).html pm\_bobpitch]                                   |     |
-| [Pm\_bobroll\_(cvar).html pm\_bobroll]                                     |     |
-| [Pm\_bobup\_(cvar).html pm\_bobup]                                         |     |
-| [Pm\_crouchbob\_(cvar).html pm\_crouchbob]                                 |     |
-| [Pm\_crouchheight\_(cvar).html pm\_crouchheight]                           |     |
-| [Pm\_crouchrate\_(cvar).html pm\_crouchrate]                               |     |
-| [Pm\_crouchspeed\_(cvar).html pm\_crouchspeed]                             |     |
-| [Pm\_crouchviewheight\_(cvar).html pm\_crouchviewheight]                   |     |
-| [Pm\_deadheight\_(cvar).html pm\_deadheight]                               |     |
-| [Pm\_deadviewheight\_(cvar).html pm\_deadviewheight]                       |     |
+| [pm\_bboxwidth](Pm\_bboxwidth\_(cvar))                                 |     |
+| [pm\_bobpitch](Pm\_bobpitch\_(cvar))                                   |     |
+| [pm\_bobroll](Pm\_bobroll\_(cvar))                                     |     |
+| [pm\_bobup](Pm\_bobup\_(cvar))                                         |     |
+| [pm\_crouchbob](Pm\_crouchbob\_(cvar))                                 |     |
+| [pm\_crouchheight](Pm\_crouchheight\_(cvar))                           |     |
+| [pm\_crouchrate](Pm\_crouchrate\_(cvar))                               |     |
+| [pm\_crouchspeed](Pm\_crouchspeed\_(cvar))                             |     |
+| [pm\_crouchviewheight](Pm\_crouchviewheight\_(cvar))                   |     |
+| [pm\_deadheight](Pm\_deadheight\_(cvar))                               |     |
+| [pm\_deadviewheight](Pm\_deadviewheight\_(cvar))                       |     |
 | pm\_defaultShroudSpeedMultiplier                                           |     |
 | pm\_fastnoclipspeed                                                        |     |
 | pm\_firstPersonBodyView                                                    |     |
 | pm\_firstPersonViewFwdOffset                                               |     |
 | pm\_jumpgain                                                               |     |
-| [Pm\_jumpheight\_(cvar).html pm\_jumpheight]                               |     |
+| [pm\_jumpheight](Pm\_jumpheight\_(cvar))                               |     |
 | pm\_jumpspeed                                                              |     |
 | pm\_jumpStrength                                                           |     |
 | pm\_knockbackConstantDir\_x                                                |     |
@@ -754,52 +754,52 @@ To Be Sorted
 | pm\_knockbackConstantForce                                                 |     |
 | pm\_leanmax                                                                |     |
 | pm\_leanmin                                                                |     |
-| [Pm\_maxviewpitch\_(cvar).html pm\_maxviewpitch]                           |     |
-| [Pm\_minviewpitch\_(cvar).html pm\_minviewpitch]                           |     |
-| [Pm\_modelView\_(cvar).html pm\_modelView]                                 |     |
-| [Pm\_noclipspeed\_(cvar).html pm\_noclipspeed]                             |     |
-| [Pm\_normalheight\_(cvar).html pm\_normalheight]                           |     |
-| [Pm\_normalviewheight\_(cvar).html pm\_normalviewheight]                   |     |
-| [Pm\_runbob\_(cvar).html pm\_runbob]                                       |     |
-| [Pm\_runpitch\_(cvar).html pm\_runpitch]                                   |     |
-| [Pm\_runroll\_(cvar).html pm\_runroll]                                     |     |
-| [Pm\_runspeed\_(cvar).html pm\_runspeed]                                   |     |
+| [pm\_maxviewpitch](Pm\_maxviewpitch\_(cvar))                           |     |
+| [pm\_minviewpitch](Pm\_minviewpitch\_(cvar))                           |     |
+| [pm\_modelView](Pm\_modelView\_(cvar))                                 |     |
+| [pm\_noclipspeed](Pm\_noclipspeed\_(cvar))                             |     |
+| [pm\_normalheight](Pm\_normalheight\_(cvar))                           |     |
+| [pm\_normalviewheight](Pm\_normalviewheight\_(cvar))                   |     |
+| [pm\_runbob](Pm\_runbob\_(cvar))                                       |     |
+| [pm\_runpitch](Pm\_runpitch\_(cvar))                                   |     |
+| [pm\_runroll](Pm\_runroll\_(cvar))                                     |     |
+| [pm\_runspeed](Pm\_runspeed\_(cvar))                                   |     |
 | pm\_scopeDriftScale                                                        |     |
 | pm\_shroudSpeedMultiplier                                                  |     |
-| [Pm\_spectatebbox\_(cvar).html pm\_spectatebbox]                           |     |
+| [pm\_spectatebbox](Pm\_spectatebbox\_(cvar))                           |     |
 | pm\_sprintspeed                                                            |     |
 | pm\_strafeperc                                                             |     |
-| [Pm\_thirdPerson\_(cvar).html pm\_thirdPerson]                             |     |
-| [Pm\_thirdPersonAngle\_(cvar).html pm\_thirdPersonAngle]                   |     |
-| [Pm\_thirdPersonClip\_(cvar).html pm\_thirdPersonClip]                     |     |
-| [Pm\_thirdPersonDeath\_(cvar).html pm\_thirdPersonDeath]                   |     |
-| [Pm\_thirdPersonHeight\_(cvar).html pm\_thirdPersonHeight]                 |     |
-| [Pm\_thirdPersonRange\_(cvar).html pm\_thirdPersonRange]                   |     |
-| [Pm\_vehicleCameraMinDist\_(cvar).html pm\_vehicleCameraMinDist]           |     |
-| [Pm\_vehicleCameraScaleMax\_(cvar).html pm\_vehicleCameraScaleMax]         |     |
-| [Pm\_vehicleCameraSpeedScale\_(cvar).html pm\_vehicleCameraSpeedScale]     |     |
-| [Pm\_walkbob\_(cvar).html pm\_walkbob]                                     |     |
-| [Pm\_walkspeed\_(cvar).html pm\_walkspeed]                                 |     |
+| [pm\_thirdPerson](Pm\_thirdPerson\_(cvar))                             |     |
+| [pm\_thirdPersonAngle](Pm\_thirdPersonAngle\_(cvar))                   |     |
+| [pm\_thirdPersonClip](Pm\_thirdPersonClip\_(cvar))                     |     |
+| [pm\_thirdPersonDeath](Pm\_thirdPersonDeath\_(cvar))                   |     |
+| [pm\_thirdPersonHeight](Pm\_thirdPersonHeight\_(cvar))                 |     |
+| [pm\_thirdPersonRange](Pm\_thirdPersonRange\_(cvar))                   |     |
+| [pm\_vehicleCameraMinDist](Pm\_vehicleCameraMinDist\_(cvar))           |     |
+| [pm\_vehicleCameraScaleMax](Pm\_vehicleCameraScaleMax\_(cvar))         |     |
+| [pm\_vehicleCameraSpeedScale](Pm\_vehicleCameraSpeedScale\_(cvar))     |     |
+| [pm\_walkbob](Pm\_walkbob\_(cvar))                                     |     |
+| [pm\_walkspeed](Pm\_walkspeed\_(cvar))                                 |     |
 | pm\_zoomSpeedMod                                                           |     |
 | POI\_Spring                                                                |     |
 | r\_aviGameFrameRate                                                        |     |
-| [R\_brightness\_(cvar).html r\_brightness]                                 |     |
-| [R\_clear\_(cvar).html r\_clear]                                           |     |
+| [r\_brightness](R\_brightness\_(cvar))                                 |     |
+| [r\_clear](R\_clear\_(cvar))                                           |     |
 | r\_convertMD5toMD5R                                                        |     |
 | r\_convertProcToMD5R                                                       |     |
-| [R\_customHeight\_(cvar).html r\_customHeight]                             |     |
-| [R\_customWidth\_(cvar).html r\_customWidth]                               |     |
-| [R\_debugArrowStep\_(cvar).html r\_debugArrowStep]                         |     |
-| [R\_debugPolygonFilled\_(cvar).html r\_debugPolygonFilled]                 |     |
+| [r\_customHeight](R\_customHeight\_(cvar))                             |     |
+| [r\_customWidth](R\_customWidth\_(cvar))                               |     |
+| [r\_debugArrowStep](R\_debugArrowStep\_(cvar))                         |     |
+| [r\_debugPolygonFilled](R\_debugPolygonFilled\_(cvar))                 |     |
 | r\_debugSphereSubdivision                                                  |     |
 | r\_depthPrePassAll                                                         |     |
 | r\_detailNormalMapMaxAnisotropy                                            |     |
 | r\_diffuseMapMaxAnisotropy                                                 |     |
-| [R\_displayRefresh\_(cvar).html r\_displayRefresh]                         |     |
+| [r\_displayRefresh](R\_displayRefresh\_(cvar))                         |     |
 | r\_fixedHorizFOV                                                           |     |
 | r\_forceConvertMD5R                                                        |     |
-| [R\_fullscreen\_(cvar).html r\_fullscreen]                                 |     |
-| [R\_gamma\_(cvar).html r\_gamma]                                           |     |
+| [r\_fullscreen](R\_fullscreen\_(cvar))                                 |     |
+| [r\_gamma](R\_gamma\_(cvar))                                           |     |
 | r\_gBufferMode                                                             |     |
 | r\_globalLightScale                                                        |     |
 | r\_globalShadowBoundsExt                                                   |     |
@@ -809,14 +809,14 @@ To Be Sorted
 | r\_lastVidRestartSucceeded                                                 |     |
 | r\_letterBoxedHeight                                                       |     |
 | r\_letterBoxedWidth                                                        |     |
-| [R\_lightScale\_(cvar).html r\_lightScale]                                 |     |
+| [r\_lightScale](R\_lightScale\_(cvar))                                 |     |
 | r\_maxAnisotropyBias                                                       |     |
 | r\_maxFlareSpreadForBoundsCalculation                                      |     |
 | r\_maxTextureFilterQuality                                                 |     |
 | r\_maxTotalVerticesPerInstancingModel                                      |     |
 | r\_md5rSkipShadowGeometry                                                  |     |
-| [R\_mode\_(cvar).html r\_mode]                                             |     |
-| [R\_multiSamples\_(cvar).html r\_multiSamples]                             |     |
+| [r\_mode](R\_mode\_(cvar))                                             |     |
+| [r\_multiSamples](R\_multiSamples\_(cvar))                             |     |
 | r\_normalMapMaxAnisotropy                                                  |     |
 | r\_occlusionCullDynamicModelMinDistance                                    |     |
 | r\_occlusionCullDynamicModelMinJoints                                      |     |
@@ -824,8 +824,8 @@ To Be Sorted
 | r\_occlusionCullMasterEnable                                               |     |
 | r\_occlusionCullMaxQueryLatency                                            |     |
 | r\_occlusionCullPortals                                                    |     |
-| [R\_offsetfactor\_(cvar).html r\_offsetfactor]                             |     |
-| [R\_offsetunits\_(cvar).html r\_offsetunits]                               |     |
+| [r\_offsetfactor](R\_offsetfactor\_(cvar))                             |     |
+| [r\_offsetunits](R\_offsetunits\_(cvar))                               |     |
 | r\_portalsDistanceCull                                                     |     |
 | r\_printResourceReleaseTiming                                              |     |
 | r\_requireCachedTangents                                                   |     |
@@ -836,36 +836,36 @@ To Be Sorted
 | r\_shadowCullDistance                                                      |     |
 | r\_shadowPortalCullDistance                                                |     |
 | r\_shadowQuality                                                           |     |
-| [R\_shadows\_(cvar).html r\_shadows]                                       |     |
+| [r\_shadows](R\_shadows\_(cvar))                                       |     |
 | r\_showOcclusionQueries                                                    |     |
 | r\_showSafeArea                                                            |     |
-| [R\_singleArea\_(cvar).html r\_singleArea]                                 |     |
-| [R\_skipBackEnd\_(cvar).html r\_skipBackEnd]                               |     |
+| [r\_singleArea](R\_singleArea\_(cvar))                                 |     |
+| [r\_skipBackEnd](R\_skipBackEnd\_(cvar))                               |     |
 | r\_skipDetailNormals                                                       |     |
-| [R\_skipFrontEnd\_(cvar).html r\_skipFrontEnd]                             |     |
+| [r\_skipFrontEnd](R\_skipFrontEnd\_(cvar))                             |     |
 | r\_skipGlobalShadowProjectionTechniques                                    |     |
-| [R\_skipOverlays\_(cvar).html r\_skipOverlays]                             |     |
-| [R\_skipRender\_(cvar).html r\_skipRender]                                 |     |
-| [R\_skipSpecular\_(cvar).html r\_skipSpecular]                             |     |
+| [r\_skipOverlays](R\_skipOverlays\_(cvar))                             |     |
+| [r\_skipRender](R\_skipRender\_(cvar))                                 |     |
+| [r\_skipSpecular](R\_skipSpecular\_(cvar))                             |     |
 | r\_skipVideoMemResourceLoad                                                |     |
 | r\_softShadowPrePass                                                       |     |
 | r\_softShadows                                                             |     |
 | r\_suppressMultipleUpdates                                                 |     |
-| [R\_useCachedDynamicModels\_(cvar).html r\_useCachedDynamicModels]         |     |
-| [R\_useClippedLightScissors\_(cvar).html r\_useClippedLightScissors]       |     |
-| [R\_useDeferredTangents\_(cvar).html r\_useDeferredTangents]               |     |
-| [R\_useEntityCulling\_(cvar).html r\_useEntityCulling]                     |     |
-| [R\_useIndexBuffers\_(cvar).html r\_useIndexBuffers]                       |     |
-| [R\_useLightCulling\_(cvar).html r\_useLightCulling]                       |     |
+| [r\_useCachedDynamicModels](R\_useCachedDynamicModels\_(cvar))         |     |
+| [r\_useClippedLightScissors](R\_useClippedLightScissors\_(cvar))       |     |
+| [r\_useDeferredTangents](R\_useDeferredTangents\_(cvar))               |     |
+| [r\_useEntityCulling](R\_useEntityCulling\_(cvar))                     |     |
+| [r\_useIndexBuffers](R\_useIndexBuffers\_(cvar))                       |     |
+| [r\_useLightCulling](R\_useLightCulling\_(cvar))                       |     |
 | r\_useShadowPortalWalk                                                     |     |
-| [R\_useShadowProjectedCull\_(cvar).html r\_useShadowProjectedCull]         |     |
-| [R\_useSilRemap\_(cvar).html r\_useSilRemap]                               |     |
+| [r\_useShadowProjectedCull](R\_useShadowProjectedCull\_(cvar))         |     |
+| [r\_useSilRemap](R\_useSilRemap\_(cvar))                               |     |
 | r\_useSRTs                                                                 |     |
-| [R\_useTurboShadow\_(cvar).html r\_useTurboShadow]                         |     |
+| [r\_useTurboShadow](R\_useTurboShadow\_(cvar))                         |     |
 | r\_verticalSync                                                            |     |
 | r\_writeMSAASamplePatternImage                                             |     |
 | r\_zfar                                                                    |     |
-| [R\_znear\_(cvar).html r\_znear]                                           |     |
+| [r\_znear](R\_znear\_(cvar))                                           |     |
 | radiant\_camerawindow                                                      |     |
 | FFFFFFFFFFFFFFFFFFFF4E000000F501000070010000                               |     |
 | radiant\_InspectorsWindow                                                  |     |
@@ -917,7 +917,7 @@ To Be Sorted
 | s\_noReverb                                                                |     |
 | s\_noShaderOverrides                                                       |     |
 | s\_noSideSpeakers                                                          |     |
-| [S\_noSound\_(cvar).html s\_noSound]                                       |     |
+| [s\_noSound](S\_noSound\_(cvar))                                       |     |
 | s\_noSoundData                                                             |     |
 | s\_noSoundDataPCM                                                          |     |
 | s\_noUseOverflow                                                           |     |
@@ -957,11 +957,11 @@ To Be Sorted
 | s\_volumeMusic\_DB                                                         |     |
 | s\_volumeSFX\_DB                                                           |     |
 | s\_volumeVO\_DB                                                            |     |
-| [Sensitivity\_(cvar).html sensitivity]                                     |     |
-| [Si\_entityFilter\_(cvar).html si\_entityFilter]                           |     |
-| [Si\_gameType\_(cvar).html si\_gameType]                                   |     |
-| [Si\_map\_(cvar).html si\_map]                                             |     |
-| [Si\_version\_(cvar).html si\_version]                                     |     |
+| [sensitivity](Sensitivity\_(cvar))                                     |     |
+| [si\_entityFilter](Si\_entityFilter\_(cvar))                           |     |
+| [si\_gameType](Si\_gameType\_(cvar))                                   |     |
+| [si\_map](Si\_map\_(cvar))                                             |     |
+| [si\_version](Si\_version\_(cvar))                                     |     |
 | 009                                                                        |     |
 | SPKManagerPlacement                                                        |     |
 | FFFFFFFFFFFFC000000012010000CA020000F6020000                               |     |
@@ -978,50 +978,50 @@ To Be Sorted
 | stream\_useImmediateModeList                                               |     |
 | stream\_verifyDetailPacksLoaded                                            |     |
 | stream\_waitForDetailPackLoad                                              |     |
-| [Sys\_arch\_(cvar).html sys\_arch]                                         |     |
+| [sys\_arch](Sys\_arch\_(cvar))                                         |     |
 | sys\_country                                                               |     |
 | sys\_cpuCaches                                                             |     |
-| [Sys\_cpustring\_(cvar).html sys\_cpustring]                               |     |
+| [sys\_cpustring](Sys\_cpustring\_(cvar))                               |     |
 | 3                                                                          |     |
 | sys\_hyperThreadingEnabled                                                 |     |
-| [Sys\_lang\_(cvar).html sys\_lang]                                         |     |
+| [sys\_lang](Sys\_lang\_(cvar))                                         |     |
 | sys\_language                                                              |     |
 | sys\_numLogicalCPUs                                                        |     |
 | sys\_numPhysicalCPUs                                                       |     |
-| [Timescale\_(cvar).html timescale]                                         |     |
+| [timescale](Timescale\_(cvar))                                         |     |
 | tools\_dmapMinInstancesPerInstancingBatch                                  |     |
 | tools\_renderBumpFlatMinShowTimeColor                                      |     |
 | tools\_renderBumpFlatMinShowTimeLocal                                      |     |
 | tools\_renderbumpPreviewUpdateRate                                         |     |
-| [Ui\_autoSwitch\_(cvar).html ui\_autoSwitch]                               |     |
-| [Ui\_chat\_(cvar).html ui\_chat]                                           |     |
+| [ui\_autoSwitch](Ui\_autoSwitch\_(cvar))                               |     |
+| [ui\_chat](Ui\_chat\_(cvar))                                           |     |
 | ui\_disableScaleform                                                       |     |
 | ui\_logScaleform                                                           |     |
-| [Ui\_name\_(cvar).html ui\_name]                                           |     |
-| [Ui\_showGun\_(cvar).html ui\_showGun]                                     |     |
-| [Ui\_team\_(cvar).html ui\_team]                                           |     |
+| [ui\_name](Ui\_name\_(cvar))                                           |     |
+| [ui\_showGun](Ui\_showGun\_(cvar))                                     |     |
+| [ui\_team](Ui\_team\_(cvar))                                           |     |
 | UICheckpointElementLocked                                                  |     |
 | UpgradeResaleRate                                                          |     |
 | video\_debug                                                               |     |
 | VideoMenuIsPaused                                                          |     |
 | vo\_lang                                                                   |     |
 | vo\_langAlt                                                                |     |
-| [Win\_allowAltTab\_(cvar).html win\_allowAltTab]                           |     |
-| [Win\_allowMultipleInstances\_(cvar).html win\_allowMultipleInstances]     |     |
+| [win\_allowAltTab](Win\_allowAltTab\_(cvar))                           |     |
+| [win\_allowMultipleInstances](Win\_allowMultipleInstances\_(cvar))     |     |
 | win\_cursor                                                                |     |
 | win\_enableFPUExceptions                                                   |     |
-| [Win\_notaskkeys\_(cvar).html win\_notaskkeys]                             |     |
-| [Win\_outputDebugString\_(cvar).html win\_outputDebugString]               |     |
-| [Win\_outputEditString\_(cvar).html win\_outputEditString]                 |     |
+| [win\_notaskkeys](Win\_notaskkeys\_(cvar))                             |     |
+| [win\_outputDebugString](Win\_outputDebugString\_(cvar))               |     |
+| [win\_outputEditString](Win\_outputEditString\_(cvar))                 |     |
 | win\_sysErrorNoWait                                                        |     |
-| [Win\_timerUpdate\_(cvar).html win\_timerUpdate]                           |     |
-| [Win\_username\_(cvar).html win\_username]                                 |     |
-| [Win\_viewlog\_(cvar).html win\_viewlog]                                   |     |
+| [win\_timerUpdate](Win\_timerUpdate\_(cvar))                           |     |
+| [win\_username](Win\_username\_(cvar))                                 |     |
+| [win\_viewlog](Win\_viewlog\_(cvar))                                   |     |
 | win\_viewlog\_update\_count                                                |     |
 | win\_viewlog\_xpos                                                         |     |
 | win\_viewlog\_ypos                                                         |     |
-| [Win\_xpos\_(cvar).html win\_xpos]                                         |     |
-| [Win\_ypos\_(cvar).html win\_ypos]                                         |     |
+| [win\_xpos](Win\_xpos\_(cvar))                                         |     |
+| [win\_ypos](Win\_ypos\_(cvar))                                         |     |
 | yaw                                                                        |     |
 | yAxisInvert                                                                |     |
 

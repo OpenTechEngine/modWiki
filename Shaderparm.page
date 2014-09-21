@@ -1,9 +1,9 @@
 Shaderparm
 ==========
 
-Shaderparms are a common set of variables, applicable to most all entities, whose values represent a property or state. These values can be retrieved and used in expressions within a [Material\_(decl).html material shader] allowing for dynamic effects which otherwise would not be possible.
+Shaderparms are a common set of variables, applicable to most all entities, whose values represent a property or state. These values can be retrieved and used in expressions within a [material shader](Material\_(decl)) allowing for dynamic effects which otherwise would not be possible.
 
-There are 8 shaderparms. You can assign values to them via the [Map\_editor.html\#The\_entity\_inspector entity inspector] with the keys "parm0" through "parm7". You can also assign them in a [SCRIPT\_(file\_format).html script] using the event [SetShaderParm\_(script\_event).html setShaderParm] or with the entity [Target\_setshaderparm\_(entity).html target\_setshaderparm].
+There are 8 shaderparms. You can assign values to them via the [entity inspector](Map\_editor#The\_entity\_inspector) with the keys "parm0" through "parm7". You can also assign them in a [script](SCRIPT\_(file\_format)) using the event [setShaderParm](SetShaderParm\_(script\_event)) or with the entity [target\_setshaderparm](Target\_setshaderparm\_(entity)).
 
 In some cases however, namely in the case of shaderparm 7, the game will adjust the value internally. This is largely based on the intended purpose of each shaderparm as outlined in doom\_defs.script...
 
@@ -37,7 +37,7 @@ Notice how the conditional in this material shader stage references "parm7"? Now
 
 That being the case, parm7 is equal to 0 until a monster has died. It's at that point that the engine sets the value of parm7 to the current time. And since 0 equates to false and any other number equates to true, the conditional statement "if parm7" can only be true when a monster has died.
 
-It's also referenced later in the stage with the statement "alphaTest 0.05 + 0.3 \* (time - parm7)". In this case you have the keyword [AlphaTest\_(Material\_stage\_keyword).html alphaTest] followed by a mathematical expression involving parm7. This expression will be re-evaluated each frame and the result will be passed on to alphatest.
+It's also referenced later in the stage with the statement "alphaTest 0.05 + 0.3 \* (time - parm7)". In this case you have the keyword [alphaTest](AlphaTest\_(Material\_stage\_keyword)) followed by a mathematical expression involving parm7. This expression will be re-evaluated each frame and the result will be passed on to alphatest.
 
 For instance, in this expression you have two variables, time and parm7. time is a counter that starts when you begin playing a map and parm7 has already been discussed.
 
@@ -51,5 +51,5 @@ That said, for the purpose of this example, let's say time equals 1234 and parm7
 
 ... then alphatest would receive the value 300.05. It's this value that defines the progress of the dissolve effect. As it increases less and less of the material remains visible.
 
-This kind of thing isn't limited to just alphatest either. You can apply shaderparms and expressions to every material shader keyword that expects a numerical value. You could [Scroll\_(Material\_stage\_keyword).html scroll], [Scale\_(Material\_stage\_keyword).html scale], [Rotate\_(Material\_stage\_keyword).html rotate], and even [If\_(Material\_stage\_keyword).html disable entire stages]... all based on whatever the value of a given shaderparm is.
+This kind of thing isn't limited to just alphatest either. You can apply shaderparms and expressions to every material shader keyword that expects a numerical value. You could [scroll](Scroll\_(Material\_stage\_keyword)), [scale](Scale\_(Material\_stage\_keyword)), [rotate](Rotate\_(Material\_stage\_keyword)), and even [disable entire stages](If\_(Material\_stage\_keyword))... all based on whatever the value of a given shaderparm is.
 

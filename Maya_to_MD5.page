@@ -7,16 +7,16 @@ Maya to MD5
  --------                                                                                                                                                                                                                         
                                                                                                                                                                                                                                   
  </div>                                                                                                                                                                                                                           
- -   [Maya\_to\_MD5.html\#Prerequisites <span class="tocnumber">1</span> <span class="toctext">Prerequisites</span>]                                                                                                              
- -   [Maya\_to\_MD5.html\#Setting\_up\_Maya <span class="tocnumber">2</span> <span class="toctext">Setting up Maya</span>]                                                                                                        
- -   [Maya\_to\_MD5.html\#Writing\_the\_corresponding\_declarations <span class="tocnumber">3</span> <span class="toctext">Writing the corresponding declarations</span>]                                                         
- -   [Maya\_to\_MD5.html\#Model\_Setup <span class="tocnumber">4</span> <span class="toctext">Model Setup</span>]                                                                                                                 
- -   [Maya\_to\_MD5.html\#Conversion <span class="tocnumber">5</span> <span class="toctext">Conversion</span>]                                                                                                                    
- -   [Maya\_to\_MD5.html\#Testing <span class="tocnumber">6</span> <span class="toctext">Testing</span>]                                                                                                                          
- -   [Maya\_to\_MD5.html\#Troubleshooting <span class="tocnumber">7</span> <span class="toctext">Troubleshooting</span>]                                                                                                          
-     -   [Maya\_to\_MD5.html\#Common\_Error\_Messages <span class="tocnumber">7.1</span> <span class="toctext">Common Error Messages</span>]                                                                                      
-     -   [Maya\_to\_MD5.html\#Visual\_Artifacts\_and\_Problems <span class="tocnumber">7.2</span> <span class="toctext">Visual Artifacts and Problems</span>]                                                                     
-     -   [Maya\_to\_MD5.html\#Maya\_8.5\_Exporter\_showing\_an\_Explorer\_window\_without\_comment <span class="tocnumber">7.3</span> <span class="toctext">Maya 8.5 Exporter showing an Explorer window without comment</span>]  |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Prerequisites</span>](Maya\_to\_MD5#Prerequisites)                                                                                                              
+ -   [<span class="tocnumber">2</span> <span class="toctext">Setting up Maya</span>](Maya\_to\_MD5#Setting\_up\_Maya)                                                                                                        
+ -   [<span class="tocnumber">3</span> <span class="toctext">Writing the corresponding declarations</span>](Maya\_to\_MD5#Writing\_the\_corresponding\_declarations)                                                         
+ -   [<span class="tocnumber">4</span> <span class="toctext">Model Setup</span>](Maya\_to\_MD5#Model\_Setup)                                                                                                                 
+ -   [<span class="tocnumber">5</span> <span class="toctext">Conversion</span>](Maya\_to\_MD5#Conversion)                                                                                                                    
+ -   [<span class="tocnumber">6</span> <span class="toctext">Testing</span>](Maya\_to\_MD5#Testing)                                                                                                                          
+ -   [<span class="tocnumber">7</span> <span class="toctext">Troubleshooting</span>](Maya\_to\_MD5#Troubleshooting)                                                                                                          
+     -   [<span class="tocnumber">7.1</span> <span class="toctext">Common Error Messages</span>](Maya\_to\_MD5#Common\_Error\_Messages)                                                                                      
+     -   [<span class="tocnumber">7.2</span> <span class="toctext">Visual Artifacts and Problems</span>](Maya\_to\_MD5#Visual\_Artifacts\_and\_Problems)                                                                     
+     -   [<span class="tocnumber">7.3</span> <span class="toctext">Maya 8.5 Exporter showing an Explorer window without comment</span>](Maya\_to\_MD5#Maya\_8.5\_Exporter\_showing\_an\_Explorer\_window\_without\_comment)  |
 
 Prerequisites
 -------------
@@ -78,7 +78,7 @@ You will need to write an export declaration to define what files and parameters
 `anim buddy_idle.mb`
 `}`
 
-The syntax of this type of declaration and it's various parameters and options are covered in the respective [Export\_(decl).html export declarations] article.
+The syntax of this type of declaration and it's various parameters and options are covered in the respective [export declarations](Export\_(decl)) article.
 
 You will also need to write a model declaration to test and/or use the resulting files in game. For example...
 
@@ -87,7 +87,7 @@ You will also need to write a model declaration to test and/or use the resulting
 `anim idle models/md5/monsters/buddy/buddy_idle.md5anim`
 `}`
 
-Again, the syntax of this type of declaration and it's various parameters and options are covered in the respective [Model\_(decl).html model declarations] article.
+Again, the syntax of this type of declaration and it's various parameters and options are covered in the respective [model declarations](Model\_(decl)) article.
 
 Model Setup
 -----------
@@ -125,7 +125,7 @@ Start the game, bring down the console and type...
 
 `exportModels [filename]`
 
-Filename refers to the declaration file containing your export declaration. For a more detailed description of the command and acceptable parameters visit the corresponding [Exportmodels\_(console\_command).html exportModels] article.
+Filename refers to the declaration file containing your export declaration. For a more detailed description of the command and acceptable parameters visit the corresponding [exportModels](Exportmodels\_(console\_command)) article.
 
 If all goes well, your model and animations will be exported to the MD5 format.
 

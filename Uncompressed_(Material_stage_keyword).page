@@ -4,7 +4,7 @@ Uncompressed (Material stage keyword)
 Description
 -----------
 
-The ***highquality*** or ***uncompressed*** stage keywords cause the game to render the associated stage without using [Texturing.html\#Compressed\_and\_Uncompressed texture compression] in Medium or High quality modes. Without this keyword, the map would be compressed according to the defaults for the selected quality mode. (Medium quality mode compresses bumpmaps and diffusemaps, where High quality mode only compresses bumpmaps.)
+The ***highquality*** or ***uncompressed*** stage keywords cause the game to render the associated stage without using [texture compression](Texturing#Compressed\_and\_Uncompressed) in Medium or High quality modes. Without this keyword, the map would be compressed according to the defaults for the selected quality mode. (Medium quality mode compresses bumpmaps and diffusemaps, where High quality mode only compresses bumpmaps.)
 
 Usage
 -----
@@ -32,10 +32,10 @@ Forces the diffusemap stage to high quality:
 Notes
 -----
 
-This keyword is useful for [Cube\_maps.html sky] textures which can look very ugly when compressed.
+This keyword is useful for [sky](Cube\_maps) textures which can look very ugly when compressed.
 
-This keyword has no effect in Low quality mode, and the [ForceHighQuality\_(Material\_stage\_keyword).html forceHighQuality] keyword must be used instead.
+This keyword has no effect in Low quality mode, and the [forceHighQuality](ForceHighQuality\_(Material\_stage\_keyword)) keyword must be used instead.
 
-If the [Image\_ignoreHighQuality\_(cvar).html image\_ignoreHighQuality] [Console.html CVar] is set to 1, this keyword will be ignored.
+If the [image\_ignoreHighQuality](Image\_ignoreHighQuality\_(cvar)) [Console.html CVar] is set to 1, this keyword will be ignored.
 
 

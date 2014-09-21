@@ -4,7 +4,7 @@ Envshot (console command)
 Description
 -----------
 
-Captures six square images for use as a [Cube\_maps.html cube map].
+Captures six square images for use as a [cube map](Cube\_maps).
 
 Usage
 -----
@@ -25,9 +25,9 @@ Notes
 
 The capture point is the player's current position.
 
-The player is included in captures if the CVar [Pm\_thirdPerson\_(cvar).html pm\_thirdperson] is enabled.
+The player is included in captures if the CVar [pm\_thirdperson](Pm\_thirdPerson\_(cvar)) is enabled.
 
-Images are saved as 24-bit tgas to the [Env\_(folder).html env] directory.
+Images are saved as 24-bit tgas to the [env](Env\_(folder)) directory.
 
 There have been reports that under certain circumstances this command does not export seamless cubemaps. The current cause is believed to be the screen resolution. The command is reported to work properly when running the game at 640 x 480.
 

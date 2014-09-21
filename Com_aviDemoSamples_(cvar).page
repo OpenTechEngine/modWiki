@@ -4,7 +4,7 @@ Com aviDemoSamples (cvar)
 Description
 -----------
 
-Software rendered [Antialiasing.html antialiasing] for use when using the [AviDemo\_(console\_command).html aviDemo] command.
+Software rendered [antialiasing](Antialiasing) for use when using the [aviDemo](AviDemo\_(console\_command)) command.
 
 Usage
 -----
@@ -49,8 +49,8 @@ Notes
 
 The number you specify is how many times the engine will re-draw the current image in order to "soften" it. However, the AA capabilities on your video card are far superior in quality and speed so this is not normally needed. Set the value to 1 to use your video card's antialiasing. Related CVars:
 
--   [Com\_aviDemoHeight\_(cvar).html com\_aviDemoHeight] - You can select the height of each frame.
--   [Com\_aviDemoTics\_(cvar).html com\_aviDemoTics] - You can select how many frames per second should be generated.
--   [Com\_aviDemoWidth\_(cvar).html com\_aviDemoWidth] - You can select the width of each frame.
+-   [com\_aviDemoHeight](Com\_aviDemoHeight\_(cvar)) - You can select the height of each frame.
+-   [com\_aviDemoTics](Com\_aviDemoTics\_(cvar)) - You can select how many frames per second should be generated.
+-   [com\_aviDemoWidth](Com\_aviDemoWidth\_(cvar)) - You can select the width of each frame.
 
 

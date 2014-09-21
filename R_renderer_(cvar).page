@@ -18,7 +18,7 @@ Parameters
 
 -   [String] - Name of the rendering path.
     -   Best - The engine automatically determines the best path to use.
-    -   ARB2 - Best quality path which enables the use of [Vertex\_and\_fragment\_programs.html vertex and fragment programs]. Needs an ATi Radeon 9500 or nVidia GeForce 5200 or better.
+    -   ARB2 - Best quality path which enables the use of [vertex and fragment programs](Vertex\_and\_fragment\_programs). Needs an ATi Radeon 9500 or nVidia GeForce 5200 or better.
     -   R200 - ATi specific. Needs an ATi Radeon 8500 or better.
     -   NV20 - nVidia specific. Needs a nVidia GeForce 3 or better.
     -   NV10 - nVidia specific. Needs a nVidia GeForce or better (but only nVidia GeForce 4 MX is officially supported by Doom 3).
@@ -55,6 +55,6 @@ Flags
 Notes
 -----
 
-You can use this CVar to test how your mod will look on other video cards. See also the [GfxInfo\_(console\_command).html gfxinfo] console command.
+You can use this CVar to test how your mod will look on other video cards. See also the [gfxinfo](GfxInfo\_(console\_command)) console command.
 
 

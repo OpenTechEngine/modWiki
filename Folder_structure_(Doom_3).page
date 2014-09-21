@@ -2,13 +2,13 @@ Folder structure (Doom 3)
 =========================
 
 <div style="padding: 1px; border: 0px solid #000000" align="left">
-<font size="18px"><font color="black">![Image:D3square\_bg.png](images_c_cb_D3square_bg.png "fig:Image:D3square_bg.png") The information on this page is specific to [Doom\_3.html Doom 3].</font></font>
+<font size="18px"><font color="black">![Image:D3square\_bg.png](images_c_cb_D3square_bg.png "fig:Image:D3square_bg.png") The information on this page is specific to [Doom 3](Doom\_3).</font></font>
 
 </div>
 
 ------------------------------------------------------------------------
 
-This is the folder structure of Doom 3. It should be noted that these folders are not present in the base folder itself. Instead, these folders and the assets contained therein are stored in [PK4\_(file\_format).html PK4 archives].
+This is the folder structure of Doom 3. It should be noted that these folders are not present in the base folder itself. Instead, these folders and the assets contained therein are stored in [PK4 archives](PK4\_(file\_format)).
 
 <table>
 <colgroup>
@@ -53,7 +53,7 @@ This is the folder structure of Doom 3. It should be noted that these folders ar
 </div>
 <p></font></p></td>
 <td align="left"><h2>/base</h2>
-<p>This is the default Doom 3 mod directory. The contents of this directory include all the game assets used in the game. Mods for Doom 3 should be created in their own directory in the main Doom3 installation folder as a brother folder to /base. In the engine code your mods' base name is always called &quot;base&quot; no matter the actual physical name. You set the game to use a different folder as base with the [Fs_game_(cvar).html fs_game] cvar.</p>
+<p>This is the default Doom 3 mod directory. The contents of this directory include all the game assets used in the game. Mods for Doom 3 should be created in their own directory in the main Doom3 installation folder as a brother folder to /base. In the engine code your mods' base name is always called &quot;base&quot; no matter the actual physical name. You set the game to use a different folder as base with the [fs_game](Fs_game_(cvar)) cvar.</p>
 <div>
 <p><img src="images_2_23_D3square_25.png" title="fig:Image:D3square_25.png" alt="Image:D3square_25.png" /> <strong>Note:</strong> Doom 3: ROE only:</p>
 <dl>
@@ -62,65 +62,65 @@ This is the folder structure of Doom 3. It should be noted that these folders ar
 </dd>
 </dl>
 </div>
-<p>With the release of patch v1.3 you can set the [Fs_game_base_(cvar).html fs_game_base] cvar to let you base a mod off base game and your own content as usual as well as an additional mod. For instance, if you want to create a mod that also uses content from the Doom 3: Resurrection of Evil expansion you should set &quot;fs_game &lt;yourmodname&gt;&quot; as well as &quot;fs_game_base d3xp&quot;.</p>
-<p><strong>Note:</strong> While you probably want to work on your mod with the assets decompressed and available in the Doom 3 folder structure, when you release your mod you should put them into .[PK4_(file_format).html PK4] files.</p>
+<p>With the release of patch v1.3 you can set the [fs_game_base](Fs_game_base_(cvar)) cvar to let you base a mod off base game and your own content as usual as well as an additional mod. For instance, if you want to create a mod that also uses content from the Doom 3: Resurrection of Evil expansion you should set &quot;fs_game &lt;yourmodname&gt;&quot; as well as &quot;fs_game_base d3xp&quot;.</p>
+<p><strong>Note:</strong> While you probably want to work on your mod with the assets decompressed and available in the Doom 3 folder structure, when you release your mod you should put them into .[PK4](PK4_(file_format)) files.</p>
 <h2>/base/af</h2>
-<p>This folder contains .AF files which setup the [Af_(decl).html articulated figure declarations].</p>
+<p>This folder contains .AF files which setup the [articulated figure declarations](Af_(decl)).</p>
 <h2>/base/dds</h2>
-<p>This folder contains .[DDS_(file_format).html DDS] files which are compressed textures.</p>
+<p>This folder contains .[DDS](DDS_(file_format)) files which are compressed textures.</p>
 <h2>/base/def</h2>
-<p>This folder contains .[DEF_(file_format).html DEF] files which contain [Declarations.html declarations].</p>
+<p>This folder contains .[DEF](DEF_(file_format)) files which contain [declarations](Declarations).</p>
 <h2>/base/demos</h2>
-<p>This folder contains .[DEMO_(file_format).html DEMO] files which are gameplay recordings.</p>
+<p>This folder contains .[DEMO](DEMO_(file_format)) files which are gameplay recordings.</p>
 <h2><span align="absbottom"><img src="images_2_23_D3square_25.png" title="fig:Image:D3square_25.png" alt="Image:D3square_25.png" /> /base/efxs</span></h2>
 <dl>
 
-<dd><em>The information in this section is specific to [Doom_3.html Doom 3: Resurrection of Evil].</em>
+<dd><em>The information in this section is specific to [Doom 3: Resurrection of Evil](Doom_3).</em>
 </dd>
 </dl>
 <p>This folder contains .EFX files which have reverb information about a map.</p>
 <h2>/base/env</h2>
-<p>This folder contains [Images.html images] for [Cube_maps.html environment maps] which are textures applied to the inside faces of a skybox to give the appearance of large spaces.</p>
+<p>This folder contains [images](Images) for [environment maps](Cube_maps) which are textures applied to the inside faces of a skybox to give the appearance of large spaces.</p>
 <h2>/base/fonts</h2>
 <h2>/base/fx</h2>
 <h2>/base/glprogs</h2>
-<p>This folder contains .[VFP_(file_format).html VFP] and .[VP_(file_format).html VP] files which become available for use in [Material_(decl).html materials] for [Vertex_and_fragment_programs.html visual special effects].</p>
+<p>This folder contains .[VFP](VFP_(file_format)) and .[VP](VP_(file_format)) files which become available for use in [materials](Material_(decl)) for [visual special effects](Vertex_and_fragment_programs).</p>
 <h2>/base/guis</h2>
-<p>This folder contains .GUI files which setup the [GUIs.html graphical user interfaces].</p>
+<p>This folder contains .GUI files which setup the [graphical user interfaces](GUIs).</p>
 <p><br /></p>
 <h2>/base/lights</h2>
-<p>This folder contains .[TGA_(file_format).html TGA] files which become available for use in [Material_(decl).html light materials] to create 'light styles' that modulate what light projects onto the surfaces of the world.</p>
+<p>This folder contains .[TGA](TGA_(file_format)) files which become available for use in [light materials](Material_(decl)) to create 'light styles' that modulate what light projects onto the surfaces of the world.</p>
 <h2>/base/maps</h2>
-<p>This folder contains the .[MAP_(file_format).html MAP], .[CM_(file_format).html CM], .[PROC_(file_format).html PROC], and .[AAS_(file_format).html AAS] files for each map. Should there be any .BAK files there they should be removed prior to distribution as these are just backup versions created by the [Map_editor.html map editor].</p>
+<p>This folder contains the .[MAP](MAP_(file_format)), .[CM](CM_(file_format)), .[PROC](PROC_(file_format)), and .[AAS](AAS_(file_format)) files for each map. Should there be any .BAK files there they should be removed prior to distribution as these are just backup versions created by the [map editor](Map_editor).</p>
 <h2>/base/materials</h2>
-<p>This folder contains .MTR files which setup the [Material_(decl).html material declarations].</p>
+<p>This folder contains .MTR files which setup the [material declarations](Material_(decl)).</p>
 <h2>/base/models</h2>
 <p>This folder contains numerous sub-directories where the following file formats can be found:</p>
 <dl>
 <dt>Model formats</dt>
-<dd>.[ASE_(file_format).html ASE], .[LWO_(file_format).html LWO], .[MD5_(file_format).html MD5].
+<dd>.[ASE](ASE_(file_format)), .[LWO](LWO_(file_format)), .[MD5](MD5_(file_format)).
 </dd>
 <dt>Image formats</dt>
-<dd>.[TGA_(file_format).html TGA], .[DDS_(file_format).html DDS], .[JPG_(file_format).html JPG].
+<dd>.[TGA](TGA_(file_format)), .[DDS](DDS_(file_format)), .[JPG](JPG_(file_format)).
 </dd>
 <dt>Other formats</dt>
-<dd>.[CM_(file_format).html CM].
+<dd>.[CM](CM_(file_format)).
 </dd>
 </dl>
 <h2>/base/newpdas</h2>
 <h2>/base/particles</h2>
 <h2>/base/script</h2>
 <h2>/base/skins</h2>
-<p>This folder contains .SKIN files which setup the [Skin_(decl).html skin declarations].</p>
+<p>This folder contains .SKIN files which setup the [skin declarations](Skin_(decl)).</p>
 <h2>/base/sound</h2>
 <h2>/base/strings</h2>
-<p>This folder contains .[LANG_(file_format).html LANG] files which are used for localization. The engine loads all of the files from this folder and parses the numbered strings within these files to make them available to the code, [GUIs.html GUIs] and [Mapping.html maps].</p>
+<p>This folder contains .[LANG](LANG_(file_format)) files which are used for localization. The engine loads all of the files from this folder and parses the numbered strings within these files to make them available to the code, [GUIs](GUIs) and [maps](Mapping).</p>
 <h2>/base/textures</h2>
-<p>This folder contains .[TGA_(file_format).html TGA] or .[JPG_(file_format).html JPG] files which become available for use as assets in [Material_(decl).html material declarations].</p>
+<p>This folder contains .[TGA](TGA_(file_format)) or .[JPG](JPG_(file_format)) files which become available for use as assets in [material declarations](Material_(decl)).</p>
 <h2>/base/ui</h2>
-<p>This folder contains .[TGA_(file_format).html TGA] files used in the user interface.</p>
+<p>This folder contains .[TGA](TGA_(file_format)) files used in the user interface.</p>
 <h2>/base/video</h2>
-<p>This folder contains .[ROQ_(file_format).html ROQ] files which are movies.</p>
+<p>This folder contains .[ROQ](ROQ_(file_format)) files which are movies.</p>
 <p><br /></p></td>
 </tr>
 </tbody>

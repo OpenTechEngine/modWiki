@@ -1,7 +1,7 @@
 PK4 (file format)
 =================
 
-Ideally, every asset used by the idTech 4 engine is stored in a .PK4 file (also known as a "pack" or "pak" file). Pack files are just normal [ZIP\_(file\_format).html .ZIP] files with the .PK4 extension - you can use [WinRar](http://web.archive.org/web/20120922032152/http://www.win-rar.com/), [Winzip](http://web.archive.org/web/20120922032152/http://www.winzip.com/), [7-Zip](http://web.archive.org/web/20120922032152/http://www.7-zip.org/) or a similar utility to browse or create new .PK4 files. An even easier alternative might be [Pk4scape.html Pk4scape], which handles all things for the user.
+Ideally, every asset used by the idTech 4 engine is stored in a .PK4 file (also known as a "pack" or "pak" file). Pack files are just normal [.ZIP](ZIP\_(file\_format)) files with the .PK4 extension - you can use [WinRar](http://web.archive.org/web/20120922032152/http://www.win-rar.com/), [Winzip](http://web.archive.org/web/20120922032152/http://www.winzip.com/), [7-Zip](http://web.archive.org/web/20120922032152/http://www.7-zip.org/) or a similar utility to browse or create new .PK4 files. An even easier alternative might be [Pk4scape](Pk4scape), which handles all things for the user.
 
 ![](/images/images_9_97_Rtcw2square_25.png) Note: _Wolfenstein only:_
  ~  The PK4 files used in the single player component have a modified header which prevents them from being opened by a standard archive

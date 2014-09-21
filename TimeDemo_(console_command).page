@@ -4,7 +4,7 @@ TimeDemo (console command)
 Description
 -----------
 
-This command plays back a .[DEMO\_(file\_format).html DEMO] file and returns the average framerate.
+This command plays back a .[DEMO](DEMO\_(file\_format)) file and returns the average framerate.
 
 Usage
 -----
@@ -22,6 +22,6 @@ Parameters
 Notes
 -----
 
-When running a timedemo the engine ignores the tic rate (60Hz) and runs at maximum speed. Unless you use the precache option you should run timedemo more than once so that the framerate is not affected by background loading. Demos store the physics and AI of the live run so during a timedemo the CPU will not be as stressed as if the game was being played. See also the [Benchmark\_(console\_command).html benchmark] console command.
+When running a timedemo the engine ignores the tic rate (60Hz) and runs at maximum speed. Unless you use the precache option you should run timedemo more than once so that the framerate is not affected by background loading. Demos store the physics and AI of the live run so during a timedemo the CPU will not be as stressed as if the game was being played. See also the [benchmark](Benchmark\_(console\_command)) console command.
 
 

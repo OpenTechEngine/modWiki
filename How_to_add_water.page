@@ -13,11 +13,11 @@ This section describes the various options to achieve the visual effect of water
 
 ### Transparency
 
-To achieve this in your water [Material\_(decl).html material] you need only include the [Translucent\_(Material\_global\_keyword).html translucent] keyword.
+To achieve this in your water [material](Material\_(decl)) you need only include the [translucent](Translucent\_(Material\_global\_keyword)) keyword.
 
 ### Reflection
 
-There are two basic ways to achieve reflection. One is to use the [Mirror\_(Material\_global\_keyword).html mirror] keyword; the other is to the [MirrorRenderMap\_(Material\_stage\_keyword).html mirrorRenderMap] as a stage. For example:
+There are two basic ways to achieve reflection. One is to use the [mirror](Mirror\_(Material\_global\_keyword)) keyword; the other is to the [mirrorRenderMap](MirrorRenderMap\_(Material\_stage\_keyword)) as a stage. For example:
 
 ```
 {
@@ -34,7 +34,7 @@ Of note here are the two parameters of the mirrorRenderMap instruction: these de
 
 This effect was first deduced by [Augustin-Jean Fresnel](http://en.wikipedia.org/wiki/Fresnel) when studying how light changes at it traverses the boundary between different media like air and water. Put simply and where it interests us, the fresnel effect happens when light breaks the surface of the water and how it affects reflectivity; the angle of incidence of the eye towards the surface of the water will determine how this will reflect light (from the sky, buildings, monsters, etc.). If you are on top of the water looking down then there should be very little light reflected off the surface of the water. However, if you are looking at the water surface at an angle then the farther you look into the more visible the reflection will be.
 
-You can add the fresnel effect to your water through a [Vertex\_and\_fragment\_programs.html shader]. Here's an example of one written by [inolen](http://www.inolen.com/):
+You can add the fresnel effect to your water through a [shader](Vertex\_and\_fragment\_programs). Here's an example of one written by [inolen](http://www.inolen.com/):
 ```
 !!ARBvp1.0
 OPTION ARB_position_invariant;
@@ -72,7 +72,7 @@ MOV result.color.a, fragment.texcoord[2].x;
 
 END
 ```
-You should save the above into a "fresnel.vfp" file and put it in the /[Glprogs\_(folder).html glprogs] folder. You can then call it in your material.
+You should save the above into a "fresnel.vfp" file and put it in the /[glprogs](Glprogs\_(folder)) folder. You can then call it in your material.
 
 ### A complex water reflection
 
@@ -101,7 +101,7 @@ textures/water/fresnel
 
 ### Refraction
 
-The surface of a water body also bends light that breaks through the surface from either direction. We can easily simulate this phenomenon with the "heathaze" .[VFP\_(file\_format).html VFP] shader. In practice however, it's not very efficient to do this for a stale puddle. Also because the Doom 3 engine only allows one fragment/vertex program per material if you want to use this in conjunction with the "fresnel.vfp" shader above you will need to put the refraction into a separate material. Because of this we're going to be using the following refraction material only when some measure of movement is desired in the water's surface.
+The surface of a water body also bends light that breaks through the surface from either direction. We can easily simulate this phenomenon with the "heathaze" .[VFP](VFP\_(file\_format)) shader. In practice however, it's not very efficient to do this for a stale puddle. Also because the Doom 3 engine only allows one fragment/vertex program per material if you want to use this in conjunction with the "fresnel.vfp" shader above you will need to put the refraction into a separate material. Because of this we're going to be using the following refraction material only when some measure of movement is desired in the water's surface.
 
 ```
 textures/water/refraction
@@ -123,11 +123,11 @@ textures/water/refraction
 
 ```
 
-Note that this material doesn't use any reflection and we want the refraction to be visible from outside the water looking in or when you're underwater looking out so the inclusion of the twosided keyword. On the other hand, if the player is never supposed to be underwater you can drop it. Of special note here is the "refraction\_local.tga", a [Texturing.html normal map] you will have to create to simulate the wavelets and ripples in the water. "VertexParm 0" controls the direction and speed of the movement while "VertexParm 1" controls how pronounced the distortion will be.
+Note that this material doesn't use any reflection and we want the refraction to be visible from outside the water looking in or when you're underwater looking out so the inclusion of the twosided keyword. On the other hand, if the player is never supposed to be underwater you can drop it. Of special note here is the "refraction\_local.tga", a [normal map](Texturing) you will have to create to simulate the wavelets and ripples in the water. "VertexParm 0" controls the direction and speed of the movement while "VertexParm 1" controls how pronounced the distortion will be.
 
 ### Adding the visuals to the map
 
-Add a [Patch.html patch] to your map and give it your water material. If you're using the fresnel shader you can subdivide it to achieve more accurate reflections at the expense of slightly slower performance. Either way the patch should be flat to avoid reflection visual artefacts; likewise the water surface should also not be broken by a [Visportal.html visportal] or any other material that uses the [Areaportal\_(Material\_global\_keyword).html areaportal] keyword.
+Add a [patch](Patch) to your map and give it your water material. If you're using the fresnel shader you can subdivide it to achieve more accurate reflections at the expense of slightly slower performance. Either way the patch should be flat to avoid reflection visual artefacts; likewise the water surface should also not be broken by a [visportal](Visportal) or any other material that uses the [areaportal](Areaportal\_(Material\_global\_keyword)) keyword.
 
 If you want to use refraction add another patch and set it a few units above the patch with fresnel.
 
@@ -165,7 +165,7 @@ textures/water/refraction
 
 ### Adding water bodies to the map
 
-Start by creating a brush with the "caulk" material. Then for the top surface (or whatever surface stands for topmost if you are tinkering with [G\_gravity\_(cvar).html gravity]) select the "refraction" material described above. With the brush selected, make it a func\_liquid.
+Start by creating a brush with the "caulk" material. Then for the top surface (or whatever surface stands for topmost if you are tinkering with [gravity](G\_gravity\_(cvar))) select the "refraction" material described above. With the brush selected, make it a func\_liquid.
 
 Visuals and interaction
 -----------------------

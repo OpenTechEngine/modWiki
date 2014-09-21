@@ -7,20 +7,20 @@ Common Mapping Issues
  --------                                                                                                                                                                                                                   
                                                                                                                                                                                                                             
  </div>                                                                                                                                                                                                                     
- -   [Common\_Mapping\_Issues.html\#General\_Editor\_Problems <span class="tocnumber">1</span> <span class="toctext">General Editor Problems</span>]                                                                        
-     -   [Common\_Mapping\_Issues.html\#There\_are\_many\_black\_textures\_in\_the\_texture\_browser <span class="tocnumber">1.1</span> <span class="toctext">There are many black textures in the texture browser</span>]  
-     -   [Common\_Mapping\_Issues.html\#Rendering\_problems <span class="tocnumber">1.2</span> <span class="toctext">Rendering problems</span>]                                                                             
- -   [Common\_Mapping\_Issues.html\#Map\_Compiler\_Errors <span class="tocnumber">2</span> <span class="toctext">Map Compiler Errors</span>]                                                                                
-     -   [Common\_Mapping\_Issues.html\#Warning:\_leaked <span class="tocnumber">2.1</span> <span class="toctext">Warning: leaked</span>]                                                                                   
-         -   [Common\_Mapping\_Issues.html\#Finding\_Leaks <span class="tocnumber">2.1.1</span> <span class="toctext">Finding Leaks</span>]                                                                                 
-     -   [Common\_Mapping\_Issues.html\#Warning:\_reached\_outside\_from\_entity\_X <span class="tocnumber">2.2</span> <span class="toctext">Warning: reached outside from entity X</span>]                                 
-     -   [Common\_Mapping\_Issues.html\#Warning:\_backwards\_triangle\_generated <span class="tocnumber">2.3</span> <span class="toctext">Warning: backwards triangle generated</span>]                                     
-     -   [Common\_Mapping\_Issues.html\#Warning:\_backwards\_triangle\_in\_input <span class="tocnumber">2.4</span> <span class="toctext">Warning: backwards triangle in input</span>]                                      
-     -   [Common\_Mapping\_Issues.html\#Warning:\_node\_without\_a\_volume <span class="tocnumber">2.5</span> <span class="toctext">Warning: node without a volume</span>]                                                  
-     -   [Common\_Mapping\_Issues.html\#Fatal\_Error:\_Warning:\_No\_free\_entities. <span class="tocnumber">2.6</span> <span class="toctext">Fatal Error: Warning: No free entities.</span>]                               
-     -   [Common\_Mapping\_Issues.html\#Error:\_i\_.3E.3D\_MAX\_REACH\_PER\_AREA <span class="tocnumber">2.7</span> <span class="toctext">Error: i \>= MAX\_REACH\_PER\_AREA</span>]                                        
- -   [Common\_Mapping\_Issues.html\#File\_Corruption <span class="tocnumber">3</span> <span class="toctext">File Corruption</span>]                                                                                         
-     -   [Common\_Mapping\_Issues.html\#.23IND.2F.23INF <span class="tocnumber">3.1</span> <span class="toctext">\#IND/\#INF</span>]                                                                                        |
+ -   [<span class="tocnumber">1</span> <span class="toctext">General Editor Problems</span>](Common\_Mapping\_Issues#General\_Editor\_Problems)                                                                        
+     -   [<span class="tocnumber">1.1</span> <span class="toctext">There are many black textures in the texture browser</span>](Common\_Mapping\_Issues#There\_are\_many\_black\_textures\_in\_the\_texture\_browser)  
+     -   [<span class="tocnumber">1.2</span> <span class="toctext">Rendering problems</span>](Common\_Mapping\_Issues#Rendering\_problems)                                                                             
+ -   [<span class="tocnumber">2</span> <span class="toctext">Map Compiler Errors</span>](Common\_Mapping\_Issues#Map\_Compiler\_Errors)                                                                                
+     -   [<span class="tocnumber">2.1</span> <span class="toctext">Warning: leaked</span>](Common\_Mapping\_Issues#Warning:\_leaked)                                                                                   
+         -   [<span class="tocnumber">2.1.1</span> <span class="toctext">Finding Leaks</span>](Common\_Mapping\_Issues#Finding\_Leaks)                                                                                 
+     -   [<span class="tocnumber">2.2</span> <span class="toctext">Warning: reached outside from entity X</span>](Common\_Mapping\_Issues#Warning:\_reached\_outside\_from\_entity\_X)                                 
+     -   [<span class="tocnumber">2.3</span> <span class="toctext">Warning: backwards triangle generated</span>](Common\_Mapping\_Issues#Warning:\_backwards\_triangle\_generated)                                     
+     -   [<span class="tocnumber">2.4</span> <span class="toctext">Warning: backwards triangle in input</span>](Common\_Mapping\_Issues#Warning:\_backwards\_triangle\_in\_input)                                      
+     -   [<span class="tocnumber">2.5</span> <span class="toctext">Warning: node without a volume</span>](Common\_Mapping\_Issues#Warning:\_node\_without\_a\_volume)                                                  
+     -   [<span class="tocnumber">2.6</span> <span class="toctext">Fatal Error: Warning: No free entities.</span>](Common\_Mapping\_Issues#Fatal\_Error:\_Warning:\_No\_free\_entities.)                               
+     -   [<span class="tocnumber">2.7</span> <span class="toctext">Error: i \>= MAX\_REACH\_PER\_AREA</span>](Common\_Mapping\_Issues#Error:\_i\_.3E.3D\_MAX\_REACH\_PER\_AREA)                                        
+ -   [<span class="tocnumber">3</span> <span class="toctext">File Corruption</span>](Common\_Mapping\_Issues#File\_Corruption)                                                                                         
+     -   [<span class="tocnumber">3.1</span> <span class="toctext">\#IND/\#INF</span>](Common\_Mapping\_Issues#.23IND.2F.23INF)                                                                                        |
 
 General Editor Problems
 -----------------------
@@ -31,11 +31,11 @@ Most idTech 4 based games come with a lot of redundant, nonfunctional material s
 
 At present no level editor, including the built in editor, validates each shader to ensure the images exist. This results in a texture browser where half the textures listed are of no use.
 
-In the case of Doom 3, there is a workaround and the same solution could be applied to other games. Check [Eutectic's\_clean\_paks.html eutectic's clean paks] for more details.
+In the case of Doom 3, there is a workaround and the same solution could be applied to other games. Check [eutectic's clean paks](Eutectic's\_clean\_paks) for more details.
 
 ### Rendering problems
 
-Make sure you are running the game in windowed mode (press ALT+ENTER or set [R\_fullscreen\_(cvar).html r\_fullscreen] to 0) and you've disabled anti-aliasing (Check your video card settings and set [R\_multiSamples\_(cvar).html r\_multisamples] to 0) before you launch the editor.
+Make sure you are running the game in windowed mode (press ALT+ENTER or set [r\_fullscreen](R\_fullscreen\_(cvar)) to 0) and you've disabled anti-aliasing (Check your video card settings and set [r\_multisamples](R\_multiSamples\_(cvar)) to 0) before you launch the editor.
 
 If you're running Vista you will need to disable Aero and themes.
 
@@ -46,20 +46,20 @@ The following errors are encountered when compiling a map.
 
 ### Warning: leaked
 
-*Severe*: Leaks occur when an [Entity.html entity] is exposed to the void. This can be caused by a literal hole in the hull of your map, a hull brush with a non-sealing material applied to it, or simply an entity whose origin rests in the void.
+*Severe*: Leaks occur when an [entity](Entity) is exposed to the void. This can be caused by a literal hole in the hull of your map, a hull brush with a non-sealing material applied to it, or simply an entity whose origin rests in the void.
 
 #### Finding Leaks
 
-First of all, make sure the map has one info\_player\_start entity. Whenever you compile a map and a leak occurs information about that leak is stored in the [Pointfile.html pointfile]. You can view this information by selecting File \> Pointfile in [DoomEdit.html DoomEdit] immediately after a failed compile.
+First of all, make sure the map has one info\_player\_start entity. Whenever you compile a map and a leak occurs information about that leak is stored in the [pointfile](Pointfile). You can view this information by selecting File \> Pointfile in [DoomEdit](DoomEdit) immediately after a failed compile.
 
-The editor will draw a red line connecting an entity to empty space. You should travel along the line ([DoomEdit\_hotkeys.html hotkey: shift+ctrl+k]) until you find the hole in your level and seal it with a [Brush.html brush]. If the reason for the leak is not immediately obvious review the following:
+The editor will draw a red line connecting an entity to empty space. You should travel along the line ([hotkey: shift+ctrl+k](DoomEdit\_hotkeys)) until you find the hole in your level and seal it with a [brush](Brush). If the reason for the leak is not immediately obvious review the following:
 
 -   Origin: Regardless of whether the entity appears to be protected from the void its origin may be outside. This is especially prevalent with large animating models.
--   Surface: Some materials are non-solid or translucid. These materials do not seal the map and upon compile the engine will report a leak. A material's corresponding [Material\_(decl).html material shader] can yield clues as to why a certain texture will not seal the map. If the pointfile seems to go through a solid piece of geometry check that surface's material to see if the problem lies there.
+-   Surface: Some materials are non-solid or translucid. These materials do not seal the map and upon compile the engine will report a leak. A material's corresponding [material shader](Material\_(decl)) can yield clues as to why a certain texture will not seal the map. If the pointfile seems to go through a solid piece of geometry check that surface's material to see if the problem lies there.
 
 ### Warning: reached outside from entity X
 
-*Severe*: This is a very specific type of leak. Open the map in the editor, select a brush that doesn't belong to any entity and go to the Entity Inspector ([DoomEdit\_hotkeys.html hotkey: N]). The worldspawn entity should be selected (try again if this is not the case). Make sure the worldspawn entity does not have an "angle" key. If it does, delete it.
+*Severe*: This is a very specific type of leak. Open the map in the editor, select a brush that doesn't belong to any entity and go to the Entity Inspector ([hotkey: N](DoomEdit\_hotkeys)). The worldspawn entity should be selected (try again if this is not the case). Make sure the worldspawn entity does not have an "angle" key. If it does, delete it.
 
 ### Warning: backwards triangle generated
 
@@ -71,7 +71,7 @@ The editor will draw a red line connecting an entity to empty space. You should 
 
 ### Warning: node without a volume
 
-*Benign*: This warning appears when you have a non-enclosed patch (like a cylinder [Patch.html patch] without caps) but can be ignored; depending on circumstances leaving those patches open may look bad while playing though.
+*Benign*: This warning appears when you have a non-enclosed patch (like a cylinder [patch](Patch) without caps) but can be ignored; depending on circumstances leaving those patches open may look bad while playing though.
 
 ### Fatal Error: Warning: No free entities.
 
@@ -79,7 +79,7 @@ The editor will draw a red line connecting an entity to empty space. You should 
 
 ===Error: i \>= MAX\_REACH\_PER\_AREA===
 
-*Severe*: An error issued by the [AAS.html AAS] compiler. An [Area.html Area] that has been created has more than 256 adjoining Areas. You should simplify the map's brush geometry (which the aas compiler uses as input) using [Monster\_clip.html monster clip] to block off areas that the AI won't/shouldn't go.
+*Severe*: An error issued by the [AAS](AAS) compiler. An [Area](Area) that has been created has more than 256 adjoining Areas. You should simplify the map's brush geometry (which the aas compiler uses as input) using [monster clip](Monster\_clip) to block off areas that the AI won't/shouldn't go.
 
 This error may also be caused by surrounding the map with a large caulk hull with leaks between the map and hull.
 

@@ -7,7 +7,7 @@ Table (decl)
 If you disagree with this, please explain why on its talk page.
 
 </div>
-A table declaration is nothing more than a definition of a list of values bound to a name. They are mostly used to iterate a list of common values in [Material\_(decl).html materials] or [GUI\_scripting.html GUI scripts]. A key example would be lights that fade in and out or strobe in a clear pattern.
+A table declaration is nothing more than a definition of a list of values bound to a name. They are mostly used to iterate a list of common values in [materials](Material\_(decl)) or [GUI scripts](GUI\_scripting). A key example would be lights that fade in and out or strobe in a clear pattern.
 
 |----------------------------------------------------------------------------------------------------------------------------------|
 | <div id="toctitle">                                                                                                              
@@ -15,13 +15,13 @@ A table declaration is nothing more than a definition of a list of values bound 
  --------                                                                                                                          
                                                                                                                                    
  </div>                                                                                                                            
- -   [Table\_(decl).html\#Declaration <span class="tocnumber">1</span> <span class="toctext">Declaration</span>]                   
- -   [Table\_(decl).html\#Using\_a\_table <span class="tocnumber">2</span> <span class="toctext">Using a table</span>]             
-     -   [Table\_(decl).html\#Snap\_parameter <span class="tocnumber">2.1</span> <span class="toctext">Snap parameter</span>]      
-     -   [Table\_(decl).html\#Clamp\_parameter <span class="tocnumber">2.2</span> <span class="toctext">Clamp parameter</span>]    
- -   [Table\_(decl).html\#Use\_in\_materials <span class="tocnumber">3</span> <span class="toctext">Use in materials</span>]       
- -   [Table\_(decl).html\#Use\_in\_GUI\_scripts <span class="tocnumber">4</span> <span class="toctext">Use in GUI scripts</span>]  
- -   [Table\_(decl).html\#External\_links <span class="tocnumber">5</span> <span class="toctext">External links</span>]            |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Declaration</span>](Table\_(decl)#Declaration)                   
+ -   [<span class="tocnumber">2</span> <span class="toctext">Using a table</span>](Table\_(decl)#Using\_a\_table)             
+     -   [<span class="tocnumber">2.1</span> <span class="toctext">Snap parameter</span>](Table\_(decl)#Snap\_parameter)      
+     -   [<span class="tocnumber">2.2</span> <span class="toctext">Clamp parameter</span>](Table\_(decl)#Clamp\_parameter)    
+ -   [<span class="tocnumber">3</span> <span class="toctext">Use in materials</span>](Table\_(decl)#Use\_in\_materials)       
+ -   [<span class="tocnumber">4</span> <span class="toctext">Use in GUI scripts</span>](Table\_(decl)#Use\_in\_GUI\_scripts)  
+ -   [<span class="tocnumber">5</span> <span class="toctext">External links</span>](Table\_(decl)#External\_links)            |
 
 Declaration
 -----------
@@ -30,7 +30,7 @@ Declaring a table is fairly simple when you look at the syntax.
 
 `table <tablename> { [snap] [clamp] { <data>, <data>, ... } }`
 
-The **snap** and **clamp** parameters are optional btu can be used together. They are explained in detail in the rest of this article. The **data** consists of single [Data\_types.html\#float float] values.
+The **snap** and **clamp** parameters are optional btu can be used together. They are explained in detail in the rest of this article. The **data** consists of single [float](Data\_types#float) values.
 
 Using a table
 -------------
@@ -39,7 +39,7 @@ Square bracket operators are used to get a certain value out of a table. The ind
 
 `tablename [ <expression> ]`
 
-The expression between brackets can result in an integer or floating point number. You can use the [SCRIPT\_(file\_format).html\#Simple\_Operators simple script operators] \*, %, + and - as well, next to the following predefined variables:
+The expression between brackets can result in an integer or floating point number. You can use the [simple script operators](SCRIPT\_(file\_format)#Simple\_Operators) \*, %, + and - as well, next to the following predefined variables:
 
 -   time: a floating point value which increases continually as the map progresses.
 -   parm0 - parm11: parameters which can be set from script, game code or the map editor.

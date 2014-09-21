@@ -6,7 +6,7 @@ To change the GUI state (properties and values) or execute a GUI client command.
 State change
 ------------
 
-Set a [GUI\_item\_properties.html property] or a [GUI\_variable\_types.html variable] to a given value. This is used to change the appearance or behavior of items during runtime. It doesn't work on all kinds of properties, though, as some of them can't be changed and are marked as so on the [GUI\_item\_properties.html property] reference.
+Set a [property](GUI\_item\_properties) or a [variable](GUI\_variable\_types) to a given value. This is used to change the appearance or behavior of items during runtime. It doesn't work on all kinds of properties, though, as some of them can't be changed and are marked as so on the [property](GUI\_item\_properties) reference.
 
 ### Syntax
 
@@ -32,7 +32,7 @@ If you are trying to set one property (property2 - the target property) equal to
 Command
 -------
 
-Execute a gui command on the client. By using "cmd" as the first property, you tell the game to execute some action on the player's own game. Commands are case insensitive. Commands are either handled by the engine or passed on to the [Coding.html game code], where there is further differentiation between menus and entities.
+Execute a gui command on the client. By using "cmd" as the first property, you tell the game to execute some action on the player's own game. Commands are case insensitive. Commands are either handled by the engine or passed on to the [game code](Coding), where there is further differentiation between menus and entities.
 
 ### Engine GUI Commands
 

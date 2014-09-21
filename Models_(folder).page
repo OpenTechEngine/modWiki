@@ -1,33 +1,33 @@
 Models (folder)
 ===============
 
-The models directory contains numerous sub-directory. Each of these sub-directories contains files for all the [Modelling.html models] used in the game. This includes meshes, collision files and skin textures. The following file formats can be found in these folders:
+The models directory contains numerous sub-directory. Each of these sub-directories contains files for all the [models](Modelling) used in the game. This includes meshes, collision files and skin textures. The following file formats can be found in these folders:
 
 ### Model Formats
 
-.[ASE\_(file\_format).html ASE]   
+.[ASE](ASE\_(file\_format))   
 3DS Max ascii text based format
 
-.[LWO\_(file\_format).html LWO]   
+.[LWO](LWO\_(file\_format))   
 native file format for Newtek's Lightwave
 
-.[MD5\_(file\_format).html MD5]   
+.[MD5](MD5\_(file\_format))   
 proprietary format for Doom 3
 
 ### Image Formats
 
-.[TGA\_(file\_format).html TGA]   
+.[TGA](TGA\_(file\_format))   
 Uncompressed 24 or 32 bit Image Format
 
-.[JPG\_(file\_format).html JPG]   
+.[JPG](JPG\_(file\_format))   
 Compressed Image Format
 
-.[DDS\_(file\_format).html DDS]   
+.[DDS](DDS\_(file\_format))   
 Compressed Image Format
 
 ### Other Formats
 
-.[CM\_(file\_format).html CM]   
+.[CM](CM\_(file\_format))   
 Doom 3 engine Collision Model
 
 

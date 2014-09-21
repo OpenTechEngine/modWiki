@@ -4,7 +4,7 @@ FragmentMap (Material stage keyword)
 Description
 -----------
 
-The **fragmentMap** keyword instructs Doom 3 to pass the instructed image to a fragment program which must also be referenced in this stage via the [FragmentProgram\_(Material\_stage\_keyword).html fragmentProgram] keyword.
+The **fragmentMap** keyword instructs Doom 3 to pass the instructed image to a fragment program which must also be referenced in this stage via the [fragmentProgram](FragmentProgram\_(Material\_stage\_keyword)) keyword.
 
 Usage
 -----

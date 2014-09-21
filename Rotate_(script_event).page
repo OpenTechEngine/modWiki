@@ -4,7 +4,7 @@ Rotate (script event)
 Game class
 ----------
 
-This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
 
 Description
 -----------
@@ -29,6 +29,6 @@ Examples
 Notes
 -----
 
-This script event does not return any values. This event differs from [RotateOnce\_(script\_event).html rotateOnce] in that rotate will force an entity to continuing rotating for the duration of the game. The above example will cause the entity to complete a 90 degree rotation on the x-axis in one second then repeat endlessly. The [Time\_(script\_event).html time] function has no effect here except in combination with something like [DecelTime\_(script\_event).html decelTime] when the time value will then define the duration that the entity continues to rotate.
+This script event does not return any values. This event differs from [rotateOnce](RotateOnce\_(script\_event)) in that rotate will force an entity to continuing rotating for the duration of the game. The above example will cause the entity to complete a 90 degree rotation on the x-axis in one second then repeat endlessly. The [time](Time\_(script\_event)) function has no effect here except in combination with something like [decelTime](DecelTime\_(script\_event)) when the time value will then define the duration that the entity continues to rotate.
 
 

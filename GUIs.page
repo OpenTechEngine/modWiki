@@ -21,5 +21,5 @@ In previous game engines, a developer would be restricted to simple level interf
 
 However, the GUI system in the id Tech 4 engine unifies both the level and game interactive interface paradigms under one system, and also adds the ability to work on GUI scripts independently from the rest of the game code; GUI scripts can also be reloaded on real time, which makes for easy debugging and testing.
 
-GUI themselves are created from a mix of [GUI\_scripting.html GUI scripting] based on the [GUI\_(file\_format).html .GUI file format] and a mix of different [Material\_(decl).html image materials] (to create graphics) and [GUI\_fonts.html fonts] (to create text).
+GUI themselves are created from a mix of [GUI scripting](GUI\_scripting) based on the [.GUI file format](GUI\_(file\_format)) and a mix of different [image materials](Material\_(decl)) (to create graphics) and [fonts](GUI\_fonts) (to create text).
 

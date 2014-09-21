@@ -20,7 +20,7 @@ normal
 Unknown effect.
 
 skybox  
-Set the appropriate texture coordinates for a skybox. The associated stage should be a [CameraCubeMap\_(Material\_stage\_keyword).html cameraCubeMap].
+Set the appropriate texture coordinates for a skybox. The associated stage should be a [cameraCubeMap](CameraCubeMap\_(Material\_stage\_keyword)).
 
 wobblesky \<x\> \<y\> \<z\>  
 Same as **skybox**, but rotate the coordinates according to the axis given

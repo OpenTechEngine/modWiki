@@ -4,7 +4,7 @@ Aas showAreas (cvar)
 Description
 -----------
 
-This displays the contents flags and debug outline for the current [AAS.html AAS] area.
+This displays the contents flags and debug outline for the current [AAS](AAS) area.
 
 Usage
 -----
@@ -53,7 +53,7 @@ While viewing the game, the outline of the current area the player is in will be
 
 If the current position of the player isn't in an area and a PushPointIntoArea succeeds you will see yellow player bounds.
 
-See [AAS.html AAS] for more information on creating the AAS map.
+See [AAS](AAS) for more information on creating the AAS map.
 
 ![](/images/images_7_7e_Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
  ~  the cvar bot\_threading must be set to 0

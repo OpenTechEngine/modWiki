@@ -12,7 +12,7 @@ The Quake Wars bots work mainly on groups of bot\_action entities specified in W
 
 The bot actions are basically hints on what types of goals are where, the bot AI pretty much decides what to do and when from the actions that are active. The designer basically helps keep things manageable by switching groups of action off and on as the objectives progress.
 
-Note: While it has it's roots in the Fritzbot system, since navigation is handled by the [AAS.html AAS] system part of the grunt work for the designer in setting up navigation has been removed (well, shifted).
+Note: While it has it's roots in the Fritzbot system, since navigation is handled by the [AAS](AAS) system part of the grunt work for the designer in setting up navigation has been removed (well, shifted).
 
 |------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <div id="toctitle">                                                                                                                                  
@@ -20,10 +20,10 @@ Note: While it has it's roots in the Fritzbot system, since navigation is handle
  --------                                                                                                                                              
                                                                                                                                                        
  </div>                                                                                                                                                
- -   [How\_to\_add\_bot\_support\_to\_a\_map.html\#In\_game <span class="tocnumber">1</span> <span class="toctext">In game</span>]                     
- -   [How\_to\_add\_bot\_support\_to\_a\_map.html\#In\_editor <span class="tocnumber">2</span> <span class="toctext">In editor</span>]                 
- -   [How\_to\_add\_bot\_support\_to\_a\_map.html\#Map\_Scripting <span class="tocnumber">3</span> <span class="toctext">Map Scripting</span>]         
- -   [How\_to\_add\_bot\_support\_to\_a\_map.html\#Building\_the\_aas <span class="tocnumber">4</span> <span class="toctext">Building the aas</span>]  |
+ -   [<span class="tocnumber">1</span> <span class="toctext">In game</span>](How\_to\_add\_bot\_support\_to\_a\_map#In\_game)                     
+ -   [<span class="tocnumber">2</span> <span class="toctext">In editor</span>](How\_to\_add\_bot\_support\_to\_a\_map#In\_editor)                 
+ -   [<span class="tocnumber">3</span> <span class="toctext">Map Scripting</span>](How\_to\_add\_bot\_support\_to\_a\_map#Map\_Scripting)         
+ -   [<span class="tocnumber">4</span> <span class="toctext">Building the aas</span>](How\_to\_add\_bot\_support\_to\_a\_map#Building\_the\_aas)  |
 
 In game
 -------
@@ -167,7 +167,7 @@ Most of the other functions seem pretty self explanatory.
 Building the aas
 ----------------
 
-Before the bots can even move around it needs a valid navigation map ([AAS.html AAS]).
+Before the bots can even move around it needs a valid navigation map ([AAS](AAS)).
 
 This is done in worldedit via the Compile-\>Custom Tool menu.
 

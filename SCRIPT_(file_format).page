@@ -1,7 +1,7 @@
 SCRIPT (file format)
 ====================
 
-Script files define a sequence of events grouped into 1 or more blocks. They are used in [Scripting.html\#Different\_fields different fields] like eg. level scripting or GUI actions. Scripts use a custom language with a syntax similar to C++ and are stored in plain-text ASCII files.
+Script files define a sequence of events grouped into 1 or more blocks. They are used in [different fields](Scripting#Different\_fields) like eg. level scripting or GUI actions. Scripts use a custom language with a syntax similar to C++ and are stored in plain-text ASCII files.
 
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <div id="toctitle">                                                                                                                                                      
@@ -9,23 +9,23 @@ Script files define a sequence of events grouped into 1 or more blocks. They are
  --------                                                                                                                                                                  
                                                                                                                                                                            
  </div>                                                                                                                                                                    
- -   [SCRIPT\_(file\_format).html\#Syntax <span class="tocnumber">1</span> <span class="toctext">Syntax</span>]                                                            
-     -   [SCRIPT\_(file\_format).html\#General\_Syntax <span class="tocnumber">1.1</span> <span class="toctext">General Syntax</span>]                                     
-     -   [SCRIPT\_(file\_format).html\#Operators <span class="tocnumber">1.2</span> <span class="toctext">Operators</span>]                                                
-         -   [SCRIPT\_(file\_format).html\#Simple\_Operators <span class="tocnumber">1.2.1</span> <span class="toctext">Simple Operators</span>]                           
-         -   [SCRIPT\_(file\_format).html\#Conditional\_Operators <span class="tocnumber">1.2.2</span> <span class="toctext">Conditional Operators</span>]                 
-         -   [SCRIPT\_(file\_format).html\#Bit\_Operators <span class="tocnumber">1.2.3</span> <span class="toctext">Bit Operators</span>]                                 
-         -   [SCRIPT\_(file\_format).html\#Special\_Assignment\_Operators <span class="tocnumber">1.2.4</span> <span class="toctext">Special Assignment Operators</span>]  
-     -   [SCRIPT\_(file\_format).html\#Conditional\_Structures <span class="tocnumber">1.3</span> <span class="toctext">Conditional Structures</span>]                     
-     -   [SCRIPT\_(file\_format).html\#Loop\_Structures <span class="tocnumber">1.4</span> <span class="toctext">Loop Structures</span>]                                   
-     -   [SCRIPT\_(file\_format).html\#Code\_grouping <span class="tocnumber">1.5</span> <span class="toctext">Code grouping</span>]                                       
-     -   [SCRIPT\_(file\_format).html\#Special <span class="tocnumber">1.6</span> <span class="toctext">Special</span>]                                                    
- -   [SCRIPT\_(file\_format).html\#Editing\_tools <span class="tocnumber">2</span> <span class="toctext">Editing tools</span>]                                             |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Syntax</span>](SCRIPT\_(file\_format)#Syntax)                                                            
+     -   [<span class="tocnumber">1.1</span> <span class="toctext">General Syntax</span>](SCRIPT\_(file\_format)#General\_Syntax)                                     
+     -   [<span class="tocnumber">1.2</span> <span class="toctext">Operators</span>](SCRIPT\_(file\_format)#Operators)                                                
+         -   [<span class="tocnumber">1.2.1</span> <span class="toctext">Simple Operators</span>](SCRIPT\_(file\_format)#Simple\_Operators)                           
+         -   [<span class="tocnumber">1.2.2</span> <span class="toctext">Conditional Operators</span>](SCRIPT\_(file\_format)#Conditional\_Operators)                 
+         -   [<span class="tocnumber">1.2.3</span> <span class="toctext">Bit Operators</span>](SCRIPT\_(file\_format)#Bit\_Operators)                                 
+         -   [<span class="tocnumber">1.2.4</span> <span class="toctext">Special Assignment Operators</span>](SCRIPT\_(file\_format)#Special\_Assignment\_Operators)  
+     -   [<span class="tocnumber">1.3</span> <span class="toctext">Conditional Structures</span>](SCRIPT\_(file\_format)#Conditional\_Structures)                     
+     -   [<span class="tocnumber">1.4</span> <span class="toctext">Loop Structures</span>](SCRIPT\_(file\_format)#Loop\_Structures)                                   
+     -   [<span class="tocnumber">1.5</span> <span class="toctext">Code grouping</span>](SCRIPT\_(file\_format)#Code\_grouping)                                       
+     -   [<span class="tocnumber">1.6</span> <span class="toctext">Special</span>](SCRIPT\_(file\_format)#Special)                                                    
+ -   [<span class="tocnumber">2</span> <span class="toctext">Editing tools</span>](SCRIPT\_(file\_format)#Editing\_tools)                                             |
 
 Syntax
 ------
 
-The following should be a quick reference for scripting constructs. If you are new, read [Scripting\_basics.html Scripting basics] for more text and examples.
+The following should be a quick reference for scripting constructs. If you are new, read [Scripting basics](Scripting\_basics) for more text and examples.
 
 ### General Syntax
 
@@ -62,7 +62,7 @@ Precedes all direct entity references. Informs the engine that the following is 
 <!-- -->
 
 .   
-Precedes a [Script\_events.html script event] or [Script\_object.html script object] function. Informs the engine that the following function-like call is a script event or object function.
+Precedes a [script event](Script\_events) or [script object](Script\_object) function. Informs the engine that the following function-like call is a script event or object function.
 
 ### Operators
 
@@ -175,7 +175,7 @@ When the structure is entered, the [start code] will be executed. Then the condi
 
 \<return type\> \<function name\> ( [variable list] ) {
 }   
-Function structure. Used to group commands which need to be called more than once. The variable list is separated with commas can be empty. A return type is required, use [Data\_types.html\#void void] if nothing is returned.
+Function structure. Used to group commands which need to be called more than once. The variable list is separated with commas can be empty. A return type is required, use [void](Data\_types#void) if nothing is returned.
 
 <!-- -->
 
@@ -183,13 +183,13 @@ object \<object name\> [
 \<base object\>] {
 
 }   
-Object structure. Used to describe the behavior of an entity. It can inherit from other object definitions. See [Script\_object.html script object] for more information.
+Object structure. Used to describe the behavior of an entity. It can inherit from other object definitions. See [script object](Script\_object) for more information.
 
 <!-- -->
 
 namespace \<name\> {
 }   
-Namespace group. All variable and function names are then isolated from the global namespace. Used to avoid conflicts when [SCRIPT\_(file\_format).html\#Include including] more then 1 script.
+Namespace group. All variable and function names are then isolated from the global namespace. Used to avoid conflicts when [including](SCRIPT\_(file\_format)#Include) more then 1 script.
 
 ### Special
 
@@ -218,5 +218,5 @@ Will define all global variables and functions used in the specified script file
 Editing tools
 -------------
 
-Since scripts are plain-text files, a simple [Text\_editor.html text editor] can be used to edit or create scripts.
+Since scripts are plain-text files, a simple [text editor](Text\_editor) can be used to edit or create scripts.
 

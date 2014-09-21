@@ -2,7 +2,7 @@ Server query protocol
 =====================
 
 > _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
-All [Id\_Tech\_4.html id Tech 4] engines have a means of querying servers to gather info about a particular server. Mostly the protocol is slightly different for different games.
+All [id Tech 4](Id\_Tech\_4) engines have a means of querying servers to gather info about a particular server. Mostly the protocol is slightly different for different games.
 
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <div id="toctitle">                                                                                                                                              
@@ -10,21 +10,21 @@ All [Id\_Tech\_4.html id Tech 4] engines have a means of querying servers to gat
  --------                                                                                                                                                          
                                                                                                                                                                    
  </div>                                                                                                                                                            
- -   [Server\_query\_protocol.html\#Doom\_3\_version <span class="tocnumber">1</span> <span class="toctext">Doom 3 version</span>]                                 
-     -   [Server\_query\_protocol.html\#Querying\_the\_master\_server <span class="tocnumber">1.1</span> <span class="toctext">Querying the master server</span>]  
-         -   [Server\_query\_protocol.html\#Request <span class="tocnumber">1.1.1</span> <span class="toctext">Request</span>]                                     
-         -   [Server\_query\_protocol.html\#Response <span class="tocnumber">1.1.2</span> <span class="toctext">Response</span>]                                   
-     -   [Server\_query\_protocol.html\#Querying\_a\_server <span class="tocnumber">1.2</span> <span class="toctext">Querying a server</span>]                     
- -   [Server\_query\_protocol.html\#ET:QW\_version <span class="tocnumber">2</span> <span class="toctext">ET:QW version</span>]                                    
-     -   [Server\_query\_protocol.html\#Server\_Feed <span class="tocnumber">2.1</span> <span class="toctext">Server Feed</span>]                                  
-     -   [Server\_query\_protocol.html\#Data\_Block <span class="tocnumber">2.2</span> <span class="toctext">Data Block</span>]                                    
-     -   [Server\_query\_protocol.html\#Source <span class="tocnumber">2.3</span> <span class="toctext">Source</span>]                                             |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Doom 3 version</span>](Server\_query\_protocol#Doom\_3\_version)                                 
+     -   [<span class="tocnumber">1.1</span> <span class="toctext">Querying the master server</span>](Server\_query\_protocol#Querying\_the\_master\_server)  
+         -   [<span class="tocnumber">1.1.1</span> <span class="toctext">Request</span>](Server\_query\_protocol#Request)                                     
+         -   [<span class="tocnumber">1.1.2</span> <span class="toctext">Response</span>](Server\_query\_protocol#Response)                                   
+     -   [<span class="tocnumber">1.2</span> <span class="toctext">Querying a server</span>](Server\_query\_protocol#Querying\_a\_server)                     
+ -   [<span class="tocnumber">2</span> <span class="toctext">ET:QW version</span>](Server\_query\_protocol#ET:QW\_version)                                    
+     -   [<span class="tocnumber">2.1</span> <span class="toctext">Server Feed</span>](Server\_query\_protocol#Server\_Feed)                                  
+     -   [<span class="tocnumber">2.2</span> <span class="toctext">Data Block</span>](Server\_query\_protocol#Data\_Block)                                    
+     -   [<span class="tocnumber">2.3</span> <span class="toctext">Source</span>](Server\_query\_protocol#Source)                                             |
 
 <span align="absbottom">![Image:D3square\_25.png](images_2_23_D3square_25.png "fig:Image:D3square_25.png") Doom 3 version</span>
 --------------------------------------------------------------------------------------------------------------------------------
 
   
-*The information in this section is specific to [Doom\_3.html Doom 3].*
+*The information in this section is specific to [Doom 3](Doom\_3).*
 
 ### Querying the master server
 

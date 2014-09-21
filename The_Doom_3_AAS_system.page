@@ -39,7 +39,7 @@ The original intent of me writing all this down was to learn about the AAS syste
 Credits
 -------
 
-This entire thing is the result of me trying to understand the Area Awareness System system designed by J.M.P. van Waveren. His [Mr\_elusive's\_thesis.html thesis paper] was invaluable in this process. Basically, all I did below is combine chapter 6 of the thesis with the doom 3 code. Credit goes out to him and all of id software for the kick ass games and sdk’s. Thanks JP for all the help and advice with the AAS stuff.
+This entire thing is the result of me trying to understand the Area Awareness System system designed by J.M.P. van Waveren. His [thesis paper](Mr\_elusive's\_thesis) was invaluable in this process. Basically, all I did below is combine chapter 6 of the thesis with the doom 3 code. Credit goes out to him and all of id software for the kick ass games and sdk’s. Thanks JP for all the help and advice with the AAS stuff.
 
 Overview
 --------
@@ -384,7 +384,7 @@ Now for the actual routine. '' “One starts at the root node of the BSP tree an
 `           `<font color="#0000ff">`break`</font>`;`
 `       `<font color="#000000">`}`</font>
 
-To understand the check above it helps to understand how the bsp tree we are navigating was built. It is quite a bit of reading, and I don’t have code to annotate for it, so I will again refer you to chapter 6 in [Mr\_elusive's\_thesis.html Mr\_elusive's\_thesis]. The routine checks if the nodeNum is negative. It does this because nodes that have negative indexes are leaf nodes. So, when we find a negative nodeNum, we know we have found a leaf node that our bounds is in. We append the area index to the list passed in to be populated and break out of the loop.
+To understand the check above it helps to understand how the bsp tree we are navigating was built. It is quite a bit of reading, and I don’t have code to annotate for it, so I will again refer you to chapter 6 in [Mr\_elusive's\_thesis](Mr\_elusive's\_thesis). The routine checks if the nodeNum is negative. It does this because nodes that have negative indexes are leaf nodes. So, when we find a negative nodeNum, we know we have found a leaf node that our bounds is in. We append the area index to the list passed in to be populated and break out of the loop.
 
 If the nodeNum isn’t negative, we have to keep searching…
 
@@ -429,7 +429,7 @@ TFL\_WALK TFL\_BARRIERJUMP TFL\_WALKOFFLEDGE TFL\_SWIM TFL\_WATERJUMP TFL\_FLY
 
 although the swim and fly reachabilities are only calculated if in the AAS settings "allowSwimReachabilities" and "allowFlyReachabilities" are set respectively. There tend to be a lot of fly reachabilities so we don't waste memory to store them if there are no flying creatures in a level.
 
-Since the Doom3 AAS format is very open and the environment sampling functionality is exposed through idAASFile as well it shouldn't be too hard for third parties to write a tool that adds more reachabilities to an AAS file.‿ The task of extending the AAS as described is underway; you can read about it over [Extending\_the\_Area\_Awareness\_System.html here].
+Since the Doom3 AAS format is very open and the environment sampling functionality is exposed through idAASFile as well it shouldn't be too hard for third parties to write a tool that adds more reachabilities to an AAS file.‿ The task of extending the AAS as described is underway; you can read about it over [here](Extending\_the\_Area\_Awareness\_System).
 
 idReachability is the class used to represent reachabilities in code. Its definition can be found in AASFile.h.
 

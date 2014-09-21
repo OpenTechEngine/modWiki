@@ -1,7 +1,7 @@
 CSG
 ===
 
-CSG or Constructive Solid Geometry is a set operations common to many modelling software packages based on primitives (a cube, sphere, cone, etc.) to create more complex structures. Where it pertains to editing [Id\_Tech\_4.html id Tech 4] maps, CSG applies only to [Brush.html brushes] with just two possible operations: boolean union and difference. The former combines two brushes into one and the later subtracts pieces off a brush.
+CSG or Constructive Solid Geometry is a set operations common to many modelling software packages based on primitives (a cube, sphere, cone, etc.) to create more complex structures. Where it pertains to editing [id Tech 4](Id\_Tech\_4) maps, CSG applies only to [brushes](Brush) with just two possible operations: boolean union and difference. The former combines two brushes into one and the later subtracts pieces off a brush.
 
 |------------------------------------------------------------------------------------------------------------------------|
 | <div id="toctitle">                                                                                                    
@@ -9,17 +9,17 @@ CSG or Constructive Solid Geometry is a set operations common to many modelling 
  --------                                                                                                                
                                                                                                                          
  </div>                                                                                                                  
- -   [CSG.html\#Tools\_of\_the\_trade <span class="tocnumber">1</span> <span class="toctext">Tools of the trade</span>]  
-     -   [CSG.html\#Subtract <span class="tocnumber">1.1</span> <span class="toctext">Subtract</span>]                   
-     -   [CSG.html\#Merge <span class="tocnumber">1.2</span> <span class="toctext">Merge</span>]                         
-     -   [CSG.html\#Hollow <span class="tocnumber">1.3</span> <span class="toctext">Hollow</span>]                       
-     -   [CSG.html\#Clipper <span class="tocnumber">1.4</span> <span class="toctext">Clipper</span>]                     
- -   [CSG.html\#A\_word\_of\_caution <span class="tocnumber">2</span> <span class="toctext">A word of caution</span>]    |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Tools of the trade</span>](CSG#Tools\_of\_the\_trade)  
+     -   [<span class="tocnumber">1.1</span> <span class="toctext">Subtract</span>](CSG#Subtract)                   
+     -   [<span class="tocnumber">1.2</span> <span class="toctext">Merge</span>](CSG#Merge)                         
+     -   [<span class="tocnumber">1.3</span> <span class="toctext">Hollow</span>](CSG#Hollow)                       
+     -   [<span class="tocnumber">1.4</span> <span class="toctext">Clipper</span>](CSG#Clipper)                     
+ -   [<span class="tocnumber">2</span> <span class="toctext">A word of caution</span>](CSG#A\_word\_of\_caution)    |
 
 Tools of the trade
 ------------------
 
-The two operations can be achieved through the Selection menu of the [Map\_editor.html map editor] or the fourth set of buttons in the toolbar. These are:
+The two operations can be achieved through the Selection menu of the [map editor](Map\_editor) or the fourth set of buttons in the toolbar. These are:
 
 ### Subtract
 
@@ -32,7 +32,7 @@ This operation is the equivalent of CSG boolean difference and it will use a bru
 
 Please note that you haven't actually created a brush with a hole or with a piece shaven off. Brushes have to always be convex solids so unlike in other modelling software applications Subtract in the map editor simply creates the desired solid using as few smaller brushes possible.
 
-An important fact to bear in mind when subtracting is that your carving brush will subtract through every brush it comes in contact with (unless brushes you don't want to affect have the [Qer\_nocarve\_(Material\_global\_keyword).html qer\_nocarve] global keyword).
+An important fact to bear in mind when subtracting is that your carving brush will subtract through every brush it comes in contact with (unless brushes you don't want to affect have the [qer\_nocarve](Qer\_nocarve\_(Material\_global\_keyword)) global keyword).
 
 ### Merge
 
@@ -66,7 +66,7 @@ Although not strictly part of the map editor's CSG operations the clipper tool a
 7.  Optionally you may want to split the brush instead of shaving a piece off it. If so then click on the Selection \> Clipper \> Split Selection. This will keep both the yellow and remaining red parts of the brush as separate structures.
 8.  If you're not splitting the brush and you're satisfied with the position and orientation of the clip plane then click on Selection \> Clipper \> Clip Selection.
 
-When you're confortable using the clipper you'll find using the following [DoomEdit\_hotkeys.html keyboard shortcuts] a big help:
+When you're confortable using the clipper you'll find using the following [keyboard shortcuts](DoomEdit\_hotkeys) a big help:
 
 -   Ctrl + right click to set the clip plane's vertices.
 -   Ctrl + ENTER to flip the plane's orientation.

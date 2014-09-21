@@ -25,7 +25,7 @@ All the parameters are optional.
 Notes
 -----
 
-This command will generate a .[TGA\_(file\_format).html TGA]. The [Samples] value will provide artificial [Antialiasing.html Antialiasing] by blending all the shots together. If you'd like to simulate soft shadows in a Doom 3 screenshot you can set the following in your [CFG\_(file\_format).html autoexec.cfg]:
+This command will generate a .[TGA](TGA\_(file\_format)). The [Antialiasing](Samples] value will provide artificial [Antialiasing) by blending all the shots together. If you'd like to simulate soft shadows in a Doom 3 screenshot you can set the following in your [autoexec.cfg](CFG\_(file\_format)):
 
 `bind F11 "[R_useOptimizedShadows_(cvar).html r_useOptimizedShadows] 0;[R_lightSourceRadius_(cvar).html r_lightSourceRadius] 5;screenshot 1024 768 64"`
 

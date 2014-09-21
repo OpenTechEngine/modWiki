@@ -1,9 +1,9 @@
 Spawn class
 ===========
 
-The spawn class is the C++ class in the [Coding.html\#game\_code game code] that defines an entities logic.
+The spawn class is the C++ class in the [game code](Coding#game\_code) that defines an entities logic.
 
-Spawn classes use single inheritance with [IdEntity\_(class).html idEntity] being the lowest level that can be spawned.
+Spawn classes use single inheritance with [idEntity](IdEntity\_(class)) being the lowest level that can be spawned.
 
-The spawn class is defined by the "**spawnclass**" key in an entities [SpawnArgs.html spawnArgs].
+The spawn class is defined by the "**spawnclass**" key in an entities [spawnArgs](SpawnArgs).
 

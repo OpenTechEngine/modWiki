@@ -7,10 +7,10 @@ DDS (file format)
  --------                                                                                                                                                                
                                                                                                                                                                          
  </div>                                                                                                                                                                  
- -   [DDS\_(file\_format).html\#Description <span class="tocnumber">1</span> <span class="toctext">Description</span>]                                                   
- -   [DDS\_(file\_format).html\#General\_File\_Format\_Specifications <span class="tocnumber">2</span> <span class="toctext">General File Format Specifications</span>]  
- -   [DDS\_(file\_format).html\#Engine\_specific\_issues <span class="tocnumber">3</span> <span class="toctext">Engine specific issues</span>]                           
- -   [DDS\_(file\_format).html\#Notes <span class="tocnumber">4</span> <span class="toctext">Notes</span>]                                                               |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Description</span>](DDS\_(file\_format)#Description)                                                   
+ -   [<span class="tocnumber">2</span> <span class="toctext">General File Format Specifications</span>](DDS\_(file\_format)#General\_File\_Format\_Specifications)  
+ -   [<span class="tocnumber">3</span> <span class="toctext">Engine specific issues</span>](DDS\_(file\_format)#Engine\_specific\_issues)                           
+ -   [<span class="tocnumber">4</span> <span class="toctext">Notes</span>](DDS\_(file\_format)#Notes)                                                               |
 
 Description
 -----------
@@ -33,7 +33,7 @@ Engine specific issues
 
 Doom 3 makes use of .DDS files when running at a quality setting lower than "Ultra" in order to save texture memory (except for normal maps which only use the .DDS versions at "Medium" or below).
 
-You can force everything to load from the TGA files by setting [Image\_usePrecompressedTextures\_(cvar).html image\_usePrecompressedTextures] to 0. The images will still get compressed dynamically at load time (which will slow down loading significantly), but it will make it so that when you change a TGA it will actually show up in game without having to regenerate the DDS files. You can also set [Image\_useCompression\_(cvar).html image\_useCompression] and [Image\_useNormalCompression\_(cvar).html image\_useNormalCompression] to 0, which will prevent them from getting compressed at load time (this is similar to running in ultra quality mode).
+You can force everything to load from the TGA files by setting [image\_usePrecompressedTextures](Image\_usePrecompressedTextures\_(cvar)) to 0. The images will still get compressed dynamically at load time (which will slow down loading significantly), but it will make it so that when you change a TGA it will actually show up in game without having to regenerate the DDS files. You can also set [image\_useCompression](Image\_useCompression\_(cvar)) and [image\_useNormalCompression](Image\_useNormalCompression\_(cvar)) to 0, which will prevent them from getting compressed at load time (this is similar to running in ultra quality mode).
 
 ***Notice:*** This means that if you make changes to a texture and you are running a quality level lower than "Ultra", you will not see the changes because Doom 3 ís reading from the .DDS file.
 
@@ -50,7 +50,7 @@ To convert an image to DDS, you can use the same tool id used: The [Compressonat
 -   To create DDS files in Photoshop you must download the [Nvidia DDS plugin](http://web.archive.org/web/20120922021513/http://developer.nvidia.com/object/nv_texture_tools.html).
 -   To create and edit DDS files in The Gimp, you must download a [DDS plugin](http://web.archive.org/web/20120922021513/http://nifelheim.dyndns.org/~cocidius/dds/).
 
-See the [Texturing.html Texturing] page for which DXTn method to use depending on the [Images.html image].
+See the [Texturing](Texturing) page for which DXTn method to use depending on the [image](Images).
 
 A DDS file, and its MIP maps, may be edited. See [Editing\_MIP\_Maps.html Editing MIP Maps]
 

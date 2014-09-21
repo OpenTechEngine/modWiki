@@ -1,7 +1,7 @@
 LiveUpdate (GUI item property)
 ==============================
 
-If set, the cvar is changed as the text is changed, and the text changes as the cvar changes. Otherwise only changes when "cvar read" or "cvar write" is sent This property is restricted to the [EditDef\_(GUI\_item\_type).html editDef], [ChoiceDef\_(GUI\_item\_type).html choiceDef] and [SliderDef\_(GUI\_item\_type).html sliderDef] item types.
+If set, the cvar is changed as the text is changed, and the text changes as the cvar changes. Otherwise only changes when "cvar read" or "cvar write" is sent This property is restricted to the [editDef](EditDef\_(GUI\_item\_type)), [choiceDef](ChoiceDef\_(GUI\_item\_type)) and [sliderDef](SliderDef\_(GUI\_item\_type)) item types.
 
 Syntax
 ------

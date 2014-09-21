@@ -7,41 +7,41 @@ MD5 (file format)
  --------                                                                                                                           
                                                                                                                                     
  </div>                                                                                                                             
- -   [MD5\_(file\_format).html\#Overview <span class="tocnumber">1</span> <span class="toctext">Overview</span>]                    
- -   [MD5\_(file\_format).html\#Export <span class="tocnumber">2</span> <span class="toctext">Export</span>]                        
- -   [MD5\_(file\_format).html\#Tools <span class="tocnumber">3</span> <span class="toctext">Tools</span>]                          
-     -   [MD5\_(file\_format).html\#Maya <span class="tocnumber">3.1</span> <span class="toctext">Maya</span>]                      
-     -   [MD5\_(file\_format).html\#3d\_Studio\_Max <span class="tocnumber">3.2</span> <span class="toctext">3d Studio Max</span>]  
-     -   [MD5\_(file\_format).html\#Blender <span class="tocnumber">3.3</span> <span class="toctext">Blender</span>]                
-     -   [MD5\_(file\_format).html\#Lightwave <span class="tocnumber">3.4</span> <span class="toctext">Lightwave</span>]            
-     -   [MD5\_(file\_format).html\#Softimage <span class="tocnumber">3.5</span> <span class="toctext">Softimage</span>]            
-     -   [MD5\_(file\_format).html\#DirectX <span class="tocnumber">3.6</span> <span class="toctext">DirectX</span>]                
-     -   [MD5\_(file\_format).html\#Modelviewer <span class="tocnumber">3.7</span> <span class="toctext">Modelviewer</span>]        |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Overview</span>](MD5\_(file\_format)#Overview)                    
+ -   [<span class="tocnumber">2</span> <span class="toctext">Export</span>](MD5\_(file\_format)#Export)                        
+ -   [<span class="tocnumber">3</span> <span class="toctext">Tools</span>](MD5\_(file\_format)#Tools)                          
+     -   [<span class="tocnumber">3.1</span> <span class="toctext">Maya</span>](MD5\_(file\_format)#Maya)                      
+     -   [<span class="tocnumber">3.2</span> <span class="toctext">3d Studio Max</span>](MD5\_(file\_format)#3d\_Studio\_Max)  
+     -   [<span class="tocnumber">3.3</span> <span class="toctext">Blender</span>](MD5\_(file\_format)#Blender)                
+     -   [<span class="tocnumber">3.4</span> <span class="toctext">Lightwave</span>](MD5\_(file\_format)#Lightwave)            
+     -   [<span class="tocnumber">3.5</span> <span class="toctext">Softimage</span>](MD5\_(file\_format)#Softimage)            
+     -   [<span class="tocnumber">3.6</span> <span class="toctext">DirectX</span>](MD5\_(file\_format)#DirectX)                
+     -   [<span class="tocnumber">3.7</span> <span class="toctext">Modelviewer</span>](MD5\_(file\_format)#Modelviewer)        |
 
 Overview
 --------
 
 MD5 is a proprietary but open format specific to Doom 3 and allows models to be animated by the use of an internal skeleton. Generally two files are needed to make a functional MD5 model; md5mesh and md5anim. The 3rd, md5camera, allows the creation and use of complex camera paths used during cut scenes. See the different pages for syntax explanation
 
-.[MD5MESH\_(file\_format).html MD5MESH]   
+.[MD5MESH](MD5MESH\_(file\_format))   
 Low resolution polygonal mesh exported from a 3D application.
 
-.[MD5ANIM\_(file\_format).html MD5ANIM]   
+.[MD5ANIM](MD5ANIM\_(file\_format))   
 Contains animation sequence data, the positions of bones etc. during animation.
 
-.[MD5CAMERA\_(file\_format).html MD5CAMERA]   
+.[MD5CAMERA](MD5CAMERA\_(file\_format))   
 Animated cameras for use in cut scenes.
 
 Export
 ------
 
-Maya 4.5 was the 3D package primarily used for the creation of animated characters during the development of Doom 3, Quake 4, and possibly Prey. Models were saved in .mb (Maya Binary) format and converted through the use of an [Export\_(decl).html export declaration], the console command [Exportmodels\_(console\_command).html exportModels], and a DLL by the name of MayaImportx86.
+Maya 4.5 was the 3D package primarily used for the creation of animated characters during the development of Doom 3, Quake 4, and possibly Prey. Models were saved in .mb (Maya Binary) format and converted through the use of an [export declaration](Export\_(decl)), the console command [exportModels](Exportmodels\_(console\_command)), and a DLL by the name of MayaImportx86.
 
 It goes without saying that you stand the best chance for success if you follow the same workflow. However, there are third party tools and alternative versions of MayaImportx86.dll listed below you can use should you be working with a package other than Maya version 4.5.
 
 It's also important to note that the alternate versions of MayaImportx86.dll were intended for use with Doom 3 and there have been reports that they do not function correctly with other Doom 3 engine based games. In other words, if you only have Quake 4 or Prey at your disposal, you may encounter some compatibility issues that have yet to be resolved. You may be forced to borrow a copy of Doom 3 for export purposes.
 
-For a detailed overview of the conversion from [Maya\_to\_MD5.html Maya to MD5] please read the corresponding article.
+For a detailed overview of the conversion from [Maya to MD5](Maya\_to\_MD5) please read the corresponding article.
 
 Tools
 -----

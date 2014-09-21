@@ -4,7 +4,7 @@ CopySpawnArgs (script event)
 Game class
 ----------
 
-This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
 
 Description
 -----------
@@ -37,6 +37,6 @@ Notes
 
 This script event does not return any values.
 
-After using copySpawnArgs, you may need to use [SetSpawnArg\_(script\_event).html setSpawnArg] to set explicitly those spawn args which need to be changed.
+After using copySpawnArgs, you may need to use [setSpawnArg](SetSpawnArg\_(script\_event)) to set explicitly those spawn args which need to be changed.
 
 

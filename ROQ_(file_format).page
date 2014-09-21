@@ -1,7 +1,7 @@
 ROQ (file format)
 =================
 
-RoQ is a video file format that originated in [The 11th Hour](http://web.archive.org/web/20120126050718/http://en.wikipedia.org/wiki/The_11th_Hour_(computer_game)) game. After Graeme Devine, the creator of the format joined id Software, the RoQ file format has been in use in every game the company has released such as Quake III, Return to Castle Wolfenstein and DOOM 3. As it applies to [Id\_Tech\_4.html id Tech 4], these files are used for video sequences and animated materials and are stored in /base/video.
+RoQ is a video file format that originated in [The 11th Hour](http://web.archive.org/web/20120126050718/http://en.wikipedia.org/wiki/The_11th_Hour_(computer_game)) game. After Graeme Devine, the creator of the format joined id Software, the RoQ file format has been in use in every game the company has released such as Quake III, Return to Castle Wolfenstein and DOOM 3. As it applies to [id Tech 4](Id\_Tech\_4), these files are used for video sequences and animated materials and are stored in /base/video.
 
 Technical details
 -----------------
@@ -24,7 +24,7 @@ Content creation
 
 You can create your own RoQ files using one of the following:
 
--   The [Roq\_(console\_command).html RoQ] console command.
+-   The [RoQ](Roq\_(console\_command)) console command.
 -   [Quake Video Maker](http://web.archive.org/web/20120126050718/http://www.swift-tools.net/Quake/QVM/).
 -   [Switchblade](http://web.archive.org/web/20120126050718/http://icculus.org/~riot/) (also includes a patch for FFMPEG).
 

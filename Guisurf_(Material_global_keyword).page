@@ -4,7 +4,7 @@ Guisurf (Material global keyword)
 Description
 -----------
 
-Attaches a [GUIs.html GUI] to this material.
+Attaches a [GUI](GUIs) to this material.
 
 Usage
 -----
@@ -17,7 +17,7 @@ Parameters
 ----------
 
 gui file  
-The path to the [GUI\_(file\_format).html GUI file] to attach to the surface.
+The path to the [GUI file](GUI\_(file\_format)) to attach to the surface.
 
 entity  
 Lets the mapper set the GUI file to be used on this material by selecting a GUI file for the entity which contains a surface with this material. (Check the "gui" key set on the entity.)

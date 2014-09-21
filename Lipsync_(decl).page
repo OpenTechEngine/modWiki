@@ -23,7 +23,7 @@ The declaration is then opened with an opening bracket and closed with a closing
 Inside the declaration is a series of fields and values. All values are strings enclosed in quotation marks.
 
 -   [description] - The spoken text.
--   [text] - This field is in the form of a string reference. The value resolves to the translation of the spoken text as gathered from the coorisponding [LANG\_(file\_format).html language file].
+-   [text] - This field is in the form of a string reference. The value resolves to the translation of the spoken text as gathered from the coorisponding [language file](LANG\_(file\_format)).
 -   [visemes] - Two values are assigned to this field...
     -   [lang] - The language for which the viseme data applies.
     -   [data] - The actual viseme data.

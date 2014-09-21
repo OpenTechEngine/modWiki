@@ -15,7 +15,7 @@ A Doom 3 in-game GUI with its items highlighted
 </div>
 </div>
 </div>
-Code wise, [GUIs.html GUIs] are made of several different *items*, each of them performing a slightly different task, such as acting as a button, as a noninteractive image, or as on-screen text. There also several different *item types* to do specific tasks, such as selecting an option from a range of choices, rendering a 3D model on a GUI, or editing text.
+Code wise, [GUIs](GUIs) are made of several different *items*, each of them performing a slightly different task, such as acting as a button, as a noninteractive image, or as on-screen text. There also several different *item types* to do specific tasks, such as selecting an option from a range of choices, rendering a 3D model on a GUI, or editing text.
 
 Items are also officially called *windows* by [id Software's documentation](http://web.archive.org/web/20120323012700/http://www.iddevnet.com/doom3/guis.php).
 
@@ -46,7 +46,7 @@ For example:
 `   text        "Welcome!"`
 `}`
 
-While [WindowDef\_(GUI\_item\_type).html windowDef] is the standard item type used, other types exist for some custom tasks.
+While [windowDef](WindowDef\_(GUI\_item\_type)) is the standard item type used, other types exist for some custom tasks.
 
 Doom 3 item types
 -----------------

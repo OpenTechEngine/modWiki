@@ -4,7 +4,7 @@ R alphaToCoverage (cvar)
 Description
 -----------
 
-Allow [Antialiasing.html multisample antialiasing] to function on [AlphaTest\_(Material\_stage\_keyword).html alphatested] surfaces without modifying the depth sort.
+Allow [multisample antialiasing](Antialiasing) to function on [alphatested](AlphaTest\_(Material\_stage\_keyword)) surfaces without modifying the depth sort.
 
 Usage
 -----
@@ -18,7 +18,7 @@ Parameters
 
 -   [boolean]
     -   0 - Don't use Alpha-to-Coverage.
-    -   1 - Enable Alpha-to-Coverage when [R\_multiSamples\_(cvar).html r\_multisamples] is used.
+    -   1 - Enable Alpha-to-Coverage when [r\_multisamples](R\_multiSamples\_(cvar)) is used.
 
 Flags
 -----

@@ -4,7 +4,7 @@ GetEntity (script event)
 Game class
 ----------
 
-This event operates on an instance of the [Game\_class.html game class] type [Thread\_(scripting).html idThread], accessible via [Scripting\_basics.html\#sys sys] identifier.
+This event operates on an instance of the [game class](Game\_class) type [idThread](Thread\_(scripting)), accessible via [sys](Scripting\_basics#sys) identifier.
 
 Description
 -----------
@@ -14,7 +14,7 @@ Returns a reference to the entity with the specified name.
 Usage
 -----
 
-*[Data\_types.html\#entity entity]* getEntity( *[Data\_types.html\#string string]* **name** )
+*[entity](Data\_types#entity)* getEntity( *[string](Data\_types#string)* **name** )
 
 Parameters
 ----------
@@ -30,6 +30,6 @@ Examples
 Notes
 -----
 
-This script event returns the entity that matches the given name or [$null\_entity\_(scripting).html null] if not found.
+This script event returns the entity that matches the given name or [null]($null\_entity\_(scripting)) if not found.
 
 

@@ -4,7 +4,7 @@ AviDemo (console command)
 Description
 -----------
 
-This command will play a .[DEMO\_(file\_format).html DEMO] and output the frames as a .[TGA\_(file\_format).html TGA] images.
+This command will play a .[DEMO](DEMO\_(file\_format)) and output the frames as a .[TGA](TGA\_(file\_format)) images.
 
 Usage
 -----
@@ -21,12 +21,12 @@ Parameters
 Notes
 -----
 
-This command will generate a lot of .[TGA\_(file\_format).html TGA] files, be sure to free up disk space before running it. Related CVars:
+This command will generate a lot of .[TGA](TGA\_(file\_format)) files, be sure to free up disk space before running it. Related CVars:
 
--   [Com\_aviDemoHeight\_(cvar).html com\_aviDemoHeight] - You can select the height of each frame.
--   [Com\_aviDemoSamples\_(cvar).html com\_aviDemoSamples] - You can select the [Antialiasing.html antialiasing] factor of each frame.
--   [Com\_aviDemoTics\_(cvar).html com\_aviDemoTics] - You can select how many frames per second should be generated.
--   [Com\_aviDemoWidth\_(cvar).html com\_aviDemoWidth] - You can select the width of each frame.
+-   [com\_aviDemoHeight](Com\_aviDemoHeight\_(cvar)) - You can select the height of each frame.
+-   [com\_aviDemoSamples](Com\_aviDemoSamples\_(cvar)) - You can select the [antialiasing](Antialiasing) factor of each frame.
+-   [com\_aviDemoTics](Com\_aviDemoTics\_(cvar)) - You can select how many frames per second should be generated.
+-   [com\_aviDemoWidth](Com\_aviDemoWidth\_(cvar)) - You can select the width of each frame.
 
 Tutorial on creating Avi demos: [Recording Avi Demos](http://web.archive.org/web/20120126050326/http://doom.freakygaming.com/tutorials/record_avi_videos_in_doom_3.html)
 

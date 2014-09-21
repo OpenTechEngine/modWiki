@@ -1,53 +1,53 @@
 Quality settings
 ================
 
-These are the [Console.html CVars] and other game features that change depending on which quality level you select in the system options menu.
+These are the [CVars](Console) and other game features that change depending on which quality level you select in the system options menu.
 
 <span align="absbottom">![Image:D3square\_25.png](images_2_23_D3square_25.png "fig:Image:D3square_25.png") Doom 3</span>
 ------------------------------------------------------------------------------------------------------------------------
 
   
-*The information in this section is specific to [Doom\_3.html Doom 3].*
+*The information in this section is specific to [Doom 3](Doom\_3).*
 
 | Doom 3                                                                         | Low  | Medium | High  | Ultra |
 |--------------------------------------------------------------------------------|------|--------|-------|-------|
-| [Com\_machineSpec\_(cvar).html com\_machineSpec]                               | 0    | 1      | 2     | 3     |
-| [Image\_anisotropy\_(cvar).html image\_anisotropy]                             | 0    | 1      | 8     | 8     |
-| [Image\_downSize\_(cvar).html image\_downSize]                                 | 1    | 0      | 0     | 0     |
-| [Image\_downSizeBump\_(cvar).html image\_downSizeBump]                         | 1    | 0      | 0     | 0     |
-| [Image\_downSizeSpecular\_(cvar).html image\_downSizeSpecular]                 | 1    | 0      | 0     | 0     |
-| [Image\_ignoreHighQuality\_(cvar).html image\_ignoreHighQuality]               | 1    | 1      | 0     | 0     |
-| [Image\_useCompression\_(cvar).html image\_useCompression]                     | 1    | 1      | 1     | 0     |
-| [Image\_useNormalCompression\_(cvar).html image\_useNormalCompression] \*      | 2    | 2      | 0     | 0     |
-| [Image\_usePrecompressedTextures\_(cvar).html image\_usePrecompressedTextures] | 1    | 1      | 1     | 0     |
-| [R\_mode\_(cvar).html r\_mode]                                                 | 3    | 3      | 4     | 5     |
-| [S\_maxSoundsPerShader\_(cvar).html s\_maxSoundsPerShader]                     | 1    | 1      | 0     | 0     |
+| [com\_machineSpec](Com\_machineSpec\_(cvar))                               | 0    | 1      | 2     | 3     |
+| [image\_anisotropy](Image\_anisotropy\_(cvar))                             | 0    | 1      | 8     | 8     |
+| [image\_downSize](Image\_downSize\_(cvar))                                 | 1    | 0      | 0     | 0     |
+| [image\_downSizeBump](Image\_downSizeBump\_(cvar))                         | 1    | 0      | 0     | 0     |
+| [image\_downSizeSpecular](Image\_downSizeSpecular\_(cvar))                 | 1    | 0      | 0     | 0     |
+| [image\_ignoreHighQuality](Image\_ignoreHighQuality\_(cvar))               | 1    | 1      | 0     | 0     |
+| [image\_useCompression](Image\_useCompression\_(cvar))                     | 1    | 1      | 1     | 0     |
+| [image\_useNormalCompression](Image\_useNormalCompression\_(cvar)) \*      | 2    | 2      | 0     | 0     |
+| [image\_usePrecompressedTextures](Image\_usePrecompressedTextures\_(cvar)) | 1    | 1      | 1     | 0     |
+| [r\_mode](R\_mode\_(cvar))                                                 | 3    | 3      | 4     | 5     |
+| [s\_maxSoundsPerShader](S\_maxSoundsPerShader\_(cvar))                     | 1    | 1      | 0     | 0     |
 | Texture Budget                                                                 | 64mb | 128mb  | 256mb | 512mb |
 
 <span align="absbottom">![Q4](images_e_e8_Q4square_25.png "fig:Q4") Quake 4</span>
 ----------------------------------------------------------------------------------
 
   
-*The information in this section is specific to [Quake\_4.html Quake 4].*
+*The information in this section is specific to [Quake 4](Quake\_4).*
 
 | Quake 4                                                                        | Low  | Medium | High  | Ultra |
 |--------------------------------------------------------------------------------|------|--------|-------|-------|
-| [Com\_machineSpec\_(cvar).html com\_machineSpec]                               | 0    | 1      | 2     | 3     |
-| [G\_brassTime\_(cvar).html g\_brassTime]                                       | 0    | 0      | 1     | 2     |
-| [Image\_anisotropy\_(cvar).html image\_anisotropy]                             | 1    | 1      | 4     | 8     |
-| [Image\_downSize\_(cvar).html image\_downSize]                                 | 1    | 0      | 0     | 0     |
-| [Image\_downSizeBump\_(cvar).html image\_downSizeBump]                         | 1    | 0      | 0     | 0     |
-| [Image\_downSizeSpecular\_(cvar).html image\_downSizeSpecular]                 | 1    | 0      | 0     | 0     |
-| [Image\_ignoreHighQuality\_(cvar).html image\_ignoreHighQuality]               | 1    | 1      | 0     | 0     |
-| [Image\_useCompression\_(cvar).html image\_useCompression]                     | 1    | 1      | 1     | 0     |
-| [Image\_useNormalCompression\_(cvar).html image\_useNormalCompression] \*      | 2    | 2      | 0     | 0     |
-| [Image\_usePrecompressedTextures\_(cvar).html image\_usePrecompressedTextures] | 1    | 1      | 1     | 0     |
-| [R\_mode\_(cvar).html r\_mode]                                                 | 3    | 3      | 4     | 5     |
-| [R\_skipNewAmbient\_(cvar).html r\_skipNewAmbient]                             | 1    | 1      | 0     | 0     |
-| [S\_maxSoundsPerShader\_(cvar).html s\_maxSoundsPerShader]                     | 1    | 1      | 0     | 0     |
+| [com\_machineSpec](Com\_machineSpec\_(cvar))                               | 0    | 1      | 2     | 3     |
+| [g\_brassTime](G\_brassTime\_(cvar))                                       | 0    | 0      | 1     | 2     |
+| [image\_anisotropy](Image\_anisotropy\_(cvar))                             | 1    | 1      | 4     | 8     |
+| [image\_downSize](Image\_downSize\_(cvar))                                 | 1    | 0      | 0     | 0     |
+| [image\_downSizeBump](Image\_downSizeBump\_(cvar))                         | 1    | 0      | 0     | 0     |
+| [image\_downSizeSpecular](Image\_downSizeSpecular\_(cvar))                 | 1    | 0      | 0     | 0     |
+| [image\_ignoreHighQuality](Image\_ignoreHighQuality\_(cvar))               | 1    | 1      | 0     | 0     |
+| [image\_useCompression](Image\_useCompression\_(cvar))                     | 1    | 1      | 1     | 0     |
+| [image\_useNormalCompression](Image\_useNormalCompression\_(cvar)) \*      | 2    | 2      | 0     | 0     |
+| [image\_usePrecompressedTextures](Image\_usePrecompressedTextures\_(cvar)) | 1    | 1      | 1     | 0     |
+| [r\_mode](R\_mode\_(cvar))                                                 | 3    | 3      | 4     | 5     |
+| [r\_skipNewAmbient](R\_skipNewAmbient\_(cvar))                             | 1    | 1      | 0     | 0     |
+| [s\_maxSoundsPerShader](S\_maxSoundsPerShader\_(cvar))                     | 1    | 1      | 0     | 0     |
 | Texture Budget                                                                 | 64mb | 128mb  | 256mb | 512mb |
 
-\* nVidia GeForce 3 and 4MX cards use palettized normal maps in Medium and Low quality settings so this CVar is set to "1" on these cards. All other supported cards use [DDS\_(file\_format).html DXT5] compression.
+\* nVidia GeForce 3 and 4MX cards use palettized normal maps in Medium and Low quality settings so this CVar is set to "1" on these cards. All other supported cards use [DXT5](DDS\_(file\_format)) compression.
 
-You can use the [ListImages\_(console\_command).html listImages] console command to keep tabs on the texture memory usage of each setting.
+You can use the [listImages](ListImages\_(console\_command)) console command to keep tabs on the texture memory usage of each setting.
 

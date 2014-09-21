@@ -17,14 +17,14 @@ Parameters
 ----------
 
 -   [Option] - Optional compilation filter.
-    -   editorOutput - Converts messages to the [DoomEdit.html DoomEdit] output window.
+    -   editorOutput - Converts messages to the [DoomEdit](DoomEdit) output window.
     -   draw - Not functional.
-    -   [LightCarve.html lightCarve] - Split polygons along light volume edges.
+    -   [lightCarve](LightCarve) - Split polygons along light volume edges.
     -   glView - Not functional.
-    -   noAAS - Doesn't create [AAS\_(file\_format).html AAS] files.
-    -   noCarve - Doesn't cut any surfaces as if they had the [NoFragment\_(Material\_global\_keyword).html noFragment] global keyword.
+    -   noAAS - Doesn't create [AAS](AAS\_(file\_format)) files.
+    -   noCarve - Doesn't cut any surfaces as if they had the [noFragment](NoFragment\_(Material\_global\_keyword)) global keyword.
     -   noClipSides - Doesn't clip overlaping solid brushes.
-    -   noCM - Doesn't create [CM\_(file\_format).html collision map].
+    -   noCM - Doesn't create [collision map](CM\_(file\_format)).
     -   noCurves - Makes curves invisible but their collision model is still generated.
     -   noFlood - Skips the flooding of the level allowing it to have leaks.
     -   noLightCarve - Doesn't split polygons based on light volume edges. Default behaviour.
@@ -43,14 +43,14 @@ Parameters
 
 `dmap shadowopt 3 <mapname>`
 
--   [Filename] - Name of .[MAP\_(file\_format).html MAP] file (without the extension). If your map is in a subfolder of the /[Maps\_(folder).html maps] directory you will need to include the relative path to it, for instance:
+-   [Filename] - Name of .[MAP](MAP\_(file\_format)) file (without the extension). If your map is in a subfolder of the /[maps](Maps\_(folder)) directory you will need to include the relative path to it, for instance:
 
 `dmap <subfolder>/<mapname>`
 
 Notes
 -----
 
-This command will take a .MAP file and generate a .[CM\_(file\_format).html CM], .[PROC\_(file\_format).html PROC] and sometimes one or more .[AAS\_(file\_format).html AAS] files. See also the [Maps\_(folder).html map formats] page and the [Testmap\_(console\_command).html testmap] console command.
+This command will take a .MAP file and generate a .[CM](CM\_(file\_format)), .[PROC](PROC\_(file\_format)) and sometimes one or more .[AAS](AAS\_(file\_format)) files. See also the [map formats](Maps\_(folder)) page and the [testmap](Testmap\_(console\_command)) console command.
 
 ![](/images/images_e_e8_Q4square_25.png) Note: _Quake 4 only:_
  ~  This command does not function under the Linux build of Quake 4.

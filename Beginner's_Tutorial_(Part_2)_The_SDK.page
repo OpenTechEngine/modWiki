@@ -1,7 +1,7 @@
 Beginner's Tutorial (Part 2) The SDK
 ====================================
 
-This page serves as an introduction to the SDK of any [Id\_Tech\_4.html id Tech 4] game, and is intended for absolute beginners. If some parts are unclear, please post in this article's **talk** page.
+This page serves as an introduction to the SDK of any [id Tech 4](Id\_Tech\_4) game, and is intended for absolute beginners. If some parts are unclear, please post in this article's **talk** page.
 
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <div id="toctitle">                                                                                                                                                                              
@@ -9,17 +9,17 @@ This page serves as an introduction to the SDK of any [Id\_Tech\_4.html id Tech 
  --------                                                                                                                                                                                          
                                                                                                                                                                                                    
  </div>                                                                                                                                                                                            
- -   [Beginner's\_Tutorial\_(Part\_2)\_The\_SDK.html\#Introduction <span class="tocnumber">1</span> <span class="toctext">Introduction</span>]                                                     
- -   [Beginner's\_Tutorial\_(Part\_2)\_The\_SDK.html\#General\_design <span class="tocnumber">2</span> <span class="toctext">General design</span>]                                                
- -   [Beginner's\_Tutorial\_(Part\_2)\_The\_SDK.html\#Scripts\_vs.\_SDK <span class="tocnumber">3</span> <span class="toctext">Scripts vs. SDK</span>]                                             
- -   [Beginner's\_Tutorial\_(Part\_2)\_The\_SDK.html\#SDK\_Code <span class="tocnumber">4</span> <span class="toctext">SDK Code</span>]                                                            
- -   [Beginner's\_Tutorial\_(Part\_2)\_The\_SDK.html\#What\_to\_do\_with\_this\_SDK\_Code.3F <span class="tocnumber">5</span> <span class="toctext">What to do with this SDK Code?</span>]         
- -   [Beginner's\_Tutorial\_(Part\_2)\_The\_SDK.html\#Whats\_up\_with\_this\_compiler\_thing.3F <span class="tocnumber">6</span> <span class="toctext">Whats up with this compiler thing?</span>]  |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Introduction</span>](Beginner's\_Tutorial\_(Part\_2)\_The\_SDK#Introduction)                                                     
+ -   [<span class="tocnumber">2</span> <span class="toctext">General design</span>](Beginner's\_Tutorial\_(Part\_2)\_The\_SDK#General\_design)                                                
+ -   [<span class="tocnumber">3</span> <span class="toctext">Scripts vs. SDK</span>](Beginner's\_Tutorial\_(Part\_2)\_The\_SDK#Scripts\_vs.\_SDK)                                             
+ -   [<span class="tocnumber">4</span> <span class="toctext">SDK Code</span>](Beginner's\_Tutorial\_(Part\_2)\_The\_SDK#SDK\_Code)                                                            
+ -   [<span class="tocnumber">5</span> <span class="toctext">What to do with this SDK Code?</span>](Beginner's\_Tutorial\_(Part\_2)\_The\_SDK#What\_to\_do\_with\_this\_SDK\_Code.3F)         
+ -   [<span class="tocnumber">6</span> <span class="toctext">Whats up with this compiler thing?</span>](Beginner's\_Tutorial\_(Part\_2)\_The\_SDK#Whats\_up\_with\_this\_compiler\_thing.3F)  |
 
 Introduction
 ------------
 
-This particular tutorial is NOT meant to tell you how to code with the SDK, it only explains what it is and what you can do with it. This tutorial assumes that you already read the [Beginner's\_Tutorial\_(Part\_1)\_Filetypes.html Beginner's Tutorial (Part 1) Filetypes] to understand the various files used in the Doom 3 environment. The tutorial is not dependent on a particular OS, but for convenience only the name *gamex86.dll* is mentioned which is not available on Linux or Mac OS. Since the tutorial is not focusing on actual implementation, it doesn't matter whether we refer to *gamex86.dll* or *gamex86.so*.
+This particular tutorial is NOT meant to tell you how to code with the SDK, it only explains what it is and what you can do with it. This tutorial assumes that you already read the [Beginner's Tutorial (Part 1) Filetypes](Beginner's\_Tutorial\_(Part\_1)\_Filetypes) to understand the various files used in the Doom 3 environment. The tutorial is not dependent on a particular OS, but for convenience only the name *gamex86.dll* is mentioned which is not available on Linux or Mac OS. Since the tutorial is not focusing on actual implementation, it doesn't matter whether we refer to *gamex86.dll* or *gamex86.so*.
 
 General design
 --------------

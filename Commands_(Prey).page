@@ -2,13 +2,13 @@ Commands (Prey)
 ===============
 
 <div style="padding: 1px; border: 0px solid #000000" align="left">
-<font size="18px"><font color="black">![Image:Preysquare\_bg.png](images_d_d4_Preysquare_bg.png "fig:Image:Preysquare_bg.png") The information on this page is specific to [Prey.html Prey].</font></font>
+<font size="18px"><font color="black">![Image:Preysquare\_bg.png](images_d_d4_Preysquare_bg.png "fig:Image:Preysquare_bg.png") The information on this page is specific to [Prey](Prey).</font></font>
 
 </div>
 
 ------------------------------------------------------------------------
 
-Existing [Console.html Commands] as of version 0.2.95 (demo)
+Existing [Commands](Console) as of version 0.2.95 (demo)
 
 |---------------------------------------------------------------------------------------------------------------------------------|
 | <div id="toctitle">                                                                                                             
@@ -16,18 +16,18 @@ Existing [Console.html Commands] as of version 0.2.95 (demo)
  --------                                                                                                                         
                                                                                                                                   
  </div>                                                                                                                           
- -   [Commands\_(Prey).html\#Game\_commands <span class="tocnumber">1</span> <span class="toctext">Game commands</span>]          
- -   [Commands\_(Prey).html\#Renderer\_commands <span class="tocnumber">2</span> <span class="toctext">Renderer commands</span>]  
- -   [Commands\_(Prey).html\#Sound\_commands <span class="tocnumber">3</span> <span class="toctext">Sound commands</span>]        
- -   [Commands\_(Prey).html\#System\_commands <span class="tocnumber">4</span> <span class="toctext">System commands</span>]      
- -   [Commands\_(Prey).html\#Tool\_commands <span class="tocnumber">5</span> <span class="toctext">Tool commands</span>]          |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Game commands</span>](Commands\_(Prey)#Game\_commands)          
+ -   [<span class="tocnumber">2</span> <span class="toctext">Renderer commands</span>](Commands\_(Prey)#Renderer\_commands)  
+ -   [<span class="tocnumber">3</span> <span class="toctext">Sound commands</span>](Commands\_(Prey)#Sound\_commands)        
+ -   [<span class="tocnumber">4</span> <span class="toctext">System commands</span>](Commands\_(Prey)#System\_commands)      
+ -   [<span class="tocnumber">5</span> <span class="toctext">Tool commands</span>](Commands\_(Prey)#Tool\_commands)          |
 
 Game commands
 -------------
 
 |------------------------------------------------------------------|---------------------------------------------------------------|
-| [AasStats\_(console\_command).html aasStats]                     | ... This command displays AAS file statistics in the console. |
-| [Addarrow\_(console\_command).html addarrow]                     | ... adds a debug arrow                                        |
+| [aasStats](AasStats\_(console\_command))                     | ... This command displays AAS file statistics in the console. |
+| [addarrow](Addarrow\_(console\_command))                     | ... adds a debug arrow                                        |
 | addChatLine                                                      | ... internal use (core to game chat lines)                    |
 | addline                                                          | ... adds a debug line                                         |
 | ai\_reactioncheck                                                |                                                               |
@@ -44,7 +44,7 @@ Game commands
 | clientVoiceChatTeam                                              | ... team voice chats: clientVoiceChat                         |
 | ClosePortal                                                      |                                                               |
 | collisionModelInfo                                               | ... shows collision model info                                |
-| [Damage\_(console\_command).html damage]                         | ... apply damage to an entity                                 |
+| [damage](Damage\_(console\_command))                         | ... apply damage to an entity                                 |
 | debug                                                            |                                                               |
 | debug\_pointer                                                   |                                                               |
 | deleteSelected                                                   | ... deletes selected entity                                   |
@@ -69,15 +69,15 @@ Game commands
 | killMoveables                                                    | ... removes all moveables                                     |
 | killRagdolls                                                     | ... removes all ragdolls                                      |
 | killThis                                                         |                                                               |
-| [ListActiveEntities\_(console\_command).html listActiveEntities] | ... lists active game entities                                |
+| [listActiveEntities](ListActiveEntities\_(console\_command)) | ... lists active game entities                                |
 | listAnims                                                        | ... lists all animations                                      |
 | listClasses                                                      | ... lists game classes                                        |
 | listCollisionModels                                              | ... lists collision models                                    |
-| [ListEntities\_(console\_command).html listEntities]             | ... lists game entities                                       |
+| [listEntities](ListEntities\_(console\_command))             | ... lists game entities                                       |
 | listLines                                                        | ... lists all debug lines                                     |
 | listModelDefs                                                    | ... lists model defs                                          |
 | listMonsters                                                     | ... lists monsters                                            |
-| [ListSpawnArgs\_(console\_command).html listSpawnArgs]           | ... list the spawn args of an entity                          |
+| [listSpawnArgs](ListSpawnArgs\_(console\_command))           | ... list the spawn args of an entity                          |
 | listThreads                                                      | ... lists script threads                                      |
 | listTypeInfo                                                     | ... list type info                                            |
 | neverdormant                                                     |                                                               |
@@ -102,16 +102,16 @@ Game commands
 | reexportmodels                                                   | ... reexports models                                          |
 | reloadanims                                                      | ... reloads animations                                        |
 | reloadScript                                                     | ... reloads scripts                                           |
-| [Remove\_(console\_command).html remove]                         | ... removes an entity                                         |
+| [remove](Remove\_(console\_command))                         | ... removes an entity                                         |
 | removeline                                                       | ... removes a debug line                                      |
 | saveLights                                                       | ... saves all lights to the .map file                         |
 | saveMoveables                                                    | ... save all moveables to the .map file                       |
 | saveParticles                                                    | ... saves all lights to the .map file (???)                   |
-| [SaveRagdolls\_(console\_command).html saveRagdolls]             | ... save all ragdoll poses to the .map file                   |
+| [saveRagdolls](SaveRagdolls\_(console\_command))             | ... save all ragdoll poses to the .map file                   |
 | saveSelected                                                     | ... saves the selected entity to the .map file                |
 | say                                                              | ... text chat                                                 |
 | sayTeam                                                          | ... team text chat                                            |
-| [Script\_(console\_command).html script]                         | ... executes a line of script                                 |
+| [script](Script\_(console\_command))                         | ... executes a line of script                                 |
 | serverForceReady                                                 | ... force all players ready                                   |
 | serverMapRestart                                                 | ... restart the current game                                  |
 | serverNextMap                                                    | ... change to the next map                                    |
@@ -119,7 +119,7 @@ Game commands
 | setPlayerGravity                                                 |                                                               |
 | setviewpos                                                       | ... sets the current view position                            |
 | show                                                             |                                                               |
-| [Spawn\_(console\_command).html spawn]                           | ... spawns a game entity                                      |
+| [spawn](Spawn\_(console\_command))                           | ... spawns a game entity                                      |
 | spawnabunch                                                      |                                                               |
 | spawnArtificialPlayer                                            |                                                               |
 | spawnDebrisMass                                                  |                                                               |
@@ -134,7 +134,7 @@ Game commands
 | testFx                                                           | ... tests an FX system                                        |
 | testid                                                           | ... output the string for the specified id.                   |
 | testLight                                                        | ... tests a light                                             |
-| [TestModel\_(console\_command).html testModel]                   | ... tests a model                                             |
+| [testModel](TestModel\_(console\_command))                   | ... tests a model                                             |
 | testParticleStopTime                                             | ... tests particle stop time on a test model                  |
 | testPointLight                                                   | ... tests a point light                                       |
 | testSave                                                         | ... writes out a test savegame                                |
@@ -143,7 +143,7 @@ Game commands
 | testSkin                                                         | ... tests a skin on an existing testModel                     |
 | toggleShuttle                                                    |                                                               |
 | toggleTalonTargets                                               |                                                               |
-| [Trigger\_(console\_command).html trigger]                       | ... triggers an entity                                        |
+| [trigger](Trigger\_(console\_command))                       | ... triggers an entity                                        |
 | triggerThis                                                      |                                                               |
 | unbindRagdoll                                                    | ... unbinds the selected ragdoll                              |
 | unpossessPlayer                                                  |                                                               |
@@ -155,20 +155,20 @@ Renderer commands
 -----------------
 
 |------------------------------------------------------------|------------------------------------------------------|
-| [Benchmark\_(console\_command).html benchmark]             | ... benchmark                                        |
+| [benchmark](Benchmark\_(console\_command))             | ... benchmark                                        |
 | combineCubeImages                                          |                                                      |
-| [Envshot\_(console\_command).html envshot]                 | ... takes an environment shot                        |
+| [envshot](Envshot\_(console\_command))                 | ... takes an environment shot                        |
 | forceBuildImage                                            |                                                      |
-| [GfxInfo\_(console\_command).html gfxInfo]                 | ... show graphics info                               |
+| [gfxInfo](GfxInfo\_(console\_command))                 | ... show graphics info                               |
 | listGuis                                                   | ... lists guis                                       |
-| [ListImages\_(console\_command).html listImages]           | ... lists images                                     |
+| [listImages](ListImages\_(console\_command))           | ... lists images                                     |
 | listModels                                                 | ... lists all models                                 |
 | listModes                                                  | ... lists all video modes                            |
 | listRenderEntityDefs                                       | ... lists the entity defs                            |
 | listRenderLightDefs                                        | ... lists the light defs                             |
 | listVertexCache                                            | ... lists vertex cache                               |
 | makeAmbientMap                                             | ... makes an ambient map                             |
-| [MakeMegaTexture\_(console\_command).html MakeMegaTexture] | ... processes giant images                           |
+| [MakeMegaTexture](MakeMegaTexture\_(console\_command)) | ... processes giant images                           |
 | modulateLights                                             | ... modifies shader parms on all lights              |
 | pbufferinit                                                |                                                      |
 | pbuffershot                                                |                                                      |
@@ -177,12 +177,12 @@ Renderer commands
 | regenerateWorld                                            | ... regenerates all interactions                     |
 | reloadARBprograms                                          | ... reloads ARB programs                             |
 | reloadGuis                                                 | ... reloads guis                                     |
-| [ReloadImages\_(console\_command).html reloadImages]       | ... reloads images                                   |
+| [reloadImages](ReloadImages\_(console\_command))       | ... reloads images                                   |
 | reloadModels                                               | ... reloads models                                   |
-| [ReloadSurface\_(console\_command).html reloadSurface]     | ... reloads the decl and images for selected surface |
+| [reloadSurface](ReloadSurface\_(console\_command))     | ... reloads the decl and images for selected surface |
 | reportImageDuplication                                     | ... checks all referenced images for duplications    |
 | reportSurfaceAreas                                         | ... lists all used materials sorted by surface area  |
-| [Screenshot\_(console\_command).html screenshot]           | ... takes a screenshot                               |
+| [screenshot](Screenshot\_(console\_command))           | ... takes a screenshot                               |
 | showInteractionMemory                                      | ... shows memory used by interactions                |
 | showTriSurfMemory                                          | ... shows memory used by triangle surfaces           |
 | sizeDown                                                   | ... makes the rendered view smaller                  |
@@ -192,7 +192,7 @@ Renderer commands
 | testVideo                                                  | ... displays the given cinematic                     |
 | touchGui                                                   | ... touches a gui                                    |
 | touchModel                                                 | ... touches a model                                  |
-| [Vid\_restart\_(console\_command).html vid\_restart]       | ... restarts renderSystem                            |
+| [vid\_restart](Vid\_restart\_(console\_command))       | ... restarts renderSystem                            |
 
 Sound commands
 --------------
@@ -210,32 +210,32 @@ System commands
 |----------------------------------------------------|--------------------------------------------------------------------------------|
 | assert                                             |                                                                                |
 | aviCmdDemo                                         | ... writes AVIs for a command demo                                             |
-| [AviDemo\_(console\_command).html aviDemo]         | ... writes AVIs for a demo                                                     |
+| [aviDemo](AviDemo\_(console\_command))         | ... writes AVIs for a demo                                                     |
 | aviGame                                            | ... writes AVIs for the current game                                           |
-| [Bind\_(console\_command).html bind]               | ... binds a command to a key                                                   |
+| [bind](Bind\_(console\_command))               | ... binds a command to a key                                                   |
 | bindunbindtwo                                      | ... binds a key but unbinds it first if there are more than two binds          |
 | checkNewVersion                                    | ... check if a new version of the game is available                            |
 | clear                                              | ... clears the console                                                         |
 | compressDemo                                       | ... compresses a demo file                                                     |
-| [ConDump\_(console\_command).html conDump]         | ... dumps the console text to a file                                           |
+| [conDump](ConDump\_(console\_command))         | ... dumps the console text to a file                                           |
 | connect                                            | ... connects to a server                                                       |
 | crash                                              | ... causes a crash                                                             |
 | cvar\_restart                                      | ... restart the cvar system                                                    |
 | dec                                                |                                                                                |
-| [DemoShot\_(console\_command).html demoShot]       | ... writes a screenshot for a demo                                             |
-| [Devmap\_(console\_command).html devmap]           | ... loads a map in developer mode                                              |
-| [Dir\_(console\_command).html dir]                 | ... lists a folder                                                             |
-| [Dirtree\_(console\_command).html dirtree]         | ... lists a folder with subfolders                                             |
-| [Disconnect\_(console\_command).html disconnect]   | ... disconnects from a game                                                    |
+| [demoShot](DemoShot\_(console\_command))       | ... writes a screenshot for a demo                                             |
+| [devmap](Devmap\_(console\_command))           | ... loads a map in developer mode                                              |
+| [dir](Dir\_(console\_command))                 | ... lists a folder                                                             |
+| [dirtree](Dirtree\_(console\_command))         | ... lists a folder with subfolders                                             |
+| [disconnect](Disconnect\_(console\_command))   | ... disconnects from a game                                                    |
 | displayE3Loading                                   |                                                                                |
-| [Echo\_(console\_command).html echo]               | ... prints text                                                                |
+| [echo](Echo\_(console\_command))               | ... prints text                                                                |
 | endOfDemo                                          |                                                                                |
 | entitysize                                         |                                                                                |
 | error                                              | ... causes an error                                                            |
-| [Exec\_(console\_command).html exec]               | ... executes a config file                                                     |
+| [exec](Exec\_(console\_command))               | ... executes a config file                                                     |
 | execImageQuality                                   |                                                                                |
 | execnow                                            |                                                                                |
-| [Exit\_(console\_command).html exit]               | ... exits the game                                                             |
+| [exit](Exit\_(console\_command))               | ... exits the game                                                             |
 | exitCmdDemo                                        | ... exits a command demo                                                       |
 | finishBuild                                        | ... finishes the build process                                                 |
 | freeze                                             | ... freezes the game for a number of seconds                                   |
@@ -249,8 +249,8 @@ System commands
 | listAF                                             | ... lists articulated figures                                                  |
 | listBeams                                          |                                                                                |
 | listBinds                                          | ... lists key bindings                                                         |
-| [ListCmds\_(console\_command).html listCmds]       | ... lists commands                                                             |
-| [ListCvars\_(console\_command).html listCvars]     |                                                                                |
+| [listCmds](ListCmds\_(console\_command))       | ... lists commands                                                             |
+| [listCvars](ListCvars\_(console\_command))     |                                                                                |
 | listDecls                                          |                                                                                |
 | listDictKeys                                       | ... lists all keys used by dictionaries                                        |
 | listDictValues                                     | ... lists all values used by dictionaries                                      |
@@ -275,14 +275,14 @@ System commands
 | localizeMaps                                       | ... localize maps                                                              |
 | localizeMapsTest                                   | ... **to\_be\_replaced**                                                       |
 | localizeSubs                                       |                                                                                |
-| [Map\_(console\_command).html map]                 | ... loads a map                                                                |
+| [map](Map\_(console\_command))                 | ... loads a map                                                                |
 | memoryDump                                         | ... creates a memory dump                                                      |
 | memoryDumpCompressed                               | ... creates a compressed memory dump                                           |
 | memstats                                           |                                                                                |
 | memstatsprocess                                    |                                                                                |
 | nextMap                                            | ... loads the next map on the server                                           |
 | parse                                              | ... prints tokenized string                                                    |
-| [Path\_(console\_command).html path]               | ... lists search paths                                                         |
+| [path](Path\_(console\_command))               | ... lists search paths                                                         |
 | playCmdDemo                                        | ... plays back a command demo                                                  |
 | playDemo                                           | ... plays back a demo                                                          |
 | printAF                                            | ... prints an articulated figure                                               |
@@ -297,11 +297,11 @@ System commands
 | printSoundShader                                   | ... prints a sound shader                                                      |
 | printTable                                         | ... prints a table                                                             |
 | promptKey                                          | ... prompt and sets the CD Key                                                 |
-| [Quit\_(console\_command).html quit]               | ... quits the game                                                             |
+| [quit](Quit\_(console\_command))               | ... quits the game                                                             |
 | rcon                                               | ... sends remote console command to server                                     |
 | reconnect                                          | ... reconnect to the last server we tried to connect to                        |
-| [RecordDemo\_(console\_command).html recordDemo]   | ... records a demo                                                             |
-| [ReloadDecls\_(console\_command).html reloadDecls] | ... reloads decls                                                              |
+| [recordDemo](RecordDemo\_(console\_command))   | ... records a demo                                                             |
+| [reloadDecls](ReloadDecls\_(console\_command)) | ... reloads decls                                                              |
 | reloadEngine                                       | ... reloads the engine down to including the file system                       |
 | reloadLanguage                                     | ... reload language dict                                                       |
 | rescanSI                                           | ... rescan serverinfo cvars and tell game                                      |
@@ -309,30 +309,30 @@ System commands
 | resetE3Demos                                       |                                                                                |
 | saveGame                                           | ... saves a game                                                               |
 | serverInfo                                         | ... shows server info                                                          |
-| [Set\_(console\_command).html set]                 | ... sets a cvar                                                                |
-| [Seta\_(console\_command).html seta]               | ... sets a cvar and flags it as archive                                        |
+| [set](Set\_(console\_command))                 | ... sets a cvar                                                                |
+| [seta](Seta\_(console\_command))               | ... sets a cvar and flags it as archive                                        |
 | setMachineSpec                                     | ... detects system capabilities and sets com\_machineSpec to appropriate value |
 | sets                                               | ... sets a cvar and flags it as server info                                    |
 | sett                                               | ... sets a cvar and flags it as tool                                           |
 | setu                                               | ... sets a cvar and flags it as user info                                      |
 | showDictMemory                                     | ... shows memory used by dictionaries                                          |
 | showStringMemory                                   | ... shows memory used by strings                                               |
-| [SpawnServer\_(console\_command).html spawnServer] | ... spawns a server                                                            |
-| [StartBuild\_(console\_command).html startBuild]   | ... prepares to make a build                                                   |
+| [spawnServer](SpawnServer\_(console\_command)) | ... spawns a server                                                            |
+| [startBuild](StartBuild\_(console\_command))   | ... prepares to make a build                                                   |
 | stopRecording                                      | ... stops demo recording                                                       |
 | takeViewNotes                                      | ... take notes about the current map from the current view                     |
 | takeViewNotes2                                     | ... extended take view notes                                                   |
 | testGUI                                            | ... tests a gui                                                                |
-| [Testmap\_(console\_command).html testmap]         | ... tests a map                                                                |
+| [testmap](Testmap\_(console\_command))         | ... tests a map                                                                |
 | testSIMD                                           | ... test SIMD code                                                             |
 | testtext                                           |                                                                                |
 | timeCmdDemo                                        | ... times a command demo                                                       |
-| [TimeDemo\_(console\_command).html timeDemo]       | ... times a demo                                                               |
+| [timeDemo](TimeDemo\_(console\_command))       | ... times a demo                                                               |
 | timeDemoQuit                                       | ... times a demo and quits                                                     |
-| [Toggle\_(console\_command).html toggle]           | ... toggles a cvar                                                             |
+| [toggle](Toggle\_(console\_command))           | ... toggles a cvar                                                             |
 | togglefpuexceptions                                |                                                                                |
 | togglehelp                                         |                                                                                |
-| [Touch\_(console\_command).html touch]             | ... touches a decl                                                             |
+| [touch](Touch\_(console\_command))             | ... touches a decl                                                             |
 | touchFile                                          | ... touches a file                                                             |
 | touchFileList                                      | ... touches a list of files                                                    |
 | unbind                                             | ... unbinds any command from a key                                             |

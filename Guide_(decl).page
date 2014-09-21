@@ -2,13 +2,13 @@ Guide (decl)
 ============
 
 <div style="padding: 1px; border: 0px solid #000000" align="left">
-<font size="18px"><font color="black">![Image:Q4square\_bg.png](images_6_69_Q4square_bg.png "fig:Image:Q4square_bg.png") The information on this page is specific to [Quake\_4.html Quake 4].</font></font>
+<font size="18px"><font color="black">![Image:Q4square\_bg.png](images_6_69_Q4square_bg.png "fig:Image:Q4square_bg.png") The information on this page is specific to [Quake 4](Quake\_4).</font></font>
 
 </div>
 
 ------------------------------------------------------------------------
 
-Guides are declarations which act as material templates used in place of a full [Material\_(decl).html material] declaration. Their sole function is to simplify creation of new materials. Just like templates or stationary or even forms in every day life, guides save time and effort by leaving just a few blank spots for you to fill in. These blank spots are called parameters.
+Guides are declarations which act as material templates used in place of a full [material](Material\_(decl)) declaration. Their sole function is to simplify creation of new materials. Just like templates or stationary or even forms in every day life, guides save time and effort by leaving just a few blank spots for you to fill in. These blank spots are called parameters.
 
 |-------------------------------------------------------------------------------------------------------------------------------|
 | <div id="toctitle">                                                                                                           
@@ -16,11 +16,11 @@ Guides are declarations which act as material templates used in place of a full 
  --------                                                                                                                       
                                                                                                                                 
  </div>                                                                                                                         
- -   [Guide\_(decl).html\#Syntax <span class="tocnumber">1</span> <span class="toctext">Syntax</span>]                          
- -   [Guide\_(decl).html\#Example <span class="tocnumber">2</span> <span class="toctext">Example</span>]                        
- -   [Guide\_(decl).html\#Recap <span class="tocnumber">3</span> <span class="toctext">Recap</span>]                            
- -   [Guide\_(decl).html\#Built-in\_guides <span class="tocnumber">4</span> <span class="toctext">Built-in guides</span>]       
- -   [Guide\_(decl).html\#New\_custom\_guides <span class="tocnumber">5</span> <span class="toctext">New custom guides</span>]  |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Syntax</span>](Guide\_(decl)#Syntax)                          
+ -   [<span class="tocnumber">2</span> <span class="toctext">Example</span>](Guide\_(decl)#Example)                        
+ -   [<span class="tocnumber">3</span> <span class="toctext">Recap</span>](Guide\_(decl)#Recap)                            
+ -   [<span class="tocnumber">4</span> <span class="toctext">Built-in guides</span>](Guide\_(decl)#Built-in\_guides)       
+ -   [<span class="tocnumber">5</span> <span class="toctext">New custom guides</span>](Guide\_(decl)#New\_custom\_guides)  |
 
 Syntax
 ------
@@ -32,16 +32,16 @@ Syntax
 `   [etc]`
 `}`
 
-Guides are started with a header which consists of the guide keyword followed by the *name* of the guide and inside parenthesis separated by commas all the parameters that need to be suplied to that particular guide. They are then followed by the body of the declaration which is enclosed in curly brackets; here you use all the usual material declaration keywords and stages. The difference from a regular material declaration though is that instead of pointing to actual assets (like a texture, colour value, etc.) you point to the parameters defined in the header. The names of the parameters are entirely up to you. Guides should be put in a .[GUIDE\_(file\_format).html GUIDE] file in the /[Guides\_(folder).html guides] folder.
+Guides are started with a header which consists of the guide keyword followed by the *name* of the guide and inside parenthesis separated by commas all the parameters that need to be suplied to that particular guide. They are then followed by the body of the declaration which is enclosed in curly brackets; here you use all the usual material declaration keywords and stages. The difference from a regular material declaration though is that instead of pointing to actual assets (like a texture, colour value, etc.) you point to the parameters defined in the header. The names of the parameters are entirely up to you. Guides should be put in a .[GUIDE](GUIDE\_(file\_format)) file in the /[guides](Guides\_(folder)) folder.
 
-You then reference the guide by using the following in your .[MTR\_(file\_format).html MTR] file:
+You then reference the guide by using the following in your .[MTR](MTR\_(file\_format)) file:
 
 `guide [name_of_material] [name_of_guide]("[parm1]", "[parm2]", "[etc]")`
 
 Example
 -------
 
-As an example, the majority of surfaces in the game use a [Texturing.html diffuse, specular, height and normal maps] so let's assume you have three new custom brick textures you want to use in your mod. After creating the actual textures you have:
+As an example, the majority of surfaces in the game use a [diffuse, specular, height and normal maps](Texturing) so let's assume you have three new custom brick textures you want to use in your mod. After creating the actual textures you have:
 
 `brick1_d.tga`
 `brick1_local.tga`
@@ -106,7 +106,7 @@ Just as if you had written it yourself. As shown in the syntax section you can h
 `   specularmap textures/TextureParm_s`
 `}`
 
-Now, not only will the actual textures in the three brick materials but also the height scale so notice the two parameters in the header and the fact the "2" in the [Heightmap\_(Image\_program\_function).html heightmap] function was replaced by a parameter which we've named HeightParm in the header. Our three brick material declarations now become:
+Now, not only will the actual textures in the three brick materials but also the height scale so notice the two parameters in the header and the fact the "2" in the [heightmap](Heightmap\_(Image\_program\_function)) function was replaced by a parameter which we've named HeightParm in the header. Our three brick material declarations now become:
 
 `guide textures/mymod/brick1 my_guide("mymod/brick1")`
 `guide textures/mymod/brick2 my_guide_customheight("mymod/brick2", "4")`
@@ -124,7 +124,7 @@ Guides are conceptually a more complex architecture for materials but they are s
 -   you can name the guides and parameters whatever you want.
 -   inside the curly brackets they are written like material declarations but with parameters substituting real assets.
 -   material declarations (in .MTR files) reference the guides by supplying its name and assets for parameters.
--   to make full use of guides it's important to attach the according suffix to the filenames of your texture assets: diffuse maps should end with "\_d", normal maps should end with "\_local", height maps should end with "\_h" and specular maps should end with "\_s". Although less used your [Texturing.html\#Hit\_Maps hit maps] should end with "\_hit". This should be done whether or not you use guides, simply as a way to quickly know which texture is which when your browsing your /[Textures\_(folder).html textures] folder.
+-   to make full use of guides it's important to attach the according suffix to the filenames of your texture assets: diffuse maps should end with "\_d", normal maps should end with "\_local", height maps should end with "\_h" and specular maps should end with "\_s". Although less used your [hit maps](Texturing#Hit\_Maps) should end with "\_hit". This should be done whether or not you use guides, simply as a way to quickly know which texture is which when your browsing your /[textures](Textures\_(folder)) folder.
 
 Built-in guides
 ---------------
@@ -194,7 +194,7 @@ These are some new example guides you can add to your mod:
 `   specularmap textures/TextureParm_s`
 `}`
 
-While most materials in Quake 4 use a height map, in [Doom\_3.html Doom 3] height maps were used sparingly so the guide above can be used instead of generic\_shader.
+While most materials in Quake 4 use a height map, in [Doom 3](Doom\_3) height maps were used sparingly so the guide above can be used instead of generic\_shader.
 
-Another example of a guide you can add is presented in the [Visportal.html\#Distance\_based\_visportals visportal] article.
+Another example of a guide you can add is presented in the [visportal](Visportal#Distance\_based\_visportals) article.
 

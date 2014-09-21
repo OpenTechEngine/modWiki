@@ -30,7 +30,7 @@ There are 3 types of folders in the game directory to place assets in:
 
 #### base
 
-The game assets folder. All the [PK4\_(file\_format).html PK4's] of the retail game are in this folder. Only game updates and paks should be placed there, *mods need their own folder*.
+The game assets folder. All the [PK4's](PK4\_(file\_format)) of the retail game are in this folder. Only game updates and paks should be placed there, *mods need their own folder*.
 
 ![](/images/images_e_e8_Q4square_25.png) Note: _Quake 4 only:_
  ~  *Unlike other games, Quake 4's base folder is called **/q4base***
@@ -53,10 +53,10 @@ To start your mod, you could either start the game and use the "mods" selection 
 
 `d:\doom3\doom3.exe +set fs_game mymod `
 
-This starts Doom 3, with the mod folder set to "mymod". For further information, see [Startup\_parameters.html Startup parameters].
+This starts Doom 3, with the mod folder set to "mymod". For further information, see [Startup parameters](Startup\_parameters).
 
 ![](/images/images_2_23_D3square_25.png) Note: _Doom 3: ROE only:_
- ~  *If you are modding for the Doom 3: Resurrection of Evil expansion, add "+set [Fs\_game\_base\_(cvar).html fs\_game\_base] d3xp" to the shortcut*
+ ~  *If you are modding for the Doom 3: Resurrection of Evil expansion, add "+set [fs\_game\_base](Fs\_game\_base\_(cvar)) d3xp" to the shortcut*
 
 ![](/images/images_e_e8_Q4square_25.png) Note: _Quake 4 only:_
  ~  *Since there has been no announcement for expansion packs, the "expansion folder" feature can be used to use assets from the base folder and another mod folder.*
@@ -89,7 +89,7 @@ Changing the game's actions
 [Texturing.html Texturing]   
 Modifying the looks of the game by adding/changing materials
 
-Of course, modding a specific things (Eg. modifying weapons) needs experience from multiple categories. Use your common sense to find what you need, or go trough the game's assets to see what is used to make something. (See the [Modding.html\#Got\_questions Got Questions] section below)
+Of course, modding a specific things (Eg. modifying weapons) needs experience from multiple categories. Use your common sense to find what you need, or go trough the game's assets to see what is used to make something. (See the [Got Questions](Modding#Got\_questions) section below)
 
 ### Getting started already
 
@@ -103,7 +103,7 @@ Once you read this, you should have made up your mind on what you want to do wit
 
 ### Got questions
 
-In case you get stuck somewhere or have some questions, it is a good idea to look at the content of the original game. To do this, you need to unpack the [PK4\_(file\_format).html PK4] files contained in the base game directory. It is best to extract them to a seperate folder (eg: Doom3\\basextract\\ in case of Doom 3) so the resulting <span class="plainlinks">[<span style="font-weight: normal; text-decoration: none!important; background: none!important; text-decoration: none"><font color="black">behavioral targeting</font></span>](http://web.archive.org/web/20120916193313/http://www.monoloop.com/) files do not conflict with the original (AKA 'vanilla') content. Also note that you should extract them in alphanumeric order, starting with the lowest number to allow for more recently updated files to overwrite their older counterparts. </span>
+In case you get stuck somewhere or have some questions, it is a good idea to look at the content of the original game. To do this, you need to unpack the [PK4](PK4\_(file\_format)) files contained in the base game directory. It is best to extract them to a seperate folder (eg: Doom3\\basextract\\ in case of Doom 3) so the resulting <span class="plainlinks">[<span style="font-weight: normal; text-decoration: none!important; background: none!important; text-decoration: none"><font color="black">behavioral targeting</font></span>](http://web.archive.org/web/20120916193313/http://www.monoloop.com/) files do not conflict with the original (AKA 'vanilla') content. Also note that you should extract them in alphanumeric order, starting with the lowest number to allow for more recently updated files to overwrite their older counterparts. </span>
 
 Beware that the unpacked assets of the game will be worth multiple gigabytes of diskspace. Make sure that you have enough free space or only extract parts.
 
@@ -116,17 +116,17 @@ Once you have finished your mod you will want to distribute it. This section cov
 
 ### Creating compressed media files
 
-After you have all your assets in one place you will want to compress your media files so they take up less space. You can automatically generate a batch file to create compressed versions of [TGA\_(file\_format).html TGA] and [WAV\_(file\_format).html WAV] files. To do so you must follow these steps:
+After you have all your assets in one place you will want to compress your media files so they take up less space. You can automatically generate a batch file to create compressed versions of [TGA](TGA\_(file\_format)) and [WAV](WAV\_(file\_format)) files. To do so you must follow these steps:
 
 -   Start the game, open the console.
--   [Com\_makingBuild\_(cvar).html com\_makingBuild] 1
--   [Image\_usePrecompressedTextures\_(cvar).html image\_usePrecompressedTextures] 0
--   [Image\_useOfflineCompression\_(cvar).html image\_useOfflineCompression] 1
+-   [com\_makingBuild](Com\_makingBuild\_(cvar)) 1
+-   [image\_usePrecompressedTextures](Image\_usePrecompressedTextures\_(cvar)) 0
+-   [image\_useOfflineCompression](Image\_useOfflineCompression\_(cvar)) 1
 -   [StartBuild\_(console\_command).html startBuild]
--   [Map\_(console\_command).html map] \<mapname\>
+-   [map](Map\_(console\_command)) \<mapname\>
 -   finishBuild
 
-You should now have two batch files present: *makedds.bat* and *makeogg.bat*. Start these from your mod containing the assets. **Note**: They must be left unpackaged until after the compression. The compression step will not scan [PK4\_(file\_format).html PK4] files.
+You should now have two batch files present: *makedds.bat* and *makeogg.bat*. Start these from your mod containing the assets. **Note**: They must be left unpackaged until after the compression. The compression step will not scan [PK4](PK4\_(file\_format)) files.
 
 **Note**: Make sure you have the CVars image\_useCompression and image\_useNormalCompression set to their default values of 1 and 2 respectively when running the above build process. If you have them set to 0 then the makedds.bat file will not be created correctly.
 

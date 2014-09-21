@@ -9,8 +9,8 @@ A **patch** or **patch mesh** is a procedural surface defined by a number of *co
 
 Patches have two important properties when compared with brushes.
 
--   Patches cannot be used to seal the void. If a patch is used on a wall, ceiling or floor, a brush with the [Caulk.html caulk] texture must be placed behind it to prevent leaks.
--   Patches can only be viewed from one direction (unless the **[TwoSided\_(Material\_global\_keyword).html twoSided]** keyword is active in the material), so it is necessary to ensure they are placed the correct way round (inverting them if necessary with **Ctrl-I**).
+-   Patches cannot be used to seal the void. If a patch is used on a wall, ceiling or floor, a brush with the [caulk](Caulk) texture must be placed behind it to prevent leaks.
+-   Patches can only be viewed from one direction (unless the **[twoSided](TwoSided\_(Material\_global\_keyword))** keyword is active in the material), so it is necessary to ensure they are placed the correct way round (inverting them if necessary with **Ctrl-I**).
 
 |----------------------------------------------------------------------------------------------------------------------------------------------|
 | <div id="toctitle">                                                                                                                          
@@ -18,15 +18,15 @@ Patches have two important properties when compared with brushes.
  --------                                                                                                                                      
                                                                                                                                                
  </div>                                                                                                                                        
- -   [Patch.html\#Creating\_a\_simple\_patch <span class="tocnumber">1</span> <span class="toctext">Creating a simple patch</span>]            
- -   [Patch.html\#Adjusting\_the\_control\_points <span class="tocnumber">2</span> <span class="toctext">Adjusting the control points</span>]  
- -   [Patch.html\#Subdividing\_patches <span class="tocnumber">3</span> <span class="toctext">Subdividing patches</span>]                      
- -   [Patch.html\#Thickening\_patches <span class="tocnumber">4</span> <span class="toctext">Thickening patches</span>]                        |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Creating a simple patch</span>](Patch#Creating\_a\_simple\_patch)            
+ -   [<span class="tocnumber">2</span> <span class="toctext">Adjusting the control points</span>](Patch#Adjusting\_the\_control\_points)  
+ -   [<span class="tocnumber">3</span> <span class="toctext">Subdividing patches</span>](Patch#Subdividing\_patches)                      
+ -   [<span class="tocnumber">4</span> <span class="toctext">Thickening patches</span>](Patch#Thickening\_patches)                        |
 
 Creating a simple patch
 -----------------------
 
-A *simple patch mesh* is a basic rectangular patch with no initial curvature, and a user-selectable number of control points. Simple patch meshes can be used as-is to apply [Decal.html decals], or modified through vertex editing to produce common architectural shapes such as arched doorways and roofs.
+A *simple patch mesh* is a basic rectangular patch with no initial curvature, and a user-selectable number of control points. Simple patch meshes can be used as-is to apply [decals](Decal), or modified through vertex editing to produce common architectural shapes such as arched doorways and roofs.
 
 1.  Select the appropriate view with **Ctrl-Tab**. The patch will be created facing the viewport, so if the patch is supposed to lie flat on the ground, make sure you create it in Top view.
 2.  Click and drag to draw a brush. This will become the boundary of the patch (since patches are infinitely thin you do not need to worry about the third dimension of the brush).

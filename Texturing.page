@@ -4,9 +4,9 @@ Texturing
 Material shaders
 ----------------
 
-In older games, a single image qualified as a texture and all that was required was that you simply drop the corresponding image into a specific folder. The general concept in the [Id\_Tech\_4.html id Tech 4] family is to use [Material\_(decl).html material shaders] which in turn use multiple [Images.html images], each representing a different property of a surface. This makes texturing more work than it was in the past, but it also gives much more power and flexibility to the developers.
+In older games, a single image qualified as a texture and all that was required was that you simply drop the corresponding image into a specific folder. The general concept in the [id Tech 4](Id\_Tech\_4) family is to use [material shaders](Material\_(decl)) which in turn use multiple [images](Images), each representing a different property of a surface. This makes texturing more work than it was in the past, but it also gives much more power and flexibility to the developers.
 
-Check the following links to learn more about the syntax of material files for [Doom\_3.html Doom 3]. This will help you understand and write them:
+Check the following links to learn more about the syntax of material files for [Doom 3](Doom\_3). This will help you understand and write them:
 
 [Material\_(decl).html Material declarations]   
 The basic syntax of material shaders is explained here.
@@ -18,7 +18,7 @@ Global keywords used in material shaders are indexed in this article.
 Stage specific material shader keywords are listed in this article.
 
 ![](/images/images_e_e8_Q4square_25.png) Note: _Quake 4 only:_
- ~  *You can also use [Guide\_(decl).html guides] to simplify writing many materials that behave the same way.*
+ ~  *You can also use [guides](Guide\_(decl)) to simplify writing many materials that behave the same way.*
 
 Diffuse maps
 ------------
@@ -45,7 +45,7 @@ The example to the right demonstrates this as the bricks themselves are a greyis
 
 No surface reflects light back at the same intensity it's recieved. In that respect, it's a good idea to darken your diffuse maps appropriately. Generally, the smoother a surface is the less light is diffused and the brighter your diffuse map can be.
 
-Diffuse maps are added to material shaders by use of the [Diffusemap\_(Material\_global\_keyword).html Diffusemap] keyword or the [Blend\_(Material\_stage\_keyword).html Blend] keyword with the "diffusemap" parameter. As convention it's recommended that you add "\_d" to the end of the texture's filename.
+Diffuse maps are added to material shaders by use of the [Diffusemap](Diffusemap\_(Material\_global\_keyword)) keyword or the [Blend](Blend\_(Material\_stage\_keyword)) keyword with the "diffusemap" parameter. As convention it's recommended that you add "\_d" to the end of the texture's filename.
 
 Bump maps
 ---------
@@ -95,7 +95,7 @@ Inverting the green channel of a normal map.
 </div>
 Depending on the tool used to render normal maps, you may need to invert the green channel of the resulting image in order for your normal map to render properly in game. When viewing the green channel of the image, it should appear as if it's being illuminated from the bottom.
 
-Normal bump maps are added to material shaders by use of the [Bumpmap\_(Material\_global\_keyword).html Bumpmap] keyword or the [Blend\_(Material\_stage\_keyword).html Blend] keyword with the "bumpmap" parameter. As convention it's recommended that you add "\_local" to the end of the texture's filename.
+Normal bump maps are added to material shaders by use of the [Bumpmap](Bumpmap\_(Material\_global\_keyword)) keyword or the [Blend](Blend\_(Material\_stage\_keyword)) keyword with the "bumpmap" parameter. As convention it's recommended that you add "\_local" to the end of the texture's filename.
 
 <div style="clear: both">
 </div>
@@ -121,7 +121,7 @@ The height of each pixel is defined by the brightness of the image. A white pixe
 
 Heightmaps are usually painted in an image manipulation program. There is usually no need to render those. Note that height maps are converted to normalmaps by the id Tech 4 engine when loaded. The use of height maps is only to allow for an easier workflow.
 
-Height bump maps are added to a material by use of the [Heightmap\_(Image\_program\_function).html Heightmap] function. As convention it's recommended that you add "\_h" to the end of the texture's filename. [find your style](http://web.archive.org/web/20120923052509/http://www.styling24.net/)
+Height bump maps are added to a material by use of the [Heightmap](Heightmap\_(Image\_program\_function)) function. As convention it's recommended that you add "\_h" to the end of the texture's filename. [find your style](http://web.archive.org/web/20120923052509/http://www.styling24.net/)
 
 <div style="clear: both">
 </div>
@@ -131,7 +131,7 @@ The id Tech 4 engine is able to combine both a normal map and a height map into 
 
 Usually this is done when it's more practical to paint fine details into a height map than it is to model the same details and render them into the corresponding normal map.
 
-Normal and height bump maps can be combined in a material by using [Addnormals\_(Image\_program\_function).html Addnormals] function.
+Normal and height bump maps can be combined in a material by using [Addnormals](Addnormals\_(Image\_program\_function)) function.
 
 It should be noted however, that height maps by default do not visually displace a surface in id Tech 4 engine based games. They only serve as a means to compute surface normals for use with dynamic lighting.
 
@@ -168,24 +168,24 @@ The example at right has a mistake; the face of a brick would recieve less wear 
 
 Color applied to a specular map tints the color of highlights. Bricks are made out of a sand like material and as such would reflect slightly variable tints. This too is present in the example to the right.
 
-Specular maps are added to material shaders by use of the [Specularmap\_(Material\_global\_keyword).html Specularmap keyword] or the [Blend\_(Material\_stage\_keyword).html Blend] keyword with the "specularmap" parameter. As convention it's recommended that you add "\_s" to the end of the texture's filename.
+Specular maps are added to material shaders by use of the [Specularmap keyword](Specularmap\_(Material\_global\_keyword)) or the [Blend](Blend\_(Material\_stage\_keyword)) keyword with the "specularmap" parameter. As convention it's recommended that you add "\_s" to the end of the texture's filename.
 
-Bump maps can be modified into a good starting point for a specular map. See [Start\_a\_Specular\_map\_with\_a\_Normal\_map.html Start a Specular map with a Normal map].
+Bump maps can be modified into a good starting point for a specular map. See [Start a Specular map with a Normal map](Start\_a\_Specular\_map\_with\_a\_Normal\_map).
 
 <span align="absbottom">![Q4](images_e_e8_Q4square_25.png "fig:Q4") Hit maps</span>
 -----------------------------------------------------------------------------------
 
   
-*The information in this section is specific to [Quake\_4.html Quake 4].*
+*The information in this section is specific to [Quake 4](Quake\_4).*
 
-Hit maps are special images mainly used for animated models. These are made up of simple patches of color that follow the RGB values given in a [Materialtype\_(decl).html materialtype]. When an area of the model is hit a different impact effect is played depending on the hit map color of the area hit. Usually smaller resolution hitmaps are used compared to regular skins as detail does not need to be as high as the diffuse or normal map.
+Hit maps are special images mainly used for animated models. These are made up of simple patches of color that follow the RGB values given in a [materialtype](Materialtype\_(decl)). When an area of the model is hit a different impact effect is played depending on the hit map color of the area hit. Usually smaller resolution hitmaps are used compared to regular skins as detail does not need to be as high as the diffuse or normal map.
 
 Hit maps are added to material shaders by use of the materialImage keyword. As convention it's recommended that you add "\_hit" to the end of the texture's filename.
 
 Sky and reflective maps
 -----------------------
 
-Both sky and reflective materials make use of [Cube\_maps.html cube maps] (also known as environment maps).
+Both sky and reflective materials make use of [cube maps](Cube\_maps) (also known as environment maps).
 
 The Doom 3:ROE expansion pack and Quake 4 add sky portal functionality to the engine which does away with the need to use cube maps for sky materials.
 
@@ -206,7 +206,7 @@ This texture can also be tiled vertically. The edges of the texture at the top f
 
 This effect can be achieved using the offset tool in either [The GIMP](http://web.archive.org/web/20120923052509/http://www.gimp.org/) or in [Adobe Photoshop](http://web.archive.org/web/20120923052509/http://www.adobe.com/products/photoshop/). Other image manipulation suites may offer other similar tools, please refer to the documentation with your package to find such a feature.
 
-See [Texturing.html\#Creating\_Seamless\_Textures Creating Seamless Textures] for several tutorials on how to use this tool to create seamless textures, as well as links to several plugins that perform the transformation automatically.
+See [Creating Seamless Textures](Texturing#Creating\_Seamless\_Textures) for several tutorials on how to use this tool to create seamless textures, as well as links to several plugins that perform the transformation automatically.
 
 Supported image formats
 -----------------------
@@ -246,9 +246,9 @@ Compressed and uncompressed
 
 If you look at the vanilla texture assets, you'll notice that Doom 3 has TGA and DDS versions of each image in the game. The TGA files are used when running in high or ultra quality mode (in high quality, the diffuse maps use the compressed DDS files, but the normal maps use the uncompressed TGA files). In all other modes only DDS files are used.
 
-If no corresponding DDS file exists, Doom 3 generates one for use this session, this run-time compression means that while you can run in a lower quality than [Quality\_settings.html ultra], you won't actually have any DDS files to distribute. It's recommended therefore that you create your own DDS files as relying on Doom 3's automatic generation slows down loading significantly.
+If no corresponding DDS file exists, Doom 3 generates one for use this session, this run-time compression means that while you can run in a lower quality than [ultra](Quality\_settings), you won't actually have any DDS files to distribute. It's recommended therefore that you create your own DDS files as relying on Doom 3's automatic generation slows down loading significantly.
 
-You can bypass the DDS files and load the TGA files directly by setting [Image\_usePrecompressedTextures\_(cvar).html image\_usePrecompressedTextures] to 0. The images will still be compressed dynamically at load time, but since you'll be forcing the game to use the TGA files the results of changes to the images will be immediately apparent. You can bypass compression by setting [Image\_useCompression\_(cvar).html image\_useCompression] and [Image\_useNormalCompression\_(cvar).html image\_useNormalCompression] to 0.
+You can bypass the DDS files and load the TGA files directly by setting [image\_usePrecompressedTextures](Image\_usePrecompressedTextures\_(cvar)) to 0. The images will still be compressed dynamically at load time, but since you'll be forcing the game to use the TGA files the results of changes to the images will be immediately apparent. You can bypass compression by setting [image\_useCompression](Image\_useCompression\_(cvar)) and [image\_useNormalCompression](Image\_useNormalCompression\_(cvar)) to 0.
 
 The DDS files used in Doom 3 were created with the following settings:
 
@@ -266,9 +266,9 @@ You can use the following command line arguments with ATI's The Compressonator:
 
 ### Compression Notes
 
-See the [Modding.html modding] page for how to automatically compress all your assets for distribution.
+See the [modding](Modding) page for how to automatically compress all your assets for distribution.
 
-DDS files, and their MIP Maps, can be edited. See [Editing\_MIP\_Maps.html Editing MIP Maps].
+DDS files, and their MIP Maps, can be edited. See [Editing MIP Maps](Editing\_MIP\_Maps).
 
 If one is not using ATI's The Compressonator, local maps can be prepared for compression manually. Simply copy the red channel to the alpha channel. Then delete the old red channel (to save space). The advantage to interpriting local maps in this manner, we can presume, is due to the alpha channel's higher quality. In DXT5 each 4x4 (16) pixel block is encoded with 64 bits of RGB color data, and 64 bits of alpha data. Since a local map primarily consists of only 2 channels (horizontal, usually red, and vertical, usually green), we're effectively splitting the two channels evenly across the compression scheme.
 

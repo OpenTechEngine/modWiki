@@ -1,11 +1,11 @@
 Game class
 ==========
 
-A game class is a class of [IdClass\_(class).html idClass] type in the [Coding.html\#game\_code game code].
+A game class is a class of [idClass](IdClass\_(class)) type in the [game code](Coding#game\_code).
 
 It provides real time type checking and events.
 
-The base [Spawn\_class.html spawn class] [IdEntity\_(class).html idEntity] inherits from [IdClass\_(class).html idClass].
+The base [spawn class](Spawn\_class) [IdEntity\_(class).html idEntity] inherits from [idClass](IdClass\_(class)).
 
-Events from an instance of a game class can be exposed to the [Scripting.html scripting] system using a script event declaration in the global scripting namespace.
+Events from an instance of a game class can be exposed to the [scripting](Scripting) system using a script event declaration in the global scripting namespace.
 

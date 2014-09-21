@@ -4,7 +4,7 @@ Image useOfflineCompression (cvar)
 Description
 -----------
 
-Enables writing a batch file for offline compression of .[DDS\_(file\_format).html DDS] and .[OGG\_(file\_format).html OGG] files.
+Enables writing a batch file for offline compression of .[DDS](DDS\_(file\_format)) and .[OGG](OGG\_(file\_format)) files.
 
 Usage
 -----
@@ -49,6 +49,6 @@ Flags
 Notes
 -----
 
-This CVar by itself is not very useful and has to be used with the [Com\_makingBuild\_(cvar).html com\_makingBuild] CVar and the startbuild and [Map\_(console\_command).html map] console commands. See the [Modding.html modding] page for a wholesome use of this CVar.
+This CVar by itself is not very useful and has to be used with the [com\_makingBuild](Com\_makingBuild\_(cvar)) CVar and the startbuild and [map](Map\_(console\_command)) console commands. See the [modding](Modding) page for a wholesome use of this CVar.
 
 

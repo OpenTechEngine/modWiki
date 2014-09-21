@@ -4,12 +4,12 @@ MD5MESH (file format)
 Overview
 --------
 
-MD5Mesh files are ascii (plain text) files that contain mesh and skeletal data. They are part of the .[MD5\_(file\_format).html MD5] format system. The other MD5 formats are:
+MD5Mesh files are ascii (plain text) files that contain mesh and skeletal data. They are part of the .[MD5](MD5\_(file\_format)) format system. The other MD5 formats are:
 
-.[MD5ANIM\_(file\_format).html MD5ANIM]   
+.[MD5ANIM](MD5ANIM\_(file\_format))   
 Contains animation sequence data, the positions of bones etc. during animation.
 
-.[MD5CAMERA\_(file\_format).html MD5CAMERA]   
+.[MD5CAMERA](MD5CAMERA\_(file\_format))   
 Animated cameras for use in cutscenes.
 
 Model Format Syntax
@@ -25,7 +25,7 @@ commandline "<string>"
 ```
 
 -   MD5Version - An integer that defines the current MD5 specification version. This should always read 10.
--   commandline - A string that contains the command line parameters passed to the [Exportmodels\_(console\_command).html exportmodels] console command.
+-   commandline - A string that contains the command line parameters passed to the [exportmodels](Exportmodels\_(console\_command)) console command.
 
 ### Filetype Specific Parameters
 

@@ -1,9 +1,9 @@
 Choices (GUI item property)
 ===========================
 
-Define the choices available on this choiceDef, separated by semicolons. Just like the [Text\_(GUI\_item\_property).html text] property, can also take string parameters in the "\#str\_nnnnn" format.
+Define the choices available on this choiceDef, separated by semicolons. Just like the [text](Text\_(GUI\_item\_property)) property, can also take string parameters in the "\#str\_nnnnn" format.
 
-This property is restricted to the [ChoiceDef\_(GUI\_item\_type).html choiceDef] item type.
+This property is restricted to the [choiceDef](ChoiceDef\_(GUI\_item\_type)) item type.
 
 Syntax
 ------

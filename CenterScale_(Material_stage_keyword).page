@@ -4,7 +4,7 @@ CenterScale (Material stage keyword)
 Description
 -----------
 
-The **centerScale** keyword instructs Doom 3 to scale the texture in U and V dimensions using the specified factors. This keyword differs from the [Scale\_(Material\_stage\_keyword).html scale] keyword in that it scales from the center as opposed to a corner.
+The **centerScale** keyword instructs Doom 3 to scale the texture in U and V dimensions using the specified factors. This keyword differs from the [scale](Scale\_(Material\_stage\_keyword)) keyword in that it scales from the center as opposed to a corner.
 
 The numbers given are the opposite of what might be expected - scaling by 2 causes the texture to be made *smaller* by a factor of 2, rather than bigger. In this sense the values could be considered "tiling" factors rather than scaling factors.
 

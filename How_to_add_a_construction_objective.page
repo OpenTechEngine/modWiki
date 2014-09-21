@@ -220,11 +220,11 @@ void mapObject_<yourmap>::OnTimeLimitHit() {
 
 Since in this map the Strogg are defending they automatically win so no need to set the winning team (as we had already set it near the top). The other lines simply clean up the objectives a bit (setting them to nothing).
 
-**With the SDK Launcher**, start the game, bring down the console and type: "[Devmap\_(console\_command).html devmap] \<yourmap\>/\<yourmap\>" and press Enter.
+**With the SDK Launcher**, start the game, bring down the console and type: "[devmap](Devmap\_(console\_command)) \<yourmap\>/\<yourmap\>" and press Enter.
 
 In certain situations, the game will not load the map but print out the following error:
 
 `spawn map denied: unknown campaign 'yourmap'`
 
-In that case, type "seta [Si\_rules\_(cvar).html si\_rules] sdGameRulesObjective" and press \<Enter\> before trying devmap again. This will switch the game type from *campaign* mode to *objective* mode.
+In that case, type "seta [si\_rules](Si\_rules\_(cvar)) sdGameRulesObjective" and press \<Enter\> before trying devmap again. This will switch the game type from *campaign* mode to *objective* mode.
 

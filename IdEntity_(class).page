@@ -7,23 +7,23 @@ IdEntity (class)
  --------                                                                                                                      
                                                                                                                                
  </div>                                                                                                                        
- -   [IdEntity\_(class).html\#Description <span class="tocnumber">1</span> <span class="toctext">Description</span>]           
- -   [IdEntity\_(class).html\#Spawn\_Arguments <span class="tocnumber">2</span> <span class="toctext">Spawn Arguments</span>]  
- -   [IdEntity\_(class).html\#Inheritance <span class="tocnumber">3</span> <span class="toctext">Inheritance</span>]           
- -   [IdEntity\_(class).html\#Events <span class="tocnumber">4</span> <span class="toctext">Events</span>]                     
- -   [IdEntity\_(class).html\#Notes <span class="tocnumber">5</span> <span class="toctext">Notes</span>]                       |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Description</span>](IdEntity\_(class)#Description)           
+ -   [<span class="tocnumber">2</span> <span class="toctext">Spawn Arguments</span>](IdEntity\_(class)#Spawn\_Arguments)  
+ -   [<span class="tocnumber">3</span> <span class="toctext">Inheritance</span>](IdEntity\_(class)#Inheritance)           
+ -   [<span class="tocnumber">4</span> <span class="toctext">Events</span>](IdEntity\_(class)#Events)                     
+ -   [<span class="tocnumber">5</span> <span class="toctext">Notes</span>](IdEntity\_(class)#Notes)                       |
 
 Description
 -----------
 
-idEntity is the base [Spawn\_class.html spawn class] of [Entity.html entities].
+idEntity is the base [spawn class](Spawn\_class) of [entities](Entity).
 
 All other spawn classes inherit its functions, variables and events, but may override them to produce different behavior than idEntity.
 
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as [SpawnArgs.html spawn arguments], that function with this entity.
+The following is a list of key/value pairs, also known as [spawn arguments](SpawnArgs), that function with this entity.
 
 | KEY                   | DESCRIPTION                                                                                       |
 |-----------------------|---------------------------------------------------------------------------------------------------|
@@ -35,7 +35,7 @@ The following is a list of key/value pairs, also known as [SpawnArgs.html spawn 
 | bindanim              | Description not available.                                                                        |
 | cameraTarget          | Description not available.                                                                        |
 | cinematic             | Description not available.                                                                        |
-| classname             | [Entitydef\_(decl).html EntityDef] to load [SpawnArgs.html spawnArgs] from.                       |
+| classname             | [EntityDef](Entitydef\_(decl)) to load [spawnArgs](SpawnArgs) from.                       |
 | clipmodel             | Name of clip model to load.                                                                       |
 | cone                  | Set up clip model as cone with this number of sides. Use mins/maxs to set bounds.                 |
 | cylinder              | Set up clip model as cone with this number of sides. Use mins/maxs to set bounds.                 |
@@ -51,10 +51,10 @@ The following is a list of key/value pairs, also known as [SpawnArgs.html spawn 
 | noclipmodel           | Do not set up a clip model.                                                                       |
 | origin                | Initial world coordinates of entity.                                                              |
 | rotation              | rotation matrix.                                                                                  |
-| scriptobject          | Type of [Script\_object.html script object] for entity to use.                                    |
+| scriptobject          | Type of [script object](Script\_object) for entity to use.                                    |
 | size                  | Size of clip model, alternative to mins/maxs.                                                     |
 | solidForTeam          | Description not available.                                                                        |
-| spawnclass            | The [Spawn\_class.html spawn class] type as string.                                               |
+| spawnclass            | The [spawn class](Spawn\_class) type as string.                                               |
 | target                | Prefix, entity to add to target list.                                                             |
 | noDynamicInteractions | Don't create any light and shadow interactions for this entity after the level load is completed. |
 
@@ -63,10 +63,10 @@ Inheritance
 
 This entity is derived from the following:
 
--   *[IdClass\_(class).html idClass]*
+-   *[idClass](IdClass\_(class))*
     -   **'' idEntity**''
 
-**Note**: Entries marked in italics are classes defined in the [Coding.html\#Game\_code game code].
+**Note**: Entries marked in italics are classes defined in the [game code](Coding#Game\_code).
 
 Events
 ------

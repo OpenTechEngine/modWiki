@@ -2,7 +2,7 @@ Portaldistancenear (Material global keyword)
 ============================================
 
 <div style="padding: 1px; border: 0px solid #000000" align="left">
-<font size="18px"><font color="black">![Image:Q4square\_bg.png](images_6_69_Q4square_bg.png "fig:Image:Q4square_bg.png") The information on this page is specific to [Quake\_4.html Quake 4].</font></font>
+<font size="18px"><font color="black">![Image:Q4square\_bg.png](images_6_69_Q4square_bg.png "fig:Image:Q4square_bg.png") The information on this page is specific to [Quake 4](Quake\_4).</font></font>
 
 </div>
 
@@ -11,7 +11,7 @@ Portaldistancenear (Material global keyword)
 Description
 -----------
 
-Controls when to start closing a [Visportal.html visportal].
+Controls when to start closing a [visportal](Visportal).
 
 Usage
 -----
@@ -28,6 +28,6 @@ Parameters
 Notes
 -----
 
-Visportals usually only close in a specific set of circumstances; this keyword overrides that behaviour which can lead to noticeable visual artefacts so choose a distance to minimise it. See also the [Portalimage\_(Material\_global\_keyword).html portalimage] and [Portaldistancefar\_(Material\_global\_keyword).html portaldistancefar] keywords.
+Visportals usually only close in a specific set of circumstances; this keyword overrides that behaviour which can lead to noticeable visual artefacts so choose a distance to minimise it. See also the [portalimage](Portalimage\_(Material\_global\_keyword)) and [portaldistancefar](Portaldistancefar\_(Material\_global\_keyword)) keywords.
 
 

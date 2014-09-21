@@ -4,7 +4,7 @@ LightCarve
 Description
 -----------
 
-The **lightcarve** option to [Dmap\_(console\_command).html dmap] causes the map compiler to cut polygons at light boundaries (depicted by pink boxes in the editor) in order to reduce the number of lights hitting a given surface.
+The **lightcarve** option to [dmap](Dmap\_(console\_command)) causes the map compiler to cut polygons at light boundaries (depicted by pink boxes in the editor) in order to reduce the number of lights hitting a given surface.
 
 Usage
 -----
@@ -16,7 +16,7 @@ At the console type...
 Effective use of lightcarve
 ---------------------------
 
-Use of the lightcarve option allows the map designer to completely dispense with manual [Brush\_carving.html carving of brushes], creating an optimal light count by sacrificing some memory efficiency, and increasing frame rates in the process. However, optimisation of a different nature is necessary if lightcarve is used to build a level.
+Use of the lightcarve option allows the map designer to completely dispense with manual [carving of brushes](Brush\_carving), creating an optimal light count by sacrificing some memory efficiency, and increasing frame rates in the process. However, optimisation of a different nature is necessary if lightcarve is used to build a level.
 
 When using this technique, remember that every light you place will cause a cut, along the boundaries of its volume. Because of this, you must place lights effectively to avoid creating unnecessary additional triangles and increasing memory usage.
 
@@ -25,6 +25,6 @@ When using this technique, remember that every light you place will cause a cut,
 -   Two light volumes that stop a small distance short of each other will create extra triangles. Adjust their sizes and positions so that the volumes touch each other *exactly*, so that the cut can be shared between the two.
 -   Similarly, a light volume that stops a small distance short of a wall, floor, visportal or other brush is creating wasted triangles. Move it so that its volume shares the cut with the natural level geometry.
 -   Do not place a light such that its boundary intersects a piece of very complex brushwork. Position it so that the brushwork is either contained within or outside the light volume.
--   Playtest your map with the [R\_showTris\_(cvar).html r\_showTris] CVar, checking for thin lines of very small triangles. If you see one, you probably have a light which is positioned sub-optimally.
--   Not every map is suitable for lightcarve. If the map is extremely detailed, with many small triangles, lightcarve will probably make little difference to frame rates but may increase memory usage unnecessarily. Use both [Com\_showFPS\_(cvar).html com\_showFPS] and [Com\_showMemoryUsage\_(cvar).html com\_showMemoryUsage] CVars to strike the right balance.
+-   Playtest your map with the [r\_showTris](R\_showTris\_(cvar)) CVar, checking for thin lines of very small triangles. If you see one, you probably have a light which is positioned sub-optimally.
+-   Not every map is suitable for lightcarve. If the map is extremely detailed, with many small triangles, lightcarve will probably make little difference to frame rates but may increase memory usage unnecessarily. Use both [com\_showFPS](Com\_showFPS\_(cvar)) and [com\_showMemoryUsage](Com\_showMemoryUsage\_(cvar)) CVars to strike the right balance.
 

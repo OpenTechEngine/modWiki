@@ -26,7 +26,7 @@ Declarations often times reference other declarations. A key example would be en
 
 When a declaration references another declaration, it inherits those properties. Case in point, an entity references a given model declaration. The entity is assigned a model based on that model declaration rather than explicitly specifiying which file to use in the entity declaration itself.
 
-The same is true of key/value pairs (a.k.a. spawn arguments). Case in point, [Monster\_demon\_imp\_(entity).html monster\_demon\_imp] does not explicitly define a **bleed** key/value pair. But because it inherits properties from [Monster\_default\_(entity).html monster\_default], it has a **bleed** key/value pair.
+The same is true of key/value pairs (a.k.a. spawn arguments). Case in point, [monster\_demon\_imp](Monster\_demon\_imp\_(entity)) does not explicitly define a **bleed** key/value pair. But because it inherits properties from [monster\_default](Monster\_default\_(entity)), it has a **bleed** key/value pair.
 
 This inheritance is useful because it allows you to create a declaration that is nearly identical to another without the need to copy and paste it or modify the original. You simply reference the original declaration and add whatever unique properties you wish.
 
@@ -36,21 +36,21 @@ This inheritance is useful because it allows you to create a declaration that is
  --------                                                                                                                                          
                                                                                                                                                    
  </div>                                                                                                                                            
- -   [Declarations.html\#Syntax <span class="tocnumber">1</span> <span class="toctext">Syntax</span>]                                              
- -   [Declarations.html\#Universal\_declaration\_types <span class="tocnumber">2</span> <span class="toctext">Universal declaration types</span>]  
- -   [Declarations.html\#D3\_Declaration\_types <span class="tocnumber">3</span> <span class="toctext">D3 Declaration types</span>]                
- -   [Declarations.html\#Q4\_Declaration\_types <span class="tocnumber">4</span> <span class="toctext">Q4 Declaration types</span>]                
- -   [Declarations.html\#Editing\_tools <span class="tocnumber">5</span> <span class="toctext">Editing tools</span>]                               |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Syntax</span>](Declarations#Syntax)                                              
+ -   [<span class="tocnumber">2</span> <span class="toctext">Universal declaration types</span>](Declarations#Universal\_declaration\_types)  
+ -   [<span class="tocnumber">3</span> <span class="toctext">D3 Declaration types</span>](Declarations#D3\_Declaration\_types)                
+ -   [<span class="tocnumber">4</span> <span class="toctext">Q4 Declaration types</span>](Declarations#Q4\_Declaration\_types)                
+ -   [<span class="tocnumber">5</span> <span class="toctext">Editing tools</span>](Declarations#Editing\_tools)                               |
 
 Syntax
 ------
 
-A single declaration consists of a header and body. The header is composed of a name and sometimes a descriptor that defines the type of declaration (descriptors are not needed if the declaration is put in its respective [File\_formats.html\#Declaration\_containers file format]; for example you wouldn't need to put "material" before your material decls in an .[MTR\_(file\_format).html MTR] file). The body of a definition is enclosed in curly brackets.
+A single declaration consists of a header and body. The header is composed of a name and sometimes a descriptor that defines the type of declaration (descriptors are not needed if the declaration is put in its respective [file format](File\_formats#Declaration\_containers); for example you wouldn't need to put "material" before your material decls in an .[MTR](MTR\_(file\_format)) file). The body of a definition is enclosed in curly brackets.
 
 ![](/images/images_7_7e_Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
  ~  Declaration descriptors are always needed
 
-.[DEF\_(file\_format).html DEF] files are the standard container for declarations.
+.[DEF](DEF\_(file\_format)) files are the standard container for declarations.
 
 A few examples of headers would be...
 
@@ -82,7 +82,7 @@ These declarations are handled by the engine:
 --------------------------------------------------------------------------------------------------------------------------------------
 
   
-*The information in this section is specific to [Doom\_3.html Doom 3].*
+*The information in this section is specific to [Doom 3](Doom\_3).*
 
 Along with the universal decls Doom 3 provides the following:
 
@@ -97,7 +97,7 @@ Along with the universal decls Doom 3 provides the following:
 -----------------------------------------------------------------------------------------------
 
   
-*The information in this section is specific to [Quake\_4.html Quake 4].*
+*The information in this section is specific to [Quake 4](Quake\_4).*
 
 Along with the universal decls Quake 4 provides the following:
 
@@ -110,5 +110,5 @@ Along with the universal decls Quake 4 provides the following:
 Editing tools
 -------------
 
-Since declarations are plain-text files, a simple [Text\_editor.html text editor] can be used to edit or create declarations.
+Since declarations are plain-text files, a simple [text editor](Text\_editor) can be used to edit or create declarations.
 

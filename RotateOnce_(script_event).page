@@ -4,12 +4,12 @@ RotateOnce (script event)
 Game class
 ----------
 
-This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
 
 Description
 -----------
 
-Causes an [Entity.html entity] to perform a rotation along a specified vector once.
+Causes an [entity](Entity) to perform a rotation along a specified vector once.
 
 Usage
 -----
@@ -29,9 +29,9 @@ Examples
 Notes
 -----
 
-This script event does not return any values. This event differs from [Rotate\_(script\_event).html rotate] in that this is a terminating script event while rotate will force an entity to rotate for the duration of the game. The above example will cause the entity to rotate 90 degrees on the z-axis for the duration that entity's [Time\_(script\_event).html time] is set to. If no time is set, the default is 1 second.
+This script event does not return any values. This event differs from [rotate](Rotate\_(script\_event)) in that this is a terminating script event while rotate will force an entity to rotate for the duration of the game. The above example will cause the entity to rotate 90 degrees on the z-axis for the duration that entity's [time](Time\_(script\_event)) is set to. If no time is set, the default is 1 second.
 
- An example of using .time, [AccelTime\_(script\_event).html accelTime], [DecelTime\_(script\_event).html decelTime], and rotateOnce in a short script:
+ An example of using .time, [accelTime](AccelTime\_(script\_event)), [decelTime](DecelTime\_(script\_event)), and rotateOnce in a short script:
 
 <font color="#0000ff">`void`</font>` rotateCube `<font color="#000000">`(`</font><font color="#000000">`)`</font>
 ` `<font color="#000000">`{`</font>

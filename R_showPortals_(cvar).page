@@ -4,7 +4,7 @@ R showPortals (cvar)
 Description
 -----------
 
-Enables drawing [Visportal.html visportal] outlines.
+Enables drawing [visportal](Visportal) outlines.
 
 Usage
 -----
@@ -49,6 +49,6 @@ Flags
 Notes
 -----
 
-This CVar is used primarily to test whether a visportal is working and how efficient the optimisation is. Portals outlined in green mean they are open and that all geometry in that area is being processed. When a portal is red it means the area behind it is being ignored by the renderer. When they are used, there will always be at least one green portal. See also the [R\_useScissor\_(cvar).html r\_useScissor] and [R\_showTris\_(cvar).html r\_showTris] CVars.
+This CVar is used primarily to test whether a visportal is working and how efficient the optimisation is. Portals outlined in green mean they are open and that all geometry in that area is being processed. When a portal is red it means the area behind it is being ignored by the renderer. When they are used, there will always be at least one green portal. See also the [r\_useScissor](R\_useScissor\_(cvar)) and [r\_showTris](R\_showTris\_(cvar)) CVars.
 
 

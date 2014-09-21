@@ -1,9 +1,9 @@
 Entity
 ======
 
-**Entities** are functional objects placed in a map ("actors" to the Unreal mappers). [Light.html Lights], monsters, items, doors, ect... are all examples of entities.
+**Entities** are functional objects placed in a map ("actors" to the Unreal mappers). [Lights](Light), monsters, items, doors, ect... are all examples of entities.
 
-An entity is a combination of an [Entitydef\_(decl).html entityDef] type and a [Spawn\_class.html spawn class], and in many cases a map entity dictionary and/or a [Script\_object.html script object]. Entities also have a name unique from any other entity in the world.
+An entity is a combination of an [entityDef](Entitydef\_(decl)) type and a [spawn class](Spawn\_class), and in many cases a map entity dictionary and/or a [script object](Script\_object). Entities also have a name unique from any other entity in the world.
 
 People most commonly refer to an entity by the entityDef type.
 
@@ -15,10 +15,10 @@ Entities are dynamic are most commonly controlled by their spawn class or script
  --------                                                                                                                                                                          
                                                                                                                                                                                    
  </div>                                                                                                                                                                            
- -   [Entity.html\#Entity\_Interactions <span class="tocnumber">1</span> <span class="toctext">Entity Interactions</span>]                                                         
- -   [Entity.html\#Aditional\_comments\_concerning\_Entity\_Chaining <span class="tocnumber">2</span> <span class="toctext">Aditional comments concerning Entity Chaining</span>]  
- -   [Entity.html\#The\_Worldspawn <span class="tocnumber">3</span> <span class="toctext">The Worldspawn</span>]                                                                   
-     -   [Entity.html\#Worldspawn.27s\_Call\_property <span class="tocnumber">3.1</span> <span class="toctext">Worldspawn's Call property</span>]                                  |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Entity Interactions</span>](Entity#Entity\_Interactions)                                                         
+ -   [<span class="tocnumber">2</span> <span class="toctext">Aditional comments concerning Entity Chaining</span>](Entity#Aditional\_comments\_concerning\_Entity\_Chaining)  
+ -   [<span class="tocnumber">3</span> <span class="toctext">The Worldspawn</span>](Entity#The\_Worldspawn)                                                                   
+     -   [<span class="tocnumber">3.1</span> <span class="toctext">Worldspawn's Call property</span>](Entity#Worldspawn.27s\_Call\_property)                                  |
 
 Entity Interactions
 -------------------
@@ -54,7 +54,7 @@ In fact you could simply bind your brush to one of these instead of simply creat
 The Worldspawn
 --------------
 
-The worldspawn is a very specific type of entity. All maps must have one, and only one, worldspawn entity. Its purpose is to act as a container for every static brush in your map. If you get a "no worldspawn in map" message in the console when you try to load a map then, for some strange reason, the worldspawn information was lost and you must restore it. **Make a backup of your .[MAP\_(file\_format).html MAP] file** and open the copy in a text editor and make sure it starts with:
+The worldspawn is a very specific type of entity. All maps must have one, and only one, worldspawn entity. Its purpose is to act as a container for every static brush in your map. If you get a "no worldspawn in map" message in the console when you try to load a map then, for some strange reason, the worldspawn information was lost and you must restore it. **Make a backup of your .[MAP](MAP\_(file\_format)) file** and open the copy in a text editor and make sure it starts with:
 
 `Version 2 `
 `// entity 0 `

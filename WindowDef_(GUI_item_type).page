@@ -15,7 +15,7 @@ windowDef example preview
 </div>
 </div>
 </div>
-Pretty much the standard visual [GUI\_items.html item] type. When creating [GUIs.html GUIs], around 98% of the items you use in your script will be windowDefs. Also, all other item types work as extended windowDefs; from an OOP perspective, think of windowDef as a class and all other item types as being its subclasses.
+Pretty much the standard visual [item](GUI\_items) type. When creating [GUIs](GUIs), around 98% of the items you use in your script will be windowDefs. Also, all other item types work as extended windowDefs; from an OOP perspective, think of windowDef as a class and all other item types as being its subclasses.
 
 All in all, a windowDef can contain text strings; it can act as a button; it can work as an static decoration graphic; it can work as an invisible element that serve other scripting purposes, such as containing a code execution timeline; it can also hold specific, separated data.
 

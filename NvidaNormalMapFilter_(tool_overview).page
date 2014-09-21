@@ -15,52 +15,52 @@ However, it's also possible to normalize an existing normal map, combine a norma
   --------                                                                                                                                                                                                    
                                                                                                                                                                                                               
   </div>                                                                                                                                                                                                      
-  -   [NvidaNormalMapFilter\_(tool\_overview).html\#Foreword <span class="tocnumber">1</span> <span class="toctext">Foreword</span>]                                                                          
-  -   [NvidaNormalMapFilter\_(tool\_overview).html\#A\_Word\_About\_Channels <span class="tocnumber">2</span> <span class="toctext">A Word About Channels</span>]                                             
-  -   [NvidaNormalMapFilter\_(tool\_overview).html\#General\_Interface <span class="tocnumber">3</span> <span class="toctext">General Interface</span>]                                                       
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#Dynamic\_Preview <span class="tocnumber">3.1</span> <span class="toctext">Dynamic Preview</span>]                                                     
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#.22Add\_Height\_to\_Normal\_Map.22\_Checkbox <span class="tocnumber">3.2</span> <span class="toctext">"Add Height to Normal Map" Checkbox</span>]     
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#.22Output\_16:16.22\_Checkbox <span class="tocnumber">3.3</span> <span class="toctext">"Output 16:16" Checkbox</span>]                                
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#.22Output\_12:12:8.22\_Checkbox <span class="tocnumber">3.4</span> <span class="toctext">"Output 12:12:8" Checkbox</span>]                            
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#.22Using\_Multiple\_Layers.22\_Checkbox <span class="tocnumber">3.5</span> <span class="toctext">"Using Multiple Layers" Checkbox</span>]             
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#.22Signed\_Output.22\_Checkbox <span class="tocnumber">3.6</span> <span class="toctext">"Signed Output" Checkbox</span>]                              
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#.22Swap\_RGB.22\_Checkbox <span class="tocnumber">3.7</span> <span class="toctext">"Swap RGB" Checkbox</span>]                                        
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#3D\_Preview\_Button <span class="tocnumber">3.8</span> <span class="toctext">3D Preview Button</span>]                                                
-  -   [NvidaNormalMapFilter\_(tool\_overview).html\#Height\_Generation <span class="tocnumber">4</span> <span class="toctext">Height Generation</span>]                                                       
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#.22Wrap.22\_Checkbox <span class="tocnumber">4.1</span> <span class="toctext">"Wrap" Checkbox</span>]                                                 
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#.22Invert\_X.22\_Checkbox <span class="tocnumber">4.2</span> <span class="toctext">"Invert X" Checkbox</span>]                                        
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#.22Invert\_Y.22\_Checkbox <span class="tocnumber">4.3</span> <span class="toctext">"Invert Y" Checkbox</span>]                                        
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#.22Min\_Z.22\_Textbox <span class="tocnumber">4.4</span> <span class="toctext">"Min Z" Textbox</span>]                                                
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#.22Scale.22\_Textbox <span class="tocnumber">4.5</span> <span class="toctext">"Scale" Textbox</span>]                                                 
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#Filter\_Type <span class="tocnumber">4.6</span> <span class="toctext">Filter Type</span>]                                                             
-          -   [NvidaNormalMapFilter\_(tool\_overview).html\#4\_Sample <span class="tocnumber">4.6.1</span> <span class="toctext">4 Sample</span>]                                                             
-          -   [NvidaNormalMapFilter\_(tool\_overview).html\#3\_x\_3 <span class="tocnumber">4.6.2</span> <span class="toctext">3 x 3</span>]                                                                  
-          -   [NvidaNormalMapFilter\_(tool\_overview).html\#5\_x\_5 <span class="tocnumber">4.6.3</span> <span class="toctext">5 x 5</span>]                                                                  
-          -   [NvidaNormalMapFilter\_(tool\_overview).html\#7\_x\_7 <span class="tocnumber">4.6.4</span> <span class="toctext">7 x 7</span>]                                                                  
-          -   [NvidaNormalMapFilter\_(tool\_overview).html\#9\_x\_9 <span class="tocnumber">4.6.5</span> <span class="toctext">9 x 9</span>]                                                                  
-          -   [NvidaNormalMapFilter\_(tool\_overview).html\#Du.2FDv <span class="tocnumber">4.6.6</span> <span class="toctext">Du/Dv</span>]                                                                  
-          -   [NvidaNormalMapFilter\_(tool\_overview).html\#Q8W8V8U8 <span class="tocnumber">4.6.7</span> <span class="toctext">Q8W8V8U8</span>]                                                              
-  -   [NvidaNormalMapFilter\_(tool\_overview).html\#3D\_Preview\_Options <span class="tocnumber">5</span> <span class="toctext">3D Preview Options</span>]                                                    
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#Decal\_Texture <span class="tocnumber">5.1</span> <span class="toctext">Decal Texture</span>]                                                         
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#.22Use\_Decal\_Texture.22\_Checkbox <span class="tocnumber">5.2</span> <span class="toctext">"Use Decal Texture" Checkbox</span>]                     
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#.22Brigten\_Decal.22\_Checkbox <span class="tocnumber">5.3</span> <span class="toctext">"Brigten Decal" Checkbox</span>]                              
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#.22Animate\_Light.22\_Checkbox <span class="tocnumber">5.4</span> <span class="toctext">"Animate Light" Checkbox</span>]                              
-  -   [NvidaNormalMapFilter\_(tool\_overview).html\#Height\_Source <span class="tocnumber">6</span> <span class="toctext">Height Source</span>]                                                               
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#Alpha\_Channel <span class="tocnumber">6.1</span> <span class="toctext">Alpha Channel</span>]                                                         
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#Average\_RGB <span class="tocnumber">6.2</span> <span class="toctext">Average RGB</span>]                                                             
-  -   [NvidaNormalMapFilter\_(tool\_overview).html\#Alternate\_Conversions <span class="tocnumber">7</span> <span class="toctext">Alternate Conversions</span>]                                               
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#Biased\_RGB <span class="tocnumber">7.1</span> <span class="toctext">Biased RGB</span>]                                                               
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#Red <span class="tocnumber">7.2</span> <span class="toctext">Red</span>]                                                                              
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#Green <span class="tocnumber">7.3</span> <span class="toctext">Green</span>]                                                                          
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#Blue <span class="tocnumber">7.4</span> <span class="toctext">Blue</span>]                                                                            
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#Max\_.28R.2CG.2CB.29 <span class="tocnumber">7.5</span> <span class="toctext">Max (R,G,B)</span>]                                                     
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#Colorspace <span class="tocnumber">7.6</span> <span class="toctext">Colorspace</span>]                                                                
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#Normalize\_Only <span class="tocnumber">7.7</span> <span class="toctext">Normalize Only</span>]                                                       
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#Convert\_to\_Height <span class="tocnumber">7.8</span> <span class="toctext">Convert to Height</span>]                                                
-  -   [NvidaNormalMapFilter\_(tool\_overview).html\#Alpha\_Field <span class="tocnumber">8</span> <span class="toctext">Alpha Field</span>]                                                                   
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#Unchanged <span class="tocnumber">8.1</span> <span class="toctext">Unchanged</span>]                                                                  
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#Set\_to\_0.0 <span class="tocnumber">8.2</span> <span class="toctext">Set to 0.0</span>]                                                              
-      -   [NvidaNormalMapFilter\_(tool\_overview).html\#Set\_to\_1.1 <span class="tocnumber">8.3</span> <span class="toctext">Set to 1.1</span>]                                                           |  |
+  -   [<span class="tocnumber">1</span> <span class="toctext">Foreword</span>](NvidaNormalMapFilter\_(tool\_overview)#Foreword)                                                                          
+  -   [<span class="tocnumber">2</span> <span class="toctext">A Word About Channels</span>](NvidaNormalMapFilter\_(tool\_overview)#A\_Word\_About\_Channels)                                             
+  -   [<span class="tocnumber">3</span> <span class="toctext">General Interface</span>](NvidaNormalMapFilter\_(tool\_overview)#General\_Interface)                                                       
+      -   [<span class="tocnumber">3.1</span> <span class="toctext">Dynamic Preview</span>](NvidaNormalMapFilter\_(tool\_overview)#Dynamic\_Preview)                                                     
+      -   [<span class="tocnumber">3.2</span> <span class="toctext">"Add Height to Normal Map" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Add\_Height\_to\_Normal\_Map.22\_Checkbox)     
+      -   [<span class="tocnumber">3.3</span> <span class="toctext">"Output 16:16" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Output\_16:16.22\_Checkbox)                                
+      -   [<span class="tocnumber">3.4</span> <span class="toctext">"Output 12:12:8" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Output\_12:12:8.22\_Checkbox)                            
+      -   [<span class="tocnumber">3.5</span> <span class="toctext">"Using Multiple Layers" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Using\_Multiple\_Layers.22\_Checkbox)             
+      -   [<span class="tocnumber">3.6</span> <span class="toctext">"Signed Output" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Signed\_Output.22\_Checkbox)                              
+      -   [<span class="tocnumber">3.7</span> <span class="toctext">"Swap RGB" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Swap\_RGB.22\_Checkbox)                                        
+      -   [<span class="tocnumber">3.8</span> <span class="toctext">3D Preview Button</span>](NvidaNormalMapFilter\_(tool\_overview)#3D\_Preview\_Button)                                                
+  -   [<span class="tocnumber">4</span> <span class="toctext">Height Generation</span>](NvidaNormalMapFilter\_(tool\_overview)#Height\_Generation)                                                       
+      -   [<span class="tocnumber">4.1</span> <span class="toctext">"Wrap" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Wrap.22\_Checkbox)                                                 
+      -   [<span class="tocnumber">4.2</span> <span class="toctext">"Invert X" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Invert\_X.22\_Checkbox)                                        
+      -   [<span class="tocnumber">4.3</span> <span class="toctext">"Invert Y" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Invert\_Y.22\_Checkbox)                                        
+      -   [<span class="tocnumber">4.4</span> <span class="toctext">"Min Z" Textbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Min\_Z.22\_Textbox)                                                
+      -   [<span class="tocnumber">4.5</span> <span class="toctext">"Scale" Textbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Scale.22\_Textbox)                                                 
+      -   [<span class="tocnumber">4.6</span> <span class="toctext">Filter Type</span>](NvidaNormalMapFilter\_(tool\_overview)#Filter\_Type)                                                             
+          -   [<span class="tocnumber">4.6.1</span> <span class="toctext">4 Sample</span>](NvidaNormalMapFilter\_(tool\_overview)#4\_Sample)                                                             
+          -   [<span class="tocnumber">4.6.2</span> <span class="toctext">3 x 3</span>](NvidaNormalMapFilter\_(tool\_overview)#3\_x\_3)                                                                  
+          -   [<span class="tocnumber">4.6.3</span> <span class="toctext">5 x 5</span>](NvidaNormalMapFilter\_(tool\_overview)#5\_x\_5)                                                                  
+          -   [<span class="tocnumber">4.6.4</span> <span class="toctext">7 x 7</span>](NvidaNormalMapFilter\_(tool\_overview)#7\_x\_7)                                                                  
+          -   [<span class="tocnumber">4.6.5</span> <span class="toctext">9 x 9</span>](NvidaNormalMapFilter\_(tool\_overview)#9\_x\_9)                                                                  
+          -   [<span class="tocnumber">4.6.6</span> <span class="toctext">Du/Dv</span>](NvidaNormalMapFilter\_(tool\_overview)#Du.2FDv)                                                                  
+          -   [<span class="tocnumber">4.6.7</span> <span class="toctext">Q8W8V8U8</span>](NvidaNormalMapFilter\_(tool\_overview)#Q8W8V8U8)                                                              
+  -   [<span class="tocnumber">5</span> <span class="toctext">3D Preview Options</span>](NvidaNormalMapFilter\_(tool\_overview)#3D\_Preview\_Options)                                                    
+      -   [<span class="tocnumber">5.1</span> <span class="toctext">Decal Texture</span>](NvidaNormalMapFilter\_(tool\_overview)#Decal\_Texture)                                                         
+      -   [<span class="tocnumber">5.2</span> <span class="toctext">"Use Decal Texture" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Use\_Decal\_Texture.22\_Checkbox)                     
+      -   [<span class="tocnumber">5.3</span> <span class="toctext">"Brigten Decal" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Brigten\_Decal.22\_Checkbox)                              
+      -   [<span class="tocnumber">5.4</span> <span class="toctext">"Animate Light" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Animate\_Light.22\_Checkbox)                              
+  -   [<span class="tocnumber">6</span> <span class="toctext">Height Source</span>](NvidaNormalMapFilter\_(tool\_overview)#Height\_Source)                                                               
+      -   [<span class="tocnumber">6.1</span> <span class="toctext">Alpha Channel</span>](NvidaNormalMapFilter\_(tool\_overview)#Alpha\_Channel)                                                         
+      -   [<span class="tocnumber">6.2</span> <span class="toctext">Average RGB</span>](NvidaNormalMapFilter\_(tool\_overview)#Average\_RGB)                                                             
+  -   [<span class="tocnumber">7</span> <span class="toctext">Alternate Conversions</span>](NvidaNormalMapFilter\_(tool\_overview)#Alternate\_Conversions)                                               
+      -   [<span class="tocnumber">7.1</span> <span class="toctext">Biased RGB</span>](NvidaNormalMapFilter\_(tool\_overview)#Biased\_RGB)                                                               
+      -   [<span class="tocnumber">7.2</span> <span class="toctext">Red</span>](NvidaNormalMapFilter\_(tool\_overview)#Red)                                                                              
+      -   [<span class="tocnumber">7.3</span> <span class="toctext">Green</span>](NvidaNormalMapFilter\_(tool\_overview)#Green)                                                                          
+      -   [<span class="tocnumber">7.4</span> <span class="toctext">Blue</span>](NvidaNormalMapFilter\_(tool\_overview)#Blue)                                                                            
+      -   [<span class="tocnumber">7.5</span> <span class="toctext">Max (R,G,B)</span>](NvidaNormalMapFilter\_(tool\_overview)#Max\_.28R.2CG.2CB.29)                                                     
+      -   [<span class="tocnumber">7.6</span> <span class="toctext">Colorspace</span>](NvidaNormalMapFilter\_(tool\_overview)#Colorspace)                                                                
+      -   [<span class="tocnumber">7.7</span> <span class="toctext">Normalize Only</span>](NvidaNormalMapFilter\_(tool\_overview)#Normalize\_Only)                                                       
+      -   [<span class="tocnumber">7.8</span> <span class="toctext">Convert to Height</span>](NvidaNormalMapFilter\_(tool\_overview)#Convert\_to\_Height)                                                
+  -   [<span class="tocnumber">8</span> <span class="toctext">Alpha Field</span>](NvidaNormalMapFilter\_(tool\_overview)#Alpha\_Field)                                                                   
+      -   [<span class="tocnumber">8.1</span> <span class="toctext">Unchanged</span>](NvidaNormalMapFilter\_(tool\_overview)#Unchanged)                                                                  
+      -   [<span class="tocnumber">8.2</span> <span class="toctext">Set to 0.0</span>](NvidaNormalMapFilter\_(tool\_overview)#Set\_to\_0.0)                                                              
+      -   [<span class="tocnumber">8.3</span> <span class="toctext">Set to 1.1</span>](NvidaNormalMapFilter\_(tool\_overview)#Set\_to\_1.1)                                                           |  |
 
 A Word About Channels
 ---------------------

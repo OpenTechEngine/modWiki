@@ -2,13 +2,13 @@ Folder structure (Quake 4)
 ==========================
 
 <div style="padding: 1px; border: 0px solid #000000" align="left">
-<font size="18px"><font color="black">![Image:Q4square\_bg.png](images_6_69_Q4square_bg.png "fig:Image:Q4square_bg.png") The information on this page is specific to [Quake\_4.html Quake 4].</font></font>
+<font size="18px"><font color="black">![Image:Q4square\_bg.png](images_6_69_Q4square_bg.png "fig:Image:Q4square_bg.png") The information on this page is specific to [Quake 4](Quake\_4).</font></font>
 
 </div>
 
 ------------------------------------------------------------------------
 
-This is the folder structure of Quake 4. It should be noted that these folders are not present in the base folder itself. Instead, these folders and the assets contained therein are stored in [PK4\_(file\_format).html PK4 archives].
+This is the folder structure of Quake 4. It should be noted that these folders are not present in the base folder itself. Instead, these folders and the assets contained therein are stored in [PK4 archives](PK4\_(file\_format)).
 
 <table>
 <colgroup>
@@ -61,18 +61,18 @@ This is the folder structure of Quake 4. It should be noted that these folders a
 </div>
 <p></font></p></td>
 <td align="left"><h3>/q4base</h3>
-<p>This is the default Quake 4 mod directory. The contents of this directory include all the game assets used in the game. Mods for Quake 4 should be created in their own directory in the main Quake 4 installation folder as a brother folder to /q4base. In the engine code your mods' base name is always called &quot;base&quot; no matter the actual physical name. You set the game to use a different folder as base with the [Fs_game_(cvar).html fs_game] cvar.</p>
-<p>You can also set the [Fs_game_base_(cvar).html fs_game_base] cvar to let you base a mod off base game and your own content as usual as well as an additional mod.</p>
-<p><strong>Note:</strong> While you probably want to work on your mod with the assets decompressed and available in the Quake 4 folder structure, when you release your mod you should put them into .[PK4_(file_format).html PK4] files.</p>
+<p>This is the default Quake 4 mod directory. The contents of this directory include all the game assets used in the game. Mods for Quake 4 should be created in their own directory in the main Quake 4 installation folder as a brother folder to /q4base. In the engine code your mods' base name is always called &quot;base&quot; no matter the actual physical name. You set the game to use a different folder as base with the [fs_game](Fs_game_(cvar)) cvar.</p>
+<p>You can also set the [fs_game_base](Fs_game_base_(cvar)) cvar to let you base a mod off base game and your own content as usual as well as an additional mod.</p>
+<p><strong>Note:</strong> While you probably want to work on your mod with the assets decompressed and available in the Quake 4 folder structure, when you release your mod you should put them into .[PK4](PK4_(file_format)) files.</p>
 <h3>/q4base/af</h3>
-<p>This folder contains .AF files which setup the [Af_(decl).html articulated figure declarations].</p>
+<p>This folder contains .AF files which setup the [articulated figure declarations](Af_(decl)).</p>
 <h3>/q4base/cfg</h3>
 <h3>/q4base/def</h3>
-<p>This folder contains .DEF files which contain [Declarations.html declarations] for entities, models and modelexport.</p>
+<p>This folder contains .DEF files which contain [declarations](Declarations) for entities, models and modelexport.</p>
 <h3>/q4base/demos</h3>
-<p>This folder contains .[DEMO_(file_format).html DEMO] files which are gameplay recordings.</p>
+<p>This folder contains .[DEMO](DEMO_(file_format)) files which are gameplay recordings.</p>
 <h3>/q4base/effects</h3>
-<p>This folder contains .[FX_(file_format).html FX] files which in turn contain effect declarations.</p>
+<p>This folder contains .[FX](FX_(file_format)) files which in turn contain effect declarations.</p>
 <h3>/q4base/efxs</h3>
 <p>This folder contains .EFX files which containt reverb information for maps.</p>
 <h3>/q4base/fonts</h3>
@@ -80,52 +80,52 @@ This is the folder structure of Quake 4. It should be noted that these folders a
 <h3>/q4base/gfx/2d</h3>
 <h3>/q4base/gfx/decals</h3>
 <h3>/q4base/gfx/effects</h3>
-<p>This folder contains .[TGA_(file_format).html TGA] files used in effects.</p>
+<p>This folder contains .[TGA](TGA_(file_format)) files used in effects.</p>
 <h3>/q4base/gfx/env</h3>
-<p>This folder contains [Images.html images] for [Cube_maps.html environment maps] which are textures applied to the inside faces of a skybox to give the appearance of large spaces.</p>
+<p>This folder contains [images](Images) for [environment maps](Cube_maps) which are textures applied to the inside faces of a skybox to give the appearance of large spaces.</p>
 <h3>/q4base/gfx/guis</h3>
-<p>This folder contains .[TGA_(file_format).html TGA] files used in the user interface.</p>
+<p>This folder contains .[TGA](TGA_(file_format)) files used in the user interface.</p>
 <h3>/q4base/gfx/lights</h3>
-<p>This folder contains .[TGA_(file_format).html TGA] files which become available for use in [Material_(decl).html light materials] to create 'light styles' that modulate what light projects onto the surfaces of the world.</p>
+<p>This folder contains .[TGA](TGA_(file_format)) files which become available for use in [light materials](Material_(decl)) to create 'light styles' that modulate what light projects onto the surfaces of the world.</p>
 <h3>/q4base/gfx/mp</h3>
 <h3>/q4base/gfx/objectives</h3>
 <h3>/q4base/glprogs</h3>
-<p>This folder contains .[VFP_(file_format).html VFP] and .[VP_(file_format).html VP] files which become available for use in [Material_(decl).html materials] for [Vertex_and_fragment_programs.html visual special effects].</p>
+<p>This folder contains .[VFP](VFP_(file_format)) and .[VP](VP_(file_format)) files which become available for use in [materials](Material_(decl)) for [visual special effects](Vertex_and_fragment_programs).</p>
 <h3>/q4base/guides</h3>
-<p>This folder contains .GUIDE files which contain [Guide_(decl).html material guide declarations].</p>
+<p>This folder contains .GUIDE files which contain [material guide declarations](Guide_(decl)).</p>
 <h3>/q4base/guis</h3>
-<p>This folder contains .GUI files which setup the [GUIs.html graphical user interfaces].</p>
+<p>This folder contains .GUI files which setup the [graphical user interfaces](GUIs).</p>
 <h3>/q4base/lipsync</h3>
-<p>This folder contains .LIPSYNC files which contain [Lipsync_(decl).html lipsync declarations].</p>
+<p>This folder contains .LIPSYNC files which contain [lipsync declarations](Lipsync_(decl)).</p>
 <h3>/q4base/maps</h3>
-<p>This folder contains the .[MAP_(file_format).html MAP], .[CM_(file_format).html CM], .[PROC_(file_format).html PROC], and .[AAS_(file_format).html AAS] files for each map. Should there be any .BAK files there they should be removed prior to distribution as these are just backup versions created by the [Map_editor.html map editor].</p>
+<p>This folder contains the .[MAP](MAP_(file_format)), .[CM](CM_(file_format)), .[PROC](PROC_(file_format)), and .[AAS](AAS_(file_format)) files for each map. Should there be any .BAK files there they should be removed prior to distribution as these are just backup versions created by the [map editor](Map_editor).</p>
 <h3>/q4base/materials</h3>
-<p>This folder contains .MTR files which setup the [Material_(decl).html material declarations].</p>
+<p>This folder contains .MTR files which setup the [material declarations](Material_(decl)).</p>
 <h3>/q4base/models</h3>
 <p>This folder contains numerous sub-directories where the following file formats can be found:</p>
 <dl>
 <dt>Model formats</dt>
-<dd>.[ASE_(file_format).html ASE], .[LWO_(file_format).html LWO], .[MD5_(file_format).html MD5].
+<dd>.[ASE](ASE_(file_format)), .[LWO](LWO_(file_format)), .[MD5](MD5_(file_format)).
 </dd>
 <dt>Image formats</dt>
-<dd>.[TGA_(file_format).html TGA], .[DDS_(file_format).html DDS], .[JPG_(file_format).html JPG].
+<dd>.[TGA](TGA_(file_format)), .[DDS](DDS_(file_format)), .[JPG](JPG_(file_format)).
 </dd>
 <dt>Other formats</dt>
-<dd>.[CM_(file_format).html CM].
+<dd>.[CM](CM_(file_format)).
 </dd>
 </dl>
 <h3>/q4base/playbacks</h3>
 <h3>/q4base/progimg</h3>
 <h3>/q4base/scripts</h3>
 <h3>/q4base/skins</h3>
-<p>This folder contains .SKIN files which setup the [Skin_(decl).html skin declarations].</p>
+<p>This folder contains .SKIN files which setup the [skin declarations](Skin_(decl)).</p>
 <h3>/q4base/sound</h3>
 <h3>/q4base/strings</h3>
-<p>This folder contains .[LANG_(file_format).html LANG] files which are used for localization. The engine loads all of the files from this folder and parses the numbered strings within these files to make them available to the code, [GUIs.html GUIs] and [Mapping.html maps].</p>
+<p>This folder contains .[LANG](LANG_(file_format)) files which are used for localization. The engine loads all of the files from this folder and parses the numbered strings within these files to make them available to the code, [GUIs](GUIs) and [maps](Mapping).</p>
 <h3>/q4base/textures</h3>
-<p>This folder contains .[TGA_(file_format).html TGA] or .[JPG_(file_format).html JPG] files which become available for use as assets in [Material_(decl).html material declarations].</p>
+<p>This folder contains .[TGA](TGA_(file_format)) or .[JPG](JPG_(file_format)) files which become available for use as assets in [material declarations](Material_(decl)).</p>
 <h3>/q4base/video</h3>
-<p>This folder contains .[ROQ_(file_format).html ROQ] files which are movies.</p></td>
+<p>This folder contains .[ROQ](ROQ_(file_format)) files which are movies.</p></td>
 </tr>
 </tbody>
 </table>

@@ -2,13 +2,13 @@ DoomEdit
 ========
 
 <div style="padding: 1px; border: 0px solid #000000" align="left">
-<font size="18px"><font color="black">![Image:D3square\_bg.png](images_c_cb_D3square_bg.png "fig:Image:D3square_bg.png") The information on this page is specific to [Doom\_3.html Doom 3].</font></font>
+<font size="18px"><font color="black">![Image:D3square\_bg.png](images_c_cb_D3square_bg.png "fig:Image:D3square_bg.png") The information on this page is specific to [Doom 3](Doom\_3).</font></font>
 
 </div>
 
 ------------------------------------------------------------------------
 
-This page describes the Doom 3 specific functionality of the built-in map editor. For general information common to all [Id\_Tech\_4.html id Tech 4] games' editors please see the [Map\_editor.html map editor] page. DoomEdit can be started by typing "[Editor\_(console\_command).html editor]" in the [Console.html console] or by starting Doom 3 with "+editor" in the shortcut's target command parameters. The best way to start DoomEdit is from its own shortcut:
+This page describes the Doom 3 specific functionality of the built-in map editor. For general information common to all [id Tech 4](Id\_Tech\_4) games' editors please see the [map editor](Map\_editor) page. DoomEdit can be started by typing "[editor](Editor\_(console\_command))" in the [console](Console) or by starting Doom 3 with "+editor" in the shortcut's target command parameters. The best way to start DoomEdit is from its own shortcut:
 
 `d:\doom3\doom3.exe +set [R_fullscreen_(cvar).html r_fullscreen] 0 +set [R_multiSamples_(cvar).html r_multiSamples] 0 +editor`
 
@@ -18,21 +18,21 @@ This page describes the Doom 3 specific functionality of the built-in map editor
  --------                                                                                                                                                                                                                                       
                                                                                                                                                                                                                                                 
  </div>                                                                                                                                                                                                                                         
- -   [DoomEdit.html\#Requirements <span class="tocnumber">1</span> <span class="toctext">Requirements</span>]                                                                                                                                   
- -   [DoomEdit.html\#Preferences <span class="tocnumber">2</span> <span class="toctext">Preferences</span>]                                                                                                                                     
-     -   [DoomEdit.html\#Views.2Frendering <span class="tocnumber">2.1</span> <span class="toctext">Views/rendering</span>]                                                                                                                     
-     -   [DoomEdit.html\#New\_functionality <span class="tocnumber">2.2</span> <span class="toctext">New functionality</span>]                                                                                                                  
-     -   [DoomEdit.html\#Tool\_settings <span class="tocnumber">2.3</span> <span class="toctext">Tool settings</span>]                                                                                                                          
- -   [DoomEdit.html\#Troubleshooting <span class="tocnumber">3</span> <span class="toctext">Troubleshooting</span>]                                                                                                                             
-     -   [DoomEdit.html\#When\_compiling\_the\_map\_I\_get\_an\_error <span class="tocnumber">3.1</span> <span class="toctext">When compiling the map I get an error</span>]                                                                    
-     -   [DoomEdit.html\#The\_toolbar\_disappeared <span class="tocnumber">3.2</span> <span class="toctext">The toolbar disappeared</span>]                                                                                                     
-     -   [DoomEdit.html\#Grid\_lines\_don.27t\_show\_up <span class="tocnumber">3.3</span> <span class="toctext">Grid lines don't show up</span>]                                                                                               
-     -   [DoomEdit.html\#X\_doesn.27t\_show\_up\_in\_the\_editor\_but\_does\_in\_the\_game <span class="tocnumber">3.4</span> <span class="toctext">X doesn't show up in the editor but does in the game</span>]                                
-     -   [DoomEdit.html\#X\_doesn.27t\_show\_up\_in\_the\_game\_but\_does\_in\_the\_editor <span class="tocnumber">3.5</span> <span class="toctext">X doesn't show up in the game but does in the editor</span>]                                
-     -   [DoomEdit.html\#There\_are\_many\_black\_textures\_in\_the\_texture\_browser <span class="tocnumber">3.6</span> <span class="toctext">There are many black textures in the texture browser</span>]                                     
-     -   [DoomEdit.html\#Unable\_to\_delete\_the\_old\_.bak\_file <span class="tocnumber">3.7</span> <span class="toctext">Unable to delete the old .bak file</span>]                                                                           
- -   [DoomEdit.html\#Fixed\_editor\_problems <span class="tocnumber">4</span> <span class="toctext">Fixed editor problems</span>]                                                                                                               
-     -   [DoomEdit.html\#Physical\_memory\_is\_over\_80.25\_utilized.\_Consider\_saving\_and\_restarting <span class="tocnumber">4.1</span> <span class="toctext">Physical memory is over 80% utilized. Consider saving and restarting</span>]  |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Requirements</span>](DoomEdit#Requirements)                                                                                                                                   
+ -   [<span class="tocnumber">2</span> <span class="toctext">Preferences</span>](DoomEdit#Preferences)                                                                                                                                     
+     -   [<span class="tocnumber">2.1</span> <span class="toctext">Views/rendering</span>](DoomEdit#Views.2Frendering)                                                                                                                     
+     -   [<span class="tocnumber">2.2</span> <span class="toctext">New functionality</span>](DoomEdit#New\_functionality)                                                                                                                  
+     -   [<span class="tocnumber">2.3</span> <span class="toctext">Tool settings</span>](DoomEdit#Tool\_settings)                                                                                                                          
+ -   [<span class="tocnumber">3</span> <span class="toctext">Troubleshooting</span>](DoomEdit#Troubleshooting)                                                                                                                             
+     -   [<span class="tocnumber">3.1</span> <span class="toctext">When compiling the map I get an error</span>](DoomEdit#When\_compiling\_the\_map\_I\_get\_an\_error)                                                                    
+     -   [<span class="tocnumber">3.2</span> <span class="toctext">The toolbar disappeared</span>](DoomEdit#The\_toolbar\_disappeared)                                                                                                     
+     -   [<span class="tocnumber">3.3</span> <span class="toctext">Grid lines don't show up</span>](DoomEdit#Grid\_lines\_don.27t\_show\_up)                                                                                               
+     -   [<span class="tocnumber">3.4</span> <span class="toctext">X doesn't show up in the editor but does in the game</span>](DoomEdit#X\_doesn.27t\_show\_up\_in\_the\_editor\_but\_does\_in\_the\_game)                                
+     -   [<span class="tocnumber">3.5</span> <span class="toctext">X doesn't show up in the game but does in the editor</span>](DoomEdit#X\_doesn.27t\_show\_up\_in\_the\_game\_but\_does\_in\_the\_editor)                                
+     -   [<span class="tocnumber">3.6</span> <span class="toctext">There are many black textures in the texture browser</span>](DoomEdit#There\_are\_many\_black\_textures\_in\_the\_texture\_browser)                                     
+     -   [<span class="tocnumber">3.7</span> <span class="toctext">Unable to delete the old .bak file</span>](DoomEdit#Unable\_to\_delete\_the\_old\_.bak\_file)                                                                           
+ -   [<span class="tocnumber">4</span> <span class="toctext">Fixed editor problems</span>](DoomEdit#Fixed\_editor\_problems)                                                                                                               
+     -   [<span class="tocnumber">4.1</span> <span class="toctext">Physical memory is over 80% utilized. Consider saving and restarting</span>](DoomEdit#Physical\_memory\_is\_over\_80.25\_utilized.\_Consider\_saving\_and\_restarting)  |
 
 Requirements
 ------------
@@ -48,7 +48,7 @@ Despite the fact that Doom 3 runs on other platforms, DoomEdit requires Windows 
 Preferences
 -----------
 
-To access the preferences window go to Edit \> Preferences ([DoomEdit\_hotkeys.html hotkey: TAB])
+To access the preferences window go to Edit \> Preferences ([hotkey: TAB](DoomEdit\_hotkeys))
 
 ![The preferences window](images_f_f1_DoomEdit_Pref.png "The preferences window")
 
@@ -98,11 +98,11 @@ Some of these options are deprecated. From the top left corner:
 Troubleshooting
 ---------------
 
-This section describes bugs or peculiar behaviour of DoomEdit and any known solutions. Before going any further, make sure you are running the editor in [R\_fullscreen\_(cvar).html windowed] mode. It will fix a lot of problems like disappearing cursor and light inspector, allowing you to run at a resolution higher than in-game, etc. Also, if you find a bug not covered here you might try quitting the editor, deleting the [CFG\_(file\_format).html editor.cfg] file present in the /[Base\_(folder).html base (folder)] folder and restarting the editor. This will revert the editor to its defaults.
+This section describes bugs or peculiar behaviour of DoomEdit and any known solutions. Before going any further, make sure you are running the editor in [windowed](R\_fullscreen\_(cvar)) mode. It will fix a lot of problems like disappearing cursor and light inspector, allowing you to run at a resolution higher than in-game, etc. Also, if you find a bug not covered here you might try quitting the editor, deleting the [editor.cfg](CFG\_(file\_format)) file present in the /[base (folder)](Base\_(folder)) folder and restarting the editor. This will revert the editor to its defaults.
 
 ### When compiling the map I get an error
 
-Please check the [Common\_Mapping\_Issues.html Common Mapping Issues] page for all known compiler error messages and solutions.
+Please check the [Common Mapping Issues](Common\_Mapping\_Issues) page for all known compiler error messages and solutions.
 
 ### The toolbar disappeared
 
@@ -110,7 +110,7 @@ If you close the toolbar (accidentally or not), the only way to get it back is t
 
 ### Grid lines don't show up
 
-Make sure [Antialiasing.html Antialiasing] is set to *Off* or *Application controlled* in your graphics driver control panel in Windows. Also make sure the [R\_multiSamples\_(cvar).html in-game AA] is set to off too.
+Make sure [Antialiasing](Antialiasing) is set to *Off* or *Application controlled* in your graphics driver control panel in Windows. Also make sure the [in-game AA](R\_multiSamples\_(cvar)) is set to off too.
 
 If you are running Windows Vista, you will also need to diable Aero (the transparent glass effect).
 
@@ -128,7 +128,7 @@ Doom 3 comes with a lot of redundant, nonfunctional material shaders. The proble
 
 At present no level editor, including the built in editor, validates each shader to ensure the images exist. This results in a texture browser where half the textures listed are of no use.
 
-In the case of Doom 3, there is a workaround and the same solution could be applied to other games. Check [Eutectic's\_clean\_paks.html eutectic's clean paks] for more details.
+In the case of Doom 3, there is a workaround and the same solution could be applied to other games. Check [eutectic's clean paks](Eutectic's\_clean\_paks) for more details.
 
 ### Unable to delete the old .bak file
 

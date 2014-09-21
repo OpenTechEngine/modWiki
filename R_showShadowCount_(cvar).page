@@ -4,7 +4,7 @@ R showShadowCount (cvar)
 Description
 -----------
 
-The **r\_showShadowCount** cvar provides diagnostic information by colouring pixels based on the number of shadow volumes calculated for that pixel. The colours used are the same as those given by **[R\_showLightCount\_(cvar).html r\_showLightCount]**, although the shadow-count is per-pixel rather than per-poly.
+The **r\_showShadowCount** cvar provides diagnostic information by colouring pixels based on the number of shadow volumes calculated for that pixel. The colours used are the same as those given by **[r\_showLightCount](R\_showLightCount\_(cvar))**, although the shadow-count is per-pixel rather than per-poly.
 
 Usage
 -----
@@ -53,6 +53,6 @@ This CVar is the used similarly to **r\_showLightCount** for optimisation purpos
 
 -   disabling shadow-casting on some lights
 -   adding the key **noshadows** with value **1** to func\_statics
--   reducing polycount, such as by subdividing [Patch.html patches].
+-   reducing polycount, such as by subdividing [patches](Patch).
 
 

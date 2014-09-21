@@ -24,7 +24,7 @@ Format: The format is based on identifiers, as in:
 
 This is followed by zero or more values, or a subset of more identifiers surrounded by curly braces.
 
-Most of the time when working with ASE's, you will find that you have to open them to manually link the materials to a specified [Material\_(decl).html material shader]. For example, the format for the material list may look like this when exported from actorx:
+Most of the time when working with ASE's, you will find that you have to open them to manually link the materials to a specified [material shader](Material\_(decl)). For example, the format for the material list may look like this when exported from actorx:
 
 ```
 *MATERIAL_LIST {

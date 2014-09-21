@@ -17,7 +17,7 @@ Parameters
 ----------
 
 -   [Screen Mode] - The screen mode in integer format.
-    -   -1 - Custom resolution determined by the CVars [R\_customHeight\_(cvar).html r\_customHeight] and [R\_customWidth\_(cvar).html r\_customWidth].
+    -   -1 - Custom resolution determined by the CVars [r\_customHeight](R\_customHeight\_(cvar)) and [r\_customWidth](R\_customWidth\_(cvar)).
     -   0 - 320 x 240
     -   1 - 400 x 300
     -   2 - 512 x 384
@@ -57,6 +57,6 @@ Flags
 Notes
 -----
 
-If you set this CVar from the console, changes will not take effect until you restart the renderer by typing [Vid\_restart\_(console\_command).html vid\_restart] in the console.
+If you set this CVar from the console, changes will not take effect until you restart the renderer by typing [vid\_restart](Vid\_restart\_(console\_command)) in the console.
 
 

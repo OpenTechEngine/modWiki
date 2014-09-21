@@ -11,7 +11,7 @@ Illustration depicting how the image textures used in a light shader are project
 </div>
 </div>
 </div>
-**Lights** do exactly what they do in real life - they light up geometry so you can see it. With its fully dynamic lighting model, Doom 3 levels will be completely dark in areas untouched by light; there is no ambient light setting (unless self-illuminating materials are used). Lights are a form of [Entity.html entity] and can be controlled through scripts.
+**Lights** do exactly what they do in real life - they light up geometry so you can see it. With its fully dynamic lighting model, Doom 3 levels will be completely dark in areas untouched by light; there is no ambient light setting (unless self-illuminating materials are used). Lights are a form of [entity](Entity) and can be controlled through scripts.
 
 Placing a light
 ---------------

@@ -2,7 +2,7 @@ Script events (Doom 3)
 ======================
 
 <div style="padding: 1px; border: 0px solid #000000" align="left">
-<font size="18px"><font color="black">![Image:D3square\_bg.png](images_c_cb_D3square_bg.png "fig:Image:D3square_bg.png") The information on this page is specific to [Doom\_3.html Doom 3].</font></font>
+<font size="18px"><font color="black">![Image:D3square\_bg.png](images_c_cb_D3square_bg.png "fig:Image:D3square_bg.png") The information on this page is specific to [Doom 3](Doom\_3).</font></font>
 
 </div>
 
@@ -18,30 +18,30 @@ Existing script events as of version 1.3.1302 (1.3).
  --------                                                                                                                                                                    
                                                                                                                                                                              
  </div>                                                                                                                                                                      
- -   [Script\_events\_(Doom\_3).html\#System\_Events <span class="tocnumber">1</span> <span class="toctext">System Events</span>]                                            
- -   [Script\_events\_(Doom\_3).html\#Entity\_Events <span class="tocnumber">2</span> <span class="toctext">Entity Events</span>]                                            
- -   [Script\_events\_(Doom\_3).html\#idActor\_Events <span class="tocnumber">3</span> <span class="toctext">idActor Events</span>]                                          
- -   [Script\_events\_(Doom\_3).html\#idAFEntity\_ClawFourFingers\_Events <span class="tocnumber">4</span> <span class="toctext">idAFEntity\_ClawFourFingers Events</span>]  
- -   [Script\_events\_(Doom\_3).html\#idAI\_Events <span class="tocnumber">5</span> <span class="toctext">idAI Events</span>]                                                
-     -   [Script\_events\_(Doom\_3).html\#idAI\_Vagary\_Events <span class="tocnumber">5.1</span> <span class="toctext">idAI\_Vagary Events</span>]                          
- -   [Script\_events\_(Doom\_3).html\#idAnimated\_Events <span class="tocnumber">6</span> <span class="toctext">idAnimated Events</span>]                                    
- -   [Script\_events\_(Doom\_3).html\#idAnimatedEntity\_Events <span class="tocnumber">7</span> <span class="toctext">idAnimatedEntity Events</span>]                        
- -   [Script\_events\_(Doom\_3).html\#idCameraAnim\_Events <span class="tocnumber">8</span> <span class="toctext">idCameraAnim Events</span>]                                
- -   [Script\_events\_(Doom\_3).html\#idCombatNode\_Events <span class="tocnumber">9</span> <span class="toctext">idCombatNode Events</span>]                                
- -   [Script\_events\_(Doom\_3).html\#idDoor\_Events <span class="tocnumber">10</span> <span class="toctext">idDoor Events</span>]                                           
- -   [Script\_events\_(Doom\_3).html\#idForcefield\_Events <span class="tocnumber">11</span> <span class="toctext">idForcefield Events</span>]                               
- -   [Script\_events\_(Doom\_3).html\#idLight\_Events <span class="tocnumber">12</span> <span class="toctext">idLight Events</span>]                                         
- -   [Script\_events\_(Doom\_3).html\#idMoveable\_Events <span class="tocnumber">13</span> <span class="toctext">idMoveable Events</span>]                                   
- -   [Script\_events\_(Doom\_3).html\#idMover\_Events <span class="tocnumber">14</span> <span class="toctext">idMover Events</span>]                                         
- -   [Script\_events\_(Doom\_3).html\#idPlayer\_Events <span class="tocnumber">15</span> <span class="toctext">idPlayer Events</span>]                                       
- -   [Script\_events\_(Doom\_3).html\#idProjectile\_Events <span class="tocnumber">16</span> <span class="toctext">idProjectile Events</span>]                               
- -   [Script\_events\_(Doom\_3).html\#idWeapon\_Events <span class="tocnumber">17</span> <span class="toctext">idWeapon Events</span>]                                       
- -   [Script\_events\_(Doom\_3).html\#Utility\_Functions <span class="tocnumber">18</span> <span class="toctext">Utility Functions</span>]                                   |
+ -   [<span class="tocnumber">1</span> <span class="toctext">System Events</span>](Script\_events\_(Doom\_3)#System\_Events)                                            
+ -   [<span class="tocnumber">2</span> <span class="toctext">Entity Events</span>](Script\_events\_(Doom\_3)#Entity\_Events)                                            
+ -   [<span class="tocnumber">3</span> <span class="toctext">idActor Events</span>](Script\_events\_(Doom\_3)#idActor\_Events)                                          
+ -   [<span class="tocnumber">4</span> <span class="toctext">idAFEntity\_ClawFourFingers Events</span>](Script\_events\_(Doom\_3)#idAFEntity\_ClawFourFingers\_Events)  
+ -   [<span class="tocnumber">5</span> <span class="toctext">idAI Events</span>](Script\_events\_(Doom\_3)#idAI\_Events)                                                
+     -   [<span class="tocnumber">5.1</span> <span class="toctext">idAI\_Vagary Events</span>](Script\_events\_(Doom\_3)#idAI\_Vagary\_Events)                          
+ -   [<span class="tocnumber">6</span> <span class="toctext">idAnimated Events</span>](Script\_events\_(Doom\_3)#idAnimated\_Events)                                    
+ -   [<span class="tocnumber">7</span> <span class="toctext">idAnimatedEntity Events</span>](Script\_events\_(Doom\_3)#idAnimatedEntity\_Events)                        
+ -   [<span class="tocnumber">8</span> <span class="toctext">idCameraAnim Events</span>](Script\_events\_(Doom\_3)#idCameraAnim\_Events)                                
+ -   [<span class="tocnumber">9</span> <span class="toctext">idCombatNode Events</span>](Script\_events\_(Doom\_3)#idCombatNode\_Events)                                
+ -   [<span class="tocnumber">10</span> <span class="toctext">idDoor Events</span>](Script\_events\_(Doom\_3)#idDoor\_Events)                                           
+ -   [<span class="tocnumber">11</span> <span class="toctext">idForcefield Events</span>](Script\_events\_(Doom\_3)#idForcefield\_Events)                               
+ -   [<span class="tocnumber">12</span> <span class="toctext">idLight Events</span>](Script\_events\_(Doom\_3)#idLight\_Events)                                         
+ -   [<span class="tocnumber">13</span> <span class="toctext">idMoveable Events</span>](Script\_events\_(Doom\_3)#idMoveable\_Events)                                   
+ -   [<span class="tocnumber">14</span> <span class="toctext">idMover Events</span>](Script\_events\_(Doom\_3)#idMover\_Events)                                         
+ -   [<span class="tocnumber">15</span> <span class="toctext">idPlayer Events</span>](Script\_events\_(Doom\_3)#idPlayer\_Events)                                       
+ -   [<span class="tocnumber">16</span> <span class="toctext">idProjectile Events</span>](Script\_events\_(Doom\_3)#idProjectile\_Events)                               
+ -   [<span class="tocnumber">17</span> <span class="toctext">idWeapon Events</span>](Script\_events\_(Doom\_3)#idWeapon\_Events)                                       
+ -   [<span class="tocnumber">18</span> <span class="toctext">Utility Functions</span>](Script\_events\_(Doom\_3)#Utility\_Functions)                                   |
 
 System Events
 -------------
 
-Events declared in idThread, accessible via [Scripting\_basics.html\#sys sys] identifier.
+Events declared in idThread, accessible via [sys](Scripting\_basics#sys) identifier.
 
 -   [AngToForward\_(script\_event).html angToForward]
 -   [AngToRight\_(script\_event).html angToRight]
@@ -194,7 +194,7 @@ All entities have these events.
 idActor Events
 --------------
 
-Events declared in the [Spawn\_class.html spawn class] idActor
+Events declared in the [spawn class](Spawn\_class) idActor
 
 -   animDistance
 -   animLength
@@ -229,7 +229,7 @@ Events declared in the [Spawn\_class.html spawn class] idActor
 idAFEntity\_ClawFourFingers Events
 ----------------------------------
 
-Events declared in the [Spawn\_class.html spawn class] idAFEntity\_ClawFourFingers
+Events declared in the [spawn class](Spawn\_class) idAFEntity\_ClawFourFingers
 
 -   [SetFingerAngle\_(script\_event).html setFingerAngle]
 -   [StopFingers\_(script\_event).html stopFingers]
@@ -237,7 +237,7 @@ Events declared in the [Spawn\_class.html spawn class] idAFEntity\_ClawFourFinge
 idAI Events
 -----------
 
-Events declared in the [Spawn\_class.html spawn class] idAI
+Events declared in the [spawn class](Spawn\_class) idAI
 
 -   allowDamage
 -   allowHiddenMovement
@@ -361,7 +361,7 @@ Events declared in the [Spawn\_class.html spawn class] idAI
 
 ### idAI\_Vagary Events
 
-Events declared in the [Spawn\_class.html spawn class] idAI\_Vagary
+Events declared in the [spawn class](Spawn\_class) idAI\_Vagary
 
 -   vagary\_ChooseObjectToThrow
 -   vagary\_ThrowObjectAtEnemy
@@ -369,7 +369,7 @@ Events declared in the [Spawn\_class.html spawn class] idAI\_Vagary
 idAnimated Events
 -----------------
 
-Events declared in the [Spawn\_class.html spawn class] idAnimated
+Events declared in the [spawn class](Spawn\_class) idAnimated
 
 -   [LaunchMissiles\_(script\_event).html launchMissiles]
 -   [LeftFoot\_(script\_event).html leftFoot]
@@ -379,7 +379,7 @@ Events declared in the [Spawn\_class.html spawn class] idAnimated
 idAnimatedEntity Events
 -----------------------
 
-Events declared in the [Spawn\_class.html spawn class] idAnimatedEntity
+Events declared in the [spawn class](Spawn\_class) idAnimatedEntity
 
 -   [ClearAllJoints\_(script\_event).html clearAllJoints]
 -   [ClearJoint\_(script\_event).html clearJoint]
@@ -392,7 +392,7 @@ Events declared in the [Spawn\_class.html spawn class] idAnimatedEntity
 idCameraAnim Events
 -------------------
 
-Events declared in the [Spawn\_class.html spawn class] idCameraAnim
+Events declared in the [spawn class](Spawn\_class) idCameraAnim
 
 -   [Start\_(script\_event).html start]
 -   [Stop\_(script\_event).html stop]
@@ -400,14 +400,14 @@ Events declared in the [Spawn\_class.html spawn class] idCameraAnim
 idCombatNode Events
 -------------------
 
-Events declared in the [Spawn\_class.html spawn class] idCombatNode
+Events declared in the [spawn class](Spawn\_class) idCombatNode
 
 -   [MarkUsed\_(script\_event).html markUsed]
 
 idDoor Events
 -------------
 
-Events declared in the [Spawn\_class.html spawn class] idDoor
+Events declared in the [spawn class](Spawn\_class) idDoor
 
 -   [Close\_(script\_event).html close]
 -   [Disable\_(script\_event).html disable]
@@ -420,14 +420,14 @@ Events declared in the [Spawn\_class.html spawn class] idDoor
 idForcefield Events
 -------------------
 
-Events declared in the [Spawn\_class.html spawn class] idForceField
+Events declared in the [spawn class](Spawn\_class) idForceField
 
 -   [Toggle\_(script\_event).html Toggle]
 
 idLight Events
 --------------
 
-Events declared in the [Spawn\_class.html spawn class] idLight
+Events declared in the [spawn class](Spawn\_class) idLight
 
 -   [FadeInLight\_(script\_event).html fadeInLight]
 -   [FadeOutLight\_(script\_event).html fadeOutLight]
@@ -443,7 +443,7 @@ Events declared in the [Spawn\_class.html spawn class] idLight
 idMoveable Events
 -----------------
 
-Events declared in the [Spawn\_class.html spawn class] idMoveAble
+Events declared in the [spawn class](Spawn\_class) idMoveAble
 
 -   [BecomeNonSolid\_(script\_event).html becomeNonSolid]
 -   [EnableDamage\_(script\_event).html enableDamage]
@@ -452,7 +452,7 @@ Events declared in the [Spawn\_class.html spawn class] idMoveAble
 idMover Events
 --------------
 
-Events declared in the [Spawn\_class.html spawn class] idMover
+Events declared in the [spawn class](Spawn\_class) idMover
 
 -   [AccelSound\_(script\_event).html accelSound]
 -   [AccelTime\_(script\_event).html accelTime]
@@ -488,7 +488,7 @@ Events declared in the [Spawn\_class.html spawn class] idMover
 idPlayer Events
 ---------------
 
-Events declared in the [Spawn\_class.html spawn class] idPlayer
+Events declared in the [spawn class](Spawn\_class) idPlayer
 
 -   [DisableWeapon\_(script\_event).html disableWeapon]
 -   [EnableWeapon\_(script\_event).html enableWeapon]
@@ -505,14 +505,14 @@ Events declared in the [Spawn\_class.html spawn class] idPlayer
 idProjectile Events
 -------------------
 
-Events declared in the [Spawn\_class.html spawn class] idProjectile
+Events declared in the [spawn class](Spawn\_class) idProjectile
 
 -   [GetProjectileState\_(script\_event).html getProjectileState]
 
 idWeapon Events
 ---------------
 
-Events declared in the [Spawn\_class.html spawn class] idWeapon
+Events declared in the [spawn class](Spawn\_class) idWeapon
 
 -   [AddToClip\_(script\_event).html addToClip]
 -   allowDrop

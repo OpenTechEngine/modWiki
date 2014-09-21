@@ -11,12 +11,12 @@ SetGameTeam (script event)
 Game class
 ----------
 
-This event operates on an instance of the [Game\_class.html game class] type [IdEntity\_(class).html idEntity]. Has spawn class specific implementation.
+This event operates on an instance of the [game class](Game\_class) type [idEntity](IdEntity\_(class)). Has spawn class specific implementation.
 
 Description
 -----------
 
-Calls SetGameTeam on entity's [Spawn\_class.html spawn class].
+Calls SetGameTeam on entity's [spawn class](Spawn\_class).
 
 Usage
 -----
@@ -26,7 +26,7 @@ Usage
 Parameters
 ----------
 
-[team] - team object. Global object pointers for team objects are named **gdfTeam** and **stroggTeam** Can be set to [$null\_entity\_(scripting).html null].
+[team] - team object. Global object pointers for team objects are named **gdfTeam** and **stroggTeam** Can be set to [null]($null\_entity\_(scripting)).
 
 Examples
 --------
@@ -37,7 +37,7 @@ Examples
 Notes
 -----
 
-Calls SetGameTeam on the entities [Spawn\_class.html spawn class]. SetGameClass has spawn class specific implementations on the following:
+Calls SetGameTeam on the entities [spawn class](Spawn\_class). SetGameClass has spawn class specific implementations on the following:
 
 **idEntity**: Does nothing.
 
@@ -47,6 +47,6 @@ Calls SetGameTeam on the entities [Spawn\_class.html spawn class]. SetGameClass 
 
 **sdScriptEntity**: Sets team, calls OnSetTeam function on entities script object. Many entities use this function to manage the change.
 
-Has counterpart [GetGameTeam\_(script\_event).html getGameTeam].
+Has counterpart [getGameTeam](GetGameTeam\_(script\_event)).
 
 

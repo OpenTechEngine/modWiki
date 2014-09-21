@@ -4,7 +4,7 @@ AAS
 
 The Area Awareness System is the navigation system that the AI uses.
 
-An AAS map is a simplified 3D map of the level compiled from the solid [brush](Brush) work in the .map file. Areas are the most simplified volume so navigation within an [Area.html Area] is simple point to point. Reachabilities between Areas are then calculated.
+An AAS map is a simplified 3D map of the level compiled from the solid [brush](Brush) work in the .map file. Areas are the most simplified volume so navigation within an [Area](Area) is simple point to point. Reachabilities between Areas are then calculated.
 
 Brushes with the material monster clip (a misnomer since it only clips the aas map, which isn't used for collision) are also read by the ass compiler.
 

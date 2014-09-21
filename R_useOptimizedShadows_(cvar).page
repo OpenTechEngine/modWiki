@@ -49,6 +49,6 @@ Flags
 Notes
 -----
 
-When a .[MAP\_(file\_format).html MAP] is compiled if there are light sources that never move and geometry that never moves the compiler precomputes the shadow volumes of that interaction so that it doesn't have to be calculated in real-time since the shadow is effectively static. This CVar turns off this optimisation and all shadows will be calculated even if they are static.
+When a .[MAP](MAP\_(file\_format)) is compiled if there are light sources that never move and geometry that never moves the compiler precomputes the shadow volumes of that interaction so that it doesn't have to be calculated in real-time since the shadow is effectively static. This CVar turns off this optimisation and all shadows will be calculated even if they are static.
 
 

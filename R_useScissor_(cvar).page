@@ -49,10 +49,10 @@ Flags
 Notes
 -----
 
-This CVar should always be enabled to reduce the number of polygons processed by the graphics card when they are not visible through visportals. This optimisation does not function when in [R\_fullscreen\_(cvar).html windowed] mode. Despite this optimisation those polygons are still batched by the CPU and sent to the GPU, just not drawn; it is therefor recommended turning it off when testing polycounts with the [R\_showTris\_(cvar).html r\_showTris] CVar.
+This CVar should always be enabled to reduce the number of polygons processed by the graphics card when they are not visible through visportals. This optimisation does not function when in [windowed](R\_fullscreen\_(cvar)) mode. Despite this optimisation those polygons are still batched by the CPU and sent to the GPU, just not drawn; it is therefor recommended turning it off when testing polycounts with the [r\_showTris](R\_showTris\_(cvar)) CVar.
 
 This CVar also makes a big difference to **light count** - if r\_usescissor is disabled, the lightcount for a whole polygon will be equal to the number of lights that touch that polygon at any point. If r\_usescissor is enabled, the lightcount will increase only within the portion of the polygon that is contained within the light's own scissor rectangle (approximately equal to the light volume projected into screen space).
 
-Note that the r\_usescissor cvar is automatically set to 0 when the [Screenshot\_(console\_command).html screenshot] command is given, and is reset to 1 (whether or not it was 1 initially) immediately after the screenshot is written to disk. This has two effects: the view with scissors enabled cannot be captured, and the cvar will become activated after a screenshot.
+Note that the r\_usescissor cvar is automatically set to 0 when the [screenshot](Screenshot\_(console\_command)) command is given, and is reset to 1 (whether or not it was 1 initially) immediately after the screenshot is written to disk. This has two effects: the view with scissors enabled cannot be captured, and the cvar will become activated after a screenshot.
 
 

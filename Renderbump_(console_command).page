@@ -23,7 +23,7 @@ Notes
 
 This command gathers all of it's parameters from the material shader referenced by the low poly model.
 
-Specifically, it looks at the [Renderbump\_(Material\_global\_keyword).html renderbump] global keyword in the material shader.
+Specifically, it looks at the [renderbump](Renderbump\_(Material\_global\_keyword)) global keyword in the material shader.
 
 Failure to provide the engine with enough free memory to work with can result in a **cant malloc x megs** error.
 

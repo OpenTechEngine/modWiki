@@ -1,13 +1,13 @@
 Script object
 =============
 
-A script object is a way of organizing variables and functions that are related to an [Entity.html entity]. It is analogous to a class in object orientated programming terms.
+A script object is a way of organizing variables and functions that are related to an [entity](Entity). It is analogous to a class in object orientated programming terms.
 
 It's uses are wide ranging from weapons and AI, to extending existing entities.
 
-While an entities' [Spawn\_class.html spawn class] strongly defines run time behavior, script objects are generally used to create variation on run time behavior within that framework.
+While an entities' [spawn class](Spawn\_class) strongly defines run time behavior, script objects are generally used to create variation on run time behavior within that framework.
 
-The spawn class sets up and runs a script object if the key/value pair "scriptobject" is set to a valid object type on the entities [SpawnArgs.html spawnArgs].
+The spawn class sets up and runs a script object if the key/value pair "scriptobject" is set to a valid object type on the entities [spawnArgs](SpawnArgs).
 
 Working on objects
 ------------------
@@ -26,7 +26,7 @@ Line 1 declares and object reference of monster\_base type. The script compiler 
 
 Line 2 sets the reference to an entity. For the sake of this example we are assuming the entity "monster\_sam" is an entity running a script object of they type monster\_base, or one that inherits from monster\_base.
 
-An object reference will be set to [$null\_entity\_(scripting).html $null\_entity] if the entity you are trying to set the variable to does not have a object of that type.
+An object reference will be set to [$null\_entity]($null\_entity\_(scripting)) if the entity you are trying to set the variable to does not have a object of that type.
 
 Line 3 calls the object function wake\_on\_trigger(), which we know is a function defined in the script object monster\_base. If the function was not declared in the script object the script interpreter would issue a warning. TODO: find exact error/warning messages.
 
@@ -62,11 +62,11 @@ Syntax:
 Important functions
 -------------------
 
-A number of functions are called by the entitys [Spawn\_class.html spawn class].
+A number of functions are called by the entitys [spawn class](Spawn\_class).
 
 `init()`
 
-The script object constructor. A [Thread\_(scripting).html thread] is created by the spawn class to run the init() script function at the end of the Spawn() function.
+The script object constructor. A [thread](Thread\_(scripting)) is created by the spawn class to run the init() script function at the end of the Spawn() function.
 
 Use to set up initial state of the script object variables.
 
@@ -81,7 +81,7 @@ Use to clean up anything that the script object was managing, such as created th
 Example
 -------
 
-For this example the script object makes a light fade in and out for the life time of the entity. The time for the various stages is set up to be configurable via [SpawnArgs.html spawnArgs].
+For this example the script object makes a light fade in and out for the life time of the entity. The time for the various stages is set up to be configurable via [spawnArgs](SpawnArgs).
 
 It's a simple script, but we've tried to cram in as much important script object coding aspects as possible.
 
@@ -211,11 +211,11 @@ Just to give an idea of what is going on while working on the script. The text w
 
 ### type check
 
-Since we will be using [Script\_events.html script events] (event calls to the [Spawn\_class.html spawn class]) specific to an idLight spawn class we are doing some simple type checking to see if the entity this script object is running on is the right type.
+Since we will be using [script events](Script\_events) (event calls to the [spawn class](Spawn\_class)) specific to an idLight spawn class we are doing some simple type checking to see if the entity this script object is running on is the right type.
 
-[GetKey\_(script\_event).html getKey] is an event defined in the base spawn class [IdEntity\_(class).html idEntity], so all spawn classes inherit it.
+[GetKey\_(script\_event).html getKey] is an event defined in the base spawn class [idEntity](IdEntity\_(class)), so all spawn classes inherit it.
 
-"spawnclass" is the key for the value in the [SpawnArgs.html spawnArgs] dictionary that declares the spawn class.
+"spawnclass" is the key for the value in the [spawnArgs](SpawnArgs) dictionary that declares the spawn class.
 
 This is the only way to check for spawn class type in script, since there is only one general reference type entity and object references types are only of script object type.
 
@@ -231,15 +231,15 @@ Stop script object from continuing further. This won't prevent function calls on
 
 ### spawnargs performance
 
-As previously noted, variables are faster than [SpawnArgs.html spawnArgs] access, so setting up variables with values from spawnArgs so they can be used later is a good idea.
+As previously noted, variables are faster than [spawnArgs](SpawnArgs) access, so setting up variables with values from spawnArgs so they can be used later is a good idea.
 
 ### run-time function
 
-The base spawn class calls init() on start up, after init() is finished executing the script [Thread\_(scripting).html thread] is considered 'done'. The only code run on the object from that point would be from:
+The base spawn class calls init() on start up, after init() is finished executing the script [thread](Thread\_(scripting)) is considered 'done'. The only code run on the object from that point would be from:
 
 The spawn class calling a specific script function.
 
-Another script [Thread\_(scripting).html thread] calling a specific function.
+Another script [thread](Thread\_(scripting)) calling a specific function.
 
 In this object we are using a function called 'main' to do run time logic, so it must be the last operation before init() exits.
 
@@ -247,7 +247,7 @@ In this object we are using a function called 'main' to do run time logic, so it
 
 Here we are trapping the function execution in a while loop, so the function doesn't exit and we can keep our run time code running.
 
-Once run time script object behavior gets to a certain point of complexity it's better to plan a [Finite\_State\_Machine\_(scripting).html Finite State Machine].
+Once run time script object behavior gets to a certain point of complexity it's better to plan a [Finite State Machine](Finite\_State\_Machine\_(scripting)).
 
 ### ETQW event
 
@@ -264,7 +264,7 @@ fadeOut is an event defined in the spawn class idLight, if this script object we
 
 ### waiting
 
-Since we have trapped the function in a loop, at some point of execution we have to let the thread [Thread\_(scripting).html\#wait wait], otherwise the thread would continue indefinitely, preventing the rest of the game from continuing to run.
+Since we have trapped the function in a loop, at some point of execution we have to let the thread [wait](Thread\_(scripting)#wait), otherwise the thread would continue indefinitely, preventing the rest of the game from continuing to run.
 
 If we wanted code to be run per frame the only wait in our code would be a waitFrame() here at the end of the loop.
 

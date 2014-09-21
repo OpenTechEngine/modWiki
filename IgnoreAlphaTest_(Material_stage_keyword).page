@@ -4,7 +4,7 @@ IgnoreAlphaTest (Material stage keyword)
 Description
 -----------
 
-This particular keyword prevents the global effect of the [AlphaTest\_(Material\_stage\_keyword).html alphaTest] stage keyword from being applied to the current stage.
+This particular keyword prevents the global effect of the [alphaTest](AlphaTest\_(Material\_stage\_keyword)) stage keyword from being applied to the current stage.
 
 Usage
 -----
@@ -38,6 +38,6 @@ Example
 Notes
 -----
 
-To elaborate: [AlphaTest\_(Material\_stage\_keyword).html alphaTest] is a stage specific keyword (i.e. it can only be put in a certain stage, never in the global section) but it has an effect on all stages. So, ignoreAlphaTest disables this effect on the stages where it is specified.
+To elaborate: [alphaTest](AlphaTest\_(Material\_stage\_keyword)) is a stage specific keyword (i.e. it can only be put in a certain stage, never in the global section) but it has an effect on all stages. So, ignoreAlphaTest disables this effect on the stages where it is specified.
 
 

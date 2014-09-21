@@ -1,11 +1,11 @@
 Dds (folder)
 ============
 
-DDS (Direct Draw Surface) files are a texture file format much like .[JPG\_(file\_format).html JPG] or .[TGA\_(file\_format).html TGA] files. The primary advantage of [DDS\_(file\_format).html DDS] files is that they can be used to store compressed and uncompressed pixel formats with various mipmap levels.
+DDS (Direct Draw Surface) files are a texture file format much like .[JPG](JPG\_(file\_format)) or .[TGA](TGA\_(file\_format)) files. The primary advantage of [DDS](DDS\_(file\_format)) files is that they can be used to store compressed and uncompressed pixel formats with various mipmap levels.
 
-Doom 3 makes use of .DDS files when running at a quality setting lower than "Ultra" in order to save texture memory (Although "High" quality level uses .DDS files for diffuse maps). Uncompressed textures are saved in duplicate .TGA format in the "base/[Textures\_(folder).html textures]" directory.
+Doom 3 makes use of .DDS files when running at a quality setting lower than "Ultra" in order to save texture memory (Although "High" quality level uses .DDS files for diffuse maps). Uncompressed textures are saved in duplicate .TGA format in the "base/[textures](Textures\_(folder))" directory.
 
-You can force everything to load from the TGA files by setting [Image\_usePrecompressedTextures\_(cvar).html image\_usePrecompressedTextures] to 0. The images will still get compressed dynamically at load time (which will slow down loading significantly), but it will make it so that when you change a TGA it will actually show up in game without having to regenerate the DDS files. You can also set [Image\_useCompression\_(cvar).html image\_useCompression] and [Image\_useNormalCompression\_(cvar).html image\_useNormalCompression] to 0, which will prevent them from getting compressed at load time (this is similar to running in ultra quality mode).
+You can force everything to load from the TGA files by setting [image\_usePrecompressedTextures](Image\_usePrecompressedTextures\_(cvar)) to 0. The images will still get compressed dynamically at load time (which will slow down loading significantly), but it will make it so that when you change a TGA it will actually show up in game without having to regenerate the DDS files. You can also set [image\_useCompression](Image\_useCompression\_(cvar)) and [image\_useNormalCompression](Image\_useNormalCompression\_(cvar)) to 0, which will prevent them from getting compressed at load time (this is similar to running in ultra quality mode).
 
 ***Notice:*** This means that if you make changes to a texture and you are running a quality level lower than "Ultra", you will not see the changes because Doom 3 ís reading from the .DDS file.
 

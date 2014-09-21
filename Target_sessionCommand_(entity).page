@@ -62,7 +62,7 @@ Inheritance
 
 This entity is derived from the following:
 
--   *[IdEntity\_(class).html idEntity]*
+-   *[idEntity](IdEntity\_(class))*
     -   '' idTarget''
         -   '' idTarget\_SessionCommand''
             -   *' target\_sessionCommand*'
@@ -74,10 +74,10 @@ Notes
 
 Contrary to popular belief, this entity will not execute any and all console commands. Only 6 commands are valid and they are as follows...
 
--   [Devmap\_(console\_command).html devmap] - same as console command
+-   [devmap](Devmap\_(console\_command)) - same as console command
 -   died - ???
--   [Disconnect\_(console\_command).html disconnect] - same as console command
+-   [disconnect](Disconnect\_(console\_command)) - same as console command
 -   endOfDemo - ???
 -   game\_startMenu - ???
--   [Map\_(console\_command).html map] - same as console command
+-   [map](Map\_(console\_command)) - same as console command
 

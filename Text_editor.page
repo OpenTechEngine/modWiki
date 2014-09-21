@@ -1,9 +1,9 @@
 Text editor
 ===========
 
-Since id Tech-based games use a lot of [File\_formats.html ASCII text files] here are a few different editors that you can use. Those with [Id\_Tech.html id Tech] specific customisations are listed before generic editors.
+Since id Tech-based games use a lot of [ASCII text files](File\_formats) here are a few different editors that you can use. Those with [id Tech](Id\_Tech) specific customisations are listed before generic editors.
 
--   Doom 3 - Just type editDecls into the [Console.html console]. Please note that some declarations cannot be created this way.
+-   Doom 3 - Just type editDecls into the [console](Console). Please note that some declarations cannot be created this way.
 -   [UltraEdit32](http://web.archive.org/web/20110312235652/http://www.ultraedit.com/index.php?name=UE_LatestChanges) - A very good shareware text editor with great search/replace in files/macro recording/tabbed files/regexp and all that stuff.
     -   [D3 script and GUI syntax highlighter](http://web.archive.org/web/20110312235652/http://www.pcgamemods.com/8590) by eutectic.
 -   [ConText](http://web.archive.org/web/20110312235652/http://www.context.cx/) - A freeware text editor with many programmer oriented features like code templates.
@@ -19,7 +19,7 @@ Since id Tech-based games use a lot of [File\_formats.html ASCII text files] her
 Other utilities to work with text files
 ---------------------------------------
 
-It's also handy to have a grep tool available to search the contents of multiple [Declarations.html declaration] files for a specific item or pattern. For instance, searching for a specific [Material\_(decl).html material entry] if you are unsure in which .[MTR\_(file\_format).html MTR] file it was located in.
+It's also handy to have a grep tool available to search the contents of multiple [declaration](Declarations) files for a specific item or pattern. For instance, searching for a specific [material entry](Material\_(decl)) if you are unsure in which .[MTR](MTR\_(file\_format)) file it was located in.
 
 -   [Windows Grep](http://web.archive.org/web/20110312235652/http://www.wingrep.com/)
 

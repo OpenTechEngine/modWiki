@@ -7,7 +7,7 @@ Src idlib math vectors.h (source file)
 If you disagree with this, please explain why on <span class="deadlink">its talk page</span>.
 
 </div>
-The Doom 3 engine uses [Vectors.html vectors] for many things, including forces of movement, direction of view, and even plain variable storage in some cases. In the engine, a vector can be represented as
+The Doom 3 engine uses [vectors](Vectors) for many things, including forces of movement, direction of view, and even plain variable storage in some cases. In the engine, a vector can be represented as
 
 ` idVec2 - x,y`
 ` idVec3 - x,y,z`

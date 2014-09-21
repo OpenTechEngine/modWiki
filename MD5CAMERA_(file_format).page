@@ -7,23 +7,23 @@ MD5CAMERA (file format)
  --------                                                                                                                                                               
                                                                                                                                                                         
  </div>                                                                                                                                                                 
- -   [MD5CAMERA\_(file\_format).html\#Overview <span class="tocnumber">1</span> <span class="toctext">Overview</span>]                                                  
- -   [MD5CAMERA\_(file\_format).html\#Model\_Format\_Syntax <span class="tocnumber">2</span> <span class="toctext">Model Format Syntax</span>]                          
-     -   [MD5CAMERA\_(file\_format).html\#MD5\_Header <span class="tocnumber">2.1</span> <span class="toctext">MD5 Header</span>]                                       
-     -   [MD5CAMERA\_(file\_format).html\#Filetype\_Specific\_Parameters <span class="tocnumber">2.2</span> <span class="toctext">Filetype Specific Parameters</span>]  
-     -   [MD5CAMERA\_(file\_format).html\#Ordered\_Lists <span class="tocnumber">2.3</span> <span class="toctext">Ordered Lists</span>]                                 
-         -   [MD5CAMERA\_(file\_format).html\#Cuts <span class="tocnumber">2.3.1</span> <span class="toctext">Cuts</span>]                                              
-         -   [MD5CAMERA\_(file\_format).html\#Camera <span class="tocnumber">2.3.2</span> <span class="toctext">Camera</span>]                                          |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Overview</span>](MD5CAMERA\_(file\_format)#Overview)                                                  
+ -   [<span class="tocnumber">2</span> <span class="toctext">Model Format Syntax</span>](MD5CAMERA\_(file\_format)#Model\_Format\_Syntax)                          
+     -   [<span class="tocnumber">2.1</span> <span class="toctext">MD5 Header</span>](MD5CAMERA\_(file\_format)#MD5\_Header)                                       
+     -   [<span class="tocnumber">2.2</span> <span class="toctext">Filetype Specific Parameters</span>](MD5CAMERA\_(file\_format)#Filetype\_Specific\_Parameters)  
+     -   [<span class="tocnumber">2.3</span> <span class="toctext">Ordered Lists</span>](MD5CAMERA\_(file\_format)#Ordered\_Lists)                                 
+         -   [<span class="tocnumber">2.3.1</span> <span class="toctext">Cuts</span>](MD5CAMERA\_(file\_format)#Cuts)                                              
+         -   [<span class="tocnumber">2.3.2</span> <span class="toctext">Camera</span>](MD5CAMERA\_(file\_format)#Camera)                                          |
 
 Overview
 --------
 
-MD5Camera files are ascii (plain text) files that contain camera path data. This data controls the position, rotation, and field of view for cinematic cameras. They are part of the .[MD5\_(file\_format).html MD5] format system. The other MD5 formats are:
+MD5Camera files are ascii (plain text) files that contain camera path data. This data controls the position, rotation, and field of view for cinematic cameras. They are part of the .[MD5](MD5\_(file\_format)) format system. The other MD5 formats are:
 
-.[MD5MESH\_(file\_format).html MD5MESH]   
+.[MD5MESH](MD5MESH\_(file\_format))   
 Low resolution polygonal mesh exported from a 3D application.
 
-.[MD5ANIM\_(file\_format).html MD5ANIM]   
+.[MD5ANIM](MD5ANIM\_(file\_format))   
 Contains animation sequence data, the positions of bones etc. during animation.
 
 Model Format Syntax
@@ -37,7 +37,7 @@ All MD5 format files start with the MD5 header, regardless the specific filetype
 `commandline "<string>"`
 
 -   MD5Version - An integer that defines the current MD5 specification version. This should always read 10.
--   commandline - A string that contains the command line parameters passed to the [Exportmodels\_(console\_command).html exportmodels] console command.
+-   commandline - A string that contains the command line parameters passed to the [exportmodels](Exportmodels\_(console\_command)) console command.
 
 ### Filetype Specific Parameters
 

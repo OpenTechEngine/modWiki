@@ -26,5 +26,5 @@ JPEG compression is lossy and results in artifacts. Because of this, it's recomm
 
 JPEG images do not support transparency or alpha channels. This makes them unsuitable for decals.
 
-When saving JPEG files for use in Doom 3, be sure that you *do not* save using the "progressive compression" option in your [Texturing.html\#Texturing\_applications image editor]. This will cause both the editor and the game to crash when it attempts to parse your image.
+When saving JPEG files for use in Doom 3, be sure that you *do not* save using the "progressive compression" option in your [image editor](Texturing#Texturing\_applications). This will cause both the editor and the game to crash when it attempts to parse your image.
 

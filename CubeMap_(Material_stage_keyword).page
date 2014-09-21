@@ -4,7 +4,7 @@ CubeMap (Material stage keyword)
 Description
 -----------
 
-The **cubeMap** keyword is used instead of a **map** keyword to specify that the associated stage should render a [Cube\_maps.html cube map] rather than an ordinary image. Typically a cube map stage would be blended into a material to present the appearance of environmental reflection.
+The **cubeMap** keyword is used instead of a **map** keyword to specify that the associated stage should render a [cube map](Cube\_maps) rather than an ordinary image. Typically a cube map stage would be blended into a material to present the appearance of environmental reflection.
 
 Usage
 -----

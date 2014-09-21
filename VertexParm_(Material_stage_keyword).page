@@ -4,7 +4,7 @@ VertexParm (Material stage keyword)
 Description
 -----------
 
-The **vertexParm** keyword instructs Doom 3 to pass the expressed value to a vertex program which must also be referenced in this stage via the [VertexProgram\_(Material\_stage\_keyword).html vertexProgram] keyword.
+The **vertexParm** keyword instructs Doom 3 to pass the expressed value to a vertex program which must also be referenced in this stage via the [vertexProgram](VertexProgram\_(Material\_stage\_keyword)) keyword.
 
 Usage
 -----

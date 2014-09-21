@@ -17,26 +17,26 @@ The writing and creation of muscial tracks and scores for a game. This includes 
  --------                                                                                                                                 
                                                                                                                                           
  </div>                                                                                                                                   
- -   [Audio\_design.html\#Audio\_Format <span class="tocnumber">1</span> <span class="toctext">Audio Format</span>]                       
- -   [Audio\_design.html\#Sound\_Shaders <span class="tocnumber">2</span> <span class="toctext">Sound Shaders</span>]                     
- -   [Audio\_design.html\#Sound\_Editor <span class="tocnumber">3</span> <span class="toctext">Sound Editor</span>]                       
- -   [Audio\_design.html\#Sound\_Editing\_Sites <span class="tocnumber">4</span> <span class="toctext">Sound Editing Sites</span>]        
- -   [Audio\_design.html\#Sound\_Editing\_Software <span class="tocnumber">5</span> <span class="toctext">Sound Editing Software</span>]  |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Audio Format</span>](Audio\_design#Audio\_Format)                       
+ -   [<span class="tocnumber">2</span> <span class="toctext">Sound Shaders</span>](Audio\_design#Sound\_Shaders)                     
+ -   [<span class="tocnumber">3</span> <span class="toctext">Sound Editor</span>](Audio\_design#Sound\_Editor)                       
+ -   [<span class="tocnumber">4</span> <span class="toctext">Sound Editing Sites</span>](Audio\_design#Sound\_Editing\_Sites)        
+ -   [<span class="tocnumber">5</span> <span class="toctext">Sound Editing Software</span>](Audio\_design#Sound\_Editing\_Software)  |
 
 Audio Format
 ------------
 
-All audio files used by the id Tech 4 engine employ either the .[OGG\_(file\_format).html OGG] or the .[WAV\_(file\_format).html WAV] file format. All valid sound files have to be either 1 (mono) or 2 (stereo) channel, 16 bit at 11025, 22050 or 44100 Hz. Any sound made with the intention of being used for surround sound should be in mono. Any sound intended to be used with [Shakes\_(Sound\_shader\_keyword).html shakes] should be a .[WAV\_(file\_format).html WAV] file if using Doom 3 (the game, not the engine). If you are using Quake 4 an .[OGG\_(file\_format).html OGG] is perfectly fine as long as you run shakesGen to create the [ShakeData\_(Sound\_shader\_keyword).html shakeData] first.
+All audio files used by the id Tech 4 engine employ either the .[OGG](OGG\_(file\_format)) or the .[WAV](WAV\_(file\_format)) file format. All valid sound files have to be either 1 (mono) or 2 (stereo) channel, 16 bit at 11025, 22050 or 44100 Hz. Any sound made with the intention of being used for surround sound should be in mono. Any sound intended to be used with [shakes](Shakes\_(Sound\_shader\_keyword)) should be a .[WAV](WAV\_(file\_format)) file if using Doom 3 (the game, not the engine). If you are using Quake 4 an .[OGG](OGG\_(file\_format)) is perfectly fine as long as you run shakesGen to create the [shakeData](ShakeData\_(Sound\_shader\_keyword)) first.
 
 Sound Shaders
 -------------
 
-Creating Sounds for the id Tech 4 engine has been refined compared to older games. This is similar to the [Texturing.html Texturing] process which has become more complicated and powerful through the addition of [Material\_(decl).html material shaders]. Something similar was introduced for sound design, the so called [Sound\_(decl).html sound shaders] which are contained within .[SNDSHD\_(file\_format).html SNDSHD] files.
+Creating Sounds for the id Tech 4 engine has been refined compared to older games. This is similar to the [Texturing](Texturing) process which has become more complicated and powerful through the addition of [material shaders](Material\_(decl)). Something similar was introduced for sound design, the so called [sound shaders](Sound\_(decl)) which are contained within .[SNDSHD](SNDSHD\_(file\_format)) files.
 
 Sound Editor
 ------------
 
-Doom 3 includes an editor which allows sounds to be placed in a level, and immediately tested in game. To launch the Sound Editor, type [EditSounds\_(console\_command).html editSounds] in the console. Sound Shaders [SNDSHD\_(file\_format).html SNDSHD] or individual sound files are played by speakers dropped in level by the player. Some parameters of the Sound Shader are editable in the tool, and sounds can be manually triggered. The s\_drawSounds [S\_drawSounds\_(cvar).html s\_drawSounds] command is useful to view speakers already in the level. These can be selected by placing your crosshairs over the speaker and pressing the mouse button.
+Doom 3 includes an editor which allows sounds to be placed in a level, and immediately tested in game. To launch the Sound Editor, type [editSounds](EditSounds\_(console\_command)) in the console. Sound Shaders [SNDSHD](SNDSHD\_(file\_format)) or individual sound files are played by speakers dropped in level by the player. Some parameters of the Sound Shader are editable in the tool, and sounds can be manually triggered. The s\_drawSounds [s\_drawSounds](S\_drawSounds\_(cvar)) command is useful to view speakers already in the level. These can be selected by placing your crosshairs over the speaker and pressing the mouse button.
 
 Sound Editing Sites
 -------------------

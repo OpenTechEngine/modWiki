@@ -2,7 +2,7 @@ R showHitImages (cvar)
 ======================
 
 <div style="padding: 1px; border: 0px solid #000000" align="left">
-<font size="18px"><font color="black">![Image:Q4square\_bg.png](images_6_69_Q4square_bg.png "fig:Image:Q4square_bg.png") The information on this page is specific to [Quake\_4.html Quake 4].</font></font>
+<font size="18px"><font color="black">![Image:Q4square\_bg.png](images_6_69_Q4square_bg.png "fig:Image:Q4square_bg.png") The information on this page is specific to [Quake 4](Quake\_4).</font></font>
 
 </div>
 
@@ -25,7 +25,7 @@ Parameters
 
 -   [flag]
     -   0 - Render textures as usual.
-    -   1 - Add the [Texturing.html\#Hit\_maps hit image] on top of the texture.
+    -   1 - Add the [hit image](Texturing#Hit\_maps) on top of the texture.
     -   2 - Use the hit image instead.
 
 Flags

@@ -13,7 +13,7 @@ Syntax
 Export
 ------
 
-The creation of a collision model for use with a map is done automatically by the engine upon compile with the [Dmap\_(console\_command).html dmap] console command.
+The creation of a collision model for use with a map is done automatically by the engine upon compile with the [dmap](Dmap\_(console\_command)) console command.
 
 To create a collision model for use with a moveable physics object, from within the level editor, you must select the brushes and/or model. Then click **Selection \> Export \> to CM**.
 

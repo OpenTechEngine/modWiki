@@ -47,7 +47,7 @@ Flags
 Notes
 -----
 
-Setting this CVar to 0 will cause the game to load any and all unarchived assets including gamex86.dll. This is useful when you are coding as it spares you from archiving your modified .DLL in a [PK4\_(file\_format).html PK4] file every time you want to test a change.
+Setting this CVar to 0 will cause the game to load any and all unarchived assets including gamex86.dll. This is useful when you are coding as it spares you from archiving your modified .DLL in a [PK4](PK4\_(file\_format)) file every time you want to test a change.
 
 This CVar can only be modified on the command line.
 

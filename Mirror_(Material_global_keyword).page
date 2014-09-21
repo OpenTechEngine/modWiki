@@ -21,11 +21,11 @@ Not Available.
 Notes
 -----
 
-This turns the entire surface into a mirror (see also the [MirrorRenderMap\_(Material\_stage\_keyword).html mirrorRenderMap] stage keyword). Mirrors have certain limitations; the following situations can provoke visual artefacts:
+This turns the entire surface into a mirror (see also the [mirrorRenderMap](MirrorRenderMap\_(Material\_stage\_keyword)) stage keyword). Mirrors have certain limitations; the following situations can provoke visual artefacts:
 
--   They act as portals which mean they cannot be broken by any other surfaces whose materials have the [Areaportal\_(Material\_global\_keyword).html areaportal] global keyword.
+-   They act as portals which mean they cannot be broken by any other surfaces whose materials have the [areaportal](Areaportal\_(Material\_global\_keyword)) global keyword.
 -   Two mirror surfaces which are within line of sight with each other.
--   Used with the [TwoSided\_(Material\_global\_keyword).html twoSided] global keyword.
+-   Used with the [twoSided](TwoSided\_(Material\_global\_keyword)) global keyword.
 
 <div class="thumb tright">
 <div style="width: 377px">

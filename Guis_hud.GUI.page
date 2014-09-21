@@ -15,12 +15,12 @@ The Doom 3 HUD (click to view)
 </div>
 </div>
 </div>
-HUD is an acronym for Heads-Up Display. It's the overlay that stands on top of the level render, showing useful information such as the player health, ammo, crosshair, etc. In the Doom 3 engine, the singleplayer HUD is a standard [GUIs.html GUI] with properties and events of its own - also one of the most complex [GUI\_scripting.html GUI scripts] in the game.
+HUD is an acronym for Heads-Up Display. It's the overlay that stands on top of the level render, showing useful information such as the player health, ammo, crosshair, etc. In the Doom 3 engine, the singleplayer HUD is a standard [GUI](GUIs) with properties and events of its own - also one of the most complex [GUI scripts](GUI\_scripting) in the game.
 
 Additional parameters
 ---------------------
 
-Additional parameters are like variables, accessible to each specific scope - different GUI scopes have different parameters available. These parameters can be accessed by a GUI script using the *gui::parametername* syntax - as an [GUI\_item\_properties.html item property] value or by doing comparisons using the [If...else\_(GUI\_command).html if...else] command, for example.
+Additional parameters are like variables, accessible to each specific scope - different GUI scopes have different parameters available. These parameters can be accessed by a GUI script using the *gui::parametername* syntax - as an [item property](GUI\_item\_properties) value or by doing comparisons using the [If...else\_(GUI\_command).html if...else] command, for example.
 
 g\_showProjectilePct   
 Boolean; determines whether projectpct should be shown. (Not working?)
@@ -143,7 +143,7 @@ The same as *weapon0*.
 Named events
 ------------
 
-Named events are used to trigger custom events inside the GUI code. By creating [OnNamedEvent\_(GUI\_item\_event).html onNamedEvent] blocks inside a GUI script, you can have a set of [GUI\_commands.html GUI commands] ran when certain conditions are met. Again, each of these named events are specific to this GUI scope and aren't usually available elsewhere.
+Named events are used to trigger custom events inside the GUI code. By creating [onNamedEvent](OnNamedEvent\_(GUI\_item\_event)) blocks inside a GUI script, you can have a set of [GUI commands](GUI\_commands) ran when certain conditions are met. Again, each of these named events are specific to this GUI scope and aren't usually available elsewhere.
 
 Air
 HideNPC

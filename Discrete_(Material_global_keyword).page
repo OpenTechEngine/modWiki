@@ -21,6 +21,6 @@ None.
 Notes
 -----
 
-Discrete surfaces will not be clipped to the world, and it is suggested that this keyword is used in surfaces like [GUIs.html GUIs] or mirrors. Surfaces with this option can be used to facilitate [Brush\_carving.html brush carving], by allowing manually-split brushes to remain separate after compilation, although extensive use of this keyword may lead to a suboptimal number of polygons in the map.
+Discrete surfaces will not be clipped to the world, and it is suggested that this keyword is used in surfaces like [GUIs](GUIs) or mirrors. Surfaces with this option can be used to facilitate [brush carving](Brush\_carving), by allowing manually-split brushes to remain separate after compilation, although extensive use of this keyword may lead to a suboptimal number of polygons in the map.
 
 

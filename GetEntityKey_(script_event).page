@@ -4,17 +4,17 @@ GetEntityKey (script event)
 Game class
 ----------
 
-This event operates on an instance of the [Game\_class.html game class] type [IdEntity\_(class).html idEntity]. All [Spawn\_class.html spawn classes] inherit this event.
+This event operates on an instance of the [game class](Game\_class) type [idEntity](IdEntity\_(class)). All [spawn classes](Spawn\_class) inherit this event.
 
 Description
 -----------
 
-Retrieves the entity specified by the [SpawnArgs.html spawn arg].
+Retrieves the entity specified by the [spawn arg](SpawnArgs).
 
 Usage
 -----
 
-*[Data\_types.html\#entity entity]* getEntityKey( *[Data\_types.html\#string string]* **key** )
+*[entity](Data\_types#entity)* getEntityKey( *[string](Data\_types#string)* **key** )
 
 Parameters
 ----------
@@ -29,6 +29,6 @@ Examples
 Notes
 -----
 
-This script event returns the entity specified as an entity. See [GetEntity\_(script\_event).html getEntity (script event)] for getting a reference directly by name.
+This script event returns the entity specified as an entity. See [getEntity (script event)](GetEntity\_(script\_event)) for getting a reference directly by name.
 
 

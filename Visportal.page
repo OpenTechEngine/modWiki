@@ -9,11 +9,11 @@ The Doom 3 engine uses **visportals** to determine which sections of the map nee
  --------                                                                                                                                   
                                                                                                                                             
  </div>                                                                                                                                     
- -   [Visportal.html\#How\_visportals\_work <span class="tocnumber">1</span> <span class="toctext">How visportals work</span>]              
- -   [Visportal.html\#Placing\_a\_visportal <span class="tocnumber">2</span> <span class="toctext">Placing a visportal</span>]              
- -   [Visportal.html\#Limitations <span class="tocnumber">3</span> <span class="toctext">Limitations</span>]                                
- -   [Visportal.html\#Distance\_based\_visportals <span class="tocnumber">4</span> <span class="toctext">Distance based visportals</span>]  
- -   [Visportal.html\#External\_links <span class="tocnumber">5</span> <span class="toctext">External links</span>]                         |
+ -   [<span class="tocnumber">1</span> <span class="toctext">How visportals work</span>](Visportal#How\_visportals\_work)              
+ -   [<span class="tocnumber">2</span> <span class="toctext">Placing a visportal</span>](Visportal#Placing\_a\_visportal)              
+ -   [<span class="tocnumber">3</span> <span class="toctext">Limitations</span>](Visportal#Limitations)                                
+ -   [<span class="tocnumber">4</span> <span class="toctext">Distance based visportals</span>](Visportal#Distance\_based\_visportals)  
+ -   [<span class="tocnumber">5</span> <span class="toctext">External links</span>](Visportal#External\_links)                         |
 
 How visportals work
 -------------------
@@ -45,22 +45,22 @@ Visportals are created as brushes textured with the **textures/editor/visportal*
 2.  Select the brush with **Shift-LMB** and apply **textures/common/nodraw** to make all surfaces invisible.
 3.  Select the chosen visportal side with **Ctrl-Shift-LMB** in the 3D view to select the surface only. Apply **textures/editor/visportal** to create the portal.
 
-After compiling and running the map, you can check that the portal was created successfully by typing "[R\_showPortals\_(cvar).html r\_showPortals] 1" at the console. All visible portals will be outlined in green if they are open and red if they are closed. If the new portal does not show up, then it has not been placed correctly: it does not completely fit the corridor or doorway which it is in therefore not dividing the level into separate zones (i.e. there is another way around it that does not require passing through a portal).
+After compiling and running the map, you can check that the portal was created successfully by typing "[r\_showPortals](R\_showPortals\_(cvar)) 1" at the console. All visible portals will be outlined in green if they are open and red if they are closed. If the new portal does not show up, then it has not been placed correctly: it does not completely fit the corridor or doorway which it is in therefore not dividing the level into separate zones (i.e. there is another way around it that does not require passing through a portal).
 
 Limitations
 -----------
 
-Visportals segment all triangles they are in contact with, generating extra polygons. This side effect must be taken into account if you are placing a visportal in contact in already highly tesselated areas. A visportal will only affect level geometry; entities that span a visportal will not be affected by it. See the [Models\_vs\_brushes.html models vs brushes] section.
+Visportals segment all triangles they are in contact with, generating extra polygons. This side effect must be taken into account if you are placing a visportal in contact in already highly tesselated areas. A visportal will only affect level geometry; entities that span a visportal will not be affected by it. See the [models vs brushes](Models\_vs\_brushes) section.
 
 <span align="absbottom">![Q4](images_e_e8_Q4square_25.png "fig:Q4") Distance based visportals</span>
 ----------------------------------------------------------------------------------------------------
 
   
-*The information in this section is specific to [Quake\_4.html Quake 4].*
+*The information in this section is specific to [Quake 4](Quake\_4).*
 
-These are created with the "textures/editor/visportal\_distance\_\*" materials. These portals will fade to black or to an [Portalimage\_(Material\_global\_keyword).html image] specified in a custom distance-visportal you create when the player is [Portaldistancenear\_(Material\_global\_keyword).html x units away] from the portal and will close when the player is [Portaldistancefar\_(Material\_global\_keyword).html y units away] from the portal, whether or not the portal should be open according to the general visportal rules described above.
+These are created with the "textures/editor/visportal\_distance\_\*" materials. These portals will fade to black or to an [image](Portalimage\_(Material\_global\_keyword)) specified in a custom distance-visportal you create when the player is [x units away](Portaldistancenear\_(Material\_global\_keyword)) from the portal and will close when the player is [y units away](Portaldistancefar\_(Material\_global\_keyword)) from the portal, whether or not the portal should be open according to the general visportal rules described above.
 
-To quickly test various distances you can create the following custom [Guide\_(decl).html guide]:
+To quickly test various distances you can create the following custom [guide](Guide\_(decl)):
 
 `guide visportal_distance(NearParm, FarParm)`
 `{`
@@ -73,7 +73,7 @@ To quickly test various distances you can create the following custom [Guide\_(d
 `   portalDistanceFar   FarParm`
 `}`
 
-Then you can create various distance-based visportal [Material\_(decl).html materials] with just one line, similar to:
+Then you can create various distance-based visportal [materials](Material\_(decl)) with just one line, similar to:
 
 `guide textures/editor/visportal_512_768 visportal_distance("512", "768")`
 

@@ -25,7 +25,7 @@ What you will need
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
   
-*The information in this section is specific to [Doom\_3.html Doom 3].*
+*The information in this section is specific to [Doom 3](Doom\_3).*
 
 Open the D3Game.vcproj file. Under Solution Explorer pane on the left, right-click on Game and go to properties. Under Configuration Properties -\> Linker -\> Input -\> Additional Dependencies, remove any instances of odbc32.lib and odbccp32.lib. You have to do this for each compile type (eg Release, Debug).
 

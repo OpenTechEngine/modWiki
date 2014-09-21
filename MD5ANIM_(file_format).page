@@ -7,25 +7,25 @@ MD5ANIM (file format)
  --------                                                                                                                                                             
                                                                                                                                                                       
  </div>                                                                                                                                                               
- -   [MD5ANIM\_(file\_format).html\#Overview <span class="tocnumber">1</span> <span class="toctext">Overview</span>]                                                  
- -   [MD5ANIM\_(file\_format).html\#Model\_Format\_Syntax <span class="tocnumber">2</span> <span class="toctext">Model Format Syntax</span>]                          
-     -   [MD5ANIM\_(file\_format).html\#MD5\_Header <span class="tocnumber">2.1</span> <span class="toctext">MD5 Header</span>]                                       
-     -   [MD5ANIM\_(file\_format).html\#Filetype\_Specific\_Parameters <span class="tocnumber">2.2</span> <span class="toctext">Filetype Specific Parameters</span>]  
-     -   [MD5ANIM\_(file\_format).html\#Ordered\_Lists <span class="tocnumber">2.3</span> <span class="toctext">Ordered Lists</span>]                                 
-         -   [MD5ANIM\_(file\_format).html\#Hierarchy <span class="tocnumber">2.3.1</span> <span class="toctext">Hierarchy</span>]                                    
-         -   [MD5ANIM\_(file\_format).html\#Bounds <span class="tocnumber">2.3.2</span> <span class="toctext">Bounds</span>]                                          
-         -   [MD5ANIM\_(file\_format).html\#Baseframe <span class="tocnumber">2.3.3</span> <span class="toctext">Baseframe</span>]                                    
-         -   [MD5ANIM\_(file\_format).html\#Frame\_0.2C1.2C2.2C\_ect... <span class="tocnumber">2.3.4</span> <span class="toctext">Frame 0,1,2, ect...</span>]        |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Overview</span>](MD5ANIM\_(file\_format)#Overview)                                                  
+ -   [<span class="tocnumber">2</span> <span class="toctext">Model Format Syntax</span>](MD5ANIM\_(file\_format)#Model\_Format\_Syntax)                          
+     -   [<span class="tocnumber">2.1</span> <span class="toctext">MD5 Header</span>](MD5ANIM\_(file\_format)#MD5\_Header)                                       
+     -   [<span class="tocnumber">2.2</span> <span class="toctext">Filetype Specific Parameters</span>](MD5ANIM\_(file\_format)#Filetype\_Specific\_Parameters)  
+     -   [<span class="tocnumber">2.3</span> <span class="toctext">Ordered Lists</span>](MD5ANIM\_(file\_format)#Ordered\_Lists)                                 
+         -   [<span class="tocnumber">2.3.1</span> <span class="toctext">Hierarchy</span>](MD5ANIM\_(file\_format)#Hierarchy)                                    
+         -   [<span class="tocnumber">2.3.2</span> <span class="toctext">Bounds</span>](MD5ANIM\_(file\_format)#Bounds)                                          
+         -   [<span class="tocnumber">2.3.3</span> <span class="toctext">Baseframe</span>](MD5ANIM\_(file\_format)#Baseframe)                                    
+         -   [<span class="tocnumber">2.3.4</span> <span class="toctext">Frame 0,1,2, ect...</span>](MD5ANIM\_(file\_format)#Frame\_0.2C1.2C2.2C\_ect...)        |
 
 Overview
 --------
 
-MD5Anim files are ascii (plain text) files that contain skeletal animation data. They are part of the .[MD5\_(file\_format).html MD5] format system. The other MD5 formats are:
+MD5Anim files are ascii (plain text) files that contain skeletal animation data. They are part of the .[MD5](MD5\_(file\_format)) format system. The other MD5 formats are:
 
-.[MD5MESH\_(file\_format).html MD5MESH]   
+.[MD5MESH](MD5MESH\_(file\_format))   
 Low resolution polygonal mesh exported from a 3D application.
 
-.[MD5CAMERA\_(file\_format).html MD5CAMERA]   
+.[MD5CAMERA](MD5CAMERA\_(file\_format))   
 Animated cameras for use in cutscenes.
 
 Model Format Syntax
@@ -39,7 +39,7 @@ All MD5 format files start with the MD5 header, regardless the specific filetype
 `commandline "<string>"`
 
 -   MD5Version - An integer that defines the current MD5 specification version. This should always read 10.
--   commandline - A string that contains the command line parameters passed to the [Exportmodels\_(console\_command).html exportmodels] console command.
+-   commandline - A string that contains the command line parameters passed to the [exportmodels](Exportmodels\_(console\_command)) console command.
 
 ### Filetype Specific Parameters
 

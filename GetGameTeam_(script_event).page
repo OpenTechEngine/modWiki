@@ -11,12 +11,12 @@ GetGameTeam (script event)
 Game class
 ----------
 
-This event operates on an instance of the [Game\_class.html game class] type [IdEntity\_(class).html idEntity]. Has spawn class specific implementation.
+This event operates on an instance of the [game class](Game\_class) type [idEntity](IdEntity\_(class)). Has spawn class specific implementation.
 
 Description
 -----------
 
-Returns the script object of the entity's team, or [$null\_entity\_(scripting).html null] if none.
+Returns the script object of the entity's team, or [null]($null\_entity\_(scripting)) if none.
 
 Usage
 -----
@@ -40,8 +40,8 @@ Notes
 
 Returns object pointer of team. Named object pointers for teams are **gdfTeam** and **stroggTeam** for comparison.
 
-The following [Spawn\_class.html spawn classes] can have their team set: **idActor**, **idItem**, **idProjectile**, **idPlayer**, **sdScriptEntity**.
+The following [spawn classes](Spawn\_class) can have their team set: **idActor**, **idItem**, **idProjectile**, **idPlayer**, **sdScriptEntity**.
 
-Has counterpart [SetGameTeam\_(script\_event).html setGameTeam].
+Has counterpart [setGameTeam](SetGameTeam\_(script\_event)).
 
 

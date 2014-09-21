@@ -1,7 +1,7 @@
 GUI item events
 ===============
 
-Events are blocks with [GUI\_commands.html commands] that are executed when a certain condition is met. This can be a condition created by the user - for example, moving the mouse over a windowDef element - or a noninteractive event - for example, when a certain time is reached.
+Events are blocks with [commands](GUI\_commands) that are executed when a certain condition is met. This can be a condition created by the user - for example, moving the mouse over a windowDef element - or a noninteractive event - for example, when a certain time is reached.
 
 Available events
 ----------------

@@ -1,7 +1,7 @@
 Startup parameters
 ==================
 
-Startup parameters are remnants of the time that an OS consisted of nothing more then a console. A command was then started by giving it's name and optionally some parameters to change the command's behavior. (Take DOS as an example, or even a modern Linux terminal.) All games built on the [Id\_Tech\_4.html id Tech 4] engine allow you to start them with parameters as well to get a specific behaviour.
+Startup parameters are remnants of the time that an OS consisted of nothing more then a console. A command was then started by giving it's name and optionally some parameters to change the command's behavior. (Take DOS as an example, or even a modern Linux terminal.) All games built on the [id Tech 4](Id\_Tech\_4) engine allow you to start them with parameters as well to get a specific behaviour.
 
 Shortcuts
 ---------
@@ -65,7 +65,7 @@ From now on, you can start the script by typing:
 What is a valid startup parameter
 ---------------------------------
 
-You can use any [Console.html\#Console\_commands in-game console command] as a startup parameter. This is useful if you always want that command to execute when you start a game. To make a valid startup parameter, prefix the command with '+'. If you want to use a [Console.html\#Cvar console variable] as a startup parameter you need to prefix it with the [Set\_(console\_command).html Set] command. Some CVars don't require it but this way you can be sure they will all work correctly.
+You can use any [in-game console command](Console#Console\_commands) as a startup parameter. This is useful if you always want that command to execute when you start a game. To make a valid startup parameter, prefix the command with '+'. If you want to use a [console variable](Console#Cvar) as a startup parameter you need to prefix it with the [Set](Set\_(console\_command)) command. Some CVars don't require it but this way you can be sure they will all work correctly.
 
 Common uses
 -----------
@@ -104,7 +104,7 @@ connect
 Connects to the given server. The server is specified as hostname:port - eg "connect 123.123.123.123:28004". If the :port is ommitted, the default for the game is assumed.
 
 editor  
-opens the built in [Map\_editor.html Map editor] upon launch. Also see [Mapping.html mapping].
+opens the built in [Map editor](Map\_editor) upon launch. Also see [mapping](Mapping).
 
 editAFs  
 opens the Articulated Figure Editor
@@ -119,7 +119,7 @@ editGUIs
 opens the GUI Editor
 
 editLights  
-opens the Light Editor and can also be opened from the [Map\_editor.html Map editor] by pressing "j" on your keyboard
+opens the Light Editor and can also be opened from the [Map editor](Map\_editor) by pressing "j" on your keyboard
 
 editPDAs  
 opens the PDA Editor
@@ -157,6 +157,6 @@ Used to enable cheats.
 This will make the game run in fullscreen or in windowed mode. Mostly in combanation with some command.
 
 [R\_multiSamples\_(cvar).html r\_multisamples]  
-Enables [Antialiasing.html antialiasing] and sets the number of passes.
+Enables [antialiasing](Antialiasing) and sets the number of passes.
 
 

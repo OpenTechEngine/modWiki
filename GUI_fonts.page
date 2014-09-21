@@ -1,14 +1,14 @@
 GUI fonts
 =========
 
-In the Doom 3 [GUIs.html GUI] system, the developer can choose which font to use on each [GUI\_items.html GUI item]. These fonts are used on the [Font\_(GUI\_item\_property).html font property] on [GUI\_scripting.html GUI scripts]. The default fonts - available on the Doom 3 game assets - are:
+In the Doom 3 [GUI](GUIs) system, the developer can choose which font to use on each [GUI item](GUI\_items). These fonts are used on the [font property](Font\_(GUI\_item\_property)) on [GUI scripts](GUI\_scripting). The default fonts - available on the Doom 3 game assets - are:
 
 `fonts/an`
 `fonts/bank`
 `fonts/english`
 `fonts/micro`
 
-Fonts on the Doom 3 engine are composed of [TGA\_(file\_format).html .TGA] and [DAT\_(file\_format).html .DAT] files put together. The font system on this engine is also similar to the Quake 3:Arena font system; Therefore, the same tools used to create custom fonts on Quake 3 can be used on Doom 3.
+Fonts on the Doom 3 engine are composed of [.TGA](TGA\_(file\_format)) and [.DAT](DAT\_(file\_format)) files put together. The font system on this engine is also similar to the Quake 3:Arena font system; Therefore, the same tools used to create custom fonts on Quake 3 can be used on Doom 3.
 
 Tools
 -----

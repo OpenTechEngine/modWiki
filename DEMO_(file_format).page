@@ -1,7 +1,7 @@
 DEMO (file format)
 ==================
 
-These files are recordings usually done for benchmark purposes, they can have live gameplay or static scenes and are stored in /[Demos\_(folder).html demos]. Even after the introduction of LZW compression in v1.3 they remain big files. These files are created with two console commands: [DemoShot\_(console\_command).html demoShot] for static scenes and [RecordDemo\_(console\_command).html recordDemo] for rolling demos. Use the stopRecording console command to stop a the recording of a rolling demo.
+These files are recordings usually done for benchmark purposes, they can have live gameplay or static scenes and are stored in /[demos](Demos\_(folder)). Even after the introduction of LZW compression in v1.3 they remain big files. These files are created with two console commands: [demoShot](DemoShot\_(console\_command)) for static scenes and [recordDemo](RecordDemo\_(console\_command)) for rolling demos. Use the stopRecording console command to stop a the recording of a rolling demo.
 
-You can playback demos with the playDemo console command (it works on both types of demos). If you wish to benchmark using a demo see the [TimeDemo\_(console\_command).html timeDemo] and timeDemoQuit console commands (you should set "[Com\_compressDemos\_(cvar).html com\_compressDemos] 0" in the console to avoid any slowdowns during the benchmark due to decompression).
+You can playback demos with the playDemo console command (it works on both types of demos). If you wish to benchmark using a demo see the [timeDemo](TimeDemo\_(console\_command)) and timeDemoQuit console commands (you should set "[com\_compressDemos](Com\_compressDemos\_(cvar)) 0" in the console to avoid any slowdowns during the benchmark due to decompression).
 

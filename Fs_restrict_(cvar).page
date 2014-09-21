@@ -4,7 +4,7 @@ Fs restrict (cvar)
 Description
 -----------
 
-Restricst file system access to known .[PK4\_(file\_format).html PK4] files.
+Restricst file system access to known .[PK4](PK4\_(file\_format)) files.
 
 Usage
 -----
@@ -49,6 +49,6 @@ Flags
 Notes
 -----
 
-If this CVar is set to 1 and you are unable to change it from the [Console.html console] then you can put it in the [CFG\_(file\_format).html autoexec.cfg] file or as a [Startup\_parameters.html startup parameter].
+If this CVar is set to 1 and you are unable to change it from the [console](Console) then you can put it in the [autoexec.cfg](CFG\_(file\_format)) file or as a [startup parameter](Startup\_parameters).
 
 

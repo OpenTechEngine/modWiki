@@ -1,7 +1,7 @@
 Skin (decl)
 ===========
 
-Skins are declarations that contain a list of [Material\_(decl).html material shaders] coupled with a set of replacement material shaders.
+Skins are declarations that contain a list of [material shaders](Material\_(decl)) coupled with a set of replacement material shaders.
 
 Through use of a series of skin definitions one can assign a unique material to several instances of the same model.
 
@@ -41,7 +41,7 @@ When the model is defined, the skin will appear in the *matching skins* folder w
 
 The remainder of the skin declaration consists of a series of lines which define the name of the *original* material shader followed by the *replacement* material shader.
 
-The original material of an object can found out by placing the object in your map then going in game and opening the console. Then type [R\_showSurfaceInfo\_(cvar).html r\_showSurfaceInfo] 1 and look at the object. The top line will give you the model location and the second line will give you the material name in the editor.
+The original material of an object can found out by placing the object in your map then going in game and opening the console. Then type [r\_showSurfaceInfo](R\_showSurfaceInfo\_(cvar)) 1 and look at the object. The top line will give you the model location and the second line will give you the material name in the editor.
 
  An example for a monster's skin declaration that uses two separate materials on its model:
 
@@ -55,5 +55,5 @@ If there are any other materials referenced by the model file (for example the m
 
 Skins are also used to make parts of a model invisible, by replacing a material with the "nodraw" material (textures/common/nodraw). This is often used if multiple weapons are attached to a model, and only one weapon should be visible at a time.
 
-Skin declarations usually live in .[SKIN\_(file\_format).html SKIN] files in the [Skins\_(folder).html skins] folder in your Doom 3 base folder.
+Skin declarations usually live in .[SKIN](SKIN\_(file\_format)) files in the [skins](Skins\_(folder)) folder in your Doom 3 base folder.
 

@@ -4,7 +4,7 @@ DemoShot (console command)
 Description
 -----------
 
-Takes a screenshot and saves it as a .[DEMO\_(file\_format).html DEMO] file.
+Takes a screenshot and saves it as a .[DEMO](DEMO\_(file\_format)) file.
 
 Usage
 -----
@@ -25,6 +25,6 @@ If filename option is used this command will output a file with the following na
 
 `shot_<filename>.demo`
 
-These demo shots can be benchmarked with the [TimeDemo\_(console\_command).html timeDemo] console command.
+These demo shots can be benchmarked with the [timeDemo](TimeDemo\_(console\_command)) console command.
 
 

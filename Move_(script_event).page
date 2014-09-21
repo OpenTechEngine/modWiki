@@ -4,7 +4,7 @@ Move (script event)
 Game class
 ----------
 
-This event operates on an instance of the [Game\_class.html game class] type {{{gameclass}}}
+This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
 
 Description
 -----------
@@ -54,7 +54,7 @@ This event is intended to move an entity along one of six principal directions i
 
 You can pass an arbitrary number to the script event but you'll find that it only affords you control over the heading. Vertical movement is restricted to either up or down with the exception of relative parameters, where direction is relative to the orientation of the entity.
 
-That said, you could rotate your entity to face the intended path of travel you could tell it to move forward and it would work as intended. This can prove to be tedious however and alternative script events like [MoveTo\_(script\_event).html moveTo] or [MoveToPos\_(script\_event).html moveToPos] may be more suitable.
+That said, you could rotate your entity to face the intended path of travel you could tell it to move forward and it would work as intended. This can prove to be tedious however and alternative script events like [moveTo](MoveTo\_(script\_event)) or [moveToPos](MoveToPos\_(script\_event)) may be more suitable.
 
 Note that distance can be a positive or negative value; something like ( WEST, -20 ) will actually result in movement 20 units to the East.
 

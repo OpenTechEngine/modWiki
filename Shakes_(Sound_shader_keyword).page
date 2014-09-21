@@ -7,10 +7,10 @@ Shakes (Sound shader keyword)
  --------                                                                                                                            
                                                                                                                                      
  </div>                                                                                                                              
- -   [Shakes\_(Sound\_shader\_keyword).html\#Description <span class="tocnumber">1</span> <span class="toctext">Description</span>]  
- -   [Shakes\_(Sound\_shader\_keyword).html\#Usage <span class="tocnumber">2</span> <span class="toctext">Usage</span>]              
- -   [Shakes\_(Sound\_shader\_keyword).html\#Example <span class="tocnumber">3</span> <span class="toctext">Example</span>]          
- -   [Shakes\_(Sound\_shader\_keyword).html\#Notes <span class="tocnumber">4</span> <span class="toctext">Notes</span>]              |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Description</span>](Shakes\_(Sound\_shader\_keyword)#Description)  
+ -   [<span class="tocnumber">2</span> <span class="toctext">Usage</span>](Shakes\_(Sound\_shader\_keyword)#Usage)              
+ -   [<span class="tocnumber">3</span> <span class="toctext">Example</span>](Shakes\_(Sound\_shader\_keyword)#Example)          
+ -   [<span class="tocnumber">4</span> <span class="toctext">Notes</span>](Shakes\_(Sound\_shader\_keyword)#Notes)              |
 
 Description
 -----------
@@ -22,7 +22,7 @@ Usage
 
 `shakes [<amount>]`
 
-The shake intensity is calculated by multiplying the [Volume\_(Sound\_shader\_keyword).html volume] setting with *amount*. The value is optional, it defaults to **1**.
+The shake intensity is calculated by multiplying the [volume](Volume\_(Sound\_shader\_keyword)) setting with *amount*. The value is optional, it defaults to **1**.
 
 Example
 -------

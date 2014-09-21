@@ -5,7 +5,7 @@ Brush
 
 A brush is convex volume bounded by four or more planes. Each plane will form one face of the brush and will have it's own properties. Each face is stored together with these properties in the mapfile. These properties include
 
--   [Material\_(decl).html Material] path
+-   [Material](Material\_(decl)) path
 -   Material XYZ shift and scale values
 -   Material rotation
 -   Detail/Structural ( Seems to be non-existant in Doom 3 )

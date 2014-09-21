@@ -11,47 +11,47 @@ Existing script events as of version 1.1.
  --------                                                                                                                                                                    
                                                                                                                                                                              
  </div>                                                                                                                                                                      
- -   [Script\_events\_(ETQW).html\#System\_Events <span class="tocnumber">1</span> <span class="toctext">System Events</span>]                                               
- -   [Script\_events\_(ETQW).html\#Entity\_Events <span class="tocnumber">2</span> <span class="toctext">Entity Events</span>]                                               
-     -   [Script\_events\_(ETQW).html\#idLight\_Events <span class="tocnumber">2.1</span> <span class="toctext">idLight Events</span>]                                       
-     -   [Script\_events\_(ETQW).html\#idForcefield\_Events <span class="tocnumber">2.2</span> <span class="toctext">idForcefield Events</span>]                             
-     -   [Script\_events\_(ETQW).html\#Animate\_Events <span class="tocnumber">2.3</span> <span class="toctext">Animate Events</span>]                                       
-     -   [Script\_events\_(ETQW).html\#idDoor\_Events <span class="tocnumber">2.4</span> <span class="toctext">idDoor Events</span>]                                         
-     -   [Script\_events\_(ETQW).html\#idMoveable\_Events <span class="tocnumber">2.5</span> <span class="toctext">idMoveable Events</span>]                                 
-     -   [Script\_events\_(ETQW).html\#sdGeneralMover\_Events <span class="tocnumber">2.6</span> <span class="toctext">sdGeneralMover Events</span>]                         
-     -   [Script\_events\_(ETQW).html\#idAnimatedEntity\_Events <span class="tocnumber">2.7</span> <span class="toctext">idAnimatedEntity Events</span>]                     
-     -   [Script\_events\_(ETQW).html\#idWeapon\_Events <span class="tocnumber">2.8</span> <span class="toctext">idWeapon Events</span>]                                     
-     -   [Script\_events\_(ETQW).html\#idProjectile\_Events <span class="tocnumber">2.9</span> <span class="toctext">idProjectile Events</span>]                             
-     -   [Script\_events\_(ETQW).html\#idActor\_Events <span class="tocnumber">2.10</span> <span class="toctext">idActor Events</span>]                                      
-     -   [Script\_events\_(ETQW).html\#idPlayer\_Events <span class="tocnumber">2.11</span> <span class="toctext">idPlayer Events</span>]                                    
-         -   [Script\_events\_(ETQW).html\#Bots\_Player\_Interface\_Events <span class="tocnumber">2.11.1</span> <span class="toctext">Bots Player Interface Events</span>]  
-     -   [Script\_events\_(ETQW).html\#sdAtmosphere\_Events <span class="tocnumber">2.12</span> <span class="toctext">sdAtmosphere Events</span>]                            
-     -   [Script\_events\_(ETQW).html\#sdWalker\_Events <span class="tocnumber">2.13</span> <span class="toctext">sdWalker Events</span>]                                    
-     -   [Script\_events\_(ETQW).html\#sdTransport\_Events <span class="tocnumber">2.14</span> <span class="toctext">sdTransport Events</span>]                              
-     -   [Script\_events\_(ETQW).html\#sdVehicle\_Rigidbody\_Events <span class="tocnumber">2.15</span> <span class="toctext">sdVehicle\_Rigidbody Events</span>]            
-     -   [Script\_events\_(ETQW).html\#sdVehicleWeapon\_Events <span class="tocnumber">2.16</span> <span class="toctext">sdVehicleWeapon Events</span>]                      
-     -   [Script\_events\_(ETQW).html\#sdJetPack\_Events <span class="tocnumber">2.17</span> <span class="toctext">sdJetPack Events</span>]                                  
-     -   [Script\_events\_(ETQW).html\#sdScriptEntity\_Events <span class="tocnumber">2.18</span> <span class="toctext">sdScriptEntity Events</span>]                        
-     -   [Script\_events\_(ETQW).html\#sdDeployZone\_Events <span class="tocnumber">2.19</span> <span class="toctext">sdDeployZone Events</span>]                            
-     -   [Script\_events\_(ETQW).html\#Animated\_Client\_Entity\_Events <span class="tocnumber">2.20</span> <span class="toctext">Animated Client Entity Events</span>]      
-     -   [Script\_events\_(ETQW).html\#sdTeleporter\_Events <span class="tocnumber">2.21</span> <span class="toctext">sdTeleporter Events</span>]                            
-     -   [Script\_events\_(ETQW).html\#sdRepairDrone\_Events <span class="tocnumber">2.22</span> <span class="toctext">sdRepairDrone Events</span>]                          
-     -   [Script\_events\_(ETQW).html\#sdParachute\_Events <span class="tocnumber">2.23</span> <span class="toctext">sdParachute Events</span>]                              
-     -   [Script\_events\_(ETQW).html\#sdDefenceTurret\_Events <span class="tocnumber">2.24</span> <span class="toctext">sdDefenceTurret Events</span>]                      
-     -   [Script\_events\_(ETQW).html\#sdDeliveryVehicle\_Events <span class="tocnumber">2.25</span> <span class="toctext">sdDeliveryVehicle Events</span>]                  
- -   [Script\_events\_(ETQW).html\#Game\_Class\_Events <span class="tocnumber">3</span> <span class="toctext">Game Class Events</span>]                                      
-     -   [Script\_events\_(ETQW).html\#Objective\_Manager\_Events <span class="tocnumber">3.1</span> <span class="toctext">Objective Manager Events</span>]                  
-         -   [Script\_events\_(ETQW).html\#Bot\_Objective\_Manager\_Events <span class="tocnumber">3.1.1</span> <span class="toctext">Bot Objective Manager Events</span>]   
-     -   [Script\_events\_(ETQW).html\#Team\_Events <span class="tocnumber">3.2</span> <span class="toctext">Team Events</span>]                                             
-         -   [Script\_events\_(ETQW).html\#Bot\_Team\_Events <span class="tocnumber">3.2.1</span> <span class="toctext">Bot Team Events</span>]                              
-     -   [Script\_events\_(ETQW).html\#Task\_Events <span class="tocnumber">3.3</span> <span class="toctext">Task Events</span>]                                             
- -   [Script\_events\_(ETQW).html\#CVar\_Events <span class="tocnumber">4</span> <span class="toctext">CVar Events</span>]                                                   
- -   [Script\_events\_(ETQW).html\#Mask\_Edit-session\_Events <span class="tocnumber">5</span> <span class="toctext">Mask Edit-session Events</span>]                        |
+ -   [<span class="tocnumber">1</span> <span class="toctext">System Events</span>](Script\_events\_(ETQW)#System\_Events)                                               
+ -   [<span class="tocnumber">2</span> <span class="toctext">Entity Events</span>](Script\_events\_(ETQW)#Entity\_Events)                                               
+     -   [<span class="tocnumber">2.1</span> <span class="toctext">idLight Events</span>](Script\_events\_(ETQW)#idLight\_Events)                                       
+     -   [<span class="tocnumber">2.2</span> <span class="toctext">idForcefield Events</span>](Script\_events\_(ETQW)#idForcefield\_Events)                             
+     -   [<span class="tocnumber">2.3</span> <span class="toctext">Animate Events</span>](Script\_events\_(ETQW)#Animate\_Events)                                       
+     -   [<span class="tocnumber">2.4</span> <span class="toctext">idDoor Events</span>](Script\_events\_(ETQW)#idDoor\_Events)                                         
+     -   [<span class="tocnumber">2.5</span> <span class="toctext">idMoveable Events</span>](Script\_events\_(ETQW)#idMoveable\_Events)                                 
+     -   [<span class="tocnumber">2.6</span> <span class="toctext">sdGeneralMover Events</span>](Script\_events\_(ETQW)#sdGeneralMover\_Events)                         
+     -   [<span class="tocnumber">2.7</span> <span class="toctext">idAnimatedEntity Events</span>](Script\_events\_(ETQW)#idAnimatedEntity\_Events)                     
+     -   [<span class="tocnumber">2.8</span> <span class="toctext">idWeapon Events</span>](Script\_events\_(ETQW)#idWeapon\_Events)                                     
+     -   [<span class="tocnumber">2.9</span> <span class="toctext">idProjectile Events</span>](Script\_events\_(ETQW)#idProjectile\_Events)                             
+     -   [<span class="tocnumber">2.10</span> <span class="toctext">idActor Events</span>](Script\_events\_(ETQW)#idActor\_Events)                                      
+     -   [<span class="tocnumber">2.11</span> <span class="toctext">idPlayer Events</span>](Script\_events\_(ETQW)#idPlayer\_Events)                                    
+         -   [<span class="tocnumber">2.11.1</span> <span class="toctext">Bots Player Interface Events</span>](Script\_events\_(ETQW)#Bots\_Player\_Interface\_Events)  
+     -   [<span class="tocnumber">2.12</span> <span class="toctext">sdAtmosphere Events</span>](Script\_events\_(ETQW)#sdAtmosphere\_Events)                            
+     -   [<span class="tocnumber">2.13</span> <span class="toctext">sdWalker Events</span>](Script\_events\_(ETQW)#sdWalker\_Events)                                    
+     -   [<span class="tocnumber">2.14</span> <span class="toctext">sdTransport Events</span>](Script\_events\_(ETQW)#sdTransport\_Events)                              
+     -   [<span class="tocnumber">2.15</span> <span class="toctext">sdVehicle\_Rigidbody Events</span>](Script\_events\_(ETQW)#sdVehicle\_Rigidbody\_Events)            
+     -   [<span class="tocnumber">2.16</span> <span class="toctext">sdVehicleWeapon Events</span>](Script\_events\_(ETQW)#sdVehicleWeapon\_Events)                      
+     -   [<span class="tocnumber">2.17</span> <span class="toctext">sdJetPack Events</span>](Script\_events\_(ETQW)#sdJetPack\_Events)                                  
+     -   [<span class="tocnumber">2.18</span> <span class="toctext">sdScriptEntity Events</span>](Script\_events\_(ETQW)#sdScriptEntity\_Events)                        
+     -   [<span class="tocnumber">2.19</span> <span class="toctext">sdDeployZone Events</span>](Script\_events\_(ETQW)#sdDeployZone\_Events)                            
+     -   [<span class="tocnumber">2.20</span> <span class="toctext">Animated Client Entity Events</span>](Script\_events\_(ETQW)#Animated\_Client\_Entity\_Events)      
+     -   [<span class="tocnumber">2.21</span> <span class="toctext">sdTeleporter Events</span>](Script\_events\_(ETQW)#sdTeleporter\_Events)                            
+     -   [<span class="tocnumber">2.22</span> <span class="toctext">sdRepairDrone Events</span>](Script\_events\_(ETQW)#sdRepairDrone\_Events)                          
+     -   [<span class="tocnumber">2.23</span> <span class="toctext">sdParachute Events</span>](Script\_events\_(ETQW)#sdParachute\_Events)                              
+     -   [<span class="tocnumber">2.24</span> <span class="toctext">sdDefenceTurret Events</span>](Script\_events\_(ETQW)#sdDefenceTurret\_Events)                      
+     -   [<span class="tocnumber">2.25</span> <span class="toctext">sdDeliveryVehicle Events</span>](Script\_events\_(ETQW)#sdDeliveryVehicle\_Events)                  
+ -   [<span class="tocnumber">3</span> <span class="toctext">Game Class Events</span>](Script\_events\_(ETQW)#Game\_Class\_Events)                                      
+     -   [<span class="tocnumber">3.1</span> <span class="toctext">Objective Manager Events</span>](Script\_events\_(ETQW)#Objective\_Manager\_Events)                  
+         -   [<span class="tocnumber">3.1.1</span> <span class="toctext">Bot Objective Manager Events</span>](Script\_events\_(ETQW)#Bot\_Objective\_Manager\_Events)   
+     -   [<span class="tocnumber">3.2</span> <span class="toctext">Team Events</span>](Script\_events\_(ETQW)#Team\_Events)                                             
+         -   [<span class="tocnumber">3.2.1</span> <span class="toctext">Bot Team Events</span>](Script\_events\_(ETQW)#Bot\_Team\_Events)                              
+     -   [<span class="tocnumber">3.3</span> <span class="toctext">Task Events</span>](Script\_events\_(ETQW)#Task\_Events)                                             
+ -   [<span class="tocnumber">4</span> <span class="toctext">CVar Events</span>](Script\_events\_(ETQW)#CVar\_Events)                                                   
+ -   [<span class="tocnumber">5</span> <span class="toctext">Mask Edit-session Events</span>](Script\_events\_(ETQW)#Mask\_Edit-session\_Events)                        |
 
 System Events
 -------------
 
-Events declared in idThread, accessible via [Scripting\_basics.html\#sys sys] identifier.
+Events declared in idThread, accessible via [sys](Scripting\_basics#sys) identifier.
 
 -   addCheapDecal
 -   createMaskEditSession
@@ -251,7 +251,7 @@ Events declared in idThread, accessible via [Scripting\_basics.html\#sys sys] id
 Entity Events
 -------------
 
-Events declared in the base [Spawn\_class.html spawn class] [IdEntity\_(class).html idEntity].
+Events declared in the base [spawn class](Spawn\_class) [IdEntity\_(class).html idEntity].
 
 All entities inherit these events, though some may be overridden to produce different behaviour.
 
@@ -974,7 +974,7 @@ Territory Events
 Game Class Events
 -----------------
 
-The game sets up several [Game\_class.html game classes] to manage different things.
+The game sets up several [game classes](Game\_class) to manage different things.
 
 ### Objective Manager Events
 

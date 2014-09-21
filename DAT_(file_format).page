@@ -7,16 +7,16 @@ DAT (file format)
  --------                                                                                                                                
                                                                                                                                          
  </div>                                                                                                                                  
- -   [DAT\_(file\_format).html\#General\_Information <span class="tocnumber">1</span> <span class="toctext">General Information</span>]  
- -   [DAT\_(file\_format).html\#File\_Format <span class="tocnumber">2</span> <span class="toctext">File Format</span>]                  
-     -   [DAT\_(file\_format).html\#Glyphs <span class="tocnumber">2.1</span> <span class="toctext">Glyphs</span>]                       
-     -   [DAT\_(file\_format).html\#Tail\_End <span class="tocnumber">2.2</span> <span class="toctext">Tail End</span>]                  
- -   [DAT\_(file\_format).html\#Tools <span class="tocnumber">3</span> <span class="toctext">Tools</span>]                               |
+ -   [<span class="tocnumber">1</span> <span class="toctext">General Information</span>](DAT\_(file\_format)#General\_Information)  
+ -   [<span class="tocnumber">2</span> <span class="toctext">File Format</span>](DAT\_(file\_format)#File\_Format)                  
+     -   [<span class="tocnumber">2.1</span> <span class="toctext">Glyphs</span>](DAT\_(file\_format)#Glyphs)                       
+     -   [<span class="tocnumber">2.2</span> <span class="toctext">Tail End</span>](DAT\_(file\_format)#Tail\_End)                  
+ -   [<span class="tocnumber">3</span> <span class="toctext">Tools</span>](DAT\_(file\_format)#Tools)                               |
 
 General Information
 -------------------
 
-DAT files store glyph and image lookup data for use with a set of corresponding [TGA\_(file\_format).html TGA] files. Together these files make up the bitmap fonts used in the game. But unlike most filetypes used with idTech 4, these files are binary and as such should not be edited in a text editor. They can can be found in the [Folder\_structure\_(Doom\_3).html\#.2Fbase.2Ffonts fonts] directory and it's subfolders.
+DAT files store glyph and image lookup data for use with a set of corresponding [TGA](TGA\_(file\_format)) files. Together these files make up the bitmap fonts used in the game. But unlike most filetypes used with idTech 4, these files are binary and as such should not be edited in a text editor. They can can be found in the [fonts](Folder\_structure\_(Doom\_3)#.2Fbase.2Ffonts) directory and it's subfolders.
 
 The fonts consist of 256 glyphs and are rendered at three sizes, 12pt, 24pt, and 48pt with a respective DAT file for each. The TGA files are 256 by 256 with a 32 bit color depth. Traditionally the images are white in color (allowing for the color to be adjusted in post) while the glyphs are visible only in the alpha channel. Because each TGA is rendered at a fixed resolution the entire set of glyphs may span several image files.
 

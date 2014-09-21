@@ -49,6 +49,6 @@ Flags
 Notes
 -----
 
-Compression reduces filesize by almost half but because decompression is on the fly it can slow down playback. This is especially relevant if you are recording a demo for use with the [TimeDemo\_(console\_command).html timedemo] console command where the results will be skewed by the fact the CPU will be busy decompressing the demo.
+Compression reduces filesize by almost half but because decompression is on the fly it can slow down playback. This is especially relevant if you are recording a demo for use with the [timedemo](TimeDemo\_(console\_command)) console command where the results will be skewed by the fact the CPU will be busy decompressing the demo.
 
 

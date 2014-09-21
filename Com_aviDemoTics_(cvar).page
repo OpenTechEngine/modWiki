@@ -4,7 +4,7 @@ Com aviDemoTics (cvar)
 Description
 -----------
 
-This determines the framerate to capture .[TGA\_(file\_format).html TGA] frames generated with the [AviDemo\_(console\_command).html aviDemo] command.
+This determines the framerate to capture .[TGA](TGA\_(file\_format)) frames generated with the [aviDemo](AviDemo\_(console\_command)) command.
 
 Usage
 -----
@@ -53,8 +53,8 @@ Notes
 
 Any number above four seems to have no effect. It's not 100% clear if this it based on the engine's in-game clock of 60fps or if it's based on the refresh rate. Related CVars:
 
--   [Com\_aviDemoHeight\_(cvar).html com\_aviDemoHeight] - You can select the height of each frame.
--   [Com\_aviDemoSamples\_(cvar).html com\_aviDemoSamples] - You can select the [Antialiasing.html antialiasing] factor of each frame.
--   [Com\_aviDemoWidth\_(cvar).html com\_aviDemoWidth] - You can select the width of each frame.
+-   [com\_aviDemoHeight](Com\_aviDemoHeight\_(cvar)) - You can select the height of each frame.
+-   [com\_aviDemoSamples](Com\_aviDemoSamples\_(cvar)) - You can select the [antialiasing](Antialiasing) factor of each frame.
+-   [com\_aviDemoWidth](Com\_aviDemoWidth\_(cvar)) - You can select the width of each frame.
 
 

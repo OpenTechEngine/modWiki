@@ -65,7 +65,7 @@ Inheritance
 
 This entity is derived from the following:
 
--   *[IdEntity\_(class).html idEntity]*
+-   *[idEntity](IdEntity\_(class))*
     -   '' idPlayerStart''
         -   *' info\_player\_teleport*'
 
@@ -76,7 +76,7 @@ Notes
 
 Steps to create a working teleporter:
 
--   Create a [Trigger\_multiple\_(entity).html trigger\_multiple] as the starting point of your teleporter.
+-   Create a [trigger\_multiple](Trigger\_multiple\_(entity)) as the starting point of your teleporter.
 -   Create an info\_player\_teleport as the destination of your teleporter.
 -   Connect (Ctrl+K) the trigger\_multiple to the info\_player\_teleport.
 
