@@ -46,9 +46,9 @@ Inheritance
 This entity is derived from the following:
 
 -   '' rvHitScan''
-    -   [Hitscan\_base\_(entity).html hitscan\_base]
-        -   [Hitscan\_bullet\_base\_(entity).html hitscan\_bullet\_base]
-            -   [Hitscan\_strogg\_marine\_bullet\_(entity).html hitscan\_strogg\_marine\_bullet]
+    -   [hitscan\_base](Hitscan\_base\_(entity))
+        -   [hitscan\_bullet\_base](Hitscan\_bullet\_base\_(entity))
+            -   [hitscan\_strogg\_marine\_bullet](Hitscan\_strogg\_marine\_bullet\_(entity))
                 -   *' hitscan\_sentry\_bullet*'
 
 **Note**: Entries marked in italics are classes defined in the SDK.

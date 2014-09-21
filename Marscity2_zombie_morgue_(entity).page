@@ -165,9 +165,9 @@ This entity is derived from the following:
             -   '' idAFEntity\_Gibbable''
                 -   '' idActor''
                     -   '' idAI''
-                        -   [Monster\_default\_(entity).html monster\_default]
-                            -   [Zombie\_default\_(entity).html zombie\_default]
-                                -   [Monster\_zombie\_morgue\_(entity).html monster\_zombie\_morgue]
+                        -   [monster\_default](Monster\_default\_(entity))
+                            -   [zombie\_default](Zombie\_default\_(entity))
+                                -   [monster\_zombie\_morgue](Monster\_zombie\_morgue\_(entity))
                                     -   *' marscity2\_zombie\_morgue*'
 
 **Note**: Entries marked in italics are classes defined in the SDK.

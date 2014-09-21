@@ -15,69 +15,69 @@ Existing keywords as of Prey version 1.0.103 (1.0):
 General Keywords
 ----------------
 
--   [Alpha\_(Material\_stage\_keyword).html alpha]
--   [AlphaTest\_(Material\_stage\_keyword).html alphaTest]
--   [Alphazeroclamp\_(Material\_stage\_keyword).html alphazeroclamp]
--   [Blend\_(Material\_stage\_keyword).html blend]
--   [Blue\_(Material\_stage\_keyword).html blue]
--   [CameraCubeMap\_(Material\_stage\_keyword).html cameraCubeMap]
--   [CenterScale\_(Material\_stage\_keyword).html centerScale]
--   [Clamp\_(Material\_stage\_keyword).html clamp]
--   [Color\_(Material\_stage\_keyword).html color]
--   [Colored\_(Material\_stage\_keyword).html colored]
--   [CubeMap\_(Material\_stage\_keyword).html cubeMap]
--   [ForceHighQuality\_(Material\_stage\_keyword).html forceHighQuality]
--   [FragmentMap\_(Material\_stage\_keyword).html fragmentMap]
--   [FragmentProgram\_(Material\_stage\_keyword).html fragmentProgram]
--   [Green\_(Material\_stage\_keyword).html green]
--   [Highquality\_(Material\_stage\_keyword).html highquality]
--   [If\_(Material\_stage\_keyword).html if]
--   [IgnoreAlphaTest\_(Material\_stage\_keyword).html ignoreAlphaTest]
--   [InverseVertexColor\_(Material\_stage\_keyword).html inverseVertexColor]
--   [Linear\_(Material\_stage\_keyword).html linear]
--   [Map\_(Material\_stage\_keyword).html map]
--   [MaskBlue\_(Material\_stage\_keyword).html maskBlue]
--   [MaskColor\_(Material\_stage\_keyword).html maskColor]
--   [MaskDepth\_(Material\_stage\_keyword).html maskDepth]
--   [MaskGreen\_(Material\_stage\_keyword).html maskGreen]
--   [MaskRed\_(Material\_stage\_keyword).html maskRed]
--   [MegaTexture\_(Material\_stage\_keyword).html megaTexture]
--   [MirrorRenderMap\_(Material\_stage\_keyword).html mirrorRenderMap]
--   [Nearest\_(Material\_stage\_keyword).html nearest]
--   [Noclamp\_(Material\_stage\_keyword).html noclamp]
--   [Nopicmip\_(Material\_stage\_keyword).html nopicmip]
--   [PrivatePolygonOffset\_(Material\_stage\_keyword).html privatePolygonOffset]
--   [Program\_(Material\_stage\_keyword).html program]
--   [Red\_(Material\_stage\_keyword).html red]
--   [RemoteRenderMap\_(Material\_stage\_keyword).html remoteRenderMap]
--   [Rgb\_(Material\_stage\_keyword).html rgb]
--   [Rgba\_(Material\_stage\_keyword).html rgba]
--   [Rotate\_(Material\_stage\_keyword).html rotate]
--   [Scale\_(Material\_stage\_keyword).html scale]
--   [Scroll\_(Material\_stage\_keyword).html scroll]
--   [Shear\_(Material\_stage\_keyword).html shear]
--   [Soundmap\_(Material\_stage\_keyword).html soundmap]
--   [TexGen\_(Material\_stage\_keyword).html texGen]
--   [Translate\_(Material\_stage\_keyword).html translate]
--   [Uncompressed\_(Material\_stage\_keyword).html uncompressed]
--   [VertexColor\_(Material\_stage\_keyword).html vertexColor]
--   [VertexParm\_(Material\_stage\_keyword).html vertexParm]
--   [VertexProgram\_(Material\_stage\_keyword).html vertexProgram]
--   [Videomap\_(Material\_stage\_keyword).html videomap]
--   [Zeroclamp\_(Material\_stage\_keyword).html zeroclamp]
+-   [alpha](Alpha\_(Material\_stage\_keyword))
+-   [alphaTest](AlphaTest\_(Material\_stage\_keyword))
+-   [alphazeroclamp](Alphazeroclamp\_(Material\_stage\_keyword))
+-   [blend](Blend\_(Material\_stage\_keyword))
+-   [blue](Blue\_(Material\_stage\_keyword))
+-   [cameraCubeMap](CameraCubeMap\_(Material\_stage\_keyword))
+-   [centerScale](CenterScale\_(Material\_stage\_keyword))
+-   [clamp](Clamp\_(Material\_stage\_keyword))
+-   [color](Color\_(Material\_stage\_keyword))
+-   [colored](Colored\_(Material\_stage\_keyword))
+-   [cubeMap](CubeMap\_(Material\_stage\_keyword))
+-   [forceHighQuality](ForceHighQuality\_(Material\_stage\_keyword))
+-   [fragmentMap](FragmentMap\_(Material\_stage\_keyword))
+-   [fragmentProgram](FragmentProgram\_(Material\_stage\_keyword))
+-   [green](Green\_(Material\_stage\_keyword))
+-   [highquality](Highquality\_(Material\_stage\_keyword))
+-   [if](If\_(Material\_stage\_keyword))
+-   [ignoreAlphaTest](IgnoreAlphaTest\_(Material\_stage\_keyword))
+-   [inverseVertexColor](InverseVertexColor\_(Material\_stage\_keyword))
+-   [linear](Linear\_(Material\_stage\_keyword))
+-   [map](Map\_(Material\_stage\_keyword))
+-   [maskBlue](MaskBlue\_(Material\_stage\_keyword))
+-   [maskColor](MaskColor\_(Material\_stage\_keyword))
+-   [maskDepth](MaskDepth\_(Material\_stage\_keyword))
+-   [maskGreen](MaskGreen\_(Material\_stage\_keyword))
+-   [maskRed](MaskRed\_(Material\_stage\_keyword))
+-   [megaTexture](MegaTexture\_(Material\_stage\_keyword))
+-   [mirrorRenderMap](MirrorRenderMap\_(Material\_stage\_keyword))
+-   [nearest](Nearest\_(Material\_stage\_keyword))
+-   [noclamp](Noclamp\_(Material\_stage\_keyword))
+-   [nopicmip](Nopicmip\_(Material\_stage\_keyword))
+-   [privatePolygonOffset](PrivatePolygonOffset\_(Material\_stage\_keyword))
+-   [program](Program\_(Material\_stage\_keyword))
+-   [red](Red\_(Material\_stage\_keyword))
+-   [remoteRenderMap](RemoteRenderMap\_(Material\_stage\_keyword))
+-   [rgb](Rgb\_(Material\_stage\_keyword))
+-   [rgba](Rgba\_(Material\_stage\_keyword))
+-   [rotate](Rotate\_(Material\_stage\_keyword))
+-   [scale](Scale\_(Material\_stage\_keyword))
+-   [scroll](Scroll\_(Material\_stage\_keyword))
+-   [shear](Shear\_(Material\_stage\_keyword))
+-   [soundmap](Soundmap\_(Material\_stage\_keyword))
+-   [texGen](TexGen\_(Material\_stage\_keyword))
+-   [translate](Translate\_(Material\_stage\_keyword))
+-   [uncompressed](Uncompressed\_(Material\_stage\_keyword))
+-   [vertexColor](VertexColor\_(Material\_stage\_keyword))
+-   [vertexParm](VertexParm\_(Material\_stage\_keyword))
+-   [vertexProgram](VertexProgram\_(Material\_stage\_keyword))
+-   [videomap](Videomap\_(Material\_stage\_keyword))
+-   [zeroclamp](Zeroclamp\_(Material\_stage\_keyword))
 
 Image program functions
 -----------------------
 
--   [Add\_(Image\_program\_function).html add]
--   [Addnormals\_(Image\_program\_function).html addnormals]
--   [Heightmap\_(Image\_program\_function).html heightmap]
--   [InvertAlpha\_(Image\_program\_function).html invertAlpha]
--   [InvertColor\_(Image\_program\_function).html invertColor]
--   [MakeAlpha\_(Image\_program\_function).html makeAlpha]
--   [MakeIntensity\_(Image\_program\_function).html makeIntensity]
--   [Scale\_(Image\_program\_function).html scale]
--   [Smoothnormals\_(Image\_program\_function).html smoothnormals]
+-   [add](Add\_(Image\_program\_function))
+-   [addnormals](Addnormals\_(Image\_program\_function))
+-   [heightmap](Heightmap\_(Image\_program\_function))
+-   [invertAlpha](InvertAlpha\_(Image\_program\_function))
+-   [invertColor](InvertColor\_(Image\_program\_function))
+-   [makeAlpha](MakeAlpha\_(Image\_program\_function))
+-   [makeIntensity](MakeIntensity\_(Image\_program\_function))
+-   [scale](Scale\_(Image\_program\_function))
+-   [smoothnormals](Smoothnormals\_(Image\_program\_function))
 
 Uncategorized
 -------------

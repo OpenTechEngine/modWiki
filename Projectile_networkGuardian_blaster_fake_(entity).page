@@ -111,10 +111,10 @@ This entity is derived from the following:
 
 -   '' idEntity''
     -   '' idProjectile''
-        -   [Projectile\_base\_(entity).html projectile\_base]
-            -   [Projectile\_blaster\_base\_(entity).html projectile\_blaster\_base]
-                -   [Projectile\_lightTank\_fireball\_(entity).html projectile\_lightTank\_fireball]
-                    -   [Projectile\_networkGuardian\_blaster\_(entity).html projectile\_networkGuardian\_blaster]
+        -   [projectile\_base](Projectile\_base\_(entity))
+            -   [projectile\_blaster\_base](Projectile\_blaster\_base\_(entity))
+                -   [projectile\_lightTank\_fireball](Projectile\_lightTank\_fireball\_(entity))
+                    -   [projectile\_networkGuardian\_blaster](Projectile\_networkGuardian\_blaster\_(entity))
                         -   *' projectile\_networkGuardian\_blaster\_fake*'
 
 **Note**: Entries marked in italics are classes defined in the SDK.

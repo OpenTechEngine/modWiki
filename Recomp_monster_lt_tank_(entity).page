@@ -250,9 +250,9 @@ This entity is derived from the following:
             -   '' idAFEntity\_Gibbable''
                 -   '' idActor''
                     -   '' idAI''
-                        -   [Monster\_default\_(entity).html monster\_default]
-                            -   [Actor\_default\_(entity).html actor\_default]
-                                -   [Monster\_lt\_tank\_(entity).html monster\_lt\_tank]
+                        -   [monster\_default](Monster\_default\_(entity))
+                            -   [actor\_default](Actor\_default\_(entity))
+                                -   [monster\_lt\_tank](Monster\_lt\_tank\_(entity))
                                     -   *' recomp\_monster\_lt\_tank*'
 
 **Note**: Entries marked in italics are classes defined in the SDK.

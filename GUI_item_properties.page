@@ -41,79 +41,79 @@ Most of the examples featured on the following documentation come straight from 
 
 -   anim
 -   animClass
--   [Backcolor\_(GUI\_item\_property).html backcolor]
--   [Background\_(GUI\_item\_property).html background]
--   [Bind\_(GUI\_item\_property).html bind]
--   [Bordercolor\_(GUI\_item\_property).html bordercolor]
--   [Bordersize\_(GUI\_item\_property).html bordersize]
--   [ChoiceType\_(GUI\_item\_property).html choiceType]
--   [Choices\_(GUI\_item\_property).html choices]
--   [Comment\_(GUI\_item\_property).html comment]
--   [CurrentChoice\_(GUI\_item\_property).html currentChoice]
--   [Cursor\_(GUI\_item\_property).html cursor]
--   [Cursorvar\_(GUI\_item\_property).html cursorvar]
--   [Cvar\_(GUI\_item\_property).html cvar]
+-   [backcolor](Backcolor\_(GUI\_item\_property))
+-   [background](Background\_(GUI\_item\_property))
+-   [bind](Bind\_(GUI\_item\_property))
+-   [bordercolor](Bordercolor\_(GUI\_item\_property))
+-   [bordersize](Bordersize\_(GUI\_item\_property))
+-   [choiceType](ChoiceType\_(GUI\_item\_property))
+-   [choices](Choices\_(GUI\_item\_property))
+-   [comment](Comment\_(GUI\_item\_property))
+-   [currentChoice](CurrentChoice\_(GUI\_item\_property))
+-   [cursor](Cursor\_(GUI\_item\_property))
+-   [cursorvar](Cursorvar\_(GUI\_item\_property))
+-   [cvar](Cvar\_(GUI\_item\_property))
 -   cvarGroup
--   [Font\_(GUI\_item\_property).html font]
+-   [font](Font\_(GUI\_item\_property))
 -   forceScroll
--   [Forceaspectheight\_(GUI\_item\_property).html forceaspectheight]
--   [Forceaspectwidth\_(GUI\_item\_property).html forceaspectwidth]
--   [Forecolor\_(GUI\_item\_property).html forecolor]
--   [Gui\_(GUI\_item\_property).html gui]
--   [High\_(GUI\_item\_property).html high]
+-   [forceaspectheight](Forceaspectheight\_(GUI\_item\_property))
+-   [forceaspectwidth](Forceaspectwidth\_(GUI\_item\_property))
+-   [forecolor](Forecolor\_(GUI\_item\_property))
+-   [gui](Gui\_(GUI\_item\_property))
+-   [high](High\_(GUI\_item\_property))
 -   horizontal
--   [Invertrect\_(GUI\_item\_property).html invertrect]
--   [LightColor\_(GUI\_item\_property).html lightColor]
--   [LightOrigin\_(GUI\_item\_property).html lightOrigin]
--   [ListName\_(GUI\_item\_property).html listName]
--   [LiveUpdate\_(GUI\_item\_property).html liveUpdate]
--   [Low\_(GUI\_item\_property).html low]
--   [Matcolor\_(GUI\_item\_property).html matcolor]
--   [Matscalex\_(GUI\_item\_property).html matscalex]
--   [Matscaley\_(GUI\_item\_property).html matscaley]
--   [Maxchars\_(GUI\_item\_property).html maxchars]
--   [Menugui\_(GUI\_item\_property).html menugui]
--   [Modal\_(GUI\_item\_property).html modal]
--   [Model\_(GUI\_item\_property).html model]
--   [ModelOrigin\_(GUI\_item\_property).html modelOrigin]
--   [ModelRotate\_(GUI\_item\_property).html modelRotate]
--   [MultipleSel\_(GUI\_item\_property).html multipleSel]
+-   [invertrect](Invertrect\_(GUI\_item\_property))
+-   [lightColor](LightColor\_(GUI\_item\_property))
+-   [lightOrigin](LightOrigin\_(GUI\_item\_property))
+-   [listName](ListName\_(GUI\_item\_property))
+-   [liveUpdate](LiveUpdate\_(GUI\_item\_property))
+-   [low](Low\_(GUI\_item\_property))
+-   [matcolor](Matcolor\_(GUI\_item\_property))
+-   [matscalex](Matscalex\_(GUI\_item\_property))
+-   [matscaley](Matscaley\_(GUI\_item\_property))
+-   [maxchars](Maxchars\_(GUI\_item\_property))
+-   [menugui](Menugui\_(GUI\_item\_property))
+-   [modal](Modal\_(GUI\_item\_property))
+-   [model](Model\_(GUI\_item\_property))
+-   [modelOrigin](ModelOrigin\_(GUI\_item\_property))
+-   [modelRotate](ModelRotate\_(GUI\_item\_property))
+-   [multipleSel](MultipleSel\_(GUI\_item\_property))
 -   name
 -   naturalmatscale
--   [NeedsRender\_(GUI\_item\_property).html needsRender]
--   [Noclip\_(GUI\_item\_property).html noclip]
--   [Nocursor\_(GUI\_item\_property).html nocursor]
--   [Noevents\_(GUI\_item\_property).html noevents]
--   [Notime\_(GUI\_item\_property).html notime]
--   [Nowrap\_(GUI\_item\_property).html nowrap]
+-   [needsRender](NeedsRender\_(GUI\_item\_property))
+-   [noclip](Noclip\_(GUI\_item\_property))
+-   [nocursor](Nocursor\_(GUI\_item\_property))
+-   [noevents](Noevents\_(GUI\_item\_property))
+-   [notime](Notime\_(GUI\_item\_property))
+-   [nowrap](Nowrap\_(GUI\_item\_property))
 -   numeric
 -   password
 -   play
--   [Readonly\_(GUI\_item\_property).html readonly]
--   [Rect\_(GUI\_item\_property).html rect]
+-   [readonly](Readonly\_(GUI\_item\_property))
+-   [rect](Rect\_(GUI\_item\_property))
 -   <span class="deadlink">rotate</span>
 -   scrollbar
--   [Shadow\_(GUI\_item\_property).html shadow]
--   [Shear\_(GUI\_item\_property).html shear]
+-   [shadow](Shadow\_(GUI\_item\_property))
+-   [shear](Shear\_(GUI\_item\_property))
 -   showcoords
 -   showtime
 -   source
--   [Step\_(GUI\_item\_property).html step]
--   [Stepsize\_(GUI\_item\_property).html stepsize]
--   [TabAligns\_(GUI\_item\_property).html tabAligns]
--   [TabStops\_(GUI\_item\_property).html tabStops]
--   [Text\_(GUI\_item\_property).html text]
--   [Textalign\_(GUI\_item\_property).html textalign]
--   [Textalignx\_(GUI\_item\_property).html textalignx]
--   [Textaligny\_(GUI\_item\_property).html textaligny]
--   [Textscale\_(GUI\_item\_property).html textscale]
--   [ThumbShader\_(GUI\_item\_property).html thumbShader]
--   [UpdateGroup\_(GUI\_item\_property).html updateGroup]
--   [Values\_(GUI\_item\_property).html values]
--   [Variablebackground\_(GUI\_item\_property).html variablebackground]
+-   [step](Step\_(GUI\_item\_property))
+-   [stepsize](Stepsize\_(GUI\_item\_property))
+-   [tabAligns](TabAligns\_(GUI\_item\_property))
+-   [tabStops](TabStops\_(GUI\_item\_property))
+-   [text](Text\_(GUI\_item\_property))
+-   [textalign](Textalign\_(GUI\_item\_property))
+-   [textalignx](Textalignx\_(GUI\_item\_property))
+-   [textaligny](Textaligny\_(GUI\_item\_property))
+-   [textscale](Textscale\_(GUI\_item\_property))
+-   [thumbShader](ThumbShader\_(GUI\_item\_property))
+-   [updateGroup](UpdateGroup\_(GUI\_item\_property))
+-   [values](Values\_(GUI\_item\_property))
+-   [variablebackground](Variablebackground\_(GUI\_item\_property))
 -   vertical
--   [ViewOffset\_(GUI\_item\_property).html viewOffset]
--   [Visible\_(GUI\_item\_property).html visible]
--   [Wantenter\_(GUI\_item\_property).html wantenter]
--   [Wrap\_(GUI\_item\_property).html wrap]
+-   [viewOffset](ViewOffset\_(GUI\_item\_property))
+-   [visible](Visible\_(GUI\_item\_property))
+-   [wantenter](Wantenter\_(GUI\_item\_property))
+-   [wrap](Wrap\_(GUI\_item\_property))
 

@@ -30,8 +30,8 @@ Inheritance
 This entity is derived from the following:
 
 -   '' damage\_bullet''
-    -   [Damage\_walker\_rocket\_(entity).html damage\_walker\_rocket]
-        -   [Damage\_strafe\_rocket\_(entity).html damage\_strafe\_rocket]
+    -   [damage\_walker\_rocket](Damage\_walker\_rocket\_(entity))
+        -   [damage\_strafe\_rocket](Damage\_strafe\_rocket\_(entity))
             -   *' damage\_strafe\_rocket\_splash*'
 
 **Note**: Entries marked in italics are classes defined in the SDK.

@@ -6,16 +6,16 @@ Commands are what actually make the [GUI script](GUI\_scripting) come alive; the
 Available commands
 ------------------
 
--   [EndGame\_(GUI\_command).html endGame]
--   [EvalRegs\_(GUI\_command).html evalRegs]
--   [If...else\_(GUI\_command).html if...else]
--   [LocalSound\_(GUI\_command).html localSound]
--   [NamedEvent\_(GUI\_command).html namedEvent]
--   [ResetCinematics\_(GUI\_command).html resetCinematics]
--   [ResetTime\_(GUI\_command).html resetTime]
--   [RunScript\_(GUI\_command).html runScript]
--   [Set\_(GUI\_command).html set]
--   [SetFocus\_(GUI\_command).html setFocus]
--   [ShowCursor\_(GUI\_command).html showCursor]
--   [Transition\_(GUI\_command).html transition]
+-   [endGame](EndGame\_(GUI\_command))
+-   [evalRegs](EvalRegs\_(GUI\_command))
+-   [if...else](If...else\_(GUI\_command))
+-   [localSound](LocalSound\_(GUI\_command))
+-   [namedEvent](NamedEvent\_(GUI\_command))
+-   [resetCinematics](ResetCinematics\_(GUI\_command))
+-   [resetTime](ResetTime\_(GUI\_command))
+-   [runScript](RunScript\_(GUI\_command))
+-   [set](Set\_(GUI\_command))
+-   [setFocus](SetFocus\_(GUI\_command))
+-   [showCursor](ShowCursor\_(GUI\_command))
+-   [transition](Transition\_(GUI\_command))
 

@@ -20,17 +20,17 @@ Just like a [windowDef](WindowDef\_(GUI\_item\_type)), but accepts a text input 
 Additional properties
 ---------------------
 
--   [Cursorvar\_(GUI\_item\_property).html cursorvar]
--   [Cvar\_(GUI\_item\_property).html cvar]
+-   [cursorvar](Cursorvar\_(GUI\_item\_property))
+-   [cvar](Cvar\_(GUI\_item\_property))
 -   cvarGroup
 -   forceScroll
--   [LiveUpdate\_(GUI\_item\_property).html liveUpdate]
--   [Maxchars\_(GUI\_item\_property).html maxchars]
+-   [liveUpdate](LiveUpdate\_(GUI\_item\_property))
+-   [maxchars](Maxchars\_(GUI\_item\_property))
 -   numeric
 -   password
--   [Readonly\_(GUI\_item\_property).html readonly]
+-   [readonly](Readonly\_(GUI\_item\_property))
 -   source
--   [Wrap\_(GUI\_item\_property).html wrap]
+-   [wrap](Wrap\_(GUI\_item\_property))
 
 Example(s)
 ----------

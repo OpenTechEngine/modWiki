@@ -76,21 +76,21 @@ Precedence of file loading from PK4s follows descending alphabetical order. Ie i
 List of announced games making use of id Tech 4
 -----------------------------------------------
 
-### [Doom\_3.html Doom 3]
+### [Doom 3](Doom\_3)
 
 -   Oficial website: [www.doom3.com](http://web.archive.org/web/20120925065513/http://www.doom3.com/)
 -   Latest version: 1.3.1 (merged codebase with Doom 3: Resurrection of Evil expansion). Since the original release, some functionality was added while deprecated and/or unused functionality was removed.
     -   1.3.1 adds Intel-Mac support.
     -   All r\_hdr\_\* and r\_sb\_\* [CVars](Console#CVars) were removed in v1.3.
 
-### [Quake\_4.html Quake 4]
+### [Quake 4](Quake\_4)
 
 -   Official website: [www.quake4game.com](http://web.archive.org/web/20120925065513/http://www.quake4game.com/)
 -   Latest version: 1.4.2 (splits multiplayer game code to separate base folder q4mp, customizable tick rate, built-in http server for autodownloading and more).
     -   Added portal culling based on distance, static shadows, default ambient light value, AI and weapon scripts are folded into the game code; editors were improved, streamlined and split off the executable into their own library.
     -   "Modest changes from Doom 3" - John Carmack
 
-### [Prey.html Prey]
+### [Prey](Prey)
 
 -   Official website: [www.prey.com](http://web.archive.org/web/20120925065513/http://www.prey.com/)
 -   Latest version: 1.3 (adds mac compatibility)
@@ -119,7 +119,7 @@ List of announced games making use of id Tech 4
     -   For performance reasons, there will be a strong incentive to processing map assets which the engine will handle. Examples include compressing textures, converting declarations to binary formats, unrolling templates, etc.
     -   The GUI system is now fully exposed in the game SDK.
 
-### [Wolfenstein.html Wolfenstein]
+### [Wolfenstein](Wolfenstein)
 
 -   Official website: [www.wolfenstein.com](http://web.archive.org/web/20120925065513/http://www.wolfenstein.com/)
 -   Latest version: 1.1

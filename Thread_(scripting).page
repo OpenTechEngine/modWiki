@@ -9,7 +9,7 @@ A new thread is created when calling a function from within script via an entity
 
 When an entity spawns with a script object set it will create a thread to execute the init() function.
 
-[Spawn\_class.html spawn classes] with [FSMs](Finite\_State\_Machine\_(scripting)) manage a thread for the current set state, running it each frame.
+[spawn classes](Spawn\_class) with [FSMs](Finite\_State\_Machine\_(scripting)) manage a thread for the current set state, running it each frame.
 
 The **sys** identifier is used within a script to call events defined on the [game class](Game\_class) idThread, they are called on the idThread instance that is executing that part of the script. See System Events for respective game: [Script events](Script\_events).
 
@@ -26,17 +26,17 @@ While there is infinite loop protection, and a limit on events per frame, there 
 
 ### Related Script Events
 
--   [Wait\_(script\_event).html wait]
+-   [wait](Wait\_(script\_event))
 
 <!-- -->
 
--   [WaitFrame\_(script\_event).html waitFrame]
+-   [waitFrame](WaitFrame\_(script\_event))
 
 <!-- -->
 
--   [WaitFor\_(script\_event).html waitFor]
+-   [waitFor](WaitFor\_(script\_event))
 
 <!-- -->
 
--   [WaitForThread\_(script\_event).html waitForThread]
+-   [waitForThread](WaitForThread\_(script\_event))
 

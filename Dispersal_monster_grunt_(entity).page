@@ -267,9 +267,9 @@ This entity is derived from the following:
             -   '' idAFEntity\_Gibbable''
                 -   '' idActor''
                     -   '' idAI''
-                        -   [Monster\_default\_(entity).html monster\_default]
-                            -   [Actor\_default\_(entity).html actor\_default]
-                                -   [Monster\_grunt\_(entity).html monster\_grunt]
+                        -   [monster\_default](Monster\_default\_(entity))
+                            -   [actor\_default](Actor\_default\_(entity))
+                                -   [monster\_grunt](Monster\_grunt\_(entity))
                                     -   *' dispersal\_monster\_grunt*'
 
 **Note**: Entries marked in italics are classes defined in the SDK.

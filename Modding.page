@@ -68,25 +68,25 @@ Changing the game
 
 There are lots of aspects to game design, listed below with links to their own pages where you may find more information, tools, tips and tricks:
 
-[Audio\_design.html Audio design]   
+[Audio design](Audio\_design)   
 The creation of musical tracks and sound effects
 
-[Coding.html Coding]   
+[Coding](Coding)   
 Modification of the game's source code
 
-[Declarations.html Declarations]   
+[Declarations](Declarations)   
 Changing the game's behaviour and content
 
-[Mapping.html Mapping]   
+[Mapping](Mapping)   
 Making new levels
 
-[Modelling.html Modelling]   
+[Modelling](Modelling)   
 Modelling and file format information
 
-[Scripting.html Scripting]   
+[Scripting](Scripting)   
 Changing the game's actions
 
-[Texturing.html Texturing]   
+[Texturing](Texturing)   
 Modifying the looks of the game by adding/changing materials
 
 Of course, modding a specific things (Eg. modifying weapons) needs experience from multiple categories. Use your common sense to find what you need, or go trough the game's assets to see what is used to make something. (See the [Got Questions](Modding#Got\_questions) section below)
@@ -122,7 +122,7 @@ After you have all your assets in one place you will want to compress your media
 -   [com\_makingBuild](Com\_makingBuild\_(cvar)) 1
 -   [image\_usePrecompressedTextures](Image\_usePrecompressedTextures\_(cvar)) 0
 -   [image\_useOfflineCompression](Image\_useOfflineCompression\_(cvar)) 1
--   [StartBuild\_(console\_command).html startBuild]
+-   [startBuild](StartBuild\_(console\_command))
 -   [map](Map\_(console\_command)) \<mapname\>
 -   finishBuild
 
@@ -173,15 +173,15 @@ This same file must be stored in a relative location on your file server such as
 
 You also need to set a few CVars on your game server. These settings are described in more detail in their respective articles.
 
--   [Net\_serverDownload\_(cvar).html net\_serverDownload]
+-   [net\_serverDownload](Net\_serverDownload\_(cvar))
 
 This CVar must be set to "2" to enable autodownloads.
 
--   [Net\_serverDlBaseURL\_(cvar).html net\_serverDlBaseURL]
+-   [net\_serverDlBaseURL](Net\_serverDlBaseURL\_(cvar))
 
 This CVar must be set to the "root" folder on the download server where you have stored your files.
 
--   [Net\_serverDlTable\_(cvar).html net\_serverDlTable]
+-   [net\_serverDlTable](Net\_serverDlTable\_(cvar))
 
 This CVar must be set to a list comprised of the relative path to each custom file separated by semi-colons.
 

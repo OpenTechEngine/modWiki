@@ -53,20 +53,20 @@ Doom 3 item types
 
 These are the standard item types, available on the id Tech 4 engine.
 
--   [BindDef\_(GUI\_item\_type).html bindDef]
--   [ChoiceDef\_(GUI\_item\_type).html choiceDef]
--   [EditDef\_(GUI\_item\_type).html editDef]
--   [ListDef\_(GUI\_item\_type).html listDef]
--   [RenderDef\_(GUI\_item\_type).html renderDef]
--   [SliderDef\_(GUI\_item\_type).html sliderDef]
--   [WindowDef\_(GUI\_item\_type).html windowDef]
+-   [bindDef](BindDef\_(GUI\_item\_type))
+-   [choiceDef](ChoiceDef\_(GUI\_item\_type))
+-   [editDef](EditDef\_(GUI\_item\_type))
+-   [listDef](ListDef\_(GUI\_item\_type))
+-   [renderDef](RenderDef\_(GUI\_item\_type))
+-   [sliderDef](SliderDef\_(GUI\_item\_type))
+-   [windowDef](WindowDef\_(GUI\_item\_type))
 
 Quake 4 item types
 ------------------
 
 These are new item types, introduced by Raven Software on their version of the id Tech 4 engine. They work pretty much the same as the previous items, but obviously should only be used when creating GUIs for Quake 4.
 
--   [HtmlDef\_(GUI\_item\_type).html htmlDef]
+-   [htmlDef](HtmlDef\_(GUI\_item\_type))
 -   fieldDef
 -   markerDef
 

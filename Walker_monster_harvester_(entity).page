@@ -319,9 +319,9 @@ This entity is derived from the following:
             -   '' idAFEntity\_Gibbable''
                 -   '' idActor''
                     -   '' idAI''
-                        -   [Monster\_default\_(entity).html monster\_default]
-                            -   [Actor\_default\_(entity).html actor\_default]
-                                -   [Monster\_harvester\_combat\_(entity).html monster\_harvester\_combat]
+                        -   [monster\_default](Monster\_default\_(entity))
+                            -   [actor\_default](Actor\_default\_(entity))
+                                -   [monster\_harvester\_combat](Monster\_harvester\_combat\_(entity))
                                     -   *' walker\_monster\_harvester*'
 
 **Note**: Entries marked in italics are classes defined in the SDK.

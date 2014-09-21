@@ -85,9 +85,9 @@ This entity is derived from the following:
 
 -   '' idEntity''
     -   '' hhDebrisSpawner''
-        -   [Debrisspawner\_base\_(entity).html debrisspawner\_base]
-            -   [Debrisspawner\_monstergibs\_base\_(entity).html debrisspawner\_monstergibs\_base]
-                -   [Debrisspawner\_droid\_(entity).html debrisspawner\_droid]
+        -   [debrisspawner\_base](Debrisspawner\_base\_(entity))
+            -   [debrisspawner\_monstergibs\_base](Debrisspawner\_monstergibs\_base\_(entity))
+                -   [debrisspawner\_droid](Debrisspawner\_droid\_(entity))
                     -   *' debrisspawner\_droid\_indoor*'
 
 **Note**: Entries marked in italics are classes defined in the SDK.

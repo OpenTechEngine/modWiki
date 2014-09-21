@@ -105,9 +105,9 @@ This entity is derived from the following:
 -   '' idEntity''
     -   '' idItem''
         -   '' hhItem''
-            -   [Item\_default\_(entity).html item\_default]
-                -   [Item\_automatic\_(entity).html item\_automatic]
-                    -   [Item\_automatic\_always\_(entity).html item\_automatic\_always]
+            -   [item\_default](Item\_default\_(entity))
+                -   [item\_automatic](Item\_automatic\_(entity))
+                    -   [item\_automatic\_always](Item\_automatic\_always\_(entity))
                         -   *' item\_automatic\_always\_no\_crawlers*'
 
 **Note**: Entries marked in italics are classes defined in the SDK.

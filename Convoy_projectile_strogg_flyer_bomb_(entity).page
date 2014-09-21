@@ -108,9 +108,9 @@ This entity is derived from the following:
 
 -   '' idEntity''
     -   '' idProjectile''
-        -   [Projectile\_base\_(entity).html projectile\_base]
-            -   [Projectile\_blaster\_base\_(entity).html projectile\_blaster\_base]
-                -   [Projectile\_strogg\_flyer\_bomb\_(entity).html projectile\_strogg\_flyer\_bomb]
+        -   [projectile\_base](Projectile\_base\_(entity))
+            -   [projectile\_blaster\_base](Projectile\_blaster\_base\_(entity))
+                -   [projectile\_strogg\_flyer\_bomb](Projectile\_strogg\_flyer\_bomb\_(entity))
                     -   *' convoy\_projectile\_strogg\_flyer\_bomb*'
 
 **Note**: Entries marked in italics are classes defined in the SDK.

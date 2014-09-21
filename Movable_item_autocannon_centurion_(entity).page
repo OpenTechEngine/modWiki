@@ -91,9 +91,9 @@ This entity is derived from the following:
 -   '' idEntity''
     -   '' idItem''
         -   '' hhItem''
-            -   [Weapon\_default\_(entity).html weapon\_default]
-                -   [Weapon\_autocannon\_(entity).html weapon\_autocannon]
-                    -   [Movable\_item\_autocannon\_(entity).html movable\_item\_autocannon]
+            -   [weapon\_default](Weapon\_default\_(entity))
+                -   [weapon\_autocannon](Weapon\_autocannon\_(entity))
+                    -   [movable\_item\_autocannon](Movable\_item\_autocannon\_(entity))
                         -   *' movable\_item\_autocannon\_centurion*'
 
 **Note**: Entries marked in italics are classes defined in the SDK.

@@ -65,30 +65,30 @@ Events declared in idThread, accessible via [sys](Scripting\_basics#sys) identif
 -   localizeString
 -   getNetworkKey
 -   fromNetworkKey
--   [Terminate\_(script\_event).html terminate]
--   [Wait\_(script\_event).html wait]
--   [WaitFrame\_(script\_event).html waitFrame]
--   [Print\_(script\_event).html print]
--   [Println\_(script\_event).html println]
+-   [terminate](Terminate\_(script\_event))
+-   [wait](Wait\_(script\_event))
+-   [waitFrame](WaitFrame\_(script\_event))
+-   [print](Print\_(script\_event))
+-   [println](Println\_(script\_event))
 -   debugln
--   [Say\_(script\_event).html say]
--   [Assert\_(script\_event).html assert]
+-   [say](Say\_(script\_event))
+-   [assert](Assert\_(script\_event))
 -   <span class="deadlink"> getCVar</span>
--   [Random\_(script\_event).html random]
--   [GetTime\_(script\_event).html getTime]
+-   [random](Random\_(script\_event))
+-   [getTime](GetTime\_(script\_event))
 -   killThread
 -   threadName
 -   getEntityByID
--   [GetEntity\_(script\_event).html getEntity]
--   [Spawn\_(script\_event).html spawn]
+-   [getEntity](GetEntity\_(script\_event))
+-   [spawn](Spawn\_(script\_event))
 -   spawnClient
 -   spawnType
--   [AngToForward\_(script\_event).html angToForward]
--   [AngToRight\_(script\_event).html angToRight]
--   [AngToUp\_(script\_event).html angToUp]
--   [Sin\_(script\_event).html sin]
+-   [angToForward](AngToForward\_(script\_event))
+-   [angToRight](AngToRight\_(script\_event))
+-   [angToUp](AngToUp\_(script\_event))
+-   [sin](Sin\_(script\_event))
 -   asin
--   [Cos\_(script\_event).html cos]
+-   [cos](Cos\_(script\_event))
 -   acos
 -   atan
 -   atan2
@@ -96,59 +96,59 @@ Events declared in idThread, accessible via [sys](Scripting\_basics#sys) identif
 -   solveRoots
 -   angleNormalize180
 -   fabs
--   [Floor\_(script\_event).html floor]
--   [Ceil\_(script\_event).html ceil]
+-   [floor](Floor\_(script\_event))
+-   [ceil](Ceil\_(script\_event))
 -   mod
 -   fmod
--   [Sqrt\_(script\_event).html sqrt]
--   [VecNormalize\_(script\_event).html vecNormalize]
--   [VecLength\_(script\_event).html vecLength]
+-   [sqrt](Sqrt\_(script\_event))
+-   [vecNormalize](VecNormalize\_(script\_event))
+-   [vecLength](VecLength\_(script\_event))
 -   vecLengthSquared
--   [CrossProduct\_(script\_event).html crossProduct]
--   [VecToAngles\_(script\_event).html vecToAngles]
+-   [crossProduct](CrossProduct\_(script\_event))
+-   [vecToAngles](VecToAngles\_(script\_event))
 -   rotateVecByAngles
 -   rotateAngles
 -   rotateVec
 -   toLocalSpace
 -   toWorldSpace
 -   checkContents
--   [Trace\_(script\_event).html trace]
--   [TracePoint\_(script\_event).html tracePoint]
+-   [trace](Trace\_(script\_event))
+-   [tracePoint](TracePoint\_(script\_event))
 -   traceOriented
 -   saveTrace
 -   freeTrace
--   [GetTraceFraction\_(script\_event).html getTraceFraction]
--   [GetTraceEndPos\_(script\_event).html getTraceEndPos]
+-   [getTraceFraction](GetTraceFraction\_(script\_event))
+-   [getTraceEndPos](GetTraceEndPos\_(script\_event))
 -   getTracePoint
--   [GetTraceNormal\_(script\_event).html getTraceNormal]
--   [GetTraceEntity\_(script\_event).html getTraceEntity]
+-   [getTraceNormal](GetTraceNormal\_(script\_event))
+-   [getTraceEntity](GetTraceEntity\_(script\_event))
 -   getTraceSurfaceFlags
 -   getTraceSurfaceType
 -   getTraceSurfaceColor
--   [GetTraceJoint\_(script\_event).html getTraceJoint]
--   [GetTraceBody\_(script\_event).html getTraceBody]
--   [FadeIn\_(script\_event).html fadeIn]
--   [FadeOut\_(script\_event).html fadeOut]
--   [FadeTo\_(script\_event).html fadeTo]
--   [Music\_(script\_event).html music]
+-   [getTraceJoint](GetTraceJoint\_(script\_event))
+-   [getTraceBody](GetTraceBody\_(script\_event))
+-   [fadeIn](FadeIn\_(script\_event))
+-   [fadeOut](FadeOut\_(script\_event))
+-   [fadeTo](FadeTo\_(script\_event))
+-   [music](Music\_(script\_event))
 -   startSoundDirect
--   [Error\_(script\_event).html error]
--   [Warning\_(script\_event).html warning]
--   [StrLength\_(script\_event).html strLength]
--   [StrLeft\_(script\_event).html strLeft]
--   [StrRight\_(script\_event).html strRight]
--   [StrSkip\_(script\_event).html strSkip]
--   [StrMid\_(script\_event).html strMid]
--   [StrToFloat\_(script\_event).html strToFloat]
--   [IsClient\_(script\_event).html isClient]
+-   [error](Error\_(script\_event))
+-   [warning](Warning\_(script\_event))
+-   [strLength](StrLength\_(script\_event))
+-   [strLeft](StrLeft\_(script\_event))
+-   [strRight](StrRight\_(script\_event))
+-   [strSkip](StrSkip\_(script\_event))
+-   [strMid](StrMid\_(script\_event))
+-   [strToFloat](StrToFloat\_(script\_event))
+-   [isClient](IsClient\_(script\_event))
 -   isServer
 -   doClientSideStuff
--   [GetFrameTime\_(script\_event).html getFrameTime]
--   [GetTicsPerSecond\_(script\_event).html getTicsPerSecond]
--   [DebugLine\_(script\_event).html debugLine]
--   [DebugArrow\_(script\_event).html debugArrow]
--   [DebugCircle\_(script\_event).html debugCircle]
--   [DebugBounds\_(script\_event).html debugBounds]
+-   [getFrameTime](GetFrameTime\_(script\_event))
+-   [getTicsPerSecond](GetTicsPerSecond\_(script\_event))
+-   [debugLine](DebugLine\_(script\_event))
+-   [debugArrow](DebugArrow\_(script\_event))
+-   [debugCircle](DebugCircle\_(script\_event))
+-   [debugBounds](DebugBounds\_(script\_event))
 -   allocCMIcon
 -   freeCMIcon
 -   setCMIconSize
@@ -177,7 +177,7 @@ Events declared in idThread, accessible via [sys](Scripting\_basics#sys) identif
 -   setCMIconShaderParm
 -   getCMIconFlags
 -   flashCMIcon
--   [DrawText\_(script\_event).html drawText]
+-   [drawText](DrawText\_(script\_event))
 -   broadcastToolTip
 -   getDeclType
 -   getDeclCount
@@ -202,7 +202,7 @@ Events declared in idThread, accessible via [sys](Scripting\_basics#sys) identif
 -   setWinningTeam
 -   endGame
 -   setEndGameCamera
--   [PlayWorldEffect\_(script\_event).html playWorldEffect ]
+-   [playWorldEffect ](PlayWorldEffect\_(script\_event))
 -   playWorldEffectRotate
 -   playWorldEffectRotateAlign
 -   playWorldBeamEffect
@@ -251,89 +251,89 @@ Events declared in idThread, accessible via [sys](Scripting\_basics#sys) identif
 Entity Events
 -------------
 
-Events declared in the base [spawn class](Spawn\_class) [IdEntity\_(class).html idEntity].
+Events declared in the base [spawn class](Spawn\_class) [idEntity](IdEntity\_(class)).
 
 All entities inherit these events, though some may be overridden to produce different behaviour.
 
--   [Remove\_(script\_event).html remove]
+-   [remove](Remove\_(script\_event))
 -   isClass
--   [GetName\_(script\_event).html getName]
--   [SetName\_(script\_event).html setName]
+-   [getName](GetName\_(script\_event))
+-   [setName](SetName\_(script\_event))
 -   getMaster
--   [Activate\_(script\_event).html activate]
--   [ActivateTargets\_(script\_event).html activateTargets]
--   [NumTargets\_(script\_event).html numTargets]
--   [GetTarget\_(script\_event).html getTarget]
--   [RandomTarget\_(script\_event).html randomTarget]
--   [Bind\_(script\_event).html bind]
+-   [activate](Activate\_(script\_event))
+-   [activateTargets](ActivateTargets\_(script\_event))
+-   [numTargets](NumTargets\_(script\_event))
+-   [getTarget](GetTarget\_(script\_event))
+-   [randomTarget](RandomTarget\_(script\_event))
+-   [bind](Bind\_(script\_event))
 -   enableAxisBind
--   [BindPosition\_(script\_event).html bindPosition]
--   [BindToJoint\_(script\_event).html bindToJoint]
--   [Unbind\_(script\_event).html unbind]
--   [RemoveBinds\_(script\_event).html removeBinds]
--   [SetModel\_(script\_event).html setModel]
--   [SetSkin\_(script\_event).html setSkin]
+-   [bindPosition](BindPosition\_(script\_event))
+-   [bindToJoint](BindToJoint\_(script\_event))
+-   [unbind](Unbind\_(script\_event))
+-   [removeBinds](RemoveBinds\_(script\_event))
+-   [setModel](SetModel\_(script\_event))
+-   [setSkin](SetSkin\_(script\_event))
 -   setCoverage
 -   getWorldAxis
 -   setWorldAxis
 -   getGravityNormal
--   [GetWorldOrigin\_(script\_event).html getWorldOrigin]
--   [SetWorldOrigin\_(script\_event).html setWorldOrigin]
--   [GetOrigin\_(script\_event).html getOrigin]
--   [SetOrigin\_(script\_event).html setOrigin]
--   [GetAngles\_(script\_event).html getAngles]
+-   [getWorldOrigin](GetWorldOrigin\_(script\_event))
+-   [setWorldOrigin](SetWorldOrigin\_(script\_event))
+-   [getOrigin](GetOrigin\_(script\_event))
+-   [setOrigin](SetOrigin\_(script\_event))
+-   [getAngles](GetAngles\_(script\_event))
 -   getLocalAngles
--   [SetAngles\_(script\_event).html setAngles]
+-   [setAngles](SetAngles\_(script\_event))
 -   setGravity
 -   alignToAxis
--   [GetLinearVelocity\_(script\_event).html getLinearVelocity]
--   [SetLinearVelocity\_(script\_event).html setLinearVelocity]
--   [GetAngularVelocity\_(script\_event).html getAngularVelocity]
--   [SetAngularVelocity\_(script\_event).html setAngularVelocity]
+-   [getLinearVelocity](GetLinearVelocity\_(script\_event))
+-   [setLinearVelocity](SetLinearVelocity\_(script\_event))
+-   [getAngularVelocity](GetAngularVelocity\_(script\_event))
+-   [setAngularVelocity](SetAngularVelocity\_(script\_event))
 -   getMass
 -   getCenterOfMass
 -   setFriction
--   [GetSize\_(script\_event).html getSize]
--   [SetSize\_(script\_event).html setSize]
--   [GetMins\_(script\_event).html getMins]
--   [GetMaxs\_(script\_event).html getMaxs]
+-   [getSize](GetSize\_(script\_event))
+-   [setSize](SetSize\_(script\_event))
+-   [getMins](GetMins\_(script\_event))
+-   [getMaxs](GetMaxs\_(script\_event))
 -   getAbsMins
 -   getAbsMaxs
 -   getRenderMins
 -   getRenderMaxs
 -   setRenderBounds
--   [IsHidden\_(script\_event).html isHidden]
--   [Hide\_(script\_event).html hide]
--   [Show\_(script\_event).html show]
--   [Touches\_(script\_event).html touches]
+-   [isHidden](IsHidden\_(script\_event))
+-   [hide](Hide\_(script\_event))
+-   [show](Show\_(script\_event))
+-   [touches](Touches\_(script\_event))
 -   touchesBounds
--   [GetShaderParm\_(script\_event).html getShaderParm]
--   [SetShaderParm\_(script\_event).html setShaderParm]
--   [SetShaderParms\_(script\_event).html setShaderParms]
--   [SetColor\_(script\_event).html setColor]
--   [GetColor\_(script\_event).html getColor]
--   [StopSound\_(script\_event).html stopSound]
--   [StartSound\_(script\_event).html startSound]
--   [FadeSound\_(script\_event).html fadeSound]
+-   [getShaderParm](GetShaderParm\_(script\_event))
+-   [setShaderParm](SetShaderParm\_(script\_event))
+-   [setShaderParms](SetShaderParms\_(script\_event))
+-   [setColor](SetColor\_(script\_event))
+-   [getColor](GetColor\_(script\_event))
+-   [stopSound](StopSound\_(script\_event))
+-   [startSound](StartSound\_(script\_event))
+-   [fadeSound](FadeSound\_(script\_event))
 -   setChannelPitchShift
 -   setChannelFlags
 -   clearChannelFlags
--   [GetNextKey\_(script\_event).html getNextKey]
--   [SetKey\_(script\_event).html setKey]
--   [GetKey\_(script\_event).html getKey]
--   [GetIntKey\_(script\_event).html getIntKey]
--   [GetFloatKey\_(script\_event).html getFloatKey]
--   [GetVectorKey\_(script\_event).html getVectorKey]
--   [GetEntityKey\_(script\_event).html getEntityKey]
+-   [getNextKey](GetNextKey\_(script\_event))
+-   [setKey](SetKey\_(script\_event))
+-   [getKey](GetKey\_(script\_event))
+-   [getIntKey](GetIntKey\_(script\_event))
+-   [getFloatKey](GetFloatKey\_(script\_event))
+-   [getVectorKey](GetVectorKey\_(script\_event))
+-   [getEntityKey](GetEntityKey\_(script\_event))
 -   getKeyWithDefault
 -   getIntKeyWithDefault
 -   getFloatKeyWithDefault
 -   getVectorKeyWithDefault
 -   getClassKey
--   [RestorePosition\_(script\_event).html restorePosition]
--   [DistanceTo\_(script\_event).html distanceTo]
--   [DistanceToPoint\_(script\_event).html distanceToPoint]
--   [Wait\_(script\_event).html wait]
+-   [restorePosition](RestorePosition\_(script\_event))
+-   [distanceTo](DistanceTo\_(script\_event))
+-   [distanceToPoint](DistanceToPoint\_(script\_event))
+-   [wait](Wait\_(script\_event))
 -   disablePhysics
 -   enablePhysics
 -   entitiesInTranslation
@@ -370,14 +370,14 @@ All entities inherit these events, though some may be overridden to produce diff
 -   playMaterialEffect
 -   playJointEffect
 -   playJointEffectViewSuppress
--   [PlayEffect\_(script\_event).html playEffect]
+-   [playEffect](PlayEffect\_(script\_event))
 -   playEffectViewSuppress
 -   playOriginEffect
 -   playEffectMaxVisDist
 -   playOriginEffectMaxVisDist
 -   playBeamEffect
 -   lookupEffect
--   [StopEffect\_(script\_event).html stopEffect]
+-   [stopEffect](StopEffect\_(script\_event))
 -   killEffect
 -   stopEffectHandle
 -   unBindEffectHandle
@@ -389,25 +389,25 @@ All entities inherit these events, though some may be overridden to produce diff
 -   stopAllEffects
 -   detachRotationBind
 -   clearContacts
--   [SetContents\_(script\_event).html setContents]
+-   [setContents](SetContents\_(script\_event))
 -   setClipmask
 -   putToRest
 -   hasForceDisableClip
 -   forceDisableClip
 -   forceEnableClip
 -   hasGroundContacts
--   [DisableGravity\_(script\_event).html disableGravity]
+-   [disableGravity](DisableGravity\_(script\_event))
 -   setComeToRest
--   [ApplyImpulse\_(script\_event).html applyImpulse]
+-   [applyImpulse](ApplyImpulse\_(script\_event))
 -   addForce
 -   addForceAt
 -   addTorque
 -   activatePhysics
--   [IsAtRest\_(script\_event).html isAtRest]
+-   [isAtRest](IsAtRest\_(script\_event))
 -   isBound
 -   turnTowards
--   [GetGameTeam\_(script\_event).html getGameTeam]
--   [SetGameTeam\_(script\_event).html setGameTeam]
+-   [getGameTeam](GetGameTeam\_(script\_event))
+-   [setGameTeam](SetGameTeam\_(script\_event))
 -   launchMissileSimple
 -   launchBullet
 -   getLocalPlayer
@@ -441,11 +441,11 @@ All entities inherit these events, though some may be overridden to produce diff
 -   getDeploymentRotation
 -   allowDeploymentRotation
 -   getDefaultFov
--   [SetHealth\_(script\_event).html setHealth]
--   [GetHealth\_(script\_event).html getHealth]
+-   [setHealth](SetHealth\_(script\_event))
+-   [getHealth](GetHealth\_(script\_event))
 -   <span class="deadlink"> setMaxHealth</span>
 -   getMaxHealth
--   [GetEnemy\_(script\_event).html getEnemy]
+-   [getEnemy](GetEnemy\_(script\_event))
 -   setCanCollideWithTeam
 -   spawnClientEffect
 -   spawnClientCrawlEffect
@@ -470,20 +470,20 @@ All entities inherit these events, though some may be overridden to produce diff
 
 ### idForcefield Events
 
--   [Toggle\_(script\_event).html Toggle]
+-   [Toggle](Toggle\_(script\_event))
 
 ### Animate Events
 
--   [LaunchMissiles\_(script\_event).html launchMissiles]
--   [StartRagdoll\_(script\_event).html startRagdoll]
+-   [launchMissiles](LaunchMissiles\_(script\_event))
+-   [startRagdoll](StartRagdoll\_(script\_event))
 
 ### idDoor Events
 
--   [Enable\_(script\_event).html enable]
--   [Disable\_(script\_event).html disable]
--   [Open\_(script\_event).html open]
--   [Close\_(script\_event).html close]
--   [IsOpen\_(script\_event).html isOpen]
+-   [enable](Enable\_(script\_event))
+-   [disable](Disable\_(script\_event))
+-   [open](Open\_(script\_event))
+-   [close](Close\_(script\_event))
+-   [isOpen](IsOpen\_(script\_event))
 -   isClosed
 -   isOpening
 -   isClosing
@@ -492,8 +492,8 @@ All entities inherit these events, though some may be overridden to produce diff
 
 ### idMoveable Events
 
--   [BecomeNonSolid\_(script\_event).html becomeNonSolid]
--   [EnableDamage\_(script\_event).html enableDamage]
+-   [becomeNonSolid](BecomeNonSolid\_(script\_event))
+-   [enableDamage](EnableDamage\_(script\_event))
 
 ### sdGeneralMover Events
 
@@ -511,24 +511,24 @@ All entities inherit these events, though some may be overridden to produce diff
 
 Skeletal Animation Events
 
--   [GetJointHandle\_(script\_event).html getJointHandle]
--   [ClearAllJoints\_(script\_event).html clearAllJoints]
--   [ClearJoint\_(script\_event).html clearJoint]
--   [SetJointPos\_(script\_event).html setJointPos]
--   [SetJointAngle\_(script\_event).html setJointAngle]
--   [GetJointPos\_(script\_event).html getJointPos]
+-   [getJointHandle](GetJointHandle\_(script\_event))
+-   [clearAllJoints](ClearAllJoints\_(script\_event))
+-   [clearJoint](ClearJoint\_(script\_event))
+-   [setJointPos](SetJointPos\_(script\_event))
+-   [setJointAngle](SetJointAngle\_(script\_event))
+-   [getJointPos](GetJointPos\_(script\_event))
 -   getLocalJointPos
 -   getJointAxis
--   [GetJointAngle\_(script\_event).html getJointAngle]
--   [PlayAnim\_(script\_event).html playAnim]
+-   [getJointAngle](GetJointAngle\_(script\_event))
+-   [playAnim](PlayAnim\_(script\_event))
 -   isAnimating
 -   getAnimatingOnChannel
 -   animationName
 -   isAnimatingOnChannel
 -   jointToWorldSpace
 -   worldToModelSpace
--   [HideSurface\_(script\_event).html hideSurface]
--   [ShowSurface\_(script\_event).html showSurface]
+-   [hideSurface](HideSurface\_(script\_event))
+-   [showSurface](ShowSurface\_(script\_event))
 -   getSurfaceId
 -   isSurfaceHidden
 
@@ -536,23 +536,23 @@ Skeletal Animation Events
 
 -   getOwner
 -   nextWeapon
--   [WeaponState\_(script\_event).html weaponState]
+-   [weaponState](WeaponState\_(script\_event))
 -   getWeaponState
--   [AddToClip\_(script\_event).html addToClip]
+-   [addToClip](AddToClip\_(script\_event))
 -   ammoInClip
 -   ammoAvailable
--   [ClipSize\_(script\_event).html clipSize]
+-   [clipSize](ClipSize\_(script\_event))
 -   ammoRequired
 -   ammoType
--   [UseAmmo\_(script\_event).html useAmmo]
+-   [useAmmo](UseAmmo\_(script\_event))
 -   fired
--   [PlayAnim\_(script\_event).html playAnim]
--   [PlayCycle\_(script\_event).html playCycle]
--   [AnimDone\_(script\_event).html animDone]
--   [SetBlendFrames\_(script\_event).html setBlendFrames]
--   [GetBlendFrames\_(script\_event).html getBlendFrames]
--   [WeaponReady\_(script\_event).html weaponReady]
--   [WeaponOutOfAmmo\_(script\_event).html weaponOutOfAmmo]
+-   [playAnim](PlayAnim\_(script\_event))
+-   [playCycle](PlayCycle\_(script\_event))
+-   [animDone](AnimDone\_(script\_event))
+-   [setBlendFrames](SetBlendFrames\_(script\_event))
+-   [getBlendFrames](GetBlendFrames\_(script\_event))
+-   [weaponReady](WeaponReady\_(script\_event))
+-   [weaponOutOfAmmo](WeaponOutOfAmmo\_(script\_event))
 -   weaponReloading
 -   weaponHolstered
 -   weaponRising
@@ -561,8 +561,8 @@ Skeletal Animation Events
 -   createProjectile
 -   melee
 -   meleeAttack
--   [SetLightParm\_(script\_event).html setLightParm]
--   [SetLightParms\_(script\_event).html setLightParms]
+-   [setLightParm](SetLightParm\_(script\_event))
+-   [setLightParms](SetLightParms\_(script\_event))
 -   saveMeleeTrace
 -   getMeleeFraction
 -   getMeleeEndPos
@@ -598,34 +598,34 @@ Skeletal Animation Events
 
 -   getDamagePower
 -   getOwner
--   [SetOwner\_(script\_event).html setOwner]
+-   [setOwner](SetOwner\_(script\_event))
 -   getLaunchTime
 -   launch
 -   addOwner
--   [SetEnemy\_(script\_event).html setEnemy]
+-   [setEnemy](SetEnemy\_(script\_event))
 -   isOwner
 
 ### idActor Events
 
--   [SetConstraintPosition\_(script\_event).html setConstraintPosition]
--   [StopAnim\_(script\_event).html stopAnim]
--   [PlayAnim\_(script\_event).html playAnim]
+-   [setConstraintPosition](SetConstraintPosition\_(script\_event))
+-   [stopAnim](StopAnim\_(script\_event))
+-   [playAnim](PlayAnim\_(script\_event))
 -   playAnimBlended
 -   getAnimLength
--   [PlayCycle\_(script\_event).html playCycle]
--   [IdleAnim\_(script\_event).html idleAnim]
--   [SetSyncedAnimWeight\_(script\_event).html setSyncedAnimWeight]
--   [SetBlendFrames\_(script\_event).html setBlendFrames]
--   [GetBlendFrames\_(script\_event).html getBlendFrames]
+-   [playCycle](PlayCycle\_(script\_event))
+-   [idleAnim](IdleAnim\_(script\_event))
+-   [setSyncedAnimWeight](SetSyncedAnimWeight\_(script\_event))
+-   [setBlendFrames](SetBlendFrames\_(script\_event))
+-   [getBlendFrames](GetBlendFrames\_(script\_event))
 -   animState
 -   getAnimState
 -   inAnimState
--   [AnimDone\_(script\_event).html animDone]
--   [OverrideAnim\_(script\_event).html overrideAnim]
--   [PreventPain\_(script\_event).html preventPain]
--   [EnableAnim\_(script\_event).html enableAnim]
--   [DisablePain\_(script\_event).html disablePain]
--   [EnablePain\_(script\_event).html enablePain]
+-   [animDone](AnimDone\_(script\_event))
+-   [overrideAnim](OverrideAnim\_(script\_event))
+-   [preventPain](PreventPain\_(script\_event))
+-   [enableAnim](EnableAnim\_(script\_event))
+-   [disablePain](DisablePain\_(script\_event))
+-   [enablePain](EnablePain\_(script\_event))
 -   getPainAnim
 -   setPrefix
 -   hasAnim
@@ -643,14 +643,14 @@ Skeletal Animation Events
 ### idPlayer Events
 
 -   getButton
--   [GetMove\_(script\_event).html getMove]
+-   [getMove](GetMove\_(script\_event))
 -   getUserCmdAngles
--   [GetViewAngles\_(script\_event).html getViewAngles]
--   [SetViewAngles\_(script\_event).html setViewAngles]
+-   [getViewAngles](GetViewAngles\_(script\_event))
+-   [setViewAngles](SetViewAngles\_(script\_event))
 -   getCameraViewAngles
 -   getRenderViewAngles
 -   getViewOrigin
--   [GetWeaponEntity\_(script\_event).html getWeaponEntity]
+-   [getWeaponEntity](GetWeaponEntity\_(script\_event))
 -   freeze
 -   freezeTurning
 -   setRemoteCamera
@@ -675,7 +675,7 @@ Skeletal Animation Events
 -   cancelToolTips
 -   selectBestWeapon
 -   setWeapon
--   [GetCurrentWeapon\_(script\_event).html getCurrentWeapon]
+-   [getCurrentWeapon](GetCurrentWeapon\_(script\_event))
 -   hasWeapon
 -   getVehicle
 -   getAmmoFraction
@@ -804,13 +804,13 @@ Events used in regular vehicles
 -   resupply
 -   inputSetPlayer
 -   inputGetCollective
--   [GetDriver\_(script\_event).html getDriver]
+-   [getDriver](GetDriver\_(script\_event))
 -   isEmpty
 -   updateEngine
 -   setLightsEnabled
 -   disableSuspension
 -   getPassengerNames
--   [Lock\_(script\_event).html lock]
+-   [lock](Lock\_(script\_event))
 -   kickPlayer
 -   disableTimeout
 -   getSteerAngle
@@ -845,7 +845,7 @@ Events used in regular vehicles
 -   getLandingGearDown
 -   inSiegeMode
 -   getArmor
--   [SetArmor\_(script\_event).html setArmor]
+-   [setArmor](SetArmor\_(script\_event))
 -   getNumVehicleWeapons
 -   getVehicleWeapon
 -   setOverDriveScale
@@ -952,7 +952,7 @@ Territory Events
 ### sdParachute Events
 
 -   applyParachute
--   [SetOwner\_(script\_event).html setOwner]
+-   [setOwner](SetOwner\_(script\_event))
 -   setDeployStart
 -   isMovingTooSlow
 
@@ -961,8 +961,8 @@ Territory Events
 -   setDisabled
 -   isDisabled
 -   getTargetPosition
--   [GetEnemy\_(script\_event).html getEnemy]
--   [SetEnemy\_(script\_event).html setEnemy]
+-   [getEnemy](GetEnemy\_(script\_event))
+-   [setEnemy](SetEnemy\_(script\_event))
 
 ### sdDeliveryVehicle Events
 
@@ -1035,7 +1035,7 @@ The game sets up several [game classes](Game\_class) to manage different things.
 
 ### Team Events
 
--   [GetName\_(script\_event).html getName]
+-   [getName](GetName\_(script\_event))
 -   getTitle
 -   registerDeployable
 -   unRegisterDeployable
@@ -1063,11 +1063,11 @@ The game sets up several [game classes](Game\_class) to manage different things.
 -   isUserCreated
 -   setLocation
 -   setWayPointState
--   [GetKey\_(script\_event).html getKey]
--   [GetIntKey\_(script\_event).html getIntKey]
--   [GetFloatKey\_(script\_event).html getFloatKey]
--   [GetVectorKey\_(script\_event).html getVectorKey]
--   [GetEntityKey\_(script\_event).html getEntityKey]
+-   [getKey](GetKey\_(script\_event))
+-   [getIntKey](GetIntKey\_(script\_event))
+-   [getFloatKey](GetFloatKey\_(script\_event))
+-   [getVectorKey](GetVectorKey\_(script\_event))
+-   [getEntityKey](GetEntityKey\_(script\_event))
 -   getKeyWithDefault
 -   getIntKeyWithDefault
 -   getFloatKeyWithDefault

@@ -8,13 +8,13 @@ In older games, a single image qualified as a texture and all that was required 
 
 Check the following links to learn more about the syntax of material files for [Doom 3](Doom\_3). This will help you understand and write them:
 
-[Material\_(decl).html Material declarations]   
+[Material declarations](Material\_(decl))   
 The basic syntax of material shaders is explained here.
 
-[Global\_material\_keywords\_(Doom\_3).html Global keywords]   
+[Global keywords](Global\_material\_keywords\_(Doom\_3))   
 Global keywords used in material shaders are indexed in this article.
 
-[Stage\_material\_keywords\_(Doom\_3).html Stage keywords]   
+[Stage keywords](Stage\_material\_keywords\_(Doom\_3))   
 Stage specific material shader keywords are listed in this article.
 
 ![](/images/images_e_e8_Q4square_25.png) Note: _Quake 4 only:_
@@ -213,9 +213,9 @@ Supported image formats
 
 The Doom 3 engine supports the following image formats:
 
--   [TGA\_(file\_format).html TGA]
--   [DDS\_(file\_format).html DDS]
--   [JPG\_(file\_format).html JPG]
+-   [TGA](TGA\_(file\_format))
+-   [DDS](DDS\_(file\_format))
+-   [JPG](JPG\_(file\_format))
 
 Details on each format and it's quirks can be found by following the links above.
 
@@ -301,8 +301,8 @@ See also
 
 #### Renderbump
 
--   [Renderbump\_(console\_command).html renderbump]
--   [RenderbumpFlat\_(console\_command).html renderbumpFlat]
+-   [renderbump](Renderbump\_(console\_command))
+-   [renderbumpFlat](RenderbumpFlat\_(console\_command))
 -   [ORB (Open Render Bump)](http://web.archive.org/web/20120923052509/http://engineering.soclab.bth.se/tools/177.aspx)
 -   [NVidia Melody](http://www.nvidia.com/object/melody_home.html)
 -   [xNormal](http://www.xnormal.net/)

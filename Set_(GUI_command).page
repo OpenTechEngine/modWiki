@@ -40,7 +40,7 @@ Execute a gui command on the client. By using "cmd" as the first property, you t
 -   checkKeys
 -   CheckUpdate
 -   exec
--   [Startgame\_(GUI\_command).html startgame]
+-   [startgame](Startgame\_(GUI\_command))
 -   FilterServers
 -   LANConnect
 -   loadBinds
@@ -82,9 +82,9 @@ Execute a gui command on the client. By using "cmd" as the first property, you t
 
 #### Entity
 
--   [Activate\_(GUI\_command).html activate]
+-   [activate](Activate\_(GUI\_command))
 -   close
--   [Play\_(GUI\_command).html play]
+-   [play](Play\_(GUI\_command))
 -   print
 -   runscript
 -   <span class="deadlink">setkeyval</span>

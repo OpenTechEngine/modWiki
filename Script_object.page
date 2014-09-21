@@ -213,7 +213,7 @@ Just to give an idea of what is going on while working on the script. The text w
 
 Since we will be using [script events](Script\_events) (event calls to the [spawn class](Spawn\_class)) specific to an idLight spawn class we are doing some simple type checking to see if the entity this script object is running on is the right type.
 
-[GetKey\_(script\_event).html getKey] is an event defined in the base spawn class [idEntity](IdEntity\_(class)), so all spawn classes inherit it.
+[getKey](GetKey\_(script\_event)) is an event defined in the base spawn class [idEntity](IdEntity\_(class)), so all spawn classes inherit it.
 
 "spawnclass" is the key for the value in the [spawnArgs](SpawnArgs) dictionary that declares the spawn class.
 

@@ -113,9 +113,9 @@ This entity is derived from the following:
 
 -   *[idEntity](IdEntity\_(class))*
     -   '' idProjectile''
-        -   [Projectile\_base\_(entity).html projectile\_base]
-            -   [Projectile\_grenade\_base\_(entity).html projectile\_grenade\_base]
-                -   [Projectile\_gunner\_grenade\_(entity).html projectile\_gunner\_grenade]
+        -   [projectile\_base](Projectile\_base\_(entity))
+            -   [projectile\_grenade\_base](Projectile\_grenade\_base\_(entity))
+                -   [projectile\_gunner\_grenade](Projectile\_gunner\_grenade\_(entity))
                     -   *' projectile\_gunner\_grenade\_hangar1*'
 
 **Note**: Entries marked in italics are classes defined in the SDK.

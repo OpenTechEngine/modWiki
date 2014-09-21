@@ -68,15 +68,15 @@ Universal declaration types
 These declarations are handled by the engine:
 
 -   addondef
--   [Af\_(decl).html af]
--   [Entitydef\_(decl).html entitydef]
--   [Export\_(decl).html export]
--   [Mapdef\_(decl).html mapdef]
--   [Material\_(decl).html material]
--   [Modeldef\_(decl).html modeldef]
--   [Skin\_(decl).html skin]
--   [Sound\_(decl).html sound]
--   [Table\_(decl).html table]
+-   [af](Af\_(decl))
+-   [entitydef](Entitydef\_(decl))
+-   [export](Export\_(decl))
+-   [mapdef](Mapdef\_(decl))
+-   [material](Material\_(decl))
+-   [modeldef](Modeldef\_(decl))
+-   [skin](Skin\_(decl))
+-   [sound](Sound\_(decl))
+-   [table](Table\_(decl))
 
 <span align="absbottom">![](/images/images_2_23_D3square_25.png) D3 Declaration types</span>
 --------------------------------------------------------------------------------------------------------------------------------------
@@ -88,8 +88,8 @@ Along with the universal decls Doom 3 provides the following:
 
 -   audio
 -   email
--   [Fx\_(decl).html fx]
--   [Particle\_(decl).html particle]
+-   [fx](Fx\_(decl))
+-   [particle](Particle\_(decl))
 -   pda
 -   video
 
@@ -102,9 +102,9 @@ Along with the universal decls Doom 3 provides the following:
 Along with the universal decls Quake 4 provides the following:
 
 -   effect
--   [Guide\_(decl).html guide]
--   [Lipsync\_(decl).html lipsync]
--   [Materialtype\_(decl).html materialtype]
+-   [guide](Guide\_(decl))
+-   [lipsync](Lipsync\_(decl))
+-   [materialtype](Materialtype\_(decl))
 -   playback
 
 Editing tools

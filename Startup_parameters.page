@@ -141,22 +141,22 @@ causes the game to skip the introductory videos when starting.
 
 ### CVars
 
-[Com\_allowConsole\_(cvar).html com\_allowconsole]  
+[com\_allowconsole](Com\_allowConsole\_(cvar))  
 Sets if the easy console key is used.
 
-[Fs\_game\_(cvar).html fs\_game]  
+[fs\_game](Fs\_game\_(cvar))  
 Used to load a different mod on startup.
 
-[Fs\_game\_base\_(cvar).html fs\_game\_base]  
+[fs\_game\_base](Fs\_game\_base\_(cvar))  
 Adds a second folder to be loaded prior to the modfolder. Useful when modding a missionpack. More info here: [[1](http://web.archive.org/web/20120102134924/http://zerowing.idsoftware.com/linux/doom/fs_game_base)]
 
-[Net\_allowCheats\_(cvar).html net\_allowcheats]  
+[net\_allowcheats](Net\_allowCheats\_(cvar))  
 Used to enable cheats.
 
-[R\_fullscreen\_(cvar).html r\_fullscreen]  
+[r\_fullscreen](R\_fullscreen\_(cvar))  
 This will make the game run in fullscreen or in windowed mode. Mostly in combanation with some command.
 
-[R\_multiSamples\_(cvar).html r\_multisamples]  
+[r\_multisamples](R\_multiSamples\_(cvar))  
 Enables [antialiasing](Antialiasing) and sets the number of passes.
 
 

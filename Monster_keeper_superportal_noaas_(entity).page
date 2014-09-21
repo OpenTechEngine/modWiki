@@ -206,9 +206,9 @@ Inheritance
 This entity is derived from the following:
 
 -   '' hhMonsterAI''
-    -   [Monster\_simple\_default\_(entity).html monster\_simple\_default]
-        -   [Monster\_keeper\_(entity).html monster\_keeper]
-            -   [Monster\_keeper\_superportal\_(entity).html monster\_keeper\_superportal]
+    -   [monster\_simple\_default](Monster\_simple\_default\_(entity))
+        -   [monster\_keeper](Monster\_keeper\_(entity))
+            -   [monster\_keeper\_superportal](Monster\_keeper\_superportal\_(entity))
                 -   *' monster\_keeper\_superportal\_noaas*'
 
 **Note**: Entries marked in italics are classes defined in the SDK.

@@ -71,67 +71,67 @@ This entity is derived from the following:
 Events
 ------
 
--   [Activate\_(script\_event).html activate]
--   [ActivateTargets\_(script\_event).html activateTargets]
--   [Bind\_(script\_event).html bind]
--   [BindPosition\_(script\_event).html bindPosition]
--   [BindToJoint\_(script\_event).html bindToJoint]
--   [CacheSoundShader\_(script\_event).html cacheSoundShader]
--   [CallFunction\_(script\_event).html callFunction]
--   [ClearSignal\_(script\_event).html clearSignal]
--   [DistanceTo\_(script\_event).html distanceTo]
--   [DistanceToPoint\_(script\_event).html distanceToPoint]
--   [FadeSound\_(script\_event).html fadeSound]
--   [GetAngles\_(script\_event).html getAngles]
--   [GetAngularVelocity\_(script\_event).html getAngularVelocity]
--   [GetColor\_(script\_event).html getColor]
--   [GetEntityKey\_(script\_event).html getEntityKey]
--   [GetFloatKey\_(script\_event).html getFloatKey]
--   [GetIntKey\_(script\_event).html getIntKey]
--   [GetKey\_(script\_event).html getKey]
--   [GetLinearVelocity\_(script\_event).html getLinearVelocity]
--   [GetMaxs\_(script\_event).html getMaxs]
--   [GetMins\_(script\_event).html getMins]
--   [GetName\_(script\_event).html getName]
--   [GetNextKey\_(script\_event).html getNextKey]
--   [GetOrigin\_(script\_event).html getOrigin]
--   [GetShaderParm\_(script\_event).html getShaderParm]
--   [GetSize\_(script\_event).html getSize]
--   [GetTarget\_(script\_event).html getTarget]
--   [GetVectorKey\_(script\_event).html getVectorKey]
--   [GetWorldOrigin\_(script\_event).html getWorldOrigin]
--   [HasFunction\_(script\_event).html hasFunction]
--   [Hide\_(script\_event).html hide]
--   [IsHidden\_(script\_event).html isHidden]
--   [NumTargets\_(script\_event).html numTargets]
--   [RandomTarget\_(script\_event).html randomTarget]
--   [Remove\_(script\_event).html remove]
--   [RemoveBinds\_(script\_event).html removeBinds]
--   [RestorePosition\_(script\_event).html restorePosition]
--   [SetAngles\_(script\_event).html setAngles]
--   [SetAngularVelocity\_(script\_event).html setAngularVelocity]
--   [SetColor\_(script\_event).html setColor]
--   [SetGuiFloat\_(script\_event).html setGuiFloat]
--   [SetGuiParm\_(script\_event).html setGuiParm]
--   [SetKey\_(script\_event).html setKey]
--   [SetLinearVelocity\_(script\_event).html setLinearVelocity]
--   [SetModel\_(script\_event).html setModel]
--   [SetName\_(script\_event).html setName]
--   [SetNeverDormant\_(script\_event).html setNeverDormant]
--   [SetOrigin\_(script\_event).html setOrigin]
--   [SetOwner\_(script\_event).html setOwner]
--   [SetShaderParm\_(script\_event).html setShaderParm]
--   [SetShaderParms\_(script\_event).html setShaderParms]
--   [SetSize\_(script\_event).html setSize]
--   [SetSkin\_(script\_event).html setSkin]
--   [SetWorldOrigin\_(script\_event).html setWorldOrigin]
--   [Show\_(script\_event).html show]
--   [StartFx\_(script\_event).html startFx]
--   [StartSound\_(script\_event).html startSound]
--   [StartSoundShader\_(script\_event).html startSoundShader]
--   [StopSound\_(script\_event).html stopSound]
--   [Touches\_(script\_event).html touches]
--   [Unbind\_(script\_event).html unbind]
+-   [activate](Activate\_(script\_event))
+-   [activateTargets](ActivateTargets\_(script\_event))
+-   [bind](Bind\_(script\_event))
+-   [bindPosition](BindPosition\_(script\_event))
+-   [bindToJoint](BindToJoint\_(script\_event))
+-   [cacheSoundShader](CacheSoundShader\_(script\_event))
+-   [callFunction](CallFunction\_(script\_event))
+-   [clearSignal](ClearSignal\_(script\_event))
+-   [distanceTo](DistanceTo\_(script\_event))
+-   [distanceToPoint](DistanceToPoint\_(script\_event))
+-   [fadeSound](FadeSound\_(script\_event))
+-   [getAngles](GetAngles\_(script\_event))
+-   [getAngularVelocity](GetAngularVelocity\_(script\_event))
+-   [getColor](GetColor\_(script\_event))
+-   [getEntityKey](GetEntityKey\_(script\_event))
+-   [getFloatKey](GetFloatKey\_(script\_event))
+-   [getIntKey](GetIntKey\_(script\_event))
+-   [getKey](GetKey\_(script\_event))
+-   [getLinearVelocity](GetLinearVelocity\_(script\_event))
+-   [getMaxs](GetMaxs\_(script\_event))
+-   [getMins](GetMins\_(script\_event))
+-   [getName](GetName\_(script\_event))
+-   [getNextKey](GetNextKey\_(script\_event))
+-   [getOrigin](GetOrigin\_(script\_event))
+-   [getShaderParm](GetShaderParm\_(script\_event))
+-   [getSize](GetSize\_(script\_event))
+-   [getTarget](GetTarget\_(script\_event))
+-   [getVectorKey](GetVectorKey\_(script\_event))
+-   [getWorldOrigin](GetWorldOrigin\_(script\_event))
+-   [hasFunction](HasFunction\_(script\_event))
+-   [hide](Hide\_(script\_event))
+-   [isHidden](IsHidden\_(script\_event))
+-   [numTargets](NumTargets\_(script\_event))
+-   [randomTarget](RandomTarget\_(script\_event))
+-   [remove](Remove\_(script\_event))
+-   [removeBinds](RemoveBinds\_(script\_event))
+-   [restorePosition](RestorePosition\_(script\_event))
+-   [setAngles](SetAngles\_(script\_event))
+-   [setAngularVelocity](SetAngularVelocity\_(script\_event))
+-   [setColor](SetColor\_(script\_event))
+-   [setGuiFloat](SetGuiFloat\_(script\_event))
+-   [setGuiParm](SetGuiParm\_(script\_event))
+-   [setKey](SetKey\_(script\_event))
+-   [setLinearVelocity](SetLinearVelocity\_(script\_event))
+-   [setModel](SetModel\_(script\_event))
+-   [setName](SetName\_(script\_event))
+-   [setNeverDormant](SetNeverDormant\_(script\_event))
+-   [setOrigin](SetOrigin\_(script\_event))
+-   [setOwner](SetOwner\_(script\_event))
+-   [setShaderParm](SetShaderParm\_(script\_event))
+-   [setShaderParms](SetShaderParms\_(script\_event))
+-   [setSize](SetSize\_(script\_event))
+-   [setSkin](SetSkin\_(script\_event))
+-   [setWorldOrigin](SetWorldOrigin\_(script\_event))
+-   [show](Show\_(script\_event))
+-   [startFx](StartFx\_(script\_event))
+-   [startSound](StartSound\_(script\_event))
+-   [startSoundShader](StartSoundShader\_(script\_event))
+-   [stopSound](StopSound\_(script\_event))
+-   [touches](Touches\_(script\_event))
+-   [unbind](Unbind\_(script\_event))
 
 Notes
 -----

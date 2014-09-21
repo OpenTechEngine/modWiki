@@ -36,6 +36,6 @@ This keyword is useful for [sky](Cube\_maps) textures which can look very ugly w
 
 This keyword has no effect in Low quality mode, and the [forceHighQuality](ForceHighQuality\_(Material\_stage\_keyword)) keyword must be used instead.
 
-If the [image\_ignoreHighQuality](Image\_ignoreHighQuality\_(cvar)) [Console.html CVar] is set to 1, this keyword will be ignored.
+If the [image\_ignoreHighQuality](Image\_ignoreHighQuality\_(cvar)) [CVar](Console) is set to 1, this keyword will be ignored.
 
 

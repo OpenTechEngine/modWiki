@@ -23,38 +23,38 @@ This is the folder structure of Quake 4. It should be noted that these folders a
 <div style="text-align: left; margin-left: 10px">
 <p><font size="14px"><code>
 
-* /[Folder_structure_(Quake_4).html#.2Fq4base q4base]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Faf af]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fcfg cfg]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fdef def]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fdemos demos]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Feffects effects]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fefxs efxs]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Ffonts fonts]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fgfx.2F gfx]
-*** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fgfx.2F2d 2d]
-*** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fgfx.2Fdecals decals]
-*** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fgfx.2Feffects effects]
-*** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fgfx.2Fenv env]
-*** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fgfx.2Fguis guis]
-*** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fgfx.2Flights lights]
-*** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fgfx.2Fmp mp]
-*** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fgfx.2Fobjectives objectives]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fglprogs glprogs]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fguides guides]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fguis guis]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Flipsync lipsync]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fmaps maps]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fmaterials materials]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fmodels models]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fplaybacks playbacks]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fprogimg progimg]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fscripts scripts]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fskins skins]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fsound sound]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fstrings strings]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Ftextures textures]
-** /[Folder_structure_(Quake_4).html#.2Fq4base.2Fvideo video]
+* /[q4base](Folder_structure_(Quake_4)#.2Fq4base)
+** /[af](Folder_structure_(Quake_4)#.2Fq4base.2Faf)
+** /[cfg](Folder_structure_(Quake_4)#.2Fq4base.2Fcfg)
+** /[def](Folder_structure_(Quake_4)#.2Fq4base.2Fdef)
+** /[demos](Folder_structure_(Quake_4)#.2Fq4base.2Fdemos)
+** /[effects](Folder_structure_(Quake_4)#.2Fq4base.2Feffects)
+** /[efxs](Folder_structure_(Quake_4)#.2Fq4base.2Fefxs)
+** /[fonts](Folder_structure_(Quake_4)#.2Fq4base.2Ffonts)
+** /[gfx](Folder_structure_(Quake_4)#.2Fq4base.2Fgfx.2F)
+*** /[2d](Folder_structure_(Quake_4)#.2Fq4base.2Fgfx.2F2d)
+*** /[decals](Folder_structure_(Quake_4)#.2Fq4base.2Fgfx.2Fdecals)
+*** /[effects](Folder_structure_(Quake_4)#.2Fq4base.2Fgfx.2Feffects)
+*** /[env](Folder_structure_(Quake_4)#.2Fq4base.2Fgfx.2Fenv)
+*** /[guis](Folder_structure_(Quake_4)#.2Fq4base.2Fgfx.2Fguis)
+*** /[lights](Folder_structure_(Quake_4)#.2Fq4base.2Fgfx.2Flights)
+*** /[mp](Folder_structure_(Quake_4)#.2Fq4base.2Fgfx.2Fmp)
+*** /[objectives](Folder_structure_(Quake_4)#.2Fq4base.2Fgfx.2Fobjectives)
+** /[glprogs](Folder_structure_(Quake_4)#.2Fq4base.2Fglprogs)
+** /[guides](Folder_structure_(Quake_4)#.2Fq4base.2Fguides)
+** /[guis](Folder_structure_(Quake_4)#.2Fq4base.2Fguis)
+** /[lipsync](Folder_structure_(Quake_4)#.2Fq4base.2Flipsync)
+** /[maps](Folder_structure_(Quake_4)#.2Fq4base.2Fmaps)
+** /[materials](Folder_structure_(Quake_4)#.2Fq4base.2Fmaterials)
+** /[models](Folder_structure_(Quake_4)#.2Fq4base.2Fmodels)
+** /[playbacks](Folder_structure_(Quake_4)#.2Fq4base.2Fplaybacks)
+** /[progimg](Folder_structure_(Quake_4)#.2Fq4base.2Fprogimg)
+** /[scripts](Folder_structure_(Quake_4)#.2Fq4base.2Fscripts)
+** /[skins](Folder_structure_(Quake_4)#.2Fq4base.2Fskins)
+** /[sound](Folder_structure_(Quake_4)#.2Fq4base.2Fsound)
+** /[strings](Folder_structure_(Quake_4)#.2Fq4base.2Fstrings)
+** /[textures](Folder_structure_(Quake_4)#.2Fq4base.2Ftextures)
+** /[video](Folder_structure_(Quake_4)#.2Fq4base.2Fvideo)
 
 </code></font></p>
 </div>

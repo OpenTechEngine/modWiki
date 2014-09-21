@@ -1532,11 +1532,11 @@ Existing Entities as of version 1.2
 -   firesupport\_marker\_violator
 -   flyer\_hive
 -   func\_aasobstacle
--   [Func\_activator\_(entity).html func\_activator]
--   [Func\_animate\_(entity).html func\_animate]
--   [Func\_bobbing\_(entity).html func\_bobbing]
--   [Func\_cameraview\_(entity).html func\_cameraview]
--   [Func\_door\_(entity).html func\_door]
+-   [func\_activator](Func\_activator\_(entity))
+-   [func\_animate](Func\_animate\_(entity))
+-   [func\_bobbing](Func\_bobbing\_(entity))
+-   [func\_cameraview](Func\_cameraview\_(entity))
+-   [func\_door](Func\_door\_(entity))
 -   func\_door\_gdf
 -   func\_door\_gdf\_breakable
 -   func\_door\_gdf\_slave
@@ -1545,18 +1545,18 @@ Existing Entities as of version 1.2
 -   func\_door\_strogg\_breakable
 -   func\_door\_strogg\_slave
 -   func\_door\_switch
--   [Func\_elevator\_(entity).html func\_elevator]
+-   [func\_elevator](Func\_elevator\_(entity))
 -   func\_flare
--   [Func\_forcefield\_(entity).html func\_forcefield]
--   [Func\_fx\_(entity).html func\_fx]
--   [Func\_group\_(entity).html func\_group]
--   [Func\_ladder\_(entity).html func\_ladder]
--   [Func\_pendulum\_(entity).html func\_pendulum]
--   [Func\_plat\_(entity).html func\_plat]
--   [Func\_riser\_(entity).html func\_riser]
--   [Func\_rotating\_(entity).html func\_rotating]
--   [Func\_splinemover\_(entity).html func\_splinemover]
--   [Func\_static\_(entity).html func\_static]
+-   [func\_forcefield](Func\_forcefield\_(entity))
+-   [func\_fx](Func\_fx\_(entity))
+-   [func\_group](Func\_group\_(entity))
+-   [func\_ladder](Func\_ladder\_(entity))
+-   [func\_pendulum](Func\_pendulum\_(entity))
+-   [func\_plat](Func\_plat\_(entity))
+-   [func\_riser](Func\_riser\_(entity))
+-   [func\_rotating](Func\_rotating\_(entity))
+-   [func\_splinemover](Func\_splinemover\_(entity))
+-   [func\_static](Func\_static\_(entity))
 -   func\_synced\_fx
 
 ### G
@@ -1608,10 +1608,10 @@ Existing Entities as of version 1.2
 -   info\_envbound
 -   info\_envmap
 -   info\_generic\_spawn
--   [Info\_location\_(entity).html info\_location]
+-   [info\_location](Info\_location\_(entity))
 -   info\_objective
--   [Info\_player\_deathmatch\_(entity).html info\_player\_deathmatch]
--   [Info\_player\_start\_(entity).html info\_player\_start]
+-   [info\_player\_deathmatch](Info\_player\_deathmatch\_(entity))
+-   [info\_player\_start](Info\_player\_start\_(entity))
 -   info\_spawn\_master
 -   info\_spectator\_spawn
 -   info\_team\_gdf\_spawn
@@ -1632,7 +1632,7 @@ Existing Entities as of version 1.2
 
 ### L
 
--   [Light\_(entity).html light]
+-   [light](Light\_(entity))
 -   light\_ambient
 -   light\_inside
 -   light\_interior
@@ -1665,7 +1665,7 @@ Existing Entities as of version 1.2
 -   mountable\_weapon\_base
 -   mountable\_weapon\_gdf
 -   mountable\_weapon\_strogg
--   [Moveable\_base\_(entity).html moveable\_base]
+-   [moveable\_base](Moveable\_base\_(entity))
 -   moveable\_item\_ball
 -   moveable\_item\_ballbouncy
 -   moveable\_item\_barrel01
@@ -1689,7 +1689,7 @@ Existing Entities as of version 1.2
 ### P
 
 -   parachute
--   [Path\_corner\_(entity).html path\_corner]
+-   [path\_corner](Path\_corner\_(entity))
 -   placement\_anansi
 -   placement\_badger
 -   placement\_bumblebee
@@ -1727,7 +1727,7 @@ Existing Entities as of version 1.2
 -   placement\_trojan
 -   placement\_vehicle
 -   placement\_weapon
--   [Player\_base\_(entity).html player\_base]
+-   [player\_base](Player\_base\_(entity))
 -   player\_edf
 -   player\_gdf\_covertops
 -   player\_gdf\_engineer
@@ -1752,8 +1752,8 @@ Existing Entities as of version 1.2
 -   projectile\_assaultrifle\_gren
 -   projectile\_assaultrifle\_gren\_bullet
 -   projectile\_assaultrifle\_scoped
--   [Projectile\_blaster\_(entity).html projectile\_blaster]
--   [Projectile\_bullet\_base\_(entity).html projectile\_bullet\_base]
+-   [projectile\_blaster](Projectile\_blaster\_(entity))
+-   [projectile\_bullet\_base](Projectile\_bullet\_base\_(entity))
 -   projectile\_bullet\_base\_big
 -   projectile\_decoy
 -   projectile\_decoy\_anansi
@@ -1800,7 +1800,7 @@ Existing Entities as of version 1.2
 -   projectile\_gpmg\_titan
 -   projectile\_gpmg\_trojan
 -   projectile\_gpmg\_vehicle
--   [Projectile\_grenade\_(entity).html projectile\_grenade]
+-   [projectile\_grenade](Projectile\_grenade\_(entity))
 -   projectile\_grenade\_airstrike\_marker\_base
 -   projectile\_grenade\_airstrike\_marker\_gdf
 -   projectile\_grenade\_airstrike\_marker\_strogg
@@ -1818,7 +1818,7 @@ Existing Entities as of version 1.2
 -   projectile\_haw
 -   projectile\_haw\_anansi
 -   projectile\_healthpack
--   [Projectile\_hyperblaster\_(entity).html projectile\_hyperblaster]
+-   [projectile\_hyperblaster](Projectile\_hyperblaster\_(entity))
 -   projectile\_hyperblaster\_desecrator
 -   projectile\_hyperblaster\_hog
 -   projectile\_hyperblaster\_hornet
@@ -1845,9 +1845,9 @@ Existing Entities as of version 1.2
 -   projectile\_plasmacannon\_desecrator
 -   projectile\_plasmacannon\_goliath
 -   projectile\_plasmacannon\_small
--   [Projectile\_railgun\_(entity).html projectile\_railgun]
+-   [projectile\_railgun](Projectile\_railgun\_(entity))
 -   projectile\_railgun\_scoped
--   [Projectile\_rocket\_base\_(entity).html projectile\_rocket\_base]
+-   [projectile\_rocket\_base](Projectile\_rocket\_base\_(entity))
 -   projectile\_sbc
 -   projectile\_scud
 -   projectile\_shotgun
@@ -1877,7 +1877,7 @@ Existing Entities as of version 1.2
 -   scope\_sniperrifle
 -   snowEffect
 -   spawn\_host
--   [Speaker\_(entity).html speaker]
+-   [speaker](Speaker\_(entity))
 -   speaker\_assaultrifle\_test
 -   speaker\_distance\_loop\_test
 -   speaker\_distance\_loop\_test2
@@ -1919,16 +1919,16 @@ Existing Entities as of version 1.2
 ### T
 
 -   target\_marker
--   [Target\_null\_(entity).html target\_null]
+-   [target\_null](Target\_null\_(entity))
 -   targetdirection\_marker
 -   teh\_zappor\_beacon
 -   trigger\_barbedwire
--   [Trigger\_hurt\_(entity).html trigger\_hurt]
+-   [trigger\_hurt](Trigger\_hurt\_(entity))
 -   trigger\_hurt\_strogg\_shield
 -   trigger\_hurt\_strogg\_wall
 -   trigger\_mcp
 -   trigger\_mcp\_bot
--   [Trigger\_multiple\_(entity).html trigger\_multiple]
+-   [trigger\_multiple](Trigger\_multiple\_(entity))
 -   trigger\_noplant
 -   trigger\_scripted
 -   trigger\_tooltip
@@ -1980,5 +1980,5 @@ Existing Entities as of version 1.2
 -   waypoint\_info\_base
 -   waypoint\_info\_gdf
 -   waypoint\_info\_strogg
--   [Worldspawn\_(entity).html worldspawn]
+-   [worldspawn](Worldspawn\_(entity))
 

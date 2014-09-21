@@ -176,9 +176,9 @@ This entity is derived from the following:
             -   '' idAFEntity\_Gibbable''
                 -   '' idActor''
                     -   '' idAI''
-                        -   [Monster\_default\_(entity).html monster\_default]
-                            -   [Zombie\_default\_(entity).html zombie\_default]
-                                -   [Monster\_zombie\_commando\_(entity).html monster\_zombie\_commando]
+                        -   [monster\_default](Monster\_default\_(entity))
+                            -   [zombie\_default](Zombie\_default\_(entity))
+                                -   [monster\_zombie\_commando](Monster\_zombie\_commando\_(entity))
                                     -   *' delta2a\_commando*'
 
 **Note**: Entries marked in italics are classes defined in the SDK.

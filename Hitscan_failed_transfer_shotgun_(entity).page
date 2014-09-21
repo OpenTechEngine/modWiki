@@ -47,8 +47,8 @@ Inheritance
 This entity is derived from the following:
 
 -   '' rvHitScan''
-    -   [Hitscan\_base\_(entity).html hitscan\_base]
-        -   [Hitscan\_shotgun\_base\_(entity).html hitscan\_shotgun\_base]
+    -   [hitscan\_base](Hitscan\_base\_(entity))
+        -   [hitscan\_shotgun\_base](Hitscan\_shotgun\_base\_(entity))
             -   *' hitscan\_failed\_transfer\_shotgun*'
 
 **Note**: Entries marked in italics are classes defined in the SDK.

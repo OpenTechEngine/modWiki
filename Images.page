@@ -7,9 +7,9 @@ In most cases these elements reference images indirectly through the use of [mat
 
 Supported image formats are ...
 
--   .[JPG\_(file\_format).html JPG]
--   .[TGA\_(file\_format).html TGA]
--   .[DDS\_(file\_format).html DDS]
+-   .[JPG](JPG\_(file\_format))
+-   .[TGA](TGA\_(file\_format))
+-   .[DDS](DDS\_(file\_format))
 
 It's imporant to review each format before commiting your artwork to any one in particular. If the image format uses compression, and you intend to use it as a normal map, you'll see artifacts in game. If the image format doesn't support 32 bit color depth, you won't be able to make use of transparency. These details are covered in each format's respective article.
 

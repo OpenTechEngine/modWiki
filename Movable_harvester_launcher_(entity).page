@@ -92,9 +92,9 @@ This entity is derived from the following:
 -   '' idEntity''
     -   '' idItem''
         -   '' hhItem''
-            -   [Weapon\_default\_(entity).html weapon\_default]
-                -   [Weapon\_rocketlauncher\_(entity).html weapon\_rocketlauncher]
-                    -   [Movable\_item\_rocketlauncher\_(entity).html movable\_item\_rocketlauncher]
+            -   [weapon\_default](Weapon\_default\_(entity))
+                -   [weapon\_rocketlauncher](Weapon\_rocketlauncher\_(entity))
+                    -   [movable\_item\_rocketlauncher](Movable\_item\_rocketlauncher\_(entity))
                         -   *' movable\_harvester\_launcher*'
 
 **Note**: Entries marked in italics are classes defined in the SDK.

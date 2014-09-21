@@ -20,7 +20,7 @@ HUD is an acronym for Heads-Up Display. It's the overlay that stands on top of t
 Additional parameters
 ---------------------
 
-Additional parameters are like variables, accessible to each specific scope - different GUI scopes have different parameters available. These parameters can be accessed by a GUI script using the *gui::parametername* syntax - as an [item property](GUI\_item\_properties) value or by doing comparisons using the [If...else\_(GUI\_command).html if...else] command, for example.
+Additional parameters are like variables, accessible to each specific scope - different GUI scopes have different parameters available. These parameters can be accessed by a GUI script using the *gui::parametername* syntax - as an [item property](GUI\_item\_properties) value or by doing comparisons using the [if...else](If...else\_(GUI\_command)) command, for example.
 
 g\_showProjectilePct   
 Boolean; determines whether projectpct should be shown. (Not working?)
