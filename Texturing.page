@@ -1,35 +1,6 @@
 Texturing
 =========
 
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                                                 
- Contents                                                                                                                                                             
- --------                                                                                                                                                             
-                                                                                                                                                                      
- </div>                                                                                                                                                               
- -   [Texturing.html\#Material\_shaders <span class="tocnumber">1</span> <span class="toctext">Material shaders</span>]                                               
- -   [Texturing.html\#Diffuse\_maps <span class="tocnumber">2</span> <span class="toctext">Diffuse maps</span>]                                                       
- -   [Texturing.html\#Bump\_maps <span class="tocnumber">3</span> <span class="toctext">Bump maps</span>]                                                             
-     -   [Texturing.html\#Normal\_maps <span class="tocnumber">3.1</span> <span class="toctext">Normal maps</span>]                                                   
-     -   [Texturing.html\#Height\_maps <span class="tocnumber">3.2</span> <span class="toctext">Height maps</span>]                                                   
-     -   [Texturing.html\#Normal\_maps\_vs.\_height\_maps <span class="tocnumber">3.3</span> <span class="toctext">Normal maps vs. height maps</span>]                
- -   [Texturing.html\#Specular\_maps <span class="tocnumber">4</span> <span class="toctext">Specular maps</span>]                                                     
- -   [Texturing.html\#Hit\_maps <span class="tocnumber">5</span> <span class="toctext">Hit maps</span>]                                                               
- -   [Texturing.html\#Sky\_and\_reflective\_maps <span class="tocnumber">6</span> <span class="toctext">Sky and reflective maps</span>]                               
- -   [Texturing.html\#Seamless\_Textures <span class="tocnumber">7</span> <span class="toctext">Seamless Textures</span>]                                             
- -   [Texturing.html\#Supported\_image\_formats <span class="tocnumber">8</span> <span class="toctext">Supported image formats</span>]                                
- -   [Texturing.html\#Dynamic\_Internal\_Images <span class="tocnumber">9</span> <span class="toctext">Dynamic Internal Images</span>]                                
- -   [Texturing.html\#Compressed\_and\_uncompressed <span class="tocnumber">10</span> <span class="toctext">Compressed and uncompressed</span>]                       
-     -   [Texturing.html\#Compression\_Notes <span class="tocnumber">10.1</span> <span class="toctext">Compression Notes</span>]                                      
- -   [Texturing.html\#See\_also <span class="tocnumber">11</span> <span class="toctext">See also</span>]                                                              
-     -   [Texturing.html\#General\_image\_editing\_applications <span class="tocnumber">11.1</span> <span class="toctext">General image editing applications</span>]  
-     -   [Texturing.html\#Seamless\_texture\_creation\_tools <span class="tocnumber">11.2</span> <span class="toctext">Seamless texture creation tools</span>]        
-     -   [Texturing.html\#Height\_and\_normal\_maps <span class="tocnumber">11.3</span> <span class="toctext">Height and normal maps</span>]                          
-         -   [Texturing.html\#Renderbump <span class="tocnumber">11.3.1</span> <span class="toctext">Renderbump</span>]                                               
-     -   [Texturing.html\#DDS\_format <span class="tocnumber">11.4</span> <span class="toctext">DDS format</span>]                                                    
-     -   [Texturing.html\#Cube\_maps <span class="tocnumber">11.5</span> <span class="toctext">Cube maps</span>]                                                      
-     -   [Texturing.html\#Texture\_resources <span class="tocnumber">11.6</span> <span class="toctext">Texture resources</span>]                                      |
-
 Material shaders
 ----------------
 
@@ -46,13 +17,9 @@ Global keywords used in material shaders are indexed in this article.
 [Stage\_material\_keywords\_(Doom\_3).html Stage keywords]   
 Stage specific material shader keywords are listed in this article.
 
-<div>
-![Image:Q4square\_25.png](images_e_e8_Q4square_25.png "fig:Image:Q4square_25.png") **Note:** Quake 4 only:
+![](/images/images_e_e8_Q4square_25.png) Note: _Quake 4 only:_
+ ~  *You can also use [Guide\_(decl).html guides] to simplify writing many materials that behave the same way.*
 
-  
-*You can also use [Guide\_(decl).html guides] to simplify writing many materials that behave the same way.*
-
-</div>
 Diffuse maps
 ------------
 
@@ -310,49 +277,51 @@ See also
 
 ### General image editing applications
 
--   [Adobe Photoshop](http://web.archive.org/web/20120923052509/http://www.adobe.com/)
--   [Corel Paint Shop Pro](http://web.archive.org/web/20120923052509/http://www.jasc.com/)
--   [The Gimp](http://web.archive.org/web/20120923052509/http://www.gimp.org/)
+-   [Adobe Photoshop](http://www.adobe.com/)
+-   [Corel Paint Shop Pro](http://www.paintshoppro.com/)
+-   [The Gimp](http://www.gimp.org/)
 
 ### Seamless texture creation tools
 
--   [The Resynthesizer - GIMP Plugin](http://web.archive.org/web/20120923052509/http://www.logarithmic.net/pfh/resynthesizer)
--   [Filter Forge - Photoshop Plugin](http://web.archive.org/web/20120923052509/http://www.filterforge.com/)
--   [Map Zone](http://web.archive.org/web/20120923052509/http://www.mapzoneeditor.com/)
--   [Texture Maker](http://web.archive.org/web/20120923052509/http://www.i-tex.de/)
--   [Genetica](http://web.archive.org/web/20120923052509/http://www.spiralgraphics.biz/gen2tour/index.htm)
--   [DarkTree](http://web.archive.org/web/20120923052509/http://www.darksim.com/)
--   [FxGen](http://web.archive.org/web/20120923052509/http://www.fxgen.org/)
+-   [The Resynthesizer - GIMP Plugin](http://www.logarithmic.net/pfh/resynthesizer)
+-   [Filter Forge - Photoshop Plugin](http://www.filterforge.com/)
+-   [Map Zone](http://www.mapzoneeditor.com/)
+-   [Texture Maker](http://www.i-tex.de/)
+-   [Genetica](http://www.spiralgraphics.biz/gen2tour/index.htm)
+-   [DarkTree](http://www.darksim.com/)
+-   [FxGen](http://sourceforge.net/projects/fxgen/)
 
 ### Height and normal maps
 
--   [nDo](http://web.archive.org/web/20120923052509/http://www.philipk.net/ndo.html)
--   [CrazyBump](http://web.archive.org/web/20120923052509/http://www.crazybump.com/)
--   [Nvidia Normal Map Filter - Photoshop Plugin](http://web.archive.org/web/20120923052509/http://developer.nvidia.com/object/photoshop_dds_plugins.html) - [NvidaNormalMapFilter\_(tool\_overview).html Overview]
--   [GIMP DDS & Normal Map Plugins](http://web.archive.org/web/20120923052509/http://nifelheim.dyndns.org/%7ecocidius/)
--   [Njob](http://web.archive.org/web/20120923052509/http://charles.hollemeersch.net/njob)
+-   [nDo](http://www.philipk.net/ndo.html)
+-   [CrazyBump](http://www.crazybump.com/)
+-   [Nvidia Normal Map Filter - Photoshop Plugin](https://developer.nvidia.com/nvidia-texture-tools-adobe-photoshop) - [Overview](NvidaNormalMapFilter\_(tool\_overview))
+-   [GIMP Normal Map Plugin](https://code.google.com/p/gimp-normalmap/)
+-   [Njob](http://charles.hollemeersch.net/njob)
 
 #### Renderbump
 
 -   [Renderbump\_(console\_command).html renderbump]
 -   [RenderbumpFlat\_(console\_command).html renderbumpFlat]
 -   [ORB (Open Render Bump)](http://web.archive.org/web/20120923052509/http://engineering.soclab.bth.se/tools/177.aspx)
--   [NVidia Melody](http://web.archive.org/web/20120923052509/http://developer.nvidia.com/object/melody_home.html)
--   [xNormal](http://web.archive.org/web/20120923052509/http://www.santyesprogramadorynografista.net/projects.aspx)
+-   [NVidia Melody](http://www.nvidia.com/object/melody_home.html)
+-   [xNormal](http://www.xnormal.net/)
 
 ### DDS format
 
--   [Nvidia DDS Thumbnail Viewer](http://web.archive.org/web/20120923052509/http://developer.nvidia.com/object/dds_thumbnail_viewer.html)
--   [ATI Compressonator](http://web.archive.org/web/20120923052509/http://www.ati.com/developer/compressonator.html)
+-   [Nvidia DDS Thumbnail Viewer + DDS Utilities](https://developer.nvidia.com/legacy-texture-tools)
+-   [ATI Compressonator](http://developer.amd.com/tools-and-sdks/archive/legacy-cpu-gpu-tools/the-compressonator/)
+-   [GIMP DDS Plugin](https://code.google.com/p/gimp-dds/)
 
 ### Cube maps
 
--   [SkyPaint](http://web.archive.org/web/20120923052509/http://www.skypaint.com/)
--   [Terragen](http://web.archive.org/web/20120923052509/http://www.planetside.co.uk/terragen/)
+-   [SkyPaint](http://www.skypaint.com/)
+-   [Terragen](http://planetside.co.uk/products/terragen3)
 
 ### Texture resources
 
--   [A-Z Textures](http://web.archive.org/web/20120923052509/http://www.aztextures.com/)
+-   [A-Z Textures](http://www.aztextures.com/)
 -   [Textures Library](http://web.archive.org/web/20120923052509/http://textures.z7server.com/)
--   [CG Textures](http://web.archive.org/web/20120923052509/http://www.cgtextures.com/)
-
+-   [CG Textures](http://www.cgtextures.com/)
+-   [maxTextures](http://www.maxtextures.com/)
+-   [Texturelib](http://texturelib.com/)

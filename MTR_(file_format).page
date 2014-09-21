@@ -1,13 +1,9 @@
 MTR (file format)
 =================
 
-These files contain [Material\_(decl).html material declarations]. They should be put in the /[Materials\_(folder).html materials] folder. They are regular ASCII text files.
+These files contain [Material\_(decl).html material declarations]. They should be put in
+the /[materials](Materials\_(folder)) folder. They are regular ASCII text files.
 
-<div>
-![Image:Q4square\_25.png](images_e_e8_Q4square_25.png "fig:Image:Q4square_25.png") **Note:** Quake 4 only:
-
-  
-*MTR files can also reference [Guide\_(decl).html guide declarations], a way to simplify material shader creation.*
-
-</div>
+![](/images/images_e_e8_Q4square_25.png) Note: _Quake 4 only:_
+ ~  *MTR files can also reference [Guide\_(decl).html guide declarations], a way to simplify material shader creation.*
 

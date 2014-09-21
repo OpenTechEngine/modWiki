@@ -1,32 +1,9 @@
 Modelling
 =========
 
-Modelling, short for 3D modelling, is the creation of three-dimensional objects, so-called (3D) models. This is done by using a modelling suite: a program to create, manipulate and animate these models. These are then exported to different file formats to be used in the id Tech 4 engine where they portray objects and characters.
-
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                                         
- Contents                                                                                                                                                     
- --------                                                                                                                                                     
-                                                                                                                                                              
- </div>                                                                                                                                                       
- -   [Modelling.html\#Model\_Prerequisites <span class="tocnumber">1</span> <span class="toctext">Model Prerequisites</span>]                                 
- -   [Modelling.html\#Model\_types <span class="tocnumber">2</span> <span class="toctext">Model types</span>]                                                 
-     -   [Modelling.html\#Static\_meshes <span class="tocnumber">2.1</span> <span class="toctext">Static meshes</span>]                                       
-         -   [Modelling.html\#Moveable\_Physics\_Objects <span class="tocnumber">2.1.1</span> <span class="toctext">Moveable Physics Objects</span>]          
-     -   [Modelling.html\#Animated\_meshes <span class="tocnumber">2.2</span> <span class="toctext">Animated meshes</span>]                                   
-         -   [Modelling.html\#Articulated\_Figures <span class="tocnumber">2.2.1</span> <span class="toctext">Articulated Figures</span>]                     
- -   [Modelling.html\#MD5.2FLWO.2FASE\_Import.2FExport\_Tools <span class="tocnumber">3</span> <span class="toctext">MD5/LWO/ASE Import/Export Tools</span>]  
-     -   [Modelling.html\#3D\_Studio\_Max <span class="tocnumber">3.1</span> <span class="toctext">3D Studio Max</span>]                                      
-     -   [Modelling.html\#Maya <span class="tocnumber">3.2</span> <span class="toctext">Maya</span>]                                                          
-     -   [Modelling.html\#LightWave\_3D <span class="tocnumber">3.3</span> <span class="toctext">LightWave 3D</span>]                                         
-     -   [Modelling.html\#Modo <span class="tocnumber">3.4</span> <span class="toctext">Modo</span>]                                                          
-     -   [Modelling.html\#Blender <span class="tocnumber">3.5</span> <span class="toctext">Blender</span>]                                                    
-     -   [Modelling.html\#XSI <span class="tocnumber">3.6</span> <span class="toctext">XSI</span>]                                                            
-     -   [Modelling.html\#ZBrush <span class="tocnumber">3.7</span> <span class="toctext">ZBrush</span>]                                                      
-     -   [Modelling.html\#trueSpace <span class="tocnumber">3.8</span> <span class="toctext">trueSpace</span>]                                                
- -   [Modelling.html\#Game\_polycount\_budget <span class="tocnumber">4</span> <span class="toctext">Game polycount budget</span>]                            
- -   [Modelling.html\#Q4\_Guidelines <span class="tocnumber">5</span> <span class="toctext">Q4 Guidelines</span>]                                             
- -   [Modelling.html\#See\_also <span class="tocnumber">6</span> <span class="toctext">See also</span>]                                                       |
+Modelling, short for 3D modelling, is the creation of three-dimensional objects, so-called (3D) models.
+This is done by using a modelling suite: a program to create, manipulate and animate these models.
+These are then exported to different file formats to be used in the id Tech 4 engine where they portray objects and characters.
 
 Model Prerequisites
 -------------------
@@ -202,13 +179,9 @@ A list of available Modelling Programs can be found below along with the corresp
 -   [importer](http://web.archive.org/web/20120917050651/http://doom3world.org/phpbb2/viewtopic.php?t=6901) (by der\_ton) (needs both, md5mesh + md5anim files)
 -   [exporter](http://web.archive.org/web/20120917050651/http://doom3world.org/phpbb2/viewtopic.php?t=1711) (by der\_ton)
 
-<div>
-![Image:Etqwsquare\_25.png](images_7_7e_Etqwsquare_25.png "fig:Image:Etqwsquare_25.png") **Note:** Enemy Territory: Quake Wars only:
+![](/images/images_7_7e_Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
+ ~  *In ETQW the md5anim files were compiled to binary animb files and md5anim files were not included in the SDK.*
 
-  
-*In ETQW the md5anim files were compiled to binary animb files and md5anim files were not included in the SDK.*
-
-</div>
 You may however convert the binary animb files from the animb folder (which is inside the generated folder inside the official pk4 game files) to md5anim files with [animb2md5anim](http://web.archive.org/web/20120917050651/http://www.splashdamage.com/forums/showthread.php/31253-Animb2MD5anim-amp-other-tools).
 
   

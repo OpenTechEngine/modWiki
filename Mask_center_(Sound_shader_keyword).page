@@ -1,28 +1,14 @@
 Mask center (Sound shader keyword)
 ==================================
 
-<div style="padding: 1px; border: 0px solid #000000" align="left">
-<font size="18px"><font color="black">![Image:D3square\_bg.png](images_c_cb_D3square_bg.png "fig:Image:D3square_bg.png") The information on this page is specific to [Doom\_3.html Doom 3].</font></font>
+![](/images/images_c_cb_D3square_bg.png) ![](/images/images_6_69_Q4square_bg.png)
+The information on this page is specific to [Doom 3](Doom\_3) and [Quake 4](Quake\_4).
 
-</div>
-
-------------------------------------------------------------------------
-
-|------------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                      
- Contents                                                                                                                                  
- --------                                                                                                                                  
-                                                                                                                                           
- </div>                                                                                                                                    
- -   [Mask\_center\_(Sound\_shader\_keyword).html\#Description <span class="tocnumber">1</span> <span class="toctext">Description</span>]  
- -   [Mask\_center\_(Sound\_shader\_keyword).html\#Usage <span class="tocnumber">2</span> <span class="toctext">Usage</span>]              
- -   [Mask\_center\_(Sound\_shader\_keyword).html\#Example <span class="tocnumber">3</span> <span class="toctext">Example</span>]          
- -   [Mask\_center\_(Sound\_shader\_keyword).html\#Notes <span class="tocnumber">4</span> <span class="toctext">Notes</span>]              |
 
 Description
 -----------
 
-The mask\_center keywork only allows sound from the shader to be outbut through the center surround sound speaker in a 5.1 setup.
+The mask\_center keywork only allows sound from the shader to be output through the center surround sound speaker in a 5.1 setup.
 
 Usage
 -----
@@ -32,27 +18,24 @@ Usage
 Example
 -------
 
-`ship_engine_rumble`
-`{`
-`   mindistance 100`
-`   maxdistance 1000`
-`   volume 10`
-`   looping`
-`   mask_center`
-`   shakes .1`
-`   sound/last_stand/loop_rumble_center_b.wav`
-`}`
+```
+ship_engine_rumble
+{
+   mindistance 100
+   maxdistance 1000
+   volume 10
+   looping
+   mask_center
+   shakes .1
+   sound/last_stand/loop_rumble_center_b.wav
+}
+```
 
 Notes
 -----
 
 When this is in use, sound only comes from that channel when 5.1 surround is used. If you use 2 channel (stereo) sound the channel will be muted and this sound will not be played.
 
-<div>
-![Image:Q4square\_25.png](images_e_e8_Q4square_25.png "fig:Image:Q4square_25.png") **Note:** Quake 4 only:
-
-  
-*Quake 4 uses center to do the same thing.*
-
-</div>
+![](/images/images_e_e8_Q4square_25.png) Note: _Quake 4 only:_
+ ~  *Quake 4 uses center to do the same thing.*
 

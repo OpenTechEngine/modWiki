@@ -183,27 +183,28 @@ Make a copy of the .ASE file and put it in the /base/models directory and open i
 
 Right near the start you should have a block of text named “MATERIAL 0”, go to the last line highlighted in the image above, “\*MATERIAL\_XP\_TYPE Filter” and paste the following text after that line:
 
-`*MAP_DIFFUSE {`
-`    *MAP_NAME "Map #6"`
-`    *MAP_CLASS "Bitmap"`
-`    *MAP_SUBNO 1`
-`    *MAP_AMOUNT 1.0000`
-`    *BITMAP "\\q4base\textures\myterrainmat.tga"`
-`    *MAP_TYPE Screen`
-`    *UVW_U_OFFSET 0.0000`
-`    *UVW_V_OFFSET 0.0000`
-`    *UVW_U_TILING 1.0000`
-`    *UVW_V_TILING 1.0000`
-`    *UVW_ANGLE 0.0000`
-`    *UVW_BLUR 1.0000`
-`    *UVW_BLUR_OFFSET 0.0000`
-`    *UVW_NOUSE_AMT 1.0000`
-`    *UVW_NOISE_SIZE 1.0000`
-`    *UVW_NOISE_LEVEL 1`
-`    *UVW_NOISE_PHASE 0.0000`
-`    *BITMAP_FILTER Pyramidal`
-` }`
-` `
+```
+*MAP_DIFFUSE {
+    *MAP_NAME "Map #6"
+    *MAP_CLASS "Bitmap"
+    *MAP_SUBNO 1
+    *MAP_AMOUNT 1.0000
+    *BITMAP "\\q4base\textures\myterrainmat.tga"
+    *MAP_TYPE Screen
+    *UVW_U_OFFSET 0.0000
+    *UVW_V_OFFSET 0.0000
+    *UVW_U_TILING 1.0000
+    *UVW_V_TILING 1.0000
+    *UVW_ANGLE 0.0000
+    *UVW_BLUR 1.0000
+    *UVW_BLUR_OFFSET 0.0000
+    *UVW_NOUSE_AMT 1.0000
+    *UVW_NOISE_SIZE 1.0000
+    *UVW_NOISE_LEVEL 1
+    *UVW_NOISE_PHASE 0.0000
+    *BITMAP_FILTER Pyramidal
+ }
+```
 
 Save the file; it should now look like this:
 
@@ -211,35 +212,39 @@ Save the file; it should now look like this:
 
 You can set the **\*BITMAP "\\\\q4base\\textures\\myterrainmat.tga"** line to anything you want just make sure you include **\\\\base\\** (or **\\\\q4base\\** if you’re editing for Quake 4) and that it points to a valid material name, not texture (the .TGA extension is not needed). For this tutorial we’re going to create this material called **myterrainmat**. Before we do that, let’s put all the textures into place.
 
-<div>
-![Image:Etqwsquare\_25.png](images_7_7e_Etqwsquare_25.png "fig:Image:Etqwsquare_25.png") **Note:** Enemy Territory: Quake Wars only:
+![](/images/images_7_7e_Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
+ ~  Instead of editing the **\*BITMAP** line, ETQW expects the material name in the line **\*MATERIAL\_NAME**. For example: \*MATERIAL\_NAME "textures/myterrainmat".
 
-  
-*Instead of editing the **\*BITMAP** line, ETQW expects the material name in the line **\*MATERIAL\_NAME**. For example: \*MATERIAL\_NAME "textures/myterrainmat".*
-
-</div>
 As you may know, there is a [Texturing.html naming convention] when editing textures for id Tech 4 engine. The diffusemap should have the “\_d” suffix, the normalmap should have the “\_local” suffix, etc. Take the previously exported “texturemap.bmp”, convert it to .TGA (24-bit uncompressed) and save it as “myterrainmat\_d.tga” into the “/textures/” folder. Do the same for the “normalmap.bmp” and save it as “myterrainmat\_local.tga”. Now let’s create the [Material\_(decl).html material declaration]:
 
-`textures/myterrainmat`
-`{`
-`   qer_editorimage textures/myterrainmat_d`
-`   nonsolid    // Only for scenery terrain`
-`   noshadows   // Can be used in both interactive and scenery`
-`   noselfshadow    // Only for scenery terrain`
+```
+textures/myterrainmat
+{
+   qer_editorimage textures/myterrainmat_d
+   nonsolid    // Only for scenery terrain
+   noshadows   // Can be used in both interactive and scenery
+   noselfshadow    // Only for scenery terrain
+```
 
-The nonsolid keyword is appropriate for 3D Skybox terrains but you should obviously leave it out for interactive terrains; you can leave the [NoShadows\_(Material\_global\_keyword).html noshadows keyword] for either terrain type because our diffusemap already has the lightmap backed into it and the stencil shadows generally look wrong unless the polygon mesh is very dense. You’ll want to leave out the [NoSelfShadow\_(Material\_global\_keyword).html noSelfShadow keyword] for interactive terrains otherwise shadows cast by surfaces which also have that keyword (the player model for instance) will not be cast onto the terrain.
+The nonsolid keyword is appropriate for 3D Skybox terrains but you should obviously leave it out for interactive terrains;
+you can leave the [noshadows keyword](NoShadows\_(Material\_global\_keyword)) for either terrain type because our diffusemap
+already has the lightmap backed into it and the stencil shadows generally look wrong unless the polygon mesh is very dense.
+You’ll want to leave out the [noSelfShadow keyword](NoSelfShadow\_(Material\_global\_keyword)) for interactive terrains
+otherwise shadows cast by surfaces which also have that keyword (the player model for instance) will not be cast onto the terrain.
 
-`   bumpmap textures/myterrainmat_local`
-`   diffusemap  textures/myterrainmat_d`
-`   {`
-`       blend   filter`
-`       map textures/roughdirt_d`
-`   }`
-`   {`
-`       blend   add`
-`       map textures/myterrainmat_d`
-`   }`
-`}`
+```
+   bumpmap textures/myterrainmat_local
+   diffusemap  textures/myterrainmat_d
+   {
+       blend   filter
+       map textures/roughdirt_d
+   }
+   {
+       blend   add
+       map textures/myterrainmat_d
+   }
+}
+```
 
 While a 1024 x 1024 texture resolution is fine for 3D Skybox maps even 2048 x 2048 is not enough for interactive terrains unless they are very small. To improve the overall quality we’re going to fake a detail texture layer. We do this by filtering in a very rough looking texture that has no distinctive features because we want it to tile and tiling a texture with prominent characteristics can give away the tiling effect quite easily. For this tutorial the terrain will be using this texture:
 
