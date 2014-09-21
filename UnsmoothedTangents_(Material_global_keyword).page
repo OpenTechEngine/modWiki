@@ -8,7 +8,7 @@ The unsmoothedTangents global keyword changes the way vertex normals are calcula
 
 Normally vertex normals are calculated by averaging the face normals of surrounding faces, causing the whole model to be smooth-shaded. This works fine for medium-poly meshes with lots of small faces following a gentle curve, but causes incorrect shading on low-poly models with large faces or sharp angles. By adding unsmoothedTangents to the material, the vertex normals can be aligned with the largest adjacent face, improving the result in these situations.
 
-![Image:UnsmoothedTangents.png](images_0_0c_UnsmoothedTangents.png "Image:UnsmoothedTangents.png")
+![](/images/images_0_0c_UnsmoothedTangents.png)
 
 Usage
 -----

@@ -24,7 +24,7 @@ Normal Map
 
 Start with the normal map.
 
-![Image:Bump2spec\_1\_local.png](images_c_cd_Bump2spec_1_local.png "Image:Bump2spec_1_local.png")
+![](/images/images_c_cd_Bump2spec_1_local.png)
 
 Channels
 --------
@@ -37,7 +37,7 @@ Copy the green channel, and paste it into a new image.
 
 Paste another copy of the green channel into another new image, and invert this copy.
 
-![Image:Bump2spec\_2\_b\_channels.png](images_5_5d_Bump2spec_2_b_channels.png "Image:Bump2spec_2_b_channels.png")
+![](/images/images_5_5d_Bump2spec_2_b_channels.png)
 
 Levels
 ------
@@ -51,7 +51,7 @@ The Input should be set to **128**, 1.0, 255. The Output should be set to **128*
 
 This effectively (and accurately) removes all colors with an intensity less than 128, thus eliminating the dark areas of the images.
 
-![Image:Bump2spec\_3\_b\_levels.png](images_c_c7_Bump2spec_3_b_levels.png "Image:Bump2spec_3_b_levels.png")
+![](/images/images_c_c7_Bump2spec_3_b_levels.png)
 
 All Together
 ------------
@@ -63,7 +63,7 @@ Copy each of the four documents containing the normal map's modified channels in
 -   In Photoshop, set each layer's Blend to Lighten.
 -   In The GIMP, set each layer's Mode to Lighten Only.
 
-![Image:Bump2spec\_4\_specular\_inverted.png](images_d_de_Bump2spec_4_specular_inverted.png "Image:Bump2spec_4_specular_inverted.png")
+![](/images/images_d_de_Bump2spec_4_specular_inverted.png)
 
 Inverted
 --------
@@ -76,5 +76,5 @@ As is, the Specular map describes more light being reflected as the angle deviat
 
 Ultimately, the Specular map will probably need to have its brightness reduced (the Layers dialog is also very handy at this), to something darker. Without further modification, the final result might look like this:
 
-![Image:Bump2spec\_5\_specular.png](images_1_1c_Bump2spec_5_specular.png "Image:Bump2spec_5_specular.png")
+![](/images/images_1_1c_Bump2spec_5_specular.png)
 

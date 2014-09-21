@@ -105,7 +105,7 @@ When starting Blender you will be presented with the default layout which includ
 
 The cube should be highlighted in orange to identify it as being selected. If not right click it. Press x to delete it from the scene.
 
-![Image:Step3general2.PNG](images_f_f9_Step3general2.PNG "Image:Step3general2.PNG")
+![](/images/images_f_f9_Step3general2.PNG)
 
 With the cube removed, perform the following steps.
 
@@ -118,11 +118,11 @@ With the cube removed, perform the following steps.
 
 If import was successful familiar geometry should appear in the main viewport and be reflected in the outliner. Take care that if you were to switch to textured mode, no texture would appear on the model. But rest assured that the material shaders applied in DarkRadiant have been preserved.
 
-![Image:Step3general3.PNG](images_b_bb_Step3general3.PNG "Image:Step3general3.PNG")
+![](/images/images_b_bb_Step3general3.PNG)
 
 The reason for this is because a material shader as used in the idTech 4 engine is not an image as Blender expects all textures to be. Instead, it is a declaration which references several images along side other game assets. Take note that in the image below, the texture panel is making reference to a non-existant image texture. This reference "textures/rock/newdarkrockblend" does not represent a file named newdarkrockblend in a folder called textures/rock. This is in fact the full name of a material shader.
 
-![Image:Step3general4.PNG](images_b_b4_Step3general4.PNG "Image:Step3general4.PNG")
+![](/images/images_b_b4_Step3general4.PNG)
 
 While it is theoretically possible to give the script the ability to read the contents of .pk4 files, load the contents of .mtr files, identify the specified material shader, and extract/convert the required image files so that they may be loaded into Blender, it is not required for vertex painting.
 
@@ -132,7 +132,7 @@ It is important to note that brushes with multiple textures are exported as sepa
 
 If there were any problems during import or it appears parts of the model are missing, check the console which would be the DOS or BASH terminal running in the background for error messages. If you encounter a problem please share the full contents of the console and the .ASE so that I can fix it.
 
-![Image:Step3general5.PNG](images_c_c3_Step3general5.PNG "Image:Step3general5.PNG")
+![](/images/images_c_c3_Step3general5.PNG)
 
 Vertex Painting Each Object
 ---------------------------
@@ -167,7 +167,7 @@ That said, if you've been following the tutorial and the objects in the scene ar
 
 To make your selection visible it's best to change the mode from vertex paint to object mode. Right click each mesh object in your scene and choose object mode from the mode selection box.
 
-![Image:Step5general1.PNG](images_a_a0_Step5general1.PNG "Image:Step5general1.PNG")
+![](/images/images_a_a0_Step5general1.PNG)
 
 Now you are prepared to export a group selection of objects.
 
@@ -185,7 +185,7 @@ If export was successful a file with the name specified will appear in the locat
 
 If no file exists check the console to ensure no problems were encountered during export. Now you should be able to copy the resulting .ASE file into the appropriate location along with your mod assets and use it in your map(s).
 
-![Image:Step5general2.PNG](images_4_47_Step5general2.PNG "Image:Step5general2.PNG")
+![](/images/images_4_47_Step5general2.PNG)
 
 Appendix A. Preparing a Native Object for Export
 ================================================
@@ -196,7 +196,7 @@ The distinction is in the fact that brushes and patches exported to .ase from Da
 
 ### UV Mapping
 
-![Image:800px-Cube Representative UV Unwrapping.png](images_a_a5_800px-Cube_Representative_UV_Unwrapping.png "Image:800px-Cube Representative UV Unwrapping.png")
+![](/images/images_a_a5_800px-Cube_Representative_UV_Unwrapping.png)
 
 UV mapping is best explained through an analogy. Imagine you have a box and you want to lay it flat and run it through your printer to apply a texture to it. Obviously the box isn't going to lay flat unless you pull it apart at the seams.
 
