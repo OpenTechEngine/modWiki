@@ -1,7 +1,7 @@
 AF editor
 =========
 
-This article describes the built-in articulated figure editor that comes with all [Id\_Tech\_4.html id Tech 4] games. Always check the editor specific page for the particular game you're editing in. The editor can be started by typing "[EditAFs\_(console\_command).html editAFs]" in the [Console.html console] or as a [Startup\_parameters.html startup parameter].
+This article describes the built-in articulated figure editor that comes with all [id Tech 4](Id\_Tech\_4) games. Always check the editor specific page for the particular game you're editing in. The editor can be started by typing "[editAFs](EditAFs\_(console\_command))" in the [console](Console) or as a [startup parameter](Startup\_parameters).
 
 |------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <div id="toctitle">                                                                                                                                        
@@ -9,34 +9,34 @@ This article describes the built-in articulated figure editor that comes with al
  --------                                                                                                                                                    
                                                                                                                                                              
  </div>                                                                                                                                                      
- -   [AF\_editor.html\#Editor\_Basics <span class="tocnumber">1</span> <span class="toctext">Editor Basics</span>]                                           
-     -   [AF\_editor.html\#Static\_Controls <span class="tocnumber">1.1</span> <span class="toctext">Static Controls</span>]                                 
-     -   [AF\_editor.html\#View\_Tab <span class="tocnumber">1.2</span> <span class="toctext">View Tab</span>]                                               
-         -   [AF\_editor.html\#Articulated\_Figure <span class="tocnumber">1.2.1</span> <span class="toctext">Articulated Figure</span>]                     
-         -   [AF\_editor.html\#MD5 <span class="tocnumber">1.2.2</span> <span class="toctext">MD5</span>]                                                    
-         -   [AF\_editor.html\#Lines <span class="tocnumber">1.2.3</span> <span class="toctext">Lines</span>]                                                
-         -   [AF\_editor.html\#Physics <span class="tocnumber">1.2.4</span> <span class="toctext">Physics</span>]                                            
-     -   [AF\_editor.html\#Properties\_Tab <span class="tocnumber">1.3</span> <span class="toctext">Properties Tab</span>]                                   
-         -   [AF\_editor.html\#MD5\_2 <span class="tocnumber">1.3.1</span> <span class="toctext">MD5</span>]                                                 
-         -   [AF\_editor.html\#Default\_Collision\_Detection <span class="tocnumber">1.3.2</span> <span class="toctext">Default Collision Detection</span>]  
-         -   [AF\_editor.html\#Default\_Friction <span class="tocnumber">1.3.3</span> <span class="toctext">Default Friction</span>]                         
-         -   [AF\_editor.html\#Mass <span class="tocnumber">1.3.4</span> <span class="toctext">Mass</span>]                                                  
-         -   [AF\_editor.html\#Suspend\_Speed <span class="tocnumber">1.3.5</span> <span class="toctext">Suspend Speed</span>]                               
-         -   [AF\_editor.html\#Suspend\_Movement <span class="tocnumber">1.3.6</span> <span class="toctext">Suspend Movement</span>]                         
-     -   [AF\_editor.html\#Bodies\_Tab <span class="tocnumber">1.4</span> <span class="toctext">Bodies Tab</span>]                                           
-         -   [AF\_editor.html\#Collision\_model <span class="tocnumber">1.4.1</span> <span class="toctext">Collision model</span>]                           
-         -   [AF\_editor.html\#Position <span class="tocnumber">1.4.2</span> <span class="toctext">Position</span>]                                          
-         -   [AF\_editor.html\#Collision\_Detection <span class="tocnumber">1.4.3</span> <span class="toctext">Collision Detection</span>]                   
-         -   [AF\_editor.html\#Friction <span class="tocnumber">1.4.4</span> <span class="toctext">Friction</span>]                                          
-         -   [AF\_editor.html\#Joints <span class="tocnumber">1.4.5</span> <span class="toctext">Joints</span>]                                              
-     -   [AF\_editor.html\#Constraints\_Tab <span class="tocnumber">1.5</span> <span class="toctext">Constraints Tab</span>]                                 
-         -   [AF\_editor.html\#General <span class="tocnumber">1.5.1</span> <span class="toctext">General</span>]                                            
-         -   [AF\_editor.html\#Anchor <span class="tocnumber">1.5.2</span> <span class="toctext">Anchor</span>]                                              
-         -   [AF\_editor.html\#Shaft\_1 <span class="tocnumber">1.5.3</span> <span class="toctext">Shaft 1</span>]                                           
-         -   [AF\_editor.html\#Shaft\_2 <span class="tocnumber">1.5.4</span> <span class="toctext">Shaft 2</span>]                                           
-         -   [AF\_editor.html\#Limit\_Type <span class="tocnumber">1.5.5</span> <span class="toctext">Limit Type</span>]                                     
-         -   [AF\_editor.html\#Limit\_Orientation <span class="tocnumber">1.5.6</span> <span class="toctext">Limit Orientation</span>]                       
- -   [AF\_editor.html\#Tips <span class="tocnumber">2</span> <span class="toctext">Tips</span>]                                                              |
+ -   [<span class="tocnumber">1</span> <span class="toctext">Editor Basics</span>](AF\_editor#Editor\_Basics)                                           
+     -   [<span class="tocnumber">1.1</span> <span class="toctext">Static Controls</span>](AF\_editor#Static\_Controls)                                 
+     -   [<span class="tocnumber">1.2</span> <span class="toctext">View Tab</span>](AF\_editor#View\_Tab)                                               
+         -   [<span class="tocnumber">1.2.1</span> <span class="toctext">Articulated Figure</span>](AF\_editor#Articulated\_Figure)                     
+         -   [<span class="tocnumber">1.2.2</span> <span class="toctext">MD5</span>](AF\_editor#MD5)                                                    
+         -   [<span class="tocnumber">1.2.3</span> <span class="toctext">Lines</span>](AF\_editor#Lines)                                                
+         -   [<span class="tocnumber">1.2.4</span> <span class="toctext">Physics</span>](AF\_editor#Physics)                                            
+     -   [<span class="tocnumber">1.3</span> <span class="toctext">Properties Tab</span>](AF\_editor#Properties\_Tab)                                   
+         -   [<span class="tocnumber">1.3.1</span> <span class="toctext">MD5</span>](AF\_editor#MD5\_2)                                                 
+         -   [<span class="tocnumber">1.3.2</span> <span class="toctext">Default Collision Detection</span>](AF\_editor#Default\_Collision\_Detection)  
+         -   [<span class="tocnumber">1.3.3</span> <span class="toctext">Default Friction</span>](AF\_editor#Default\_Friction)                         
+         -   [<span class="tocnumber">1.3.4</span> <span class="toctext">Mass</span>](AF\_editor#Mass)                                                  
+         -   [<span class="tocnumber">1.3.5</span> <span class="toctext">Suspend Speed</span>](AF\_editor#Suspend\_Speed)                               
+         -   [<span class="tocnumber">1.3.6</span> <span class="toctext">Suspend Movement</span>](AF\_editor#Suspend\_Movement)                         
+     -   [<span class="tocnumber">1.4</span> <span class="toctext">Bodies Tab</span>](AF\_editor#Bodies\_Tab)                                           
+         -   [<span class="tocnumber">1.4.1</span> <span class="toctext">Collision model</span>](AF\_editor#Collision\_model)                           
+         -   [<span class="tocnumber">1.4.2</span> <span class="toctext">Position</span>](AF\_editor#Position)                                          
+         -   [<span class="tocnumber">1.4.3</span> <span class="toctext">Collision Detection</span>](AF\_editor#Collision\_Detection)                   
+         -   [<span class="tocnumber">1.4.4</span> <span class="toctext">Friction</span>](AF\_editor#Friction)                                          
+         -   [<span class="tocnumber">1.4.5</span> <span class="toctext">Joints</span>](AF\_editor#Joints)                                              
+     -   [<span class="tocnumber">1.5</span> <span class="toctext">Constraints Tab</span>](AF\_editor#Constraints\_Tab)                                 
+         -   [<span class="tocnumber">1.5.1</span> <span class="toctext">General</span>](AF\_editor#General)                                            
+         -   [<span class="tocnumber">1.5.2</span> <span class="toctext">Anchor</span>](AF\_editor#Anchor)                                              
+         -   [<span class="tocnumber">1.5.3</span> <span class="toctext">Shaft 1</span>](AF\_editor#Shaft\_1)                                           
+         -   [<span class="tocnumber">1.5.4</span> <span class="toctext">Shaft 2</span>](AF\_editor#Shaft\_2)                                           
+         -   [<span class="tocnumber">1.5.5</span> <span class="toctext">Limit Type</span>](AF\_editor#Limit\_Type)                                     
+         -   [<span class="tocnumber">1.5.6</span> <span class="toctext">Limit Orientation</span>](AF\_editor#Limit\_Orientation)                       
+ -   [<span class="tocnumber">2</span> <span class="toctext">Tips</span>](AF\_editor#Tips)                                                              |
 
 Editor Basics
 -------------
