@@ -4,17 +4,17 @@ WaitFrame (script event)
 Game class
 ----------
 
-This event operates on an instance of the [Game\_class.html game class] type [Thread\_(scripting).html idThread], accessible via [Scripting\_basics.html\#sys sys] identifier.
+This event operates on an instance of the [game class](Game\_class) type [idThread](Thread\_(scripting)), accessible via [sys](Scripting\_basics#sys) identifier.
 
 Description
 -----------
 
-Suspends execution of current [Thread\_(scripting).html thread] for one game frame.
+Suspends execution of current [thread](Thread\_(scripting)) for one game frame.
 
 Usage
 -----
 
-*[Data\_types.html\#void void]* waitFrame()
+*[void](Data\_types#void)* waitFrame()
 
 Parameters
 ----------
@@ -30,6 +30,6 @@ Examples
 Notes
 -----
 
-See [Thread\_(scripting).html threads] for more information.
+See [threads](Thread\_(scripting)) for more information.
 
 

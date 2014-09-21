@@ -4,7 +4,7 @@ WaitFor (script event)
 Game class
 ----------
 
-This event operates on an instance of the [Game\_class.html game class] type [Thread\_(scripting).html idThread], accessible via [Scripting\_basics.html\#sys sys] identifier.
+This event operates on an instance of the [game class](Game\_class) type [idThread](Thread\_(scripting)), accessible via [sys](Scripting\_basics#sys) identifier.
 
 Description
 -----------
@@ -14,14 +14,14 @@ Waits for entity to complete it's move.
 Usage
 -----
 
-*[Data\_types.html\#void void]* waitFor( *[Data\_types.html\#entity entity]* **mover** )
+*[void](Data\_types#void)* waitFor( *[entity](Data\_types#entity)* **mover** )
 
 Parameters
 ----------
 
 [mover] - entity to wait for.
 
-Parameter only supports entities of following [Spawn\_class.html spawn classes]:
+Parameter only supports entities of following [spawn classes](Spawn\_class):
 
 ![Image:D3square\_25.png](images_2_23_D3square_25.png "fig:Image:D3square_25.png") Doom 3: idCameraAnim, idMover, idMover\_Binary.
 
@@ -42,6 +42,6 @@ Notes
 ![](/images/images_7_7e_Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
  ~  *(This event does not apply)*
 
-See [Thread\_(scripting).html threads] for more information.
+See [threads](Thread\_(scripting)) for more information.
 
 
