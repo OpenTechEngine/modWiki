@@ -1,27 +1,6 @@
 DrVertexBlend (tutorial)
 ========================
 
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                                                                                                                           
- Contents                                                                                                                                                                                                                                       
- --------                                                                                                                                                                                                                                       
-                                                                                                                                                                                                                                                
- </div>                                                                                                                                                                                                                                         
- -   [<span class="tocnumber">1</span> <span class="toctext">Vertex Painted ASE Models with DarkRadiant and Blender 2.53</span>](DrVertexBlend\_(tutorial)#Vertex\_Painted\_ASE\_Models\_with\_DarkRadiant\_and\_Blender\_2.53)            
-     -   [<span class="tocnumber">1.1</span> <span class="toctext">Required Plugins</span>](DrVertexBlend\_(tutorial)#Required\_Plugins)                                                                                                   
-     -   [<span class="tocnumber">1.2</span> <span class="toctext">Plugin Installation</span>](DrVertexBlend\_(tutorial)#Plugin\_Installation)                                                                                             
-         -   [<span class="tocnumber">1.2.1</span> <span class="toctext">Blender 2.53</span>](DrVertexBlend\_(tutorial)#Blender\_2.53)                                                                                                     
-     -   [<span class="tocnumber">1.3</span> <span class="toctext">Exporting Geometry From DarkRadiant</span>](DrVertexBlend\_(tutorial)#Exporting\_Geometry\_From\_DarkRadiant)                                                           
-     -   [<span class="tocnumber">1.4</span> <span class="toctext">Importing the .ASE into Blender 2.53</span>](DrVertexBlend\_(tutorial)#Importing\_the\_.ASE\_into\_Blender\_2.53)                                                       
-     -   [<span class="tocnumber">1.5</span> <span class="toctext">Vertex Painting Each Object</span>](DrVertexBlend\_(tutorial)#Vertex\_Painting\_Each\_Object)                                                                           
-     -   [<span class="tocnumber">1.6</span> <span class="toctext">Exporting Objects from Blender 2.53</span>](DrVertexBlend\_(tutorial)#Exporting\_Objects\_from\_Blender\_2.53)                                                          
- -   [<span class="tocnumber">2</span> <span class="toctext">Appendix A. Preparing a Native Object for Export</span>](DrVertexBlend\_(tutorial)#Appendix\_A.\_Preparing\_a\_Native\_Object\_for\_Export)                                   
-     -   [<span class="tocnumber">2.1</span> <span class="toctext">UV Mapping</span>](DrVertexBlend\_(tutorial)#UV\_Mapping)                                                                                                               
-     -   [<span class="tocnumber">2.2</span> <span class="toctext">Applying a Material</span>](DrVertexBlend\_(tutorial)#Applying\_a\_Material)                                                                                            
- -   [<span class="tocnumber">3</span> <span class="toctext">Appendix B. Preparing Vertex Blended or Colored Material Shaders</span>](DrVertexBlend\_(tutorial)#Appendix\_B.\_Preparing\_Vertex\_Blended\_or\_Colored\_Material\_Shaders)  
-     -   [<span class="tocnumber">3.1</span> <span class="toctext">Vertex Blended</span>](DrVertexBlend\_(tutorial)#Vertex\_Blended)                                                                                                       
-     -   [<span class="tocnumber">3.2</span> <span class="toctext">Vertex Colored</span>](DrVertexBlend\_(tutorial)#Vertex\_Colored)                                                                                                       |
-
 Vertex Painted ASE Models with DarkRadiant and Blender 2.53
 ===========================================================
 
@@ -261,14 +240,14 @@ It would also be of great benefit if you studied the texturing documentation ava
 
 1.  Open DarkRadiant along with a plain text editor like notepad.
 2.  In the media browser identify the first material you'd like to use.
-    ![](images_thumb_c_ca_Bstep2.PNG_800px-Bstep2.PNG "fig:images_thumb_c_ca_Bstep2.PNG_800px-Bstep2.PNG")
+    ![](/images/images_thumb_c_ca_Bstep2.PNG_800px-Bstep2.PNG)
 3.  Right click it and select show shader definition.
     ![](/images/images_0_0f_Bstep3.PNG)
 4.  Copy the text that makes up the material shader into your text editor.
-    ![](images_thumb_d_dd_Bstep4.PNG_800px-Bstep4.PNG "fig:images_thumb_d_dd_Bstep4.PNG_800px-Bstep4.PNG")
+    ![](/images/images_thumb_d_dd_Bstep4.PNG_800px-Bstep4.PNG)
 5.  Repeat this process for a second material adding the additional text to the bottom.
 6.  In your text editor break any diffusemap, bumpmap, or specularmap keywords into stages.
-    ![](images_thumb_8_85_Bstep6a.PNG_400px-Bstep6a.PNG "fig:images_thumb_8_85_Bstep6a.PNG_400px-Bstep6a.PNG")![](images_thumb_2_26_Bstep6b.PNG_400px-Bstep6b.PNG "fig:images_thumb_2_26_Bstep6b.PNG_400px-Bstep6b.PNG")
+    ![](/images/images_thumb_8_85_Bstep6a.PNG_400px-Bstep6a.PNG) ![](/images/images_thumb_2_26_Bstep6b.PNG_400px-Bstep6b.PNG)
 7.  Remove any image processing keywords like addheightmap if present so only the most logical image reference remains.
 8.  In the first material shader, add the keyword vertexColor to each stage.
     ![](/images/images_f_fa_Bstep8.PNG)
@@ -287,13 +266,13 @@ It would also be of great benefit if you studied the texturing documentation ava
 
 1.  Open DarkRadiant along with a text editor.
 2.  In the media browser identify the material you'd like to use.
-    ![](images_thumb_a_aa_Bbstep2.PNG_800px-Bbstep2.PNG "fig:images_thumb_a_aa_Bbstep2.PNG_800px-Bbstep2.PNG")
+    ![](/images/images_thumb_a_aa_Bbstep2.PNG_800px-Bbstep2.PNG)
 3.  Right click it and select show shader definition.
     ![](/images/images_1_19_Bbstep3.PNG)
 4.  Copy the material shader into your text editor.
-    ![](images_thumb_a_a3_Bbstep4.PNG_800px-Bbstep4.PNG "fig:images_thumb_a_a3_Bbstep4.PNG_800px-Bbstep4.PNG")
+    ![](/images/images_thumb_a_a3_Bbstep4.PNG_800px-Bbstep4.PNG)
 5.  In your text editor break the diffusemap keyword if present, into a stage.
-    ![](images_thumb_9_98_Bbstep5a.PNG_400px-Bbstep5a.PNG "fig:images_thumb_9_98_Bbstep5a.PNG_400px-Bbstep5a.PNG")![](images_thumb_7_71_Bbstep5b.PNG_400px-Bbstep5b.PNG "fig:images_thumb_7_71_Bbstep5b.PNG_400px-Bbstep5b.PNG")
+    ![](/images/images_thumb_9_98_Bbstep5a.PNG_400px-Bbstep5a.PNG) ![](/images/images_thumb_7_71_Bbstep5b.PNG_400px-Bbstep5b.PNG)
 6.  Add the keyword vertexColor to the diffuse stage.
     ![](/images/images_4_47_Bbstep6.PNG)
 7.  Rename the modified material shader so that it has a unique name.

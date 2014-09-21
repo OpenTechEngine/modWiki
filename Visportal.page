@@ -52,7 +52,7 @@ Limitations
 
 Visportals segment all triangles they are in contact with, generating extra polygons. This side effect must be taken into account if you are placing a visportal in contact in already highly tesselated areas. A visportal will only affect level geometry; entities that span a visportal will not be affected by it. See the [models vs brushes](Models\_vs\_brushes) section.
 
-<span align="absbottom">![Q4](images_e_e8_Q4square_25.png "fig:Q4") Distance based visportals</span>
+<span align="absbottom">![Q4](/images/images_e_e8_Q4square_25.png) Distance based visportals</span>
 ----------------------------------------------------------------------------------------------------
 
   
