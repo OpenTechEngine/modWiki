@@ -21,7 +21,7 @@ How visportals work
 The basic function of a visportal is to discard geometry that cannot be seen through it. Visportals operate as invisible barriers that divide a level into zones, allowing the renderer to avoid drawing geometry in a zone that cannot be seen from the player's current vantage point.
 
 <div class="floatleft">
-![](images_1_13_Visportalssized.png "images_1_13_Visportalssized.png")
+![](/images/images_1_13_Visportalssized.png "images_1_13_Visportalssized.png")
 
 </div>
 As shown in the diagram, visportals "open" or "close" depending on whether they are within the player's field of view (they are also automatically closed if they are placed inside a func\_door which is itself closed). In the situation depicted at the top, the portal is not on-screen and therefore it is closed, preventing any of the geometry in the upper room from being sent to the graphics card for rendering.
@@ -31,7 +31,7 @@ In the lower case, the portal *is* on-screen and is therefore open, causing all 
 It is important to note that *level geometry does not occlude visportals*. This means that a visportal will be calculated as "open" if it is within the player's field of view, even if it is not actually visible on-screen due to intermediate solid surfaces. The diagram on the right illustrates this point.
 
 <div class="floatright">
-![](images_a_a1_Visportals1sized.png "images_a_a1_Visportals1sized.png")
+![](/images/images_a_a1_Visportals1sized.png "images_a_a1_Visportals1sized.png")
 
 </div>
 In the first case the visportal is open due to its position within the player's field of view, even though the internal wall prevents the player from actually seeing the portal or anything behind it. Placing a second portal at the other end of the wall, as in the second situation, correctly occludes the upper portal and ensures that non-visible surfaces are not rendered.

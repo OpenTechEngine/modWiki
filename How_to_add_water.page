@@ -172,11 +172,11 @@ Visuals and interaction
 
 To marry both the complex visuals and physics you then create a patch with the "fresnel" material. You should now have something like this:
 
-![The complex water components](images_1_13_Water_components.png "The complex water components")
+![The complex water components](/images/images_1_13_Water_components.png "The complex water components")
 
 You then resize the patch and/or brush so that both surfaces have the same area and move the patch until it is just below the surface which has the "refraction" material, like so:
 
-![Joining the brush and patch](images_c_c6_Water_comp_joined.png "Joining the brush and patch")
+![Joining the brush and patch](/images/images_c_c6_Water_comp_joined.png "Joining the brush and patch")
 
 The patch depicted in the above image is slightly larger than the water\_surface's area for the purpose of this tutorial. You can then subdivide the patch as suggested in the "adding the visuals to the map" section. When this is done, select both components and make them into a func\_liquid.
 
