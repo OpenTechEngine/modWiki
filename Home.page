@@ -10,8 +10,8 @@ title: ModWiki
 Please see [_categories]() for structured content.
 
 This is still a work in progress, any contribution is welcome.  
-Please submit issue on [modWiki repository on github](https://github.com/OpenTechEngine/modWiki/issues) or ping *kordex* and/or *caedes\_\_* on the [#iodoom3 chan on freenode](irc://irc.freenode.net/iodoom3) and we will add you into the organization to gain access.  
-The authentication is done using [Github's](http://github.com) [OAuth interface](https://developer.github.com/v3/oauth_authorizations/) so you'll need a Github account to access this wiki.
+To gain access, just answer to the [corresponding issue on Github](https://github.com/OpenTechEngine/modWiki/issues/7) or ping *kordex* and/or *caedes\_\_* on the [#iodoom3 chan on freenode](irc://irc.freenode.net/iodoom3) and we will add you into the organization.  
+The authentication is done using [Gitit's authentication through Github feature](https://github.com/jgm/gitit#authentication-through-github) so you'll need a Github account to log in.
 
 You can contribute by editing pages like you might be used to from mediawiki or whatever, or you can [clone the whole wiki on Github](https://github.com/OpenTechEngine/modWiki) and submit pull requests for mass editings.  
 Note that this wiki doesn't use mediawiki syntax (as wikipedia and the old modwiki do/did), but [Markdown](http://daringfireball.net/projects/markdown) with [some extensions](http://johnmacfarlane.net/pandoc/README.html#pandocs-markdown). It's mostly the same syntax as used on Github.
