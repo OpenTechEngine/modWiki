@@ -16,10 +16,10 @@ README.
 To look at the actual data use the [master branch](https://github.com/OpenTechEngine/modWiki/tree/master).
 
 
-## NOTE to ourselves: Never push/merge to Github repo's master directly!
+### *NOTE to ourselves:* Never push/merge to Github repo's master directly!
 
 It may create merge conflicts when gitits post-commit hook pushes the lastest changes
 from the wiki to Github (and we're not syncing the either way around anyway)!
 
 Download merge requests as a patch and apply that on the Gitit server instead.  
-You can download the patch in a format suitable for git am from `https://github.com/OpenTechEngine/modWiki/pull/<pull-restuest-number>.patch`
+You can download the patch in a format suitable for git am from `https://github.com/OpenTechEngine/modWiki/pull/<pull-request-number>.patch`
