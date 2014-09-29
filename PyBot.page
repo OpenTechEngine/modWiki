@@ -10,11 +10,11 @@ PyBot
 ## NOTE: This is just for reference and doesn't work like this anymore!
 
 This is a backup of the old MediaWiki based modwiki User:PyBot page that references
-mediawiki bots etc, so it doesn't work like this with Githubs (gollum) Wiki.
+mediawiki bots etc, so it doesn't work like this with our [Gitit](http://gitit.net) Wiki.
 
 However, at least parts of the Python Code can probably be used to generate
-pages for this wiki as well (that could be mass-added via git).
-(Remember, that we use [Markdown](https://help.github.com/articles/github-flavored-markdown)
+pages for this wiki as well (that could be mass-added through a pull request on our [Github project page](https://github.com/OpenTechEngine/modWiki)).
+(Remember, that we use [Markdown](http://daringfireball.net/projects/markdown) with [some extensions](http://johnmacfarlane.net/pandoc/README.html#pandocs-markdown)
 instead of MediaWiki Syntax here, though).
 
 -----------
@@ -110,9 +110,9 @@ Source code for modules written specifically for this wiki can be found in this 
 
 The following python script was used to populate the Entity Listing.
 
-> _**NOTE** for Github Wiki:_ If you want to use that script to create pages
+> _**NOTE** for Gitit Wiki:_ If you want to use that script to create pages
 > for this wiki, remember to replace the mediawiki/html stuff with
-> [Github Flavored Markdown (GFM)](https://help.github.com/articles/github-flavored-markdown)
+> [Markdown](http://daringfireball.net/projects/markdown) with [Gitit/pandoc extensions](http://johnmacfarlane.net/pandoc/README.html#pandocs-markdown)
 > for tables, sections etc!
 
 ```python
