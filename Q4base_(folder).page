@@ -3,15 +3,5 @@ format: Markdown
 categories: folder
 toc: yes
 title: Q4base
+redirect: Base_(folder)
 ...
-Q4base (folder)
-===============
-
-This is the default Doom 3 mod directory. The contents of this directory include all the game assets used in the game. The extra content for the "Doom 3: Resurrection of Evil" expansion pack is located in the "d3xp" directory in the main Doom 3 installation folder. Mods for Doom 3 should be created in their own directory in the main Doom3 installation folder. In the engine your mods base name is always called "base" no matter the actual physical name. You set the game to use a different folder as base with the [fs\_game](Fs\_game\_(cvar)) cvar.
-
-With the release of patch v1.3 you can set the [fs\_game\_base](Fs\_game\_base\_(cvar)) cvar to let you base a mod off base game and your own content as usual as well as an additional mod. For instance, if you want to create a mod that also uses content from the Doom 3: Resurrection of Evil expansion you should set "fs\_game \<yourmodname\>" as well as "fs\_game\_base d3xp".
-
-**Note:** While you probably want to work on your mod with the assets decompressed and available in the Doom 3 folder structure, when you release your mod you should put them into .[PK4](PK4\_(file\_format)) files.
-
-![](/images/images_e_e8_Q4square_25.png) Note: _Quake 4 only:_
- ~  *The default base folder for Quake 4 is /[q4base](Q4base\_(folder))*
