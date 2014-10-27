@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Test_aurelio_func_fluid_%28entity%29 "http://www.modwiki.net/w/index.php?title=Test_aurelio_func_fluid_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Test_aurelio_func_fluid_%28entity%29 "http://www.modwiki.net/w/index.php?title=Test_aurelio_func_fluid_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Test_aurelio_func_fluid_%28entity%29 "http://www.modwiki.net/w/index.php?title=Test_aurelio_func_fluid_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Test_aurelio_func_fluid_%28entity%29 "http://www.modwiki.net/w/index.php?title=Test_aurelio_func_fluid_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -28,34 +10,33 @@ A brush model that simulates a fluid.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                  DESCRIPTION
-  -------------------- ------------------------------------------------------------------------------------------
-  damping              How much to dampen the fluid movement. (1.0 is none, 0.0 is completely dampend)
-  density              The density of the fluid. (default: 1.0)
-  editor\_bool XXXX    Description not available.
-  editor\_color        Description not available.
-  editor\_maxs         Description not available.
-  editor\_mins         Description not available.
-  editor\_usage        A brush model that simulates a fluid.
-  editor\_usage1       Description not available.
-  editor\_var XXXX     Description not available.
-  fluidType            The type of simulation to run on the fluid height field.
-  fx\_splash\_large    Description not available.
-  fx\_splash\_medium   Description not available.
-  fx\_splash\_small    Description not available.
-  gravity              The gravity acting on this fluid. (default: quake standard - 1066)
-  gridsize\_x          The size/resolution of the grid on the x-axis. (default: 32)
-  gridsize\_y          The size/resolution of the grid on the y-axis. (default: 32)
-  mtr\_foam            Description not available.
-  noFoam               Description not available.
-  noclipmodel          Description not available.
-  pipeArea             Override for the cross-sectional area of the pipes that connect water across grid units.
-  pipeLength           Override for the length of the pipes that connect water across grid units.
-  solid                Description not available.
-  spawnclass           Description not available.
+| KEY                | DESCRIPTION                                                                              |
+|--------------------|------------------------------------------------------------------------------------------|
+| damping            | How much to dampen the fluid movement. (1.0 is none, 0.0 is completely dampend)          |
+| density            | The density of the fluid. (default: 1.0)                                                 |
+| editor\_bool XXXX  | Description not available.                                                               |
+| editor\_color      | Description not available.                                                               |
+| editor\_maxs       | Description not available.                                                               |
+| editor\_mins       | Description not available.                                                               |
+| editor\_usage      | A brush model that simulates a fluid.                                                    |
+| editor\_usage1     | Description not available.                                                               |
+| editor\_var XXXX   | Description not available.                                                               |
+| fluidType          | The type of simulation to run on the fluid height field.                                 |
+| fx\_splash\_large  | Description not available.                                                               |
+| fx\_splash\_medium | Description not available.                                                               |
+| fx\_splash\_small  | Description not available.                                                               |
+| gravity            | The gravity acting on this fluid. (default: quake standard - 1066)                       |
+| gridsize\_x        | The size/resolution of the grid on the x-axis. (default: 32)                             |
+| gridsize\_y        | The size/resolution of the grid on the y-axis. (default: 32)                             |
+| mtr\_foam          | Description not available.                                                               |
+| noFoam             | Description not available.                                                               |
+| noclipmodel        | Description not available.                                                               |
+| pipeArea           | Override for the cross-sectional area of the pipes that connect water across grid units. |
+| pipeLength         | Override for the length of the pipes that connect water across grid units.               |
+| solid              | Description not available.                                                               |
+| spawnclass         | Description not available.                                                               |
 
 Inheritance
 -----------

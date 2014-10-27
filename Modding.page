@@ -1,287 +1,163 @@
-General information that is helpful on getting started with, producing
-and distributing id Tech mods.
+General information that is helpful on getting started with, producing and distributing id Tech mods.
 
 What is a mod?
 --------------
 
-Mods (short for modification) are made by the general public by building
-on and expanding the assets and mechanics of an existing game. They can
-include new items, weapons, characters, enemies, models, modes,
-textures, levels, and story lines. They can be used for the
-single-player or multiplayer part. Mods are generally seperated into
-three categories:
+Mods (short for modification) are made by the general public by building on and expanding the assets and mechanics of an existing game. They can include new items, weapons, characters, enemies, models, modes, textures, levels, and story lines. They can be used for the single-player or multiplayer part. Mods are generally seperated into three categories:
 
- Paks 
-:   Basicaly a simple addon to the existing game, these mostly come in
-    the form of level-, skin- and soundpacks.
+ Paks   
+Basicaly a simple addon to the existing game, these mostly come in the form of level-, skin- and soundpacks.
 
- Mods 
-:   These are all the hybrid forms where only aspects of the game are
-    modified, ranging from modified game mechanics to the addition of a
-    new set of levels and skins.
+ Mods   
+These are all the hybrid forms where only aspects of the game are modified, ranging from modified game mechanics to the addition of a new set of levels and skins.
 
- Total conversions 
-:   These aim at totally replacing the assets and mechanics of the
-    source to create an entirely new game.
+ Total conversions   
+These aim at totally replacing the assets and mechanics of the source to create an entirely new game.
 
 Game basics
 -----------
 
 ### Installing the Game
 
-Before you start any editing, you should install the id Tech game of
-your choice into a directory with no spaces. (Eg: For Doom 3, the folder
-could be "d:\\doom3" compared to "c:\\program files\\doom 3\\) This
-avoids a few technical problems you would encounter otherwise. Also make
-sure to update it to the newest version available.
+Before you start any editing, you should install the id Tech game of your choice into a directory with no spaces. (Eg: For Doom 3, the folder could be "d:\\doom3" compared to "c:\\program files\\doom 3\\) This avoids a few technical problems you would encounter otherwise. Also make sure to update it to the newest version available.
 
 ### Where to place what
 
 There are 3 types of folders in the game directory to place assets in:
 
- base 
-:   The game assets folder. All the
-    [PK4's](PK4_%28file_format%29 "PK4 (file format)") of the retail
-    game are in this folder. Only game updates and paks should be placed
-    there, *mods need their own folder* .
-
-<div>
+ base   
+The game assets folder. All the [PK4's](PK4_%28file_format%29 "PK4 (file format)") of the retail game are in this folder. Only game updates and paks should be placed there, *mods need their own folder* .
 
 ![](/images/e/e8/Q4square_25.png) **Note:** Quake 4 only:
 *Unlike other games, Quake 4's base folder is called **/q4base***
 
-</div>
-
- expansion 
-:   A folder reserved for expansion packs containing additional assets.
-
-<div>
+ expansion   
+A folder reserved for expansion packs containing additional assets.
 
 ![](/images/2/23/D3square_25.png) **Note:** Doom 3: ROE only:
 *The name of the expansion folder is **/d3xp***
 
-</div>
-
- mod 
-:   Folders with various names containing everything needed to run the
-    mod. Every mod folder is isolated so that no assets of one mod
-    influence another. Mods can use the assets from the base and
-    expansion folders.
+ mod   
+Folders with various names containing everything needed to run the mod. Every mod folder is isolated so that no assets of one mod influence another. Mods can use the assets from the base and expansion folders.
 
 ### Starting it up
 
-To start your mod, you could either start the game and use the "mods"
-selection in the main menu, if available. However, you will often need
-start your mod to playtest it. Therefore it is easier to create a simple
-shortcut with a modified command line. For instance:
+To start your mod, you could either start the game and use the "mods" selection in the main menu, if available. However, you will often need start your mod to playtest it. Therefore it is easier to create a simple shortcut with a modified command line. For instance:
 
     d:\doom3\doom3.exe +set fs_game mymod 
 
-This starts Doom 3, with the mod folder set to "mymod". For further
-information, see [Startup
-parameters](Startup_parameters "Startup parameters") .
-
-<div>
+This starts Doom 3, with the mod folder set to "mymod". For further information, see [Startup parameters](Startup_parameters "Startup parameters") .
 
 ![](/images/2/23/D3square_25.png) **Note:** Doom 3: ROE only:
-*If you are modding for the Doom 3: Resurrection of Evil expansion, add
-"+set [fs\_game\_base](Fs_game_base_%28cvar%29 "Fs game base (cvar)")
-d3xp" to the shortcut*
-
-</div>
-
-<div>
+*If you are modding for the Doom 3: Resurrection of Evil expansion, add "+set [fs\_game\_base](Fs_game_base_%28cvar%29 "Fs game base (cvar)") d3xp" to the shortcut*
 
 ![](/images/e/e8/Q4square_25.png) **Note:** Quake 4 only:
-*Since there has been no announcement for expansion packs, the
-"expansion folder" feature can be used to use assets from the base
-folder and another mod folder.*
-
-</div>
+*Since there has been no announcement for expansion packs, the "expansion folder" feature can be used to use assets from the base folder and another mod folder.*
 
 Changing the game
 -----------------
 
 ### Categories of Game Design
 
-There are lots of aspects to game design, listed below with links to
-their own pages where you may find more information, tools, tips and
-tricks:
+There are lots of aspects to game design, listed below with links to their own pages where you may find more information, tools, tips and tricks:
 
- [Audio design](Audio_design "Audio design") 
-:   The creation of musical tracks and sound effects
+ [Audio design](Audio_design "Audio design")   
+The creation of musical tracks and sound effects
 
- [Coding](Coding "Coding") 
-:   Modification of the game's source code
+ [Coding](Coding "Coding")   
+Modification of the game's source code
 
- [Declarations](Declarations "Declarations") 
-:   Changing the game's behaviour and content
+ [Declarations](Declarations "Declarations")   
+Changing the game's behaviour and content
 
- [Mapping](Mapping "Mapping") 
-:   Making new levels
+ [Mapping](Mapping "Mapping")   
+Making new levels
 
- [Modelling](Modelling "Modelling") 
-:   Modelling and file format information
+ [Modelling](Modelling "Modelling")   
+Modelling and file format information
 
- [Scripting](Scripting "Scripting") 
-:   Changing the game's actions
+ [Scripting](Scripting "Scripting")   
+Changing the game's actions
 
- [Texturing](Texturing "Texturing") 
-:   Modifying the looks of the game by adding/changing materials
+ [Texturing](Texturing "Texturing")   
+Modifying the looks of the game by adding/changing materials
 
-Of course, modding a specific things (Eg. modifying weapons) needs
-experience from multiple categories. Use your common sense to find what
-you need, or go trough the game's assets to see what is used to make
-something. (See the [Got Questions](Modding#Got_questions "Modding")
-section below)
+Of course, modding a specific things (Eg. modifying weapons) needs experience from multiple categories. Use your common sense to find what you need, or go trough the game's assets to see what is used to make something. (See the [Got Questions](Modding#Got_questions "Modding") section below)
 
 ### Getting started already
 
-Once you read this, you should have made up your mind on what you want
-to do with the Doom 3 engine of your choice.
+Once you read this, you should have made up your mind on what you want to do with the Doom 3 engine of your choice.
 
--   If you want to make a mod you need to create a mod folder. It will
-    serve as a place for all your assets and will make sure that your
-    work stays seperate from other mods. The folder's name will define
-    the name of the mod. Although you can use your imagination for a
-    mod's name, there are a few recommendations when making the mod
-    folder:
+-   If you want to make a mod you need to create a mod folder. It will serve as a place for all your assets and will make sure that your work stays seperate from other mods. The folder's name will define the name of the mod. Although you can use your imagination for a mod's name, there are a few recommendations when making the mod folder:
     -   It should not contain any spaces in the folder's name.
-    -   Try to keep the name lowercase. (Because Linux cares when using
-        the fs\_game parameter.)
+    -   Try to keep the name lowercase. (Because Linux cares when using the fs\_game parameter.)
     -   Try a length of 4-10 characters.
     -   The name should be unique to avoid conflicts with existing mods.
 
 ### Got questions
 
-In case you get stuck somewhere or have some questions, it is a good
-idea to look at the content of the original game. To do this, you need
-to unpack the [PK4](PK4_%28file_format%29 "PK4 (file format)") files
-contained in the base game directory. It is best to extract them to a
-seperate folder (eg: Doom3\\basextract\\ in case of Doom 3) so the
-resulting files do not conflict with the original (AKA 'vanilla')
-content. Also note that you should extract them in alphanumeric order,
-starting with the lowest number to allow for more recently updated files
-to overwrite their older counterparts.
+In case you get stuck somewhere or have some questions, it is a good idea to look at the content of the original game. To do this, you need to unpack the [PK4](PK4_%28file_format%29 "PK4 (file format)") files contained in the base game directory. It is best to extract them to a seperate folder (eg: Doom3\\basextract\\ in case of Doom 3) so the resulting files do not conflict with the original (AKA 'vanilla') content. Also note that you should extract them in alphanumeric order, starting with the lowest number to allow for more recently updated files to overwrite their older counterparts.
 
-Beware that the unpacked assets of the game will be worth multiple
-gigabytes of diskspace. Make sure that you have enough free space or
-only extract parts.
+Beware that the unpacked assets of the game will be worth multiple gigabytes of diskspace. Make sure that you have enough free space or only extract parts.
 
-If you still got questions after some research, try to search for help
-at specific forums like
-[Doom3World.org](https://web.archive.org/web/20121117040333/http://www.doom3world.org/phpbb2/index.php "http://www.doom3world.org/phpbb2/index.php")
-.
+If you still got questions after some research, try to search for help at specific forums like [Doom3World.org](https://web.archive.org/web/20121117040333/http://www.doom3world.org/phpbb2/index.php "http://www.doom3world.org/phpbb2/index.php") .
 
 Distribution
 ------------
 
-Once you have finished your mod you will want to distribute it. This
-section covers a few approaches to this. Also keep in mind that your
-means of distribution is usually the first thing the player sees of your
-mod. Be sure to invest ample time into this as not to annoy the user
-with broken or overly complicated installs.
+Once you have finished your mod you will want to distribute it. This section covers a few approaches to this. Also keep in mind that your means of distribution is usually the first thing the player sees of your mod. Be sure to invest ample time into this as not to annoy the user with broken or overly complicated installs.
 
 ### Creating compressed media files
 
-After you have all your assets in one place you will want to compress
-your media files so they take up less space. You can automatically
-generate a batch file to create compressed versions of
-[TGA](TGA_%28file_format%29 "TGA (file format)") and
-[WAV](WAV_%28file_format%29 "WAV (file format)") files. To do so you
-must follow these steps:
+After you have all your assets in one place you will want to compress your media files so they take up less space. You can automatically generate a batch file to create compressed versions of [TGA](TGA_%28file_format%29 "TGA (file format)") and [WAV](WAV_%28file_format%29 "WAV (file format)") files. To do so you must follow these steps:
 
 -   Start the game, open the console.
--   [com\_makingBuild](Com_makingBuild_%28cvar%29 "Com makingBuild (cvar)")
-    1
--   [image\_usePrecompressedTextures](Image_usePrecompressedTextures_%28cvar%29 "Image usePrecompressedTextures (cvar)")
-    0
--   [image\_useOfflineCompression](Image_useOfflineCompression_%28cvar%29 "Image useOfflineCompression (cvar)")
-    1
+-   [com\_makingBuild](Com_makingBuild_%28cvar%29 "Com makingBuild (cvar)") 1
+-   [image\_usePrecompressedTextures](Image_usePrecompressedTextures_%28cvar%29 "Image usePrecompressedTextures (cvar)") 0
+-   [image\_useOfflineCompression](Image_useOfflineCompression_%28cvar%29 "Image useOfflineCompression (cvar)") 1
 -   [startBuild](StartBuild_%28console_command%29 "StartBuild (console command)")
 -   [map](Map_%28console_command%29 "Map (console command)") \<mapname\>
 -   [finishBuild](FinishBuild_%28console_command%29 "FinishBuild (console command)")
 
-You should now have two batch files present: *makedds.bat* and
-*makeogg.bat* . Start these from your mod containing the assets.
-**Note** : They must be left unpackaged until after the compression. The
-compression step will not scan
-[PK4](PK4_%28file_format%29 "PK4 (file format)") files.
+You should now have two batch files present: *makedds.bat* and *makeogg.bat* . Start these from your mod containing the assets. **Note** : They must be left unpackaged until after the compression. The compression step will not scan [PK4](PK4_%28file_format%29 "PK4 (file format)") files.
 
-**Note** : Make sure you have the CVars image\_useCompression and
-image\_useNormalCompression set to their default values of 1 and 2
-respectively when running the above build process. If you have them set
-to 0 then the makedds.bat file will not be created correctly.
+**Note** : Make sure you have the CVars image\_useCompression and image\_useNormalCompression set to their default values of 1 and 2 respectively when running the above build process. If you have them set to 0 then the makedds.bat file will not be created correctly.
 
 ### Packing your assets
 
-You should pack all your custom files into PK4 files. It is important
-that you have an intact folder hierarchy within your PK4 files. As usual
-it helps to look at the original game assets if you have any questions.
-When you distribute your PK4 file with your mod or map you should make
-sure that the root directory in the pak file only contains the following
-files:
+You should pack all your custom files into PK4 files. It is important that you have an intact folder hierarchy within your PK4 files. As usual it helps to look at the original game assets if you have any questions. When you distribute your PK4 file with your mod or map you should make sure that the root directory in the pak file only contains the following files:
 
 -   *addon.conf* - See addon packs above
--   *description.txt* - Optional text file for mod folder description
-    (only needed for mods in seperate folders).
--   *binary.conf* - This **must** be included if the PK4 contains
-    compiled game code. Without binary.conf the id Tech engine will not
-    load your modified binaries.
--   *mapname\_readme.txt* - Your readme file, if you choose to add one.
-    It's generally a bad idea to just call this readme.txt as anyone
-    extracting the pack contents may overwrite an already existing
-    readme.txt file.
-
-<div>
+-   *description.txt* - Optional text file for mod folder description (only needed for mods in seperate folders).
+-   *binary.conf* - This **must** be included if the PK4 contains compiled game code. Without binary.conf the id Tech engine will not load your modified binaries.
+-   *mapname\_readme.txt* - Your readme file, if you choose to add one. It's generally a bad idea to just call this readme.txt as anyone extracting the pack contents may overwrite an already existing readme.txt file.
 
 ![](/images/2/23/D3square_25.png) **Note:** Doom 3 only:
-*Pre-1.3 versions of Doom 3 would copy your "doomkey" (and "xpkey" if
-you have the Doom 3: Resurrection of Evil expansion) file to all your
-mod folders. This means you have to be careful that you do NOT
-distribute this file along with your mod if you are still using these
-older versions of the game. Even if you upgraded to v1.3 you should make
-sure your mod folder does not have this file.*
-
-</div>
+*Pre-1.3 versions of Doom 3 would copy your "doomkey" (and "xpkey" if you have the Doom 3: Resurrection of Evil expansion) file to all your mod folders. This means you have to be careful that you do NOT distribute this file along with your mod if you are still using these older versions of the game. Even if you upgraded to v1.3 you should make sure your mod folder does not have this file.*
 
 ### Autodownload
 
-To allow players to join a server and get the extra files they need
-without having to download the packages manually, id Tech 4 engine based
-games include a simple system to automatically download files which
-works well once you set it up correctly.
+To allow players to join a server and get the extra files they need without having to download the packages manually, id Tech 4 engine based games include a simple system to automatically download files which works well once you set it up correctly.
 
-One thing to be clear on at the start is that the files that get
-downloaded do not come from the game server. Instead, the game server
-simply directs the client to an http or an ftp server.
+One thing to be clear on at the start is that the files that get downloaded do not come from the game server. Instead, the game server simply directs the client to an http or an ftp server.
 
-**Note:** PK4 files that contain nothing but GUIs are not
-autodownloaded. To workaround this problem, add a "dummy" entity
-declaration to the package.
+**Note:** PK4 files that contain nothing but GUIs are not autodownloaded. To workaround this problem, add a "dummy" entity declaration to the package.
 
-**Note:** Autodownload does not work for clients who are running Windows
-Vista with User Account Control turned on.
+**Note:** Autodownload does not work for clients who are running Windows Vista with User Account Control turned on.
 
-**Note:** If the total size of all download addresses required for a
-client exceeds 1024 bytes, that client will be presented with a "server
-does not provide all downloads" message and/or possibly crash.
+**Note:** If the total size of all download addresses required for a client exceeds 1024 bytes, that client will be presented with a "server does not provide all downloads" message and/or possibly crash.
 
 #### Set Up
 
-Each custom PK4 must be stored on the file server in a relative mirror
-folder structure of that on the game server. Case in point, a PK4 from
-the game server might be located at ...
+Each custom PK4 must be stored on the file server in a relative mirror folder structure of that on the game server. Case in point, a PK4 from the game server might be located at ...
 
     C:\Program Files\Doom 3\base\map_swd3dm1.pk4
 
-This same file must be stored in a relative location on your file server
-such as ...
+This same file must be stored in a relative location on your file server such as ...
 
     http://www.your-web-server.com/doom3/base/map_swd3dm1.pk4
 
-You also need to set a few CVars on your game server. These settings are
-described in more detail in their respective articles.
+You also need to set a few CVars on your game server. These settings are described in more detail in their respective articles.
 
 -   [net\_serverDownload](Net_serverDownload_%28cvar%29 "Net serverDownload (cvar)")
 
@@ -289,18 +165,13 @@ This CVar must be set to "2" to enable autodownloads.
 
 -   [net\_serverDlBaseURL](Net_serverDlBaseURL_%28cvar%29 "Net serverDlBaseURL (cvar)")
 
-This CVar must be set to the "root" folder on the download server where
-you have stored your files.
+This CVar must be set to the "root" folder on the download server where you have stored your files.
 
 -   [net\_serverDlTable](Net_serverDlTable_%28cvar%29 "Net serverDlTable (cvar)")
 
-This CVar must be set to a list comprised of the relative path to each
-custom file separated by semi-colons.
+This CVar must be set to a list comprised of the relative path to each custom file separated by semi-colons.
 
-You can substitute this list with an asterix as a wildcard character. By
-doing so, the engine assumes that every file that isn't available on the
-client's end can be downloaded from the file server designated by
-net\_serverDlBaseURL.
+You can substitute this list with an asterix as a wildcard character. By doing so, the engine assumes that every file that isn't available on the client's end can be downloaded from the file server designated by net\_serverDlBaseURL.
 
 See
 

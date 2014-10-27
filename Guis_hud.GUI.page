@@ -1,170 +1,135 @@
-![The Doom 3 HUD (click to
-view)](/images/thumb/9/99/Gui_hud.jpg/180px-Gui_hud.jpg)\
+![The Doom 3 HUD (click to view)](/images/thumb/9/99/Gui_hud.jpg/180px-Gui_hud.jpg)
  *The Doom 3 HUD (click to view)*
 
-HUD is an acronym for Heads-Up Display. It's the overlay that stands on
-top of the level render, showing useful information such as the player
-health, ammo, crosshair, etc. In the Doom 3 engine, the singleplayer HUD
-is a standard [GUI](GUIs "GUIs") with properties and events of its own -
-also one of the most complex [GUI
-scripts](GUI_scripting "GUI scripting") in the game.
+HUD is an acronym for Heads-Up Display. It's the overlay that stands on top of the level render, showing useful information such as the player health, ammo, crosshair, etc. In the Doom 3 engine, the singleplayer HUD is a standard [GUI](GUIs "GUIs") with properties and events of its own - also one of the most complex [GUI scripts](GUI_scripting "GUI scripting") in the game.
 
 Additional parameters
 ---------------------
 
-Additional parameters are like variables, accessible to each specific
-scope - different GUI scopes have different parameters available. These
-parameters can be accessed by a GUI script using the
-*gui::parametername* syntax - as an [item
-property](GUI_item_properties "GUI item properties") value or by doing
-comparisons using the
-[if...else](If...else_%28GUI_command%29 "If...else (GUI command)")
-command, for example.
+Additional parameters are like variables, accessible to each specific scope - different GUI scopes have different parameters available. These parameters can be accessed by a GUI script using the *gui::parametername* syntax - as an [item property](GUI_item_properties "GUI item properties") value or by doing comparisons using the [if...else](If...else_%28GUI_command%29 "If...else (GUI command)") command, for example.
 
- g\_showProjectilePct 
-:   Boolean; determines whether projectpct should be shown. (Not
-    working?)
+ g\_showProjectilePct   
+Boolean; determines whether projectpct should be shown. (Not working?)
 
- itemicon\
- itemtext1 
-:   String; text description of the last items the player has picked up.
-    Eventually they scroll and fade away.
+ itemicon
+ itemtext1   
+String; text description of the last items the player has picked up. Eventually they scroll and fade away.
 
- itemtext2 
-:   Same as *itemtext1* , but a different item in the queue.
+ itemtext2   
+Same as *itemtext1* , but a different item in the queue.
 
- itemtext3 
-:   Same as *itemtext1* , but a different item in the queue.
+ itemtext3   
+Same as *itemtext1* , but a different item in the queue.
 
- itemtext4 
-:   Same as *itemtext1* , but a different item in the queue.
+ itemtext4   
+Same as *itemtext1* , but a different item in the queue.
 
- itemtext5 
-:   Same as *itemtext1* , but a different item in the queue.
+ itemtext5   
+Same as *itemtext1* , but a different item in the queue.
 
- location 
-:   String; the location the player is at (shown on the bottom of the
-    HUD).
+ location   
+String; the location the player is at (shown on the bottom of the HUD).
 
- message\
- newweapon 
-:   Integer; the number of the weapon that the player has recently
-    picked up, starting at 1.
+ message
+ newweapon   
+Integer; the number of the weapon that the player has recently picked up, starting at 1.
 
- npc 
-:   String; the name of the non-player character the player currently
-    has his crosshair at.
+ npc   
+String; the name of the non-player character the player currently has his crosshair at.
 
- objectivetext\
- objectivetitle\
- pda\_security 
-:   String; the security level of the new PDA that the player has picked
-    up.
+ objectivetext
+ objectivetitle
+ pda\_security   
+String; the security level of the new PDA that the player has picked up.
 
- pda\_text 
-:   String; name of the new PDA that the player has picked up.
+ pda\_text   
+String; name of the new PDA that the player has picked up.
 
- player\_air 
-:   Integer; the ammount of air the player has on his lungs, from 0
-    (dying) to 100 (standard).
+ player\_air   
+Integer; the ammount of air the player has on his lungs, from 0 (dying) to 100 (standard).
 
- player\_allammo 
-:   String; displays both clip and extra ammo. (ex. Shotgun with 5 in
-    clip and 8 extra returns "5/8").
+ player\_allammo   
+String; displays both clip and extra ammo. (ex. Shotgun with 5 in clip and 8 extra returns "5/8").
 
- player\_ammo 
-:   Integer; the amount of ammo in the clip for the currently selected
-    weapon.
+ player\_ammo   
+Integer; the amount of ammo in the clip for the currently selected weapon.
 
- player\_ammo\_empty 
-:   Boolean; 0 if current weapon still has ammo, 1 if current weapon is
-    out of ammo.
+ player\_ammo\_empty   
+Boolean; 0 if current weapon still has ammo, 1 if current weapon is out of ammo.
 
- player\_armor 
-:   Integer; the amount of armor the player has, from 0 to 125.
+ player\_armor   
+Integer; the amount of armor the player has, from 0 to 125.
 
- player\_clip\_empty 
-:   Boolean; 0 if clip in current weapon still has ammo, 1 if clip in
-    current weapon is empty.
+ player\_clip\_empty   
+Boolean; 0 if clip in current weapon still has ammo, 1 if clip in current weapon is empty.
 
- player\_clip\_low 
-:   Boolean; 0 if clip has plenty of ammo, 1 if clip is low on ammo.
+ player\_clip\_low   
+Boolean; 0 if clip has plenty of ammo, 1 if clip is low on ammo.
 
- player\_clips 
-:   Integer; the number of full clips remaining for the current weapon
-    (including the current clip if it is full).
+ player\_clips   
+Integer; the number of full clips remaining for the current weapon (including the current clip if it is full).
 
- player\_health 
-:   Integer; the amount of health the player has, from 0 to 100.
+ player\_health   
+Integer; the amount of health the player has, from 0 to 100.
 
- player\_hr(heartrate)\
- player\_nostamina 
-:   Boolean; 0 if stamina works normally, or 1 if there's no stamina
-    limit (ie, Hell on Doom 3).
+ player\_hr(heartrate)
+ player\_nostamina   
+Boolean; 0 if stamina works normally, or 1 if there's no stamina limit (ie, Hell on Doom 3).
 
- player\_stamina 
-:   Integer; the amount of stamina the player has, from 0 to 100.
+ player\_stamina   
+Integer; the amount of stamina the player has, from 0 to 100.
 
- player\_totalammo 
-:   Integer; the amount of ammo available for the current weapon (does
-    not include ammo in clip).
+ player\_totalammo   
+Integer; the amount of ammo available for the current weapon (does not include ammo in clip).
 
- projectilepct 
-:   String; Displays hit percentage. (ex. "Hit % 0.0")
+ projectilepct   
+String; Displays hit percentage. (ex. "Hit % 0.0")
 
- s\_debug\
- screenshot\
- tip\
- tiptitle\
- viewcomments\
- weapon0 
-:   Integer; indicates whether the player has this weapon or not (0
-    means he doesn't; 1 means he has it, but it's not selected; 2 means
-    he has it and it's the selected weapon).
+ s\_debug
+ screenshot
+ tip
+ tiptitle
+ viewcomments
+ weapon0   
+Integer; indicates whether the player has this weapon or not (0 means he doesn't; 1 means he has it, but it's not selected; 2 means he has it and it's the selected weapon).
 
- weapon1 
-:   The same as *weapon0* .
+ weapon1   
+The same as *weapon0* .
 
- weapon2 
-:   The same as *weapon0* .
+ weapon2   
+The same as *weapon0* .
 
- weapon3 
-:   The same as *weapon0* .
+ weapon3   
+The same as *weapon0* .
 
- weapon4 
-:   The same as *weapon0* .
+ weapon4   
+The same as *weapon0* .
 
- weapon5 
-:   The same as *weapon0* .
+ weapon5   
+The same as *weapon0* .
 
- weapon6 
-:   The same as *weapon0* .
+ weapon6   
+The same as *weapon0* .
 
- weapon7 
-:   The same as *weapon0* .
+ weapon7   
+The same as *weapon0* .
 
- weapon8 
-:   The same as *weapon0* .
+ weapon8   
+The same as *weapon0* .
 
- weapon9 
-:   The same as *weapon0* .
+ weapon9   
+The same as *weapon0* .
 
- weapon10 
-:   The same as *weapon0* .
+ weapon10   
+The same as *weapon0* .
 
- weapon11 
-:   The same as *weapon0* .
+ weapon11   
+The same as *weapon0* .
 
 Named events
 ------------
 
-Named events are used to trigger custom events inside the GUI code. By
-creating
-[onNamedEvent](OnNamedEvent_%28GUI_item_event%29 "OnNamedEvent (GUI item event)")
-blocks inside a GUI script, you can have a set of [GUI
-commands](GUI_commands "GUI commands") ran when certain conditions are
-met. Again, each of these named events are specific to this GUI scope
-and aren't usually available elsewhere.
+Named events are used to trigger custom events inside the GUI code. By creating [onNamedEvent](OnNamedEvent_%28GUI_item_event%29 "OnNamedEvent (GUI item event)") blocks inside a GUI script, you can have a set of [GUI commands](GUI_commands "GUI commands") ran when certain conditions are met. Again, each of these named events are specific to this GUI scope and aren't usually available elsewhere.
 
 Air
 
@@ -206,8 +171,7 @@ newObjectiveComplete
 
 newWeapon
 
-Triggered when a new weapon is picked up (its value is stored on the
-*newweapon* parameter).
+Triggered when a new weapon is picked up (its value is stored on the *newweapon* parameter).
 
 noAir
 

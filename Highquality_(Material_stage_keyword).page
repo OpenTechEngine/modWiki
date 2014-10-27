@@ -1,13 +1,7 @@
 Description
 -----------
 
-The ***highquality*** or ***uncompressed*** stage keywords cause the
-game to render the associated stage without using [texture
-compression](Texturing#Compressed_and_Uncompressed "Texturing") in
-Medium or High quality modes. Without this keyword, the map would be
-compressed according to the defaults for the selected quality mode.
-(Medium quality mode compresses bumpmaps and diffusemaps, where High
-quality mode only compresses bumpmaps.)
+The ***highquality*** or ***uncompressed*** stage keywords cause the game to render the associated stage without using [texture compression](Texturing#Compressed_and_Uncompressed "Texturing") in Medium or High quality modes. Without this keyword, the map would be compressed according to the defaults for the selected quality mode. (Medium quality mode compresses bumpmaps and diffusemaps, where High quality mode only compresses bumpmaps.)
 
 Usage
 -----
@@ -35,16 +29,10 @@ Forces the diffusemap stage to high quality:
 Notes
 -----
 
-This keyword is useful for [sky](Cube_maps "Cube maps") textures which
-can look very ugly when compressed.
+This keyword is useful for [sky](Cube_maps "Cube maps") textures which can look very ugly when compressed.
 
-This keyword has no effect in Low quality mode, and the
-[forceHighQuality](ForceHighQuality_%28Material_stage_keyword%29 "ForceHighQuality (Material stage keyword)")
-keyword must be used instead.
+This keyword has no effect in Low quality mode, and the [forceHighQuality](ForceHighQuality_%28Material_stage_keyword%29 "ForceHighQuality (Material stage keyword)") keyword must be used instead.
 
-If the
-[image\_ignoreHighQuality](Image_ignoreHighQuality_%28cvar%29 "Image ignoreHighQuality (cvar)")
-[CVar](Console "Console") is set to 1, this keyword will be ignored.
+If the [image\_ignoreHighQuality](Image_ignoreHighQuality_%28cvar%29 "Image ignoreHighQuality (cvar)") [CVar](Console "Console") is set to 1, this keyword will be ignored.
 
-\
 

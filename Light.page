@@ -1,61 +1,25 @@
-[![Illustration depicting how the image textures used in a light shader
-are projected unto a scene.](/images/3/3c/Projectedlight.png)\
- *Illustration depicting how the image textures used in a light shader
-are projected unto a scene. (Click to
-Enlarge)*](/images/3/3c/Projectedlight.png "Illustration depicting how the image textures used in a light shader are projected unto a scene.")
+[![Illustration depicting how the image textures used in a light shader are projected unto a scene.](/images/3/3c/Projectedlight.png)
+ *Illustration depicting how the image textures used in a light shader are projected unto a scene. (Click to Enlarge)*](/images/3/3c/Projectedlight.png "Illustration depicting how the image textures used in a light shader are projected unto a scene.")
 
-**Lights** do exactly what they do in real life - they light up geometry
-so you can see it. With its fully dynamic lighting model, Doom 3 levels
-will be completely dark in areas untouched by light; there is no ambient
-light setting (unless self-illuminating materials are used). Lights are
-a form of [entity](Entity "Entity") and can be controlled through
-scripts.
+**Lights** do exactly what they do in real life - they light up geometry so you can see it. With its fully dynamic lighting model, Doom 3 levels will be completely dark in areas untouched by light; there is no ambient light setting (unless self-illuminating materials are used). Lights are a form of [entity](Entity "Entity") and can be controlled through scripts.
 
 Placing a light
 ---------------
 
 There are two ways to place a light.
 
-1.  Right-click on the map, and choose **light** from the pop-up menu.
-    This will create a standard light of 300 units in radius, using the
-    default pointlight texture.
-2.  Draw out a brush in the usual way, then right-click and choose
-    **light** to convert the brush into a light volume. The light volume
-    will be exactly the same size as the brush (provided that the brush
-    was a cuboid).
+1.  Right-click on the map, and choose **light** from the pop-up menu. This will create a standard light of 300 units in radius, using the default pointlight texture.
+2.  Draw out a brush in the usual way, then right-click and choose **light** to convert the brush into a light volume. The light volume will be exactly the same size as the brush (provided that the brush was a cuboid).
 
 Properties of lights
 --------------------
 
-Light properties are accessed by selecting the light object and pressing
-**J** to bring up the Light Inspector. Light entities have a number of
-important properties.
+Light properties are accessed by selecting the light object and pressing **J** to bring up the Light Inspector. Light entities have a number of important properties.
 
--   **Point** versus **projected** - point lights emit light in all
-    directions, projected lights work like spotlights, and have a
-    direction vector and a conical volume.
--   **Size** - point lights have a rectangular size in three dimensions.
-    Each dimension can be controlled independently. Projected lights
-    have more complex shape parameters, which are easiest to set by
-    dragging the control points with the mouse in the main window.
--   **Colour** - all lights have a colour which also determines the
-    *brightness* of the light. The slider labelled "brightness" does
-    nothing.
--   **Cast shadows/diffuse/specular** - these properties control which
-    interactions respond to the light. Turning off shadows and specular
-    for fill-in lights can increase performance.
--   **Center** - the center point of a point light is the point in space
-    from which shadows are projected. It also has an effect on the
-    distribution of light within the volume, although it does not affect
-    the falloff.
--   **Texture** - the true power of Doom 3 lighting lies in the texture
-    selection box. This is not simply a projected texture, but a
-    fully-dynamic light shader that can make the light flicker, pulsate,
-    rotate, move, change colour or anything else that can be specified
-    in a material shader. The texture is also used to set lights as
-    **ambient** (meaning no shadows, bumpmapping or directionality), to
-    change the shape or falloff of a light, or to make a light volume
-    into a
-    [fog](FogLight_%28Material_global_keyword%29 "FogLight (Material global keyword)")
-    volume.
+-   **Point** versus **projected** - point lights emit light in all directions, projected lights work like spotlights, and have a direction vector and a conical volume.
+-   **Size** - point lights have a rectangular size in three dimensions. Each dimension can be controlled independently. Projected lights have more complex shape parameters, which are easiest to set by dragging the control points with the mouse in the main window.
+-   **Colour** - all lights have a colour which also determines the *brightness* of the light. The slider labelled "brightness" does nothing.
+-   **Cast shadows/diffuse/specular** - these properties control which interactions respond to the light. Turning off shadows and specular for fill-in lights can increase performance.
+-   **Center** - the center point of a point light is the point in space from which shadows are projected. It also has an effect on the distribution of light within the volume, although it does not affect the falloff.
+-   **Texture** - the true power of Doom 3 lighting lies in the texture selection box. This is not simply a projected texture, but a fully-dynamic light shader that can make the light flicker, pulsate, rotate, move, change colour or anything else that can be specified in a material shader. The texture is also used to set lights as **ambient** (meaning no shadows, bumpmapping or directionality), to change the shape or falloff of a light, or to make a light volume into a [fog](FogLight_%28Material_global_keyword%29 "FogLight (Material global keyword)") volume.
 

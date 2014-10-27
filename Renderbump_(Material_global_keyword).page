@@ -1,9 +1,7 @@
 Description
 -----------
 
-Defines the parameters for use with the
-[renderbump](Renderbump_%28console_command%29 "Renderbump (console command)")
-console command.
+Defines the parameters for use with the [renderbump](Renderbump_%28console_command%29 "Renderbump (console command)") console command.
 
 Usage
 -----
@@ -15,29 +13,16 @@ In the global section of your material shader type...
 Parameters
 ----------
 
--   \<image\> - File system path to write the image(s) to, relative to
-    base directory (e.g. "models/mapobjects/crate.tga").
+-   \<image\> - File system path to write the image(s) to, relative to base directory (e.g. "models/mapobjects/crate.tga").
 -   \<model\> - The high polygon model to capture normal map data from.
--   [-size \<width\> \<height\>] - Specifies dimensions of the rendered
-    image(s) with \<width\> and \<height\> (image dimensions should be
-    specified in powers of two, e.g. "128"). If not specified, \<width\>
-    and \<height\> default to 256.
--   [-aa \<aa\_value\>] - The amount of antialiasing applied to the
-    normal map (e.g. "0", "1", or "2").
--   [-trace \<trace\_value\>] - The distance from the low poly geometry
-    to begin the raytrace. This is a normalized value, from 0.01 to 1.0.
-    Renderbump performance suffers as this value is increased.
--   [-colormap] - In addition to rendering a bump map, a color map will
-    be produced corresponding to the color of the high poly geometry.
-    The image will be written to the file specified in \<image\> with
-    "\_color" appended to the filename (e.g.
-    "models/mapobjects/crate\_color.tga").
+-   [-size \<width\> \<height\>] - Specifies dimensions of the rendered image(s) with \<width\> and \<height\> (image dimensions should be specified in powers of two, e.g. "128"). If not specified, \<width\> and \<height\> default to 256.
+-   [-aa \<aa\_value\>] - The amount of antialiasing applied to the normal map (e.g. "0", "1", or "2").
+-   [-trace \<trace\_value\>] - The distance from the low poly geometry to begin the raytrace. This is a normalized value, from 0.01 to 1.0. Renderbump performance suffers as this value is increased.
+-   [-colormap] - In addition to rendering a bump map, a color map will be produced corresponding to the color of the high poly geometry. The image will be written to the file specified in \<image\> with "\_color" appended to the filename (e.g. "models/mapobjects/crate\_color.tga").
 
 Notes
 -----
 
-This command also applies smoothing to the surface of the low poly
-model.
+This command also applies smoothing to the surface of the low poly model.
 
-\
 

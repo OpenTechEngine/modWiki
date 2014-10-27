@@ -14,22 +14,13 @@ Parameters
 ----------
 
 -   \<CVar\> - The CVar to modify.
--   \<value\> - the value to set the CVar to. Numbers can be enclosed in
-    quotes.
+-   \<value\> - the value to set the CVar to. Numbers can be enclosed in quotes.
 
 Notes
 -----
 
-If your value is a string, don't forget to put quotes around it. You can
-sometimes do without, but results may vary if the string contains space
-characters.
+If your value is a string, don't forget to put quotes around it. You can sometimes do without, but results may vary if the string contains space characters.
 
-When used in a [startup
-parameter](Startup_parameters "Startup parameters") Set has expanded
-functionality than when used in the console. When using set in-game,
-restrictions are applied. Some CVar's are read-only once the game has
-started (like some rendering options) to avoid that the game might come
-in an unpredictable state when those are modified.
+When used in a [startup parameter](Startup_parameters "Startup parameters") Set has expanded functionality than when used in the console. When using set in-game, restrictions are applied. Some CVar's are read-only once the game has started (like some rendering options) to avoid that the game might come in an unpredictable state when those are modified.
 
-\
 

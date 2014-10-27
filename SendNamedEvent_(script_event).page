@@ -1,8 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -17,8 +16,7 @@ Usage
 Parameters
 ----------
 
--   [guiEnum] - Valid guiEnums are: GUI\_PLAYERHUD, GUI\_CINEMATICHUD,
-    GUI\_VEHICLEHUD
+-   [guiEnum] - Valid guiEnums are: GUI\_PLAYERHUD, GUI\_CINEMATICHUD, GUI\_VEHICLEHUD
 -   [namedEvent] - Event name sent to gui.
 
 Examples
@@ -31,5 +29,4 @@ Notes
 
 This script event does not return any values.
 
-\
 

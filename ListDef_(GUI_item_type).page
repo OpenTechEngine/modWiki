@@ -1,12 +1,7 @@
-![A listDef from
-Doom3](/images/thumb/4/40/Gui_example_listdef.png/180px-Gui_example_listdef.png)\
+![A listDef from Doom3](/images/thumb/4/40/Gui_example_listdef.png/180px-Gui_example_listdef.png)
  *A listDef from Doom3*
 
-A list of textual items for selection. Most lists in generated in the
-engine, including the list of saved games, the multiplayer server list,
-the list of maps, the mods list, and several others. In Doom 3, the
-lists used in the PDA (PDAs, emails, audio logs, videos) are generated
-dynamically in the game code, allowing dynamic addition of new assets.
+A list of textual items for selection. Most lists in generated in the engine, including the list of saved games, the multiplayer server list, the list of maps, the mods list, and several others. In Doom 3, the lists used in the PDA (PDAs, emails, audio logs, videos) are generated dynamically in the game code, allowing dynamic addition of new assets.
 
 Additional properties
 ---------------------
@@ -42,5 +37,4 @@ Example(s)
         }
     }
 
-\
 

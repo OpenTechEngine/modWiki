@@ -1,20 +1,16 @@
 Introduction
 ------------
 
-This is a quick tutorial demonstrating how to add custom
-[commands](Console "Console") to the console.
+This is a quick tutorial demonstrating how to add custom [commands](Console "Console") to the console.
 
 Adding the function to Doom 3
 -----------------------------
 
-Open up [src/game/gamesys/SysCmds.cpp (source
-file)](Src/game/gamesys/SysCmds.cpp_%28source_file%29 "Src/game/gamesys/SysCmds.cpp (source file)")
-. The largest thing to note is near the bottom:
+Open up [src/game/gamesys/SysCmds.cpp (source file)](Src/game/gamesys/SysCmds.cpp_%28source_file%29 "Src/game/gamesys/SysCmds.cpp (source file)") . The largest thing to note is near the bottom:
 
     void idGameLocal::InitConsoleCommands( void ) {
 
-Inside here, there are many calls to cmdSystem-\>AddCommand. Pick a
-line, and add one of your own.
+Inside here, there are many calls to cmdSystem-\>AddCommand. Pick a line, and add one of your own.
 
     cmdSystem->AddCommand( "testcommand", Cmd_testcommand, CMD_FL_GAME, "test command" );
 
@@ -22,11 +18,7 @@ The parameters are as follows:
 
     cmdSystem->AddCommand( <name of command to be used in the Doom 3 console>, <the name of the C++ function to be called>, <Various flags>, <description of command>
 
-The two exampled flags in the file are CMD\_FL\_GAME and CMD\_FL\_CHEAT.
-Use CMD\_FL\_GAME for everything, and bitwise OR ( | ) it with
-CMD\_FL\_CHEAT for anything that allows the player to
-[cheat](Cheat "Cheat") . If anyone knows any more about these flags,
-please update the wiki!
+The two exampled flags in the file are CMD\_FL\_GAME and CMD\_FL\_CHEAT. Use CMD\_FL\_GAME for everything, and bitwise OR ( | ) it with CMD\_FL\_CHEAT for anything that allows the player to [cheat](Cheat "Cheat") . If anyone knows any more about these flags, please update the wiki!
 
 Writing the function
 --------------------
@@ -39,8 +31,7 @@ Now, scroll up a bit, and add your own function.
      
      }
 
-Arguments to functions are counted with args.Argc() and referenced using
-args.Argv();
+Arguments to functions are counted with args.Argc() and referenced using args.Argv();
 
     void Cmd_testcommand ( const idCmdArgs &args) {
      

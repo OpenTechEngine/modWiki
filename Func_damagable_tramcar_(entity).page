@@ -1,94 +1,74 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Func_damagable_tramcar_%28entity%29 "http://modwiki.net/w/index.php?title=Func_damagable_tramcar_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Func_damagable_tramcar_%28entity%29 "http://modwiki.net/w/index.php?title=Func_damagable_tramcar_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Func_damagable_tramcar_%28entity%29 "http://modwiki.net/w/index.php?title=Func_damagable_tramcar_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Func_damagable_tramcar_%28entity%29 "http://modwiki.net/w/index.php?title=Func_damagable_tramcar_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
 
-Breakable object. Fires targets and changes shader parms and model when
-damaged.
+Breakable object. Fires targets and changes shader parms and model when damaged.
 
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                     DESCRIPTION
-  ----------------------- -------------------------------------------------------------------------------------------------------
-  angle                   Description not available.
-  anim                    Description not available.
-  bind                    Description not available.
-  bindOrientated          Description not available.
-  bindToBody              Description not available.
-  bindToJoint             Description not available.
-  bindanim                Description not available.
-  cameraTarget            Description not available.
-  cinematic               Description not available.
-  classname               Description not available.
-  clipmodel               Description not available.
-  cone                    Description not available.
-  count                   number of times to allow to be triggered, (-1 means infinite).
-  cycle                   Description not available.
-  cylinder                Description not available.
-  def\_persona            Description not available.
-  def\_stage1             Description not available.
-  dodecahedron            Description not available.
-  editor\_bool XXXX       Description not available.
-  editor\_color           Description not available.
-  editor\_maxs            Description not available.
-  editor\_mins            Description not available.
-  editor\_model XXXX      Description not available.
-  editor\_usage           Breakable object. Fires targets and changes shader parms and model when damaged.
-  editor\_usage1          Description not available.
-  editor\_usage2          Description not available.
-  editor\_usage3          Description not available.
-  editor\_usage4          Description not available.
-  editor\_var XXXX        Description not available.
-  forcestate              if non-zero, the state to force the shader into when damaged.
-  guiTarget               Description not available.
-  health                  amount of damage to recieve before becoming damaged.
-  hide                    Description not available.
-  hidesurface             Description not available.
-  inherit                 Description not available.
-  instance                Description not available.
-  maxs                    Description not available.
-  mins                    Description not available.
-  model                   Description not available.
-  name                    Description not available.
-  networkSync             Description not available.
-  neverDormant            Description not available.
-  noclipmodel             Description not available.
-  numstates               the number of different shader states. Shader parm 7 will be set to a value between 1 and this value.
-  origin                  Description not available.
-  rotation                Description not available.
-  scriptobject            Description not available.
-  shadow\_lod\_distance   Description not available.
-  size                    Description not available.
-  solidForTeam            Description not available.
-  spawnclass              Description not available.
-  target                  targets to trigger when damaged.
-  trigger\_anim           Description not available.
-  usable                  Description not available.
-  wait                    Seconds between triggerings.
+| KEY                   | DESCRIPTION                                                                                           |
+|-----------------------|-------------------------------------------------------------------------------------------------------|
+| angle                 | Description not available.                                                                            |
+| anim                  | Description not available.                                                                            |
+| bind                  | Description not available.                                                                            |
+| bindOrientated        | Description not available.                                                                            |
+| bindToBody            | Description not available.                                                                            |
+| bindToJoint           | Description not available.                                                                            |
+| bindanim              | Description not available.                                                                            |
+| cameraTarget          | Description not available.                                                                            |
+| cinematic             | Description not available.                                                                            |
+| classname             | Description not available.                                                                            |
+| clipmodel             | Description not available.                                                                            |
+| cone                  | Description not available.                                                                            |
+| count                 | number of times to allow to be triggered, (-1 means infinite).                                        |
+| cycle                 | Description not available.                                                                            |
+| cylinder              | Description not available.                                                                            |
+| def\_persona          | Description not available.                                                                            |
+| def\_stage1           | Description not available.                                                                            |
+| dodecahedron          | Description not available.                                                                            |
+| editor\_bool XXXX     | Description not available.                                                                            |
+| editor\_color         | Description not available.                                                                            |
+| editor\_maxs          | Description not available.                                                                            |
+| editor\_mins          | Description not available.                                                                            |
+| editor\_model XXXX    | Description not available.                                                                            |
+| editor\_usage         | Breakable object. Fires targets and changes shader parms and model when damaged.                      |
+| editor\_usage1        | Description not available.                                                                            |
+| editor\_usage2        | Description not available.                                                                            |
+| editor\_usage3        | Description not available.                                                                            |
+| editor\_usage4        | Description not available.                                                                            |
+| editor\_var XXXX      | Description not available.                                                                            |
+| forcestate            | if non-zero, the state to force the shader into when damaged.                                         |
+| guiTarget             | Description not available.                                                                            |
+| health                | amount of damage to recieve before becoming damaged.                                                  |
+| hide                  | Description not available.                                                                            |
+| hidesurface           | Description not available.                                                                            |
+| inherit               | Description not available.                                                                            |
+| instance              | Description not available.                                                                            |
+| maxs                  | Description not available.                                                                            |
+| mins                  | Description not available.                                                                            |
+| model                 | Description not available.                                                                            |
+| name                  | Description not available.                                                                            |
+| networkSync           | Description not available.                                                                            |
+| neverDormant          | Description not available.                                                                            |
+| noclipmodel           | Description not available.                                                                            |
+| numstates             | the number of different shader states. Shader parm 7 will be set to a value between 1 and this value. |
+| origin                | Description not available.                                                                            |
+| rotation              | Description not available.                                                                            |
+| scriptobject          | Description not available.                                                                            |
+| shadow\_lod\_distance | Description not available.                                                                            |
+| size                  | Description not available.                                                                            |
+| solidForTeam          | Description not available.                                                                            |
+| spawnclass            | Description not available.                                                                            |
+| target                | targets to trigger when damaged.                                                                      |
+| trigger\_anim         | Description not available.                                                                            |
+| usable                | Description not available.                                                                            |
+| wait                  | Seconds between triggerings.                                                                          |
 
 Inheritance
 -----------

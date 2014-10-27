@@ -5,13 +5,11 @@ Syntax
 
     play <sound shader>
 
-*sound shader* is the name of the sound shader to play. The command
-needs to be used with [set](Set_%28GUI_command%29 "Set (GUI command)") .
+*sound shader* is the name of the sound shader to play. The command needs to be used with [set](Set_%28GUI_command%29 "Set (GUI command)") .
 
 Example(s)
 ----------
 
     set "cmd" "play guisounds_click3";
 
-\
 

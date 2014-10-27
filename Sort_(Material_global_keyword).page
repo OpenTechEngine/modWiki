@@ -1,13 +1,9 @@
 Description
 -----------
 
-Changes the "screen layer" a material is drawn in. This global keyword
-is mainly used to correct issues with transparent materials.
+Changes the "screen layer" a material is drawn in. This global keyword is mainly used to correct issues with transparent materials.
 
-Such issues become clear when one material furthest away from the viewer
-is still drawn on top of a transparent material which is closer in
-distance. Modifying the sorting order resolves this by changing the
-order in which materials are drawn on the screen.
+Such issues become clear when one material furthest away from the viewer is still drawn on top of a transparent material which is closer in distance. Modifying the sorting order resolves this by changing the order in which materials are drawn on the screen.
 
 Usage
 -----
@@ -19,39 +15,34 @@ In the global section of your material shader type...
 Parameters
 ----------
 
--   \<order\> - Defines in which "layer" the material should be when
-    sorted.
+-   \<order\> - Defines in which "layer" the material should be when sorted.
 
 ### Order types
 
- subview 
-:   Always drawn first with any other material drawn on top.
+ subview   
+Always drawn first with any other material drawn on top.
 
- opaque 
-:   Default sort order for opaque textures.
+ opaque   
+Default sort order for opaque textures.
 
- decal 
-:   Obviously used for decals. (Default for transparant textures?)
+ decal   
+Obviously used for decals. (Default for transparant textures?)
 
- far\
- medium\
- close\
- almostNearest 
-:   The above 4 orders still leave room to shuffle materials around when
-    materials draw on top of each other. (Some of these could be used in
-    common model materials)
+ far
+ medium
+ close
+ almostNearest   
+The above 4 orders still leave room to shuffle materials around when materials draw on top of each other. (Some of these could be used in common model materials)
 
- nearest 
-:   Used for gun flares and other stuff very close to the player.
+ nearest   
+Used for gun flares and other stuff very close to the player.
 
- postProcess 
-:   Highest layer, normally only used for postProcess materials and
-    programs.
+ postProcess   
+Highest layer, normally only used for postProcess materials and programs.
 
 Notes
 -----
 
 None.
 
-\
 

@@ -1,11 +1,7 @@
 Description
 -----------
 
-The **fragmentMap** keyword instructs Doom 3 to pass the instructed
-image to a fragment program which must also be referenced in this stage
-via the
-[fragmentProgram](FragmentProgram_%28Material_stage_keyword%29 "FragmentProgram (Material stage keyword)")
-keyword.
+The **fragmentMap** keyword instructs Doom 3 to pass the instructed image to a fragment program which must also be referenced in this stage via the [fragmentProgram](FragmentProgram_%28Material_stage_keyword%29 "FragmentProgram (Material stage keyword)") keyword.
 
 Usage
 -----
@@ -15,15 +11,13 @@ Usage
 Parameters
 ----------
 
--   [input] - The input or "slot" in which to pass the image to the
-    fragment program.
+-   [input] - The input or "slot" in which to pass the image to the fragment program.
 -   [image] - The image map to pass to the fragment program.
 
 Example
 -------
 
-distort the current frame using the normal map helmet\_local.tga and
-heatHazeWithMaskAndVertex.vfp
+distort the current frame using the normal map helmet\_local.tga and heatHazeWithMaskAndVertex.vfp
 
     {
        program                 heatHazeWithMaskAndVertex.vfp
@@ -38,5 +32,4 @@ Notes
 
 None.
 
-\
 

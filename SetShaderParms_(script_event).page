@@ -1,20 +1,17 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Sets shader parms Parm0, Parm1, Parm2, and Parm3 (red, green, blue, and
-alpha respectively).
+Sets shader parms Parm0, Parm1, Parm2, and Parm3 (red, green, blue, and alpha respectively).
 
 Usage
 -----
 
-*void* setShaderParms( *float* **parm0** , *float* **parm1** , *float*
-**parm2** , *float* **parm3** )
+*void* setShaderParms( *float* **parm0** , *float* **parm1** , *float* **parm2** , *float* **parm3** )
 
 Parameters
 ----------
@@ -35,5 +32,4 @@ Notes
 
 This script event does not return any values.
 
-\
 

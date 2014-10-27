@@ -1,172 +1,69 @@
-The process of **map optimisation** ensures that a given map will play
-as fast and smoothly as possible on a wide range of hardware.
-Optimisation techniques are used both throughout the map design process
-and as a final stage prior to release. A map that is not optimised may
-perform slowly, cause unwanted visual artifacts, or even crash the game
-(or PC) in some extreme circumstances.
+The process of **map optimisation** ensures that a given map will play as fast and smoothly as possible on a wide range of hardware. Optimisation techniques are used both throughout the map design process and as a final stage prior to release. A map that is not optimised may perform slowly, cause unwanted visual artifacts, or even crash the game (or PC) in some extreme circumstances.
 
 Useful Cvars
 ------------
 
-To test a [map](Mapping "Mapping") and gauge the performance there are
-several [CVars](Console "Console") that can be set or toggled to give
-you visual information about you map. You can type the
-[bind](Bind_%28console_command%29 "Bind (console command)") console
-command at the console or set it in your "
-[autoexec.cfg](CFG_%28file_format%29 "CFG (file format)") " file to make
-it a semi-permanent feature. For all CVars with multiple settings
-(instead of just on/off) you can use the
-[toggle](Toggle_%28console_command%29 "Toggle (console command)")
-console command, for instance:
+To test a [map](Mapping "Mapping") and gauge the performance there are several [CVars](Console "Console") that can be set or toggled to give you visual information about you map. You can type the [bind](Bind_%28console_command%29 "Bind (console command)") console command at the console or set it in your " [autoexec.cfg](CFG_%28file_format%29 "CFG (file format)") " file to make it a semi-permanent feature. For all CVars with multiple settings (instead of just on/off) you can use the [toggle](Toggle_%28console_command%29 "Toggle (console command)") console command, for instance:
 
     bind m toggle "r_showTris 0 1 2 3"
 
-In general, the
-[com\_showFps](Com_showFPS_%28cvar%29 "Com showFPS (cvar)") allows you
-to keep tabs on the framerate of the current scene. It's not very useful
-to determining hardware bottlenecks though.
+In general, the [com\_showFps](Com_showFPS_%28cvar%29 "Com showFPS (cvar)") allows you to keep tabs on the framerate of the current scene. It's not very useful to determining hardware bottlenecks though.
 
-After you've finished your map and are exclusively optimising the level
-it may pay off to
-[record](RecordDemo_%28console_command%29 "RecordDemo (console command)")
-a . [DEMO](DEMO_%28file_format%29 "DEMO (file format)") of you playing
-through and then benchmark it with the
-[timeDemo](TimeDemo_%28console_command%29 "TimeDemo (console command)")
-function. This way you can more quickly and accurately see which parts
-need to be optimised.
+After you've finished your map and are exclusively optimising the level it may pay off to [record](RecordDemo_%28console_command%29 "RecordDemo (console command)") a . [DEMO](DEMO_%28file_format%29 "DEMO (file format)") of you playing through and then benchmark it with the [timeDemo](TimeDemo_%28console_command%29 "TimeDemo (console command)") function. This way you can more quickly and accurately see which parts need to be optimised.
 
 Visportals
 ----------
 
-By far the most important part in optimizing your maps is the correct
-usage of [visportals](Visportal "Visportal") , which tells the engine
-how to split up your map for rendering. If portals are not used
-properly, the engine may be rendering vast amounts of geometry which is
-not visible to the player, with an obviously devastating impact on
-performance.
+By far the most important part in optimizing your maps is the correct usage of [visportals](Visportal "Visportal") , which tells the engine how to split up your map for rendering. If portals are not used properly, the engine may be rendering vast amounts of geometry which is not visible to the player, with an obviously devastating impact on performance.
 
-**Maps must be designed from the start with portalisation in mind;
-attempting to retrofit portals into an existing map is a recipe for
-frustration.** Portalisation works best when a map is constructed in a
-"tunnel network" fashion, without excessive sightlines or large open
-areas with high polycounts.
+**Maps must be designed from the start with portalisation in mind; attempting to retrofit portals into an existing map is a recipe for frustration.** Portalisation works best when a map is constructed in a "tunnel network" fashion, without excessive sightlines or large open areas with high polycounts.
 
 Shadows
 -------
 
-By default, all brushes, models and patches cast shadows in the Doom 3
-engine. For every shadow-casting object the engine must do several
-things: calculate the silhouette and extrude the shadowvolume
-(CPU-intensive), render the back of the shadow volume (GPU render pass)
-then render the front of the shadow volume (GPU render pass). This
-process must be repeated for every light for which this object casts a
-shadow.
+By default, all brushes, models and patches cast shadows in the Doom 3 engine. For every shadow-casting object the engine must do several things: calculate the silhouette and extrude the shadowvolume (CPU-intensive), render the back of the shadow volume (GPU render pass) then render the front of the shadow volume (GPU render pass). This process must be repeated for every light for which this object casts a shadow.
 
-These extra render passes and shadowvolume calculations have a
-significantly detrimental effect on performance if sufficiently complex
-shadows are present in a scene. For this reason, eliminating unnecessary
-shadows is an important part of making smooth-running maps.
+These extra render passes and shadowvolume calculations have a significantly detrimental effect on performance if sufficiently complex shadows are present in a scene. For this reason, eliminating unnecessary shadows is an important part of making smooth-running maps.
 
-1.  Consider which lights need to cast shadows: ambient or "fill-in"
-    lights almost never need to be shadowcasters. Large,
-    level-encompassing shadowcasting "moonlights" are particularly bad,
-    and should be avoided if at all possible.
-2.  Turn off shadows for individual models by using setting the
-    "noshadows" key to "1". Although objects cast shadows by default, in
-    many mapping situations there is no significant visual problem with
-    turning them off. Level geometry constructed with brushes or patches
-    can have shadows turned off by converting the structure into a
-    **func\_static** and setting the option as for a model.
-3.  Make liberal use of the
-    **[r\_showShadows](R_showShadows_%28cvar%29 "R showShadows (cvar)")**
-    and
-    **[r\_showShadowCount](R_showShadowCount_%28cvar%29 "R showShadowCount (cvar)")**
-    CVARs during playtesting. **r\_showShadowCount** colour-codes
-    surfaces in much the same way as **r\_showLightCount** -- if the
-    screen turns white, there are far too many shadows in view.
-4.  When designing a complex model, consider setting the model's main
-    texture to non-shadowcasting (with the **noShadow** material
-    keyword) and adding a separate, simpler "shadow mesh" to the model
-    textured with "textures/common/shadow" or a similar shadowcasting
-    texture. This means that the geometry used to calculate shadows is
-    much simpler than the rendered visual model, which can improve
-    performance without severely impacting the appearance.
-5.  Animated lights or shadowvolumes are much slower than those cast by
-    static models in a static lightsource, since the animated geometry
-    cannot make use of the precomputed shadowvolumes added to the .proc
-    file by the map compiler.
+1.  Consider which lights need to cast shadows: ambient or "fill-in" lights almost never need to be shadowcasters. Large, level-encompassing shadowcasting "moonlights" are particularly bad, and should be avoided if at all possible.
+2.  Turn off shadows for individual models by using setting the "noshadows" key to "1". Although objects cast shadows by default, in many mapping situations there is no significant visual problem with turning them off. Level geometry constructed with brushes or patches can have shadows turned off by converting the structure into a **func\_static** and setting the option as for a model.
+3.  Make liberal use of the **[r\_showShadows](R_showShadows_%28cvar%29 "R showShadows (cvar)")** and **[r\_showShadowCount](R_showShadowCount_%28cvar%29 "R showShadowCount (cvar)")** CVARs during playtesting. **r\_showShadowCount** colour-codes surfaces in much the same way as **r\_showLightCount** -- if the screen turns white, there are far too many shadows in view.
+4.  When designing a complex model, consider setting the model's main texture to non-shadowcasting (with the **noShadow** material keyword) and adding a separate, simpler "shadow mesh" to the model textured with "textures/common/shadow" or a similar shadowcasting texture. This means that the geometry used to calculate shadows is much simpler than the rendered visual model, which can improve performance without severely impacting the appearance.
+5.  Animated lights or shadowvolumes are much slower than those cast by static models in a static lightsource, since the animated geometry cannot make use of the precomputed shadowvolumes added to the .proc file by the map compiler.
 
 Lighting
 --------
 
-The
-[r\_showLightCount](R_showLightCount_%28cvar%29 "R showLightCount (cvar)")
-CVar allows you to check how many lights are hitting each polygon. You
-can even make it a bindable toggle so that you can switch from disabled,
-to number of lights, to number of lights plus overdraw rate.
+The [r\_showLightCount](R_showLightCount_%28cvar%29 "R showLightCount (cvar)") CVar allows you to check how many lights are hitting each polygon. You can even make it a bindable toggle so that you can switch from disabled, to number of lights, to number of lights plus overdraw rate.
 
-When viewing with **r\_showLightCount,** surfaces in the game (and
-DoomEdit, although the editor colours are inaccurate) display a colour,
-representing the number of lights hitting a surface: black for none, red
-for 1, through green, blue, cyan, magenta and white for 6 or more. Large
-surfaces which excessive light-counts may cause a performance impact
-depending on their screen area, and in some cases it may improve
-performance to split the surfaces up along the light's volumes so that
-each surface is being hit by as few different light sources as possible.
+When viewing with **r\_showLightCount,** surfaces in the game (and DoomEdit, although the editor colours are inaccurate) display a colour, representing the number of lights hitting a surface: black for none, red for 1, through green, blue, cyan, magenta and white for 6 or more. Large surfaces which excessive light-counts may cause a performance impact depending on their screen area, and in some cases it may improve performance to split the surfaces up along the light's volumes so that each surface is being hit by as few different light sources as possible.
 
-A word of warning: many of the beginner tutorials on Doom3World and
-other sites make a big issue out of light counts, giving the impression
-that massive performance drops will occur if a single surface ever has
-more than 3 lights hitting it, and suggesting that mappers spend large
-amounts of time carving brushes to reduce light counts. **This is not
-accurate** . On modern hardware, lightcounts are not the main
-performance bottleneck and carving a surface in order to reduce its
-lightcount from 4 to 3 is likely to achieve absolutely nothing.
-Well-designed portalling and reduced shadow counts are **far** more
-important for performance, and time should be spent in these areas
-rather than carving brushes.
+A word of warning: many of the beginner tutorials on Doom3World and other sites make a big issue out of light counts, giving the impression that massive performance drops will occur if a single surface ever has more than 3 lights hitting it, and suggesting that mappers spend large amounts of time carving brushes to reduce light counts. **This is not accurate** . On modern hardware, lightcounts are not the main performance bottleneck and carving a surface in order to reduce its lightcount from 4 to 3 is likely to achieve absolutely nothing. Well-designed portalling and reduced shadow counts are **far** more important for performance, and time should be spent in these areas rather than carving brushes.
 
-Note that the above warning applies specifically to brush carving;
-reducing the number of *actual lights* can still be beneficial,
-particularly if this reduces shadow counts as well.
+Note that the above warning applies specifically to brush carving; reducing the number of *actual lights* can still be beneficial, particularly if this reduces shadow counts as well.
 
-It can also be helpful to set both r\_showTris and
-[r\_showLightScissors](R_showLightScissors_%28cvar%29 "R showLightScissors (cvar)")
-to "1" along with r\_showLightCount. You could use the following:
+It can also be helpful to set both r\_showTris and [r\_showLightScissors](R_showLightScissors_%28cvar%29 "R showLightScissors (cvar)") to "1" along with r\_showLightCount. You could use the following:
 
     bind l "toggle r_showLightCount 0 1; toggle r_showTris 0 1;toggle r_showLightScissors 0 1"
 
-If you make use of [patches](Patch "Patch") then make sure surfaces
-behind them (which are not seen by the player) have the "caulk"
-material. Being single-sided meshes, they never block light so this will
-prevent the engine from having to waste time calculating per-pixel
-lighting on those the unseen surfaces.
+If you make use of [patches](Patch "Patch") then make sure surfaces behind them (which are not seen by the player) have the "caulk" material. Being single-sided meshes, they never block light so this will prevent the engine from having to waste time calculating per-pixel lighting on those the unseen surfaces.
 
 Geometry
 --------
 
-The r\_showTris CVar is helpful for gauging the amount of geometry being
-processed but it's more commonly used to acertain how your
-[visportals](Visportal "Visportal") are affecting performance. You
-should combine it with the following CVars:
+The r\_showTris CVar is helpful for gauging the amount of geometry being processed but it's more commonly used to acertain how your [visportals](Visportal "Visportal") are affecting performance. You should combine it with the following CVars:
 
     bind p "toggle r_showTris 0 2;toggle r_useScissor 1 0;toggle r_showPortals 0 1"
 
-See also the [models vs brushes](Models_vs_brushes "Models vs brushes")
-section.
+See also the [models vs brushes](Models_vs_brushes "Models vs brushes") section.
 
 Textures
 --------
 
-You can use the
-[listImages](ListImages_%28console_command%29 "ListImages (console command)")
-console command to check how the texture memory utilization of your map
-compares to the official maps. Make sure you test at each of the
-[quality settings](Quality_settings "Quality settings") .
+You can use the [listImages](ListImages_%28console_command%29 "ListImages (console command)") console command to check how the texture memory utilization of your map compares to the official maps. Make sure you test at each of the [quality settings](Quality_settings "Quality settings") .
 
 See also
 --------
 
--   [iddevnet page on optimizing Q4
-    maps](http://www.iddevnet.com/quake4/LevelEditor_Performance "http://www.iddevnet.com/quake4/LevelEditor_Performance")
+-   [iddevnet page on optimizing Q4 maps](http://www.iddevnet.com/quake4/LevelEditor_Performance "http://www.iddevnet.com/quake4/LevelEditor_Performance")
 

@@ -1,9 +1,7 @@
 Description
 -----------
 
-Used in the materials for decal sprites to set how long the decal stays
-and how it should fade out. (An example of decal sprites are bullet
-marks.)
+Used in the materials for decal sprites to set how long the decal stays and how it should fade out. (An example of decal sprites are bullet marks.)
 
 Usage
 -----
@@ -15,33 +13,27 @@ In the global section of your material shader type...
 Parameters
 ----------
 
- stay\_length 
-:   The amount of seconds the decal should stay before starting to fade.
+ stay\_length   
+The amount of seconds the decal should stay before starting to fade.
 
- fade\_length 
-:   The amount of seconds it takes for the decal to fade away.
+ fade\_length   
+The amount of seconds it takes for the decal to fade away.
 
- start\_rgba 
-:   RGBA colouring the decal will use when spawned.
+ start\_rgba   
+RGBA colouring the decal will use when spawned.
 
- end\_rgba 
-:   the RGBA colouring the decal will fade to.
+ end\_rgba   
+the RGBA colouring the decal will fade to.
 
 Notes
 -----
 
-The RGBA colours used in start\_rgba will be used for stay\_length
-seconds, after that it will fade to end\_rgba within fade\_length
-seconds.
+The RGBA colours used in start\_rgba will be used for stay\_length seconds, after that it will fade to end\_rgba within fade\_length seconds.
 
-The RGBA values are written between parentheses and consist of 4 values.
-The values are seperated by spaces. (See
-[rgba](Rgba_%28Material_stage_keyword%29 "Rgba (Material stage keyword)")
-.)
+The RGBA values are written between parentheses and consist of 4 values. The values are seperated by spaces. (See [rgba](Rgba_%28Material_stage_keyword%29 "Rgba (Material stage keyword)") .)
 
 Example: (opaque white and transparent black)
 
      (1 1 1 1) (0 0 0 0)
 
-\
 

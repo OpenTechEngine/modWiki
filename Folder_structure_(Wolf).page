@@ -1,76 +1,53 @@
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/5/5d/Rtcw2square_bg.png) The information on this page is
-specific to [Wolfenstein](Wolfenstein "Wolfenstein") .
-
-</div>
+![](/images/5/5d/Rtcw2square_bg.png) The information on this page is specific to [Wolfenstein](Wolfenstein "Wolfenstein") .
 
 ------------------------------------------------------------------------
 
-This is the folder structure of Wolfenstein. It should be noted that
-some of these folders are not present in the base folder itself.
-Instead, those folders and the assets contained therein are stored in
-[PK4 archives](PK4_%28file_format%29 "PK4 (file format)") .
+This is the folder structure of Wolfenstein. It should be noted that some of these folders are not present in the base folder itself. Instead, those folders and the assets contained therein are stored in [PK4 archives](PK4_%28file_format%29 "PK4 (file format)") .
 
-One should also note that since the single player and multiplayer
-components are maintained separately, each uses it's own unique folder
-structure, executable, library, and assets. They are for all intensive
-purposes two independent programs sharing only the title Wolfenstein.
+One should also note that since the single player and multiplayer components are maintained separately, each uses it's own unique folder structure, executable, library, and assets. They are for all intensive purposes two independent programs sharing only the title Wolfenstein.
 
-+--------------------------------------+--------------------------------------+
-| <div                                 | Single Player                        |
-| style="padding: .4em .9em .9em;">    | -------------                        |
-|                                      |                                      |
-| ### Folder structure:                | ### /base                            |
-|                                      |                                      |
-| Single Player                        | ### /base/maps                       |
-| -------------                        |                                      |
-|                                      | ### /base/videos                     |
-| <div                                 |                                      |
-| style="text-align: left; margin-left | ### /base/streampacks                |
-| : 10px; font-size: 14px;">           |                                      |
-|                                      | Multiplayer                          |
-| `         `                          | -----------                          |
-| -   /                                |                                      |
-|     [base](Folder_structure_%28Wolf% | ### /base                            |
-| 29#.2Fbase "Folder structure (Wolf)" |                                      |
-| )                                    | ### /base/ui                         |
-|     -   /                            |                                      |
-|         [maps](Folder_structure_%28W |                                      |
-| olf%29#.2Fbase.2Fmaps "Folder struct |                                      |
-| ure (Wolf)")                         |                                      |
-|     -   /                            |                                      |
-|         [videos](Folder_structure_%2 |                                      |
-| 8Wolf%29#.2Fbase.2Fvideos "Folder st |                                      |
-| ructure (Wolf)")                     |                                      |
-|     -   /                            |                                      |
-|         [streampacks](Folder_structu |                                      |
-| re_%28Wolf%29#.2Fbase.2Fstreampacks  |                                      |
-| "Folder structure (Wolf)")           |                                      |
-|                                      |                                      |
-| </div>                               |                                      |
-|                                      |                                      |
-| Multiplayer                          |                                      |
-| -----------                          |                                      |
-|                                      |                                      |
-| <div                                 |                                      |
-| style="text-align: left; margin-left |                                      |
-| : 10px; font-size: 14px;">           |                                      |
-|                                      |                                      |
-| `         `                          |                                      |
-| -   /                                |                                      |
-|     [base](Folder_structure_%28Wolf% |                                      |
-| 29#.2Fbase "Folder structure (Wolf)" |                                      |
-| )                                    |                                      |
-|     -   /                            |                                      |
-|         [ui](Folder_structure_%28Wol |                                      |
-| f%29#.2Fbase.2Fui "Folder structure  |                                      |
-| (Wolf)")                             |                                      |
-|                                      |                                      |
-| </div>                               |                                      |
-|                                      |                                      |
-| </div>                               |                                      |
-+--------------------------------------+--------------------------------------+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><div style="padding: .4em .9em .9em;">
+<h3>Folder structure:</h3>
+<h2>Single Player</h2>
+<div style="text-align: left; margin-left: 10px; font-size: 14px;">
+<code>         </code>
+<ul>
+<li>/ <a href="Folder_structure_%28Wolf%29#.2Fbase" title="Folder structure (Wolf)">base</a>
+<ul>
+<li>/ <a href="Folder_structure_%28Wolf%29#.2Fbase.2Fmaps" title="Folder structure (Wolf)">maps</a></li>
+<li>/ <a href="Folder_structure_%28Wolf%29#.2Fbase.2Fvideos" title="Folder structure (Wolf)">videos</a></li>
+<li>/ <a href="Folder_structure_%28Wolf%29#.2Fbase.2Fstreampacks" title="Folder structure (Wolf)">streampacks</a></li>
+</ul></li>
+</ul>
+</div>
+<h2>Multiplayer</h2>
+<div style="text-align: left; margin-left: 10px; font-size: 14px;">
+<code>         </code>
+<ul>
+<li>/ <a href="Folder_structure_%28Wolf%29#.2Fbase" title="Folder structure (Wolf)">base</a>
+<ul>
+<li>/ <a href="Folder_structure_%28Wolf%29#.2Fbase.2Fui" title="Folder structure (Wolf)">ui</a></li>
+</ul></li>
+</ul>
+</div>
+</div></td>
+<td align="left"><h2>Single Player</h2>
+<h3>/base</h3>
+<h3>/base/maps</h3>
+<h3>/base/videos</h3>
+<h3>/base/streampacks</h3>
+<h2>Multiplayer</h2>
+<h3>/base</h3>
+<h3>/base/ui</h3></td>
+</tr>
+</tbody>
+</table>
 
 

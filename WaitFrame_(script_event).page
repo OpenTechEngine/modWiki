@@ -1,17 +1,12 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type
-[idThread](Thread_%28scripting%29 "Thread (scripting)") , accessible via
-[sys](Scripting_basics#sys "Scripting basics") identifier.
+This event operates on an instance of the [game class](Game_class "Game class") type [idThread](Thread_%28scripting%29 "Thread (scripting)") , accessible via [sys](Scripting_basics#sys "Scripting basics") identifier.
 
 Description
 -----------
 
-Suspends execution of current
-[thread](Thread_%28scripting%29 "Thread (scripting)") for one game
-frame.
+Suspends execution of current [thread](Thread_%28scripting%29 "Thread (scripting)") for one game frame.
 
 Usage
 -----
@@ -32,8 +27,6 @@ Examples
 Notes
 -----
 
-See [threads](Thread_%28scripting%29 "Thread (scripting)") for more
-information.
+See [threads](Thread_%28scripting%29 "Thread (scripting)") for more information.
 
-\
 

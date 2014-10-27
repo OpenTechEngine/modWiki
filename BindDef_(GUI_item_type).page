@@ -1,15 +1,9 @@
-![A bindDef from
-Doom3](/images/thumb/9/95/Gui_example_binddef.png/180px-Gui_example_binddef.png)\
+![A bindDef from Doom3](/images/thumb/9/95/Gui_example_binddef.png/180px-Gui_example_binddef.png)
  *A bindDef from Doom3*
 
-Used to create bindings to keys -- think of it as an
-[editDef](EditDef_%28GUI_item_type%29 "EditDef (GUI item type)") that
-only takes one key as input and that automatically binds that key to
-some command; the GUI system itself performs the input detection and
-command assigment handling.
+Used to create bindings to keys -- think of it as an [editDef](EditDef_%28GUI_item_type%29 "EditDef (GUI item type)") that only takes one key as input and that automatically binds that key to some command; the GUI system itself performs the input detection and command assigment handling.
 
-This is, of course, used on GUIs that allow the user to change its
-keyboard bindings, like the control config menus on Doom 3.
+This is, of course, used on GUIs that allow the user to change its keyboard bindings, like the control config menus on Doom 3.
 
 Additional properties
 ---------------------
@@ -28,7 +22,4 @@ Example(s)
         forecolor   0.6, 0.8, 0.8, 1
     }
 
-\
-
-\
 

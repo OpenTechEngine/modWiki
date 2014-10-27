@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Debrisspawner_pottery3_%28entity%29 "http://modwiki.net/w/index.php?title=Debrisspawner_pottery3_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Debrisspawner_pottery3_%28entity%29 "http://modwiki.net/w/index.php?title=Debrisspawner_pottery3_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Debrisspawner_pottery3_%28entity%29 "http://modwiki.net/w/index.php?title=Debrisspawner_pottery3_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Debrisspawner_pottery3_%28entity%29 "http://modwiki.net/w/index.php?title=Debrisspawner_pottery3_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -28,78 +10,77 @@ Creates a spawner that fills the volume.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                  DESCRIPTION
-  -------------------- ------------------------------------------------------------------------------------------------------------------
-  accepts\_wounds      Description not available.
-  accurateguitrace     Description not available.
-  alignToJoint         Description not available.
-  angle                Description not available.
-  anim                 Description not available.
-  applyDamageEffects   Description not available.
-  bind                 Description not available.
-  bindOrientated       Description not available.
-  bindToBody           Description not available.
-  bindToJoint          Description not available.
-  bindanim             Description not available.
-  cameraTarget         Description not available.
-  cinematic            Description not available.
-  classname            Description not available.
-  clipmodel            Description not available.
-  cone                 Description not available.
-  cylinder             Description not available.
-  debris\_max1         The min number to spawn. Must be used with min.
-  debris\_max2         Description not available.
-  debris\_max3         Description not available.
-  debris\_max4         Description not available.
-  debris\_min1         The min number to spawn. Must be used with max.
-  debris\_min2         Description not available.
-  debris\_min3         Description not available.
-  debris\_min4         Description not available.
-  def\_debris1         The entityDef to spawn. For multiple types, use def\_debris1.X. ie def\_debris1 def\_debris1.1 def\_debris1.2
-  def\_debris2         Description not available.
-  def\_debris3         Description not available.
-  def\_debris4         Description not available.
-  dispose\_delay       Description not available.
-  duration             If set, only keeps items around for X seconds. Zero to disable. Default: 10
-  editor\_material     Description not available.
-  editor\_maxs         Description not available.
-  editor\_mins         Description not available.
-  editor\_usage        Creates a spawner that fills the volume.
-  editor\_usage1       Description not available.
-  editor\_usage2       Description not available.
-  editor\_usage3       Description not available.
-  editor\_var XXXX     Description not available.
-  fx1                  Description not available.
-  gravity              Description not available.
-  guiTarget            Description not available.
-  health               Description not available.
-  hide                 Description not available.
-  ignoreGravityZones   Description not available.
-  inherit              Description not available.
-  maxs                 Description not available.
-  mins                 Description not available.
-  model                Description not available.
-  moveToJoint          Description not available.
-  name                 Description not available.
-  networkSync          Description not available.
-  neverDormant         Description not available.
-  noJawFlap            Description not available.
-  noPortal             Description not available.
-  noclipmodel          Description not available.
-  offset\_aim          Description not available.
-  origin               Description not available.
-  power                Explode out at set power (seperate xyz components). Recommend that you keep x and y the same. Default: 20 20 20.
-  push\_cosine         Description not available.
-  pushes               Description not available.
-  rotation             Description not available.
-  scriptobject         Description not available.
-  size                 Description not available.
-  solidForTeam         Description not available.
-  spawnclass           Description not available.
-  target               Description not available.
+| KEY                | DESCRIPTION                                                                                                      |
+|--------------------|------------------------------------------------------------------------------------------------------------------|
+| accepts\_wounds    | Description not available.                                                                                       |
+| accurateguitrace   | Description not available.                                                                                       |
+| alignToJoint       | Description not available.                                                                                       |
+| angle              | Description not available.                                                                                       |
+| anim               | Description not available.                                                                                       |
+| applyDamageEffects | Description not available.                                                                                       |
+| bind               | Description not available.                                                                                       |
+| bindOrientated     | Description not available.                                                                                       |
+| bindToBody         | Description not available.                                                                                       |
+| bindToJoint        | Description not available.                                                                                       |
+| bindanim           | Description not available.                                                                                       |
+| cameraTarget       | Description not available.                                                                                       |
+| cinematic          | Description not available.                                                                                       |
+| classname          | Description not available.                                                                                       |
+| clipmodel          | Description not available.                                                                                       |
+| cone               | Description not available.                                                                                       |
+| cylinder           | Description not available.                                                                                       |
+| debris\_max1       | The min number to spawn. Must be used with min.                                                                  |
+| debris\_max2       | Description not available.                                                                                       |
+| debris\_max3       | Description not available.                                                                                       |
+| debris\_max4       | Description not available.                                                                                       |
+| debris\_min1       | The min number to spawn. Must be used with max.                                                                  |
+| debris\_min2       | Description not available.                                                                                       |
+| debris\_min3       | Description not available.                                                                                       |
+| debris\_min4       | Description not available.                                                                                       |
+| def\_debris1       | The entityDef to spawn. For multiple types, use def\_debris1.X. ie def\_debris1 def\_debris1.1 def\_debris1.2    |
+| def\_debris2       | Description not available.                                                                                       |
+| def\_debris3       | Description not available.                                                                                       |
+| def\_debris4       | Description not available.                                                                                       |
+| dispose\_delay     | Description not available.                                                                                       |
+| duration           | If set, only keeps items around for X seconds. Zero to disable. Default: 10                                      |
+| editor\_material   | Description not available.                                                                                       |
+| editor\_maxs       | Description not available.                                                                                       |
+| editor\_mins       | Description not available.                                                                                       |
+| editor\_usage      | Creates a spawner that fills the volume.                                                                         |
+| editor\_usage1     | Description not available.                                                                                       |
+| editor\_usage2     | Description not available.                                                                                       |
+| editor\_usage3     | Description not available.                                                                                       |
+| editor\_var XXXX   | Description not available.                                                                                       |
+| fx1                | Description not available.                                                                                       |
+| gravity            | Description not available.                                                                                       |
+| guiTarget          | Description not available.                                                                                       |
+| health             | Description not available.                                                                                       |
+| hide               | Description not available.                                                                                       |
+| ignoreGravityZones | Description not available.                                                                                       |
+| inherit            | Description not available.                                                                                       |
+| maxs               | Description not available.                                                                                       |
+| mins               | Description not available.                                                                                       |
+| model              | Description not available.                                                                                       |
+| moveToJoint        | Description not available.                                                                                       |
+| name               | Description not available.                                                                                       |
+| networkSync        | Description not available.                                                                                       |
+| neverDormant       | Description not available.                                                                                       |
+| noJawFlap          | Description not available.                                                                                       |
+| noPortal           | Description not available.                                                                                       |
+| noclipmodel        | Description not available.                                                                                       |
+| offset\_aim        | Description not available.                                                                                       |
+| origin             | Description not available.                                                                                       |
+| power              | Explode out at set power (seperate xyz components). Recommend that you keep x and y the same. Default: 20 20 20. |
+| push\_cosine       | Description not available.                                                                                       |
+| pushes             | Description not available.                                                                                       |
+| rotation           | Description not available.                                                                                       |
+| scriptobject       | Description not available.                                                                                       |
+| size               | Description not available.                                                                                       |
+| solidForTeam       | Description not available.                                                                                       |
+| spawnclass         | Description not available.                                                                                       |
+| target             | Description not available.                                                                                       |
 
 Inheritance
 -----------

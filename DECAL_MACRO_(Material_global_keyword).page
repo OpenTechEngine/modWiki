@@ -1,8 +1,7 @@
 Description
 -----------
 
-This statement is merely a shortcut to make a material suited for
-decals.
+This statement is merely a shortcut to make a material suited for decals.
 
 Usage
 -----
@@ -19,13 +18,11 @@ None.
 Notes
 -----
 
-Because of this statement's nature as a shortcut, it is the same as
-writing:
+Because of this statement's nature as a shortcut, it is the same as writing:
 
     polygonOffset 1
     discrete
     sort decal
     noShadows
 
-\
 

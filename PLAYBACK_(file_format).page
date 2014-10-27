@@ -1,17 +1,8 @@
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/6/69/Q4square_bg.png) The information on this page is
-specific to [Quake 4](Quake_4 "Quake 4") .
-
-</div>
+![](/images/6/69/Q4square_bg.png) The information on this page is specific to [Quake 4](Quake_4 "Quake 4") .
 
 ------------------------------------------------------------------------
 
-Playback files are recorded by the in-game playback editor. They are
-used to animate func\_playback entities.
-
-\
+Playback files are recorded by the in-game playback editor. They are used to animate func\_playback entities.
 
 Playback Syntax
 ---------------
@@ -32,13 +23,7 @@ Playback Syntax
       } 
     } 
 
-Playback definitions are broken into two parts; header and data. The
-header defines the origin, or starting position, as well as the
-framerate for the playback. The data segment contains either: a position
-vector, angle vector, both, or an empty bracket pair if there is no
-change from the last frame. The example above shows all of these cases,
-though the majority of .playbacks consist of a long string of position
-vectors.
+Playback definitions are broken into two parts; header and data. The header defines the origin, or starting position, as well as the framerate for the playback. The data segment contains either: a position vector, angle vector, both, or an empty bracket pair if there is no change from the last frame. The example above shows all of these cases, though the majority of .playbacks consist of a long string of position vectors.
 
 Playback Workflow
 -----------------
@@ -51,6 +36,5 @@ Playbacks are created with the following workflow:
 -   move around the map pretending to be your animated object
 -   switch back to the playback editor and hit stop
 -   save your playback from the playback editor
--   create a func\_playback entity in your map, set its playback
-    key/value to the file you just created
+-   create a func\_playback entity in your map, set its playback key/value to the file you just created
 

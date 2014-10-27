@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Marscity_suit_asian_chair_%28entity%29 "http://www.modwiki.net/w/index.php?title=Marscity_suit_asian_chair_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Marscity_suit_asian_chair_%28entity%29 "http://www.modwiki.net/w/index.php?title=Marscity_suit_asian_chair_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Marscity_suit_asian_chair_%28entity%29 "http://www.modwiki.net/w/index.php?title=Marscity_suit_asian_chair_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Marscity_suit_asian_chair_%28entity%29 "http://www.modwiki.net/w/index.php?title=Marscity_suit_asian_chair_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -28,140 +10,139 @@ Description not available.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                       DESCRIPTION
-  ------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  angle                     Description not available.
-  anim                      Anim to play when talktrigger is set.
-  bind                      Description not available.
-  bindOrientated            Description not available.
-  bindToBody                Description not available.
-  bindToJoint               Description not available.
-  bindanim                  Description not available.
-  bleed                     Description not available.
-  blink\_max                Maximum time to wait between eye blinks.
-  blink\_min                Minimum time to wait between eye blinks.
-  bone\_focus               Where the character's eyes are in his head
-  bone\_leftEye             Which bone to modify to adjust the left eye
-  bone\_orientation         Description not available.
-  bone\_rightEye            Which bone to modify to adjust the right eye
-  cameraTarget              Description not available.
-  chatter\_max              maximum amount of time to wait till playing chat sounds when idle
-  chatter\_min              minimum amount of time to wait till playing chat sounds when idle
-  cinematic                 Description not available.
-  classname                 Description not available.
-  clipmodel                 Description not available.
-  cone                      Description not available.
-  copy\_joint XXXX          Description not available.
-  copy\_joint\_world XXXX   Description not available.
-  cylinder                  Description not available.
-  damage\_zone XXXX         Description not available.
-  def\_attach               Name of entityDef to attach to model. Set 'joint' in the attached entity def to the joint to attach to, and use 'origin' and 'angles' to offset it.
-  def\_dropDeathItem        Description not available.
-  def\_dropGibItem1         Description not available.
-  def\_dropGibItem2         Description not available.
-  def\_dropGibItem3         Description not available.
-  def\_dropGibItem4         Description not available.
-  def\_dropGibItem5         Description not available.
-  def\_dropGibItem6         Description not available.
-  def\_dropGibItem7         Description not available.
-  def\_dropGibItem8         Description not available.
-  def\_head                 Description not available.
-  dropDeathItemJoint        Description not available.
-  dropDeathItemRotation     Description not available.
-  dropGibItem1Joint         Description not available.
-  dropGibItem2Joint         Description not available.
-  dropGibItem3Joint         Description not available.
-  dropGibItem4Joint         Description not available.
-  dropGibItem5Joint         Description not available.
-  dropGibItem6Joint         Description not available.
-  dropGibItem7Joint         Description not available.
-  dropGibItem8Joint         Description not available.
-  editor\_color             Description not available.
-  editor\_copy              Description not available.
-  editor\_maxs              Description not available.
-  editor\_mins              Description not available.
-  editor\_var XXXX          Description not available.
-  eye\_focus\_rate          how quickly the eyes focus on a target
-  eye\_horizontal\_offset   horizontal offset from the player's view that the character's eyes should focus on. negative values bring eyes closer together.
-  eye\_turn\_max            max angular offset for eye joint before head has to turn.
-  eye\_turn\_min            min angular offset for eye joint before head has to turn.
-  eye\_verticle\_offset     verticle offset from the player's view that the character's eyes should focus on.
-  focus\_align\_time        how long character should glance at the player before turning his head.
-  gib                       Description not available.
-  guiTarget                 Description not available.
-  head\_focus\_rate         how quickly the head focuses on a target
-  head\_joint               Description not available.
-  head\_look                Description not available.
-  health                    Description not available.
-  hide                      Causes character to be hfidden and nonsolid until triggered.
-  ignore\_push              Set to 1 to prevent character from moving out of the way when player pushes him.
-  ik\_ankle1                Description not available.
-  ik\_ankle2                Description not available.
-  ik\_dir1                  Description not available.
-  ik\_dir2                  Description not available.
-  ik\_foot1                 Description not available.
-  ik\_foot2                 Description not available.
-  ik\_footSize              Description not available.
-  ik\_hip1                  Description not available.
-  ik\_hip2                  Description not available.
-  ik\_knee1                 Description not available.
-  ik\_knee2                 Description not available.
-  ik\_numLegs               Description not available.
-  ik\_waist                 Description not available.
-  inherit                   Description not available.
-  kick\_force               how much force to apply to blocking obstacles to get them out of the way.
-  look\_joint XXXX          Description not available.
-  look\_max                 maximum angles for head looks
-  look\_min                 minimum angles for head looks
-  maxs                      Description not available.
-  mins                      Description not available.
-  model                     Description not available.
-  model\_gib                Description not available.
-  name                      Description not available.
-  networkSync               Description not available.
-  neverDormant              Description not available.
-  noGrab                    Description not available.
-  noclipmodel               Description not available.
-  on\_activate              Description not available.
-  origin                    Description not available.
-  ragdoll                   Specifies the .af file to use for a ragdoll when the creature dies
-  rank                      Monsters only fight back when attacked by members of it's own team when its rank is greater than or equal to the attacker's rank. A rank of 0 will never fight back.
-  rotation                  Description not available.
-  scriptobject              Description not available.
-  size                      Description not available.
-  skin\_xray                Description not available.
-  slowmo                    Description not available.
-  snd\_bounce               Description not available.
-  snd\_cower                Description not available.
-  snd\_death                Description not available.
-  snd\_footstep             Description not available.
-  snd\_gibbed               Description not available.
-  snd\_respond              Description not available.
-  snd\_talk\_primary        Description not available.
-  snd\_talk\_secondary      Description not available.
-  snd\_talk\_secondary2     Description not available.
-  snd\_talk\_trigger        Description not available.
-  solidForTeam              Description not available.
-  spawnclass                Description not available.
-  state                     Description not available.
-  talk0\_blendin            \# frames to blend into triggered talk anim.
-  talk0\_blendout           \# frames to blend out of triggered talk anim.
-  talk1\_blendin            \# frames to blend into primary talk anim.
-  talk1\_blendout           \# frames to blend out of primary talk anim.
-  talk2\_blendin            \# frames to blend into secondary talk anim.
-  talk2\_blendout           \# frames to blend out of secondary talk anim.
-  talk\_no\_turn            Don't turn body toward player when talking, just his head.
-  talk\_time                Description not available.
-  talkradius                If the player steps outside this distance from the character, the conversation is over and the character goes back to what he was doing.
-  talks                     whether character can be engaged in conversation
-  talktime                  How long the character will wait for the player to press the talk button before returning to what he was doing.
-  target                    set of path\_\* entities to visit.
-  team                      Monsters do not actively attack players or monsters with the same team \#.
-  turn\_rate                Maximum \# of degrees character can turn per second
-  use\_aas                  extension of the aas file to use for navigation.
+| KEY                     | DESCRIPTION                                                                                                                                                          |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| angle                   | Description not available.                                                                                                                                           |
+| anim                    | Anim to play when talktrigger is set.                                                                                                                                |
+| bind                    | Description not available.                                                                                                                                           |
+| bindOrientated          | Description not available.                                                                                                                                           |
+| bindToBody              | Description not available.                                                                                                                                           |
+| bindToJoint             | Description not available.                                                                                                                                           |
+| bindanim                | Description not available.                                                                                                                                           |
+| bleed                   | Description not available.                                                                                                                                           |
+| blink\_max              | Maximum time to wait between eye blinks.                                                                                                                             |
+| blink\_min              | Minimum time to wait between eye blinks.                                                                                                                             |
+| bone\_focus             | Where the character's eyes are in his head                                                                                                                           |
+| bone\_leftEye           | Which bone to modify to adjust the left eye                                                                                                                          |
+| bone\_orientation       | Description not available.                                                                                                                                           |
+| bone\_rightEye          | Which bone to modify to adjust the right eye                                                                                                                         |
+| cameraTarget            | Description not available.                                                                                                                                           |
+| chatter\_max            | maximum amount of time to wait till playing chat sounds when idle                                                                                                    |
+| chatter\_min            | minimum amount of time to wait till playing chat sounds when idle                                                                                                    |
+| cinematic               | Description not available.                                                                                                                                           |
+| classname               | Description not available.                                                                                                                                           |
+| clipmodel               | Description not available.                                                                                                                                           |
+| cone                    | Description not available.                                                                                                                                           |
+| copy\_joint XXXX        | Description not available.                                                                                                                                           |
+| copy\_joint\_world XXXX | Description not available.                                                                                                                                           |
+| cylinder                | Description not available.                                                                                                                                           |
+| damage\_zone XXXX       | Description not available.                                                                                                                                           |
+| def\_attach             | Name of entityDef to attach to model. Set 'joint' in the attached entity def to the joint to attach to, and use 'origin' and 'angles' to offset it.                  |
+| def\_dropDeathItem      | Description not available.                                                                                                                                           |
+| def\_dropGibItem1       | Description not available.                                                                                                                                           |
+| def\_dropGibItem2       | Description not available.                                                                                                                                           |
+| def\_dropGibItem3       | Description not available.                                                                                                                                           |
+| def\_dropGibItem4       | Description not available.                                                                                                                                           |
+| def\_dropGibItem5       | Description not available.                                                                                                                                           |
+| def\_dropGibItem6       | Description not available.                                                                                                                                           |
+| def\_dropGibItem7       | Description not available.                                                                                                                                           |
+| def\_dropGibItem8       | Description not available.                                                                                                                                           |
+| def\_head               | Description not available.                                                                                                                                           |
+| dropDeathItemJoint      | Description not available.                                                                                                                                           |
+| dropDeathItemRotation   | Description not available.                                                                                                                                           |
+| dropGibItem1Joint       | Description not available.                                                                                                                                           |
+| dropGibItem2Joint       | Description not available.                                                                                                                                           |
+| dropGibItem3Joint       | Description not available.                                                                                                                                           |
+| dropGibItem4Joint       | Description not available.                                                                                                                                           |
+| dropGibItem5Joint       | Description not available.                                                                                                                                           |
+| dropGibItem6Joint       | Description not available.                                                                                                                                           |
+| dropGibItem7Joint       | Description not available.                                                                                                                                           |
+| dropGibItem8Joint       | Description not available.                                                                                                                                           |
+| editor\_color           | Description not available.                                                                                                                                           |
+| editor\_copy            | Description not available.                                                                                                                                           |
+| editor\_maxs            | Description not available.                                                                                                                                           |
+| editor\_mins            | Description not available.                                                                                                                                           |
+| editor\_var XXXX        | Description not available.                                                                                                                                           |
+| eye\_focus\_rate        | how quickly the eyes focus on a target                                                                                                                               |
+| eye\_horizontal\_offset | horizontal offset from the player's view that the character's eyes should focus on. negative values bring eyes closer together.                                      |
+| eye\_turn\_max          | max angular offset for eye joint before head has to turn.                                                                                                            |
+| eye\_turn\_min          | min angular offset for eye joint before head has to turn.                                                                                                            |
+| eye\_verticle\_offset   | verticle offset from the player's view that the character's eyes should focus on.                                                                                    |
+| focus\_align\_time      | how long character should glance at the player before turning his head.                                                                                              |
+| gib                     | Description not available.                                                                                                                                           |
+| guiTarget               | Description not available.                                                                                                                                           |
+| head\_focus\_rate       | how quickly the head focuses on a target                                                                                                                             |
+| head\_joint             | Description not available.                                                                                                                                           |
+| head\_look              | Description not available.                                                                                                                                           |
+| health                  | Description not available.                                                                                                                                           |
+| hide                    | Causes character to be hfidden and nonsolid until triggered.                                                                                                         |
+| ignore\_push            | Set to 1 to prevent character from moving out of the way when player pushes him.                                                                                     |
+| ik\_ankle1              | Description not available.                                                                                                                                           |
+| ik\_ankle2              | Description not available.                                                                                                                                           |
+| ik\_dir1                | Description not available.                                                                                                                                           |
+| ik\_dir2                | Description not available.                                                                                                                                           |
+| ik\_foot1               | Description not available.                                                                                                                                           |
+| ik\_foot2               | Description not available.                                                                                                                                           |
+| ik\_footSize            | Description not available.                                                                                                                                           |
+| ik\_hip1                | Description not available.                                                                                                                                           |
+| ik\_hip2                | Description not available.                                                                                                                                           |
+| ik\_knee1               | Description not available.                                                                                                                                           |
+| ik\_knee2               | Description not available.                                                                                                                                           |
+| ik\_numLegs             | Description not available.                                                                                                                                           |
+| ik\_waist               | Description not available.                                                                                                                                           |
+| inherit                 | Description not available.                                                                                                                                           |
+| kick\_force             | how much force to apply to blocking obstacles to get them out of the way.                                                                                            |
+| look\_joint XXXX        | Description not available.                                                                                                                                           |
+| look\_max               | maximum angles for head looks                                                                                                                                        |
+| look\_min               | minimum angles for head looks                                                                                                                                        |
+| maxs                    | Description not available.                                                                                                                                           |
+| mins                    | Description not available.                                                                                                                                           |
+| model                   | Description not available.                                                                                                                                           |
+| model\_gib              | Description not available.                                                                                                                                           |
+| name                    | Description not available.                                                                                                                                           |
+| networkSync             | Description not available.                                                                                                                                           |
+| neverDormant            | Description not available.                                                                                                                                           |
+| noGrab                  | Description not available.                                                                                                                                           |
+| noclipmodel             | Description not available.                                                                                                                                           |
+| on\_activate            | Description not available.                                                                                                                                           |
+| origin                  | Description not available.                                                                                                                                           |
+| ragdoll                 | Specifies the .af file to use for a ragdoll when the creature dies                                                                                                   |
+| rank                    | Monsters only fight back when attacked by members of it's own team when its rank is greater than or equal to the attacker's rank. A rank of 0 will never fight back. |
+| rotation                | Description not available.                                                                                                                                           |
+| scriptobject            | Description not available.                                                                                                                                           |
+| size                    | Description not available.                                                                                                                                           |
+| skin\_xray              | Description not available.                                                                                                                                           |
+| slowmo                  | Description not available.                                                                                                                                           |
+| snd\_bounce             | Description not available.                                                                                                                                           |
+| snd\_cower              | Description not available.                                                                                                                                           |
+| snd\_death              | Description not available.                                                                                                                                           |
+| snd\_footstep           | Description not available.                                                                                                                                           |
+| snd\_gibbed             | Description not available.                                                                                                                                           |
+| snd\_respond            | Description not available.                                                                                                                                           |
+| snd\_talk\_primary      | Description not available.                                                                                                                                           |
+| snd\_talk\_secondary    | Description not available.                                                                                                                                           |
+| snd\_talk\_secondary2   | Description not available.                                                                                                                                           |
+| snd\_talk\_trigger      | Description not available.                                                                                                                                           |
+| solidForTeam            | Description not available.                                                                                                                                           |
+| spawnclass              | Description not available.                                                                                                                                           |
+| state                   | Description not available.                                                                                                                                           |
+| talk0\_blendin          | \# frames to blend into triggered talk anim.                                                                                                                         |
+| talk0\_blendout         | \# frames to blend out of triggered talk anim.                                                                                                                       |
+| talk1\_blendin          | \# frames to blend into primary talk anim.                                                                                                                           |
+| talk1\_blendout         | \# frames to blend out of primary talk anim.                                                                                                                         |
+| talk2\_blendin          | \# frames to blend into secondary talk anim.                                                                                                                         |
+| talk2\_blendout         | \# frames to blend out of secondary talk anim.                                                                                                                       |
+| talk\_no\_turn          | Don't turn body toward player when talking, just his head.                                                                                                           |
+| talk\_time              | Description not available.                                                                                                                                           |
+| talkradius              | If the player steps outside this distance from the character, the conversation is over and the character goes back to what he was doing.                             |
+| talks                   | whether character can be engaged in conversation                                                                                                                     |
+| talktime                | How long the character will wait for the player to press the talk button before returning to what he was doing.                                                      |
+| target                  | set of path\_\* entities to visit.                                                                                                                                   |
+| team                    | Monsters do not actively attack players or monsters with the same team \#.                                                                                           |
+| turn\_rate              | Maximum \# of degrees character can turn per second                                                                                                                  |
+| use\_aas                | extension of the aas file to use for navigation.                                                                                                                     |
 
 Inheritance
 -----------

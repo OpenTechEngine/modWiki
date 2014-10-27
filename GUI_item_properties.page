@@ -1,32 +1,21 @@
-Properties say how the item will be drawn or work. They are defined on
-the script source, but can have their values changed at runtime.
+Properties say how the item will be drawn or work. They are defined on the script source, but can have their values changed at runtime.
 
-Properties are featured somewhere inside each of a GUI's
-[items](GUI_items "GUI items") , and use the following syntax:
+Properties are featured somewhere inside each of a GUI's [items](GUI_items "GUI items") , and use the following syntax:
 
     property_name property_values
 
-There are different value types used - as a whole, though, they're
-either numeric (used for integers, floats and booleans) or string (used
-for filenames, always between quotes). For example,
+There are different value types used - as a whole, though, they're either numeric (used for integers, floats and booleans) or string (used for filenames, always between quotes). For example,
 
     needsRender  1
     background  "gui/mainmenu/star"
 
-Some of the properties can also have several different values (or
-parameters) on the same line - they're usually separated by commands.
-For example,
+Some of the properties can also have several different values (or parameters) on the same line - they're usually separated by commands. For example,
 
     shear        0, 1
     rect        0, 0, 640, 480
     matcolor    0.7, 0.7, 0.7, 0
 
-Also, notice that the property values aren't simply set when the GUI is
-shown. Instead, their initial values are updated on each frame, acting
-as a *live* property. This makes no difference when a property has a
-constant value like *10* or *"Lorem Ipsum"* , but when you are using GUI
-variables or parameters, the properties themselves will have their
-values changed when their variable or parameters change.
+Also, notice that the property values aren't simply set when the GUI is shown. Instead, their initial values are updated on each frame, acting as a *live* property. This makes no difference when a property has a constant value like *10* or *"Lorem Ipsum"* , but when you are using GUI variables or parameters, the properties themselves will have their values changed when their variable or parameters change.
 
 For example, using the *gui::name* format for GUI parameters:
 
@@ -36,27 +25,16 @@ Or using internal calculations:
 
     matcolor 0.25, 0.45, 0.4, pdflick2 [ time * .0025 ] / 2.5
 
-On both cases, properties will change to reflect the change on their
-variables or parameters over time. The list of available parameters
-depends on how each different GUI works, though, as most of them come
-from hard-coded interaction with other
-[scripting](Scripting "Scripting") systems. Check the [Guis
-(folder)](Guis_%28folder%29 "Guis (folder)") list to see how most of
-Doom 3's built-in GUIs work on that aspect.
+On both cases, properties will change to reflect the change on their variables or parameters over time. The list of available parameters depends on how each different GUI works, though, as most of them come from hard-coded interaction with other [scripting](Scripting "Scripting") systems. Check the [Guis (folder)](Guis_%28folder%29 "Guis (folder)") list to see how most of Doom 3's built-in GUIs work on that aspect.
 
 Available item properties
 -------------------------
 
-The following item properties are known. Most of them apply to all kinds
-of [GUI items](GUI_items "GUI items") , although a few of them are
-reserved for specific types and are noted as so. Also, due to their
-names, the task each of them perform is pretty much obvious.
+The following item properties are known. Most of them apply to all kinds of [GUI items](GUI_items "GUI items") , although a few of them are reserved for specific types and are noted as so. Also, due to their names, the task each of them perform is pretty much obvious.
 
-Apparently, the GUI system makes no differentiation for uppercase and
-lowercase property names.
+Apparently, the GUI system makes no differentiation for uppercase and lowercase property names.
 
-Most of the examples featured on the following documentation come
-straight from Doom 3.
+Most of the examples featured on the following documentation come straight from Doom 3.
 
 -   [anim](Anim_%28GUI_item_property%29 "Anim (GUI item property)")
 -   [animClass](AnimClass_%28GUI_item_property%29 "AnimClass (GUI item property)")

@@ -18,64 +18,126 @@ Parameters
 Flags
 -----
 
-  --------------------------------------------------------------------------
-  Flag                     Enabled                  Description
-  ------------------------ ------------------------ ------------------------
-  CVAR\_ALL                                         all flags
-
-  CVAR\_BOOL                                        variable is a boolean
-
-  CVAR\_INTEGER                                     variable is an integer
-
-  CVAR\_FLOAT                                       variable is a float
-
-  CVAR\_SYSTEM                                      system variable
-
-  CVAR\_RENDERER           X                        renderer variable
-
-  CVAR\_SOUND                                       sound variable
-
-  CVAR\_GUI                                         gui variable
-
-  CVAR\_GAME                                        game variable
-
-  CVAR\_TOOL                                        tool variable
-
-  CVAR\_USERINFO                                    sent to servers,
-                                                    available to menu
-
-  CVAR\_SERVERINFO                                  sent from servers,
-                                                    available to menu
-
-  CVAR\_NETWORKSYNC                                 cvar is synced from the
-                                                    server to clients
-
-  CVAR\_STATIC             X                        statically declared, not
-                                                    user created
-
-  CVAR\_CHEAT              X                        variable is considered a
-                                                    cheat
-
-  CVAR\_NOCHEAT                                     variable is not
-                                                    considered a cheat
-
-  CVAR\_INIT                                        can only be set from the
-                                                    command-line
-
-  CVAR\_ROM                                         display only, cannot be
-                                                    set by user at all
-
-  CVAR\_ARCHIVE                                     set to cause it to be
-                                                    saved to a config file
-
-  CVAR\_MODIFIED           X                        set when the variable is
-                                                    modified
-  --------------------------------------------------------------------------
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Flag</th>
+<th align="left">Enabled</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">CVAR_ALL</td>
+<td align="left"></td>
+<td align="left">all flags</td>
+</tr>
+<tr class="even">
+<td align="left">CVAR_BOOL</td>
+<td align="left"></td>
+<td align="left">variable is a boolean</td>
+</tr>
+<tr class="odd">
+<td align="left">CVAR_INTEGER</td>
+<td align="left"></td>
+<td align="left">variable is an integer</td>
+</tr>
+<tr class="even">
+<td align="left">CVAR_FLOAT</td>
+<td align="left"></td>
+<td align="left">variable is a float</td>
+</tr>
+<tr class="odd">
+<td align="left">CVAR_SYSTEM</td>
+<td align="left"></td>
+<td align="left">system variable</td>
+</tr>
+<tr class="even">
+<td align="left">CVAR_RENDERER</td>
+<td align="left">X</td>
+<td align="left">renderer variable</td>
+</tr>
+<tr class="odd">
+<td align="left">CVAR_SOUND</td>
+<td align="left"></td>
+<td align="left">sound variable</td>
+</tr>
+<tr class="even">
+<td align="left">CVAR_GUI</td>
+<td align="left"></td>
+<td align="left">gui variable</td>
+</tr>
+<tr class="odd">
+<td align="left">CVAR_GAME</td>
+<td align="left"></td>
+<td align="left">game variable</td>
+</tr>
+<tr class="even">
+<td align="left">CVAR_TOOL</td>
+<td align="left"></td>
+<td align="left">tool variable</td>
+</tr>
+<tr class="odd">
+<td align="left">CVAR_USERINFO</td>
+<td align="left"></td>
+<td align="left">sent to servers, available to menu</td>
+</tr>
+<tr class="even">
+<td align="left">CVAR_SERVERINFO</td>
+<td align="left"></td>
+<td align="left">sent from servers, available to menu</td>
+</tr>
+<tr class="odd">
+<td align="left">CVAR_NETWORKSYNC</td>
+<td align="left"></td>
+<td align="left">cvar is synced from the server to clients</td>
+</tr>
+<tr class="even">
+<td align="left">CVAR_STATIC</td>
+<td align="left">X</td>
+<td align="left">statically declared, not user created</td>
+</tr>
+<tr class="odd">
+<td align="left">CVAR_CHEAT</td>
+<td align="left">X</td>
+<td align="left">variable is considered a cheat</td>
+</tr>
+<tr class="even">
+<td align="left">CVAR_NOCHEAT</td>
+<td align="left"></td>
+<td align="left">variable is not considered a cheat</td>
+</tr>
+<tr class="odd">
+<td align="left">CVAR_INIT</td>
+<td align="left"></td>
+<td align="left">can only be set from the command-line</td>
+</tr>
+<tr class="even">
+<td align="left">CVAR_ROM</td>
+<td align="left"></td>
+<td align="left">display only, cannot be set by user at all</td>
+</tr>
+<tr class="odd">
+<td align="left">CVAR_ARCHIVE</td>
+<td align="left"></td>
+<td align="left">set to cause it to be saved to a config file</td>
+</tr>
+<tr class="even">
+<td align="left">CVAR_MODIFIED</td>
+<td align="left">X</td>
+<td align="left">set when the variable is modified</td>
+</tr>
+</tbody>
+</table>
 
 Notes
 -----
 
 Not available.
 
-\
 

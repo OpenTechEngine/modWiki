@@ -1,55 +1,22 @@
-Since id Tech-based games use a lot of [ASCII text
-files](File_formats "File formats") here are a few different editors
-that you can use. Those with [id Tech](Id_Tech "Id Tech") specific
-customisations are listed before generic editors.
+Since id Tech-based games use a lot of [ASCII text files](File_formats "File formats") here are a few different editors that you can use. Those with [id Tech](Id_Tech "Id Tech") specific customisations are listed before generic editors.
 
--   Doom 3 - Just type
-    [editDecls](EditDecls_%28console_command%29 "EditDecls (console command)")
-    into the [console](Console "Console") . Please note that some
-    declarations cannot be created this way.
--   [UltraEdit32](http://www.ultraedit.com/index.php?name=UE_LatestChanges "http://www.ultraedit.com/index.php?name=UE_LatestChanges") -
-    A very good shareware text editor with great search/replace in
-    files/macro recording/tabbed files/regexp and all that stuff.
-    -   [D3 script and GUI syntax
-        highlighter](https://web.archive.org/web/20110312235652/http://www.pcgamemods.com/8590 "http://www.pcgamemods.com/8590")
-        by eutectic.
--   [ConText](http://www.context.cx/ "http://www.context.cx/") - A
-    freeware text editor with many programmer oriented features like
-    code templates.
-    -   [Doom 3 Script syntax
-        highlighter](https://web.archive.org/web/20110312235652/http://context.cx/component/option,com_docman/task,doc_details/gid,58/ "http://context.cx/component/option,com_docman/task,doc_details/gid,58/")
-    -   [ETQW Script syntax
-        highlighter](http://xor.planetaclix.pt/files/etqwscript_0711.zip "http://xor.planetaclix.pt/files/etqwscript_0711.zip")
--   [Editplus](http://www.editplus.com/ "http://www.editplus.com/") - A
-    very good text editor with syntax files for many languages.
-    -   [Doom 3 Script syntax
-        highlighter](https://web.archive.org/web/20110312235652/http://www.editplus.com/dn.cgi?d3.zip "http://www.editplus.com/dn.cgi?d3.zip")
--   [Editpad](http://www.editpadpro.com/ "http://www.editpadpro.com/")
-    (Pro/Lite/Classic) - A third party text editor that supports opening
-    multiple files at once and search /replace functionality via use of
-    regular expressions.
--   [SavageEd](https://web.archive.org/web/20110312235652/http://sevag.krikorian.googlepages.com/savageed "http://sevag.krikorian.googlepages.com/savageed")
-    A very fast, very efficient text editor without the architectural
-    drawbacks of Notepad.
+-   Doom 3 - Just type [editDecls](EditDecls_%28console_command%29 "EditDecls (console command)") into the [console](Console "Console") . Please note that some declarations cannot be created this way.
+-   [UltraEdit32](http://www.ultraedit.com/index.php?name=UE_LatestChanges "http://www.ultraedit.com/index.php?name=UE_LatestChanges") - A very good shareware text editor with great search/replace in files/macro recording/tabbed files/regexp and all that stuff.
+    -   [D3 script and GUI syntax highlighter](https://web.archive.org/web/20110312235652/http://www.pcgamemods.com/8590 "http://www.pcgamemods.com/8590") by eutectic.
+-   [ConText](http://www.context.cx/ "http://www.context.cx/") - A freeware text editor with many programmer oriented features like code templates.
+    -   [Doom 3 Script syntax highlighter](https://web.archive.org/web/20110312235652/http://context.cx/component/option,com_docman/task,doc_details/gid,58/ "http://context.cx/component/option,com_docman/task,doc_details/gid,58/")
+    -   [ETQW Script syntax highlighter](http://xor.planetaclix.pt/files/etqwscript_0711.zip "http://xor.planetaclix.pt/files/etqwscript_0711.zip")
+-   [Editplus](http://www.editplus.com/ "http://www.editplus.com/") - A very good text editor with syntax files for many languages.
+    -   [Doom 3 Script syntax highlighter](https://web.archive.org/web/20110312235652/http://www.editplus.com/dn.cgi?d3.zip "http://www.editplus.com/dn.cgi?d3.zip")
+-   [Editpad](http://www.editpadpro.com/ "http://www.editpadpro.com/") (Pro/Lite/Classic) - A third party text editor that supports opening multiple files at once and search /replace functionality via use of regular expressions.
+-   [SavageEd](https://web.archive.org/web/20110312235652/http://sevag.krikorian.googlepages.com/savageed "http://sevag.krikorian.googlepages.com/savageed") A very fast, very efficient text editor without the architectural drawbacks of Notepad.
 
-**NOTE:** There is a discrepancy in the way Unix, Windows, and Mac
-operating systems terminate a line of text. The details of which can be
-read
-[here](http://en.wikipedia.org/wiki/CRLF "http://en.wikipedia.org/wiki/CRLF")
-. Because of this, text files created under one operating system may not
-display properly in another, provided the text editor in use does not
-take this discrepancy into account. One program that falls victim to
-this problem is Windows Notepad.
+**NOTE:** There is a discrepancy in the way Unix, Windows, and Mac operating systems terminate a line of text. The details of which can be read [here](http://en.wikipedia.org/wiki/CRLF "http://en.wikipedia.org/wiki/CRLF") . Because of this, text files created under one operating system may not display properly in another, provided the text editor in use does not take this discrepancy into account. One program that falls victim to this problem is Windows Notepad.
 
 Other utilities to work with text files
 ---------------------------------------
 
-It's also handy to have a grep tool available to search the contents of
-multiple [declaration](Declarations "Declarations") files for a specific
-item or pattern. For instance, searching for a specific [material
-entry](Material_%28decl%29 "Material (decl)") if you are unsure in which
-. [MTR](MTR_%28file_format%29 "MTR (file format)") file it was located
-in.
+It's also handy to have a grep tool available to search the contents of multiple [declaration](Declarations "Declarations") files for a specific item or pattern. For instance, searching for a specific [material entry](Material_%28decl%29 "Material (decl)") if you are unsure in which . [MTR](MTR_%28file_format%29 "MTR (file format)") file it was located in.
 
 -   [Windows Grep](http://www.wingrep.com/ "http://www.wingrep.com/")
 

@@ -1,29 +1,26 @@
 Description
 -----------
 
-The trigger\_flashlight entity is used to activate targeted entities or
-call a script function. In this case, the trigger is tripped by shining
-the flashlight on it.
+The trigger\_flashlight entity is used to activate targeted entities or call a script function. In this case, the trigger is tripped by shining the flashlight on it.
 
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY             DESCRIPTION
-  --------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  wait            The duration in seconds before a trigger is reset, thereby allowing it to be tripped again. '-1' can be used to prevent the trigger from reseting, hence making it a single use trigger.
-  random          A random value between 0 and the number specified here is added to the duration specified by the 'wait' key/value pair.
-  delay           The duration in seconds before a trigger activates it's targets when tripped.
-  random\_delay   A random value between 0 and the number specified here is added to the duration specified by the 'delay' key/value pair.
-  call            The script function to call when tripped.
-  requires        An item required to be in the player's inventory before this trigger can be tripped.
-  removeItem      Whether the item specified by the 'requires' key/value pair should be removed once the trigger has been tripped.
-  anyTouch        Any entity can trip the trigger via touch.
-  noTouch         The trigger cannot be tripped via touch. It must be triggered externally, either by another trigger or by a script.
-  triggerFirst    The trigger must be activated before it can be tripped.
-  noClient        The trigger cannot be tripped by players.
+| KEY           | DESCRIPTION                                                                                                                                                                              |
+|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| wait          | The duration in seconds before a trigger is reset, thereby allowing it to be tripped again. '-1' can be used to prevent the trigger from reseting, hence making it a single use trigger. |
+| random        | A random value between 0 and the number specified here is added to the duration specified by the 'wait' key/value pair.                                                                  |
+| delay         | The duration in seconds before a trigger activates it's targets when tripped.                                                                                                            |
+| random\_delay | A random value between 0 and the number specified here is added to the duration specified by the 'delay' key/value pair.                                                                 |
+| call          | The script function to call when tripped.                                                                                                                                                |
+| requires      | An item required to be in the player's inventory before this trigger can be tripped.                                                                                                     |
+| removeItem    | Whether the item specified by the 'requires' key/value pair should be removed once the trigger has been tripped.                                                                         |
+| anyTouch      | Any entity can trip the trigger via touch.                                                                                                                                               |
+| noTouch       | The trigger cannot be tripped via touch. It must be triggered externally, either by another trigger or by a script.                                                                      |
+| triggerFirst  | The trigger must be activated before it can be tripped.                                                                                                                                  |
+| noClient      | The trigger cannot be tripped by players.                                                                                                                                                |
 
 Inheritance
 -----------

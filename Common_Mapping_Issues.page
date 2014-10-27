@@ -3,25 +3,15 @@ General Editor Problems
 
 ### There are many black textures in the texture browser
 
-Most idTech 4 based games come with a lot of redundant, nonfunctional
-material shaders. The problem is that the declarations reference image
-files that were not shipped with the game.
+Most idTech 4 based games come with a lot of redundant, nonfunctional material shaders. The problem is that the declarations reference image files that were not shipped with the game.
 
-At present no level editor, including the built in editor, validates
-each shader to ensure the images exist. This results in a texture
-browser where half the textures listed are of no use.
+At present no level editor, including the built in editor, validates each shader to ensure the images exist. This results in a texture browser where half the textures listed are of no use.
 
-In the case of Doom 3, there is a workaround and the same solution could
-be applied to other games. Check [eutectic's clean
-paks](Eutectic%27s_clean_paks "Eutectic's clean paks") for more details.
+In the case of Doom 3, there is a workaround and the same solution could be applied to other games. Check [eutectic's clean paks](Eutectic%27s_clean_paks "Eutectic's clean paks") for more details.
 
 ### Rendering problems
 
-Make sure you are running the game in windowed mode (press ALT+ENTER or
-set [r\_fullscreen](R_fullscreen_%28cvar%29 "R fullscreen (cvar)") to 0)
-and you've disabled anti-aliasing (Check your video card settings and
-set [r\_multisamples](R_multiSamples_%28cvar%29 "R multiSamples (cvar)")
-to 0) before you launch the editor.
+Make sure you are running the game in windowed mode (press ALT+ENTER or set [r\_fullscreen](R_fullscreen_%28cvar%29 "R fullscreen (cvar)") to 0) and you've disabled anti-aliasing (Check your video card settings and set [r\_multisamples](R_multiSamples_%28cvar%29 "R multiSamples (cvar)") to 0) before you launch the editor.
 
 If you're running Vista you will need to disable Aero and themes.
 
@@ -32,44 +22,20 @@ The following errors are encountered when compiling a map.
 
 ### Warning: leaked
 
-*Severe* : Leaks occur when an [entity](Entity "Entity") is exposed to
-the void. This can be caused by a literal hole in the hull of your map,
-a hull brush with a non-sealing material applied to it, or simply an
-entity whose origin rests in the void.
+*Severe* : Leaks occur when an [entity](Entity "Entity") is exposed to the void. This can be caused by a literal hole in the hull of your map, a hull brush with a non-sealing material applied to it, or simply an entity whose origin rests in the void.
 
 #### Finding Leaks
 
-First of all, make sure the map has one info\_player\_start entity.
-Whenever you compile a map and a leak occurs information about that leak
-is stored in the [pointfile](Pointfile "Pointfile") . You can view this
-information by selecting File \> Pointfile in
-[DoomEdit](DoomEdit "DoomEdit") immediately after a failed compile.
+First of all, make sure the map has one info\_player\_start entity. Whenever you compile a map and a leak occurs information about that leak is stored in the [pointfile](Pointfile "Pointfile") . You can view this information by selecting File \> Pointfile in [DoomEdit](DoomEdit "DoomEdit") immediately after a failed compile.
 
-The editor will draw a red line connecting an entity to empty space. You
-should travel along the line ( [hotkey:
-shift+ctrl+k](DoomEdit_hotkeys "DoomEdit hotkeys") ) until you find the
-hole in your level and seal it with a [brush](Brush "Brush") . If the
-reason for the leak is not immediately obvious review the following:
+The editor will draw a red line connecting an entity to empty space. You should travel along the line ( [hotkey: shift+ctrl+k](DoomEdit_hotkeys "DoomEdit hotkeys") ) until you find the hole in your level and seal it with a [brush](Brush "Brush") . If the reason for the leak is not immediately obvious review the following:
 
--   Origin: Regardless of whether the entity appears to be protected
-    from the void its origin may be outside. This is especially
-    prevalent with large animating models.
--   Surface: Some materials are non-solid or translucid. These materials
-    do not seal the map and upon compile the engine will report a leak.
-    A material's corresponding [material
-    shader](Material_%28decl%29 "Material (decl)") can yield clues as to
-    why a certain texture will not seal the map. If the pointfile seems
-    to go through a solid piece of geometry check that surface's
-    material to see if the problem lies there.
+-   Origin: Regardless of whether the entity appears to be protected from the void its origin may be outside. This is especially prevalent with large animating models.
+-   Surface: Some materials are non-solid or translucid. These materials do not seal the map and upon compile the engine will report a leak. A material's corresponding [material shader](Material_%28decl%29 "Material (decl)") can yield clues as to why a certain texture will not seal the map. If the pointfile seems to go through a solid piece of geometry check that surface's material to see if the problem lies there.
 
 ### Warning: reached outside from entity X
 
-*Severe* : This is a very specific type of leak. Open the map in the
-editor, select a brush that doesn't belong to any entity and go to the
-Entity Inspector ( [hotkey: N](DoomEdit_hotkeys "DoomEdit hotkeys") ).
-The worldspawn entity should be selected (try again if this is not the
-case). Make sure the worldspawn entity does not have an "angle" key. If
-it does, delete it.
+*Severe* : This is a very specific type of leak. Open the map in the editor, select a brush that doesn't belong to any entity and go to the Entity Inspector ( [hotkey: N](DoomEdit_hotkeys "DoomEdit hotkeys") ). The worldspawn entity should be selected (try again if this is not the case). Make sure the worldspawn entity does not have an "angle" key. If it does, delete it.
 
 ### Warning: backwards triangle generated
 
@@ -81,56 +47,35 @@ it does, delete it.
 
 ### Warning: node without a volume
 
-*Benign* : This warning appears when you have a non-enclosed patch (like
-a cylinder [patch](Patch "Patch") without caps) but can be ignored;
-depending on circumstances leaving those patches open may look bad while
-playing though.
+*Benign* : This warning appears when you have a non-enclosed patch (like a cylinder [patch](Patch "Patch") without caps) but can be ignored; depending on circumstances leaving those patches open may look bad while playing though.
 
 ### Fatal Error: Warning: No free entities.
 
-*Severe* : Your map has too many entities. The engine is limited to 4096
-entities so you need to delete some. Go to Edit \> Map Info in DoomEdit
-to check how many your map currently has.
+*Severe* : Your map has too many entities. The engine is limited to 4096 entities so you need to delete some. Go to Edit \> Map Info in DoomEdit to check how many your map currently has.
 
 ### Error: i \>= MAX\_REACH\_PER\_AREA
 
-*Severe* : An error issued by the [AAS](AAS "AAS") compiler. An
-[Area](Area "Area") that has been created has more than 256 adjoining
-[Areas](Areas "Areas") . You should simplify the map's brush geometry
-(which the aas compiler uses as input) using [monster
-clip](Monster_clip "Monster clip") to block off areas that the AI
-won't/shouldn't go.
+*Severe* : An error issued by the [AAS](AAS "AAS") compiler. An [Area](Area "Area") that has been created has more than 256 adjoining [Areas](Areas "Areas") . You should simplify the map's brush geometry (which the aas compiler uses as input) using [monster clip](Monster_clip "Monster clip") to block off areas that the AI won't/shouldn't go.
 
-This error may also be caused by surrounding the map with a large caulk
-hull with leaks between the map and hull.
+This error may also be caused by surrounding the map with a large caulk hull with leaks between the map and hull.
 
 File Corruption
 ---------------
 
-The following errors are encountered when trying to load a corrupted
-map.
+The following errors are encountered when trying to load a corrupted map.
 
 ### \#IND/\#INF
 
-*Severe* : A problem whose cause is yet to be determined. On occasion
-the built-in editor will save out a map file where it replaces some of
-the numerical values in the map file with the character string *\#IND*
-or *\#INF* . There is a means to salvage your map but you may or may not
-lose some brushwork in the process.
+*Severe* : A problem whose cause is yet to be determined. On occasion the built-in editor will save out a map file where it replaces some of the numerical values in the map file with the character string *\#IND* or *\#INF* . There is a means to salvage your map but you may or may not lose some brushwork in the process.
 
 -   Make a copy of the map file
 -   Open the map file in a text editor
 -   Open a search and replace dialog
--   Use *\#IND* or *\#INF* , depending on the error, as the search term
-    and leave the replace term blank (Ensure you match the whole word)
+-   Use *\#IND* or *\#INF* , depending on the error, as the search term and leave the replace term blank (Ensure you match the whole word)
 -   Replace all instances and save the file
 -   Load the modified map file in the editor
 -   Clear your map of any corrupt brushes
 -   Save the map under a different file name
 
-One possible warning sign that precedes this problem is when a texture
-is applied to a brush and the brush changes colour but does not display
-the actual texture in the 3D preview window. If this happens, do not
-save the map file, but instead change the texture a few times until the
-preview window shows the correct result.
+One possible warning sign that precedes this problem is when a texture is applied to a brush and the brush changes colour but does not display the actual texture in the 3D preview window. If this happens, do not save the map file, but instead change the texture a few times until the preview window shows the correct result.
 

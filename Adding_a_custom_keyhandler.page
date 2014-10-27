@@ -1,24 +1,15 @@
-<div id="attention" class="boilerplate metadata"
-style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
-
 **This page is in urgent need of attention because: *Cleanup***
 
-If you disagree with this, please explain why on [its talk
-page](Talk:Adding_a_custom_keyhandler "Talk:Adding a custom keyhandler")
-.
+If you disagree with this, please explain why on [its talk page](Talk:Adding_a_custom_keyhandler "Talk:Adding a custom keyhandler") .
 
-</div>
-
-This tutorial will explain how to to create a brand new keybinding,
-including an option to bind it from the options menu.
+This tutorial will explain how to to create a brand new keybinding, including an option to bind it from the options menu.
 
 Code first, bind later
 ----------------------
 
 First comes the SDK part.
 
-Open the header file *framework/UsercmdGen.h* and search for
-**IMPULSE\_40** .
+Open the header file *framework/UsercmdGen.h* and search for **IMPULSE\_40** .
 
     const int IMPULSE_0             = 0;            // weap 0
     const int IMPULSE_1             = 1;            // weap 1
@@ -30,20 +21,11 @@ Open the header file *framework/UsercmdGen.h* and search for
     const int IMPULSE_29            = 29;           // vote no
     const int IMPULSE_40            = 40;           // use vehicle
 
-Note that there are several impulses flagged as unused. Theoretically,
-we could use any of them, but a later patch may suddenly use
-**IMPULSE\_27** for a new weapon. As there is no side effect for simply
-appending a new impulse, this tutorial will use number 41 to be on the
-safe side. Add a new entry by copy/pasting everything for
-**IMPULSE\_40** and changing the number to 41. Impulse numbers are sent
-across the network as a 6 bit (unsigned) number, giving a maximum
-impulse number of 63.
+Note that there are several impulses flagged as unused. Theoretically, we could use any of them, but a later patch may suddenly use **IMPULSE\_27** for a new weapon. As there is no side effect for simply appending a new impulse, this tutorial will use number 41 to be on the safe side. Add a new entry by copy/pasting everything for **IMPULSE\_40** and changing the number to 41. Impulse numbers are sent across the network as a 6 bit (unsigned) number, giving a maximum impulse number of 63.
 
     const int IMPULSE_41            = 41;           // use my new code
 
-Now open *Game/player.cpp* and look for **idPlayer::PerformImpulse** .
-Add a new switch-case for **IMPULSE\_41** at the end of the switch
-structure and place your code in there.
+Now open *Game/player.cpp* and look for **idPlayer::PerformImpulse** . Add a new switch-case for **IMPULSE\_41** at the end of the switch structure and place your code in there.
 
     case IMPULSE_40: {
                 UseVehicle();
@@ -55,31 +37,20 @@ structure and place your code in there.
                 break;
             }
 
-That's it. Your new impulse should now work. Just start the game, open
-the console and type: (Change the key to whatever you want)
+That's it. Your new impulse should now work. Just start the game, open the console and type: (Change the key to whatever you want)
 
     bind P _impulse41
 
-**Note** : If you rename your function for some reason, don't forget to
-reassign the key. Otherwise your new function will not be bound because
-the the key still refers to the old function.
+**Note** : If you rename your function for some reason, don't forget to reassign the key. Otherwise your new function will not be bound because the the key still refers to the old function.
 
 Menu work
 ---------
 
-A new option needs to be added to *mainmenu.gui* so that it will show up
-in the options menu. Here we will add a USE impulse key which can be
-used to interact with items other than shooting at it using the attack
-button.
+A new option needs to be added to *mainmenu.gui* so that it will show up in the options menu. Here we will add a USE impulse key which can be used to interact with items other than shooting at it using the attack button.
 
 To achieve this, do the following:
 
-Load *guis/mainmenu.gui* and find an empty slot. As an exmaple I will
-add my new keybinding to the Attack/Look menu entry. There are three
-empty slots in there so we can use them for our own purpose. The last
-entry there is sprint. Now go to the editor and search for //SPRINT.
-Scroll down a few lines and you will find a line //FILLER. This is the
-first slot that is empty.
+Load *guis/mainmenu.gui* and find an empty slot. As an exmaple I will add my new keybinding to the Attack/Look menu entry. There are three empty slots in there so we can use them for our own purpose. The last entry there is sprint. Now go to the editor and search for //SPRINT. Scroll down a few lines and you will find a line //FILLER. This is the first slot that is empty.
 
 To make it look as the others you must change the colorsettings from
 
@@ -89,34 +60,13 @@ to
 
     matcolor 0, 0, 0, 1
 
-Now scroll up again to the previous entry (SPRINT) and copy the lines
-beginning with windowDef CA10Title until the end of the second block
-that follows (bindDef CA10Primary) at the end of your filler definition.
-Dont forget to change the numbers CA10 to CA11 in our case. I don't know
-if it will create problems if you don't but I didn't test it and it
-makes it cleaner. Smile
+Now scroll up again to the previous entry (SPRINT) and copy the lines beginning with windowDef CA10Title until the end of the second block that follows (bindDef CA10Primary) at the end of your filler definition. Dont forget to change the numbers CA10 to CA11 in our case. I don't know if it will create problems if you don't but I didn't test it and it makes it cleaner. Smile
 
-Now when you look at your CA11Title section you can find an entry 'text
-"\#str\_04066"' there. This string references a stringtable in
-strings/english.lang. With def files you can easily copy the file in
-your own mod directory, rename it and it is still loaded. This doesn't
-seem to be the case for this strings, so you should copy the entire file
-in your mod directory, where you, of course, created also a strings
-directory. Load this file into your editor and go to the end of it. Now
-add a new string with a new number like that '"\#str\_10000" "Use"'.
+Now when you look at your CA11Title section you can find an entry 'text "\#str\_04066"' there. This string references a stringtable in strings/english.lang. With def files you can easily copy the file in your own mod directory, rename it and it is still loaded. This doesn't seem to be the case for this strings, so you should copy the entire file in your mod directory, where you, of course, created also a strings directory. Load this file into your editor and go to the end of it. Now add a new string with a new number like that '"\#str\_10000" "Use"'.
 
-The last thing you have to do is to define the function that should be
-called when pressing that key. Go to the CA11Primary section and replace
-the bind command with your own function 'bind "\_impulse41"'. impulse41
-is not used.
+The last thing you have to do is to define the function that should be called when pressing that key. Go to the CA11Primary section and replace the bind command with your own function 'bind "\_impulse41"'. impulse41 is not used.
 
-When you fire up Doom3 now, you can open the options dialog look at
-ATTACK/LOOK and you should already see the new keybinding there and you
-can define which key should be bound to that function. Of course it will
-not do anything because we didn't write the code yet, but it is arelady
-saved to the DoomConfig.cfg file and will be persistant when you reload
-your mod.
+When you fire up Doom3 now, you can open the options dialog look at ATTACK/LOOK and you should already see the new keybinding there and you can define which key should be bound to that function. Of course it will not do anything because we didn't write the code yet, but it is arelady saved to the DoomConfig.cfg file and will be persistant when you reload your mod.
 
-and you even have an entry in the options menu so that the player can
-select one of his own choice. Smile
+and you even have an entry in the options menu so that the player can select one of his own choice. Smile
 

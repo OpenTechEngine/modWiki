@@ -1,105 +1,85 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Lightmodel_breakinghooded1_%28entity%29 "http://modwiki.net/w/index.php?title=Lightmodel_breakinghooded1_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Lightmodel_breakinghooded1_%28entity%29 "http://modwiki.net/w/index.php?title=Lightmodel_breakinghooded1_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Lightmodel_breakinghooded1_%28entity%29 "http://modwiki.net/w/index.php?title=Lightmodel_breakinghooded1_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Lightmodel_breakinghooded1_%28entity%29 "http://modwiki.net/w/index.php?title=Lightmodel_breakinghooded1_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
 
-Light source. If health is set, light becomes breakable and turns off
-when shot.
+Light source. If health is set, light becomes breakable and turns off when shot.
 
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                  DESCRIPTION
-  -------------------- ---------------------------------------------------------------------------------------------------------------------------
-  accepts\_wounds      Description not available.
-  accurateguitrace     Description not available.
-  alignToJoint         Description not available.
-  angle                Description not available.
-  anim                 Description not available.
-  applyDamageEffects   Description not available.
-  bind                 Description not available.
-  bindOrientated       Description not available.
-  bindToBody           Description not available.
-  bindToJoint          Description not available.
-  bindanim             Description not available.
-  break                break when triggered.
-  cameraTarget         Description not available.
-  cinematic            Description not available.
-  classname            Description not available.
-  clipmodel            Description not available.
-  cone                 Description not available.
-  count                how many times light must be triggered to toggle.
-  cylinder             Description not available.
-  dispose\_delay       Description not available.
-  editor\_color        Description not available.
-  editor\_color XXXX   Description not available.
-  editor\_light        Description not available.
-  editor\_mat XXXX     Description not available.
-  editor\_maxs         Description not available.
-  editor\_mins         Description not available.
-  editor\_model XXXX   Description not available.
-  editor\_rotatable    Description not available.
-  editor\_usage        Light source. If health is set, light becomes breakable and turns off when shot.
-  editor\_var XXXX     Description not available.
-  falloff              Description not available.
-  gravity              Description not available.
-  guiTarget            Description not available.
-  health               amount of damage to recieve before becoming broken. 0 is nonbreakable.
-  hide                 Description not available.
-  ignoreGravityZones   Description not available.
-  inherit              Description not available.
-  levels               the number of times a light must be triggered until it turns off. Each time it's triggered, it's dimmed to a lower level.
-  light\_center        Description not available.
-  matter               Description not available.
-  maxs                 Description not available.
-  mins                 Description not available.
-  model                Description not available.
-  moveToJoint          Description not available.
-  name                 Description not available.
-  networkSync          Description not available.
-  neverDormant         Description not available.
-  noJawFlap            Description not available.
-  noPortal             Description not available.
-  noclipmodel          Description not available.
-  nodiffuse            Description not available.
-  noshadows            Description not available.
-  nospecular           Description not available.
-  offset\_aim          Description not available.
-  origin               Description not available.
-  push\_cosine         Description not available.
-  pushes               Description not available.
-  rotation             Description not available.
-  s\_shader            Description not available.
-  scriptobject         Description not available.
-  size                 Description not available.
-  solidForTeam         Description not available.
-  spawnclass           Description not available.
-  start\_off           causes the light to be off when the level starts.
-  target               entities to trigger if shot.
-  texture              Description not available.
+| KEY                | DESCRIPTION                                                                                                               |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------|
+| accepts\_wounds    | Description not available.                                                                                                |
+| accurateguitrace   | Description not available.                                                                                                |
+| alignToJoint       | Description not available.                                                                                                |
+| angle              | Description not available.                                                                                                |
+| anim               | Description not available.                                                                                                |
+| applyDamageEffects | Description not available.                                                                                                |
+| bind               | Description not available.                                                                                                |
+| bindOrientated     | Description not available.                                                                                                |
+| bindToBody         | Description not available.                                                                                                |
+| bindToJoint        | Description not available.                                                                                                |
+| bindanim           | Description not available.                                                                                                |
+| break              | break when triggered.                                                                                                     |
+| cameraTarget       | Description not available.                                                                                                |
+| cinematic          | Description not available.                                                                                                |
+| classname          | Description not available.                                                                                                |
+| clipmodel          | Description not available.                                                                                                |
+| cone               | Description not available.                                                                                                |
+| count              | how many times light must be triggered to toggle.                                                                         |
+| cylinder           | Description not available.                                                                                                |
+| dispose\_delay     | Description not available.                                                                                                |
+| editor\_color      | Description not available.                                                                                                |
+| editor\_color XXXX | Description not available.                                                                                                |
+| editor\_light      | Description not available.                                                                                                |
+| editor\_mat XXXX   | Description not available.                                                                                                |
+| editor\_maxs       | Description not available.                                                                                                |
+| editor\_mins       | Description not available.                                                                                                |
+| editor\_model XXXX | Description not available.                                                                                                |
+| editor\_rotatable  | Description not available.                                                                                                |
+| editor\_usage      | Light source. If health is set, light becomes breakable and turns off when shot.                                          |
+| editor\_var XXXX   | Description not available.                                                                                                |
+| falloff            | Description not available.                                                                                                |
+| gravity            | Description not available.                                                                                                |
+| guiTarget          | Description not available.                                                                                                |
+| health             | amount of damage to recieve before becoming broken. 0 is nonbreakable.                                                    |
+| hide               | Description not available.                                                                                                |
+| ignoreGravityZones | Description not available.                                                                                                |
+| inherit            | Description not available.                                                                                                |
+| levels             | the number of times a light must be triggered until it turns off. Each time it's triggered, it's dimmed to a lower level. |
+| light\_center      | Description not available.                                                                                                |
+| matter             | Description not available.                                                                                                |
+| maxs               | Description not available.                                                                                                |
+| mins               | Description not available.                                                                                                |
+| model              | Description not available.                                                                                                |
+| moveToJoint        | Description not available.                                                                                                |
+| name               | Description not available.                                                                                                |
+| networkSync        | Description not available.                                                                                                |
+| neverDormant       | Description not available.                                                                                                |
+| noJawFlap          | Description not available.                                                                                                |
+| noPortal           | Description not available.                                                                                                |
+| noclipmodel        | Description not available.                                                                                                |
+| nodiffuse          | Description not available.                                                                                                |
+| noshadows          | Description not available.                                                                                                |
+| nospecular         | Description not available.                                                                                                |
+| offset\_aim        | Description not available.                                                                                                |
+| origin             | Description not available.                                                                                                |
+| push\_cosine       | Description not available.                                                                                                |
+| pushes             | Description not available.                                                                                                |
+| rotation           | Description not available.                                                                                                |
+| s\_shader          | Description not available.                                                                                                |
+| scriptobject       | Description not available.                                                                                                |
+| size               | Description not available.                                                                                                |
+| solidForTeam       | Description not available.                                                                                                |
+| spawnclass         | Description not available.                                                                                                |
+| start\_off         | causes the light to be off when the level starts.                                                                         |
+| target             | entities to trigger if shot.                                                                                              |
+| texture            | Description not available.                                                                                                |
 
 Inheritance
 -----------

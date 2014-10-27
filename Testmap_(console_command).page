@@ -1,8 +1,7 @@
 Description
 -----------
 
-This command compiles a level so it can be played and automatically
-loads it.
+This command compiles a level so it can be played and automatically loads it.
 
 Usage
 -----
@@ -14,11 +13,7 @@ At the console type...
 Parameters
 ----------
 
--   [Filename] - Name of .
-    [MAP](MAP_%28file_format%29 "MAP (file format)") file (without the
-    extension). If your map is in a subfolder of the /
-    [maps](Maps_%28folder%29 "Maps (folder)") directory you will need to
-    include the relative path to it, for instance:
+-   [Filename] - Name of . [MAP](MAP_%28file_format%29 "MAP (file format)") file (without the extension). If your map is in a subfolder of the / [maps](Maps_%28folder%29 "Maps (folder)") directory you will need to include the relative path to it, for instance:
 
 <!-- -->
 
@@ -27,11 +22,6 @@ Parameters
 Notes
 -----
 
-See the [dmap](Dmap_%28console_command%29 "Dmap (console command)")
-console command for more information on map compilation. Testmap
-automatically tries to load .
-[AAS](AAS_%28file_format%29 "AAS (file format)") files so you may see
-the error "WARNING: Couldn't load AAS file".
+See the [dmap](Dmap_%28console_command%29 "Dmap (console command)") console command for more information on map compilation. Testmap automatically tries to load . [AAS](AAS_%28file_format%29 "AAS (file format)") files so you may see the error "WARNING: Couldn't load AAS file".
 
-\
 

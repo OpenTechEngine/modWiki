@@ -1,22 +1,8 @@
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/6/69/Q4square_bg.png) The information on this page is
-specific to [Quake 4](Quake_4 "Quake 4") .
-
-</div>
+![](/images/6/69/Q4square_bg.png) The information on this page is specific to [Quake 4](Quake_4 "Quake 4") .
 
 ------------------------------------------------------------------------
 
-MaterialTypes are declarations that dictate how a particular surface
-that references them reacts to impacts. This special declaration
-replaces the more simplistic surface type global keyword system (like
-[metal](Metal_%28Material_global_keyword%29 "Metal (Material global keyword)")
-,
-[plastic](Plastic_%28Material_globabl_keyword%29 "Plastic (Material globabl keyword)")
-or
-[stone](Stone_%28Material_global_keyword%29 "Stone (Material global keyword)")
-for instance) used in [Doom 3](Doom_3 "Doom 3") .
+MaterialTypes are declarations that dictate how a particular surface that references them reacts to impacts. This special declaration replaces the more simplistic surface type global keyword system (like [metal](Metal_%28Material_global_keyword%29 "Metal (Material global keyword)") , [plastic](Plastic_%28Material_globabl_keyword%29 "Plastic (Material globabl keyword)") or [stone](Stone_%28Material_global_keyword%29 "Stone (Material global keyword)") for instance) used in [Doom 3](Doom_3 "Doom 3") .
 
 Syntax
 ------
@@ -27,22 +13,9 @@ Syntax
         rgb     [red],[green],[blue]
     }
 
-MaterialType declarations are started with a header which consists of
-the keyword materialType followed by the *name* of the type. They are
-then followed by the body of the declaration which is enclosed in curly
-brackets.
+MaterialType declarations are started with a header which consists of the keyword materialType followed by the *name* of the type. They are then followed by the body of the declaration which is enclosed in curly brackets.
 
-The rgb values (0 through 255) control the impact effects and sounds (if
-any) of the surface. The entire surface will react the same way though
-so if you'd like a little more control you should use a
-[MaterialImage](MaterialImage_%28Material_global_keyword%29 "MaterialImage (Material global keyword)")
-instead.
+The rgb values (0 through 255) control the impact effects and sounds (if any) of the surface. The entire surface will react the same way though so if you'd like a little more control you should use a [MaterialImage](MaterialImage_%28Material_global_keyword%29 "MaterialImage (Material global keyword)") instead.
 
-MaterialType declarations should be put in a .
-[MTT](MTT_%28file_format%29 "MTT (file format)") in the /
-[materials](Materials_%28folder%29 "Materials (folder)") folder. The
-name of the material type is then referred from inside a
-[material](Material_%28decl%29 "Material (decl)") declaration with the
-[materialType](MaterialType_%28Material_global_keyword%29 "MaterialType (Material global keyword)")
-global material keyword.
+MaterialType declarations should be put in a . [MTT](MTT_%28file_format%29 "MTT (file format)") in the / [materials](Materials_%28folder%29 "Materials (folder)") folder. The name of the material type is then referred from inside a [material](Material_%28decl%29 "Material (decl)") declaration with the [materialType](MaterialType_%28Material_global_keyword%29 "MaterialType (Material global keyword)") global material keyword.
 

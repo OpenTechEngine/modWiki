@@ -3,580 +3,1066 @@ DoomEDIT Keyboard and Mouse Bindings
 
 ### General Usage
 
-  ------------------------ ------------------------ ------------------------
-                                                    
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Show Game</td>
+<td align="left"><strong>F2</strong></td>
+<td align="left">Switches to Game <sup>*</sup></td>
+</tr>
+<tr class="odd">
+<td align="left">Preferences</td>
+<td align="left"><strong>P</strong></td>
+<td align="left">Opens the Preferences Window</td>
+</tr>
+<tr class="even">
+<td align="left">Light Properties</td>
+<td align="left"><strong>J</strong></td>
+<td align="left">Open light editor window</td>
+</tr>
+<tr class="odd">
+<td align="left">File Open</td>
+<td align="left"><strong>Ctrl+O</strong></td>
+<td align="left">Opens the File Open box</td>
+</tr>
+<tr class="even">
+<td align="left">File Save</td>
+<td align="left"><strong>Ctrl+S</strong></td>
+<td align="left">Saves the map</td>
+</tr>
+<tr class="odd">
+<td align="left">Next Leak Spot</td>
+<td align="left"><strong>Ctrl+Shift+K</strong></td>
+<td align="left">Go to the next point in the leak trace</td>
+</tr>
+<tr class="even">
+<td align="left">Leak Spot</td>
+<td align="left"><strong>Ctrl+Shift+L</strong></td>
+<td align="left">Go to the previous point in the leak trace</td>
+</tr>
+</tbody>
+</table>
 
-  Show Game                **F2**                   Switches to Game ^\*^
-
-  Preferences              **P**                    Opens the Preferences
-                                                    Window
-
-  Light Properties         **J**                    Open light editor window
-
-  File Open                **Ctrl+O**               Opens the File Open box
-
-  File Save                **Ctrl+S**               Saves the map
-
-  Next Leak Spot           **Ctrl+Shift+K**         Go to the next point in
-                                                    the leak trace
-
-  Leak Spot                **Ctrl+Shift+L**         Go to the previous point
-                                                    in the leak trace
-  ------------------------ ------------------------ ------------------------
-
-^\*\\ Use\\ Alt+Tab\\ to\\ switch\\ back\\ to\\ the\\ editor.^
+<sup>\*\\ Use\\ Alt+Tab\\ to\\ switch\\ back\\ to\\ the\\ editor.</sup>
 
 ### Inspector Box
 
-  ------------------------ ------------------------ ------------------------
-                                                    
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">View Entity Info</td>
+<td align="left"><strong>N</strong></td>
+<td align="left">Selects the Entity tab</td>
+</tr>
+<tr class="odd">
+<td align="left">View Console</td>
+<td align="left"><strong>O</strong></td>
+<td align="left">Selects the Console tab</td>
+</tr>
+<tr class="even">
+<td align="left">View Textures</td>
+<td align="left"><strong>T</strong></td>
+<td align="left">Selects the Textures tab</td>
+</tr>
+<tr class="odd">
+<td align="left">Media Browser</td>
+<td align="left"><strong>M</strong></td>
+<td align="left">Selects the Media tab</td>
+</tr>
+<tr class="even">
+<td align="left">Layers</td>
+<td align="left"><strong>L</strong></td>
+<td align="left">Selects the Group</td>
+</tr>
+<tr class="odd">
+<td align="left">Show All Textures</td>
+<td align="left"><strong>Ctrl+A</strong></td>
+<td align="left">Show all textures in the texture window <sup>*</sup></td>
+</tr>
+</tbody>
+</table>
 
-  View Entity Info         **N**                    Selects the Entity tab
-
-  View Console             **O**                    Selects the Console tab
-
-  View Textures            **T**                    Selects the Textures tab
-
-  Media Browser            **M**                    Selects the Media tab
-
-  Layers                   **L**                    Selects the Group
-
-  Show All Textures        **Ctrl+A**               Show all textures in the
-                                                    texture window ^\*^
-  ------------------------ ------------------------ ------------------------
-
-^\*\\ Shows\\ all\\ textures\\ as\\ opposed\\ to\\ just\\ those\\ textures\\ in\\ use.^
+<sup>\*\\ Shows\\ all\\ textures\\ as\\ opposed\\ to\\ just\\ those\\ textures\\ in\\ use.</sup>
 
 ### 3D Viewport Controls
 
-  ------------------------ ------------------------ ------------------------
-                                                    
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Camera Forward</td>
+<td align="left"><strong>Up</strong></td>
+<td align="left">Moves the camera forward</td>
+</tr>
+<tr class="odd">
+<td align="left">Camera Back</td>
+<td align="left"><strong>Down</strong></td>
+<td align="left">Moves the camera backwards</td>
+</tr>
+<tr class="even">
+<td align="left">Camera Left</td>
+<td align="left"><strong>Left</strong></td>
+<td align="left">Rotates the camera left</td>
+</tr>
+<tr class="odd">
+<td align="left">Camera Right</td>
+<td align="left"><strong>Right</strong></td>
+<td align="left">Rotates the camera right</td>
+</tr>
+<tr class="even">
+<td align="left">Camera Up</td>
+<td align="left"><strong>D</strong></td>
+<td align="left">Moves the camera up</td>
+</tr>
+<tr class="odd">
+<td align="left">Camera Down</td>
+<td align="left"><strong>C</strong></td>
+<td align="left">Moves the camera down</td>
+</tr>
+<tr class="even">
+<td align="left">Camera Angle Up</td>
+<td align="left"><strong>A</strong></td>
+<td align="left">Pitches the camera up</td>
+</tr>
+<tr class="odd">
+<td align="left">Camera Angle Down</td>
+<td align="left"><strong>Z</strong></td>
+<td align="left">Pitches the camera down</td>
+</tr>
+<tr class="even">
+<td align="left">Camera Strafe Right</td>
+<td align="left"><strong>Period</strong></td>
+<td align="left">Moves the camera right</td>
+</tr>
+<tr class="odd">
+<td align="left">Camera Strafe Left</td>
+<td align="left"><strong>Comma</strong></td>
+<td align="left">Moves the camera left</td>
+</tr>
+<tr class="even">
+<td align="left">Centre View</td>
+<td align="left"><strong>End</strong></td>
+<td align="left">Centre the view horizontally</td>
+</tr>
+<tr class="odd">
+<td align="left">Up Floor</td>
+<td align="left"><strong>PgUp</strong></td>
+<td align="left">Move the camera up to the brush above</td>
+</tr>
+<tr class="even">
+<td align="left">Down Floor</td>
+<td align="left"><strong>PgDn</strong></td>
+<td align="left">Move the camera down to the brush below</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Toggle Selections</td>
+<td align="left"><strong>F8</strong></td>
+<td align="left">Toggles Select Mode <sup>*</sup></td>
+</tr>
+<tr class="odd">
+<td align="left">Rebuild Render Data</td>
+<td align="left"><strong>F7</strong></td>
+<td align="left">Rebuilds Render Data <sup>**</sup></td>
+</tr>
+<tr class="even">
+<td align="left">Toggle Render Animation</td>
+<td align="left"><strong>F6</strong></td>
+<td align="left">Toggles material animations <sup>**</sup></td>
+</tr>
+<tr class="odd">
+<td align="left">Toggle Entity Outlines</td>
+<td align="left"><strong>F5</strong></td>
+<td align="left">Toggles entity bounding boxes <sup>**</sup></td>
+</tr>
+<tr class="even">
+<td align="left">Toggle Realtime Render Build</td>
+<td align="left"><strong>F4</strong></td>
+<td align="left">Rebuilds Render Data automatically</td>
+</tr>
+<tr class="odd">
+<td align="left">Toggle Render Mode</td>
+<td align="left"><strong>F3</strong></td>
+<td align="left">Toggles Render Mode</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Show Clip</td>
+<td align="left"><strong>Ctrl+L</strong></td>
+<td align="left">Toggle showing clip brushes</td>
+</tr>
+<tr class="even">
+<td align="left">Toggle Show Patches</td>
+<td align="left"><strong>Ctrl+P</strong></td>
+<td align="left">Toggle showing patches</td>
+</tr>
+<tr class="odd">
+<td align="left">Toggle Cubic Clip</td>
+<td align="left"><strong>Ctrl+\</strong></td>
+<td align="left">Toggle cubic clipping on and off <sup>***</sup></td>
+</tr>
+<tr class="even">
+<td align="left">Cubic Clip Zoom Out</td>
+<td align="left"><strong>Ctrl+[</strong></td>
+<td align="left">Extend the cubic clipping draw distance</td>
+</tr>
+<tr class="odd">
+<td align="left">Cubic Clip Zoom In</td>
+<td align="left"><strong>Ctrl+]</strong></td>
+<td align="left">Bring in the draw distance</td>
+</tr>
+<tr class="even">
+<td align="left">Toggle Camera</td>
+<td align="left"><strong>Ctrl+Shift+C</strong></td>
+<td align="left">Show or hide the camera window</td>
+</tr>
+</tbody>
+</table>
 
-  Camera Forward           **Up**                   Moves the camera forward
-
-  Camera Back              **Down**                 Moves the camera
-                                                    backwards
-
-  Camera Left              **Left**                 Rotates the camera left
-
-  Camera Right             **Right**                Rotates the camera right
-
-  Camera Up                **D**                    Moves the camera up
-
-  Camera Down              **C**                    Moves the camera down
-
-  Camera Angle Up          **A**                    Pitches the camera up
-
-  Camera Angle Down        **Z**                    Pitches the camera down
-
-  Camera Strafe Right      **Period**               Moves the camera right
-
-  Camera Strafe Left       **Comma**                Moves the camera left
-
-  Centre View              **End**                  Centre the view
-                                                    horizontally
-
-  Up Floor                 **PgUp**                 Move the camera up to
-                                                    the brush above
-
-  Down Floor               **PgDn**                 Move the camera down to
-                                                    the brush below
-
-                                                    
-
-  Toggle Selections        **F8**                   Toggles Select Mode ^\*^
-
-  Rebuild Render Data      **F7**                   Rebuilds Render Data
-                                                    ^\*\*^
-
-  Toggle Render Animation  **F6**                   Toggles material
-                                                    animations ^\*\*^
-
-  Toggle Entity Outlines   **F5**                   Toggles entity bounding
-                                                    boxes ^\*\*^
-
-  Toggle Realtime Render   **F4**                   Rebuilds Render Data
-  Build                                             automatically
-
-  Toggle Render Mode       **F3**                   Toggles Render Mode
-
-                                                    
-
-  Show Clip                **Ctrl+L**               Toggle showing clip
-                                                    brushes
-
-  Toggle Show Patches      **Ctrl+P**               Toggle showing patches
-
-  Toggle Cubic Clip        **Ctrl+\\**              Toggle cubic clipping on
-                                                    and off ^\*\*\*^
-
-  Cubic Clip Zoom Out      **Ctrl+[**               Extend the cubic
-                                                    clipping draw distance
-
-  Cubic Clip Zoom In       **Ctrl+]**               Bring in the draw
-                                                    distance
-
-  Toggle Camera            **Ctrl+Shift+C**         Show or hide the camera
-                                                    window
-  ------------------------ ------------------------ ------------------------
-
-^\*\\ Does\\ not\\ work.^\
- ^\*\*\\ Render\\ mode\\ must\\ be\\ enabled.^\
- ^\*\*\*\\ Restricts\\ draw\\ distance\\ in\\ improve\\ performance.^\
+<sup>\*\\ Does\\ not\\ work.</sup>
+ <sup>\*\*\\ Render\\ mode\\ must\\ be\\ enabled.</sup>
+ <sup>\*\*\*\\ Restricts\\ draw\\ distance\\ in\\ improve\\ performance.</sup>
 
 #### Mouse Control (Inside 3D)
 
-  ------------------------ ------------------------ ------------------------
-                                                    
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Camera Dolly/Rotation</td>
+<td align="left"><strong>RMB Drag</strong></td>
+<td align="left">Controls the camera position and orientation <sup>*</sup></td>
+</tr>
+<tr class="odd">
+<td align="left">Camera Elevation/Pan</td>
+<td align="left"><strong>Ctrl+RMB Drag</strong></td>
+<td align="left">Controls the camera position <sup>**</sup></td>
+</tr>
+<tr class="even">
+<td align="left">Copy Texture</td>
+<td align="left"><strong>MMB</strong></td>
+<td align="left">Copies a texture to the selected brush</td>
+</tr>
+<tr class="odd">
+<td align="left">Tile Texture</td>
+<td align="left"><strong>Ctrl+MMB</strong></td>
+<td align="left">Copies a texture FROM the selected brush <sup>***</sup></td>
+</tr>
+</tbody>
+</table>
 
-  Camera Dolly/Rotation    **RMB Drag**             Controls the camera
-                                                    position and orientation
-                                                    ^\*^
-
-  Camera Elevation/Pan     **Ctrl+RMB Drag**        Controls the camera
-                                                    position ^\*\*^
-
-  Copy Texture             **MMB**                  Copies a texture to the
-                                                    selected brush
-
-  Tile Texture             **Ctrl+MMB**             Copies a texture FROM
-                                                    the selected brush
-                                                    ^\*\*\*^
-  ------------------------ ------------------------ ------------------------
-
-^\*\\ Movement\\ and/or\\ rotation\\ is\\ relative\\ to\\ the\\ position\\ of\\ the\\ cursor\\ in\\ relation\\ to\\ the\\ center\\ of\\ the\\ 3D\\ viewport.^\
-
-^\*\*\\ Movement\\ is\\ relative\\ to\\ the\\ position\\ of\\ the\\ cursor\\ in\\ relation\\ to\\ the\\ center\\ of\\ the\\ of\\ the\\ 3D\\ viewport.\</sub\>\
-\\ ^\*\*\*\\\\ Texture\\\\ is\\\\ aligned\\\\ and\\\\ scaled\\\\ in\\\\ relation\\\\ to\\\\ the\\\\ sampled\\\\ brush.^\
-^
+<sup>\*\\ Movement\\ and/or\\ rotation\\ is\\ relative\\ to\\ the\\ position\\ of\\ the\\ cursor\\ in\\ relation\\ to\\ the\\ center\\ of\\ the\\ 3D\\ viewport.</sup>
+ <sup>\*\*\\ Movement\\ is\\ relative\\ to\\ the\\ position\\ of\\ the\\ cursor\\ in\\ relation\\ to\\ the\\ center\\ of\\ the\\ of\\ the\\ 3D\\ viewport.\</sub\>
+\\ <sup>\*\*\*\\\\ Texture\\\\ is\\\\ aligned\\\\ and\\\\ scaled\\\\ in\\\\ relation\\\\ to\\\\ the\\\\ sampled\\\\ brush.</sup>
+</sup>
 
 ### 2D Viewport Controls
 
-  ------------------------ ------------------------ ------------------------
-                                                    
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Next View</td>
+<td align="left"><strong>Ctrl+Tab</strong></td>
+<td align="left">Cycle between Top, Side, and Front 2D views</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Copy</td>
+<td align="left"><strong>Ctrl+C</strong></td>
+<td align="left">Copy the selected brush to the clipboard</td>
+</tr>
+<tr class="odd">
+<td align="left">Paste</td>
+<td align="left"><strong>Ctrl+V</strong></td>
+<td align="left">Paste the brush from the clipboard</td>
+</tr>
+<tr class="even">
+<td align="left">Undo</td>
+<td align="left"><strong>Ctrl+Z</strong></td>
+<td align="left">Undo the last edit (doesn't always work)</td>
+</tr>
+<tr class="odd">
+<td align="left">Redo</td>
+<td align="left"><strong>Ctrl+Y</strong></td>
+<td align="left">Redo the last undo</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Toggle Grid</td>
+<td align="left"><strong>0</strong></td>
+<td align="left">Turn on and off the grid</td>
+</tr>
+<tr class="even">
+<td align="left">Set Grid 0.125</td>
+<td align="left"><strong>2</strong></td>
+<td align="left">Set the grid size to 1/8</td>
+</tr>
+<tr class="odd">
+<td align="left">Set Grid 0.25</td>
+<td align="left"><strong>3</strong></td>
+<td align="left">Set the grid size to 1/4</td>
+</tr>
+<tr class="even">
+<td align="left">Set Grid 0.5</td>
+<td align="left"><strong>4</strong></td>
+<td align="left">Set the grid size to 1/2</td>
+</tr>
+<tr class="odd">
+<td align="left">Set Grid 1</td>
+<td align="left"><strong>1</strong></td>
+<td align="left">Set the grid size to 1</td>
+</tr>
+<tr class="even">
+<td align="left">Set Grid 2</td>
+<td align="left"><strong>2</strong></td>
+<td align="left">Set the grid size to 2</td>
+</tr>
+<tr class="odd">
+<td align="left">Set Grid 4</td>
+<td align="left"><strong>3</strong></td>
+<td align="left">Set the grid size to 4</td>
+</tr>
+<tr class="even">
+<td align="left">Set Grid 8</td>
+<td align="left"><strong>4</strong></td>
+<td align="left">Set the grid size to 8</td>
+</tr>
+<tr class="odd">
+<td align="left">Set Grid 16</td>
+<td align="left"><strong>5</strong></td>
+<td align="left">Set the grid size to 16</td>
+</tr>
+<tr class="even">
+<td align="left">Set Grid 32</td>
+<td align="left"><strong>6</strong></td>
+<td align="left">Set the grid size to 32</td>
+</tr>
+<tr class="odd">
+<td align="left">Set Grid 64</td>
+<td align="left"><strong>7</strong></td>
+<td align="left">Set the grid size to 64</td>
+</tr>
+<tr class="even">
+<td align="left">Grid Down</td>
+<td align="left"><strong>-</strong></td>
+<td align="left">Grid size down</td>
+</tr>
+<tr class="odd">
+<td align="left">Grid Up</td>
+<td align="left"><strong>+</strong></td>
+<td align="left">Grid size up</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Zoom Out</td>
+<td align="left"><strong>Insert</strong></td>
+<td align="left">Zoom Out on the grid</td>
+</tr>
+<tr class="even">
+<td align="left">Zoom Out2</td>
+<td align="left"><strong>Home</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Zoom In</td>
+<td align="left"><strong>Delete</strong></td>
+<td align="left">Zoom In on the grid</td>
+</tr>
+<tr class="even">
+<td align="left">Z Axis Zoom Out</td>
+<td align="left"><strong>Ctrl+Insert</strong></td>
+<td align="left">Zoom Out on the Z grid</td>
+</tr>
+<tr class="odd">
+<td align="left">Z Axis Zoom In</td>
+<td align="left"><strong>Ctrl+Delete</strong></td>
+<td align="left">Zoom In on the Z grid</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Toggle Crosshairs</td>
+<td align="left"><strong>Shift+X</strong></td>
+<td align="left">Toggles the lime green grid crosshair</td>
+</tr>
+<tr class="even">
+<td align="left">Toggle Size Paint</td>
+<td align="left"><strong>Q</strong></td>
+<td align="left">Turn on the brush size information <sup>*</sup></td>
+</tr>
+<tr class="odd">
+<td align="left">Toggle Z</td>
+<td align="left"><strong>Ctrl+Shift+Z</strong></td>
+<td align="left">Show or hide the Z window</td>
+</tr>
+</tbody>
+</table>
 
-  Next View                **Ctrl+Tab**             Cycle between Top, Side,
-                                                    and Front 2D views
-
-                                                    
-
-  Copy                     **Ctrl+C**               Copy the selected brush
-                                                    to the clipboard
-
-  Paste                    **Ctrl+V**               Paste the brush from the
-                                                    clipboard
-
-  Undo                     **Ctrl+Z**               Undo the last edit
-                                                    (doesn't always work)
-
-  Redo                     **Ctrl+Y**               Redo the last undo
-
-                                                    
-
-  Toggle Grid              **0**                    Turn on and off the grid
-
-  Set Grid 0.125           **2**                    Set the grid size to 1/8
-
-  Set Grid 0.25            **3**                    Set the grid size to 1/4
-
-  Set Grid 0.5             **4**                    Set the grid size to 1/2
-
-  Set Grid 1               **1**                    Set the grid size to 1
-
-  Set Grid 2               **2**                    Set the grid size to 2
-
-  Set Grid 4               **3**                    Set the grid size to 4
-
-  Set Grid 8               **4**                    Set the grid size to 8
-
-  Set Grid 16              **5**                    Set the grid size to 16
-
-  Set Grid 32              **6**                    Set the grid size to 32
-
-  Set Grid 64              **7**                    Set the grid size to 64
-
-  Grid Down                **-**                    Grid size down
-
-  Grid Up                  **+**                    Grid size up
-
-                                                    
-
-  Zoom Out                 **Insert**               Zoom Out on the grid
-
-  Zoom Out2                **Home**                 
-
-  Zoom In                  **Delete**               Zoom In on the grid
-
-  Z Axis Zoom Out          **Ctrl+Insert**          Zoom Out on the Z grid
-
-  Z Axis Zoom In           **Ctrl+Delete**          Zoom In on the Z grid
-
-                                                    
-
-  Toggle Crosshairs        **Shift+X**              Toggles the lime green
-                                                    grid crosshair
-
-  Toggle Size Paint        **Q**                    Turn on the brush size
-                                                    information ^\*^
-
-  Toggle Z                 **Ctrl+Shift+Z**         Show or hide the Z
-                                                    window
-  ------------------------ ------------------------ ------------------------
-
-^\*\\ Only\\ while\\ held\\ down.^
+<sup>\*\\ Only\\ while\\ held\\ down.</sup>
 
 #### Mouse Control (Inside 2D)
 
-  ------------------------ ------------------------ ------------------------
-                                                    
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Entity Menu</td>
+<td align="left"><strong>RMB</strong></td>
+<td align="left">Opens the entity roll-out in the 2D viewport</td>
+</tr>
+<tr class="odd">
+<td align="left">Rotate Camera</td>
+<td align="left"><strong>MMB</strong></td>
+<td align="left">Points the camera at the cursors location</td>
+</tr>
+<tr class="even">
+<td align="left">Move Camera</td>
+<td align="left"><strong>Ctrl+MMB Click/Drag</strong></td>
+<td align="left">Snaps/moves the camera with the cursor</td>
+</tr>
+<tr class="odd">
+<td align="left">Move Z Axis Marker</td>
+<td align="left"><strong>Shift+MMB</strong></td>
+<td align="left">Snaps/moves the Z axis marker <sup>*</sup></td>
+</tr>
+<tr class="even">
+<td align="left">Select Brush/Entity</td>
+<td align="left"><strong>Shift+LMB</strong></td>
+<td align="left">Selects brushes and entities in both viewports</td>
+</tr>
+<tr class="odd">
+<td align="left">Create Brush</td>
+<td align="left"><strong>LMB Drag</strong></td>
+<td align="left">Drags out a basic brush in the 2D viewport</td>
+</tr>
+<tr class="even">
+<td align="left">Pan Viewport</td>
+<td align="left"><strong>RMB Drag</strong></td>
+<td align="left">Pans the 2D viewport around</td>
+</tr>
+<tr class="odd">
+<td align="left">Zoom Viewport</td>
+<td align="left"><strong>Scroll Wheel or Alt+Right Mouse Drag</strong></td>
+<td align="left">Zooms in and out of the viewport</td>
+</tr>
+<tr class="even">
+<td align="left">Shear Brush</td>
+<td align="left"><strong>Ctrl+Left Mouse Drag</strong></td>
+<td align="left">Shear/skews the selected brush</td>
+</tr>
+</tbody>
+</table>
 
-  Entity Menu              **RMB**                  Opens the entity
-                                                    roll-out in the 2D
-                                                    viewport
-
-  Rotate Camera            **MMB**                  Points the camera at the
-                                                    cursors location
-
-  Move Camera              **Ctrl+MMB Click/Drag**  Snaps/moves the camera
-                                                    with the cursor
-
-  Move Z Axis Marker       **Shift+MMB**            Snaps/moves the Z axis
-                                                    marker ^\*^
-
-  Select Brush/Entity      **Shift+LMB**            Selects brushes and
-                                                    entities in both
-                                                    viewports
-
-  Create Brush             **LMB Drag**             Drags out a basic brush
-                                                    in the 2D viewport
-
-  Pan Viewport             **RMB Drag**             Pans the 2D viewport
-                                                    around
-
-  Zoom Viewport            **Scroll Wheel or        Zooms in and out of the
-                           Alt+Right Mouse Drag**   viewport
-
-  Shear Brush              **Ctrl+Left Mouse Drag** Shear/skews the selected
-                                                    brush
-  ------------------------ ------------------------ ------------------------
-
-^\*^ This controls where in the map is displayed in the Z-axis viewport
+<sup>\*</sup> This controls where in the map is displayed in the Z-axis viewport
 
 ### Texture Manipulation
 
-  ------------------------ ------------------------ ------------------------
-                                                    
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Find Replace Textures</td>
+<td align="left"><strong>Shift+F</strong></td>
+<td align="left">Open the Find Replace Textures window</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Axial Texture By Height</td>
+<td align="left"><strong>U</strong></td>
+<td align="left">Sets the vertical texture scale to width/height of the face</td>
+</tr>
+<tr class="odd">
+<td align="left">Axial Texture By Width</td>
+<td align="left"><strong>Ctrl+U</strong></td>
+<td align="left">Sets the horizontal texture scale to height/width of the face</td>
+</tr>
+<tr class="even">
+<td align="left">Axial Texture Arbitrary</td>
+<td align="left"><strong>Shift+U</strong></td>
+<td align="left">Switches to Axial Texture mode <sup>*</sup></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Invert Texture Y</td>
+<td align="left"><strong>Shift+I</strong></td>
+<td align="left">Invert the texture T coordinate</td>
+</tr>
+<tr class="odd">
+<td align="left">Texture Fit</td>
+<td align="left"><strong>Shift+5</strong></td>
+<td align="left">Scales the texture so it fits exactly the size of the face</td>
+</tr>
+<tr class="even">
+<td align="left">Tex Rotate Clock</td>
+<td align="left"><strong>Shift+PgDn</strong></td>
+<td align="left">Rotate the texture clockwise 45 degrees</td>
+</tr>
+<tr class="odd">
+<td align="left">Tex Rotate Counter</td>
+<td align="left"><strong>Shift+PgUp</strong></td>
+<td align="left">Rotate the texture counter-clockwise 45 degrees</td>
+</tr>
+<tr class="even">
+<td align="left">Tex Shift Left</td>
+<td align="left"><strong>Shift+Left</strong></td>
+<td align="left">Shift the texture to the left 1 unit</td>
+</tr>
+<tr class="odd">
+<td align="left">Tex Shift Right</td>
+<td align="left"><strong>Shift+Right</strong></td>
+<td align="left">Shift the texture to the right 1 unit</td>
+</tr>
+<tr class="even">
+<td align="left">Tex Shift Up</td>
+<td align="left"><strong>Shift+Up</strong></td>
+<td align="left">Shift the texture up 1 unit</td>
+</tr>
+<tr class="odd">
+<td align="left">Tex Shift Down</td>
+<td align="left"><strong>Shift+Down</strong></td>
+<td align="left">Shift the texture down 1 unit</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Tog Tex Lock</td>
+<td align="left"><strong>Shift+T</strong></td>
+<td align="left">Toggles texture lock <sup>**</sup></td>
+</tr>
+<tr class="even">
+<td align="left">Auto Caulk</td>
+<td align="left"><strong>Ctrl+Shift+A</strong></td>
+<td align="left">Caulks a lot of unseen automagically</td>
+</tr>
+<tr class="odd">
+<td align="left">Surface Inspector</td>
+<td align="left"><strong>S</strong></td>
+<td align="left">Open the Surface Inspector Window</td>
+</tr>
+</tbody>
+</table>
 
-  Find Replace Textures    **Shift+F**              Open the Find Replace
-                                                    Textures window
-
-                                                    
-
-  Axial Texture By Height  **U**                    Sets the vertical
-                                                    texture scale to
-                                                    width/height of the face
-
-  Axial Texture By Width   **Ctrl+U**               Sets the horizontal
-                                                    texture scale to
-                                                    height/width of the face
-
-  Axial Texture Arbitrary  **Shift+U**              Switches to Axial
-                                                    Texture mode ^\*^
-
-                                                    
-
-  Invert Texture Y         **Shift+I**              Invert the texture T
-                                                    coordinate
-
-  Texture Fit              **Shift+5**              Scales the texture so it
-                                                    fits exactly the size of
-                                                    the face
-
-  Tex Rotate Clock         **Shift+PgDn**           Rotate the texture
-                                                    clockwise 45 degrees
-
-  Tex Rotate Counter       **Shift+PgUp**           Rotate the texture
-                                                    counter-clockwise 45
-                                                    degrees
-
-  Tex Shift Left           **Shift+Left**           Shift the texture to the
-                                                    left 1 unit
-
-  Tex Shift Right          **Shift+Right**          Shift the texture to the
-                                                    right 1 unit
-
-  Tex Shift Up             **Shift+Up**             Shift the texture up 1
-                                                    unit
-
-  Tex Shift Down           **Shift+Down**           Shift the texture down 1
-                                                    unit
-
-                                                    
-
-  Tog Tex Lock             **Shift+T**              Toggles texture lock
-                                                    ^\*\*^
-
-  Auto Caulk               **Ctrl+Shift+A**         Caulks a lot of unseen
-                                                    automagically
-
-  Surface Inspector        **S**                    Open the Surface
-                                                    Inspector Window
-  ------------------------ ------------------------ ------------------------
-
-^\*\\ Tab\\ cycles\\ through\\ the\\ points.\\ U\\ sets\\ the\\ vertical\\ texture\\ scale\\ to\\ the\\ axis/height.^\
-
-^\*\*\\ When\\ textures\\ are\\ locked,\\ they\\ don't\\ move\\ when\\ the\\ brush\\ moves.\\ This\\ is\\ sometimes\\ called\\ Naturally\\ Aligned\\ Textures.^\
+<sup>\*\\ Tab\\ cycles\\ through\\ the\\ points.\\ U\\ sets\\ the\\ vertical\\ texture\\ scale\\ to\\ the\\ axis/height.</sup>
+ <sup>\*\*\\ When\\ textures\\ are\\ locked,\\ they\\ don't\\ move\\ when\\ the\\ brush\\ moves.\\ This\\ is\\ sometimes\\ called\\ Naturally\\ Aligned\\ Textures.</sup>
 
 ### Patch Manipulation
 
-  ------------------------ ------------------------ ------------------------
-                                                    
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Bend Mode</td>
+<td align="left"><strong>B</strong></td>
+<td align="left">Toggles patch bend mode</td>
+</tr>
+<tr class="odd">
+<td align="left">Thicken Patch</td>
+<td align="left"><strong>Ctrl+T</strong></td>
+<td align="left">Adds a back (and optionally sides) to the patch <sup>*</sup></td>
+</tr>
+<tr class="even">
+<td align="left">Make Overlay Patch</td>
+<td align="left"><strong>Y</strong></td>
+<td align="left">Always draw control points for the selected patches</td>
+</tr>
+<tr class="odd">
+<td align="left">Clear Patch Overlays</td>
+<td align="left"><strong>Shift+Y</strong></td>
+<td align="left">Turn off overlays for all patches</td>
+</tr>
+<tr class="even">
+<td align="left">Patch Inspector</td>
+<td align="left"><strong>Shift+S</strong></td>
+<td align="left">Open the patch inspector window</td>
+</tr>
+<tr class="odd">
+<td align="left">Cap Current Curve</td>
+<td align="left"><strong>Shift+C</strong></td>
+<td align="left">Puts an end cap on the selected patch mesh</td>
+</tr>
+<tr class="even">
+<td align="left">Cycle Cap Texturing Alt</td>
+<td align="left"><strong>Shift+P</strong></td>
+<td align="left">Cycle through the different methods of texturing the cap</td>
+</tr>
+<tr class="odd">
+<td align="left">Cycle Cap Texturing Alt</td>
+<td align="left"><strong>Ctrl+Shift+P</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Redisperse Rows</td>
+<td align="left"><strong>Ctrl+E</strong></td>
+<td align="left">Evenly spread the rows across the mesh</td>
+</tr>
+<tr class="odd">
+<td align="left">Redisperse Cols</td>
+<td align="left"><strong>Ctrl+Shift+E</strong></td>
+<td align="left">Evenly spread the columns across the mesh</td>
+</tr>
+<tr class="even">
+<td align="left">Make Detail</td>
+<td align="left"><strong>Ctrl+Shift+M</strong></td>
+<td align="left">Curve Matrix</td>
+</tr>
+<tr class="odd">
+<td align="left">Invert Curve</td>
+<td align="left"><strong>Ctrl+I</strong></td>
+<td align="left">Flip the normals for the mesh <sup>**</sup></td>
+</tr>
+<tr class="even">
+<td align="left">Insert Patch Column</td>
+<td align="left"><strong>Ctrl+Shift++</strong></td>
+<td align="left">Inserts a column into the patch</td>
+</tr>
+<tr class="odd">
+<td align="left">Insert Patch Row</td>
+<td align="left"><strong>Ctrl++</strong></td>
+<td align="left">Inserts a row into the patch</td>
+</tr>
+<tr class="even">
+<td align="left">Delete Patch Column</td>
+<td align="left"><strong>Ctrl+Shift+-</strong></td>
+<td align="left">Removes a column from the patch</td>
+</tr>
+<tr class="odd">
+<td align="left">Delete Patch Row</td>
+<td align="left"><strong>Ctrl+-</strong></td>
+<td align="left">Removes a row from the patch</td>
+</tr>
+<tr class="even">
+<td align="left">Patch TAB</td>
+<td align="left"><strong>Tab</strong></td>
+<td align="left">Cycles through various component selections <sup>***</sup></td>
+</tr>
+<tr class="odd">
+<td align="left">Patch TAB</td>
+<td align="left"><strong>Shift+Tab</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Naturalize Patch</td>
+<td align="left"><strong>Ctrl+N</strong></td>
+<td align="left">Texture the patch using the &quot;natural&quot; method</td>
+</tr>
+<tr class="odd">
+<td align="left">Naturalize Patch Alt</td>
+<td align="left"><strong>Shift+N</strong></td>
+<td align="left">Texture the patch using an alternate &quot;natural&quot; method</td>
+</tr>
+<tr class="even">
+<td align="left">Snap Patch To Grid</td>
+<td align="left"><strong>Ctrl+G</strong></td>
+<td align="left">Snap control points for the mesh to the current grid</td>
+</tr>
+</tbody>
+</table>
 
-  Bend Mode                **B**                    Toggles patch bend mode
-
-  Thicken Patch            **Ctrl+T**               Adds a back (and
-                                                    optionally sides) to the
-                                                    patch ^\*^
-
-  Make Overlay Patch       **Y**                    Always draw control
-                                                    points for the selected
-                                                    patches
-
-  Clear Patch Overlays     **Shift+Y**              Turn off overlays for
-                                                    all patches
-
-  Patch Inspector          **Shift+S**              Open the patch inspector
-                                                    window
-
-  Cap Current Curve        **Shift+C**              Puts an end cap on the
-                                                    selected patch mesh
-
-  Cycle Cap Texturing Alt  **Shift+P**              Cycle through the
-                                                    different methods of
-                                                    texturing the cap
-
-  Cycle Cap Texturing Alt  **Ctrl+Shift+P**         
-
-  Redisperse Rows          **Ctrl+E**               Evenly spread the rows
-                                                    across the mesh
-
-  Redisperse Cols          **Ctrl+Shift+E**         Evenly spread the
-                                                    columns across the mesh
-
-  Make Detail              **Ctrl+Shift+M**         Curve Matrix
-
-  Invert Curve             **Ctrl+I**               Flip the normals for the
-                                                    mesh ^\*\*^
-
-  Insert Patch Column      **Ctrl+Shift++**         Inserts a column into
-                                                    the patch
-
-  Insert Patch Row         **Ctrl++**               Inserts a row into the
-                                                    patch
-
-  Delete Patch Column      **Ctrl+Shift+-**         Removes a column from
-                                                    the patch
-
-  Delete Patch Row         **Ctrl+-**               Removes a row from the
-                                                    patch
-
-  Patch TAB                **Tab**                  Cycles through various
-                                                    component selections
-                                                    ^\*\*\*^
-
-  Patch TAB                **Shift+Tab**            
-
-  Naturalize Patch         **Ctrl+N**               Texture the patch using
-                                                    the "natural" method
-
-  Naturalize Patch Alt     **Shift+N**              Texture the patch using
-                                                    an alternate "natural"
-                                                    method
-
-  Snap Patch To Grid       **Ctrl+G**               Snap control points for
-                                                    the mesh to the current
-                                                    grid
-  ------------------------ ------------------------ ------------------------
-
-^\*\\ A\\ thickness\\ greater\\ than\\ zero\\ will\\ produce\\ sides.^\
- ^\*\*\\ The\\ front\\ becomes\\ the\\ back.^\
-
-^\*\*\*\\ In\\ patch\\ bend\\ mode,\\ cycle\\ through\\ the\\ various\\ bend\\ axis.\\ In\\ patch\\ insert\\ mode,\\ cycle\\ through\\ the\\ different\\ insert\\ locations.\\ In\\ axial\\ mode,\\ cycle\\ through\\ the\\ different\\ axis.\\ Otherwise,\\ cycle\\ through\\ the\\ different\\ objects\\ in\\ a\\ func\_group^\
+<sup>\*\\ A\\ thickness\\ greater\\ than\\ zero\\ will\\ produce\\ sides.</sup>
+ <sup>\*\*\\ The\\ front\\ becomes\\ the\\ back.</sup>
+ <sup>\*\*\*\\ In\\ patch\\ bend\\ mode,\\ cycle\\ through\\ the\\ various\\ bend\\ axis.\\ In\\ patch\\ insert\\ mode,\\ cycle\\ through\\ the\\ different\\ insert\\ locations.\\ In\\ axial\\ mode,\\ cycle\\ through\\ the\\ different\\ axis.\\ Otherwise,\\ cycle\\ through\\ the\\ different\\ objects\\ in\\ a\\ func\_group</sup>
 
 ### Brush Manipulation
 
-  ------------------------ ------------------------ ------------------------
-                                                    
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Toggle Move Only</td>
+<td align="left"><strong>W</strong></td>
+<td align="left">Disable brush resizing <sup>*</sup></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Brush 3 Sided</td>
+<td align="left"><strong>Ctrl+3</strong></td>
+<td align="left">Turn the selected brush into a triangle</td>
+</tr>
+<tr class="odd">
+<td align="left">Brush 4 Sided</td>
+<td align="left"><strong>Ctrl+4</strong></td>
+<td align="left">Turn the selected brush into a cube</td>
+</tr>
+<tr class="even">
+<td align="left">Brush 5 Sided</td>
+<td align="left"><strong>Ctrl+5</strong></td>
+<td align="left">Turn the selected brush into a pentagon</td>
+</tr>
+<tr class="odd">
+<td align="left">Brush 6 Sided</td>
+<td align="left"><strong>Ctrl+6</strong></td>
+<td align="left">Turn the selected brush into a hexagon</td>
+</tr>
+<tr class="even">
+<td align="left">Brush 7 Sided</td>
+<td align="left"><strong>Ctrl+7</strong></td>
+<td align="left">Turn the selected brush into a heptagon</td>
+</tr>
+<tr class="odd">
+<td align="left">Brush 8 Sided</td>
+<td align="left"><strong>Ctrl+8</strong></td>
+<td align="left">Turn the selected brush into an octagon</td>
+</tr>
+<tr class="even">
+<td align="left">Brush 9 Sided</td>
+<td align="left"><strong>Ctrl+9</strong></td>
+<td align="left">Turn the selected brush into a nonagon</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Toggle Clipper</td>
+<td align="left"><strong>X</strong></td>
+<td align="left">Toggle the clipper</td>
+</tr>
+<tr class="odd">
+<td align="left">Clip Selected</td>
+<td align="left"><strong>Enter</strong></td>
+<td align="left">Clip the selected brush <sup>**</sup></td>
+</tr>
+<tr class="even">
+<td align="left">Flip Clip</td>
+<td align="left"><strong>Ctrl+Enter</strong></td>
+<td align="left">Clip the selected brush <sup>***</sup></td>
+</tr>
+<tr class="odd">
+<td align="left">Split Selected</td>
+<td align="left"><strong>Shift+Enter</strong></td>
+<td align="left">Split the selected brush <sup>****</sup></td>
+</tr>
+<tr class="even">
+<td align="left">Move Selection DOWN</td>
+<td align="left"><strong>-</strong></td>
+<td align="left">Move the selected brush down 1 grid unit on the Z</td>
+</tr>
+<tr class="odd">
+<td align="left">Move Selection UP</td>
+<td align="left"><strong>+</strong></td>
+<td align="left">Move the selected brush up 1 grid unit on the Z</td>
+</tr>
+<tr class="even">
+<td align="left">Selection Nudge Left</td>
+<td align="left"><strong>Alt+Left</strong></td>
+<td align="left">Move the selected brush left 1 unit <sup>*****</sup></td>
+</tr>
+<tr class="odd">
+<td align="left">Selection Nudge Right</td>
+<td align="left"><strong>Alt+Right</strong></td>
+<td align="left">Move the selected brush right 1 unit <sup>*****</sup></td>
+</tr>
+<tr class="even">
+<td align="left">Selection Nudge Up</td>
+<td align="left"><strong>Alt+Up</strong></td>
+<td align="left">Move the selected brush up 1 unit <sup>*****</sup></td>
+</tr>
+<tr class="odd">
+<td align="left">Selection Nudge Down</td>
+<td align="left"><strong>Alt+Down</strong></td>
+<td align="left">Move the selected brush down 1 unit <sup>*****</sup></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">CSG Merge</td>
+<td align="left"><strong>Shift+M</strong></td>
+<td align="left">Merges multiple brushes into one brush <sup>******</sup></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Drag Edges</td>
+<td align="left"><strong>E</strong></td>
+<td align="left">Toggle edge drag mode for dragging brush edges</td>
+</tr>
+<tr class="even">
+<td align="left">Drag Vertices</td>
+<td align="left"><strong>V</strong></td>
+<td align="left">Toggle vertex drag mode for dragging brush vertices</td>
+</tr>
+<tr class="odd">
+<td align="left">Dump Selected Brush</td>
+<td align="left"><strong>Shift+D</strong></td>
+<td align="left">Print the faces for the selected brush to the console</td>
+</tr>
+</tbody>
+</table>
 
-  Toggle Move Only         **W**                    Disable brush resizing
-                                                    ^\*^
-
-                                                    
-
-  Brush 3 Sided            **Ctrl+3**               Turn the selected brush
-                                                    into a triangle
-
-  Brush 4 Sided            **Ctrl+4**               Turn the selected brush
-                                                    into a cube
-
-  Brush 5 Sided            **Ctrl+5**               Turn the selected brush
-                                                    into a pentagon
-
-  Brush 6 Sided            **Ctrl+6**               Turn the selected brush
-                                                    into a hexagon
-
-  Brush 7 Sided            **Ctrl+7**               Turn the selected brush
-                                                    into a heptagon
-
-  Brush 8 Sided            **Ctrl+8**               Turn the selected brush
-                                                    into an octagon
-
-  Brush 9 Sided            **Ctrl+9**               Turn the selected brush
-                                                    into a nonagon
-
-                                                    
-
-  Toggle Clipper           **X**                    Toggle the clipper
-
-  Clip Selected            **Enter**                Clip the selected brush
-                                                    ^\*\*^
-
-  Flip Clip                **Ctrl+Enter**           Clip the selected brush
-                                                    ^\*\*\*^
-
-  Split Selected           **Shift+Enter**          Split the selected brush
-                                                    ^\*\*\*\*^
-
-  Move Selection DOWN      **-**                    Move the selected brush
-                                                    down 1 grid unit on the
-                                                    Z
-
-  Move Selection UP        **+**                    Move the selected brush
-                                                    up 1 grid unit on the Z
-
-  Selection Nudge Left     **Alt+Left**             Move the selected brush
-                                                    left 1 unit ^\*\*\*\*\*^
-
-  Selection Nudge Right    **Alt+Right**            Move the selected brush
-                                                    right 1 unit
-                                                    ^\*\*\*\*\*^
-
-  Selection Nudge Up       **Alt+Up**               Move the selected brush
-                                                    up 1 unit ^\*\*\*\*\*^
-
-  Selection Nudge Down     **Alt+Down**             Move the selected brush
-                                                    down 1 unit ^\*\*\*\*\*^
-
-                                                    
-
-  CSG Merge                **Shift+M**              Merges multiple brushes
-                                                    into one brush
-                                                    ^\*\*\*\*\*\*^
-
-                                                    
-
-  Drag Edges               **E**                    Toggle edge drag mode
-                                                    for dragging brush edges
-
-  Drag Vertices            **V**                    Toggle vertex drag mode
-                                                    for dragging brush
-                                                    vertices
-
-  Dump Selected Brush      **Shift+D**              Print the faces for the
-                                                    selected brush to the
-                                                    console
-  ------------------------ ------------------------ ------------------------
-
-^\*\\ Dragging\\ will\\ move\\ as\\ opposed\\ to\\ resize.^\
- ^\*\*\\ Disguards\\ the\\ clipped\\ portion.^\
- ^\*\*\*\\ Disguards\\ the\\ unclipped\\ portion.^\
- ^\*\*\*\*\\ Disguards\\ neither\\ portion.^\
- ^\*\*\*\*\*\\ Not\\ 1\\ grid\\ unit.^\
- ^\*\*\*\*\*\*\\ Both\\ brushes\\ must\\ share\\ a\\ matching\\ face.^\
+<sup>\*\\ Dragging\\ will\\ move\\ as\\ opposed\\ to\\ resize.</sup>
+ <sup>\*\*\\ Disguards\\ the\\ clipped\\ portion.</sup>
+ <sup>\*\*\*\\ Disguards\\ the\\ unclipped\\ portion.</sup>
+ <sup>\*\*\*\*\\ Disguards\\ neither\\ portion.</sup>
+ <sup>\*\*\*\*\*\\ Not\\ 1\\ grid\\ unit.</sup>
+ <sup>\*\*\*\*\*\*\\ Both\\ brushes\\ must\\ share\\ a\\ matching\\ face.</sup>
 
 ### Entity Manipulation
 
-  ------------------------ ------------------------ ------------------------
-                                                    
-
-  Entity Color             **K**                    Open the color picker
-                                                    window
-
-  Ungroup                  **Shift+G**              Turn the selected
-                                                    brushes back into world
-                                                    geometry
-
-  Center Origin            **Shift+O**              Set the origin of the
-                                                    brush entity to the
-                                                    actual center
-
-  Combine Selection        **Shift+K**              Combine a selection of
-                                                    brushes into a group
-
-  Connect Selection        **Ctrl+K**               Makes the first selected
-                                                    entity target the second
-                                                    selected entity
-
-  Select All Of Type       **Shift+A**              Select all entities that
-                                                    are the same type as the
-                                                    selected entity
-
-  Entity List              **I**                    Opens the Entity List
-                                                    Window
-
-  Find Or Replace Entity   **Ctrl+F3**              Open the Find/Replace
-                                                    Entity Window
-  ------------------------ ------------------------ ------------------------
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Entity Color</td>
+<td align="left"><strong>K</strong></td>
+<td align="left">Open the color picker window</td>
+</tr>
+<tr class="odd">
+<td align="left">Ungroup</td>
+<td align="left"><strong>Shift+G</strong></td>
+<td align="left">Turn the selected brushes back into world geometry</td>
+</tr>
+<tr class="even">
+<td align="left">Center Origin</td>
+<td align="left"><strong>Shift+O</strong></td>
+<td align="left">Set the origin of the brush entity to the actual center</td>
+</tr>
+<tr class="odd">
+<td align="left">Combine Selection</td>
+<td align="left"><strong>Shift+K</strong></td>
+<td align="left">Combine a selection of brushes into a group</td>
+</tr>
+<tr class="even">
+<td align="left">Connect Selection</td>
+<td align="left"><strong>Ctrl+K</strong></td>
+<td align="left">Makes the first selected entity target the second selected entity</td>
+</tr>
+<tr class="odd">
+<td align="left">Select All Of Type</td>
+<td align="left"><strong>Shift+A</strong></td>
+<td align="left">Select all entities that are the same type as the selected entity</td>
+</tr>
+<tr class="even">
+<td align="left">Entity List</td>
+<td align="left"><strong>I</strong></td>
+<td align="left">Opens the Entity List Window</td>
+</tr>
+<tr class="odd">
+<td align="left">Find Or Replace Entity</td>
+<td align="left"><strong>Ctrl+F3</strong></td>
+<td align="left">Open the Find/Replace Entity Window</td>
+</tr>
+</tbody>
+</table>
 
 ### General Brush & Entity Controls
 
-  ------------------------ ------------------------ ------------------------
-                                                    
-
-  Hide Selected            **H**                    Hide the selected
-                                                    brushes and entities
-
-  Show Hidden              **Shift+H**              Show all hidden items
-
-  Hide Not Selected        **Ctrl+Shift+H**         Hide all brushes and
-                                                    entities that are not
-                                                    selected
-
-                                                    
-
-  Clone Selection          **Space**                Duplicate the selected
-                                                    brushes and entities
-
-  Delete Selection         **Backspace**            Delete the selected
-                                                    brushes and entities
-
-                                                    
-
-  Un Select Selection      **Escape**               Unselect anything that
-                                                    is selected
-
-                                                    
-
-  Mouse Rotate             **R**                    Toggles mouse rotate
-                                                    mode, which allows the
-                                                    arbitrary rotation of
-                                                    entities
-
-  Toggle Flat Rotation     **Ctrl+R**               Cycles through the
-                                                    different types of mouse
-                                                    rotation
-
-  Cycle Rotation Axis      **Shift+R**              Cycles through rotating
-                                                    around X, Y, and Z
-  ------------------------ ------------------------ ------------------------
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Hide Selected</td>
+<td align="left"><strong>H</strong></td>
+<td align="left">Hide the selected brushes and entities</td>
+</tr>
+<tr class="odd">
+<td align="left">Show Hidden</td>
+<td align="left"><strong>Shift+H</strong></td>
+<td align="left">Show all hidden items</td>
+</tr>
+<tr class="even">
+<td align="left">Hide Not Selected</td>
+<td align="left"><strong>Ctrl+Shift+H</strong></td>
+<td align="left">Hide all brushes and entities that are not selected</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Clone Selection</td>
+<td align="left"><strong>Space</strong></td>
+<td align="left">Duplicate the selected brushes and entities</td>
+</tr>
+<tr class="odd">
+<td align="left">Delete Selection</td>
+<td align="left"><strong>Backspace</strong></td>
+<td align="left">Delete the selected brushes and entities</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Un Select Selection</td>
+<td align="left"><strong>Escape</strong></td>
+<td align="left">Unselect anything that is selected</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Mouse Rotate</td>
+<td align="left"><strong>R</strong></td>
+<td align="left">Toggles mouse rotate mode, which allows the arbitrary rotation of entities</td>
+</tr>
+<tr class="even">
+<td align="left">Toggle Flat Rotation</td>
+<td align="left"><strong>Ctrl+R</strong></td>
+<td align="left">Cycles through the different types of mouse rotation</td>
+</tr>
+<tr class="odd">
+<td align="left">Cycle Rotation Axis</td>
+<td align="left"><strong>Shift+R</strong></td>
+<td align="left">Cycles through rotating around X, Y, and Z</td>
+</tr>
+</tbody>
+</table>
 
 Offline Downloadable Version
 ----------------------------
 
-Below you can find a PDF version of this list designed for off-line
-reference. The PDF is is fully bookmarked for ease of use. Right click
-and select 'Save As' to download.
+Below you can find a PDF version of this list designed for off-line reference. The PDF is is fully bookmarked for ease of use. Right click and select 'Save As' to download.
 
-[DoomEDIT Key Bindings and Mouse Controls
-V1.0.pdf](https://web.archive.org/web/20111217182243/http://www.graham-russell.co.uk/junk/DoomEDIT_Command_List.pdf "http://www.graham-russell.co.uk/junk/DoomEDIT_Command_List.pdf")
+[DoomEDIT Key Bindings and Mouse Controls V1.0.pdf](https://web.archive.org/web/20111217182243/http://www.graham-russell.co.uk/junk/DoomEDIT_Command_List.pdf "http://www.graham-russell.co.uk/junk/DoomEDIT_Command_List.pdf")
 

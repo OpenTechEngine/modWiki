@@ -1,7 +1,4 @@
-An articulated figure declaration defines the parameters for a ragdoll
-to react physically in the game. It's purpose is to assign collision
-bodies and joint restraints to the skeleton of an MD5mesh. These
-declarations are used explicitly for ragdolls.
+An articulated figure declaration defines the parameters for a ragdoll to react physically in the game. It's purpose is to assign collision bodies and joint restraints to the skeleton of an MD5mesh. These declarations are used explicitly for ragdolls.
 
 Syntax
 ------
@@ -22,13 +19,9 @@ Syntax
 
     {
 
-AF declarations are started with a header which consists of the keyword
-*articulatedFigure* followed by the *name* of the declaration. They are
-then followed by the body of the declaration which is enclosed in curly
-brackets.
+AF declarations are started with a header which consists of the keyword *articulatedFigure* followed by the *name* of the declaration. They are then followed by the body of the declaration which is enclosed in curly brackets.
 
-The body of the declaration consists of three sections, settings,
-bodies, and joints.
+The body of the declaration consists of three sections, settings, bodies, and joints.
 
 ### Settings
 
@@ -36,24 +29,21 @@ bodies, and joints.
        key   parms
     }
 
-The settings section contains keys and parameters that apply to the
-entire articulated figure.
+The settings section contains keys and parameters that apply to the entire articulated figure.
 
-The settings section is started with a header which consists of the
-keyword *settings* followed by the body. The body is enclosed in curly
-brackets.
+The settings section is started with a header which consists of the keyword *settings* followed by the body. The body is enclosed in curly brackets.
 
 The following keys are used in the body of this section...
 
-  KEYWORD                                                                                                  DESCRIPTION
-  -------------------------------------------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  mesh "md5mesh"                                                                                           The md5 mesh used for the articulated figure
-  anim "md5anim"                                                                                           The initial animation (t-pose)
-  skin "skin"                                                                                              A skin to use
-  friction \<linear\>, \<angular\>, \<contact\>                                                            The default friction for all bodies. The linear and angular friction values specify the translational and rotational air friction. The contact friction value specifies the friction with contact surfaces. The friction values are usually in the range [0, 1].
-  selfCollision 0/1                                                                                        The default setting for self collision detection
-  suspendSpeed \<linear velocity\> \<angular velocity\> \<linear acceleration\> \<angular acceleration\>   The speed at which the articulated figure comes to rest. The specified linear and angular velocity is the maximum velocity at which the articulated figure may come to rest. The specified linear and angular acceleration is the maximum acceleration at which the articulated figure may come to rest.
-  totalMass \<mass\>                                                                                       The total mass of the articulated figure. If the total mass is set to a value greater than zero then the mass of each body is scaled such that the total mass of the articulated figure equals the given mass.
+| KEYWORD                                                                                                | DESCRIPTION                                                                                                                                                                                                                                                                                              |
+|--------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| mesh "md5mesh"                                                                                         | The md5 mesh used for the articulated figure                                                                                                                                                                                                                                                             |
+| anim "md5anim"                                                                                         | The initial animation (t-pose)                                                                                                                                                                                                                                                                           |
+| skin "skin"                                                                                            | A skin to use                                                                                                                                                                                                                                                                                            |
+| friction \<linear\>, \<angular\>, \<contact\>                                                          | The default friction for all bodies. The linear and angular friction values specify the translational and rotational air friction. The contact friction value specifies the friction with contact surfaces. The friction values are usually in the range [0, 1].                                         |
+| selfCollision 0/1                                                                                      | The default setting for self collision detection                                                                                                                                                                                                                                                         |
+| suspendSpeed \<linear velocity\> \<angular velocity\> \<linear acceleration\> \<angular acceleration\> | The speed at which the articulated figure comes to rest. The specified linear and angular velocity is the maximum velocity at which the articulated figure may come to rest. The specified linear and angular acceleration is the maximum acceleration at which the articulated figure may come to rest. |
+| totalMass \<mass\>                                                                                     | The total mass of the articulated figure. If the total mass is set to a value greater than zero then the mass of each body is scaled such that the total mass of the articulated figure equals the given mass.                                                                                           |
 
 ### Bodies
 
@@ -61,28 +51,24 @@ The following keys are used in the body of this section...
        key   parms
     }
 
-The bodies section contains a list of collision bodies and their
-respective keys and parameters.
+The bodies section contains a list of collision bodies and their respective keys and parameters.
 
-Each collision body is started with a header which consists of the
-keyword *body* followed by the *name* of the collision body to be
-declared. They are then followed by the body of the declaration which is
-enclosed in curly brackets.
+Each collision body is started with a header which consists of the keyword *body* followed by the *name* of the collision body to be declared. They are then followed by the body of the declaration which is enclosed in curly brackets.
 
 There can be multiple collision body declarations in the body section.
 
 The following keys are used in the body of this section...
 
-  KEYWORD                                         DESCRIPTION
-  ----------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  joint "joint name"                              The joint the body modifies. There is always one body which modifies the origin joint of the skeletal model. The position and orientation of this body are used to move the whole skeletal model through the world. The joint key for this body is set to "origin".
-  model [collision model]                         A body can use several different collision models. Such a collision model is specified with the model key: model box( (min\_x, min\_y, min\_z), (max\_x, max\_y, max\_z) ) model octahedron( (min\_x, min\_y, min\_z), (max\_x, max\_y, max\_z) ) model dodecahedron( (min\_x, min\_y, min\_z), (max\_x, max\_y, max\_z) ) model cone( (min\_x, min\_y, min\_z), (max\_x, max\_y, max\_z), numSides ) model cylinder( (min\_x, min\_y, min\_z), (max\_x, max\_y, max\_z), numSides ) model bone( (start\_x, start\_y, start\_z), (end\_x, end\_y, end\_z), width ) model custom( "name" )
-  origin ( x, y, z )                              The collision model has to be placed at the right position relative to the joint which is modified by the body. This key specifies the position of the center of the collision model.
-  angles ( pitch, yaw, roll )                     The collision model can be rotated about it's origin with the angles key
-  density \<value\>                               The density of the collision model. The mass of the body equals the density times the volume of the collision model.
-  friction \<linear\>, \<angular\>, \<contact\>   Different friction properties can be specified for each body. The linear and angular friction values specify the translational and rotational air friction. The contact friction value specifies the friction with contact surfaces. The friction values are usually in the range [0, 1].
-  selfCollision 0/1                               Set self collision detection per body.
-  containedjoints "jointlist"                     Projectiles collide with the visual mesh of the skeletal model. For an impact position on the mesh the nearest joint of the skeletal model is taken. From this joint the impact is transferred to one of the bodies of the articulated figure. Each body has a list with joints that are more or less contained by the body. The impact near a joint is transferred to the body that contains the joint. A joint can only be contained by one body and each joint must be contained by a body. The joints contained by a body are specified with the containedjoints key.
+| KEYWORD                                       | DESCRIPTION                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|-----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| joint "joint name"                            | The joint the body modifies. There is always one body which modifies the origin joint of the skeletal model. The position and orientation of this body are used to move the whole skeletal model through the world. The joint key for this body is set to "origin".                                                                                                                                                                                                                                                                                                                       |
+| model [collision model]                       | A body can use several different collision models. Such a collision model is specified with the model key: model box( (min\_x, min\_y, min\_z), (max\_x, max\_y, max\_z) ) model octahedron( (min\_x, min\_y, min\_z), (max\_x, max\_y, max\_z) ) model dodecahedron( (min\_x, min\_y, min\_z), (max\_x, max\_y, max\_z) ) model cone( (min\_x, min\_y, min\_z), (max\_x, max\_y, max\_z), numSides ) model cylinder( (min\_x, min\_y, min\_z), (max\_x, max\_y, max\_z), numSides ) model bone( (start\_x, start\_y, start\_z), (end\_x, end\_y, end\_z), width ) model custom( "name" ) |
+| origin ( x, y, z )                            | The collision model has to be placed at the right position relative to the joint which is modified by the body. This key specifies the position of the center of the collision model.                                                                                                                                                                                                                                                                                                                                                                                                     |
+| angles ( pitch, yaw, roll )                   | The collision model can be rotated about it's origin with the angles key                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| density \<value\>                             | The density of the collision model. The mass of the body equals the density times the volume of the collision model.                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| friction \<linear\>, \<angular\>, \<contact\> | Different friction properties can be specified for each body. The linear and angular friction values specify the translational and rotational air friction. The contact friction value specifies the friction with contact surfaces. The friction values are usually in the range [0, 1].                                                                                                                                                                                                                                                                                                 |
+| selfCollision 0/1                             | Set self collision detection per body.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| containedjoints "jointlist"                   | Projectiles collide with the visual mesh of the skeletal model. For an impact position on the mesh the nearest joint of the skeletal model is taken. From this joint the impact is transferred to one of the bodies of the articulated figure. Each body has a list with joints that are more or less contained by the body. The impact near a joint is transferred to the body that contains the joint. A joint can only be contained by one body and each joint must be contained by a body. The joints contained by a body are specified with the containedjoints key.                 |
 
 ### Joints
 
@@ -90,93 +76,80 @@ The following keys are used in the body of this section...
        key   parms
     }
 
-The joints section contains a list of joints and their respective
-parameters.
+The joints section contains a list of joints and their respective parameters.
 
-Each joint is started with a header which consists of a joint type
-descriptor that defines the joint type followed the *name* of the joint.
-This is then followed by the body which is enclosed in curly brackets.
+Each joint is started with a header which consists of a joint type descriptor that defines the joint type followed the *name* of the joint. This is then followed by the body which is enclosed in curly brackets.
 
 There can be multiple joint declarations in the joint section.
 
-The keys used in the body of this section vary depending on what
-jointType is specified...
+The keys used in the body of this section vary depending on what jointType is specified...
 
 #### Ball and Socket
 
 'Need an overview description for this jointType'
 
-  KEYWORD                                                                                                               DESCRIPTION
-  --------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  anchor ( x, y, z )                                                                                                    Specifies the center of the ball (required)
-  conelimit ( axis\_x, axis\_y, axis\_z ), \<angle\>, ( shaft\_x, shaft\_y, shaft\_z )                                  Specifies a cone shaped limit. The cone axis is specified by the first vector. The angle of the cone at the top follows. The cone is attached to body2. Next a shaft is specified which is attached to body1 and is constrained to always stay within the cone.
-  pyramidlimit ( axis1\_x, axis1\_y, axis1\_z ), \<angle1\>, \<angle2\>, \<angle3\>, ( shaft\_x, shaft\_y, shaft\_z )   Specifies a pyramid shaped limit. The pyramid axis is specified by the first vectors. The first and second angle specify the angles at the top of the pyramid. The third angle specifies the rotation of the pyramid about the pyramid axis. The pyramid is attached to body2. Next a shaft is specified which is attached to body1 and is constrained to always stay within the pyramid.
-  friction \<value\>                                                                                                    Specifies joint friction. The friction value is usually in the range [0, 1].
+| KEYWORD                                                                                                             | DESCRIPTION                                                                                                                                                                                                                                                                                                                                                                               |
+|---------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| anchor ( x, y, z )                                                                                                  | Specifies the center of the ball (required)                                                                                                                                                                                                                                                                                                                                               |
+| conelimit ( axis\_x, axis\_y, axis\_z ), \<angle\>, ( shaft\_x, shaft\_y, shaft\_z )                                | Specifies a cone shaped limit. The cone axis is specified by the first vector. The angle of the cone at the top follows. The cone is attached to body2. Next a shaft is specified which is attached to body1 and is constrained to always stay within the cone.                                                                                                                           |
+| pyramidlimit ( axis1\_x, axis1\_y, axis1\_z ), \<angle1\>, \<angle2\>, \<angle3\>, ( shaft\_x, shaft\_y, shaft\_z ) | Specifies a pyramid shaped limit. The pyramid axis is specified by the first vectors. The first and second angle specify the angles at the top of the pyramid. The third angle specifies the rotation of the pyramid about the pyramid axis. The pyramid is attached to body2. Next a shaft is specified which is attached to body1 and is constrained to always stay within the pyramid. |
+| friction \<value\>                                                                                                  | Specifies joint friction. The friction value is usually in the range [0, 1].                                                                                                                                                                                                                                                                                                              |
 
 #### Universal Joint
 
-An universal joint works very similar to a ball and socket joint.
-However the rotation about two shafts attached to the bodies is also
-constrained.
+An universal joint works very similar to a ball and socket joint. However the rotation about two shafts attached to the bodies is also constrained.
 
-  KEYWORD                                                                 DESCRIPTION
-  ----------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  anchor ( x, y, z )                                                      Specifies the anchor of the universal joint (required)
-  shafts ( dir1\_x, dir1\_y, dir1\_z ), ( dir2\_x, dir2\_y, dir2\_z )     Specifies the two shafts (required) The first shaft is attached to body1 and points into or towards body1. The second shaft is attached to body2 and points into or towards body2. The rotation of body1 relative to body2 about these shafts is constrained.
-  conelimit ( axis\_x, axis\_y, axis\_z ), angle                          Specifies a cone shaped limit. The cone axis is specified by the first vector. The angle of the cone at the top follows. The cone is attached to body2. The first shaft attached to body1 is constrained to always stay within the cone.
-  pyramidlimit ( axis1\_x, axis1\_y, axis1\_z ), angle1, angle2, angle3   Specifies a pyramid shaped limit. The pyramid axis is specified by the first vectors. The first and second angle specify angles at the top of the pyramid. The third angle specifies the rotation of the pyramid about the pyramid axis. The pyramid is attached to body2. The first shaft attached to body1 is constrained to always stay within the pyramid.
-  friction \<value\>                                                      Specifies joint friction. The friction value is usually in the range [0, 1].
+| KEYWORD                                                               | DESCRIPTION                                                                                                                                                                                                                                                                                                                                                    |
+|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| anchor ( x, y, z )                                                    | Specifies the anchor of the universal joint (required)                                                                                                                                                                                                                                                                                                         |
+| shafts ( dir1\_x, dir1\_y, dir1\_z ), ( dir2\_x, dir2\_y, dir2\_z )   | Specifies the two shafts (required) The first shaft is attached to body1 and points into or towards body1. The second shaft is attached to body2 and points into or towards body2. The rotation of body1 relative to body2 about these shafts is constrained.                                                                                                  |
+| conelimit ( axis\_x, axis\_y, axis\_z ), angle                        | Specifies a cone shaped limit. The cone axis is specified by the first vector. The angle of the cone at the top follows. The cone is attached to body2. The first shaft attached to body1 is constrained to always stay within the cone.                                                                                                                       |
+| pyramidlimit ( axis1\_x, axis1\_y, axis1\_z ), angle1, angle2, angle3 | Specifies a pyramid shaped limit. The pyramid axis is specified by the first vectors. The first and second angle specify angles at the top of the pyramid. The third angle specifies the rotation of the pyramid about the pyramid axis. The pyramid is attached to body2. The first shaft attached to body1 is constrained to always stay within the pyramid. |
+| friction \<value\>                                                    | Specifies joint friction. The friction value is usually in the range [0, 1].                                                                                                                                                                                                                                                                                   |
 
 #### Hinge
 
-A hinge is specified by an anchor and a hinge axis about which the two
-bodies are allowed to rotate relative to each other.
+A hinge is specified by an anchor and a hinge axis about which the two bodies are allowed to rotate relative to each other.
 
-  KEYWORD                              DESCRIPTION
-  ------------------------------------ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  anchor ( x, y, z )                   Specifies the anchor
-  axis ( axis\_x, axis\_y, axis\_z )   Specifies the hinge axis
-  limit angle1, angle2, angle3         Specifies a V-shaped limit. The first angle specifies the center of the V-shaped limit. The angle which specifies the width of the V-shaped limit follows. The V-shape is attached to body2. Next a shaft is specified which is attached to body1 and is constrained to always stay within the V-shape. The orientation of this shaft is specified with the third angle.
-  friction \<value\>                   Specifies joint friction. The friction value is usually in the range [0, 1].
+| KEYWORD                            | DESCRIPTION                                                                                                                                                                                                                                                                                                                                                              |
+|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| anchor ( x, y, z )                 | Specifies the anchor                                                                                                                                                                                                                                                                                                                                                     |
+| axis ( axis\_x, axis\_y, axis\_z ) | Specifies the hinge axis                                                                                                                                                                                                                                                                                                                                                 |
+| limit angle1, angle2, angle3       | Specifies a V-shaped limit. The first angle specifies the center of the V-shaped limit. The angle which specifies the width of the V-shaped limit follows. The V-shape is attached to body2. Next a shaft is specified which is attached to body1 and is constrained to always stay within the V-shape. The orientation of this shaft is specified with the third angle. |
+| friction \<value\>                 | Specifies joint friction. The friction value is usually in the range [0, 1].                                                                                                                                                                                                                                                                                             |
 
 #### Spring
 
 A spring is specified by two anchors, one on each constrained body.
 
-  KEYWORD                DESCRIPTION
-  ---------------------- ------------------------------------------------------------------------------
-  anchor1 ( x, y, z )    Specifies the first anchor
-  anchor2 ( x, y, z )    Specifies the second anchor
-  friction \<value\>     Specifies joint friction. The friction value is usually in the range [0, 1].
-  stretch \<value\>      Spring constant when the spring is stretched
-  compress \<value\>     Spring constant when the spring is compressed
-  damping \<value\>      Spring damping
-  restLength \<value\>   Rest length of the spring
-  minLength \<value\>    Minimum length of the spring
-  maxLength \<value\>    Maximum length of the spring
+| KEYWORD              | DESCRIPTION                                                                  |
+|----------------------|------------------------------------------------------------------------------|
+| anchor1 ( x, y, z )  | Specifies the first anchor                                                   |
+| anchor2 ( x, y, z )  | Specifies the second anchor                                                  |
+| friction \<value\>   | Specifies joint friction. The friction value is usually in the range [0, 1]. |
+| stretch \<value\>    | Spring constant when the spring is stretched                                 |
+| compress \<value\>   | Spring constant when the spring is compressed                                |
+| damping \<value\>    | Spring damping                                                               |
+| restLength \<value\> | Rest length of the spring                                                    |
+| minLength \<value\>  | Minimum length of the spring                                                 |
+| maxLength \<value\>  | Maximum length of the spring                                                 |
 
 Vector Syntax
 -------------
 
-3D vectors are used to specify positions, directions and orientations of
-bodies and constraints. There are four ways to specify such a vector in
-a .af file
+3D vectors are used to specify positions, directions and orientations of bodies and constraints. There are four ways to specify such a vector in a .af file
 
-  KEYWORD                                              DESCRIPTION
-  ---------------------------------------------------- -----------------------------------------------
-  ( x, y, z )                                          Position relative to the md5 origin
-  joint( "joint name" )                                Position of a joint
-  bonecenter( "start joint name", "end joint name" )   Center of a bone between two joints
-  bonedir( "start joint name", "end joint name" )      Direction of a bone from one joint to another
+| KEYWORD                                            | DESCRIPTION                                   |
+|----------------------------------------------------|-----------------------------------------------|
+| ( x, y, z )                                        | Position relative to the md5 origin           |
+| joint( "joint name" )                              | Position of a joint                           |
+| bonecenter( "start joint name", "end joint name" ) | Center of a bone between two joints           |
+| bonedir( "start joint name", "end joint name" )    | Direction of a bone from one joint to another |
 
 Editing Tools
 -------------
 
-Like other declaration types, articlulated figures can be edited in a
-text editor. However, the engine comes packaged with a built-in tool for
-editing these files. It can be accessed using the console command
-[editAFs](EditAFs "EditAFs") .
+Like other declaration types, articlulated figures can be edited in a text editor. However, the engine comes packaged with a built-in tool for editing these files. It can be accessed using the console command [editAFs](EditAFs "EditAFs") .
 
-Details on this tool's use can be found in the [articulated figure
-editor](AF_editor "AF editor") article.
+Details on this tool's use can be found in the [articulated figure editor](AF_editor "AF editor") article.
 

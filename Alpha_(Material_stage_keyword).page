@@ -1,10 +1,7 @@
 Description
 -----------
 
-The **alpha** keyword multiples the alpha channel of the associated map
-by the given value. Use of this keyword only makes sense with [blend
-modes](Blend_%28Material_stage_keyword%29 "Blend (Material stage keyword)")
-that respond to alpha, such as the **blend** blend mode.
+The **alpha** keyword multiples the alpha channel of the associated map by the given value. Use of this keyword only makes sense with [blend modes](Blend_%28Material_stage_keyword%29 "Blend (Material stage keyword)") that respond to alpha, such as the **blend** blend mode.
 
 Usage
 -----
@@ -14,14 +11,12 @@ Usage
 Parameters
 ----------
 
--   *alphaval* - the value by which the alpha channel of the image map
-    should be multiplied
+-   *alphaval* - the value by which the alpha channel of the image map should be multiplied
 
 Example
 -------
 
-The following stage blends an image with an alpha value of half its
-original alpha channel
+The following stage blends an image with an alpha value of half its original alpha channel
 
     {
        blend blend
@@ -32,21 +27,10 @@ original alpha channel
 Notes
 -----
 
-An image with no transparency has an alpha channel of constant 1.0,
-therefore this keyword can be used even for images which contain no
-explicit alpha.
+An image with no transparency has an alpha channel of constant 1.0, therefore this keyword can be used even for images which contain no explicit alpha.
 
-Photoshop 7 does not save transparency information into an alpha channel
-when dealing with targa images. You must download the updated [Targa
-export
-plugin](http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544 "http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544")
-from [Adobe](http://www.adobe.com/ "http://www.adobe.com") . All other
-versions of Photoshop work correctly.
+Photoshop 7 does not save transparency information into an alpha channel when dealing with targa images. You must download the updated [Targa export plugin](http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544 "http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544") from [Adobe](http://www.adobe.com/ "http://www.adobe.com") . All other versions of Photoshop work correctly.
 
-\
- This keyword is particularly useful for controlling the strength of a
-[mirrorRenderMap](MirrorRenderMap "MirrorRenderMap") or
-[cubeMap](CubeMap "CubeMap") stage.
+ This keyword is particularly useful for controlling the strength of a [mirrorRenderMap](MirrorRenderMap "MirrorRenderMap") or [cubeMap](CubeMap "CubeMap") stage.
 
-\
 

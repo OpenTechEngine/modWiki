@@ -1,37 +1,8 @@
-WAV (or WAVE), short for WAVE form audio format, is a Microsoft and IBM
-audio file format standard for storing audio on PCs. It is a variant of
-the RIFF bitstream format method for storing data in "chunks", and thus
-also close to the IFF and the AIFF format used on Macintosh computers.
-It takes into account some peculiarities of the Intel CPU such as
-little-endian byte order. The RIFF format acts as a "wrapper" for
-various audio compression codecs. It is the main format used on Windows
-systems for raw audio.
+WAV (or WAVE), short for WAVE form audio format, is a Microsoft and IBM audio file format standard for storing audio on PCs. It is a variant of the RIFF bitstream format method for storing data in "chunks", and thus also close to the IFF and the AIFF format used on Macintosh computers. It takes into account some peculiarities of the Intel CPU such as little-endian byte order. The RIFF format acts as a "wrapper" for various audio compression codecs. It is the main format used on Windows systems for raw audio.
 
-Though a WAV file can hold audio compressed with any codec, by far the
-most common format is pulse-code modulation audio data. Since PCM uses
-an uncompressed, lossless storage method which keeps all the samples of
-an audio track, professional users or audio experts may use the WAV
-format for maximum audio quality. WAV audio can also be edited and
-manipulated with relative ease using software.
+Though a WAV file can hold audio compressed with any codec, by far the most common format is pulse-code modulation audio data. Since PCM uses an uncompressed, lossless storage method which keeps all the samples of an audio track, professional users or audio experts may use the WAV format for maximum audio quality. WAV audio can also be edited and manipulated with relative ease using software.
 
-WAV files can be used as an intermediary storage type for ripping songs
-from cassette tapes. People using Windows's Sound Recorder can redirect
-the output from their old Walkman-type cassette players's ear phone
-jacks to the PC audio input jacks via an audio cable. Although Sound
-Recorder can only record for 60 seconds, there are easy ways to lengthen
-the file for long songs or even the entire tape (record something,
-choose decrease speed from the effects menu, repeat until file is
-sufficiently long, and then record over it from the beginning). The WAV
-file is then converted via freeware packages to other, more compact
-formats.
+WAV files can be used as an intermediary storage type for ripping songs from cassette tapes. People using Windows's Sound Recorder can redirect the output from their old Walkman-type cassette players's ear phone jacks to the PC audio input jacks via an audio cable. Although Sound Recorder can only record for 60 seconds, there are easy ways to lengthen the file for long songs or even the entire tape (record something, choose decrease speed from the effects menu, repeat until file is sufficiently long, and then record over it from the beginning). The WAV file is then converted via freeware packages to other, more compact formats.
 
-As file sharing over the Internet has become popular, the WAV format has
-declined in popularity, primarily because uncompressed WAV files are
-quite large. More frequently, compressed but lossy formats such as MP3,
-Ogg Vorbis and Advanced Audio Coding are used to store and transfer
-audio, since their smaller file sizes allow for faster transfers over
-the Internet, and large collections of files consume only a conservative
-amount of disk space. There are also more efficient, lossless codecs
-available, such as Monkey's Audio, TTA, WavPack, FLAC, Shorten, Apple
-Lossless and WMA Lossless.
+As file sharing over the Internet has become popular, the WAV format has declined in popularity, primarily because uncompressed WAV files are quite large. More frequently, compressed but lossy formats such as MP3, Ogg Vorbis and Advanced Audio Coding are used to store and transfer audio, since their smaller file sizes allow for faster transfers over the Internet, and large collections of files consume only a conservative amount of disk space. There are also more efficient, lossless codecs available, such as Monkey's Audio, TTA, WavPack, FLAC, Shorten, Apple Lossless and WMA Lossless.
 

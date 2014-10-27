@@ -1,8 +1,7 @@
 Description
 -----------
 
-The **rgba** keyword multiples all channels of the associated map by the
-given value.
+The **rgba** keyword multiples all channels of the associated map by the given value.
 
 Usage
 -----
@@ -12,8 +11,7 @@ Usage
 Parameters
 ----------
 
--   *val* - the value by which all channels of the image map should be
-    multiplied
+-   *val* - the value by which all channels of the image map should be multiplied
 
 Example
 -------
@@ -38,5 +36,4 @@ This keyword is a shorthand way to accomplish the following...
        alpha 0.5
     }
 
-\
 

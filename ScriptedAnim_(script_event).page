@@ -1,8 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -12,8 +11,7 @@ Plays a full body animation without interruptions
 Usage
 -----
 
-void scriptedAnim( string animname, float blendFrames, float loop, float
-endWithIdle )
+void scriptedAnim( string animname, float blendFrames, float loop, float endWithIdle )
 
 Parameters
 ----------
@@ -30,5 +28,4 @@ Notes
 
 tba
 
-\
 

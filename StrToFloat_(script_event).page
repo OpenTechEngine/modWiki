@@ -1,8 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -25,13 +24,11 @@ Examples
     string test1="33.333";
     sys.println ( sys.strToFloat(test1));
 
-This would output "33.333" to the console. This allows key value's in
-entities to be used in scripts as float (normally they are all strings).
+This would output "33.333" to the console. This allows key value's in entities to be used in scripts as float (normally they are all strings).
 
 Notes
 -----
 
 If the string contains non-numerals the result will always be zero.
 
-\
 

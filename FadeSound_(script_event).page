@@ -1,8 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -12,8 +11,7 @@ Fades the sound on this entity to a new level over a period of time.
 Usage
 -----
 
-*void* fadeSound( *float* **channel** , *float* **newLevel** , *float*
-**fadeTime** )
+*void* fadeSound( *float* **channel** , *float* **newLevel** , *float* **fadeTime** )
 
 Parameters
 ----------
@@ -35,5 +33,4 @@ This script event does not return any values.
 
 Use SND\_CHANNEL\_ANY for all currently playing sounds.
 
-\
 

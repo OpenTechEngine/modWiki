@@ -1,9 +1,7 @@
 Description
 -----------
 
-This command reloads both the [material
-declaration](Material_%28decl%29 "Material (decl)") and corresponding
-texture images for the surface currently in the crosshairs.
+This command reloads both the [material declaration](Material_%28decl%29 "Material (decl)") and corresponding texture images for the surface currently in the crosshairs.
 
 Usage
 -----
@@ -20,12 +18,8 @@ This command does not accept parameters.
 Notes
 -----
 
-This command is useful when testing a material shader on a surface in
-game.
+This command is useful when testing a material shader on a surface in game.
 
-You can make small changes to a material in general, point your
-crosshairs at the surface in game, and use this console command to see
-the effect of those changes.
+You can make small changes to a material in general, point your crosshairs at the surface in game, and use this console command to see the effect of those changes.
 
-\
 

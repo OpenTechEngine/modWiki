@@ -1,25 +1,10 @@
-The term spawnArgs (or *spawn arguments* ) refers to a dictionary - a
-list of key/value pairs - that an [entity](Entity "Entity") uses to set
-up attributes or define behavior.
+The term spawnArgs (or *spawn arguments* ) refers to a dictionary - a list of key/value pairs - that an [entity](Entity "Entity") uses to set up attributes or define behavior.
 
-The spawnArgs dictionary is defined in the base [spawn
-class](Spawn_class "Spawn class")
-[idEntity](IdEntity_%28class%29 "IdEntity (class)") . Thus all spawn
-classes gain it via inheritance.
+The spawnArgs dictionary is defined in the base [spawn class](Spawn_class "Spawn class") [idEntity](IdEntity_%28class%29 "IdEntity (class)") . Thus all spawn classes gain it via inheritance.
 
-It is filled when an entity is spawned with the
-[entityDef](Entitydef_%28decl%29 "Entitydef (decl)") type and also the
-map entity dictionary. So it provides an easy way for a developer to
-modify aspects of the entity.
+It is filled when an entity is spawned with the [entityDef](Entitydef_%28decl%29 "Entitydef (decl)") type and also the map entity dictionary. So it provides an easy way for a developer to modify aspects of the entity.
 
-It is most commonly accessed by the entity via its [spawn
-class](Spawn_class "Spawn class") or [script
-object](Script_object "Script object") , but it may also be accessed via
-game logic, another entity, or level script. However, it should be noted
-that the most efficient use is to only read the values at entity spawn
-into variables.
+It is most commonly accessed by the entity via its [spawn class](Spawn_class "Spawn class") or [script object](Script_object "Script object") , but it may also be accessed via game logic, another entity, or level script. However, it should be noted that the most efficient use is to only read the values at entity spawn into variables.
 
-In scripting the
-[getKey](GetKey_%28script_event%29 "GetKey (script event)") script
-events are used to access spawnArgs.
+In scripting the [getKey](GetKey_%28script_event%29 "GetKey (script event)") script events are used to access spawnArgs.
 

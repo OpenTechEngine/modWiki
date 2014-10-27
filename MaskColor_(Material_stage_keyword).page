@@ -1,8 +1,7 @@
 Description
 -----------
 
-The **maskColor** keyword causes the color channels of this stage to be
-ignored and only use the alpha channel.
+The **maskColor** keyword causes the color channels of this stage to be ignored and only use the alpha channel.
 
 Usage
 -----
@@ -27,10 +26,6 @@ Masking the color channels.
 Notes
 -----
 
-This keyword is usefull in combination with
-[maskAlpha](MaskAlpha_%28Material_stage_keyword%29 "MaskAlpha (Material stage keyword)")
-in case you want to use the alpha channel from some different image
-file.
+This keyword is usefull in combination with [maskAlpha](MaskAlpha_%28Material_stage_keyword%29 "MaskAlpha (Material stage keyword)") in case you want to use the alpha channel from some different image file.
 
-\
 

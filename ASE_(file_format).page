@@ -1,21 +1,16 @@
 Overview
 --------
 
-ASE stands for Ascii Scene Export. This is an ascii text based format
-associated with 3DS Max. It is not limited to that application, but
-support in other applications is dependent on import/export scripts or
-plugins.
+ASE stands for Ascii Scene Export. This is an ascii text based format associated with 3DS Max. It is not limited to that application, but support in other applications is dependent on import/export scripts or plugins.
 
 The Doom 3 engine uses the ASE format for static meshes.
 
 Export
 ------
 
--   [iddevnet model export
-    page](http://www.iddevnet.com/doom3/modelexport.php "http://www.iddevnet.com/doom3/modelexport.php")
+-   [iddevnet model export page](http://www.iddevnet.com/doom3/modelexport.php "http://www.iddevnet.com/doom3/modelexport.php")
 -   Maya can export ASE's using the ActorX plugin.
--   Blender via [export plugin
-    @doom3world](https://web.archive.org/web/20121205062642/http://www.doom3world.org/phpbb2/viewtopic.php?t=9275 "http://www.doom3world.org/phpbb2/viewtopic.php?t=9275")
+-   Blender via [export plugin @doom3world](https://web.archive.org/web/20121205062642/http://www.doom3world.org/phpbb2/viewtopic.php?t=9275 "http://www.doom3world.org/phpbb2/viewtopic.php?t=9275")
 
 File Format Syntax
 ------------------
@@ -24,13 +19,9 @@ Format: The format is based on identifiers, as in:
 
     *AN_IDENTIFIER
 
-This is followed by zero or more values, or a subset of more identifiers
-surrounded by curly braces.
+This is followed by zero or more values, or a subset of more identifiers surrounded by curly braces.
 
-Most of the time when working with ASE's, you will find that you have to
-open them to manually link the materials to a specified [material
-shader](Material_%28decl%29 "Material (decl)") . For example, the format
-for the material list may look like this when exported from actorx:
+Most of the time when working with ASE's, you will find that you have to open them to manually link the materials to a specified [material shader](Material_%28decl%29 "Material (decl)") . For example, the format for the material list may look like this when exported from actorx:
 
      *MATERIAL_LIST {
        *MATERIAL_COUNT 2
@@ -48,13 +39,11 @@ Where it says:
 
     *BITMAP "none"
 
-You must replace this with a reference to a doom material shader, like
-so:
+You must replace this with a reference to a doom material shader, like so:
 
     *BITMAP "//base/models/mapobjects/myModel/myShader"
 
-Occasionally, for some unknown reason this reference doesn't work in
-which case you should try...
+Occasionally, for some unknown reason this reference doesn't work in which case you should try...
 
     *BITMAP "//purgatory/purgatory/models/mapobjects/myModel/myShader"
 
@@ -62,29 +51,19 @@ which case you should try...
 
     *BITMAP "//doom3/base/models/mapobjects/myModel/myShader"
 
-<div>
-
 ![](/images/e/e8/Q4square_25.png) **Note:** Quake 4 only:
-*instead of //base or //purgatory/purgatory Q4 seems to use
-C:\\Ritual\\Q4ritual\\game\\q4base*
+*instead of //base or //purgatory/purgatory Q4 seems to use C:\\Ritual\\Q4ritual\\game\\q4base*
     *BITMAP "C:\Ritual\Q4ritual\game\q4base\material\name"
 
 **
 
-</div>
-
-<div>
-
-![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake
-Wars only:
+![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake Wars only:
 *use*
     *MATERIAL_NAME "material/name"
 
 eg
 
 \*MATERIAL\_NAME " *textures/models/mymodel* " **
-
-</div>
 
 Notes
 -----

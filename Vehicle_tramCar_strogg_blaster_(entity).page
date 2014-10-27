@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Vehicle_tramCar_strogg_blaster_%28entity%29 "http://modwiki.net/w/index.php?title=Vehicle_tramCar_strogg_blaster_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Vehicle_tramCar_strogg_blaster_%28entity%29 "http://modwiki.net/w/index.php?title=Vehicle_tramCar_strogg_blaster_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Vehicle_tramCar_strogg_blaster_%28entity%29 "http://modwiki.net/w/index.php?title=Vehicle_tramCar_strogg_blaster_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Vehicle_tramCar_strogg_blaster_%28entity%29 "http://modwiki.net/w/index.php?title=Vehicle_tramCar_strogg_blaster_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -26,159 +8,314 @@ Description
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
-
-  -------------------------------------------------------------------------
-  KEY                                  DESCRIPTION
-  ------------------------------------ ------------------------------------
-  accel                                acceleration
-
-  angle                                Description not available.
-
-  anim                                 Description not available.
-
-  bind                                 Description not available.
-
-  bindOrientated                       Description not available.
-
-  bindToBody                           Description not available.
-
-  bindToJoint                          Description not available.
-
-  bindanim                             Description not available.
-
-  cameraTarget                         Description not available.
-
-  cinematic                            Description not available.
-
-  classname                            Description not available.
-
-  clipModel\_doorLeft                  Description not available.
-
-  clipModel\_doorRight                 Description not available.
-
-  clipmodel                            Description not available.
-
-  collisionFov                         Description not available.
-
-  cone                                 Description not available.
-
-  cylinder                             Description not available.
-
-  decel                                deceleration
-
-  def\_damage\_explode                 Description not available.
-
-  def\_driver                          Description not available.
-
-  def\_occupant                        Description not available.
-
-  def\_persona                         Description not available.
-
-  dodecahedron                         Description not available.
-
-  editor\_color                        Description not available.
-
-  editor\_ignore                       Description not available.
-
-  editor\_maxs                         Description not available.
-
-  editor\_mins                         Description not available.
-
-  editor\_rotatable                    Description not available.
-
-  editor\_usage                        
-
-  editor\_var XXXX                     Description not available.
-
-  enemy                                Name of tram car that is supposed to
-                                       be followed
-
-  fx\_damage\_external                 Description not available.
-
-  fx\_damage\_internal                 Description not available.
-
-  fx\_explode                          Description not available.
-
-  guiTarget                            Description not available.
-
-  health                               
-
-  hide                                 Description not available.
-
-  hidesurface                          Description not available.
-
-  inherit                              Description not available.
-
-  instance                             Description not available.
-
-  maxs                                 Description not available.
-
-  mins                                 Description not available.
-
-  model                                Description not available.
-
-  name                                 Description not available.
-
-  networkSync                          Description not available.
-
-  neverDormant                         Description not available.
-
-  noclipmodel                          Description not available.
-
-  noisePeriodRange                     Description not available.
-
-  normalSpeed                          Description not available.
-
-  origin                               Description not available.
-
-  rotation                             Description not available.
-
-  scriptobject                         Description not available.
-
-  shadow\_lod\_distance                Description not available.
-
-  size                                 Description not available.
-
-  snd\_accel                           Description not available.
-
-  snd\_close                           Description not available.
-
-  snd\_closed                          Description not available.
-
-  snd\_decel                           Description not available.
-
-  snd\_horn                            Description not available.
-
-  snd\_noise                           Description not available.
-
-  snd\_open                            Description not available.
-
-  snd\_opened                          Description not available.
-
-  snd\_speed\_excessive\_track         Description not available.
-
-  snd\_speed\_excessive\_tram          Description not available.
-
-  snd\_speed\_normal\_track            Description not available.
-
-  snd\_speed\_normal\_tram             Description not available.
-
-  solidForTeam                         Description not available.
-
-  spawnclass                           Description not available.
-
-  speed                                max speed
-
-  target                               Description not available.
-
-  trigger\_anim                        Description not available.
-
-  usable                               Description not available.
-
-  useSimpleTriggerClip                 Description not available.
-  -------------------------------------------------------------------------
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">KEY</th>
+<th align="left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">accel</td>
+<td align="left">acceleration</td>
+</tr>
+<tr class="even">
+<td align="left">angle</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">anim</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">bind</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">bindOrientated</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">bindToBody</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">bindToJoint</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">bindanim</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">cameraTarget</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">cinematic</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">classname</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">clipModel_doorLeft</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">clipModel_doorRight</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">clipmodel</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">collisionFov</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">cone</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">cylinder</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">decel</td>
+<td align="left">deceleration</td>
+</tr>
+<tr class="odd">
+<td align="left">def_damage_explode</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">def_driver</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">def_occupant</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">def_persona</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">dodecahedron</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">editor_color</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">editor_ignore</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">editor_maxs</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">editor_mins</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">editor_rotatable</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">editor_usage</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">editor_var XXXX</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">enemy</td>
+<td align="left">Name of tram car that is supposed to be followed</td>
+</tr>
+<tr class="even">
+<td align="left">fx_damage_external</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">fx_damage_internal</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">fx_explode</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">guiTarget</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">health</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">hide</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">hidesurface</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">inherit</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">instance</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">maxs</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">mins</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">model</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">name</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">networkSync</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">neverDormant</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">noclipmodel</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">noisePeriodRange</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">normalSpeed</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">origin</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">rotation</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">scriptobject</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">shadow_lod_distance</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">size</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">snd_accel</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">snd_close</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">snd_closed</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">snd_decel</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">snd_horn</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">snd_noise</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">snd_open</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">snd_opened</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">snd_speed_excessive_track</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">snd_speed_excessive_tram</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">snd_speed_normal_track</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">snd_speed_normal_tram</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">solidForTeam</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">spawnclass</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">speed</td>
+<td align="left">max speed</td>
+</tr>
+<tr class="even">
+<td align="left">target</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">trigger_anim</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">usable</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">useSimpleTriggerClip</td>
+<td align="left">Description not available.</td>
+</tr>
+</tbody>
+</table>
 
 Inheritance
 -----------

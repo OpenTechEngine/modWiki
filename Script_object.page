@@ -1,23 +1,15 @@
-A script object is a way of organizing variables and functions that are
-related to an [entity](Entity "Entity") . It is analogous to a class in
-object orientated programming terms.
+A script object is a way of organizing variables and functions that are related to an [entity](Entity "Entity") . It is analogous to a class in object orientated programming terms.
 
-It's uses are wide ranging from weapons and AI, to extending existing
-entities.
+It's uses are wide ranging from weapons and AI, to extending existing entities.
 
-While an entities' [spawn class](Spawn_class "Spawn class") strongly
-defines run time behavior, script objects are generally used to create
-variation on run time behavior within that framework.
+While an entities' [spawn class](Spawn_class "Spawn class") strongly defines run time behavior, script objects are generally used to create variation on run time behavior within that framework.
 
-The spawn class sets up and runs a script object if the key/value pair
-"scriptobject" is set to a valid object type on the entities
-[spawnArgs](SpawnArgs "SpawnArgs") .
+The spawn class sets up and runs a script object if the key/value pair "scriptobject" is set to a valid object type on the entities [spawnArgs](SpawnArgs "SpawnArgs") .
 
 Working on objects
 ------------------
 
-In order to call a function of a script object a valid object reference
-must be set up.
+In order to call a function of a script object a valid object reference must be set up.
 
 Example:
 
@@ -25,24 +17,13 @@ Example:
     myMonster = sys.getEntity("monster_sam"); /
     myMonster.wake_on_trigger();
 
-Line 1 declares and object reference of monster\_base type. The script
-compiler will issue an [error](Error "Error") if there is no script
-object of that type.
+Line 1 declares and object reference of monster\_base type. The script compiler will issue an [error](Error "Error") if there is no script object of that type.
 
-Line 2 sets the reference to an entity. For the sake of this example we
-are assuming the entity "monster\_sam" is an entity running a script
-object of they type monster\_base, or one that inherits from
-monster\_base.
+Line 2 sets the reference to an entity. For the sake of this example we are assuming the entity "monster\_sam" is an entity running a script object of they type monster\_base, or one that inherits from monster\_base.
 
-An object reference will be set to
-[\$null\_entity](%24null_entity_%28scripting%29 "$null entity (scripting)")
-if the entity you are trying to set the variable to does not have a
-object of that type.
+An object reference will be set to [$null\_entity](%24null_entity_%28scripting%29 "$null entity (scripting)") if the entity you are trying to set the variable to does not have a object of that type.
 
-Line 3 calls the object function wake\_on\_trigger(), which we know is a
-function defined in the script object monster\_base. If the function was
-not declared in the script object the script interpreter would issue a
-[warning](Warning "Warning") . TODO: find exact error/warning messages.
+Line 3 calls the object function wake\_on\_trigger(), which we know is a function defined in the script object monster\_base. If the function was not declared in the script object the script interpreter would issue a [warning](Warning "Warning") . TODO: find exact error/warning messages.
 
 Declaration
 -----------
@@ -65,66 +46,44 @@ Syntax:
        ...
     }
 
--   [script object type] - The name of the object type. Must be unique
-    within compiled script
+-   [script object type] - The name of the object type. Must be unique within compiled script
 -   [base script object type] - The object type to inherit from.
--   Function declarations - declared in the normal way. Referred to as
-    an object function. See [Scripting basics\#Functions or
-    Methods](Scripting_basics#Functions_or_Methods "Scripting basics")
--   Variable declarations - declared in the normal way. Referred to as a
-    object variable. See [Scripting
-    basics\#Variables](Scripting_basics#Variables "Scripting basics")
+-   Function declarations - declared in the normal way. Referred to as an object function. See [Scripting basics\#Functions or Methods](Scripting_basics#Functions_or_Methods "Scripting basics")
+-   Variable declarations - declared in the normal way. Referred to as a object variable. See [Scripting basics\#Variables](Scripting_basics#Variables "Scripting basics")
 
 Important functions
 -------------------
 
-A number of functions are called by the entitys [spawn
-class](Spawn_class "Spawn class") .
+A number of functions are called by the entitys [spawn class](Spawn_class "Spawn class") .
 
     init()
 
-The script object constructor. A
-[thread](Thread_%28scripting%29 "Thread (scripting)") is created by the
-spawn class to run the init() script function at the end of the Spawn()
-function.
+The script object constructor. A [thread](Thread_%28scripting%29 "Thread (scripting)") is created by the spawn class to run the init() script function at the end of the Spawn() function.
 
 Use to set up initial state of the script object variables.
 
-**Note** : There is a bug in the scripting system where the init()
-function won't be able to call any functions of that object unless at
-least one variable is declared, or if the function in question is called
-through [self](Self_%28scripting%29 "Self (scripting)")
-.callFunction([function]);
+**Note** : There is a bug in the scripting system where the init() function won't be able to call any functions of that object unless at least one variable is declared, or if the function in question is called through [self](Self_%28scripting%29 "Self (scripting)") .callFunction([function]);
 
     destroy()
 
-Destructor. Called early on in the spawn class destructor when the
-entity is removed.
+Destructor. Called early on in the spawn class destructor when the entity is removed.
 
-Use to clean up anything that the script object was managing, such as
-created threads and entities.
+Use to clean up anything that the script object was managing, such as created threads and entities.
 
 Example
 -------
 
-For this example the script object makes a light fade in and out for the
-life time of the entity. The time for the various stages is set up to be
-configurable via [spawnArgs](SpawnArgs "SpawnArgs") .
+For this example the script object makes a light fade in and out for the life time of the entity. The time for the various stages is set up to be configurable via [spawnArgs](SpawnArgs "SpawnArgs") .
 
-It's a simple script, but we've tried to cram in as much important
-script object coding aspects as possible.
+It's a simple script, but we've tried to cram in as much important script object coding aspects as possible.
 
 ### Script
 
-You'll see the currently broken note links to the example in the script,
-just look at the name of the link and find the note after the script.
+You'll see the currently broken note links to the example in the script, just look at the name of the link and find the note after the script.
 
-TODO: find out if there is a way to escape wiki nonwikifying links in
-script/code tags.
+TODO: find out if there is a way to escape wiki nonwikifying links in script/code tags.
 
-To simplify things conceptually while working on a script we can think
-of the script object as being an entity that is running a script object
-of this type.
+To simplify things conceptually while working on a script we can think of the script object as being an entity that is running a script object of this type.
 
      
     /***********************************************************************
@@ -227,131 +186,75 @@ Set up on a light entity with the following key/value pairs:
      
     "fade_out_time" "1"
 
-Note: While you could just add these keys to the [map
-entity](Map_entity "Map entity") , setting up an
-[entityDef](EntityDef_%28decl%29 "EntityDef (decl)") for a spawn
-class/script object combination is the best way to set defaults for
-spawnArgs.
+Note: While you could just add these keys to the [map entity](Map_entity "Map entity") , setting up an [entityDef](EntityDef_%28decl%29 "EntityDef (decl)") for a spawn class/script object combination is the best way to set defaults for spawnArgs.
 
 Example Notes
 -------------
 
 ### declare
 
-Here we are declaring our script object type to be called light\_strobe.
-object types must be unique, a search through the script files shows
-there isn't any existing script object type called light\_strobe.
+Here we are declaring our script object type to be called light\_strobe. object types must be unique, a search through the script files shows there isn't any existing script object type called light\_strobe.
 
 ### debug print
 
-Just to give an idea of what is going on while working on the script.
-The text will be shown in the console. Prefixing the game time is often
-handy to get an idea of the flow of the script.
+Just to give an idea of what is going on while working on the script. The text will be shown in the console. Prefixing the game time is often handy to get an idea of the flow of the script.
 
 ### type check
 
-Since we will be using [script events](Script_events "Script events")
-(event calls to the [spawn class](Spawn_class "Spawn class") ) specific
-to an idLight spawn class we are doing some simple type checking to see
-if the entity this script object is running on is the right type.
+Since we will be using [script events](Script_events "Script events") (event calls to the [spawn class](Spawn_class "Spawn class") ) specific to an idLight spawn class we are doing some simple type checking to see if the entity this script object is running on is the right type.
 
-[getKey](GetKey_%28script_event%29 "GetKey (script event)") is an event
-defined in the [base spawn class](Base_spawn_class "Base spawn class")
-[idEntity](IdEntity_%28class%29 "IdEntity (class)") , so all spawn
-classes inherit it.
+[getKey](GetKey_%28script_event%29 "GetKey (script event)") is an event defined in the [base spawn class](Base_spawn_class "Base spawn class") [idEntity](IdEntity_%28class%29 "IdEntity (class)") , so all spawn classes inherit it.
 
-"spawnclass" is the key for the value in the
-[spawnArgs](SpawnArgs "SpawnArgs") dictionary that declares the spawn
-class.
+"spawnclass" is the key for the value in the [spawnArgs](SpawnArgs "SpawnArgs") dictionary that declares the spawn class.
 
-This is the only way to check for spawn class type in script, since
-there is only one general reference type entity and object references
-types are only of script object type.
+This is the only way to check for spawn class type in script, since there is only one general reference type entity and object references types are only of script object type.
 
-Note: since spawnArgs is a dictionary, accessing it is not as fast as
-operations on other data types, plus we are also doing a string
-comparing which is also an operation slower than operation on other data
-types, so this kind of type checking while useful, isn't something that
-should be done per frame.
+Note: since spawnArgs is a dictionary, accessing it is not as fast as operations on other data types, plus we are also doing a string comparing which is also an operation slower than operation on other data types, so this kind of type checking while useful, isn't something that should be done per frame.
 
 ### warning
 
-We can decide how severe to be about this, here we are issuing a warning
-which will show in the console, if we wanted to be more strict we could
-call an Error to halt the game.
+We can decide how severe to be about this, here we are issuing a warning which will show in the console, if we wanted to be more strict we could call an Error to halt the game.
 
 ### type check return
 
-Stop script object from continuing further. This won't prevent function
-calls on this script object, but in this case execution will stop before
-our run time logic starts.
+Stop script object from continuing further. This won't prevent function calls on this script object, but in this case execution will stop before our run time logic starts.
 
 ### spawnargs performance
 
-As previously noted, variables are faster than
-[spawnArgs](SpawnArgs "SpawnArgs") access, so setting up variables with
-values from spawnArgs so they can be used later is a good idea.
+As previously noted, variables are faster than [spawnArgs](SpawnArgs "SpawnArgs") access, so setting up variables with values from spawnArgs so they can be used later is a good idea.
 
 ### run-time function
 
-The base spawn class calls init() on start up, after init() is finished
-executing the script
-[thread](Thread_%28scripting%29 "Thread (scripting)") is considered
-'done'. The only code run on the object from that point would be from:
+The base spawn class calls init() on start up, after init() is finished executing the script [thread](Thread_%28scripting%29 "Thread (scripting)") is considered 'done'. The only code run on the object from that point would be from:
 
 The spawn class calling a specific script function.
 
-Another script [thread](Thread_%28scripting%29 "Thread (scripting)")
-calling a specific function.
+Another script [thread](Thread_%28scripting%29 "Thread (scripting)") calling a specific function.
 
-In this object we are using a function called 'main' to do run time
-logic, so it must be the last operation before init() exits.
+In this object we are using a function called 'main' to do run time logic, so it must be the last operation before init() exits.
 
 ### run time loop
 
-Here we are trapping the function execution in a while loop, so the
-function doesn't exit and we can keep our run time code running.
+Here we are trapping the function execution in a while loop, so the function doesn't exit and we can keep our run time code running.
 
-Once run time script object behavior gets to a certain point of
-complexity it's better to plan a [Finite State
-Machine](Finite_State_Machine_%28scripting%29 "Finite State Machine (scripting)")
-.
+Once run time script object behavior gets to a certain point of complexity it's better to plan a [Finite State Machine](Finite_State_Machine_%28scripting%29 "Finite State Machine (scripting)") .
 
 ### ETQW event
 
-<div>
-
-![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake
-Wars only:
-*(Enemy Territory: Quake Wars does not have fadeIn and fadeOut events on
-the spawn class idLight, there are turnOn and turnOff events but as the
-names suggest, they do not fade over time.)*
-
-</div>
+![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake Wars only:
+*(Enemy Territory: Quake Wars does not have fadeIn and fadeOut events on the spawn class idLight, there are turnOn and turnOff events but as the names suggest, they do not fade over time.)*
 
 ### functions on self
 
-All function calls without a specific entity reference will be checked
-to see if it's a function declared in the script object, or a script
-event on the the spawn class.
+All function calls without a specific entity reference will be checked to see if it's a function declared in the script object, or a script event on the the spawn class.
 
-There is an equivalent way to call functions on the current entity that
-some prefer - [self](Self_%28scripting%29 "Self (scripting)")
-.[function].
+There is an equivalent way to call functions on the current entity that some prefer - [self](Self_%28scripting%29 "Self (scripting)") .[function].
 
-fadeOut is an event defined in the spawn class idLight, if this script
-object were to run on an entity of a different spawn class it would
-produce a warning. At least it would if it ever got to this point, but
-the spawn class type check in init() prevents that.
+fadeOut is an event defined in the spawn class idLight, if this script object were to run on an entity of a different spawn class it would produce a warning. At least it would if it ever got to this point, but the spawn class type check in init() prevents that.
 
 ### waiting
 
-Since we have trapped the function in a loop, at some point of execution
-we have to let the thread
-[wait](Thread_%28scripting%29#wait "Thread (scripting)") , otherwise the
-thread would continue indefinitely, preventing the rest of the game from
-continuing to run.
+Since we have trapped the function in a loop, at some point of execution we have to let the thread [wait](Thread_%28scripting%29#wait "Thread (scripting)") , otherwise the thread would continue indefinitely, preventing the rest of the game from continuing to run.
 
-If we wanted code to be run per frame the only wait in our code would be
-a waitFrame() here at the end of the loop.
+If we wanted code to be run per frame the only wait in our code would be a waitFrame() here at the end of the loop.
 

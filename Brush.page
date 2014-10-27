@@ -1,18 +1,13 @@
 ![](/images/b/bc/Brush.png)
 
-A brush is convex volume bounded by four or more planes. Each plane will
-form one face of the brush and will have it's own properties. Each face
-is stored together with these properties in the mapfile. These
-properties include
+A brush is convex volume bounded by four or more planes. Each plane will form one face of the brush and will have it's own properties. Each face is stored together with these properties in the mapfile. These properties include
 
 -   [Material](Material_%28decl%29 "Material (decl)") path
 -   Material XYZ shift and scale values
 -   Material rotation
 -   Detail/Structural ( Seems to be non-existant in Doom 3 )
 
-Reference: [Q3Map
-explanation](https://web.archive.org/web/20111217174153/http://www.planetquake.com/spog/stuff/technical.html "http://www.planetquake.com/spog/stuff/technical.html")
+Reference: [Q3Map explanation](https://web.archive.org/web/20111217174153/http://www.planetquake.com/spog/stuff/technical.html "http://www.planetquake.com/spog/stuff/technical.html")
 
-**Note** : Whenever a concave shape is required, it can be constructed
-using multiple brushes.
+**Note** : Whenever a concave shape is required, it can be constructed using multiple brushes.
 

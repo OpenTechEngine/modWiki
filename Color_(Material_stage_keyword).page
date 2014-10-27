@@ -1,8 +1,7 @@
 Description
 -----------
 
-The **color** keyword multiples all channels of the associated map by
-the given values.
+The **color** keyword multiples all channels of the associated map by the given values.
 
 Usage
 -----
@@ -12,20 +11,15 @@ Usage
 Parameters
 ----------
 
--   *redval* - the value by which the red channel of the image map
-    should be multiplied
--   *greenval* - the value by which the green channel of the image map
-    should be multiplied
--   *blueval* - the value by which the blue channel of the image map
-    should be multiplied
--   *alphaval* - the value by which the alpha channel of the image map
-    should be multiplied
+-   *redval* - the value by which the red channel of the image map should be multiplied
+-   *greenval* - the value by which the green channel of the image map should be multiplied
+-   *blueval* - the value by which the blue channel of the image map should be multiplied
+-   *alphaval* - the value by which the alpha channel of the image map should be multiplied
 
 Example
 -------
 
-The following stage reduces the intensity of the blue and alpha channels
-by half. The red and green channels remain unchanged.
+The following stage reduces the intensity of the blue and alpha channels by half. The red and green channels remain unchanged.
 
     {
        map path/to/image.tga
@@ -35,14 +29,6 @@ by half. The red and green channels remain unchanged.
 Notes
 -----
 
-This keyword is a shorthand way of using the
-[red](Red_%28Material_stage_keyword%29 "Red (Material stage keyword)") ,
-[green](Green_%28Material_stage_keyword%29 "Green (Material stage keyword)")
-,
-[blue](Blue_%28Material_stage_keyword%29 "Blue (Material stage keyword)")
-and
-[alpha](Alpha_%28Material_stage_keyword%29 "Alpha (Material stage keyword)")
-keywords.
+This keyword is a shorthand way of using the [red](Red_%28Material_stage_keyword%29 "Red (Material stage keyword)") , [green](Green_%28Material_stage_keyword%29 "Green (Material stage keyword)") , [blue](Blue_%28Material_stage_keyword%29 "Blue (Material stage keyword)") and [alpha](Alpha_%28Material_stage_keyword%29 "Alpha (Material stage keyword)") keywords.
 
-\
 

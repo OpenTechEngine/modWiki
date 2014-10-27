@@ -1,18 +1,11 @@
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/6/69/Q4square_bg.png) The information on this page is
-specific to [Quake 4](Quake_4 "Quake 4") .
-
-</div>
+![](/images/6/69/Q4square_bg.png) The information on this page is specific to [Quake 4](Quake_4 "Quake 4") .
 
 ------------------------------------------------------------------------
 
 Description
 -----------
 
-Controls which image to blend a [visportals](Visportal "Visportal") to
-when it's closing.
+Controls which image to blend a [visportals](Visportal "Visportal") to when it's closing.
 
 Usage
 -----
@@ -24,17 +17,11 @@ In the global section of your material shader type...
 Parameters
 ----------
 
--   [map] - the relative path and file name to the specified portal
-    image.
+-   [map] - the relative path and file name to the specified portal image.
 
 Notes
 -----
 
-Usually the image used is "\_black". See also the
-[portaldistancefar](Portaldistancefar_%28Material_global_keyword%29 "Portaldistancefar (Material global keyword)")
-and
-[portaldistancenear](Portaldistancenear_%28Material_global_keyword%29 "Portaldistancenear (Material global keyword)")
-keywords.
+Usually the image used is "\_black". See also the [portaldistancefar](Portaldistancefar_%28Material_global_keyword%29 "Portaldistancefar (Material global keyword)") and [portaldistancenear](Portaldistancenear_%28Material_global_keyword%29 "Portaldistancenear (Material global keyword)") keywords.
 
-\
 

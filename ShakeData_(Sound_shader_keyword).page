@@ -1,21 +1,11 @@
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/6/69/Q4square_bg.png) The information on this page is
-specific to [Quake 4](Quake_4 "Quake 4") .
-
-</div>
+![](/images/6/69/Q4square_bg.png) The information on this page is specific to [Quake 4](Quake_4 "Quake 4") .
 
 ------------------------------------------------------------------------
-
-\
 
 Description
 -----------
 
-The shakeData keyword defines the intensity and duration of a screen
-shake or light flicker when using the ***shakes 1*** sound shader
-keyword/value.
+The shakeData keyword defines the intensity and duration of a screen shake or light flicker when using the ***shakes 1*** sound shader keyword/value.
 
 Usage
 -----
@@ -25,11 +15,8 @@ Usage
 Parameters
 ----------
 
--   ***\#*** - order of the sound files in the sound shader. Numbered 0
-    though n
--   ***data*** - data string that defines the intensity of the sound (a
-    being 0db z being max). The length of this string indicated the
-    length of the sound file.
+-   ***\#*** - order of the sound files in the sound shader. Numbered 0 though n
+-   ***data*** - data string that defines the intensity of the sound (a being 0db z being max). The length of this string indicated the length of the sound file.
 
 Examples
 --------
@@ -68,19 +55,10 @@ Examples
         shakeData 4 nfaaaaacaa
     }
 
-\
-
 Notes
 -----
 
-Doom3 analyzed the PCM output to generate light intensities and screen
-shakes. Quake 4 uses hardware playback (in OpenAL), and cannot access
-PCM data, so precalculation is required.
+Doom3 analyzed the PCM output to generate light intensities and screen shakes. Quake 4 uses hardware playback (in OpenAL), and cannot access PCM data, so precalculation is required.
 
-Creation of data strings for use with this keyword can be generated
-using the
-[shakesGen](ShakesGen_%28console_command%29 "ShakesGen (console command)")
-console command. Use ***shakesGen all*** to compile shakeData for all
-sound shaders. By default only sounds without any shakeData will be
-compiled.
+Creation of data strings for use with this keyword can be generated using the [shakesGen](ShakesGen_%28console_command%29 "ShakesGen (console command)") console command. Use ***shakesGen all*** to compile shakeData for all sound shaders. By default only sounds without any shakeData will be compiled.
 

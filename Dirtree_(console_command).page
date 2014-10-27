@@ -1,9 +1,7 @@
 Description
 -----------
 
-This command will list all the files of the specified type found and/or
-loaded from the specified directory and any subdirectories. Includes
-files and folders within PK4 files.
+This command will list all the files of the specified type found and/or loaded from the specified directory and any subdirectories. Includes files and folders within PK4 files.
 
 Usage
 -----
@@ -15,8 +13,7 @@ At the console type...
 Parameters
 ----------
 
--   [folder] - The relative path from the base folder. Base is not
-    included.
+-   [folder] - The relative path from the base folder. Base is not included.
 -   [extension] - Any specific file extension to display in the results.
 
 Notes
@@ -24,5 +21,4 @@ Notes
 
 None.
 
-\
 

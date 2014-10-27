@@ -1,37 +1,25 @@
-I recently finished up some work extending the AAS compiler. I was able
-to add elevator and transporter capabilities to the navigation graph. I
-did this by adding new reachabilities between areas based on each idPlat
-in a map.
+I recently finished up some work extending the AAS compiler. I was able to add elevator and transporter capabilities to the navigation graph. I did this by adding new reachabilities between areas based on each idPlat in a map.
 
-I have summarized the work below and included a download link for the
-code, **the aas code in the download is one version behind and needs to
-be updated.**
+I have summarized the work below and included a download link for the code, **the aas code in the download is one version behind and needs to be updated.**
 
-The changes below could be used for adding the same ability for other AI
-characters in doom 3.
+The changes below could be used for adding the same ability for other AI characters in doom 3.
 
 **Is there any way to decrease tab indentation in code on the wiki?**
 
 Overview
 --------
 
-When doom 3 shipped it did so without support for elevators. So paths
-like the following resulted even though the elevator would be a better
-choice.
+When doom 3 shipped it did so without support for elevators. So paths like the following resulted even though the elevator would be a better choice.
 
-![](/images/thumb/b/b4/Bot_noelevator.jpg/180px-Bot_noelevator.jpg)\
+![](/images/thumb/b/b4/Bot_noelevator.jpg/180px-Bot_noelevator.jpg)
  **
 
-What follows is an overview of how elevators capabilities were added and
-some tips if you want to incorporate this capability into your mod.
+What follows is an overview of how elevators capabilities were added and some tips if you want to incorporate this capability into your mod.
 
 Setup Code
 ----------
 
-Each time a map is loaded you will need to call the routines to add the
-reachabilities to the AAS system. I had to reorganize just a little bit
-to make the map entities load before the AAS files were loaded and
-processed.
+Each time a map is loaded you will need to call the routines to add the reachabilities to the AAS system. I had to reorganize just a little bit to make the map entities load before the AAS files were loaded and processed.
 
      
     /*
@@ -58,10 +46,7 @@ processed.
         // clear the smoke particle free list
         smokeParticles->Init();
 
-When the AAS files are loaded they need to have data added to them. In
-order to calculate that data the rest of the map needs to be loaded.
-Moving the AAS initialization to later in the process after MapPopulate
-takes care of this.
+When the AAS files are loaded they need to have data added to them. In order to calculate that data the rest of the map needs to be loaded. Moving the AAS initialization to later in the process after MapPopulate takes care of this.
 
      
     /*
@@ -85,12 +70,7 @@ takes care of this.
      
         mpGame.Reset();
 
-When Init is called on each idAAS the actual work to find and add the
-extensions is done. For now the only file that is processed is the aas48
-file. If someone wants to incorporate the player class changing code we
-could have bots with any model, and any AAS size. If you do this, you
-will need to change the check to include the appropriate extension.
-other modifications later may also be necessary.
+When Init is called on each idAAS the actual work to find and add the extensions is done. For now the only file that is processed is the aas48 file. If someone wants to incorporate the player class changing code we could have bots with any model, and any AAS size. If you do this, you will need to change the check to include the appropriate extension. other modifications later may also be necessary.
 
      
     /*
@@ -126,9 +106,7 @@ other modifications later may also be necessary.
         return true;
     }
 
-Just for reference the botAASBuilder variable is declared in
-AAS\_local.h as an instance of BotAASBuild, which had to get up close
-and personal to idAASLocal.
+Just for reference the botAASBuilder variable is declared in AAS\_local.h as an instance of BotAASBuild, which had to get up close and personal to idAASLocal.
 
      
      
@@ -144,13 +122,7 @@ and personal to idAASLocal.
         BotAASBuild *               botAASBuilder;
     #endif
 
-The call to AddReachabilities is where it gets fun. It turns out that
-the engine exe and the game dll have separate heaps. So in order to
-extend the AAS navigation graph I had to hack around some memory
-allocation issues. What it amounts to is I back up the original server
-allocated lists and replace them with my own dll allocated list. The
-original list data is appended to the local list, and now we are free to
-add as much data as we want.
+The call to AddReachabilities is where it gets fun. It turns out that the engine exe and the game dll have separate heaps. So in order to extend the AAS navigation graph I had to hack around some memory allocation issues. What it amounts to is I back up the original server allocated lists and replace them with my own dll allocated list. The original list data is appended to the local list, and now we are free to add as much data as we want.
 
      
     /*
@@ -185,15 +157,9 @@ add as much data as we want.
 Adding Elevator Reachabilities
 ------------------------------
 
-The add AddElevatorReachabilies method became a MONSTER. There may be
-simpler implementations, but then again, this one started out simpler at
-one point too. I will only cover this routine at a high level,
-explaining some of the reasons for the design. I would suggest you read
-the comments and skim the code unless your are truly interested in the
-messy implementation.
+The add AddElevatorReachabilies method became a MONSTER. There may be simpler implementations, but then again, this one started out simpler at one point too. I will only cover this routine at a high level, explaining some of the reasons for the design. I would suggest you read the comments and skim the code unless your are truly interested in the messy implementation.
 
-My apologies for any formatting crapiness :( is there a way to get wiki
-not to indent so far???
+My apologies for any formatting crapiness :( is there a way to get wiki not to indent so far???
 
      
     /*
@@ -222,8 +188,7 @@ not to indent so far???
             if ( ent->IsType( idPlat::Type ) ) {
                 idPlat *platform = static_cast<idPlat *>(ent);
 
-This is why we needed the map populated ;) this first part just says,
-find each platform in the map.
+This is why we needed the map populated ;) this first part just says, find each platform in the map.
 
 Then a bunch of variables and stuff:
 
@@ -257,13 +222,7 @@ Then a bunch of variables and stuff:
         firstPortalNum = lastPortalNum = 0;
         bool reachabilityCreated = false;
 
-The first thing the routine does when it finds a plat is trace up the
-“elevator shaft�? to see if there are any cluster portals separating the
-top and bottom positions of the plat. if the trace finds one, it is
-stored for processing later, and we continue up in search of more. If it
-finds more it creates reachabilities to them now.
-
-\
+The first thing the routine does when it finds a plat is trace up the “elevator shaft�? to see if there are any cluster portals separating the top and bottom positions of the plat. if the trace finds one, it is stored for processing later, and we continue up in search of more. If it finds more it creates reachabilities to them now.
 
      
     // look for portals up the elevator shaft and create reachabilities 
@@ -323,17 +282,9 @@ finds more it creates reachabilities to them now.
         } // end for each area 
      
 
-When the above code is done if there was one portal on the way up the
-point where it is first hit will be in firstPortal. If there were more
-than one (think 3 story plat) the point where the last portal found
-(nearest top) will be in lastPortal and a reachability will have been
-created between the portals. none of the portal checking code would be
-required if the portals were created after the reachabilies were, oh
-well, it was fun learning it.
+When the above code is done if there was one portal on the way up the point where it is first hit will be in firstPortal. If there were more than one (think 3 story plat) the point where the last portal found (nearest top) will be in lastPortal and a reachability will have been created between the portals. none of the portal checking code would be required if the portals were created after the reachabilies were, oh well, it was fun learning it.
 
-Next the routine starts looking around the bottom of the platform for
-places to start using the plat. It looks a little like this as it
-searches around the bottom position of the plat:
+Next the routine starts looking around the bottom of the platform for places to start using the plat. It looks a little like this as it searches around the bottom position of the plat:
 
      
     /*
@@ -392,12 +343,7 @@ this is q3 inspired ;)
             bottomClusterNum = file->areas[bottomAreaNum].cluster;
         }
 
-If it finds a location that is valid to start from, it then starts
-trying to find a place to get to at the top. It will first search around
-the top just like it did around the bottom. This makes the routine favor
-direct reachabilities from top to bottom. On the 9th iteration it checks
-for a portal up the elevator shaft and creates the reachability to the
-portal if it is there.
+If it finds a location that is valid to start from, it then starts trying to find a place to get to at the top. It will first search around the top just like it did around the bottom. This makes the routine favor direct reachabilities from top to bottom. On the 9th iteration it checks for a portal up the elevator shaft and creates the reachability to the portal if it is there.
 
      
     //look at adjacent areas around the top of the plat make larger steps to outside the plat everytime
@@ -453,11 +399,7 @@ portal if it is there.
                 // couldn't find top area
                 if ( l >= 8 ) continue;
 
-If it has found a valid bottom and top position vector it checks to make
-sure a reachability between the two makes sense, checking for things
-like the top and bottom being in the same area, or in different
-clusters, etc. if they are in different clusters the routine will look
-for possible portal areas along the way.
+If it has found a valid bottom and top position vector it checks to make sure a reachability between the two makes sense, checking for things like the top and bottom being in the same area, or in different clusters, etc. if they are in different clusters the routine will look for possible portal areas along the way.
 
      
     // don't create reachabilities to the same area (worthless)
@@ -540,8 +482,7 @@ for possible portal areas along the way.
             }
         }
 
-If we got passed all that ugliness then we are ready to create a
-reachability.
+If we got passed all that ugliness then we are ready to create a reachability.
 
      
         // if got to this point there is a valid to area and from area for a reachability
@@ -551,12 +492,7 @@ reachability.
         n = 9999;
     }
 
-This type of pattern will continue until each spot in the bottom
-rotation has been checked against each spot in the top rotation, and the
-first and last portals have also been connected. Finally, if all the
-coagulation above couldn’t create something usable, one last attempt is
-made creating a portal that doesn’t REALLY share an edge between two
-clusters, but it works ;)
+This type of pattern will continue until each spot in the bottom rotation has been checked against each spot in the top rotation, and the first and last portals have also been connected. Finally, if all the coagulation above couldn’t create something usable, one last attempt is made creating a portal that doesn’t REALLY share an edge between two clusters, but it works ;)
 
      
         if ( !reachabilityCreated ) {
@@ -582,49 +518,39 @@ clusters, but it works ;)
             }
         }
 
-Here are some pics to help explain. let me know if they are too dark (
-my old monitor sucks a\$\$) also, **the image policy page is empty** so
-I took the safe route and uploaded crappy resolution images, if we
-thumbnail them can we upload nicer ones?
+Here are some pics to help explain. let me know if they are too dark ( my old monitor sucks a$$) also, **the image policy page is empty** so I took the safe route and uploaded crappy resolution images, if we thumbnail them can we upload nicer ones?
 
 Elevator Screenshots
 --------------------
 
-This is what a plat looks like when the top and bottom are in the same
-cluster. Yes, there are probably too many reachabilities. I just haven’t
-tweaked enough.
+This is what a plat looks like when the top and bottom are in the same cluster. Yes, there are probably too many reachabilities. I just haven’t tweaked enough.
 
-![](/images/thumb/4/4b/Plat_reachability_1.jpg/180px-Plat_reachability_1.jpg)\
+![](/images/thumb/4/4b/Plat_reachability_1.jpg/180px-Plat_reachability_1.jpg)
  **
 
-The Edge 2 turned out good, yes you also see a transporter reachability
-in there ;)
+The Edge 2 turned out good, yes you also see a transporter reachability in there ;)
 
-![](/images/thumb/5/57/Plat_reachability_2.jpg/180px-Plat_reachability_2.jpg)\
+![](/images/thumb/5/57/Plat_reachability_2.jpg/180px-Plat_reachability_2.jpg)
  **
 
-This one has a cluster portal up the center. It was important to make
-sure the reachabilities still started at the outer edge so that the AI
-would know they were looking to do plat navigation before they
-accidentally ended up on or under it.
+This one has a cluster portal up the center. It was important to make sure the reachabilities still started at the outer edge so that the AI would know they were looking to do plat navigation before they accidentally ended up on or under it.
 
-![](/images/thumb/8/88/Plat_reachability_2_portal.jpg/180px-Plat_reachability_2_portal.jpg)\
+![](/images/thumb/8/88/Plat_reachability_2_portal.jpg/180px-Plat_reachability_2_portal.jpg)
  **
 
 There were a couple that were stubborn…
 
-![](/images/thumb/8/86/Plat_reachability_skinny.jpg/180px-Plat_reachability_skinny.jpg)\
+![](/images/thumb/8/86/Plat_reachability_skinny.jpg/180px-Plat_reachability_skinny.jpg)
  **
 
-The two story plats have more than one cluster portal up the elevator
-shaft:
+The two story plats have more than one cluster portal up the elevator shaft:
 
-![](/images/thumb/a/af/Plat_reachability_2story.jpg/180px-Plat_reachability_2story.jpg)\
+![](/images/thumb/a/af/Plat_reachability_2story.jpg/180px-Plat_reachability_2story.jpg)
  **
 
 Will bots be playing CTF soon?
 
-![](/images/thumb/7/72/Plat_hit_them_all.jpg/180px-Plat_hit_them_all.jpg)\
+![](/images/thumb/7/72/Plat_hit_them_all.jpg/180px-Plat_hit_them_all.jpg)
  **
 
 Adding Transporter Reachabilities
@@ -704,9 +630,7 @@ Just for reference:
 Helper Routines
 ---------------
 
-A few routines were broken out for reuse. I started reading Large Scale
-Software Development in C++ after implementing all of this and would
-probably design the component different now if i did it again.
+A few routines were broken out for reuse. I started reading Large Scale Software Development in C++ after implementing all of this and would probably design the component different now if i did it again.
 
      
     /*
@@ -803,10 +727,7 @@ probably design the component different now if i did it again.
 Clean Up Code
 -------------
 
-When a map unloads all the AAS file additions need to be undone before
-the engine tries do free the AAS data. If this isn’t done correctly you
-may spend hours and days reading about things like heap corruption and
-linking to the CRT runtime and many other things C++ :)
+When a map unloads all the AAS file additions need to be undone before the engine tries do free the AAS data. If this isn’t done correctly you may spend hours and days reading about things like heap corruption and linking to the CRT runtime and many other things C++ :)
 
      
     /*
@@ -830,9 +751,7 @@ linking to the CRT runtime and many other things C++ :)
         }
     }
 
-This calls into a clean up routine that puts the lists back into place,
-cleans up the remainder of the new ones and unlinks all the
-reachabilities from the data structures.
+This calls into a clean up routine that puts the lists back into place, cleans up the remainder of the new ones and unlinks all the reachabilities from the data structures.
 
      
     /*
@@ -932,19 +851,14 @@ The source can be downloaded from:
 
 <http://home.comcast.net/~matkatamibakundo/bots.src.zip>
 
-thanks to chuck at <http://home.comcast.net/~chuckdoodbmx/> for
-hosting ;)
+thanks to chuck at <http://home.comcast.net/~chuckdoodbmx/> for hosting ;)
 
 To integrate this into your mod you can search for:
 
      
     #ifdef MOD_BOTS // cusTom3 - aas extensions
 
-Every change necessary was wrapped in with that. After you have the AAS
-extensions integrated you will need to code the AI logic to use the
-elevators. The teleporters should just work ;). Tinman has sabot using
-the plats and has scripted the logic necessary. You can check out his
-source when it is released if you need an example of how to do this.
+Every change necessary was wrapped in with that. After you have the AAS extensions integrated you will need to code the AI logic to use the elevators. The teleporters should just work ;). Tinman has sabot using the plats and has scripted the logic necessary. You can check out his source when it is released if you need an example of how to do this.
 
 Here are a couple of routines I knocked out to help with that effort.
 
@@ -1037,12 +951,7 @@ Here are a couple of routines I knocked out to help with that effort.
         idThread::ReturnVector( result );
     }
 
-**Side Note:** The modifications have been made to the game-d3xp project
-so that bots will be able to run in vanilla d3 and roe expansion pack
-installs. Many modifications to the source were necessary to make the
-d3xp project buildable and functional without \_D3XP and \_CTF defined.
-If you would like to use these changes as well extract the zip over a
-clean 1.3 sdk src folder and open the bot.sln you should be good to go.
+**Side Note:** The modifications have been made to the game-d3xp project so that bots will be able to run in vanilla d3 and roe expansion pack installs. Many modifications to the source were necessary to make the d3xp project buildable and functional without \_D3XP and \_CTF defined. If you would like to use these changes as well extract the zip over a clean 1.3 sdk src folder and open the bot.sln you should be good to go.
 
 if you have any questions feel free to ask them up on d3w ;)
 

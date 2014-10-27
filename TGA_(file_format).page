@@ -1,8 +1,7 @@
 Description
 -----------
 
-The Targa graphics file format is primarily used for the storage of 24-
-and 32-bit truecolor images.
+The Targa graphics file format is primarily used for the storage of 24- and 32-bit truecolor images.
 
 General File Format Specifications
 ----------------------------------
@@ -26,17 +25,9 @@ Color Depth
 Notes
 -----
 
-RLE compressed images can be read by Doom 3. Since RLE is a lossless
-form of compression, it can be used without degrading image quality.
+RLE compressed images can be read by Doom 3. Since RLE is a lossless form of compression, it can be used without degrading image quality.
 
-24-bit images cannot make use of an alpha channel. Each channel requires
-8 bits. In order to make use of an alpha channel you must save your
-image in 32-bit.
+24-bit images cannot make use of an alpha channel. Each channel requires 8 bits. In order to make use of an alpha channel you must save your image in 32-bit.
 
-Photoshop 7 does not save transparency information into an alpha channel
-when dealing with targa images. You must download the updated [Targa
-export
-plugin](http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544 "http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544")
-from [Adobe](http://www.adobe.com/ "http://www.adobe.com") . All other
-versions of Photoshop work correctly.
+Photoshop 7 does not save transparency information into an alpha channel when dealing with targa images. You must download the updated [Targa export plugin](http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544 "http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544") from [Adobe](http://www.adobe.com/ "http://www.adobe.com") . All other versions of Photoshop work correctly.
 

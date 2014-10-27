@@ -1,8 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -12,8 +11,7 @@ Line drawing for debug visualization.
 Usage
 -----
 
-*void* debugBounds( *vector* **color** , *vector* **mins** , *vector*
-**maxs** , *float* **lifetime** )
+*void* debugBounds( *vector* **color** , *vector* **mins** , *vector* **maxs** , *float* **lifetime** )
 
 Parameters
 ----------
@@ -36,5 +34,4 @@ This script event does not return any values.
 
 Lifetime of 0 == 1 frame.
 
-\
 

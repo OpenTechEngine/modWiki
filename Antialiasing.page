@@ -1,34 +1,13 @@
-<div id="attention" class="boilerplate metadata"
-style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
+**This page is in urgent need of attention because: *Still out of scope***
 
-**This page is in urgent need of attention because: *Still out of
-scope***
+If you disagree with this, please explain why on [its talk page](Talk:Antialiasing "Talk:Antialiasing") .
 
-If you disagree with this, please explain why on [its talk
-page](Talk:Antialiasing "Talk:Antialiasing") .
+Anti-Aliasing is a method employed by the 3D API to improve image quality by reducing jagged edges ("jaggies") or aliasing. There are two main techniques that achieve this: Multi Sample Anti-Aliasing (MSAA) and Super Sampling Anti-Aliasing. A very simplified explanation of the two is that MSAA simply takes many different sub-pixel samples of a given polygon pixel while SSAA multiplies the original samples of all pixels. Because of this MSAA is faster than SSAA while the later also improves surface aliasing and alpha textures.
 
-</div>
-
-Anti-Aliasing is a method employed by the 3D API to improve image
-quality by reducing jagged edges ("jaggies") or aliasing. There are two
-main techniques that achieve this: Multi Sample Anti-Aliasing (MSAA) and
-Super Sampling Anti-Aliasing. A very simplified explanation of the two
-is that MSAA simply takes many different sub-pixel samples of a given
-polygon pixel while SSAA multiplies the original samples of all pixels.
-Because of this MSAA is faster than SSAA while the later also improves
-surface aliasing and alpha textures.
-
-What's common to both is that more samples increase the quality of the
-anti-aliasing while reducing performance. This is what the x2, x4, x6,
-x8, etc. modifiers mean in your graphics driver control panel and in the
-[r\_multiSamples](R_multiSamples_%28cvar%29 "R multiSamples (cvar)")
-CVar. You should turn off Anti-Aliasing when working with
-[DoomEdit](DoomEdit "DoomEdit") to prevent problems.
+What's common to both is that more samples increase the quality of the anti-aliasing while reducing performance. This is what the x2, x4, x6, x8, etc. modifiers mean in your graphics driver control panel and in the [r\_multiSamples](R_multiSamples_%28cvar%29 "R multiSamples (cvar)") CVar. You should turn off Anti-Aliasing when working with [DoomEdit](DoomEdit "DoomEdit") to prevent problems.
 
 See also:
 
--   [MSAA in
-    OpenGL](http://www.nvidia.com/dev_content/gdc2002/GDC2002_Multisample_files/frame.htm "http://www.nvidia.com/dev_content/gdc2002/GDC2002_Multisample_files/frame.htm")
--   [In-depth SSAA
-    article](https://web.archive.org/web/20090403165250/http://www.beyond3d.com/articles/ssaa/index.php "http://www.beyond3d.com/articles/ssaa/index.php")
+-   [MSAA in OpenGL](http://www.nvidia.com/dev_content/gdc2002/GDC2002_Multisample_files/frame.htm "http://www.nvidia.com/dev_content/gdc2002/GDC2002_Multisample_files/frame.htm")
+-   [In-depth SSAA article](https://web.archive.org/web/20090403165250/http://www.beyond3d.com/articles/ssaa/index.php "http://www.beyond3d.com/articles/ssaa/index.php")
 

@@ -11,9 +11,7 @@ Usage
 Parameters
 ----------
 
--   [mode] - A predefined blend mode or an [explicit blend
-    function](OpenGL_Blendmode_%28Materials%29 "OpenGL Blendmode (Materials)")
-    . A table of predefined blendmodes is at the bottom of this page.
+-   [mode] - A predefined blend mode or an [explicit blend function](OpenGL_Blendmode_%28Materials%29 "OpenGL Blendmode (Materials)") . A table of predefined blendmodes is at the bottom of this page.
 
 Example
 -------
@@ -23,129 +21,114 @@ None.
 Notes
 -----
 
-Only the three standard light interaction blend modes, bumpmap,
-diffusemap, and specularmap, react to lights.
+Only the three standard light interaction blend modes, bumpmap, diffusemap, and specularmap, react to lights.
 
-Explicit blend functions do not react to lighting. They are composited
-with the background in a similar manner to the way blend modes work in
-PhotoShop.
+Explicit blend functions do not react to lighting. They are composited with the background in a similar manner to the way blend modes work in PhotoShop.
 
-\
-
-+----------------+----------------+----------------+----------------+----------------+
-| Parameter      | Description    | Reacts to      | Example        | Result         |
-|                |                | Light          |                |                |
-+================+================+================+================+================+
-| add            | Additive       | No             | <div           | <div           |
-|                | Stage.         |                | class="center" | class="center" |
-|                | Lightens       |                | >              | >              |
-|                | underlying     |                |                |                |
-|                | surfaces.      |                | ![](/images/th | ![](/images/th |
-|                | Often used for |                | umb/5/54/Add_E | umb/8/85/Add_A |
-|                | glowing        |                | xample.jpg/100 | pplied.jpg/148 |
-|                | decals.        |                | px-Add_Example | px-Add_Applied |
-|                | Explicit blend |                | .jpg)\         | .jpg)\         |
-|                | function.      |                |  **            |  **            |
-|                |                |                |                |                |
-|                |                |                | </div>         | </div>         |
-+----------------+----------------+----------------+----------------+----------------+
-| blend          | Blend Stage.   | No             | <div           | <div           |
-|                | Blends with    |                | class="center" | class="center" |
-|                | underlying     |                | >              | >              |
-|                | surfaces.      |                |                |                |
-|                | Often used for |                | ![](/images/th | ![](/images/th |
-|                | alpha          |                | umb/7/73/Blend | umb/9/9b/Blend |
-|                | transparent    |                | _Example.jpg/1 | _Applied.jpg/1 |
-|                | decals. The    |                | 00px-Blend_Exa | 48px-Blend_App |
-|                | texture's      |                | mple.jpg)\     | lied.jpg)\     |
-|                | alpha channel  |                |  **            |  **            |
-|                | determines the |                |                |                |
-|                | blending.      |                | </div>         | </div>         |
-|                | Explicit blend |                |                |                |
-|                | function.      |                |                |                |
-+----------------+----------------+----------------+----------------+----------------+
-| bumpmap        | Bump Stage.    | Yes            | <div           | <div           |
-|                | Defines bump   |                | class="center" | class="center" |
-|                | texture for    |                | >              | >              |
-|                | use with       |                |                |                |
-|                | per-pixel      |                | [![](/images/t | ![](/images/th |
-|                | lighting.      |                | humb/a/a2/Norm | umb/6/61/Bump_ |
-|                |                |                | al_example.jpg | Applied.jpg/14 |
-|                |                |                | /100px-Normal_ | 8px-Bump_Appli |
-|                |                |                | example.jpg)\  | ed.jpg)\       |
-|                |                |                |  *(Click to    |  **            |
-|                |                |                | Enlarge)*](/im |                |
-|                |                |                | ages/a/a2/Norm | </div>         |
-|                |                |                | al_example.jpg |                |
-|                |                |                | )              |                |
-|                |                |                |                |                |
-|                |                |                | </div>         |                |
-+----------------+----------------+----------------+----------------+----------------+
-| diffusemap     | Diffuse Stage. | Yes            | <div           | <div           |
-|                | Defines        |                | class="center" | class="center" |
-|                | diffuse        |                | >              | >              |
-|                | texture for    |                |                |                |
-|                | use with       |                | [](/images/6/6 | ![](/images/th |
-|                | per-pixel      |                | 4/Diffuse_exam | umb/8/84/Diffu |
-|                | lighting.      |                | ple.jpg)       | se_Applied.jpg |
-|                |                |                |                | /148px-Diffuse |
-|                |                |                | **Missing      | _Applied.jpg)\ |
-|                |                |                | image:         |  **            |
-|                |                |                | */w/images/thu |                |
-|                |                |                | mb/6/64/Diffus | </div>         |
-|                |                |                | e\_example.jpg |                |
-|                |                |                | /100px-Diffuse |                |
-|                |                |                | \_example.jpg* |                |
-|                |                |                | **             |                |
-|                |                |                |                |                |
-|                |                |                | \              |                |
-|                |                |                |  *(Click to    |                |
-|                |                |                | Enlarge)*      |                |
-|                |                |                |                |                |
-|                |                |                | </div>         |                |
-+----------------+----------------+----------------+----------------+----------------+
-| filter         | Filter Stage.  | No             | <div           | <div           |
-|                | Darkens        |                | class="center" | class="center" |
-|                | underlying     |                | >              | >              |
-|                | surfaces.      |                |                |                |
-|                | Often used for |                | **Missing      | ![](/images/th |
-|                | blood decals.  |                | image:         | umb/2/2d/Filte |
-|                | Explicit blend |                | */w/images/thu | r_Applied.jpg/ |
-|                | function.      |                | mb/e/ea/Filter | 148px-Filter_A |
-|                |                |                | \_Example.jpg/ | pplied.jpg)\   |
-|                |                |                | 100px-Filter\_ |  **            |
-|                |                |                | Example.jpg*** |                |
-|                |                |                |                | </div>         |
-|                |                |                | \              |                |
-|                |                |                |  **            |                |
-|                |                |                |                |                |
-|                |                |                | </div>         |                |
-+----------------+----------------+----------------+----------------+----------------+
-| modulate       | Modulation     | No             | Same As Filter | Same As Filter |
-|                | Stage.         |                |                |                |
-|                | Explicit blend |                |                |                |
-|                | function.      |                |                |                |
-+----------------+----------------+----------------+----------------+----------------+
-| none           | Non-blending   | No             | NA             | NA             |
-|                | Stage.         |                |                |                |
-|                | Explicit blend |                |                |                |
-|                | function.      |                |                |                |
-+----------------+----------------+----------------+----------------+----------------+
-| specularmap    | Specular       | Yes            | <div           | <div           |
-|                | Stage. Defines |                | class="center" | class="center" |
-|                | specular       |                | >              | >              |
-|                | texture for    |                |                |                |
-|                | use with       |                | ![](/images/th | ![](/images/th |
-|                | per-pixel      |                | umb/d/dc/Specu | umb/0/0a/Specu |
-|                | lighting.      |                | lar_example.jp | lar_Applied.jp |
-|                |                |                | g/100px-Specul | g/148px-Specul |
-|                |                |                | ar_example.jpg | ar_Applied.jpg |
-|                |                |                | )\             | )\             |
-|                |                |                |  **            |  **            |
-|                |                |                |                |                |
-|                |                |                | </div>         | </div>         |
-+----------------+----------------+----------------+----------------+----------------+
-
-:  **Predefined Blendmodes**
+<table>
+<caption> <strong>Predefined Blendmodes</strong> </caption>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Parameter</th>
+<th align="left">Description</th>
+<th align="left">Reacts to Light</th>
+<th align="left">Example</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">add</td>
+<td align="left">Additive Stage. Lightens underlying surfaces. Often used for glowing decals. Explicit blend function.</td>
+<td align="left">No</td>
+<td align="left"><div class="center">
+<p><img src="/images/thumb/5/54/Add_Example.jpg/100px-Add_Example.jpg" /><br /> <em></em></p>
+</div></td>
+<td align="left"><div class="center">
+<p><img src="/images/thumb/8/85/Add_Applied.jpg/148px-Add_Applied.jpg" /><br /> <em></em></p>
+</div></td>
+</tr>
+<tr class="even">
+<td align="left">blend</td>
+<td align="left">Blend Stage. Blends with underlying surfaces. Often used for alpha transparent decals. The texture's alpha channel determines the blending. Explicit blend function.</td>
+<td align="left">No</td>
+<td align="left"><div class="center">
+<p><img src="/images/thumb/7/73/Blend_Example.jpg/100px-Blend_Example.jpg" /><br /> <em></em></p>
+</div></td>
+<td align="left"><div class="center">
+<p><img src="/images/thumb/9/9b/Blend_Applied.jpg/148px-Blend_Applied.jpg" /><br /> <em></em></p>
+</div></td>
+</tr>
+<tr class="odd">
+<td align="left">bumpmap</td>
+<td align="left">Bump Stage. Defines bump texture for use with per-pixel lighting.</td>
+<td align="left">Yes</td>
+<td align="left"><div class="center">
+<p><a href="/images/a/a2/Normal_example.jpg"><img src="/images/thumb/a/a2/Normal_example.jpg/100px-Normal_example.jpg" /><br /> <em>(Click to Enlarge)</em></a></p>
+</div></td>
+<td align="left"><div class="center">
+<p><img src="/images/thumb/6/61/Bump_Applied.jpg/148px-Bump_Applied.jpg" /><br /> <em></em></p>
+</div></td>
+</tr>
+<tr class="even">
+<td align="left">diffusemap</td>
+<td align="left">Diffuse Stage. Defines diffuse texture for use with per-pixel lighting.</td>
+<td align="left">Yes</td>
+<td align="left"><div class="center">
+<p><a href="/images/6/64/Diffuse_example.jpg"></a></p>
+<p><strong>Missing image: <em>/w/images/thumb/6/64/Diffuse_example.jpg/100px-Diffuse_example.jpg</em></strong></p>
+<br /> <em>(Click to Enlarge)</em>
+</div></td>
+<td align="left"><div class="center">
+<p><img src="/images/thumb/8/84/Diffuse_Applied.jpg/148px-Diffuse_Applied.jpg" /><br /> <em></em></p>
+</div></td>
+</tr>
+<tr class="odd">
+<td align="left">filter</td>
+<td align="left">Filter Stage. Darkens underlying surfaces. Often used for blood decals. Explicit blend function.</td>
+<td align="left">No</td>
+<td align="left"><div class="center">
+<p></p>
+<p><strong>Missing image: <em>/w/images/thumb/e/ea/Filter_Example.jpg/100px-Filter_Example.jpg</em></strong></p>
+<br /> <em></em>
+</div></td>
+<td align="left"><div class="center">
+<p><img src="/images/thumb/2/2d/Filter_Applied.jpg/148px-Filter_Applied.jpg" /><br /> <em></em></p>
+</div></td>
+</tr>
+<tr class="even">
+<td align="left">modulate</td>
+<td align="left">Modulation Stage. Explicit blend function.</td>
+<td align="left">No</td>
+<td align="left">Same As Filter</td>
+<td align="left">Same As Filter</td>
+</tr>
+<tr class="odd">
+<td align="left">none</td>
+<td align="left">Non-blending Stage. Explicit blend function.</td>
+<td align="left">No</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">specularmap</td>
+<td align="left">Specular Stage. Defines specular texture for use with per-pixel lighting.</td>
+<td align="left">Yes</td>
+<td align="left"><div class="center">
+<p><img src="/images/thumb/d/dc/Specular_example.jpg/100px-Specular_example.jpg" /><br /> <em></em></p>
+</div></td>
+<td align="left"><div class="center">
+<p><img src="/images/thumb/0/0a/Specular_Applied.jpg/148px-Specular_Applied.jpg" /><br /> <em></em></p>
+</div></td>
+</tr>
+</tbody>
+</table>
 
 

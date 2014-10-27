@@ -1,81 +1,61 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Info_player_teleport_%28entity%29 "http://www.modwiki.net/w/index.php?title=Info_player_teleport_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Info_player_teleport_%28entity%29 "http://www.modwiki.net/w/index.php?title=Info_player_teleport_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Info_player_teleport_%28entity%29 "http://www.modwiki.net/w/index.php?title=Info_player_teleport_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Info_player_teleport_%28entity%29 "http://www.modwiki.net/w/index.php?title=Info_player_teleport_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
 
-Spawning position player after cinematic. When triggered, player will be
-moved to this location.
+Spawning position player after cinematic. When triggered, player will be moved to this location.
 
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                 DESCRIPTION
-  ------------------- --------------------------------------------------------------------------------------------------
-  angle               Description not available.
-  anim                Description not available.
-  bind                Description not available.
-  bindOrientated      Description not available.
-  bindToBody          Description not available.
-  bindToJoint         Description not available.
-  bindanim            Description not available.
-  cameraTarget        Description not available.
-  cinematic           Description not available.
-  classname           Description not available.
-  clipmodel           Description not available.
-  cone                Description not available.
-  cylinder            Description not available.
-  editor\_color       Description not available.
-  editor\_maxs        Description not available.
-  editor\_mins        Description not available.
-  editor\_showangle   Description not available.
-  editor\_usage       Spawning position player after cinematic. When triggered, player will be moved to this location.
-  editor\_var XXXX    Description not available.
-  guiTarget           Description not available.
-  health              Description not available.
-  hide                Description not available.
-  maxs                Description not available.
-  mins                Description not available.
-  model               Description not available.
-  name                Description not available.
-  networkSync         Description not available.
-  neverDormant        Description not available.
-  noGrab              Description not available.
-  noclipmodel         Description not available.
-  origin              Description not available.
-  push                How much of a push to give to the player when he is teleported.
-  rotation            Description not available.
-  scriptobject        Description not available.
-  size                Description not available.
-  skin\_xray          Description not available.
-  slowmo              Description not available.
-  solidForTeam        Description not available.
-  spawnclass          Description not available.
-  target              Description not available.
-  visualEffect        How long to show the view from the visualView.
-  visualView          Camera to set player's view to when he is teleported.
+| KEY               | DESCRIPTION                                                                                      |
+|-------------------|--------------------------------------------------------------------------------------------------|
+| angle             | Description not available.                                                                       |
+| anim              | Description not available.                                                                       |
+| bind              | Description not available.                                                                       |
+| bindOrientated    | Description not available.                                                                       |
+| bindToBody        | Description not available.                                                                       |
+| bindToJoint       | Description not available.                                                                       |
+| bindanim          | Description not available.                                                                       |
+| cameraTarget      | Description not available.                                                                       |
+| cinematic         | Description not available.                                                                       |
+| classname         | Description not available.                                                                       |
+| clipmodel         | Description not available.                                                                       |
+| cone              | Description not available.                                                                       |
+| cylinder          | Description not available.                                                                       |
+| editor\_color     | Description not available.                                                                       |
+| editor\_maxs      | Description not available.                                                                       |
+| editor\_mins      | Description not available.                                                                       |
+| editor\_showangle | Description not available.                                                                       |
+| editor\_usage     | Spawning position player after cinematic. When triggered, player will be moved to this location. |
+| editor\_var XXXX  | Description not available.                                                                       |
+| guiTarget         | Description not available.                                                                       |
+| health            | Description not available.                                                                       |
+| hide              | Description not available.                                                                       |
+| maxs              | Description not available.                                                                       |
+| mins              | Description not available.                                                                       |
+| model             | Description not available.                                                                       |
+| name              | Description not available.                                                                       |
+| networkSync       | Description not available.                                                                       |
+| neverDormant      | Description not available.                                                                       |
+| noGrab            | Description not available.                                                                       |
+| noclipmodel       | Description not available.                                                                       |
+| origin            | Description not available.                                                                       |
+| push              | How much of a push to give to the player when he is teleported.                                  |
+| rotation          | Description not available.                                                                       |
+| scriptobject      | Description not available.                                                                       |
+| size              | Description not available.                                                                       |
+| skin\_xray        | Description not available.                                                                       |
+| slowmo            | Description not available.                                                                       |
+| solidForTeam      | Description not available.                                                                       |
+| spawnclass        | Description not available.                                                                       |
+| target            | Description not available.                                                                       |
+| visualEffect      | How long to show the view from the visualView.                                                   |
+| visualView        | Camera to set player's view to when he is teleported.                                            |
 
 Inheritance
 -----------
@@ -93,25 +73,16 @@ Notes
 
 Steps to create a working teleporter:
 
--   Create a
-    [trigger\_multiple](Trigger_multiple_%28entity%29 "Trigger multiple (entity)")
-    as the starting point of your teleporter.
--   Create an info\_player\_teleport as the destination of your
-    teleporter.
--   Connect (Ctrl+K) the trigger\_multiple to the
-    info\_player\_teleport.
+-   Create a [trigger\_multiple](Trigger_multiple_%28entity%29 "Trigger multiple (entity)") as the starting point of your teleporter.
+-   Create an info\_player\_teleport as the destination of your teleporter.
+-   Connect (Ctrl+K) the trigger\_multiple to the info\_player\_teleport.
 
-Players touching the trigger\_multiple will be transferred to the
-position of the info\_player\_teleport.
+Players touching the trigger\_multiple will be transferred to the position of the info\_player\_teleport.
 
-If you want to allow projectiles to fly through your teleporter, you
-have to modify the trigger\_multiple:
+If you want to allow projectiles to fly through your teleporter, you have to modify the trigger\_multiple:
 
 -   Set "anyTouch" key to "1".
 -   Set "projectile\_trigger" key to "1".
--   Set "wait" key to "0" to make sure that every projectile gets
-    teleported. The default is 0.5 which causes problems for fast
-    weapons like the nailgun.
--   Change the texture of the trigger\_multiple to
-    "common/trigshotclip".
+-   Set "wait" key to "0" to make sure that every projectile gets teleported. The default is 0.5 which causes problems for fast weapons like the nailgun.
+-   Change the texture of the trigger\_multiple to "common/trigshotclip".
 

@@ -1,25 +1,15 @@
-To change the GUI state (properties and values) or execute a GUI client
-command.
+To change the GUI state (properties and values) or execute a GUI client command.
 
 State change
 ------------
 
-Set a [property](GUI_item_properties "GUI item properties") or a
-[variable](GUI_variable_types "GUI variable types") to a given value.
-This is used to change the appearance or behavior of items during
-runtime. It doesn't work on all kinds of properties, though, as some of
-them can't be changed and are marked as so on the
-[property](GUI_item_properties "GUI item properties") reference.
+Set a [property](GUI_item_properties "GUI item properties") or a [variable](GUI_variable_types "GUI variable types") to a given value. This is used to change the appearance or behavior of items during runtime. It doesn't work on all kinds of properties, though, as some of them can't be changed and are marked as so on the [property](GUI_item_properties "GUI item properties") reference.
 
 ### Syntax
 
     set "property" "value";
 
-*property* is the name of a property in the current item, or a reference
-to a property on another item (through the "itemName::propertyName"
-syntax) or a reference to a key in the [GUI state
-dictionary](GUI_state_dictionary "GUI state dictionary") ( through the
-"gui::keyName" syntax).
+*property* is the name of a property in the current item, or a reference to a property on another item (through the "itemName::propertyName" syntax) or a reference to a key in the [GUI state dictionary](GUI_state_dictionary "GUI state dictionary") ( through the "gui::keyName" syntax).
 
 *value* the new value that the property will carry.
 
@@ -32,24 +22,14 @@ dictionary](GUI_state_dictionary "GUI state dictionary") ( through the
 
 #### Additional Note
 
-If you are trying to set one property (property2 - the target property)
-equal to another property (property1 - the origional property you want
-to copy) you must reference the first property (property1) using the
-'\$' marker. Using the \$ marker lets the parser know that you are
-referencing another property, not just a string.
+If you are trying to set one property (property2 - the target property) equal to another property (property1 - the origional property you want to copy) you must reference the first property (property1) using the '$' marker. Using the $ marker lets the parser know that you are referencing another property, not just a string.
 
     set "property2" "$property1";
-
-\
 
 Command
 -------
 
-Execute a gui command on the client. By using "cmd" as the first
-property, you tell the game to execute some action on the player's own
-game. Commands are case insensitive. Commands are either handled by the
-engine or passed on to the [game code](Coding "Coding") , where there is
-further differentiation between menus and entities.
+Execute a gui command on the client. By using "cmd" as the first property, you tell the game to execute some action on the player's own game. Commands are case insensitive. Commands are either handled by the engine or passed on to the [game code](Coding "Coding") , where there is further differentiation between menus and entities.
 
 ### Engine GUI Commands
 
@@ -129,8 +109,7 @@ Syntax
 
     set "cmd" value
 
-*value* is a gui command you want the game client to execute, with all
-parameters you may want to add to it.
+*value* is a gui command you want the game client to execute, with all parameters you may want to add to it.
 
 Example(s)
 ----------
@@ -139,5 +118,4 @@ Example(s)
     set "cmd" "play guisounds_menuclickup";
     set "cmd" "runScript map_cpuboss::bridge_rotate_east ; play guisounds_action";
 
-\
 

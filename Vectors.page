@@ -1,18 +1,10 @@
-A vector is a mathematical quantity having both *magnitude* and
-*direction* . Common examples of quantities with only magnitude are
-mass(200kg), temperature(273 degrees Kelvin), and speed (15m/s) (not to
-be confused with velocity). These are also referred to as *scalar
-quantities* , because they are described with magnitude only. *Vector
-quantities* are those which are described with both magnitude *and*
-direction. Common examples are velocity (15m/s northeast) and force
-(150nt at 45 degrees).
+A vector is a mathematical quantity having both *magnitude* and *direction* . Common examples of quantities with only magnitude are mass(200kg), temperature(273 degrees Kelvin), and speed (15m/s) (not to be confused with velocity). These are also referred to as *scalar quantities* , because they are described with magnitude only. *Vector quantities* are those which are described with both magnitude *and* direction. Common examples are velocity (15m/s northeast) and force (150nt at 45 degrees).
 
 A 2d vector **a** can be desribed by the equation:
 
      a = ix + jy
 
-Where **i** is the magnitude of the component in the x plane, and **j**
-of the y plane.
+Where **i** is the magnitude of the component in the x plane, and **j** of the y plane.
 
 A 3d vector is described in the same manner, but with 3 components:
 
@@ -20,26 +12,20 @@ A 3d vector is described in the same manner, but with 3 components:
 
 With **k** being the magnitude of the z-plane component.
 
-These three components combine to form a vector, representing all three
-components. For example, for a vector with the equation:
+These three components combine to form a vector, representing all three components. For example, for a vector with the equation:
 
      a = 1 + 2x + -3z
 
-The vector could be represented as a ray from the origin (0,0,0) through
-the point comprised of those three components. (1,2,-3)
+The vector could be represented as a ray from the origin (0,0,0) through the point comprised of those three components. (1,2,-3)
 
-The magnitude (also called *modulus* ) **|a|** of the new *resultant*
-vector can be found using the Pythagorean Theorem:
+The magnitude (also called *modulus* ) **|a|** of the new *resultant* vector can be found using the Pythagorean Theorem:
 
      |a|² = x² + y² + z²
      |a|  = √(x² + y² + z²)
 
-*Normalizing* a vector will result in a *normal* (or *unit* ) vector,
-where the magnitude of the vector is equal to 1. This, in effect,
-describes only the *direction* of the vector.
+*Normalizing* a vector will result in a *normal* (or *unit* ) vector, where the magnitude of the vector is equal to 1. This, in effect, describes only the *direction* of the vector.
 
-To find a normalized vector **â** of vector **a** , divide the vector by
-it's modulus:
+To find a normalized vector **â** of vector **a** , divide the vector by it's modulus:
 
            a
      â =  ---
@@ -57,13 +43,7 @@ Since a normalized vector has length of 1,
 
      √(â.x² + â.y² + â.z²) = |â| = 1
 
-\
- For more information about vectors, see [GameDev.net - Vectors and
-Matrices: A
-Primer](http://www.gamedev.net/reference/articles/article1832.asp "http://www.gamedev.net/reference/articles/article1832.asp")
+ For more information about vectors, see [GameDev.net - Vectors and Matrices: A Primer](http://www.gamedev.net/reference/articles/article1832.asp "http://www.gamedev.net/reference/articles/article1832.asp")
 
-\
- For a summary of vectors in the Doom 3 engine and functions they use,
-see
-[Vectors.h](Src/idlib/math/vectors.h_%28source_file%29 "Src/idlib/math/vectors.h (source file)")
+ For a summary of vectors in the Doom 3 engine and functions they use, see [Vectors.h](Src/idlib/math/vectors.h_%28source_file%29 "Src/idlib/math/vectors.h (source file)")
 

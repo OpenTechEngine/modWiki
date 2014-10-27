@@ -1,8 +1,7 @@
 Description
 -----------
 
-The **fragmentProgram** keyword instructs Doom 3 to execute the given
-fragement program to produce the image map for this stage.
+The **fragmentProgram** keyword instructs Doom 3 to execute the given fragement program to produce the image map for this stage.
 
 Usage
 -----
@@ -17,8 +16,7 @@ Parameters
 Example
 -------
 
-distort the current frame using the normal map helmet\_local.tga and
-heatHazeWithMaskAndVertex.vfp
+distort the current frame using the normal map helmet\_local.tga and heatHazeWithMaskAndVertex.vfp
 
     {
        program                 heatHazeWithMaskAndVertex.vfp
@@ -33,5 +31,4 @@ Notes
 
 None.
 
-\
 

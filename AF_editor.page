@@ -1,144 +1,56 @@
-This article describes the built-in articulated figure editor that comes
-with all [id Tech 4](Id_Tech_4 "Id Tech 4") games. Always check the
-editor specific page for the particular game you're editing in. The
-editor can be started by typing "
-[editAFs](EditAFs_%28console_command%29 "EditAFs (console command)") "
-in the [console](Console "Console") or as a [startup
-parameter](Startup_parameters "Startup parameters") .
+This article describes the built-in articulated figure editor that comes with all [id Tech 4](Id_Tech_4 "Id Tech 4") games. Always check the editor specific page for the particular game you're editing in. The editor can be started by typing " [editAFs](EditAFs_%28console_command%29 "EditAFs (console command)") " in the [console](Console "Console") or as a [startup parameter](Startup_parameters "Startup parameters") .
 
 Editor Basics
 -------------
 
-<div class="floatright">
-
 <span> ![](/images/0/0b/Af_editor.gif) </span>
 
-</div>
+When starting the editor you will be presented with two windows. The main game window and the articulated figure editor window.
 
-When starting the editor you will be presented with two windows. The
-main game window and the articulated figure editor window.
-
-The editor window consists of a series of static controls and four tabs.
-The following sections will describe the purpose of these user interface
-elements, along with the purpose of any controls contained therein.
+The editor window consists of a series of static controls and four tabs. The following sections will describe the purpose of these user interface elements, along with the purpose of any controls contained therein.
 
 ### Static Controls
 
-The following controls are always visible in the articulated figure
-editor window, irrespective of which tab is selected.
+The following controls are always visible in the articulated figure editor window, irrespective of which tab is selected.
 
--   Articulated Figure Selection - A drop down menu, in the upper left
-    corner of the editor, that contains a list of all articulated
-    figures. The articulated figure to edit is selected using this
-    control. Almost all the Doom3 characters and monsters can be pulled
-    into your test map this way. When making a custom AF, it can be
-    handy to occasionally pull up a Doom3 AF and see how your AF
-    structure compares.
--   New - A button, directly to the right of the articulated figure
-    selection drop down, that clears out all properties allowing you to
-    create a new articulated figure from scratch. If you have a custom
-    skeleton and custom model, it's well advised to start from stratch,
-    since the AF seems dependent on the bone names of the model
-    skeleton. If the bone names of your custom monster's skeleton don't
-    exactly match the names of the ID AF you want to use, then the AF
-    editor will crash.
--   Delete - A button, directly to the right of the new button, that
-    deletes the currently selected articulated figure. This button is
-    only enabled when an articulated figure is selected. It is strongly
-    urged that you NOT delete anything! Altering or editing the AF files
-    of the Doom3 creatures/characters could ruin your game and you'd
-    have to re-install it.
--   Spawn - A button, in the bottom left corner of the editor, that
-    spawns the selected articulated figure. If you selected char\_hazmat
-    in this drop down field, hitting the spawn button will make the
-    hazmat suited guy appear in your game window, in his default pose,
-    ready to be punched around.
--   T-Pose - A button, directly to the right of the spawn button, that
-    reverts the currently selected articulated figure to it's 'defualt'
-    pose (usually called a T-pose because most character models are
-    initally created in a standing position, with their arms spread out,
-    so they look like a crude "T"). For example, if you spawned the
-    char\_hazmat guy and had punched or dragged him around so he was
-    sprawling on the floor or draped over boxes, you could pop him back
-    to his T-pose with this button.
--   Kill - A button, directly to the right of the t-pose button, that
-    removes any spawned entity from the game window completely, letting
-    you pick another from the drop-down field, or re-spawn the same one.
-    For some reason, in editing AF files, the program becomes more
-    stable when you first spawn the AF you want to edit, then kill it,
-    then spawn it again.
--   Save - A button, directly to the right of the kill button, that
-    saves any changes you make to any spawned AF in the game window.
-    Again, it is strongly urged that you NOT make any changes to any
-    Doom3 AF files and save them. It could ruin your game and force you
-    to re-install. But any custom AF file you make shoud be saved early
-    and saved OFTEN since the editor is very prone to crashes. Make a
-    habit of hitting SAVE for any change you make to any body or
-    constraint. THe save button will grey out once the AF file is saved,
-    and you won't be able to save again unless you make some change to
-    your file.
--   Cancel - A button, directly to the right of the save button, that
-    closes the AF editor, leaving the game window open.
+-   Articulated Figure Selection - A drop down menu, in the upper left corner of the editor, that contains a list of all articulated figures. The articulated figure to edit is selected using this control. Almost all the Doom3 characters and monsters can be pulled into your test map this way. When making a custom AF, it can be handy to occasionally pull up a Doom3 AF and see how your AF structure compares.
+-   New - A button, directly to the right of the articulated figure selection drop down, that clears out all properties allowing you to create a new articulated figure from scratch. If you have a custom skeleton and custom model, it's well advised to start from stratch, since the AF seems dependent on the bone names of the model skeleton. If the bone names of your custom monster's skeleton don't exactly match the names of the ID AF you want to use, then the AF editor will crash.
+-   Delete - A button, directly to the right of the new button, that deletes the currently selected articulated figure. This button is only enabled when an articulated figure is selected. It is strongly urged that you NOT delete anything! Altering or editing the AF files of the Doom3 creatures/characters could ruin your game and you'd have to re-install it.
+-   Spawn - A button, in the bottom left corner of the editor, that spawns the selected articulated figure. If you selected char\_hazmat in this drop down field, hitting the spawn button will make the hazmat suited guy appear in your game window, in his default pose, ready to be punched around.
+-   T-Pose - A button, directly to the right of the spawn button, that reverts the currently selected articulated figure to it's 'defualt' pose (usually called a T-pose because most character models are initally created in a standing position, with their arms spread out, so they look like a crude "T"). For example, if you spawned the char\_hazmat guy and had punched or dragged him around so he was sprawling on the floor or draped over boxes, you could pop him back to his T-pose with this button.
+-   Kill - A button, directly to the right of the t-pose button, that removes any spawned entity from the game window completely, letting you pick another from the drop-down field, or re-spawn the same one. For some reason, in editing AF files, the program becomes more stable when you first spawn the AF you want to edit, then kill it, then spawn it again.
+-   Save - A button, directly to the right of the kill button, that saves any changes you make to any spawned AF in the game window. Again, it is strongly urged that you NOT make any changes to any Doom3 AF files and save them. It could ruin your game and force you to re-install. But any custom AF file you make shoud be saved early and saved OFTEN since the editor is very prone to crashes. Make a habit of hitting SAVE for any change you make to any body or constraint. THe save button will grey out once the AF file is saved, and you won't be able to save again unless you make some change to your file.
+-   Cancel - A button, directly to the right of the save button, that closes the AF editor, leaving the game window open.
 
 ### View Tab
 
-The view tab in the AF editor has various controls to designate what and
-how things are displayed in the game window. Most of the fields here, as
-stated on iddevnet.com, are "not saved when the AF is saved, they are
-simply to aid in development."
+The view tab in the AF editor has various controls to designate what and how things are displayed in the game window. Most of the fields here, as stated on iddevnet.com, are "not saved when the AF is saved, they are simply to aid in development."
 
 The properties on this tab are categorized into four groups.
 
 #### Articulated Figure
 
-This group contains a series of check boxes you can toggle off or on
-with your mouse.
+This group contains a series of check boxes you can toggle off or on with your mouse.
 
--   Bodies - checking this will cause any BODY in your AF to be shown in
-    the gaming map along with the mesh they control. For example, the
-    "char\_hazmat" AF, if spawned with this box checked, will show the
-    hazmat character model, and also show the 'bodies' which comprise
-    his ragdoll - represented as hollow boxes, bones or other shapes.
--   Body Names - checking this box will cause the NAMES for any created
-    body to show in the game window.
+-   Bodies - checking this will cause any BODY in your AF to be shown in the gaming map along with the mesh they control. For example, the "char\_hazmat" AF, if spawned with this box checked, will show the hazmat character model, and also show the 'bodies' which comprise his ragdoll - represented as hollow boxes, bones or other shapes.
+-   Body Names - checking this box will cause the NAMES for any created body to show in the game window.
 -   Body Mass - unsure
 -   Total Mass - unsure
 -   Inertia Tensor - unknown
 -   Velocity - unknown
--   Constraints - checking this will display the CONSTRAINTS assigned to
-    each body, represented by tiny XYZ axis markers.
--   Constraint Names - checking this will display the names of any
-    constraint in the AF in the gaming window.
+-   Constraints - checking this will display the CONSTRAINTS assigned to each body, represented by tiny XYZ axis markers.
+-   Constraint Names - checking this will display the names of any constraint in the AF in the gaming window.
 -   Primary Only - unknown
--   Limits - Checking this box will display a cone so you can visually
-    see the 'limits' of each body. This is very useful for setting the
-    limit numbers, which otherwsie can be a real pain. IF you are using
-    the display tab, you have to show constraints before you check the
-    limts box.
--   Constrained Bodies - unsure - presumably it will limit the display
-    of BODIES in the game window to only show the ones that have
-    CONSTRAINTS assigned to them.
--   Trees - checking this box will cause the TREE structure of the AF to
-    be displayed in the gaming window. Properly formed, linked and
-    working trees are usually represented by yellow lines, while broken
-    or otherwise improperly formed trees are shown as blue lines.
+-   Limits - Checking this box will display a cone so you can visually see the 'limits' of each body. This is very useful for setting the limit numbers, which otherwsie can be a real pain. IF you are using the display tab, you have to show constraints before you check the limts box.
+-   Constrained Bodies - unsure - presumably it will limit the display of BODIES in the game window to only show the ones that have CONSTRAINTS assigned to them.
+-   Trees - checking this box will cause the TREE structure of the AF to be displayed in the gaming window. Properly formed, linked and working trees are usually represented by yellow lines, while broken or otherwise improperly formed trees are shown as blue lines.
 
 #### MD5
 
-This group contains more display options relating to the display of the
-md5mesh that is linked to the AF in the game window.
+This group contains more display options relating to the display of the md5mesh that is linked to the AF in the game window.
 
--   Skeleton - checking this box will cause the SKELETON for the mesh to
-    be displayed in the game window. For example, if the char\_hazmat
-    model is spawned and is showing in the game window, checking this
-    box will display all the bones in the skeleton for this model,
-    usually represented by thin, white lines.
--   Skeleton Only - checking this box will remove the MESH from the
-    gaming window and display only the skeleton that controls the
-    animation for that mesh. Again, if the char\_hazmat were spawned in
-    the gaming window, and if skeleton only was checked in the AF
-    editor, you would not be able to see the mesh, but only the thin
-    white lines which comprise it's animation skeleton.
+-   Skeleton - checking this box will cause the SKELETON for the mesh to be displayed in the game window. For example, if the char\_hazmat model is spawned and is showing in the game window, checking this box will display all the bones in the skeleton for this model, usually represented by thin, white lines.
+-   Skeleton Only - checking this box will remove the MESH from the gaming window and display only the skeleton that controls the animation for that mesh. Again, if the char\_hazmat were spawned in the gaming window, and if skeleton only was checked in the AF editor, you would not be able to see the mesh, but only the thin white lines which comprise it's animation skeleton.
 
 #### Lines
 
@@ -147,53 +59,25 @@ md5mesh that is linked to the AF in the game window.
 
 #### Physics
 
-This group contains various options to control how the AF can be
-interacted with in the game window, and options for how the AF will
-behave, above and beyond whatever limits you may set to the bodies.
+This group contains various options to control how the AF can be interacted with in the game window, and options for how the AF will behave, above and beyond whatever limits you may set to the bodies.
 
 -   No Friction
--   No Gravity - checking this box will 'turn off' the gravity in your
-    test map in the game window, making 'floaty' corpses and so on as if
-    there were no gravity.
+-   No Gravity - checking this box will 'turn off' the gravity in your test map in the game window, making 'floaty' corpses and so on as if there were no gravity.
 -   No Limits
--   No Self Collision - unsure. It may be this option turns off all
-    collision detection within all the bodies in your AF, letting them
-    swing around without bumping into each other.
--   Drag entities - checking this box will let you 'drag' your AF around
-    in the game window. When your appear in a test map, you appear as if
-    you were the Doom3 guy first popping up in a multiplayer map - with
-    your fists, flashlight and pistol. Checking drag entities will make
-    your hands drop, leaving only the HUD crosshairs. When you press
-    your "Attack" button, instead of firing or punching, your character
-    will 'grab' whatever the crosshairs are centered on. If you 'grab'
-    an AF body, you can then move around and the AF and it's linked mesh
-    will be 'dragged' around with your crosshairs. If your AF is
-    properly made, you can then have fun throwing the ragdoll around and
-    dragging it to see how it behaves.
--   Show Drag Selection - unsure - presumably it highlights the
-    particular 'body' of the AF that you have grabbed with drag entities
-    on.
+-   No Self Collision - unsure. It may be this option turns off all collision detection within all the bodies in your AF, letting them swing around without bumping into each other.
+-   Drag entities - checking this box will let you 'drag' your AF around in the game window. When your appear in a test map, you appear as if you were the Doom3 guy first popping up in a multiplayer map - with your fists, flashlight and pistol. Checking drag entities will make your hands drop, leaving only the HUD crosshairs. When you press your "Attack" button, instead of firing or punching, your character will 'grab' whatever the crosshairs are centered on. If you 'grab' an AF body, you can then move around and the AF and it's linked mesh will be 'dragged' around with your crosshairs. If your AF is properly made, you can then have fun throwing the ragdoll around and dragging it to see how it behaves.
+-   Show Drag Selection - unsure - presumably it highlights the particular 'body' of the AF that you have grabbed with drag entities on.
 -   Timings - unknown
 
 ### Properties Tab
 
 #### MD5
 
--   Model: Enter the NAME of the model you want to appear when you edit
-    your AF. When you click the SPAWN button in the VIEW tab, the model
-    you have entered in this field will be the one that pops up. If you
-    had entered "char\_hazmat" in this field, then the Doom3
-    Hazmat-suited guy would appear. Doing this successfully depends on
-    the model's actual name in the folder structure in Doom3 "models"
-    folder. If you are doing a custom character model, check your model
-    folders. If your directory structure is
-    "C:/Doom3/base/models/md5/monsters/custom" for your custom model,
-    type "custom" in the MD5/Model field of the PROPERTIES tab.
+-   Model: Enter the NAME of the model you want to appear when you edit your AF. When you click the SPAWN button in the VIEW tab, the model you have entered in this field will be the one that pops up. If you had entered "char\_hazmat" in this field, then the Doom3 Hazmat-suited guy would appear. Doing this successfully depends on the model's actual name in the folder structure in Doom3 "models" folder. If you are doing a custom character model, check your model folders. If your directory structure is "C:/Doom3/base/models/md5/monsters/custom" for your custom model, type "custom" in the MD5/Model field of the PROPERTIES tab.
 
 <!-- -->
 
--   Skin: Unsure - presumably this will let you determine what texture
-    map (.TGA) file you would like applied to the mesh.
+-   Skin: Unsure - presumably this will let you determine what texture map (.TGA) file you would like applied to the mesh.
 
 #### Default Collision Detection
 
@@ -210,14 +94,7 @@ behave, above and beyond whatever limits you may set to the bodies.
 
 #### Mass
 
--   Total Mass: Unsure. Presumably this lets you set the overall MASS
-    (weight) of your model as it will be interpreted by the Doom3 engine
-    in game. ID software does not recommend that you set your mass very
-    high. Numerous experiments with the settings in this field for
-    various AF files has produced no significant change in AF behavior.
-    They don't seem to move much differently with a mass of "1" than if
-    they have a mass of "500". Request further edits/data if anyone has
-    them.
+-   Total Mass: Unsure. Presumably this lets you set the overall MASS (weight) of your model as it will be interpreted by the Doom3 engine in game. ID software does not recommend that you set your mass very high. Numerous experiments with the settings in this field for various AF files has produced no significant change in AF behavior. They don't seem to move much differently with a mass of "1" than if they have a mass of "500". Request further edits/data if anyone has them.
 
 #### Suspend Speed
 
@@ -236,31 +113,16 @@ behave, above and beyond whatever limits you may set to the bodies.
 
 ### Bodies Tab
 
--   Body Selection - A drop down menu, in the upper left corner of the
-    bodies tab, used to select the body to edit.
--   New - A button, directly to the right of the body selection drop
-    down, used to create a new body to edit.
--   Rename - A button, directly to the right of the new button, used to
-    rename the currently selected body.
--   Delete - A button, directy to the right of the rename button, used
-    to delete the currently selected body.
+-   Body Selection - A drop down menu, in the upper left corner of the bodies tab, used to select the body to edit.
+-   New - A button, directly to the right of the body selection drop down, used to create a new body to edit.
+-   Rename - A button, directly to the right of the new button, used to rename the currently selected body.
+-   Delete - A button, directy to the right of the rename button, used to delete the currently selected body.
 
 <!-- -->
 
--   **IMPORTANT:** When you create a model in the 3D design suite of
-    your choice, **be SURE to name your origin bone "origin" with NO
-    capital letters** . If your origin bone is not named "origin"
-    precisely, the AF editor will NOT be able to 'find' your origin bone
-    when you start to edit the BODIES of your model's AF. The AF editor
-    will CRASH because it will be looking for 'origin', and if it's
-    named "Origin" or anything besides simply 'origin', the AF editor
-    will freak out and the game will collapse.
+-   **IMPORTANT:** When you create a model in the 3D design suite of your choice, **be SURE to name your origin bone "origin" with NO capital letters** . If your origin bone is not named "origin" precisely, the AF editor will NOT be able to 'find' your origin bone when you start to edit the BODIES of your model's AF. The AF editor will CRASH because it will be looking for 'origin', and if it's named "Origin" or anything besides simply 'origin', the AF editor will freak out and the game will collapse.
 
-*The origin bone is the bone around which the AF editor 'spawns' every
-body for your AF - so this is extremely important to avoid crashing your
-AF editor.* It will close out every time you try to edit the default
-BODY created by the AF editor when you start building your AF file for a
-custom model.
+*The origin bone is the bone around which the AF editor 'spawns' every body for your AF - so this is extremely important to avoid crashing your AF editor.* It will close out every time you try to edit the default BODY created by the AF editor when you start building your AF file for a custom model.
 
 #### Collision model
 
@@ -272,20 +134,7 @@ custom model.
 -   Sides
 -   Inertia Scale
 
-**NOTE:** The collision model fields have the affected joints and
-controls on how they appear visually. Most of these should be set to
-'bone'. Then in joint1, set the joint itself. If you were working on the
-left upperleg, you would set joint1 to Lupleg. Then have joint2 as the
-joint right BELOW it - in this case, Lloleg, the left lowerleg. This
-will have the 'bone' span the area between the two joints and make it
-appear where it should be, with correct orientation. As you get toward
-the end of the bone chains, say, the left lowerleg, this won't work
-since you want the chain to 'end' and not attach to another bone. Set it
-to box, or cone depending on your taste, and pick it's position in the
-POSITION fields below. Coordinates are more helpful since you can
-control exactly where you want it to go in the coordinates fields. Bone
-center and "Joint" are useful only in certain situations, which I have
-not yet encountered.
+**NOTE:** The collision model fields have the affected joints and controls on how they appear visually. Most of these should be set to 'bone'. Then in joint1, set the joint itself. If you were working on the left upperleg, you would set joint1 to Lupleg. Then have joint2 as the joint right BELOW it - in this case, Lloleg, the left lowerleg. This will have the 'bone' span the area between the two joints and make it appear where it should be, with correct orientation. As you get toward the end of the bone chains, say, the left lowerleg, this won't work since you want the chain to 'end' and not attach to another bone. Set it to box, or cone depending on your taste, and pick it's position in the POSITION fields below. Coordinates are more helpful since you can control exactly where you want it to go in the coordinates fields. Bone center and "Joint" are useful only in certain situations, which I have not yet encountered.
 
 #### Position
 
@@ -318,64 +167,34 @@ not yet encountered.
 
 #### Joints
 
-This field seems redundant since you cover all this in the collision
-model fields. Hopefully they'll come out with more documention on what
-these fields are for and what they control.
+This field seems redundant since you cover all this in the collision model fields. Hopefully they'll come out with more documention on what these fields are for and what they control.
 
--   Modified Joint - Set each BODY to be it's own modified joint. If you
-    are on the Lupleg body, set the modified joint to be "Lupleg". If
-    you're on the head, set it to the head or neck.
+-   Modified Joint - Set each BODY to be it's own modified joint. If you are on the Lupleg body, set the modified joint to be "Lupleg". If you're on the head, set it to the head or neck.
 -   Modify - what this is for I don't know.
--   Contained Joints - The 'contained joints' field should have every
-    body 'attached' to that particular body. Hence, the "Hips" or
-    "Waist" body would have the origin bone, the body itself, and the
-    two bodies 'below' it - the right upper leg and left upper leg.
+-   Contained Joints - The 'contained joints' field should have every body 'attached' to that particular body. Hence, the "Hips" or "Waist" body would have the origin bone, the body itself, and the two bodies 'below' it - the right upper leg and left upper leg.
 
-The 'chest' body of the hazmat guy would have the waist (below) and the
-Right upperarm and leftupperarm, along with the body above it, the neck
-and/or head. The left upperarm would have contained joints of the joint
-itself, leftupperarm, and the attached body of left lowerarm. Toward the
-end of the bone/body 'chain', it should contain only it's own joints.
-Hence, the "Lloleg" joint/body would contain only Lloleg, Lloarm
-contains only Lloarm, and so on.
+The 'chest' body of the hazmat guy would have the waist (below) and the Right upperarm and leftupperarm, along with the body above it, the neck and/or head. The left upperarm would have contained joints of the joint itself, leftupperarm, and the attached body of left lowerarm. Toward the end of the bone/body 'chain', it should contain only it's own joints. Hence, the "Lloleg" joint/body would contain only Lloleg, Lloarm contains only Lloarm, and so on.
 
-You use a star (\*) to indicate that all bones including and after the
-starred one is to be included in the selection. You use a hyphen and
-star (-\*) to indicate that all bones including and after that will be
-excluded. You use a hyphen (-) to indicte that the specific bone only
-will be included.
+You use a star (\*) to indicate that all bones including and after the starred one is to be included in the selection. You use a hyphen and star (-\*) to indicate that all bones including and after that will be excluded. You use a hyphen (-) to indicte that the specific bone only will be included.
 
-So if your skeleton's arm bone hierarchy was made like this: upperarm -
-upperarmroll - forearm - forearmroll - hand, for the uparm collision
-body you would set it to Code: \*upperarm -\*forearm
+So if your skeleton's arm bone hierarchy was made like this: upperarm - upperarmroll - forearm - forearmroll - hand, for the uparm collision body you would set it to Code: \*upperarm -\*forearm
 
-That's telling it to include upperarm and upperarmroll, but to exclude
-the forearm and all bones after it in the chain.
+That's telling it to include upperarm and upperarmroll, but to exclude the forearm and all bones after it in the chain.
 
 Then for the lowerarm collision body you use Code: \*forearm
 
-That is telling it to include forearm and all the bones that come after
-it.
+That is telling it to include forearm and all the bones that come after it.
 
-IF you had put Code: \*upperarm for the uparm body, and Code: \*forearm
-for the lowarm body, you would get an error in the console saying that
-the forearm bones are included in two bodies, becasue they are included
-in both the uparm and lowerarm bodies. You cannot have a bone present in
-more that one collision body.
+IF you had put Code: \*upperarm for the uparm body, and Code: \*forearm for the lowarm body, you would get an error in the console saying that the forearm bones are included in two bodies, becasue they are included in both the uparm and lowerarm bodies. You cannot have a bone present in more that one collision body.
 
 ### Constraints Tab
 
--   Constraint Selection - A drop down menu, in the upper left corner of
-    the constraints tab, used to select the constraint to edit.
--   New - A button, directly to the right of the constraint selection
-    drop down, used to create a new constraint to edit.
--   Rename - A button, directly to the right of the new button, used to
-    rename the currently selected constraint.
--   Delete - A button, directy to the right of the rename button, used
-    to delete the currently selected constraint.
+-   Constraint Selection - A drop down menu, in the upper left corner of the constraints tab, used to select the constraint to edit.
+-   New - A button, directly to the right of the constraint selection drop down, used to create a new constraint to edit.
+-   Rename - A button, directly to the right of the new button, used to rename the currently selected constraint.
+-   Delete - A button, directy to the right of the rename button, used to delete the currently selected constraint.
 
-**NOTE:** Each BODY must have it's own CONSTRAINT set by hitting the
-"NEW" button on the constriants tab, and then SAVED.
+**NOTE:** Each BODY must have it's own CONSTRAINT set by hitting the "NEW" button on the constriants tab, and then SAVED.
 
 #### General
 
@@ -384,26 +203,11 @@ more that one collision body.
 -   Body1
 -   Body2
 
-**NOTE:** When setting BODY1 and BODY2 in the GENERAL section of the
-CONTSTRAINTS tab, BODY1 is always the actual BODY itself - BODY2 should
-be the body that BODY1 connects to. Hence, for the HEAD, Body1 would be
-HEAD and body2 would be the neck or chest. If you were setting
-constraints for the right upper leg, BODY1 would be "Rupleg" and BODY2
-would be "Hips" (or whichever body you have named/listed as the PELVIS)
+**NOTE:** When setting BODY1 and BODY2 in the GENERAL section of the CONTSTRAINTS tab, BODY1 is always the actual BODY itself - BODY2 should be the body that BODY1 connects to. Hence, for the HEAD, Body1 would be HEAD and body2 would be the neck or chest. If you were setting constraints for the right upper leg, BODY1 would be "Rupleg" and BODY2 would be "Hips" (or whichever body you have named/listed as the PELVIS)
 
-**The TREE structures for a model's AF are dependent on these
-Body1/Body2 settings.** In order for your AF's tree structure to turn
-yellow (showing that all your AF's 'limbs' are properly connected), you
-have to have each CONSTRAINT properly linked. The model's TREE structure
-can be shown by checking the "show trees" box in the VIEW tab. **Not
-having your AF tree structure showing as all yellow lines means that
-links are not properly formed and limbs will not move/behave properly.**
+**The TREE structures for a model's AF are dependent on these Body1/Body2 settings.** In order for your AF's tree structure to turn yellow (showing that all your AF's 'limbs' are properly connected), you have to have each CONSTRAINT properly linked. The model's TREE structure can be shown by checking the "show trees" box in the VIEW tab. **Not having your AF tree structure showing as all yellow lines means that links are not properly formed and limbs will not move/behave properly.**
 
-Think of it in terms of a chain. If there were three links in the chain,
-named 'upperlink' 'midlink' and 'lowlink', and if you had set a
-constraint for each one and were now entering their settings in the
-constraints/general tab, the settings for proper TREE Structure would be
-thus:
+Think of it in terms of a chain. If there were three links in the chain, named 'upperlink' 'midlink' and 'lowlink', and if you had set a constraint for each one and were now entering their settings in the constraints/general tab, the settings for proper TREE Structure would be thus:
 
 Constraint body settings for upperlink: body1: ? body2: upperlink
 
@@ -411,10 +215,7 @@ Constraint body settings for midlink: body1: midlink body2: upperlink
 
 Settings for lowlink: body1: lowlink body2: midlink
 
-The 'central' link in an AF set does NOT appear in your selection of
-choices for body1 - presumably because there is nothing 'above' it to
-link to - all the OTHER chains connect to THAT body. (More info/edits
-requested)
+The 'central' link in an AF set does NOT appear in your selection of choices for body1 - presumably because there is nothing 'above' it to link to - all the OTHER chains connect to THAT body. (More info/edits requested)
 
 #### Anchor
 
@@ -425,9 +226,7 @@ requested)
     -   Y
     -   Z
 
-**NOTE:** The JOINT part under the anchor section should be set to the
-actual body. Hence, if you are setting an anchor for the HEAD body, you
-would select the HEAD joint, etc.
+**NOTE:** The JOINT part under the anchor section should be set to the actual body. Hence, if you are setting an anchor for the HEAD body, you would select the HEAD joint, etc.
 
 #### Shaft 1
 
@@ -469,15 +268,9 @@ would select the HEAD joint, etc.
 Tips
 ----
 
-SAVE often - make it a habit to SAVE your AF file on every edit if you
-can. The editor is very finicky and prone to crashing.
+SAVE often - make it a habit to SAVE your AF file on every edit if you can. The editor is very finicky and prone to crashing.
 
-The AF editor seems to work best (and crash least) when working out the
-the regular BASE doom3 directory, as opposed to files kept in a seperate
-folder. The reasons for this are still unknown.
+The AF editor seems to work best (and crash least) when working out the the regular BASE doom3 directory, as opposed to files kept in a seperate folder. The reasons for this are still unknown.
 
-Hit kill in AF editor after spawning your entity for the first time -
-then spawn it again before editing any body/constraint properties. For
-some reason, this seems to make the AF editor more stable and less prone
-to crashing.
+Hit kill in AF editor after spawning your entity for the first time - then spawn it again before editing any body/constraint properties. For some reason, this seems to make the AF editor more stable and less prone to crashing.
 

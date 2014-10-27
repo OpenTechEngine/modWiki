@@ -1,10 +1,4 @@
-.LANG files are used for localization purposes. For every language there
-is a different set of files available. Each of these files contains a
-numbered string that is referenced from within code, GUIs or maps. Each
-string has to have a unique number so there are no conflicts when
-referenced. Language strings are simply referenced by typing
-"\#str\_20000" in the textfield. Replace 20000 with the intended string
-number.
+.LANG files are used for localization purposes. For every language there is a different set of files available. Each of these files contains a numbered string that is referenced from within code, GUIs or maps. Each string has to have a unique number so there are no conflicts when referenced. Language strings are simply referenced by typing "\#str\_20000" in the textfield. Replace 20000 with the intended string number.
 
 Syntax
 ------
@@ -17,8 +11,7 @@ Syntax
 <span align="absbottom"> ![Q4](/images/e/e8/Q4square_25.png) Used String Ranges </span>
 ---------------------------------------------------------------------------------------
 
-*The information in this section is specific to [Quake
-4](Quake_4 "Quake 4") .*
+*The information in this section is specific to [Quake 4](Quake_4 "Quake 4") .*
 
 String number ranges used in Q4 are:
 

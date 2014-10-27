@@ -1,29 +1,18 @@
-.CM files store collision model data. Collision models are a [binary
-space
-partitioning](http://en.wikipedia.org/wiki/Binary_space_partitioning "http://en.wikipedia.org/wiki/Binary_space_partitioning")
-based format used for collision detection.
+.CM files store collision model data. Collision models are a [binary space partitioning](http://en.wikipedia.org/wiki/Binary_space_partitioning "http://en.wikipedia.org/wiki/Binary_space_partitioning") based format used for collision detection.
 
-They are most commonly used with maps but can also be used with moveable
-physics objects.
+They are most commonly used with maps but can also be used with moveable physics objects.
 
 Syntax
 ------
 
-[This information needs ported
-over](https://web.archive.org/web/20111126225302/http://www.doom3world.org/phpbb2/viewtopic.php?p=151225 "http://www.doom3world.org/phpbb2/viewtopic.php?p=151225")
+[This information needs ported over](https://web.archive.org/web/20111126225302/http://www.doom3world.org/phpbb2/viewtopic.php?p=151225 "http://www.doom3world.org/phpbb2/viewtopic.php?p=151225")
 
 Export
 ------
 
-The creation of a collision model for use with a map is done
-automatically by the engine upon compile with the
-[dmap](Dmap_%28console_command%29 "Dmap (console command)") console
-command.
+The creation of a collision model for use with a map is done automatically by the engine upon compile with the [dmap](Dmap_%28console_command%29 "Dmap (console command)") console command.
 
-To create a collision model for use with a moveable physics object, from
-within the level editor, you must select the brushes and/or model. Then
-click **Selection \> Export \> to CM** .
+To create a collision model for use with a moveable physics object, from within the level editor, you must select the brushes and/or model. Then click **Selection \> Export \> to CM** .
 
-From this point the .CM file must be named and placed in the same
-directory as the map or model.
+From this point the .CM file must be named and placed in the same directory as the map or model.
 

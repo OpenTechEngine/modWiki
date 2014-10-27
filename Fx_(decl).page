@@ -1,6 +1,4 @@
-Fx declarations reference the sounds, materials, lights, particles (each
-defined in a separate stage), and the parameters needed to reproduce an
-effect in game.
+Fx declarations reference the sounds, materials, lights, particles (each defined in a separate stage), and the parameters needed to reproduce an effect in game.
 
 Syntax
 ------
@@ -16,35 +14,35 @@ Syntax
 Keywords
 --------
 
-  Keywords & Usage                                                    Description
-  ------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------
-  name \<string\>                                                     The name of this action
-  delay \<time\>                                                      How long (in seconds) after starting the effect before this action happens
-  shake \<time\> \<amplitude\> \<distance\> \<falloff\> \<impulse\>   Shake the player around a bit. Take a look at hkwalk.fx for a good example of this.
-  ignoreMaster                                                        Don't shake the entity this effect is attached to
-  random \<min\>, \<max\>                                             A random time added to the delay.
-  fire \<sibling\>                                                    Causes the sibling action to happen when this action does. This is a way of synching two random actions. See smallsparks.fx
-  duration \<time\>                                                   How long the action lasts before it is killed or restarted
-  restart \<bool\>                                                    Set to 1 if the action starts again after the 'duration' has run out
-  fadeIn \<time\>                                                     Fade in the RGB of the light or model over \<time\> seconds
-  fadeOut \<time\>                                                    Fade out the light/model. Ignored if fadeIn is set, you can use 2 seperate actions (tied together with uselight) if you want a light to fade in and out.
-  offset \<x\>, \<y\>, \<z\>                                          Offset from the origin of the entity (or bind point) this action is located at
-  axis \<x\>, \<y\>, \<z\>                                            Axis of the model, mutually exclusive with angle
-  angle \<pitch\>, \<yaw\>, \<roll\>                                  Alternate way of setting the axis of the model
-  rotate \<angle\>                                                    Not used
-  light \<material\>, \<red\>, \<green\>, \<blue\>, \<radius\>        Create a light
-  noshadows                                                           The light in this effect doesn't cast shadows
-  attachlight \<light\>                                               Attach to external light (a light not defined in the effect) for fading. This is what causes all the lights to fade in/out in alphalabs 2
-  attachentity \<entity\>                                             Attach to an external entity. Not actually used in Doom 3
-  launch \<entity\>                                                   Launches a projectile. Not actually used in Doom 3, but I suppose it could be used to create a neat mario jumping lava effect.
-  uselight \<sibling\>                                                Modify the light values in a sibling action. Can be used to fade out a light that faded in earlier.
-  useModel \<model\>                                                  Modify the model in a sibling action. Can be used to fade out a particle in a sibling.
-  model \<model\>                                                     Creates (or fades in) a model
-  particle \<model\>                                                  Same as model
-  decal \<material\>                                                  Applies the specified decal to the ground (and anything else in the area)
-  size \<int\>                                                        Size of the decal
-  trackorigin \<bool\>                                                Move around with the entity (vs stationary after spawning)
-  particleTrackVelocity                                               Not used
-  sound \<sndshader\>                                                 Start a sound (on any channel)
+| Keywords & Usage                                                  | Description                                                                                                                                              |
+|-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| name \<string\>                                                   | The name of this action                                                                                                                                  |
+| delay \<time\>                                                    | How long (in seconds) after starting the effect before this action happens                                                                               |
+| shake \<time\> \<amplitude\> \<distance\> \<falloff\> \<impulse\> | Shake the player around a bit. Take a look at hkwalk.fx for a good example of this.                                                                      |
+| ignoreMaster                                                      | Don't shake the entity this effect is attached to                                                                                                        |
+| random \<min\>, \<max\>                                           | A random time added to the delay.                                                                                                                        |
+| fire \<sibling\>                                                  | Causes the sibling action to happen when this action does. This is a way of synching two random actions. See smallsparks.fx                              |
+| duration \<time\>                                                 | How long the action lasts before it is killed or restarted                                                                                               |
+| restart \<bool\>                                                  | Set to 1 if the action starts again after the 'duration' has run out                                                                                     |
+| fadeIn \<time\>                                                   | Fade in the RGB of the light or model over \<time\> seconds                                                                                              |
+| fadeOut \<time\>                                                  | Fade out the light/model. Ignored if fadeIn is set, you can use 2 seperate actions (tied together with uselight) if you want a light to fade in and out. |
+| offset \<x\>, \<y\>, \<z\>                                        | Offset from the origin of the entity (or bind point) this action is located at                                                                           |
+| axis \<x\>, \<y\>, \<z\>                                          | Axis of the model, mutually exclusive with angle                                                                                                         |
+| angle \<pitch\>, \<yaw\>, \<roll\>                                | Alternate way of setting the axis of the model                                                                                                           |
+| rotate \<angle\>                                                  | Not used                                                                                                                                                 |
+| light \<material\>, \<red\>, \<green\>, \<blue\>, \<radius\>      | Create a light                                                                                                                                           |
+| noshadows                                                         | The light in this effect doesn't cast shadows                                                                                                            |
+| attachlight \<light\>                                             | Attach to external light (a light not defined in the effect) for fading. This is what causes all the lights to fade in/out in alphalabs 2                |
+| attachentity \<entity\>                                           | Attach to an external entity. Not actually used in Doom 3                                                                                                |
+| launch \<entity\>                                                 | Launches a projectile. Not actually used in Doom 3, but I suppose it could be used to create a neat mario jumping lava effect.                           |
+| uselight \<sibling\>                                              | Modify the light values in a sibling action. Can be used to fade out a light that faded in earlier.                                                      |
+| useModel \<model\>                                                | Modify the model in a sibling action. Can be used to fade out a particle in a sibling.                                                                   |
+| model \<model\>                                                   | Creates (or fades in) a model                                                                                                                            |
+| particle \<model\>                                                | Same as model                                                                                                                                            |
+| decal \<material\>                                                | Applies the specified decal to the ground (and anything else in the area)                                                                                |
+| size \<int\>                                                      | Size of the decal                                                                                                                                        |
+| trackorigin \<bool\>                                              | Move around with the entity (vs stationary after spawning)                                                                                               |
+| particleTrackVelocity                                             | Not used                                                                                                                                                 |
+| sound \<sndshader\>                                               | Start a sound (on any channel)                                                                                                                           |
 
 

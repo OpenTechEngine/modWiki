@@ -1,8 +1,7 @@
 Description
 -----------
 
-Prevents surfaces with this material from casting shadows onto
-themselves but they still cast onto other surfaces.
+Prevents surfaces with this material from casting shadows onto themselves but they still cast onto other surfaces.
 
 Usage
 -----
@@ -19,11 +18,6 @@ Not Available.
 Notes
 -----
 
-Because of the way the [engine](Id_Tech_4 "Id Tech 4") works, surfaces
-which have NoSelfShadow set also don't cast any shadows onto any other
-surface which also has the NoSelfShadow keyword. See also the
-[NoShadows](NoShadows_%28Material_global_keyword%29 "NoShadows (Material global keyword)")
-keyword.
+Because of the way the [engine](Id_Tech_4 "Id Tech 4") works, surfaces which have NoSelfShadow set also don't cast any shadows onto any other surface which also has the NoSelfShadow keyword. See also the [NoShadows](NoShadows_%28Material_global_keyword%29 "NoShadows (Material global keyword)") keyword.
 
-\
 

@@ -1,33 +1,26 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Returns the fraction of movement completed before the box from 'mins' to
-'maxs' hits solid geometry // when moving from 'start' to 'end'. The
-'passEntity' is considered non-solid during the move.
+Returns the fraction of movement completed before the box from 'mins' to 'maxs' hits solid geometry // when moving from 'start' to 'end'. The 'passEntity' is considered non-solid during the move.
 
 Usage
 -----
 
-float trace( vector start, vector end, vector mins, vector maxs, float
-contents\_mask, entity passEntity )
+float trace( vector start, vector end, vector mins, vector maxs, float contents\_mask, entity passEntity )
 
 Parameters
 ----------
 
 -   [start] - The starting point for the trace operation.
 -   [end] - The ending point for the trace operation.
--   [mins] - A point used in conjunction with **maxs** to define the
-    size of the bounding box used.
--   [maxs] - A point used in conjunction with **mins** to define the
-    size of the bounding box used.
--   [contents\_mask] - A flag to define the types of surfaces to ignore.
-    These masks are defined in doom\_defs.script.
+-   [mins] - A point used in conjunction with **maxs** to define the size of the bounding box used.
+-   [maxs] - A point used in conjunction with **mins** to define the size of the bounding box used.
+-   [contents\_mask] - A flag to define the types of surfaces to ignore. These masks are defined in doom\_defs.script.
     -   MASK\_ALL
     -   MASK\_SOLID
     -   MASK\_MONSTERSOLID
@@ -47,9 +40,7 @@ Examples
 Notes
 -----
 
-Once a trace has been issued, other special events can be called to
-return more detailed information about the trace. See the following
-articles...
+Once a trace has been issued, other special events can be called to return more detailed information about the trace. See the following articles...
 
 -   [getTraceBody](GetTraceBody_%28script_event%29 "GetTraceBody (script event)")
 -   [getTraceEndPos](GetTraceEndPos_%28script_event%29 "GetTraceEndPos (script event)")
@@ -58,5 +49,4 @@ articles...
 -   [getTraceJoint](GetTraceJoint_%28script_event%29 "GetTraceJoint (script event)")
 -   [getTraceNormal](GetTraceNormal_%28script_event%29 "GetTraceNormal (script event)")
 
-\
 

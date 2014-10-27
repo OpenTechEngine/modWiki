@@ -1,17 +1,10 @@
-Skins are declarations that contain a list of [material
-shaders](Material_%28decl%29 "Material (decl)") coupled with a set of
-replacement material shaders.
+Skins are declarations that contain a list of [material shaders](Material_%28decl%29 "Material (decl)") coupled with a set of replacement material shaders.
 
-Through use of a series of skin definitions one can assign a unique
-material to several instances of the same model.
+Through use of a series of skin definitions one can assign a unique material to several instances of the same model.
 
-An example would be a character with 3 different colored uniforms. A
-series of skin declarations would allow one to change the colored
-uniform that the character was textured with.
+An example would be a character with 3 different colored uniforms. A series of skin declarations would allow one to change the colored uniform that the character was textured with.
 
-Skins are assigned to entities through the use of a "skin" key/value
-pair. This key/value pair can be set in the level editor or in an entity
-definition.
+Skins are assigned to entities through the use of a "skin" key/value pair. This key/value pair can be set in the level editor or in an entity definition.
 
 Syntax
 ------
@@ -21,38 +14,22 @@ Syntax
       [original] [replacement]
     }
 
-![The skin browser displays a matching skins folder containing skins
-intended for use with the selected
-model.](/images/thumb/a/aa/Skin_model.png/180px-Skin_model.png)\
- *The skin browser displays a matching skins folder containing skins
-intended for use with the selected model.*
+![The skin browser displays a matching skins folder containing skins intended for use with the selected model.](/images/thumb/a/aa/Skin_model.png/180px-Skin_model.png)
+ *The skin browser displays a matching skins folder containing skins intended for use with the selected model.*
 
-Skin declarations are started with a header which consists of the
-keyword *skin* followed by the location then *name* of the skin in the
-editor.
+Skin declarations are started with a header which consists of the keyword *skin* followed by the location then *name* of the skin in the editor.
 
-They are then followed by the body of the declaration which is enclosed
-in curly brackets, { and }.
+They are then followed by the body of the declaration which is enclosed in curly brackets, { and }.
 
-An optional *model* keyword can be included in the declaration. This
-keyword defines what model the skin is intended to be used with.
+An optional *model* keyword can be included in the declaration. This keyword defines what model the skin is intended to be used with.
 
-When the model is defined, the skin will appear in the *matching skins*
-folder when selecting a skin in the level editor (See image).
+When the model is defined, the skin will appear in the *matching skins* folder when selecting a skin in the level editor (See image).
 
-The remainder of the skin declaration consists of a series of lines
-which define the name of the *original* material shader followed by the
-*replacement* material shader.
+The remainder of the skin declaration consists of a series of lines which define the name of the *original* material shader followed by the *replacement* material shader.
 
-The original material of an object can found out by placing the object
-in your map then going in game and opening the console. Then type
-[r\_showSurfaceInfo](R_showSurfaceInfo_%28cvar%29 "R showSurfaceInfo (cvar)")
-1 and look at the object. The top line will give you the model location
-and the second line will give you the material name in the editor.
+The original material of an object can found out by placing the object in your map then going in game and opening the console. Then type [r\_showSurfaceInfo](R_showSurfaceInfo_%28cvar%29 "R showSurfaceInfo (cvar)") 1 and look at the object. The top line will give you the model location and the second line will give you the material name in the editor.
 
-\
- An example for a monster's skin declaration that uses two separate
-materials on its model:
+ An example for a monster's skin declaration that uses two separate materials on its model:
 
     skin skins/monsters/my_monster_with_green_skin
     {
@@ -60,17 +37,9 @@ materials on its model:
       models/monsters/my_monster/my_monster_default_head models/monsters/my_monster/my_monster_green_head
     }
 
-If there are any other materials referenced by the model file (for
-example the monster's glowing eyes that use their own material), that
-don't appear in the skin definition, then they are not changed.
+If there are any other materials referenced by the model file (for example the monster's glowing eyes that use their own material), that don't appear in the skin definition, then they are not changed.
 
-Skins are also used to make parts of a model invisible, by replacing a
-material with the "nodraw" material (textures/common/nodraw). This is
-often used if multiple weapons are attached to a model, and only one
-weapon should be visible at a time.
+Skins are also used to make parts of a model invisible, by replacing a material with the "nodraw" material (textures/common/nodraw). This is often used if multiple weapons are attached to a model, and only one weapon should be visible at a time.
 
-Skin declarations usually live in .
-[SKIN](SKIN_%28file_format%29 "SKIN (file format)") files in the
-[skins](Skins_%28folder%29 "Skins (folder)") folder in your Doom 3 base
-folder.
+Skin declarations usually live in . [SKIN](SKIN_%28file_format%29 "SKIN (file format)") files in the [skins](Skins_%28folder%29 "Skins (folder)") folder in your Doom 3 base folder.
 

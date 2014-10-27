@@ -1,8 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -28,23 +27,10 @@ Examples
 Notes
 -----
 
-In the case of
-[weapon\_flashlight](Weapon_flashlight_%28entity%29 "Weapon flashlight (entity)")
-, the "mtr\_flashShader" key/value pair is set to "lights/flashlight5".
-The reason for this is clear if you understand how the flashlight works.
+In the case of [weapon\_flashlight](Weapon_flashlight_%28entity%29 "Weapon flashlight (entity)") , the "mtr\_flashShader" key/value pair is set to "lights/flashlight5". The reason for this is clear if you understand how the flashlight works.
 
-Essentially it's using the muzzle flash light inherent to all weapons as
-the flashlight's bulb. And since the [material
-shader](Material_%28decl%29 "Material (decl)") used doesn't make use of
-shader parms or time to determine the light's duration as is done with
-other weapons, a script event (this event) is needed to toggle the light
-on and off.
+Essentially it's using the muzzle flash light inherent to all weapons as the flashlight's bulb. And since the [material shader](Material_%28decl%29 "Material (decl)") used doesn't make use of shader parms or time to determine the light's duration as is done with other weapons, a script event (this event) is needed to toggle the light on and off.
 
-The key point being that this event is useless unless you intend to
-toggle muzzle flashes off or give other weapons flashlights in which
-case you'll need to edit the weapon's [entity
-declaration](Entitydef_%28decl%29 "Entitydef (decl)") and more
-specifically the "mtr\_flashShader" key/value pair.
+The key point being that this event is useless unless you intend to toggle muzzle flashes off or give other weapons flashlights in which case you'll need to edit the weapon's [entity declaration](Entitydef_%28decl%29 "Entitydef (decl)") and more specifically the "mtr\_flashShader" key/value pair.
 
-\
 

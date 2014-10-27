@@ -1,8 +1,7 @@
 Description
 -----------
 
-Reports OpenGL version, extensions found, rendering paths enabled and
-other graphics card related information.
+Reports OpenGL version, extensions found, rendering paths enabled and other graphics card related information.
 
 Usage
 -----
@@ -19,9 +18,6 @@ This console command does not accept parameters.
 Notes
 -----
 
-You can use this command to see which rendering paths are potentially
-available in your video card for use with the
-[r\_renderer](R_renderer_%28cvar%29 "R renderer (cvar)") CVar.
+You can use this command to see which rendering paths are potentially available in your video card for use with the [r\_renderer](R_renderer_%28cvar%29 "R renderer (cvar)") CVar.
 
-\
 

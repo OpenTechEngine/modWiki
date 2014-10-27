@@ -1,29 +1,13 @@
-![A Doom 3 in-game GUI with its items
-highlighted](/images/thumb/0/0f/Gui_items_debug.gif/180px-Gui_items_debug.gif)\
+![A Doom 3 in-game GUI with its items highlighted](/images/thumb/0/0f/Gui_items_debug.gif/180px-Gui_items_debug.gif)
  *A Doom 3 in-game GUI with its items highlighted*
 
-Code wise, [GUIs](GUIs "GUIs") are made of several different *items* ,
-each of them performing a slightly different task, such as acting as a
-button, as a noninteractive image, or as on-screen text. There also
-several different *item types* to do specific tasks, such as selecting
-an option from a range of choices, rendering a 3D model on a GUI, or
-editing text.
+Code wise, [GUIs](GUIs "GUIs") are made of several different *items* , each of them performing a slightly different task, such as acting as a button, as a noninteractive image, or as on-screen text. There also several different *item types* to do specific tasks, such as selecting an option from a range of choices, rendering a 3D model on a GUI, or editing text.
 
-Items are also officially called *windows* by [id Software's
-documentation](http://www.iddevnet.com/doom3/guis.php "http://www.iddevnet.com/doom3/guis.php")
-.
+Items are also officially called *windows* by [id Software's documentation](http://www.iddevnet.com/doom3/guis.php "http://www.iddevnet.com/doom3/guis.php") .
 
-These items can be placed anywhere on a GUI, and can be nested - this
-can be useful to grouping items or to mask them. They also don't have to
-be always visible, so it's common to have hidden items that are
-displayed when certain events happen, or just items that are never shown
-but do specific programming tasks such as working as an event catalyzer
-or a virtual timeline that can be played.
+These items can be placed anywhere on a GUI, and can be nested - this can be useful to grouping items or to mask them. They also don't have to be always visible, so it's common to have hidden items that are displayed when certain events happen, or just items that are never shown but do specific programming tasks such as working as an event catalyzer or a virtual timeline that can be played.
 
-Each item can have its own properties, some code with variables and
-events, and nested items. While the source code of each item can vary
-wildly depending on the task it's performing, the standard syntax for a
-GUI item would be something like this:
+Each item can have its own properties, some code with variables and events, and nested items. While the source code of each item can vary wildly depending on the task it's performing, the standard syntax for a GUI item would be something like this:
 
     item_type name {
         property_name property_value(s)
@@ -50,9 +34,7 @@ For example:
        text        "Welcome!"
     }
 
-While
-[windowDef](WindowDef_%28GUI_item_type%29 "WindowDef (GUI item type)")
-is the standard item type used, other types exist for some custom tasks.
+While [windowDef](WindowDef_%28GUI_item_type%29 "WindowDef (GUI item type)") is the standard item type used, other types exist for some custom tasks.
 
 Doom 3 item types
 -----------------
@@ -70,9 +52,7 @@ These are the standard item types, available on the id Tech 4 engine.
 Quake 4 item types
 ------------------
 
-These are new item types, introduced by Raven Software on their version
-of the id Tech 4 engine. They work pretty much the same as the previous
-items, but obviously should only be used when creating GUIs for Quake 4.
+These are new item types, introduced by Raven Software on their version of the id Tech 4 engine. They work pretty much the same as the previous items, but obviously should only be used when creating GUIs for Quake 4.
 
 -   [htmlDef](HtmlDef_%28GUI_item_type%29 "HtmlDef (GUI item type)")
 -   [fieldDef](FieldDef_%28GUI_item_type%29 "FieldDef (GUI item type)")

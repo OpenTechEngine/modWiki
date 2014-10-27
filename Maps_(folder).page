@@ -1,54 +1,24 @@
-The maps directory contains a sub-directory, "game". Within this
-directory are the files of the actual Doom 3 levels. All files here are
-named after the level that the file belongs to. Maps in Doom 3 are
-defined by four different files, all of which are in ascii (plain text)
-so it should be very easy for other people to write editors and tools
-for them. For a map to work properly, all four files must be included
-(the only exception is that .AAS files are not needed for multiplayer
-maps).
+The maps directory contains a sub-directory, "game". Within this directory are the files of the actual Doom 3 levels. All files here are named after the level that the file belongs to. Maps in Doom 3 are defined by four different files, all of which are in ascii (plain text) so it should be very easy for other people to write editors and tools for them. For a map to work properly, all four files must be included (the only exception is that .AAS files are not needed for multiplayer maps).
 
 Mapping Filetypes
 =================
 
- [levelname]. [MAP](MAP_%28file_format%29 "MAP (file format)") 
-:   The .MAP file is the main file that is created when you edit a file,
-    it defines all the [entities](Entity "Entity") ,
-    [brushes](Brush "Brush") and [patches](Patch "Patch") in the map.
-    The other three files are all generated from the .MAP file with the
-    [dmap](Dmap_%28console_command%29 "Dmap (console command)") command.
-    The format hasn't changed much from the Quake series. Unlike
-    previous generation Quake MAP/BSP's, Doom3 map files are used both
-    in the editor as well as in-game - eliminating the need to compile
-    the editor 'map' file into a 'bsp'. Doom3 maps are pretty much
-    executed on the fly. As well, map files are 'open' allowing
-    developers to open any completed map in the editor for inspection.
+ [levelname]. [MAP](MAP_%28file_format%29 "MAP (file format)")   
+The .MAP file is the main file that is created when you edit a file, it defines all the [entities](Entity "Entity") , [brushes](Brush "Brush") and [patches](Patch "Patch") in the map. The other three files are all generated from the .MAP file with the [dmap](Dmap_%28console_command%29 "Dmap (console command)") command. The format hasn't changed much from the Quake series. Unlike previous generation Quake MAP/BSP's, Doom3 map files are used both in the editor as well as in-game - eliminating the need to compile the editor 'map' file into a 'bsp'. Doom3 maps are pretty much executed on the fly. As well, map files are 'open' allowing developers to open any completed map in the editor for inspection.
 
 <!-- -->
 
- [levelname]. [CM](CM_%28file_format%29 "CM (file format)") 
-:   The .CM file defines the collision geometry in the map. It is used
-    by the physics system for collision detection.
+ [levelname]. [CM](CM_%28file_format%29 "CM (file format)")   
+The .CM file defines the collision geometry in the map. It is used by the physics system for collision detection.
 
 <!-- -->
 
- [levelname]. [PROC](PROC_%28file_format%29 "PROC (file format)") 
-:   The .PROC contains all the pre-processed geometry in the map. It
-    stores all the visible triangles, batched up in to surfaces. It also
-    stores all the portal information, and any precalculated shadow
-    volumes (if a light doesn't move, and a brush doesn't move, the
-    shadow volume can be precalculated).
+ [levelname]. [PROC](PROC_%28file_format%29 "PROC (file format)")   
+The .PROC contains all the pre-processed geometry in the map. It stores all the visible triangles, batched up in to surfaces. It also stores all the portal information, and any precalculated shadow volumes (if a light doesn't move, and a brush doesn't move, the shadow volume can be precalculated).
 
 <!-- -->
 
- [levelname]. [AAS](AAS_%28file_format%29 "AAS (file format)") [suffix] 
-:   The .AAS files contain the 'area awareness' data for the AI to
-    navigate through the level. The .AAS file is generated to reflect
-    the playable volume of the map that the monsters are allowed to roam
-    about. For Doom 3 there are several different types of .AAS files
-    signified by the suffix. These are used depending on the physical
-    dimensions of monsters. For example, most monsters use .AAS48, while
-    larger demons like the hell-knight use .AAS96. In addition, there
-    are also special .AAS files for special monster types,
-    .AAS\_CYBERDEMON, .AAS\_GUARDIAN, .AAS\_MANCUBUS, .AAS\_SABAOTH.
+ [levelname]. [AAS](AAS_%28file_format%29 "AAS (file format)") [suffix]   
+The .AAS files contain the 'area awareness' data for the AI to navigate through the level. The .AAS file is generated to reflect the playable volume of the map that the monsters are allowed to roam about. For Doom 3 there are several different types of .AAS files signified by the suffix. These are used depending on the physical dimensions of monsters. For example, most monsters use .AAS48, while larger demons like the hell-knight use .AAS96. In addition, there are also special .AAS files for special monster types, .AAS\_CYBERDEMON, .AAS\_GUARDIAN, .AAS\_MANCUBUS, .AAS\_SABAOTH.
 
 

@@ -1,11 +1,6 @@
-The command that will be binded to a key on that bindDef. On other
-words, when that bindDef has the focus and the player sets a key, that
-key gets this command binded to it. Equivalent to using the "bind"
-command in the console.
+The command that will be binded to a key on that bindDef. On other words, when that bindDef has the focus and the player sets a key, that key gets this command binded to it. Equivalent to using the "bind" command in the console.
 
-This property is restricted to the
-[bindDef](BindDef_%28GUI_item_type%29 "BindDef (GUI item type)") item
-type.
+This property is restricted to the [bindDef](BindDef_%28GUI_item_type%29 "BindDef (GUI item type)") item type.
 
 Syntax
 ------
@@ -22,5 +17,4 @@ Example(s)
 
     bind   "_forward"
 
-\
 

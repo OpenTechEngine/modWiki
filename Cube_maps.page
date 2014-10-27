@@ -1,146 +1,100 @@
 Cube Maps and Their Use
 -----------------------
 
-![Example of all six sides of the cubemap laid out in their positions as
-seen by the
-engine](/images/thumb/3/37/Cubemap_example.png/180px-Cubemap_example.png)\
- *Example of all six sides of the cubemap laid out in their positions as
-seen by the engine*
+![Example of all six sides of the cubemap laid out in their positions as seen by the engine](/images/thumb/3/37/Cubemap_example.png/180px-Cubemap_example.png)
+ *Example of all six sides of the cubemap laid out in their positions as seen by the engine*
 
-![Example of all six sides of the cubemap laid out in their positions as
-seen by the
-engine](/images/thumb/0/06/Cubemap_example_2.png/180px-Cubemap_example_2.png)\
- *Example of all six sides of the cubemap laid out in their positions as
-seen by the engine*
+![Example of all six sides of the cubemap laid out in their positions as seen by the engine](/images/thumb/0/06/Cubemap_example_2.png/180px-Cubemap_example_2.png)
+ *Example of all six sides of the cubemap laid out in their positions as seen by the engine*
 
-Cube maps (also known as environment maps) are comprised of a series of
-six images that correspond to the sides of a cube.
+Cube maps (also known as environment maps) are comprised of a series of six images that correspond to the sides of a cube.
 
-The purpose of which is to capture a 360 degree view of the player's
-surroundings so that in game you can...
+The purpose of which is to capture a 360 degree view of the player's surroundings so that in game you can...
 
 -   fake the appearance of a sky or surrounding environment
 -   fake the appearance of environmental reflections
 
-\
-
 Storage and Naming Conventions
 ------------------------------
 
-Cube map images are stored in the [env](Env_%28folder%29 "Env (folder)")
-folder.
+Cube map images are stored in the [env](Env_%28folder%29 "Env (folder)") folder.
 
 Cube map images are named as follows...
 
     [basename]_[direction].tga
 
-Where the *basename* is the name you will use to reference the cube map
-in your [material shader](Material_%28decl%29 "Material (decl)") , and
-the *direction* is the orientation of the camera.
+Where the *basename* is the name you will use to reference the cube map in your [material shader](Material_%28decl%29 "Material (decl)") , and the *direction* is the orientation of the camera.
 
-The direction suffix can vary depending on what purpose you plan to use
-your cube map.
+The direction suffix can vary depending on what purpose you plan to use your cube map.
 
-  SKY                       REFLECTION
-  ------------------------- --------------------
-  [basename]\_up.tga        [basename]\_py.tga
-  [basename]\_down.tga      [basename]\_ny.tga
-  [basename]\_left.tga      [basename]\_nx.tga
-  [basename]\_right.tga     [basename]\_px.tga
-  [basename]\_forward.tga   [basename]\_pz.tga
-  [basename]\_back.tga      [basename]\_nz.tga
-
-\
+| SKY                     | REFLECTION         |
+|-------------------------|--------------------|
+| [basename]\_up.tga      | [basename]\_py.tga |
+| [basename]\_down.tga    | [basename]\_ny.tga |
+| [basename]\_left.tga    | [basename]\_nx.tga |
+| [basename]\_right.tga   | [basename]\_px.tga |
+| [basename]\_forward.tga | [basename]\_pz.tga |
+| [basename]\_back.tga    | [basename]\_nz.tga |
 
 Capturing Images to Create New Cube Maps
 ----------------------------------------
 
-Images can be captured from any application that provides you with the
-following controls...
+Images can be captured from any application that provides you with the following controls...
 
 -   The ability to set the camera's position to a fixed point.
--   The ability to set the camera's rotation, on all three axises, in 90
-    degree increments, with precision.
+-   The ability to set the camera's rotation, on all three axises, in 90 degree increments, with precision.
 -   The ability to set the camera's field of view to 90 degrees.
 
-From that point, all you need to do is capture six images where in each
-case the camera is oriented in a different cardinal direction (up, down,
-left, right, back, and forward).
+From that point, all you need to do is capture six images where in each case the camera is oriented in a different cardinal direction (up, down, left, right, back, and forward).
 
-The examples posted at the top of this page depict the correct
-orientation for each image if they were layed out side by side.
+The examples posted at the top of this page depict the correct orientation for each image if they were layed out side by side.
 
-The console command
-[envshot](Envshot_%28console_command%29 "Envshot (console command)") can
-capture the six needed images from within the game.
+The console command [envshot](Envshot_%28console_command%29 "Envshot (console command)") can capture the six needed images from within the game.
 
 Editing Images
 --------------
 
-Some post editing may be nessicary depending on what field of view
-options were available and if the orientation of each image is correct.
+Some post editing may be nessicary depending on what field of view options were available and if the orientation of each image is correct.
 
 ### Correcting Rectangular Images
 
-If the field of view for your camera was 90 degrees both vertically and
-horizontally, the resulting captures would be square.
+If the field of view for your camera was 90 degrees both vertically and horizontally, the resulting captures would be square.
 
-However, not all software allows for the adjustment of horizontal and
-vertical field of view in which case you'll end up with rectangular
-captures because the screenshot captures more data lengthwise than
-heightwise or vice versa.
+However, not all software allows for the adjustment of horizontal and vertical field of view in which case you'll end up with rectangular captures because the screenshot captures more data lengthwise than heightwise or vice versa.
 
-So long as the dimension in which you were permitted to adjust the field
-of view corrisponds with the smaller measurment across your image
-(height or width), then it should be possible to crop the image from the
-center and remove overlapping image data.
+So long as the dimension in which you were permitted to adjust the field of view corrisponds with the smaller measurment across your image (height or width), then it should be possible to crop the image from the center and remove overlapping image data.
 
-For example, if the height of your image is captured at a field of view
-of 90 and the width is larger than the height, then you can safely crop
-the sides from the center of the image.
+For example, if the height of your image is captured at a field of view of 90 and the width is larger than the height, then you can safely crop the sides from the center of the image.
 
 ### Correcting Disoriented Images
 
-Sometimes the rotational adjustments in an application do not cater well
-to the orientation expected in Doom 3 to make a proper cube map.
+Sometimes the rotational adjustments in an application do not cater well to the orientation expected in Doom 3 to make a proper cube map.
 
-This means that occasionally it may be nessicary to rotate several of
-your images in 90 degree increments so when layed out they match like
-the example above.
+This means that occasionally it may be nessicary to rotate several of your images in 90 degree increments so when layed out they match like the example above.
 
 ### Rearranging Cube Map Faces
 
-Sometimes it is necessary to rearrange cube map faces for use with
-different export and editing tools. This often involves changing the
-naming convention of files and correcting the orientation of the images.
+Sometimes it is necessary to rearrange cube map faces for use with different export and editing tools. This often involves changing the naming convention of files and correcting the orientation of the images.
 
-Some common corrections from application to application are documented
-below...
+Some common corrections from application to application are documented below...
 
-  Doom 3                  Quake 2
-  ----------------------- ----------------------------
-  \_up **or** \_py        \_up **and** rotate 90 CW
-  \_down **or** \_ny      \_dn **and** rotate 90 CCW
-  \_left **or** \_nx      \_lf
-  \_right **or** \_px     \_rt
-  \_forward **or** \_pz   \_ft
-  \_back **or** \_nz      \_bk
+| Doom 3                | Quake 2                    |
+|-----------------------|----------------------------|
+| \_up **or** \_py      | \_up **and** rotate 90 CW  |
+| \_down **or** \_ny    | \_dn **and** rotate 90 CCW |
+| \_left **or** \_nx    | \_lf                       |
+| \_right **or** \_px   | \_rt                       |
+| \_forward **or** \_pz | \_ft                       |
+| \_back **or** \_nz    | \_bk                       |
 
 Fixing Seams or Drawing a Cube Map from Scratch
 -----------------------------------------------
 
-It is possible to edit a cubemap as a single entity instead of working
-with the individual images by using a program called
-[SkyPaint](http://www.skypaint.com/ "http://www.skypaint.com/") .
+It is possible to edit a cubemap as a single entity instead of working with the individual images by using a program called [SkyPaint](http://www.skypaint.com/ "http://www.skypaint.com/") .
 
-The program is designed to work as a front end to any image editing
-application.
+The program is designed to work as a front end to any image editing application.
 
-It works by allowing you to select a portion of your cube map by
-positioning a viewport in 3D and then sending this view to your image
-editing application.
+It works by allowing you to select a portion of your cube map by positioning a viewport in 3D and then sending this view to your image editing application.
 
-Once you've finished with your manipulation of the image, you send it
-back to SkyPaint and the program sorts out what pixels corrispond to
-what image in the cube map.
+Once you've finished with your manipulation of the image, you send it back to SkyPaint and the program sorts out what pixels corrispond to what image in the cube map.
 

@@ -1,14 +1,11 @@
-Script events are the commands used in ET:QW's native scripting
-language.
+Script events are the commands used in ET:QW's native scripting language.
 
 Existing script events as of version 1.1.
 
 System Events
 -------------
 
-Events declared in [idThread](IdThread_%28class%29 "IdThread (class)") ,
-accessible via [sys](Scripting_basics#sys "Scripting basics")
-identifier.
+Events declared in [idThread](IdThread_%28class%29 "IdThread (class)") , accessible via [sys](Scripting_basics#sys "Scripting basics") identifier.
 
 -   [addCheapDecal](AddCheapDecal_%28script_event%29 "AddCheapDecal (script event)")
 -   [createMaskEditSession](CreateMaskEditSession_%28script_event%29 "CreateMaskEditSession (script event)")
@@ -208,11 +205,9 @@ identifier.
 Entity Events
 -------------
 
-Events declared in the base [spawn class](Spawn_class "Spawn class")
-[idEntity](IdEntity_%28class%29 "IdEntity (class)") .
+Events declared in the base [spawn class](Spawn_class "Spawn class") [idEntity](IdEntity_%28class%29 "IdEntity (class)") .
 
-All entities inherit these events, though some may be overridden to
-produce different behaviour.
+All entities inherit these events, though some may be overridden to produce different behaviour.
 
 -   [remove](Remove_%28script_event%29 "Remove (script event)")
 -   [isClass](IsClass_%28script_event%29 "IsClass (script event)")
@@ -456,8 +451,7 @@ produce different behaviour.
 
 ### sdGeneralMover Events
 
-**Note:** This spawn class does not have any entityDef referencing it
-and wasn't used in the retail maps.
+**Note:** This spawn class does not have any entityDef referencing it and wasn't used in the retail maps.
 
 -   [startTimedMove](StartTimedMove_%28script_event%29 "StartTimedMove (script event)")
 -   [stopCurrentMove](StopCurrentMove_%28script_event%29 "StopCurrentMove (script event)")
@@ -934,8 +928,7 @@ Territory Events
 Game Class Events
 -----------------
 
-The game sets up several [game classes](Game_class "Game class") to
-manage different things.
+The game sets up several [game classes](Game_class "Game class") to manage different things.
 
 ### Objective Manager Events
 
@@ -1038,9 +1031,7 @@ manage different things.
 CVar Events
 -----------
 
-The game creates a cvar wrapper to support the following events on a
-cvar object returned by sys.
-[getCVar](GetCVar_%28script_event%29 "GetCVar (script event)")
+The game creates a cvar wrapper to support the following events on a cvar object returned by sys. [getCVar](GetCVar_%28script_event%29 "GetCVar (script event)")
 
 -   [getFloatValue](GetFloatValue_%28script_event%29 "GetFloatValue (script event)")
 -   [getStringValue](GetStringValue_%28script_event%29 "GetStringValue (script event)")

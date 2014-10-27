@@ -1,14 +1,8 @@
-Entity definitions are simply a list of key/value pairs or spawn
-arguments.
+Entity definitions are simply a list of key/value pairs or spawn arguments.
 
-When the engine [spawns](Spawn "Spawn") an [entity](Entity "Entity") ,
-the entityDef is looked up to build the
-[spawnArgs](SpawnArgs "SpawnArgs") dictionary of the [spawn
-class](Spawn_class "Spawn class") .
+When the engine [spawns](Spawn "Spawn") an [entity](Entity "Entity") , the entityDef is looked up to build the [spawnArgs](SpawnArgs "SpawnArgs") dictionary of the [spawn class](Spawn_class "Spawn class") .
 
-So entityDefs conceptually define the default attributes of an entity -
-in combination with the key/value pairs for the [map
-entity](Map_entity "Map entity") set in the level editor.
+So entityDefs conceptually define the default attributes of an entity - in combination with the key/value pairs for the [map entity](Map_entity "Map entity") set in the level editor.
 
 Syntax
 ------
@@ -20,46 +14,33 @@ Syntax
         ...
     }
 
-Entity definitions begin with a header which consists of the keyword
-"entityDef" followed by the name of the entityDef type.
+Entity definitions begin with a header which consists of the keyword "entityDef" followed by the name of the entityDef type.
 
-The header is followed by the body of the declaration which is enclosed
-in curly brackets.
+The header is followed by the body of the declaration which is enclosed in curly brackets.
 
-The body is composed of a series of keys and values. Keys and values are
-enclosed by quotation marks.
+The body is composed of a series of keys and values. Keys and values are enclosed by quotation marks.
 
 Important Key/Values
 --------------------
 
-While most of the key/value pairs are just data to be used by the entity
-spawn class, script object or level script there are a few that should
-be mentioned.
+While most of the key/value pairs are just data to be used by the entity spawn class, script object or level script there are a few that should be mentioned.
 
 `     "inherit" [entitydef type]    `
 
-The "inherit" key/value pair can be used in any entity definition. It's
-purpose is to instruct the engine to inherit key/value pairs from the
-specified entityDef type to reduce redundancy.
+The "inherit" key/value pair can be used in any entity definition. It's purpose is to instruct the engine to inherit key/value pairs from the specified entityDef type to reduce redundancy.
 
 `     "spawnclass" [spawn class type]    `
 
-The spawnclass key/value pair defines the [spawn
-class](Spawn_class "Spawn class") type of this entity. An entity will
-fail to spawn if it doesn't have a spawnclass key/value set via an
-entityDef or [map entity](Map_entity "Map entity") .
+The spawnclass key/value pair defines the [spawn class](Spawn_class "Spawn class") type of this entity. An entity will fail to spawn if it doesn't have a spawnclass key/value set via an entityDef or [map entity](Map_entity "Map entity") .
 
 `     "scriptobject" [script object type]    `
 
-The "scriptobject" key/value pair key/value pair is used to assign a
-[script object](Script_object "Script object") type to this entity type
-to control its behavior.
+The "scriptobject" key/value pair key/value pair is used to assign a [script object](Script_object "Script object") type to this entity type to control its behavior.
 
 Inheritance and Spawn Classes Example
 -------------------------------------
 
-Using a paraphrased snippet from the monster\_zombie\_fat entity
-definition in Doom 3:
+Using a paraphrased snippet from the monster\_zombie\_fat entity definition in Doom 3:
 
     entityDef monster_zombie_fat {
         "inherit"       "zombie_default"
@@ -75,12 +56,9 @@ definition in Doom 3:
         ...
     }
 
-Here, the inherit value means is that when the monster\_zombie\_fat is
-looked up it will be combined with the key/value pairs defined in
-zombie\_default.
+Here, the inherit value means is that when the monster\_zombie\_fat is looked up it will be combined with the key/value pairs defined in zombie\_default.
 
-By looking at zombie\_default we can see the key/value pairs that are
-inherited:
+By looking at zombie\_default we can see the key/value pairs that are inherited:
 
     entityDef zombie_default {
         "inherit"       "monster_default"
@@ -89,8 +67,7 @@ inherited:
         ...
     }
 
-Notice that this entity definition also inherits key/value pairs from
-another entityDef, in this case from monster\_default:
+Notice that this entity definition also inherits key/value pairs from another entityDef, in this case from monster\_default:
 
     entityDef monster_default {
         "editor_color"      "1 .5 0"
@@ -103,16 +80,12 @@ another entityDef, in this case from monster\_default:
         ...
     }
 
-And at this point the inheritance stops because there is no other
-"inherit" key/value pair. However, there is a "spawnclass" key/value
-pair. In this example the [spawn class](Spawn_class "Spawn class") idAI.
+And at this point the inheritance stops because there is no other "inherit" key/value pair. However, there is a "spawnclass" key/value pair. In this example the [spawn class](Spawn_class "Spawn class") idAI.
 
 Script Objects Example
 ----------------------
 
-In this example, the scriptobject key/value is defining what AI [script
-object](Script_object "Script object") type to use to control this
-entity.
+In this example, the scriptobject key/value is defining what AI [script object](Script_object "Script object") type to use to control this entity.
 
     entityDef monster_zombie_fat {
         "inherit"       "zombie_default"
@@ -131,9 +104,7 @@ entity.
 Practical Example
 -----------------
 
-If you wanted to create a new type of monster\_zombie\_fat with a health
-value of 200 you simply create a new entity definition that inherits
-from monster\_zombie\_fat and set a new health key/value pair...
+If you wanted to create a new type of monster\_zombie\_fat with a health value of 200 you simply create a new entity definition that inherits from monster\_zombie\_fat and set a new health key/value pair...
 
     entityDef monster_zombie_fat_200 {
         "inherit"       "monster_zombie_fat"

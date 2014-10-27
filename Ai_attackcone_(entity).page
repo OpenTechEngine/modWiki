@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Ai_attackcone_%28entity%29 "http://www.modwiki.net/w/index.php?title=Ai_attackcone_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Ai_attackcone_%28entity%29 "http://www.modwiki.net/w/index.php?title=Ai_attackcone_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Ai_attackcone_%28entity%29 "http://www.modwiki.net/w/index.php?title=Ai_attackcone_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Ai_attackcone_%28entity%29 "http://www.modwiki.net/w/index.php?title=Ai_attackcone_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -26,127 +8,238 @@ Description
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  -------------------------------------------------------------------------
-  KEY                                  DESCRIPTION
-  ------------------------------------ ------------------------------------
-  angle                                Description not available.
-
-  anim                                 Animation prefix for attack type
-
-  bind                                 Description not available.
-
-  bindOrientated                       Description not available.
-
-  bindToBody                           Description not available.
-
-  bindToJoint                          Description not available.
-
-  bindanim                             Description not available.
-
-  cameraTarget                         Description not available.
-
-  cinematic                            Description not available.
-
-  classname                            Description not available.
-
-  clipmodel                            Description not available.
-
-  cone                                 Description not available.
-
-  cylinder                             Description not available.
-
-  editor\_color                        Description not available.
-
-  editor\_combatnode                   Description not available.
-
-  editor\_copy1                        Description not available.
-
-  editor\_copy2                        Description not available.
-
-  editor\_copy3                        Description not available.
-
-  editor\_copy4                        Description not available.
-
-  editor\_copy5                        Description not available.
-
-  editor\_maxs                         Description not available.
-
-  editor\_mins                         Description not available.
-
-  editor\_usage                        
-
-  editor\_var XXXX                     Description not available.
-
-  fov                                  Angle width of the cone
-
-  guiTarget                            Description not available.
-
-  health                               Description not available.
-
-  height                               Description not available.
-
-  hide                                 Description not available.
-
-  max                                  Maximum distance player can be from
-                                       node
-
-  max\_wait                            Maximum amount of time to wait
-                                       between attacks
-
-  maxs                                 Description not available.
-
-  min                                  Minimum distance player can be from
-                                       node
-
-  min\_wait                            Minimum amount of time to wait
-                                       between attacks
-
-  mins                                 Description not available.
-
-  model                                Description not available.
-
-  name                                 Description not available.
-
-  networkSync                          Description not available.
-
-  neverDormant                         Description not available.
-
-  noGrab                               Description not available.
-
-  noclipmodel                          Description not available.
-
-  num\_shots                           Max number of shots to fire per
-                                       attack
-
-  offset                               Vector amount to offset cone from
-                                       origin of entity
-
-  origin                               Description not available.
-
-  rotation                             Description not available.
-
-  scriptobject                         Description not available.
-
-  size                                 Description not available.
-
-  skin\_xray                           Description not available.
-
-  slowmo                               Description not available.
-
-  solidForTeam                         Description not available.
-
-  spawnclass                           Description not available.
-
-  target                               Description not available.
-
-  use\_once                            When set, node is disabled after
-                                       it's used.
-
-  wait\_anim                           Description not available.
-  -------------------------------------------------------------------------
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">KEY</th>
+<th align="left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">angle</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">anim</td>
+<td align="left">Animation prefix for attack type</td>
+</tr>
+<tr class="odd">
+<td align="left">bind</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">bindOrientated</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">bindToBody</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">bindToJoint</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">bindanim</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">cameraTarget</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">cinematic</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">classname</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">clipmodel</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">cone</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">cylinder</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">editor_color</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">editor_combatnode</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">editor_copy1</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">editor_copy2</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">editor_copy3</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">editor_copy4</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">editor_copy5</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">editor_maxs</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">editor_mins</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">editor_usage</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">editor_var XXXX</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">fov</td>
+<td align="left">Angle width of the cone</td>
+</tr>
+<tr class="even">
+<td align="left">guiTarget</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">health</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">height</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">hide</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">max</td>
+<td align="left">Maximum distance player can be from node</td>
+</tr>
+<tr class="odd">
+<td align="left">max_wait</td>
+<td align="left">Maximum amount of time to wait between attacks</td>
+</tr>
+<tr class="even">
+<td align="left">maxs</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">min</td>
+<td align="left">Minimum distance player can be from node</td>
+</tr>
+<tr class="even">
+<td align="left">min_wait</td>
+<td align="left">Minimum amount of time to wait between attacks</td>
+</tr>
+<tr class="odd">
+<td align="left">mins</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">model</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">name</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">networkSync</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">neverDormant</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">noGrab</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">noclipmodel</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">num_shots</td>
+<td align="left">Max number of shots to fire per attack</td>
+</tr>
+<tr class="odd">
+<td align="left">offset</td>
+<td align="left">Vector amount to offset cone from origin of entity</td>
+</tr>
+<tr class="even">
+<td align="left">origin</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">rotation</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">scriptobject</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">size</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">skin_xray</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">slowmo</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">solidForTeam</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">spawnclass</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="even">
+<td align="left">target</td>
+<td align="left">Description not available.</td>
+</tr>
+<tr class="odd">
+<td align="left">use_once</td>
+<td align="left">When set, node is disabled after it's used.</td>
+</tr>
+<tr class="even">
+<td align="left">wait_anim</td>
+<td align="left">Description not available.</td>
+</tr>
+</tbody>
+</table>
 
 Inheritance
 -----------

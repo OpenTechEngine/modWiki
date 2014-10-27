@@ -1,10 +1,7 @@
 Description
 -----------
 
-The **vertexParm** keyword instructs Doom 3 to pass the expressed value
-to a vertex program which must also be referenced in this stage via the
-[vertexProgram](VertexProgram_%28Material_stage_keyword%29 "VertexProgram (Material stage keyword)")
-keyword.
+The **vertexParm** keyword instructs Doom 3 to pass the expressed value to a vertex program which must also be referenced in this stage via the [vertexProgram](VertexProgram_%28Material_stage_keyword%29 "VertexProgram (Material stage keyword)") keyword.
 
 Usage
 -----
@@ -14,15 +11,13 @@ Usage
 Parameters
 ----------
 
--   [input] - The input or "slot" in which to pass the value to the
-    vertex program.
+-   [input] - The input or "slot" in which to pass the value to the vertex program.
 -   [value] - The value to pass to the vertex program.
 
 Example
 -------
 
-distort the current frame using the normal map helmet\_local.tga and
-heatHazeWithMaskAndVertex.vfp
+distort the current frame using the normal map helmet\_local.tga and heatHazeWithMaskAndVertex.vfp
 
     {
        program                 heatHazeWithMaskAndVertex.vfp
@@ -37,5 +32,4 @@ Notes
 
 None.
 
-\
 

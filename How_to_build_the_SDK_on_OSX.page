@@ -1,63 +1,39 @@
 What You Will Need
 ------------------
 
--   A copy of the [Mac Doom 3 SDK
-    v1.3.1](ftp://ftp.idsoftware.com/idstuff/doom3/source/mac/ "ftp://ftp.idsoftware.com/idstuff/doom3/source/mac/")
--   XCode 2.x (
-    [http://connect.apple.com](https://web.archive.org/web/20100316172444/http://connect.apple.com/ "http://connect.apple.com")
-    )
+-   A copy of the [Mac Doom 3 SDK v1.3.1](ftp://ftp.idsoftware.com/idstuff/doom3/source/mac/ "ftp://ftp.idsoftware.com/idstuff/doom3/source/mac/")
+-   XCode 2.x ( [http://connect.apple.com](https://web.archive.org/web/20100316172444/http://connect.apple.com/ "http://connect.apple.com") )
 -   Mac OS X 10.4.x
-    -   NOTE: Mac OS X 10.3.x user need XCode 1.2, but are limited to
-        ppc builds only.
+    -   NOTE: Mac OS X 10.3.x user need XCode 1.2, but are limited to ppc builds only.
 
 Things you might want
 ---------------------
 
 -   PearPC ( <http://pearpc.sourceforge.net/> )
--   PearPC OSX Guide (
-    <http://os-emulation.net/pearpc/web/installX.html#installX> )
+-   PearPC OSX Guide ( <http://os-emulation.net/pearpc/web/installX.html#installX> )
 
 How to build it
 ---------------
 
-Simply mount the SDK image onto your desktop and copy the contents into
-a folder of your choice(example - /doom3-sdk). Open either the base or
-expansion 'project.pbxproj' file in XCode, depending on what your
-building for, and click Build-\>Build from the top menu. This will
-result in a final 'game.dylib' file.
+Simply mount the SDK image onto your desktop and copy the contents into a folder of your choice(example - /doom3-sdk). Open either the base or expansion 'project.pbxproj' file in XCode, depending on what your building for, and click Build-\>Build from the top menu. This will result in a final 'game.dylib' file.
 
 ### Package your build
 
-Now create a text file with a single "1" in it and save it as
-'binary.conf'. Zip both the 'binary.conf' and 'game.dylib' into their
-own .pk4 file(example - mac\_build.pk4).
+Now create a text file with a single "1" in it and save it as 'binary.conf'. Zip both the 'binary.conf' and 'game.dylib' into their own .pk4 file(example - mac\_build.pk4).
 
 ### Building for ppc and intel chipsets
 
-As of 2.4, XCode users now have the ability to compile "Universal"
-builds for both old ppc chipsets and the new intel chipsets. Just make
-sure your build option is selected for Universal Build.
+As of 2.4, XCode users now have the ability to compile "Universal" builds for both old ppc chipsets and the new intel chipsets. Just make sure your build option is selected for Universal Build.
 
-In order to have the option to do this, make sure the Mac10.4u.pkg has
-been installed(either during XCode installation or after). The package
-can be found in the 'packages' folder on the XCode image.
+In order to have the option to do this, make sure the Mac10.4u.pkg has been installed(either during XCode installation or after). The package can be found in the 'packages' folder on the XCode image.
 
 -   XCode 1.2 users can only build for ppc.
 
 PearPC
 ------
 
-You can build the SDK in a Win32 or Linux environment with PearPC (a
-PowerPC emulator.) The guide above is quite good and will show you how
-to setup a nice mac environment you can transfer files to and from etc.
-Only problem with this method is that builds can take a long time, plan
-to let it go overnight. This is extremely useful for those who don't own
-a mac.
-
-<div>
+You can build the SDK in a Win32 or Linux environment with PearPC (a PowerPC emulator.) The guide above is quite good and will show you how to setup a nice mac environment you can transfer files to and from etc. Only problem with this method is that builds can take a long time, plan to let it go overnight. This is extremely useful for those who don't own a mac.
 
 ![](/images/e/e8/Q4square_25.png) **Note:** Quake 4 only:
-*There is an XCode project for the Quake 4 SDK. Gen. Meister has the
-project, and it was given to him by TTimo.*
+*There is an XCode project for the Quake 4 SDK. Gen. Meister has the project, and it was given to him by TTimo.*
 
-</div>

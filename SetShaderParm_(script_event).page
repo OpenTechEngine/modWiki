@@ -1,8 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -30,9 +29,6 @@ Notes
 
 This script event does not return any values.
 
-The **parm** parameter can be specified explicitly like in the example,
-or by using one of the **SHADERPARM\_** constants found in
-*doom\_defs.script* .
+The **parm** parameter can be specified explicitly like in the example, or by using one of the **SHADERPARM\_** constants found in *doom\_defs.script* .
 
-\
 

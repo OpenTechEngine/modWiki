@@ -1,33 +1,20 @@
 Overview
 --------
 
-Raven licensed software from
-[Annosoft](http://www.annosoft.com/ "http://www.annosoft.com/") for the
-lipsyncing in Quake 4.
+Raven licensed software from [Annosoft](http://www.annosoft.com/ "http://www.annosoft.com/") for the lipsyncing in Quake 4.
 
-The files themselves are plain text and contain one or more [lipSync
-delcarations](Lipsync_%28decl%29 "Lipsync (decl)") . They can be located
-in the / [lipsync](Lipsync_%28folder%29 "Lipsync (folder)") folder.
+The files themselves are plain text and contain one or more [lipSync delcarations](Lipsync_%28decl%29 "Lipsync (decl)") . They can be located in the / [lipsync](Lipsync_%28folder%29 "Lipsync (folder)") folder.
 
 Export
 ------
 
-Due to some discussion in the forums at
-[Doom3World.org](https://web.archive.org/web/20100414032750/http://www.doom3world.org/ "http://www.doom3world.org")
-there is reason to believe that a built-in editor was available for
-creating these .lipsync files. At present, it is not known what console
-command is responcible for launching it.
+Due to some discussion in the forums at [Doom3World.org](https://web.archive.org/web/20100414032750/http://www.doom3world.org/ "http://www.doom3world.org") there is reason to believe that a built-in editor was available for creating these .lipsync files. At present, it is not known what console command is responcible for launching it.
 
-However, it is known that the editor is not functional due to a missing
-file (annosoft.dll).
+However, it is known that the editor is not functional due to a missing file (annosoft.dll).
 
-Unfortunately, due to liscencing issues, Raven is unable to release the
-lipsync SDK (including annosoft.dll) to the public. Of course, without
-the nessicary file the editor remains useless to the modding community.
+Unfortunately, due to liscencing issues, Raven is unable to release the lipsync SDK (including annosoft.dll) to the public. Of course, without the nessicary file the editor remains useless to the modding community.
 
-At present, there is no known alternative to the editor. However, it is
-still possible to create the files manually in a text editor.
+At present, there is no known alternative to the editor. However, it is still possible to create the files manually in a text editor.
 
-For more details on the creation of these files, please read the article
-on [lipSync delcarations](Lipsync_%28decl%29 "Lipsync (decl)") .
+For more details on the creation of these files, please read the article on [lipSync delcarations](Lipsync_%28decl%29 "Lipsync (decl)") .
 

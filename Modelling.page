@@ -1,55 +1,34 @@
-Modelling, short for 3D modelling, is the creation of three-dimensional
-objects, so-called (3D) models. This is done by using a modelling suite:
-a program to create, manipulate and animate these models. These are then
-exported to different file formats to be used in the id Tech 4 engine
-where they portray objects and characters.
+Modelling, short for 3D modelling, is the creation of three-dimensional objects, so-called (3D) models. This is done by using a modelling suite: a program to create, manipulate and animate these models. These are then exported to different file formats to be used in the id Tech 4 engine where they portray objects and characters.
 
 Model Prerequisites
 -------------------
 
-All models used by the engine must be constructed entirely of triangles.
-No subdivision surfaces, nurbs, splines, or anything of that sort is
-supported.
+All models used by the engine must be constructed entirely of triangles. No subdivision surfaces, nurbs, splines, or anything of that sort is supported.
 
 Model types
 -----------
 
-The engine generally differentiates between static and animated meshes.
-These two types use different file formats and serve different purposes.
+The engine generally differentiates between static and animated meshes. These two types use different file formats and serve different purposes.
 
 ### Static meshes
 
-Static meshes are 3D models that are not animated by the use of an
-internal skeleton. This means that these models do not change their
-geometry. Even though they are called static they can however still be
-moved, rotated and scaled by the engine. They are typically used to
-augment brushwork placed in a map, i.e. details that are traditionally
-difficult to make with brushwork will often be models. Examples of
-objects represented in this format are wall and floor panels, crates and
-pieces of debris.
+Static meshes are 3D models that are not animated by the use of an internal skeleton. This means that these models do not change their geometry. Even though they are called static they can however still be moved, rotated and scaled by the engine. They are typically used to augment brushwork placed in a map, i.e. details that are traditionally difficult to make with brushwork will often be models. Examples of objects represented in this format are wall and floor panels, crates and pieces of debris.
 
-Static meshes can be used for 'conditionally moveable objects'; that is,
-objects that do a specific function in game either by being directly
-triggered with trigger\_ *[function]* or indirectly using scripted
-events controlled from an external file; for instance a lift, falling
-debris or a door.
+Static meshes can be used for 'conditionally moveable objects'; that is, objects that do a specific function in game either by being directly triggered with trigger\_ *[function]* or indirectly using scripted events controlled from an external file; for instance a lift, falling debris or a door.
 
 The file formats that the id Tech 4 engine loads for static meshes are:
 
- . [ASE](ASE_%28file_format%29 "ASE (file format)") 
-:   3DS Max ascii text based format
+ . [ASE](ASE_%28file_format%29 "ASE (file format)")   
+3DS Max ascii text based format
 
- . [LWO](LWO_%28file_format%29 "LWO (file format)") 
-:   native file format for Newtek's Lightwave
+ . [LWO](LWO_%28file_format%29 "LWO (file format)")   
+native file format for Newtek's Lightwave
 
 #### Moveable Physics Objects
 
-Moveable physics objects are static meshes with the exception that they
-can be physically interacted with.
+Moveable physics objects are static meshes with the exception that they can be physically interacted with.
 
-These objects require two models. A visual model and a [collision
-mesh](CM_%28file_format%29 "CM (file format)") both of which are
-assigned to a moveable\_base entity.
+These objects require two models. A visual model and a [collision mesh](CM_%28file_format%29 "CM (file format)") both of which are assigned to a moveable\_base entity.
 
 To create a collision mesh for a custom moveable
 
@@ -57,58 +36,36 @@ To create a collision mesh for a custom moveable
 2.  Build a hull of brushes around it.
 3.  Texture these brushes with textures/common/collision.
 4.  With all these brushes selected, create a func\_clipmodel.
-5.  Adjust the origin of the func\_clipmodel so that it matches that of
-    your func\_static.
-6.  With the func\_clipmodel selected, click Selection \> Export \> To
-    CM.
+5.  Adjust the origin of the func\_clipmodel so that it matches that of your func\_static.
+6.  With the func\_clipmodel selected, click Selection \> Export \> To CM.
 
-**Note:** When you create your moveable\_base entity, it will not need
-an explicit reference to the clipmodel provided the \*.CM file has the
-same name and is in the same folder as your visual model.
+**Note:** When you create your moveable\_base entity, it will not need an explicit reference to the clipmodel provided the \*.CM file has the same name and is in the same folder as your visual model.
 
 ### Animated meshes
 
-Animated meshes are allowed to deform themselves during the game.
-Examples of this type are first person weapons and player models.
-Animated models should be used within where more complex movements and
-actions are required than is possible to achieve using triggered models
-(scripted brushwork), but the use of which type will be dependent on
-what effect is trying to be achieved; for example a door could be a
-simple .ASE model which is 'bound' to the entity func\_door allowing for
-a simple 'open' and 'close' action. Or as an MD5 the door could include
-a 'lock' which activates and plays an animated sequence before opening.
+Animated meshes are allowed to deform themselves during the game. Examples of this type are first person weapons and player models. Animated models should be used within where more complex movements and actions are required than is possible to achieve using triggered models (scripted brushwork), but the use of which type will be dependent on what effect is trying to be achieved; for example a door could be a simple .ASE model which is 'bound' to the entity func\_door allowing for a simple 'open' and 'close' action. Or as an MD5 the door could include a 'lock' which activates and plays an animated sequence before opening.
 
-Animated meshes use the [MD5](MD5_%28file_format%29 "MD5 (file format)")
-file formats unique to the id Tech 4 engine. The format is split into:
+Animated meshes use the [MD5](MD5_%28file_format%29 "MD5 (file format)") file formats unique to the id Tech 4 engine. The format is split into:
 
- . [MD5MESH](MD5MESH_%28file_format%29 "MD5MESH (file format)") 
-:   Low resolution polygonal mesh exported from a 3D application.
+ . [MD5MESH](MD5MESH_%28file_format%29 "MD5MESH (file format)")   
+Low resolution polygonal mesh exported from a 3D application.
 
- . [MD5ANIM](MD5ANIM_%28file_format%29 "MD5ANIM (file format)") 
-:   Contains animation sequence data, the positions of bones etc. during
-    animation.
+ . [MD5ANIM](MD5ANIM_%28file_format%29 "MD5ANIM (file format)")   
+Contains animation sequence data, the positions of bones etc. during animation.
 
- . [MD5CAMERA](MD5CAMERA_%28file_format%29 "MD5CAMERA (file format)") 
-:   Animated cameras for use in cutscenes.
+ . [MD5CAMERA](MD5CAMERA_%28file_format%29 "MD5CAMERA (file format)")   
+Animated cameras for use in cutscenes.
 
-**Note:** Animated meshes must have an "idle" animation defined in the
-[model declaration](Modeldef_%28decl%29 "Modeldef (decl)") in order to
-show up properly in the level editor.
+**Note:** Animated meshes must have an "idle" animation defined in the [model declaration](Modeldef_%28decl%29 "Modeldef (decl)") in order to show up properly in the level editor.
 
 #### Articulated Figures
 
-Articulated figures are what is often called ragdolls. They are systems
-using the bone structure within the MD5 format to simulate physics by
-using joints and constraints. They are created by using a .MD5MESH file
-and an articulated figure definition. Further info on this topic can be
-found in the [AF declaration](Af_%28decl%29 "Af (decl)") article.
+Articulated figures are what is often called ragdolls. They are systems using the bone structure within the MD5 format to simulate physics by using joints and constraints. They are created by using a .MD5MESH file and an articulated figure definition. Further info on this topic can be found in the [AF declaration](Af_%28decl%29 "Af (decl)") article.
 
 MD5/LWO/ASE Import/Export Tools
 -------------------------------
 
-A list of available Modelling Programs can be found below along with the
-corresponding tools to assist in working with the model formats used by
-idTech 4 games.
+A list of available Modelling Programs can be found below along with the corresponding tools to assist in working with the model formats used by idTech 4 games.
 
 ### 3D Studio Max
 
@@ -116,15 +73,9 @@ idTech 4 games.
 
 **MD5(anim/camera/mesh)**
 
--   [3D Studio Max to MD5
-    Exporter](https://web.archive.org/web/20121117222041/http://www.doom3world.org/phpbb2/viewtopic.php?t=1914 "http://www.doom3world.org/phpbb2/viewtopic.php?t=1914") -
-    der\_ton
--   [3D Studio Max to Md5
-    Exporter](https://web.archive.org/web/20121117222041/http://www.doom3world.org/phpbb2/viewtopic.php?t=4618 "http://www.doom3world.org/phpbb2/viewtopic.php?t=4618") -
-    BeRSeRKeR
--   [MD5 to 3D Studio Max
-    Importer](https://web.archive.org/web/20121117222041/http://www.doom3world.org/phpbb2/viewtopic.php?t=3229 "http://www.doom3world.org/phpbb2/viewtopic.php?t=3229") -
-    der\_ton
+-   [3D Studio Max to MD5 Exporter](https://web.archive.org/web/20121117222041/http://www.doom3world.org/phpbb2/viewtopic.php?t=1914 "http://www.doom3world.org/phpbb2/viewtopic.php?t=1914") - der\_ton
+-   [3D Studio Max to Md5 Exporter](https://web.archive.org/web/20121117222041/http://www.doom3world.org/phpbb2/viewtopic.php?t=4618 "http://www.doom3world.org/phpbb2/viewtopic.php?t=4618") - BeRSeRKeR
+-   [MD5 to 3D Studio Max Importer](https://web.archive.org/web/20121117222041/http://www.doom3world.org/phpbb2/viewtopic.php?t=3229 "http://www.doom3world.org/phpbb2/viewtopic.php?t=3229") - der\_ton
 
 **LWO**
 
@@ -140,8 +91,7 @@ idTech 4 games.
 
 **MD5(anim/camera/mesh)**
 
--   [internal conversion by idTech 4
-    engine](Exportmodels_%28console_command%29 "Exportmodels (console command)")
+-   [internal conversion by idTech 4 engine](Exportmodels_%28console_command%29 "Exportmodels (console command)")
 
 **LWO**
 
@@ -159,8 +109,7 @@ idTech 4 games.
 
 -   Add Links Here
 -   <http://www.clintons3d.com/lightwave/lwplug.html>
--   [Lightwave python
-    scripts](http://www.clintons3d.com/plugins/lightwave/index.html "http://www.clintons3d.com/plugins/lightwave/index.html")
+-   [Lightwave python scripts](http://www.clintons3d.com/plugins/lightwave/index.html "http://www.clintons3d.com/plugins/lightwave/index.html")
 
 **LWO**
 
@@ -185,8 +134,7 @@ idTech 4 games.
 **ASE**
 
 -   Add Links Here
--   [Exporter](http://www.moddb.com/engines/unreal-engine-3/downloads/modo-ase-exporter-for-unreal-3 "http://www.moddb.com/engines/unreal-engine-3/downloads/modo-ase-exporter-for-unreal-3")
-    (Should export .ase file that works with Doom 3 as well as UE3.)
+-   [Exporter](http://www.moddb.com/engines/unreal-engine-3/downloads/modo-ase-exporter-for-unreal-3 "http://www.moddb.com/engines/unreal-engine-3/downloads/modo-ase-exporter-for-unreal-3") (Should export .ase file that works with Doom 3 as well as UE3.)
 
 ### Blender
 
@@ -194,25 +142,13 @@ idTech 4 games.
 
 **MD5(anim/camera/mesh)**
 
--   [importer](https://web.archive.org/web/20121117222041/http://doom3world.org/phpbb2/viewtopic.php?t=6901 "http://doom3world.org/phpbb2/viewtopic.php?t=6901")
-    (by der\_ton) (needs both, md5mesh + md5anim files)
--   [exporter](https://web.archive.org/web/20121117222041/http://doom3world.org/phpbb2/viewtopic.php?t=1711 "http://doom3world.org/phpbb2/viewtopic.php?t=1711")
-    (by der\_ton)
+-   [importer](https://web.archive.org/web/20121117222041/http://doom3world.org/phpbb2/viewtopic.php?t=6901 "http://doom3world.org/phpbb2/viewtopic.php?t=6901") (by der\_ton) (needs both, md5mesh + md5anim files)
+-   [exporter](https://web.archive.org/web/20121117222041/http://doom3world.org/phpbb2/viewtopic.php?t=1711 "http://doom3world.org/phpbb2/viewtopic.php?t=1711") (by der\_ton)
 
-<div>
+![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake Wars only:
+*In ETQW the md5anim files were compiled to binary animb files and md5anim files were not included in the SDK.*
 
-![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake
-Wars only:
-*In ETQW the md5anim files were compiled to binary animb files and
-md5anim files were not included in the SDK.*
-
-</div>
-
-You may however convert the binary animb files from the animb folder
-(which is inside the generated folder inside the official pk4 game
-files) to md5anim files with
-[animb2md5anim](http://www.splashdamage.com/forums/showthread.php/31253-Animb2MD5anim-amp-other-tools "http://www.splashdamage.com/forums/showthread.php/31253-Animb2MD5anim-amp-other-tools")
-.
+You may however convert the binary animb files from the animb folder (which is inside the generated folder inside the official pk4 game files) to md5anim files with [animb2md5anim](http://www.splashdamage.com/forums/showthread.php/31253-Animb2MD5anim-amp-other-tools "http://www.splashdamage.com/forums/showthread.php/31253-Animb2MD5anim-amp-other-tools") .
 
 **LWO**
 
@@ -220,10 +156,8 @@ files) to md5anim files with
 
 **ASE**
 
--   [importer](https://web.archive.org/web/20121117222041/http://doom3world.org/phpbb2/viewtopic.php?t=15404 "http://doom3world.org/phpbb2/viewtopic.php?t=15404")
-    (by Goofos)
--   [exporter](https://web.archive.org/web/20121117222041/http://doom3world.org/phpbb2/viewtopic.php?t=9275 "http://doom3world.org/phpbb2/viewtopic.php?t=9275")
-    (by Goofos)
+-   [importer](https://web.archive.org/web/20121117222041/http://doom3world.org/phpbb2/viewtopic.php?t=15404 "http://doom3world.org/phpbb2/viewtopic.php?t=15404") (by Goofos)
+-   [exporter](https://web.archive.org/web/20121117222041/http://doom3world.org/phpbb2/viewtopic.php?t=9275 "http://doom3world.org/phpbb2/viewtopic.php?t=9275") (by Goofos)
 
 ### XSI
 
@@ -259,10 +193,7 @@ files) to md5anim files with
 
 ### trueSpace
 
-The trueSpace website is gone, but the software can be downloaded from
-[Mod
-DB](http://www.moddb.com/downloads/truespace-76 "http://www.moddb.com/downloads/truespace-76")
-.
+The trueSpace website is gone, but the software can be downloaded from [Mod DB](http://www.moddb.com/downloads/truespace-76 "http://www.moddb.com/downloads/truespace-76") .
 
 **MD5(anim/camera/mesh)**
 
@@ -281,21 +212,14 @@ DB](http://www.moddb.com/downloads/truespace-76 "http://www.moddb.com/downloads/
 Game polycount budget
 ---------------------
 
-A polycount is the total number of individual polygons a model is made
-up of. These are usually limited for performance reasons as each
-triangle adds to the total rendering time for the model. For gaming
-engines the required count is that of triangled faces (so called tris').
+A polycount is the total number of individual polygons a model is made up of. These are usually limited for performance reasons as each triangle adds to the total rendering time for the model. For gaming engines the required count is that of triangled faces (so called tris').
 
 <span align="absbottom"> ![Q4](/images/e/e8/Q4square_25.png) Q4 Guidelines </span>
 ----------------------------------------------------------------------------------
 
-*The information in this section is specific to [Quake
-4](Quake_4 "Quake 4") .*
+*The information in this section is specific to [Quake 4](Quake_4 "Quake 4") .*
 
-The following numbers are rough guidelines based on the numbers taken
-from the Quake 4 models. These numbers had been generated by importing
-different models and using the modelling software to list the amount of
-triangles.
+The following numbers are rough guidelines based on the numbers taken from the Quake 4 models. These numbers had been generated by importing different models and using the modelling software to list the amount of triangles.
 
 -   1st Person Weapon Total: 2000 - 2800
     -   Both Arms: 1300
@@ -306,9 +230,7 @@ triangles.
     -   Player Head\_up (high LOD model?): 800
     -   Player World Weapon: 200-400
 
-\
- Static models in Quake 4 may be moved/rotated along a path defined by a
-.playback as a func\_playback.
+ Static models in Quake 4 may be moved/rotated along a path defined by a .playback as a func\_playback.
 
 See also
 --------

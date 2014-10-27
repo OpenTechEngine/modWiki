@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Char_marine_medic_extras_%28entity%29 "http://modwiki.net/w/index.php?title=Char_marine_medic_extras_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Char_marine_medic_extras_%28entity%29 "http://modwiki.net/w/index.php?title=Char_marine_medic_extras_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Char_marine_medic_extras_%28entity%29 "http://modwiki.net/w/index.php?title=Char_marine_medic_extras_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Char_marine_medic_extras_%28entity%29 "http://modwiki.net/w/index.php?title=Char_marine_medic_extras_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -28,81 +10,80 @@ Description not available.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                        DESCRIPTION
-  -------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  angle                      Description not available.
-  anim                       Description not available.
-  annoyed                    Description not available.
-  bind                       Description not available.
-  bindOrientated             Description not available.
-  bindToBody                 Description not available.
-  bindToJoint                Description not available.
-  bindanim                   Description not available.
-  buddyRange                 Maximum range they look for buddies who are in combat - if there are buddies in this range with enemies, they won't auto-heal. Default 640. Should not be changed unless necessary.
-  cameraTarget               Description not available.
-  cinematic                  Description not available.
-  classname                  Description not available.
-  clipmodel                  Description not available.
-  cone                       Description not available.
-  cylinder                   Description not available.
-  def\_attach                Description not available.
-  def\_persona               Description not available.
-  dodecahedron               Description not available.
-  editor\_ignore             Description not available.
-  editor\_var XXXX           Description not available.
-  enemyRange                 Maxiumum range they look for enemies who are in combat - if there are enemies in this range mad at the patient, the medic/tech or buddies within buddyRange, they won't auto-heal. Default 1024. Should not be changed unless necessary.
-  guiTarget                  Description not available.
-  healAmt                    How much (minimum) they will heal you per heal instance. Default 50. This should really be consistent across all levels.
-  health                     Description not available.
-  hide                       Description not available.
-  hidesurface                Description not available.
-  instance                   Description not available.
-  lipsync\_call\_player\_1   Description not available.
-  lipsync\_call\_player\_2   Description not available.
-  lipsync\_call\_player\_3   Description not available.
-  lipsync\_call\_player\_4   Description not available.
-  lipsync\_call\_player\_5   Description not available.
-  lipsync\_heal\_busy\_1     Description not available.
-  lipsync\_heal\_busy\_2     Description not available.
-  lipsync\_heal\_end\_1      Description not available.
-  lipsync\_heal\_end\_2      Description not available.
-  lipsync\_heal\_end\_3      Description not available.
-  lipsync\_heal\_end\_4      Description not available.
-  lipsync\_heal\_move\_1     Description not available.
-  lipsync\_heal\_move\_2     Description not available.
-  lipsync\_heal\_move\_3     Description not available.
-  lipsync\_heal\_noheal\_1   Description not available.
-  lipsync\_heal\_start\_1    Description not available.
-  lipsync\_heal\_start\_2    Description not available.
-  lipsync\_heal\_start\_3    Description not available.
-  lipsync\_heal\_start\_4    Description not available.
-  maxMarineHeal              When your health is at or above this (as a normal marine), they will refuse to heal you even if you click on them. Default 75. This should really be consistent across all levels.
-  maxStroggHeal              When your health is at or above this (when stroggified), they will refuse to heal you even if you click on them. Default 100. This should really be consistent across all levels.
-  maxs                       Description not available.
-  minMarineHeal              When your health drops at or below this (as a normal marine), they will automatically try to heal you. Also, when healing, they will heal you to \*at least\* this level. Default 35. This should really be consistent across all levels.
-  minStroggHeal              When your health drops at or below this (when stroggified), they will automatically try to heal you. Also, when healing, they will heal you to \*at least\* this level. Default 35. This should really be consistent across all levels.
-  mins                       Description not available.
-  model                      Description not available.
-  name                       Description not available.
-  networkSync                Description not available.
-  neverDormant               Description not available.
-  noclipmodel                Description not available.
-  origin                     Description not available.
-  patientRange               Maximum range their patient can be from them for them to automatically consider you as a patient. Default 640. Should not be changed unless necessary.
-  rotation                   Description not available.
-  scriptobject               Description not available.
-  shadow\_lod\_distance      Description not available.
-  size                       Description not available.
-  snd\_labored\_breathing    Description not available.
-  snd\_med\_gun\_heal        Description not available.
-  solidForTeam               Description not available.
-  spawnclass                 Description not available.
-  target                     Description not available.
-  trigger\_anim              Description not available.
-  usable                     Description not available.
+| KEY                      | DESCRIPTION                                                                                                                                                                                                                               |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| angle                    | Description not available.                                                                                                                                                                                                                |
+| anim                     | Description not available.                                                                                                                                                                                                                |
+| annoyed                  | Description not available.                                                                                                                                                                                                                |
+| bind                     | Description not available.                                                                                                                                                                                                                |
+| bindOrientated           | Description not available.                                                                                                                                                                                                                |
+| bindToBody               | Description not available.                                                                                                                                                                                                                |
+| bindToJoint              | Description not available.                                                                                                                                                                                                                |
+| bindanim                 | Description not available.                                                                                                                                                                                                                |
+| buddyRange               | Maximum range they look for buddies who are in combat - if there are buddies in this range with enemies, they won't auto-heal. Default 640. Should not be changed unless necessary.                                                       |
+| cameraTarget             | Description not available.                                                                                                                                                                                                                |
+| cinematic                | Description not available.                                                                                                                                                                                                                |
+| classname                | Description not available.                                                                                                                                                                                                                |
+| clipmodel                | Description not available.                                                                                                                                                                                                                |
+| cone                     | Description not available.                                                                                                                                                                                                                |
+| cylinder                 | Description not available.                                                                                                                                                                                                                |
+| def\_attach              | Description not available.                                                                                                                                                                                                                |
+| def\_persona             | Description not available.                                                                                                                                                                                                                |
+| dodecahedron             | Description not available.                                                                                                                                                                                                                |
+| editor\_ignore           | Description not available.                                                                                                                                                                                                                |
+| editor\_var XXXX         | Description not available.                                                                                                                                                                                                                |
+| enemyRange               | Maxiumum range they look for enemies who are in combat - if there are enemies in this range mad at the patient, the medic/tech or buddies within buddyRange, they won't auto-heal. Default 1024. Should not be changed unless necessary.  |
+| guiTarget                | Description not available.                                                                                                                                                                                                                |
+| healAmt                  | How much (minimum) they will heal you per heal instance. Default 50. This should really be consistent across all levels.                                                                                                                  |
+| health                   | Description not available.                                                                                                                                                                                                                |
+| hide                     | Description not available.                                                                                                                                                                                                                |
+| hidesurface              | Description not available.                                                                                                                                                                                                                |
+| instance                 | Description not available.                                                                                                                                                                                                                |
+| lipsync\_call\_player\_1 | Description not available.                                                                                                                                                                                                                |
+| lipsync\_call\_player\_2 | Description not available.                                                                                                                                                                                                                |
+| lipsync\_call\_player\_3 | Description not available.                                                                                                                                                                                                                |
+| lipsync\_call\_player\_4 | Description not available.                                                                                                                                                                                                                |
+| lipsync\_call\_player\_5 | Description not available.                                                                                                                                                                                                                |
+| lipsync\_heal\_busy\_1   | Description not available.                                                                                                                                                                                                                |
+| lipsync\_heal\_busy\_2   | Description not available.                                                                                                                                                                                                                |
+| lipsync\_heal\_end\_1    | Description not available.                                                                                                                                                                                                                |
+| lipsync\_heal\_end\_2    | Description not available.                                                                                                                                                                                                                |
+| lipsync\_heal\_end\_3    | Description not available.                                                                                                                                                                                                                |
+| lipsync\_heal\_end\_4    | Description not available.                                                                                                                                                                                                                |
+| lipsync\_heal\_move\_1   | Description not available.                                                                                                                                                                                                                |
+| lipsync\_heal\_move\_2   | Description not available.                                                                                                                                                                                                                |
+| lipsync\_heal\_move\_3   | Description not available.                                                                                                                                                                                                                |
+| lipsync\_heal\_noheal\_1 | Description not available.                                                                                                                                                                                                                |
+| lipsync\_heal\_start\_1  | Description not available.                                                                                                                                                                                                                |
+| lipsync\_heal\_start\_2  | Description not available.                                                                                                                                                                                                                |
+| lipsync\_heal\_start\_3  | Description not available.                                                                                                                                                                                                                |
+| lipsync\_heal\_start\_4  | Description not available.                                                                                                                                                                                                                |
+| maxMarineHeal            | When your health is at or above this (as a normal marine), they will refuse to heal you even if you click on them. Default 75. This should really be consistent across all levels.                                                        |
+| maxStroggHeal            | When your health is at or above this (when stroggified), they will refuse to heal you even if you click on them. Default 100. This should really be consistent across all levels.                                                         |
+| maxs                     | Description not available.                                                                                                                                                                                                                |
+| minMarineHeal            | When your health drops at or below this (as a normal marine), they will automatically try to heal you. Also, when healing, they will heal you to \*at least\* this level. Default 35. This should really be consistent across all levels. |
+| minStroggHeal            | When your health drops at or below this (when stroggified), they will automatically try to heal you. Also, when healing, they will heal you to \*at least\* this level. Default 35. This should really be consistent across all levels.   |
+| mins                     | Description not available.                                                                                                                                                                                                                |
+| model                    | Description not available.                                                                                                                                                                                                                |
+| name                     | Description not available.                                                                                                                                                                                                                |
+| networkSync              | Description not available.                                                                                                                                                                                                                |
+| neverDormant             | Description not available.                                                                                                                                                                                                                |
+| noclipmodel              | Description not available.                                                                                                                                                                                                                |
+| origin                   | Description not available.                                                                                                                                                                                                                |
+| patientRange             | Maximum range their patient can be from them for them to automatically consider you as a patient. Default 640. Should not be changed unless necessary.                                                                                    |
+| rotation                 | Description not available.                                                                                                                                                                                                                |
+| scriptobject             | Description not available.                                                                                                                                                                                                                |
+| shadow\_lod\_distance    | Description not available.                                                                                                                                                                                                                |
+| size                     | Description not available.                                                                                                                                                                                                                |
+| snd\_labored\_breathing  | Description not available.                                                                                                                                                                                                                |
+| snd\_med\_gun\_heal      | Description not available.                                                                                                                                                                                                                |
+| solidForTeam             | Description not available.                                                                                                                                                                                                                |
+| spawnclass               | Description not available.                                                                                                                                                                                                                |
+| target                   | Description not available.                                                                                                                                                                                                                |
+| trigger\_anim            | Description not available.                                                                                                                                                                                                                |
+| usable                   | Description not available.                                                                                                                                                                                                                |
 
 Inheritance
 -----------

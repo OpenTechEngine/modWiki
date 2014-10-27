@@ -1,8 +1,6 @@
-On [editDefs](EditDef_%28GUI_item_type%29 "EditDef (GUI item type)") ,
-this is called when the user presses enter.
+On [editDefs](EditDef_%28GUI_item_type%29 "EditDef (GUI item type)") , this is called when the user presses enter.
 
-On [listDefs](ListDef_%28GUI_item_type%29 "ListDef (GUI item type)") ,
-this is called when the user presses enter or double-clicks.
+On [listDefs](ListDef_%28GUI_item_type%29 "ListDef (GUI item type)") , this is called when the user presses enter or double-clicks.
 
 *Must check if this works in normal windowDefs!*
 
@@ -12,7 +10,5 @@ Example(s)
     onEnter {
         ...
     }
-
-\
 
 

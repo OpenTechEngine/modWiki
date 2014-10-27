@@ -1,31 +1,19 @@
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/5/5d/Rtcw2square_bg.png) The information on this page is
-specific to [Wolfenstein](Wolfenstein "Wolfenstein") .
-
-</div>
+![](/images/5/5d/Rtcw2square_bg.png) The information on this page is specific to [Wolfenstein](Wolfenstein "Wolfenstein") .
 
 ------------------------------------------------------------------------
 
-SPK is a Stream pack, an archive for game assets used by the Streamtech
-stream loader.
+SPK is a Stream pack, an archive for game assets used by the Streamtech stream loader.
 
 Technical details
 -----------------
 
 File starts with a magic number (4 bytes), then come 1-n chunks.
 
-Each chunk consists of a magic number referring to the format (4 bytes),
-the uncompressed size (4 bytes), the compressed size (4 bytes) and then
-a zlib-compressed block (sizes only refer to this block).
+Each chunk consists of a magic number referring to the format (4 bytes), the uncompressed size (4 bytes), the compressed size (4 bytes) and then a zlib-compressed block (sizes only refer to this block).
 
-each block (uncompressed) contains a file table and then the files: the
-file table contains a bunch of 0-terminated strings (path + filename)
-and after each string 2x the size of the corresponding file (2x 4 bytes)
+each block (uncompressed) contains a file table and then the files: the file table contains a bunch of 0-terminated strings (path + filename) and after each string 2x the size of the corresponding file (2x 4 bytes)
 
-The files themselves are always aligned to 4-byte boundaries, the
-padding bytes are somehow not always 0, for unknown reason.
+The files themselves are always aligned to 4-byte boundaries, the padding bytes are somehow not always 0, for unknown reason.
 
 The extensions will be unverified until the SDK release.
 
@@ -36,13 +24,11 @@ Magic Number | Format | Extension
 
 <!-- -->
 
--   BRAI | brain |
-    [BRAIN](BRAIN_%28file_format%29 "BRAIN (file format)")
+-   BRAI | brain | [BRAIN](BRAIN_%28file_format%29 "BRAIN (file format)")
 
 <!-- -->
 
--   DECL | decls |
-    [DECLS](DECLS_%28file_format%29 "DECLS (file format)")
+-   DECL | decls | [DECLS](DECLS_%28file_format%29 "DECLS (file format)")
 
 <!-- -->
 
@@ -95,6 +81,5 @@ Magic Number | Format | Extension
 Tools
 -----
 
-Unpacker with source code:
-[http://www.daedalus-tools.mx.tc/](https://web.archive.org/web/20090928064241/http://www.daedalus-tools.mx.tc/ "http://www.daedalus-tools.mx.tc/")
+Unpacker with source code: [http://www.daedalus-tools.mx.tc/](https://web.archive.org/web/20090928064241/http://www.daedalus-tools.mx.tc/ "http://www.daedalus-tools.mx.tc/")
 

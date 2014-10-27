@@ -1,10 +1,6 @@
 Plays a sound on the player (client) machine.
 
-This seems to be just a shortcut to the [set
-command](Set_%28GUI_command%29 "Set (GUI command)") using *cmd* and
-*play* parameters. If I had to guess, I'd say this command was added
-later in development on the Doom 3 engine, as id Software seems to use
-the set version most of the times instead.
+This seems to be just a shortcut to the [set command](Set_%28GUI_command%29 "Set (GUI command)") using *cmd* and *play* parameters. If I had to guess, I'd say this command was added later in development on the Doom 3 engine, as id Software seems to use the set version most of the times instead.
 
 Syntax
 ------
@@ -18,5 +14,4 @@ Example(s)
 
     localSound "guisounds_ping2";
 
-\
 

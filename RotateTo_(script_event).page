@@ -1,14 +1,12 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Causes an [entity](Entity "Entity") to perform a rotation along a
-specified vector.
+Causes an [entity](Entity "Entity") to perform a rotation along a specified vector.
 
 Usage
 -----
@@ -28,20 +26,9 @@ Examples
 Notes
 -----
 
-This script event does not return any values. This event differs from
-[rotateOnce](RotateOnce_%28script_event%29 "RotateOnce (script event)")
-in that this rotates an entity to a specific degree on the axis as
-opposed to adding to the current degree. The above example will cause
-the entity to rotate to 90 degrees on the z-axis from the entity's 0
-angle for the duration that entity's
-[time](Time_%28script_event%29 "Time (script event)") is set to. If no
-time is set, the default is 1 second.
+This script event does not return any values. This event differs from [rotateOnce](RotateOnce_%28script_event%29 "RotateOnce (script event)") in that this rotates an entity to a specific degree on the axis as opposed to adding to the current degree. The above example will cause the entity to rotate to 90 degrees on the z-axis from the entity's 0 angle for the duration that entity's [time](Time_%28script_event%29 "Time (script event)") is set to. If no time is set, the default is 1 second.
 
-\
- An example of using .time,
-[accelTime](AccelTime_%28script_event%29 "AccelTime (script event)") ,
-[decelTime](DecelTime_%28script_event%29 "DecelTime (script event)") ,
-and rotateOnce in a short script:
+ An example of using .time, [accelTime](AccelTime_%28script_event%29 "AccelTime (script event)") , [decelTime](DecelTime_%28script_event%29 "DecelTime (script event)") , and rotateOnce in a short script:
 
     void rotateCube ()
      {
@@ -51,9 +38,5 @@ and rotateOnce in a short script:
         $cube.rotateTo ('0 0 180');
      }
 
-This script function will cause an entity named "cube" to rotate to 180
-degrees on the Z-axis, within a time period of 5 seconds. The entity
-will take 1 second to accelerate to its top speed, it will rotate for 2
-seconds at its top speed and finally it will spend 2 seconds to
-decelerate from its top speed to the stopped position.
+This script function will cause an entity named "cube" to rotate to 180 degrees on the Z-axis, within a time period of 5 seconds. The entity will take 1 second to accelerate to its top speed, it will rotate for 2 seconds at its top speed and finally it will spend 2 seconds to decelerate from its top speed to the stopped position.
 

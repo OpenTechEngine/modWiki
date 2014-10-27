@@ -1,8 +1,7 @@
 Description
 -----------
 
-This command sets the specified CVar to a given value and archives it
-(hence the 'a' in the command) in the user's config file.
+This command sets the specified CVar to a given value and archives it (hence the 'a' in the command) in the user's config file.
 
 Usage
 -----
@@ -15,15 +14,11 @@ Parameters
 ----------
 
 -   \<CVar\> - The CVar to modify.
--   \<value\> - the value to set the CVar to. Values can be written as a
-    string.
+-   \<value\> - the value to set the CVar to. Values can be written as a string.
 
 Notes
 -----
 
-If your value is a string, don't forget to put quotes around it. You can
-sometimes do without, but results may vary if the string contains space
-characters.
+If your value is a string, don't forget to put quotes around it. You can sometimes do without, but results may vary if the string contains space characters.
 
-\
 

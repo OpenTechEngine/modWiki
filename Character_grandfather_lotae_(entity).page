@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Character_grandfather_lotae_%28entity%29 "http://modwiki.net/w/index.php?title=Character_grandfather_lotae_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Character_grandfather_lotae_%28entity%29 "http://modwiki.net/w/index.php?title=Character_grandfather_lotae_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Character_grandfather_lotae_%28entity%29 "http://modwiki.net/w/index.php?title=Character_grandfather_lotae_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Character_grandfather_lotae_%28entity%29 "http://modwiki.net/w/index.php?title=Character_grandfather_lotae_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -28,236 +10,235 @@ Description not available.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                            DESCRIPTION
-  ------------------------------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  CraneAttachable                Description not available.
-  RailAttachable                 Description not available.
-  ShuttleAttachable              Description not available.
-  aas\_shuttle                   Description not available.
-  accepts\_decals                Description not available.
-  accepts\_wounds                Description not available.
-  acidburn                       Description not available.
-  action                         Description not available.
-  alt\_path                      Description not available.
-  ambush                         Description not available.
-  angle                          Description not available.
-  attack\_cone                   Monster can only throw projectile within this cone relative to his direction.
-  attack\_range                  Description not available.
-  attack\_z                      Description not available.
-  beckon\_anim                   come-here animation
-  beckon\_delay                  delay between come-here animations
-  beckon\_distance               distance at which character starts beckoning
-  beckon\_stop\_distance         distance at which character stops beckoning
-  bind\_axis                     Description not available.
-  bind\_orient                   Description not available.
-  blink\_max                     Maximum time to wait between eye blinks.
-  blink\_min                     Minimum time to wait between eye blinks.
-  bone\_focus                    Where the character's eyes are in his head
-  bone\_leftEye                  Which bone to modify to adjust the left eye focus
-  bone\_orientation              Determines which way character's legs are facing for headlooking (usually the waist)
-  bone\_rightEye                 Which bone to modify to adjust the right eye focus
-  can\_fall                      Description not available.
-  can\_freeze                    Description not available.
-  can\_see\_portals              Description not available.
-  can\_wallwalk                  Description not available.
-  chatter\_combat\_max           maximum amount of time to wait till playing chat sounds when in combat
-  chatter\_combat\_min           minimum amount of time to wait till playing chat sounds when in combat
-  chatter\_max                   maximum amount of time to wait till playing chat sounds when idle
-  chatter\_min                   minimum amount of time to wait till playing chat sounds when idle
-  crouch\_eye\_offset            Description not available.
-  ddaIndex                       Description not available.
-  def\_damageFatalFall           Description not available.
-  def\_damageFellOntoFatal       Description not available.
-  def\_drops                     entityDefs to drop when killed. Multiple drop items are defined by adding suffixes: 'def\_drops1', 'def\_drops2', etc.
-  def\_fakeportal                Description not available.
-  def\_gibDebrisSpawner          Description not available.
-  def\_portal                    Description not available.
-  def\_projectile                name of entityDef to launch as projectile
-  density                        Description not available.
-  editor\_color                  Description not available.
-  editor\_maxs                   Description not available.
-  editor\_mins                   Description not available.
-  editor\_var XXXX               Description not available.
-  eyeOffset\_alive               Description not available.
-  eyeOffset\_dead                Description not available.
-  eye\_focus\_rate               how quickly the eyes focus on a target
-  eye\_horizontal\_offset        horizontal offset from the player's view that the character's eyes should focus on. negative values bring eyes closer together.
-  eye\_turn\_max                 max angular offset for eye joint before head has to turn.
-  eye\_turn\_min                 min angular offset for eye joint before head has to turn.
-  eye\_verticle\_offset          verticle offset from the player's view that the character's eyes should focus on.
-  fallDist\_fatal                Description not available.
-  fallDist\_jump                 Description not available.
-  fallDist\_soft                 Description not available.
-  fall\_delay                    Description not available.
-  fatal\_fall\_velocity          Description not available.
-  focus\_align\_time             how long character should glance at the player before turning his head.
-  fov                            Character's field of view. Characters initially become aware of the player when he enters this cone. Also controls when the character sees the player as shootable. Character's will not use fov for sight checks after their initial wake up.
-  fx\_acid                       Description not available.
-  fx\_burn                       Description not available.
-  fx\_custom\_blood              Description not available.
-  fx\_ice                        Description not available.
-  gibhealth                      Description not available.
-  hangID                         Description not available.
-  has\_melee\_attack             Description not available.
-  has\_range\_attack             Description not available.
-  head\_focus\_rate              how quickly the head focuses on a target
-  head\_joint                    Description not available.
-  head\_look                     Description not available.
-  headlook\_joint XXXX           Description not available.
-  health                         Description not available.
-  hearing\_range                 Description not available.
-  hide                           Causes character to be hfidden and nonsolid until triggered.
-  ignore\_push                   Set to 1 to prevent character from moving out of the way when player pushes him.
-  ik\_ankle1                     Description not available.
-  ik\_ankle2                     Description not available.
-  ik\_dir1                       Description not available.
-  ik\_dir2                       Description not available.
-  ik\_foot1                      Description not available.
-  ik\_foot2                      Description not available.
-  ik\_footSize                   Description not available.
-  ik\_hip1                       Description not available.
-  ik\_hip2                       Description not available.
-  ik\_knee1                      Description not available.
-  ik\_knee2                      Description not available.
-  ik\_minWaistAnkleDist          Description not available.
-  ik\_minWaistFloorDist          Description not available.
-  ik\_numLegs                    Description not available.
-  ik\_tiltWaist                  Description not available.
-  ik\_usePivot                   Description not available.
-  ik\_waist                      Description not available.
-  inherit                        Description not available.
-  jawbone\_Head                  Description not available.
-  jawbone\_LeftBrow              Description not available.
-  jawbone\_LeftCheek             Description not available.
-  jawbone\_LeftCorner            Description not available.
-  jawbone\_LeftLowerLip          Description not available.
-  jawbone\_LeftUpperLip          Description not available.
-  jawbone\_MidBrow               Description not available.
-  jawbone\_MidLowerLip           Description not available.
-  jawbone\_MidUpperLip           Description not available.
-  jawbone\_RightBrow             Description not available.
-  jawbone\_RightCheek            Description not available.
-  jawbone\_RightCorner           Description not available.
-  jawbone\_RightLowerLip         Description not available.
-  jawbone\_RightUpperLip         Description not available.
-  jawbone\_jaw                   Description not available.
-  jawflagRMin\_Head              Description not available.
-  jawflapR\_Head                 Description not available.
-  jawflapR\_Jaw                  Description not available.
-  jawflapR\_MidLowerLip          Description not available.
-  jawflapR\_MidUpperLip          Description not available.
-  jawflapTMin\_LeftBrow          Description not available.
-  jawflapTMin\_MidBrow           Description not available.
-  jawflapTMin\_RightBrow         Description not available.
-  jawflapT\_Head                 Description not available.
-  jawflapT\_LeftBrow             Description not available.
-  jawflapT\_LeftCheek            Description not available.
-  jawflapT\_LeftCorner           Description not available.
-  jawflapT\_LeftLowerLip         Description not available.
-  jawflapT\_LeftUpperLip         Description not available.
-  jawflapT\_MidBrow              Description not available.
-  jawflapT\_MidLowerLip          Description not available.
-  jawflapT\_MidUpperLip          Description not available.
-  jawflapT\_RightBrow            Description not available.
-  jawflapT\_RightCheek           Description not available.
-  jawflapT\_RightCorner          Description not available.
-  jawflapT\_RightLowerLip        Description not available.
-  jawflapT\_RightUpperLip        Description not available.
-  look\_joint XXXX               Description not available.
-  look\_max                      maximum angles for head looks
-  look\_min                      minimum angles for head looks
-  matter                         Description not available.
-  maxs                           Description not available.
-  melee\_boundmax                Description not available.
-  melee\_boundmin                Description not available.
-  mins                           Description not available.
-  model                          Description not available.
-  model\_head                    Description not available.
-  mtr\_acidsplat                 Description not available.
-  neverDormant                   Description not available.
-  never\_target                  Description not available.
-  noPlayerDamage                 if set, monster won't take damage inflicted by the player
-  no\_burn                       Description not available.
-  no\_combat                     Description not available.
-  no\_cower                      Don't cower when hearing gun fire.
-  npc\_delay\_max                Description not available.
-  npc\_delay\_min                Description not available.
-  npc\_distance                  Description not available.
-  offset\_portal                 Description not available.
-  offset\_portal\_vector         Description not available.
-  on\_activate                   Description not available.
-  overrideKilledByGravityZones   Description not available.
-  particle\_offset               Description not available.
-  pivot                          Description not available.
-  portal                         Description not available.
-  portal\_buddy                  Description not available.
-  portal\_face                   Description not available.
-  produces\_splats               Description not available.
-  ragdoll                        Specifies the .af file to use for a ragdoll when the creature dies
-  randomPathAfterAlt             Description not available.
-  range\_attack\_delay           Description not available.
-  range\_attack\_shots           Description not available.
-  rank                           Monsters only fight back when attacked by members of it's own team when its rank is greater than or equal to the attacker's rank. A rank of 0 will never fight back.
-  react\_inuse                   Description not available.
-  remove\_bar\_on\_death         Description not available.
-  rotation                       Description not available.
-  scriptobject                   Description not available.
-  size                           Description not available.
-  skin                           Description not available.
-  skin\_acidburn                 Description not available.
-  skin\_burn                     Description not available.
-  skin\_freeze                   Description not available.
-  skin\_melee\_hit               Description not available.
-  smart\_knockback               Description not available.
-  snd\_footstep\_altmetal        Description not available.
-  snd\_footstep\_cardboard       Description not available.
-  snd\_footstep\_flesh           Description not available.
-  snd\_footstep\_forcefield      Description not available.
-  snd\_footstep\_glass           Description not available.
-  snd\_footstep\_liquid          Description not available.
-  snd\_footstep\_metal           Description not available.
-  snd\_footstep\_pipe            Description not available.
-  snd\_footstep\_stone           Description not available.
-  snd\_footstep\_tile            Description not available.
-  snd\_footstep\_wallwalk        Description not available.
-  snd\_footstep\_wood            Description not available.
-  snd\_land\_altmetal            Description not available.
-  snd\_land\_cardboard           Description not available.
-  snd\_land\_flesh               Description not available.
-  snd\_land\_forcefield          Description not available.
-  snd\_land\_glass               Description not available.
-  snd\_land\_metal               Description not available.
-  snd\_land\_pipe                Description not available.
-  snd\_land\_stone               Description not available.
-  snd\_land\_tile                Description not available.
-  snd\_land\_wallwalk            Description not available.
-  snd\_land\_wood                Description not available.
-  sound\_joint                   Description not available.
-  spawnclass                     Description not available.
-  speech\_name                   Description not available.
-  speech\_wait                   Description not available.
-  talk0\_blendin                 \# frames to blend into triggered talk anim.
-  talk0\_blendout                \# frames to blend out of triggered talk anim.
-  talk1                          Description not available.
-  talk1\_blendin                 \# frames to blend into primary talk anim.
-  talk1\_blendout                \# frames to blend out of primary talk anim.
-  talk2                          Description not available.
-  talk2\_blendin                 \# frames to blend into secondary talk anim.
-  talk2\_blendout                \# frames to blend out of secondary talk anim.
-  talk\_no\_turn                 Don't turn body toward player when talking, just his head.
-  talkradius                     If the player steps outside this distance from the character, the conversation is over and the character goes back to what he was doing.
-  talks                          whether character can be engaged in conversation
-  talktime                       How long the character will wait for the player to press the talk button before returning to what he was doing.
-  team                           Monsters do not actively attack players or monsters with the same team \#.
-  trigger\_distance              distance at which character is triggered
-  turn\_rate                     Maximum \# of degrees character can turn per second
-  use\_aas                       extension of the aas file to use for navigation.
-  wait                           How long to wait before following path. Character will be unresponsive until this time has passed.
-  wander\_radius                 Description not available.
-  zip\_range                     Description not available.
+| KEY                          | DESCRIPTION                                                                                                                                                                                                                                    |
+|------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| CraneAttachable              | Description not available.                                                                                                                                                                                                                     |
+| RailAttachable               | Description not available.                                                                                                                                                                                                                     |
+| ShuttleAttachable            | Description not available.                                                                                                                                                                                                                     |
+| aas\_shuttle                 | Description not available.                                                                                                                                                                                                                     |
+| accepts\_decals              | Description not available.                                                                                                                                                                                                                     |
+| accepts\_wounds              | Description not available.                                                                                                                                                                                                                     |
+| acidburn                     | Description not available.                                                                                                                                                                                                                     |
+| action                       | Description not available.                                                                                                                                                                                                                     |
+| alt\_path                    | Description not available.                                                                                                                                                                                                                     |
+| ambush                       | Description not available.                                                                                                                                                                                                                     |
+| angle                        | Description not available.                                                                                                                                                                                                                     |
+| attack\_cone                 | Monster can only throw projectile within this cone relative to his direction.                                                                                                                                                                  |
+| attack\_range                | Description not available.                                                                                                                                                                                                                     |
+| attack\_z                    | Description not available.                                                                                                                                                                                                                     |
+| beckon\_anim                 | come-here animation                                                                                                                                                                                                                            |
+| beckon\_delay                | delay between come-here animations                                                                                                                                                                                                             |
+| beckon\_distance             | distance at which character starts beckoning                                                                                                                                                                                                   |
+| beckon\_stop\_distance       | distance at which character stops beckoning                                                                                                                                                                                                    |
+| bind\_axis                   | Description not available.                                                                                                                                                                                                                     |
+| bind\_orient                 | Description not available.                                                                                                                                                                                                                     |
+| blink\_max                   | Maximum time to wait between eye blinks.                                                                                                                                                                                                       |
+| blink\_min                   | Minimum time to wait between eye blinks.                                                                                                                                                                                                       |
+| bone\_focus                  | Where the character's eyes are in his head                                                                                                                                                                                                     |
+| bone\_leftEye                | Which bone to modify to adjust the left eye focus                                                                                                                                                                                              |
+| bone\_orientation            | Determines which way character's legs are facing for headlooking (usually the waist)                                                                                                                                                           |
+| bone\_rightEye               | Which bone to modify to adjust the right eye focus                                                                                                                                                                                             |
+| can\_fall                    | Description not available.                                                                                                                                                                                                                     |
+| can\_freeze                  | Description not available.                                                                                                                                                                                                                     |
+| can\_see\_portals            | Description not available.                                                                                                                                                                                                                     |
+| can\_wallwalk                | Description not available.                                                                                                                                                                                                                     |
+| chatter\_combat\_max         | maximum amount of time to wait till playing chat sounds when in combat                                                                                                                                                                         |
+| chatter\_combat\_min         | minimum amount of time to wait till playing chat sounds when in combat                                                                                                                                                                         |
+| chatter\_max                 | maximum amount of time to wait till playing chat sounds when idle                                                                                                                                                                              |
+| chatter\_min                 | minimum amount of time to wait till playing chat sounds when idle                                                                                                                                                                              |
+| crouch\_eye\_offset          | Description not available.                                                                                                                                                                                                                     |
+| ddaIndex                     | Description not available.                                                                                                                                                                                                                     |
+| def\_damageFatalFall         | Description not available.                                                                                                                                                                                                                     |
+| def\_damageFellOntoFatal     | Description not available.                                                                                                                                                                                                                     |
+| def\_drops                   | entityDefs to drop when killed. Multiple drop items are defined by adding suffixes: 'def\_drops1', 'def\_drops2', etc.                                                                                                                         |
+| def\_fakeportal              | Description not available.                                                                                                                                                                                                                     |
+| def\_gibDebrisSpawner        | Description not available.                                                                                                                                                                                                                     |
+| def\_portal                  | Description not available.                                                                                                                                                                                                                     |
+| def\_projectile              | name of entityDef to launch as projectile                                                                                                                                                                                                      |
+| density                      | Description not available.                                                                                                                                                                                                                     |
+| editor\_color                | Description not available.                                                                                                                                                                                                                     |
+| editor\_maxs                 | Description not available.                                                                                                                                                                                                                     |
+| editor\_mins                 | Description not available.                                                                                                                                                                                                                     |
+| editor\_var XXXX             | Description not available.                                                                                                                                                                                                                     |
+| eyeOffset\_alive             | Description not available.                                                                                                                                                                                                                     |
+| eyeOffset\_dead              | Description not available.                                                                                                                                                                                                                     |
+| eye\_focus\_rate             | how quickly the eyes focus on a target                                                                                                                                                                                                         |
+| eye\_horizontal\_offset      | horizontal offset from the player's view that the character's eyes should focus on. negative values bring eyes closer together.                                                                                                                |
+| eye\_turn\_max               | max angular offset for eye joint before head has to turn.                                                                                                                                                                                      |
+| eye\_turn\_min               | min angular offset for eye joint before head has to turn.                                                                                                                                                                                      |
+| eye\_verticle\_offset        | verticle offset from the player's view that the character's eyes should focus on.                                                                                                                                                              |
+| fallDist\_fatal              | Description not available.                                                                                                                                                                                                                     |
+| fallDist\_jump               | Description not available.                                                                                                                                                                                                                     |
+| fallDist\_soft               | Description not available.                                                                                                                                                                                                                     |
+| fall\_delay                  | Description not available.                                                                                                                                                                                                                     |
+| fatal\_fall\_velocity        | Description not available.                                                                                                                                                                                                                     |
+| focus\_align\_time           | how long character should glance at the player before turning his head.                                                                                                                                                                        |
+| fov                          | Character's field of view. Characters initially become aware of the player when he enters this cone. Also controls when the character sees the player as shootable. Character's will not use fov for sight checks after their initial wake up. |
+| fx\_acid                     | Description not available.                                                                                                                                                                                                                     |
+| fx\_burn                     | Description not available.                                                                                                                                                                                                                     |
+| fx\_custom\_blood            | Description not available.                                                                                                                                                                                                                     |
+| fx\_ice                      | Description not available.                                                                                                                                                                                                                     |
+| gibhealth                    | Description not available.                                                                                                                                                                                                                     |
+| hangID                       | Description not available.                                                                                                                                                                                                                     |
+| has\_melee\_attack           | Description not available.                                                                                                                                                                                                                     |
+| has\_range\_attack           | Description not available.                                                                                                                                                                                                                     |
+| head\_focus\_rate            | how quickly the head focuses on a target                                                                                                                                                                                                       |
+| head\_joint                  | Description not available.                                                                                                                                                                                                                     |
+| head\_look                   | Description not available.                                                                                                                                                                                                                     |
+| headlook\_joint XXXX         | Description not available.                                                                                                                                                                                                                     |
+| health                       | Description not available.                                                                                                                                                                                                                     |
+| hearing\_range               | Description not available.                                                                                                                                                                                                                     |
+| hide                         | Causes character to be hfidden and nonsolid until triggered.                                                                                                                                                                                   |
+| ignore\_push                 | Set to 1 to prevent character from moving out of the way when player pushes him.                                                                                                                                                               |
+| ik\_ankle1                   | Description not available.                                                                                                                                                                                                                     |
+| ik\_ankle2                   | Description not available.                                                                                                                                                                                                                     |
+| ik\_dir1                     | Description not available.                                                                                                                                                                                                                     |
+| ik\_dir2                     | Description not available.                                                                                                                                                                                                                     |
+| ik\_foot1                    | Description not available.                                                                                                                                                                                                                     |
+| ik\_foot2                    | Description not available.                                                                                                                                                                                                                     |
+| ik\_footSize                 | Description not available.                                                                                                                                                                                                                     |
+| ik\_hip1                     | Description not available.                                                                                                                                                                                                                     |
+| ik\_hip2                     | Description not available.                                                                                                                                                                                                                     |
+| ik\_knee1                    | Description not available.                                                                                                                                                                                                                     |
+| ik\_knee2                    | Description not available.                                                                                                                                                                                                                     |
+| ik\_minWaistAnkleDist        | Description not available.                                                                                                                                                                                                                     |
+| ik\_minWaistFloorDist        | Description not available.                                                                                                                                                                                                                     |
+| ik\_numLegs                  | Description not available.                                                                                                                                                                                                                     |
+| ik\_tiltWaist                | Description not available.                                                                                                                                                                                                                     |
+| ik\_usePivot                 | Description not available.                                                                                                                                                                                                                     |
+| ik\_waist                    | Description not available.                                                                                                                                                                                                                     |
+| inherit                      | Description not available.                                                                                                                                                                                                                     |
+| jawbone\_Head                | Description not available.                                                                                                                                                                                                                     |
+| jawbone\_LeftBrow            | Description not available.                                                                                                                                                                                                                     |
+| jawbone\_LeftCheek           | Description not available.                                                                                                                                                                                                                     |
+| jawbone\_LeftCorner          | Description not available.                                                                                                                                                                                                                     |
+| jawbone\_LeftLowerLip        | Description not available.                                                                                                                                                                                                                     |
+| jawbone\_LeftUpperLip        | Description not available.                                                                                                                                                                                                                     |
+| jawbone\_MidBrow             | Description not available.                                                                                                                                                                                                                     |
+| jawbone\_MidLowerLip         | Description not available.                                                                                                                                                                                                                     |
+| jawbone\_MidUpperLip         | Description not available.                                                                                                                                                                                                                     |
+| jawbone\_RightBrow           | Description not available.                                                                                                                                                                                                                     |
+| jawbone\_RightCheek          | Description not available.                                                                                                                                                                                                                     |
+| jawbone\_RightCorner         | Description not available.                                                                                                                                                                                                                     |
+| jawbone\_RightLowerLip       | Description not available.                                                                                                                                                                                                                     |
+| jawbone\_RightUpperLip       | Description not available.                                                                                                                                                                                                                     |
+| jawbone\_jaw                 | Description not available.                                                                                                                                                                                                                     |
+| jawflagRMin\_Head            | Description not available.                                                                                                                                                                                                                     |
+| jawflapR\_Head               | Description not available.                                                                                                                                                                                                                     |
+| jawflapR\_Jaw                | Description not available.                                                                                                                                                                                                                     |
+| jawflapR\_MidLowerLip        | Description not available.                                                                                                                                                                                                                     |
+| jawflapR\_MidUpperLip        | Description not available.                                                                                                                                                                                                                     |
+| jawflapTMin\_LeftBrow        | Description not available.                                                                                                                                                                                                                     |
+| jawflapTMin\_MidBrow         | Description not available.                                                                                                                                                                                                                     |
+| jawflapTMin\_RightBrow       | Description not available.                                                                                                                                                                                                                     |
+| jawflapT\_Head               | Description not available.                                                                                                                                                                                                                     |
+| jawflapT\_LeftBrow           | Description not available.                                                                                                                                                                                                                     |
+| jawflapT\_LeftCheek          | Description not available.                                                                                                                                                                                                                     |
+| jawflapT\_LeftCorner         | Description not available.                                                                                                                                                                                                                     |
+| jawflapT\_LeftLowerLip       | Description not available.                                                                                                                                                                                                                     |
+| jawflapT\_LeftUpperLip       | Description not available.                                                                                                                                                                                                                     |
+| jawflapT\_MidBrow            | Description not available.                                                                                                                                                                                                                     |
+| jawflapT\_MidLowerLip        | Description not available.                                                                                                                                                                                                                     |
+| jawflapT\_MidUpperLip        | Description not available.                                                                                                                                                                                                                     |
+| jawflapT\_RightBrow          | Description not available.                                                                                                                                                                                                                     |
+| jawflapT\_RightCheek         | Description not available.                                                                                                                                                                                                                     |
+| jawflapT\_RightCorner        | Description not available.                                                                                                                                                                                                                     |
+| jawflapT\_RightLowerLip      | Description not available.                                                                                                                                                                                                                     |
+| jawflapT\_RightUpperLip      | Description not available.                                                                                                                                                                                                                     |
+| look\_joint XXXX             | Description not available.                                                                                                                                                                                                                     |
+| look\_max                    | maximum angles for head looks                                                                                                                                                                                                                  |
+| look\_min                    | minimum angles for head looks                                                                                                                                                                                                                  |
+| matter                       | Description not available.                                                                                                                                                                                                                     |
+| maxs                         | Description not available.                                                                                                                                                                                                                     |
+| melee\_boundmax              | Description not available.                                                                                                                                                                                                                     |
+| melee\_boundmin              | Description not available.                                                                                                                                                                                                                     |
+| mins                         | Description not available.                                                                                                                                                                                                                     |
+| model                        | Description not available.                                                                                                                                                                                                                     |
+| model\_head                  | Description not available.                                                                                                                                                                                                                     |
+| mtr\_acidsplat               | Description not available.                                                                                                                                                                                                                     |
+| neverDormant                 | Description not available.                                                                                                                                                                                                                     |
+| never\_target                | Description not available.                                                                                                                                                                                                                     |
+| noPlayerDamage               | if set, monster won't take damage inflicted by the player                                                                                                                                                                                      |
+| no\_burn                     | Description not available.                                                                                                                                                                                                                     |
+| no\_combat                   | Description not available.                                                                                                                                                                                                                     |
+| no\_cower                    | Don't cower when hearing gun fire.                                                                                                                                                                                                             |
+| npc\_delay\_max              | Description not available.                                                                                                                                                                                                                     |
+| npc\_delay\_min              | Description not available.                                                                                                                                                                                                                     |
+| npc\_distance                | Description not available.                                                                                                                                                                                                                     |
+| offset\_portal               | Description not available.                                                                                                                                                                                                                     |
+| offset\_portal\_vector       | Description not available.                                                                                                                                                                                                                     |
+| on\_activate                 | Description not available.                                                                                                                                                                                                                     |
+| overrideKilledByGravityZones | Description not available.                                                                                                                                                                                                                     |
+| particle\_offset             | Description not available.                                                                                                                                                                                                                     |
+| pivot                        | Description not available.                                                                                                                                                                                                                     |
+| portal                       | Description not available.                                                                                                                                                                                                                     |
+| portal\_buddy                | Description not available.                                                                                                                                                                                                                     |
+| portal\_face                 | Description not available.                                                                                                                                                                                                                     |
+| produces\_splats             | Description not available.                                                                                                                                                                                                                     |
+| ragdoll                      | Specifies the .af file to use for a ragdoll when the creature dies                                                                                                                                                                             |
+| randomPathAfterAlt           | Description not available.                                                                                                                                                                                                                     |
+| range\_attack\_delay         | Description not available.                                                                                                                                                                                                                     |
+| range\_attack\_shots         | Description not available.                                                                                                                                                                                                                     |
+| rank                         | Monsters only fight back when attacked by members of it's own team when its rank is greater than or equal to the attacker's rank. A rank of 0 will never fight back.                                                                           |
+| react\_inuse                 | Description not available.                                                                                                                                                                                                                     |
+| remove\_bar\_on\_death       | Description not available.                                                                                                                                                                                                                     |
+| rotation                     | Description not available.                                                                                                                                                                                                                     |
+| scriptobject                 | Description not available.                                                                                                                                                                                                                     |
+| size                         | Description not available.                                                                                                                                                                                                                     |
+| skin                         | Description not available.                                                                                                                                                                                                                     |
+| skin\_acidburn               | Description not available.                                                                                                                                                                                                                     |
+| skin\_burn                   | Description not available.                                                                                                                                                                                                                     |
+| skin\_freeze                 | Description not available.                                                                                                                                                                                                                     |
+| skin\_melee\_hit             | Description not available.                                                                                                                                                                                                                     |
+| smart\_knockback             | Description not available.                                                                                                                                                                                                                     |
+| snd\_footstep\_altmetal      | Description not available.                                                                                                                                                                                                                     |
+| snd\_footstep\_cardboard     | Description not available.                                                                                                                                                                                                                     |
+| snd\_footstep\_flesh         | Description not available.                                                                                                                                                                                                                     |
+| snd\_footstep\_forcefield    | Description not available.                                                                                                                                                                                                                     |
+| snd\_footstep\_glass         | Description not available.                                                                                                                                                                                                                     |
+| snd\_footstep\_liquid        | Description not available.                                                                                                                                                                                                                     |
+| snd\_footstep\_metal         | Description not available.                                                                                                                                                                                                                     |
+| snd\_footstep\_pipe          | Description not available.                                                                                                                                                                                                                     |
+| snd\_footstep\_stone         | Description not available.                                                                                                                                                                                                                     |
+| snd\_footstep\_tile          | Description not available.                                                                                                                                                                                                                     |
+| snd\_footstep\_wallwalk      | Description not available.                                                                                                                                                                                                                     |
+| snd\_footstep\_wood          | Description not available.                                                                                                                                                                                                                     |
+| snd\_land\_altmetal          | Description not available.                                                                                                                                                                                                                     |
+| snd\_land\_cardboard         | Description not available.                                                                                                                                                                                                                     |
+| snd\_land\_flesh             | Description not available.                                                                                                                                                                                                                     |
+| snd\_land\_forcefield        | Description not available.                                                                                                                                                                                                                     |
+| snd\_land\_glass             | Description not available.                                                                                                                                                                                                                     |
+| snd\_land\_metal             | Description not available.                                                                                                                                                                                                                     |
+| snd\_land\_pipe              | Description not available.                                                                                                                                                                                                                     |
+| snd\_land\_stone             | Description not available.                                                                                                                                                                                                                     |
+| snd\_land\_tile              | Description not available.                                                                                                                                                                                                                     |
+| snd\_land\_wallwalk          | Description not available.                                                                                                                                                                                                                     |
+| snd\_land\_wood              | Description not available.                                                                                                                                                                                                                     |
+| sound\_joint                 | Description not available.                                                                                                                                                                                                                     |
+| spawnclass                   | Description not available.                                                                                                                                                                                                                     |
+| speech\_name                 | Description not available.                                                                                                                                                                                                                     |
+| speech\_wait                 | Description not available.                                                                                                                                                                                                                     |
+| talk0\_blendin               | \# frames to blend into triggered talk anim.                                                                                                                                                                                                   |
+| talk0\_blendout              | \# frames to blend out of triggered talk anim.                                                                                                                                                                                                 |
+| talk1                        | Description not available.                                                                                                                                                                                                                     |
+| talk1\_blendin               | \# frames to blend into primary talk anim.                                                                                                                                                                                                     |
+| talk1\_blendout              | \# frames to blend out of primary talk anim.                                                                                                                                                                                                   |
+| talk2                        | Description not available.                                                                                                                                                                                                                     |
+| talk2\_blendin               | \# frames to blend into secondary talk anim.                                                                                                                                                                                                   |
+| talk2\_blendout              | \# frames to blend out of secondary talk anim.                                                                                                                                                                                                 |
+| talk\_no\_turn               | Don't turn body toward player when talking, just his head.                                                                                                                                                                                     |
+| talkradius                   | If the player steps outside this distance from the character, the conversation is over and the character goes back to what he was doing.                                                                                                       |
+| talks                        | whether character can be engaged in conversation                                                                                                                                                                                               |
+| talktime                     | How long the character will wait for the player to press the talk button before returning to what he was doing.                                                                                                                                |
+| team                         | Monsters do not actively attack players or monsters with the same team \#.                                                                                                                                                                     |
+| trigger\_distance            | distance at which character is triggered                                                                                                                                                                                                       |
+| turn\_rate                   | Maximum \# of degrees character can turn per second                                                                                                                                                                                            |
+| use\_aas                     | extension of the aas file to use for navigation.                                                                                                                                                                                               |
+| wait                         | How long to wait before following path. Character will be unresponsive until this time has passed.                                                                                                                                             |
+| wander\_radius               | Description not available.                                                                                                                                                                                                                     |
+| zip\_range                   | Description not available.                                                                                                                                                                                                                     |
 
 Inheritance
 -----------

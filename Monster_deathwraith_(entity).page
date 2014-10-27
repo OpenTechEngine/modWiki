@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Monster_deathwraith_%28entity%29 "http://modwiki.net/w/index.php?title=Monster_deathwraith_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Monster_deathwraith_%28entity%29 "http://modwiki.net/w/index.php?title=Monster_deathwraith_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Monster_deathwraith_%28entity%29 "http://modwiki.net/w/index.php?title=Monster_deathwraith_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Monster_deathwraith_%28entity%29 "http://modwiki.net/w/index.php?title=Monster_deathwraith_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -28,202 +10,201 @@ Description not available.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                                       DESCRIPTION
-  ----------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  ShuttleAttachable                         Description not available.
-  aas\_shuttle                              Description not available.
-  accepts\_decals                           Description not available.
-  accepts\_wounds                           Description not available.
-  acidburn                                  Description not available.
-  alt\_path                                 Description not available.
-  ambush                                    if set, monster only wakes up if it sees the player.
-  angle                                     Description not available.
-  anim                                      Animation to cycle when spawned in.
-  attack\_accuracy                          Maximum angular offset to randomly offset the monster's aim when firing missiles
-  attack\_cone                              Monster can only throw projectile within this cone relative to his direction.
-  attack\_range                             Description not available.
-  attack\_z                                 Description not available.
-  bind\_axis                                Description not available.
-  bind\_orient                              Description not available.
-  bleed                                     Description not available.
-  blink\_max                                Maximum time to wait between eye blinks.
-  blink\_min                                Minimum time to wait between eye blinks.
-  blockedAttackTime                         \# of milliseconds since last attack before monster marked blocked
-  blockedMoveTime                           \# of milliseconds since last move before monster marked blocked
-  blockedRadius                             if monsters doesn't move this distance within blockedMoveTime, then mark monster blocked.
-  build\_aas                                Description not available.
-  burnOutTime                               Description not available.
-  can\_fall                                 Description not available.
-  can\_freeze                               Description not available.
-  can\_see\_portals                         allow monster to see and shoot at enemies through portals
-  can\_wallwalk                             Description not available.
-  chatter\_combat\_max                      maximum amount of time to wait till playing chat sounds when in combat
-  chatter\_combat\_min                      minimum amount of time to wait till playing chat sounds when in combat
-  chatter\_max                              maximum amount of time to wait till playing chat sounds when idle
-  chatter\_min                              minimum amount of time to wait till playing chat sounds when idle
-  damage\_ticks                             Description not available.
-  ddaIndex                                  Description not available.
-  decal\_size                               Description not available.
-  decal\_trace                              Description not available.
-  def\_damagetype                           Description not available.
-  def\_deathEnergyHealth                    Description not available.
-  def\_deathEnergySpirit                    Description not available.
-  def\_dropSoul                             Description not available.
-  def\_drops                                entityDefs to drop when killed. Multiple drop items are defined by adding suffixes: 'def\_drops1', 'def\_drops2', etc.
-  def\_fakeportal                           Description not available.
-  def\_portal                               Description not available.
-  dist\_z\_close                            Description not available.
-  dist\_z\_far                              Description not available.
-  editor\_bool XXXX                         Description not available.
-  editor\_color                             Description not available.
-  editor\_maxs                              Description not available.
-  editor\_mins                              Description not available.
-  editor\_rotatable                         Description not available.
-  editor\_showangle                         Description not available.
-  editor\_var XXXX                          Description not available.
-  eye\_focus\_rate                          how quickly the eyes focus on a target
-  eye\_horizontal\_offset                   horizontal offset from the player's view that the character's eyes should focus on. negative values bring eyes closer together.
-  eye\_verticle\_offset                     verticle offset from the player's view that the character's eyes should focus on.
-  fall\_delay                               Description not available.
-  fatal\_fall\_velocity                     Description not available.
-  flee\_speed\_z                            Description not available.
-  fly                                       Description not available.
-  fly\_offset                               Prefered fly height relative to the player's view
-  fov                                       Character's field of view. Characters initially become aware of the player when he enters this cone. Also controls when the character sees the player as shootable. Character's will not use fov for sight checks after their initial wake up.
-  fx\_acid                                  Description not available.
-  fx\_burn                                  Description not available.
-  fx\_custom\_blood                         Description not available.
-  fx\_death                                 Description not available.
-  fx\_death2                                Description not available.
-  fx\_deatheffect                           Description not available.
-  fx\_deatheffect1                          Description not available.
-  fx\_deatheffect2                          Description not available.
-  fx\_fly                                   Description not available.
-  fx\_hitenemy                              Description not available.
-  fx\_hitwall                               Description not available.
-  fx\_ice                                   Description not available.
-  fx\_possessionFlash                       Description not available.
-  fx\_spawn                                 Description not available.
-  harvestAccel                              Description not available.
-  has\_melee\_attack                        Description not available.
-  has\_range\_attack                        Description not available.
-  head\_focus\_rate                         how quickly the head focuses on a target
-  head\_look                                Description not available.
-  health                                    Description not available.
-  healthTypeChance                          Description not available.
-  hearing\_range                            maximum radius at which monster is alerted by enemies
-  hide                                      Causes monster to be hidden and nonsolid until triggered. Set to 2 for single trigger (entity wakes up when unhidden).
-  ignoreGravityZones                        Description not available.
-  impulseMagnitude                          Description not available.
-  inherit                                   Description not available.
-  initialVelocity                           Description not available.
-  joint\_collision                          Description not available.
-  kick\_force                               how much force to apply to blocking obstacles to get them out of the way.
-  look\_max                                 maximum angles for head looks
-  look\_min                                 minimum angles for head looks
-  matter                                    Description not available.
-  maxHarvestVel                             Description not available.
-  max\_attackTime                           Description not available.
-  max\_chatter\_time                        Description not available.
-  max\_circleInfo                           Description not available.
-  maxs                                      Description not available.
-  melee\_boundmax                           Description not available.
-  melee\_boundmin                           Description not available.
-  melee\_range                              do melee attack when within this range
-  minDamageDistSqr                          Description not available.
-  minHarvestDist                            Description not available.
-  min\_attackTime                           Description not available.
-  min\_chatter\_time                        Description not available.
-  min\_circleInfo                           Description not available.
-  mins                                      Description not available.
-  model                                     Description not available.
-  mtr\_acidsplat                            Description not available.
-  mtr\_decal                                Description not available.
-  mtr\_decal1                               Description not available.
-  mtr\_splat1                               Description not available.
-  mtr\_splat2                               Description not available.
-  mtr\_splat3                               Description not available.
-  mtr\_splat4                               Description not available.
-  neverDormant                              Description not available.
-  never\_target                             if enabled, no monster will ever attack this monster under any condition (default 0)
-  noKillBoxOnSpawn                          Description not available.
-  noPlayerDamage                            Description not available.
-  no\_burn                                  Description not available.
-  no\_combat                                Description not available.
-  no\_idle\_chatter                         When set, monster will not make idle sounds
-  noaas\_warning                            Description not available.
-  offset\_portal                            Description not available.
-  offset\_portal\_vector                    Description not available.
-  on\_activate                              Animation to play when monster sees player or is triggered. Set to blank to make monster immediately start attacking the player without playing an animation.
-  onlyDamagedBy                             Description not available.
-  onlyDamagedBy1                            Description not available.
-  onlyDamagedBy2                            Description not available.
-  onlyDamagedBy3                            Description not available.
-  onlyDamagedBy4                            Description not available.
-  onlyVisibleInSpirit                       Description not available.
-  overrideKilledByGravityZones              Description not available.
-  pain\_delay                               How long to wait between pain animations before triggering another pain animation.
-  pain\_threshold                           How much damage monster has to recieve in one blow for it to play a pain animation.
-  particle\_offset                          Description not available.
-  playerHealthDamage                        Description not available.
-  portal                                    If set, monster waits until triggered, then portals in. Use 'portal\_buddy' to specify source portal (optional)
-  portalCollide                             if true, creatures will be blocked by portals after they portal in. Note that offset\_porta\_vector is probably needed so the creature doesn't start inside the portal.
-  portal\_anim                              Description not available.
-  portal\_buddy                             Description not available.
-  portal\_closeDelay                        Description not available.
-  portal\_face                              If set to 1, monster and portal will face player when portalling in (default 0)
-  portal\_monsterportal                     Description not available.
-  portal\_noTeleport                        Description not available.
-  possess                                   Description not available.
-  projectile\_height\_to\_distance\_ratio   calculates the maximum height a projectile can be thrown. for example, a projectile thrown 100 units with a projectile\_height\_to\_distance\_ratio of 0.5 will only ever be up to 50 units above the target.
-  react\_inuse                              Description not available.
-  remove\_bar\_on\_death                    Description not available.
-  rotation                                  Description not available.
-  scale                                     Description not available.
-  scriptobject                              Description not available.
-  size                                      Description not available.
-  skin\_acidburn                            Description not available.
-  skin\_burn                                Description not available.
-  skin\_freeze                              Description not available.
-  skin\_melee\_hit                          Description not available.
-  smart\_knockback                          Description not available.
-  snd\_acid                                 Description not available.
-  snd\_attack                               Description not available.
-  snd\_charge                               Description not available.
-  snd\_chatter                              chat sound to play when idle
-  snd\_death                                Description not available.
-  snd\_flyloop                              Description not available.
-  snd\_sight                                Description not available.
-  sound\_joint                              Description not available.
-  spawnFlyUp                                Description not available.
-  spawnTime                                 Description not available.
-  spawnclass                                Description not available.
-  speech\_name                              Description not available.
-  speech\_wait                              Description not available.
-  splat\_size                               Description not available.
-  stay\_on\_attackpath                      don't exit attack\_path when close to enemy.
-  straight\_ticks                           Description not available.
-  target\_z\_threshold                      Description not available.
-  team                                      Monsters do not actively attack players or monsters with the same team \#.
-  touch\_triggers                           Description not available.
-  tractor\_kill\_speed                      Description not available.
-  tractor\_speed\_scale                     Description not available.
-  turn\_radius\_max                         Description not available.
-  turn\_rate                                Maximum \# of degrees monster can turn per second
-  turn\_threshold                           Description not available.
-  turn\_ticks                               Description not available.
-  use\_aas                                  extension of the aas file to use for navigation.
-  use\_combat\_bbox                         Use a bounding box for damage and not per-poly hit detection.
-  vehicledamagescale                        Description not available.
-  velocity\_xy                              Description not available.
-  velocity\_z                               Description not available.
-  velocity\_z\_fast                         Description not available.
-  wait                                      How long to wait before following path. Monster will be unresponsive until this time has passed.
-  wander\_radius                            Description not available.
-  zip\_range                                Description not available.
+| KEY                                     | DESCRIPTION                                                                                                                                                                                                                                    |
+|-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ShuttleAttachable                       | Description not available.                                                                                                                                                                                                                     |
+| aas\_shuttle                            | Description not available.                                                                                                                                                                                                                     |
+| accepts\_decals                         | Description not available.                                                                                                                                                                                                                     |
+| accepts\_wounds                         | Description not available.                                                                                                                                                                                                                     |
+| acidburn                                | Description not available.                                                                                                                                                                                                                     |
+| alt\_path                               | Description not available.                                                                                                                                                                                                                     |
+| ambush                                  | if set, monster only wakes up if it sees the player.                                                                                                                                                                                           |
+| angle                                   | Description not available.                                                                                                                                                                                                                     |
+| anim                                    | Animation to cycle when spawned in.                                                                                                                                                                                                            |
+| attack\_accuracy                        | Maximum angular offset to randomly offset the monster's aim when firing missiles                                                                                                                                                               |
+| attack\_cone                            | Monster can only throw projectile within this cone relative to his direction.                                                                                                                                                                  |
+| attack\_range                           | Description not available.                                                                                                                                                                                                                     |
+| attack\_z                               | Description not available.                                                                                                                                                                                                                     |
+| bind\_axis                              | Description not available.                                                                                                                                                                                                                     |
+| bind\_orient                            | Description not available.                                                                                                                                                                                                                     |
+| bleed                                   | Description not available.                                                                                                                                                                                                                     |
+| blink\_max                              | Maximum time to wait between eye blinks.                                                                                                                                                                                                       |
+| blink\_min                              | Minimum time to wait between eye blinks.                                                                                                                                                                                                       |
+| blockedAttackTime                       | \# of milliseconds since last attack before monster marked blocked                                                                                                                                                                             |
+| blockedMoveTime                         | \# of milliseconds since last move before monster marked blocked                                                                                                                                                                               |
+| blockedRadius                           | if monsters doesn't move this distance within blockedMoveTime, then mark monster blocked.                                                                                                                                                      |
+| build\_aas                              | Description not available.                                                                                                                                                                                                                     |
+| burnOutTime                             | Description not available.                                                                                                                                                                                                                     |
+| can\_fall                               | Description not available.                                                                                                                                                                                                                     |
+| can\_freeze                             | Description not available.                                                                                                                                                                                                                     |
+| can\_see\_portals                       | allow monster to see and shoot at enemies through portals                                                                                                                                                                                      |
+| can\_wallwalk                           | Description not available.                                                                                                                                                                                                                     |
+| chatter\_combat\_max                    | maximum amount of time to wait till playing chat sounds when in combat                                                                                                                                                                         |
+| chatter\_combat\_min                    | minimum amount of time to wait till playing chat sounds when in combat                                                                                                                                                                         |
+| chatter\_max                            | maximum amount of time to wait till playing chat sounds when idle                                                                                                                                                                              |
+| chatter\_min                            | minimum amount of time to wait till playing chat sounds when idle                                                                                                                                                                              |
+| damage\_ticks                           | Description not available.                                                                                                                                                                                                                     |
+| ddaIndex                                | Description not available.                                                                                                                                                                                                                     |
+| decal\_size                             | Description not available.                                                                                                                                                                                                                     |
+| decal\_trace                            | Description not available.                                                                                                                                                                                                                     |
+| def\_damagetype                         | Description not available.                                                                                                                                                                                                                     |
+| def\_deathEnergyHealth                  | Description not available.                                                                                                                                                                                                                     |
+| def\_deathEnergySpirit                  | Description not available.                                                                                                                                                                                                                     |
+| def\_dropSoul                           | Description not available.                                                                                                                                                                                                                     |
+| def\_drops                              | entityDefs to drop when killed. Multiple drop items are defined by adding suffixes: 'def\_drops1', 'def\_drops2', etc.                                                                                                                         |
+| def\_fakeportal                         | Description not available.                                                                                                                                                                                                                     |
+| def\_portal                             | Description not available.                                                                                                                                                                                                                     |
+| dist\_z\_close                          | Description not available.                                                                                                                                                                                                                     |
+| dist\_z\_far                            | Description not available.                                                                                                                                                                                                                     |
+| editor\_bool XXXX                       | Description not available.                                                                                                                                                                                                                     |
+| editor\_color                           | Description not available.                                                                                                                                                                                                                     |
+| editor\_maxs                            | Description not available.                                                                                                                                                                                                                     |
+| editor\_mins                            | Description not available.                                                                                                                                                                                                                     |
+| editor\_rotatable                       | Description not available.                                                                                                                                                                                                                     |
+| editor\_showangle                       | Description not available.                                                                                                                                                                                                                     |
+| editor\_var XXXX                        | Description not available.                                                                                                                                                                                                                     |
+| eye\_focus\_rate                        | how quickly the eyes focus on a target                                                                                                                                                                                                         |
+| eye\_horizontal\_offset                 | horizontal offset from the player's view that the character's eyes should focus on. negative values bring eyes closer together.                                                                                                                |
+| eye\_verticle\_offset                   | verticle offset from the player's view that the character's eyes should focus on.                                                                                                                                                              |
+| fall\_delay                             | Description not available.                                                                                                                                                                                                                     |
+| fatal\_fall\_velocity                   | Description not available.                                                                                                                                                                                                                     |
+| flee\_speed\_z                          | Description not available.                                                                                                                                                                                                                     |
+| fly                                     | Description not available.                                                                                                                                                                                                                     |
+| fly\_offset                             | Prefered fly height relative to the player's view                                                                                                                                                                                              |
+| fov                                     | Character's field of view. Characters initially become aware of the player when he enters this cone. Also controls when the character sees the player as shootable. Character's will not use fov for sight checks after their initial wake up. |
+| fx\_acid                                | Description not available.                                                                                                                                                                                                                     |
+| fx\_burn                                | Description not available.                                                                                                                                                                                                                     |
+| fx\_custom\_blood                       | Description not available.                                                                                                                                                                                                                     |
+| fx\_death                               | Description not available.                                                                                                                                                                                                                     |
+| fx\_death2                              | Description not available.                                                                                                                                                                                                                     |
+| fx\_deatheffect                         | Description not available.                                                                                                                                                                                                                     |
+| fx\_deatheffect1                        | Description not available.                                                                                                                                                                                                                     |
+| fx\_deatheffect2                        | Description not available.                                                                                                                                                                                                                     |
+| fx\_fly                                 | Description not available.                                                                                                                                                                                                                     |
+| fx\_hitenemy                            | Description not available.                                                                                                                                                                                                                     |
+| fx\_hitwall                             | Description not available.                                                                                                                                                                                                                     |
+| fx\_ice                                 | Description not available.                                                                                                                                                                                                                     |
+| fx\_possessionFlash                     | Description not available.                                                                                                                                                                                                                     |
+| fx\_spawn                               | Description not available.                                                                                                                                                                                                                     |
+| harvestAccel                            | Description not available.                                                                                                                                                                                                                     |
+| has\_melee\_attack                      | Description not available.                                                                                                                                                                                                                     |
+| has\_range\_attack                      | Description not available.                                                                                                                                                                                                                     |
+| head\_focus\_rate                       | how quickly the head focuses on a target                                                                                                                                                                                                       |
+| head\_look                              | Description not available.                                                                                                                                                                                                                     |
+| health                                  | Description not available.                                                                                                                                                                                                                     |
+| healthTypeChance                        | Description not available.                                                                                                                                                                                                                     |
+| hearing\_range                          | maximum radius at which monster is alerted by enemies                                                                                                                                                                                          |
+| hide                                    | Causes monster to be hidden and nonsolid until triggered. Set to 2 for single trigger (entity wakes up when unhidden).                                                                                                                         |
+| ignoreGravityZones                      | Description not available.                                                                                                                                                                                                                     |
+| impulseMagnitude                        | Description not available.                                                                                                                                                                                                                     |
+| inherit                                 | Description not available.                                                                                                                                                                                                                     |
+| initialVelocity                         | Description not available.                                                                                                                                                                                                                     |
+| joint\_collision                        | Description not available.                                                                                                                                                                                                                     |
+| kick\_force                             | how much force to apply to blocking obstacles to get them out of the way.                                                                                                                                                                      |
+| look\_max                               | maximum angles for head looks                                                                                                                                                                                                                  |
+| look\_min                               | minimum angles for head looks                                                                                                                                                                                                                  |
+| matter                                  | Description not available.                                                                                                                                                                                                                     |
+| maxHarvestVel                           | Description not available.                                                                                                                                                                                                                     |
+| max\_attackTime                         | Description not available.                                                                                                                                                                                                                     |
+| max\_chatter\_time                      | Description not available.                                                                                                                                                                                                                     |
+| max\_circleInfo                         | Description not available.                                                                                                                                                                                                                     |
+| maxs                                    | Description not available.                                                                                                                                                                                                                     |
+| melee\_boundmax                         | Description not available.                                                                                                                                                                                                                     |
+| melee\_boundmin                         | Description not available.                                                                                                                                                                                                                     |
+| melee\_range                            | do melee attack when within this range                                                                                                                                                                                                         |
+| minDamageDistSqr                        | Description not available.                                                                                                                                                                                                                     |
+| minHarvestDist                          | Description not available.                                                                                                                                                                                                                     |
+| min\_attackTime                         | Description not available.                                                                                                                                                                                                                     |
+| min\_chatter\_time                      | Description not available.                                                                                                                                                                                                                     |
+| min\_circleInfo                         | Description not available.                                                                                                                                                                                                                     |
+| mins                                    | Description not available.                                                                                                                                                                                                                     |
+| model                                   | Description not available.                                                                                                                                                                                                                     |
+| mtr\_acidsplat                          | Description not available.                                                                                                                                                                                                                     |
+| mtr\_decal                              | Description not available.                                                                                                                                                                                                                     |
+| mtr\_decal1                             | Description not available.                                                                                                                                                                                                                     |
+| mtr\_splat1                             | Description not available.                                                                                                                                                                                                                     |
+| mtr\_splat2                             | Description not available.                                                                                                                                                                                                                     |
+| mtr\_splat3                             | Description not available.                                                                                                                                                                                                                     |
+| mtr\_splat4                             | Description not available.                                                                                                                                                                                                                     |
+| neverDormant                            | Description not available.                                                                                                                                                                                                                     |
+| never\_target                           | if enabled, no monster will ever attack this monster under any condition (default 0)                                                                                                                                                           |
+| noKillBoxOnSpawn                        | Description not available.                                                                                                                                                                                                                     |
+| noPlayerDamage                          | Description not available.                                                                                                                                                                                                                     |
+| no\_burn                                | Description not available.                                                                                                                                                                                                                     |
+| no\_combat                              | Description not available.                                                                                                                                                                                                                     |
+| no\_idle\_chatter                       | When set, monster will not make idle sounds                                                                                                                                                                                                    |
+| noaas\_warning                          | Description not available.                                                                                                                                                                                                                     |
+| offset\_portal                          | Description not available.                                                                                                                                                                                                                     |
+| offset\_portal\_vector                  | Description not available.                                                                                                                                                                                                                     |
+| on\_activate                            | Animation to play when monster sees player or is triggered. Set to blank to make monster immediately start attacking the player without playing an animation.                                                                                  |
+| onlyDamagedBy                           | Description not available.                                                                                                                                                                                                                     |
+| onlyDamagedBy1                          | Description not available.                                                                                                                                                                                                                     |
+| onlyDamagedBy2                          | Description not available.                                                                                                                                                                                                                     |
+| onlyDamagedBy3                          | Description not available.                                                                                                                                                                                                                     |
+| onlyDamagedBy4                          | Description not available.                                                                                                                                                                                                                     |
+| onlyVisibleInSpirit                     | Description not available.                                                                                                                                                                                                                     |
+| overrideKilledByGravityZones            | Description not available.                                                                                                                                                                                                                     |
+| pain\_delay                             | How long to wait between pain animations before triggering another pain animation.                                                                                                                                                             |
+| pain\_threshold                         | How much damage monster has to recieve in one blow for it to play a pain animation.                                                                                                                                                            |
+| particle\_offset                        | Description not available.                                                                                                                                                                                                                     |
+| playerHealthDamage                      | Description not available.                                                                                                                                                                                                                     |
+| portal                                  | If set, monster waits until triggered, then portals in. Use 'portal\_buddy' to specify source portal (optional)                                                                                                                                |
+| portalCollide                           | if true, creatures will be blocked by portals after they portal in. Note that offset\_porta\_vector is probably needed so the creature doesn't start inside the portal.                                                                        |
+| portal\_anim                            | Description not available.                                                                                                                                                                                                                     |
+| portal\_buddy                           | Description not available.                                                                                                                                                                                                                     |
+| portal\_closeDelay                      | Description not available.                                                                                                                                                                                                                     |
+| portal\_face                            | If set to 1, monster and portal will face player when portalling in (default 0)                                                                                                                                                                |
+| portal\_monsterportal                   | Description not available.                                                                                                                                                                                                                     |
+| portal\_noTeleport                      | Description not available.                                                                                                                                                                                                                     |
+| possess                                 | Description not available.                                                                                                                                                                                                                     |
+| projectile\_height\_to\_distance\_ratio | calculates the maximum height a projectile can be thrown. for example, a projectile thrown 100 units with a projectile\_height\_to\_distance\_ratio of 0.5 will only ever be up to 50 units above the target.                                  |
+| react\_inuse                            | Description not available.                                                                                                                                                                                                                     |
+| remove\_bar\_on\_death                  | Description not available.                                                                                                                                                                                                                     |
+| rotation                                | Description not available.                                                                                                                                                                                                                     |
+| scale                                   | Description not available.                                                                                                                                                                                                                     |
+| scriptobject                            | Description not available.                                                                                                                                                                                                                     |
+| size                                    | Description not available.                                                                                                                                                                                                                     |
+| skin\_acidburn                          | Description not available.                                                                                                                                                                                                                     |
+| skin\_burn                              | Description not available.                                                                                                                                                                                                                     |
+| skin\_freeze                            | Description not available.                                                                                                                                                                                                                     |
+| skin\_melee\_hit                        | Description not available.                                                                                                                                                                                                                     |
+| smart\_knockback                        | Description not available.                                                                                                                                                                                                                     |
+| snd\_acid                               | Description not available.                                                                                                                                                                                                                     |
+| snd\_attack                             | Description not available.                                                                                                                                                                                                                     |
+| snd\_charge                             | Description not available.                                                                                                                                                                                                                     |
+| snd\_chatter                            | chat sound to play when idle                                                                                                                                                                                                                   |
+| snd\_death                              | Description not available.                                                                                                                                                                                                                     |
+| snd\_flyloop                            | Description not available.                                                                                                                                                                                                                     |
+| snd\_sight                              | Description not available.                                                                                                                                                                                                                     |
+| sound\_joint                            | Description not available.                                                                                                                                                                                                                     |
+| spawnFlyUp                              | Description not available.                                                                                                                                                                                                                     |
+| spawnTime                               | Description not available.                                                                                                                                                                                                                     |
+| spawnclass                              | Description not available.                                                                                                                                                                                                                     |
+| speech\_name                            | Description not available.                                                                                                                                                                                                                     |
+| speech\_wait                            | Description not available.                                                                                                                                                                                                                     |
+| splat\_size                             | Description not available.                                                                                                                                                                                                                     |
+| stay\_on\_attackpath                    | don't exit attack\_path when close to enemy.                                                                                                                                                                                                   |
+| straight\_ticks                         | Description not available.                                                                                                                                                                                                                     |
+| target\_z\_threshold                    | Description not available.                                                                                                                                                                                                                     |
+| team                                    | Monsters do not actively attack players or monsters with the same team \#.                                                                                                                                                                     |
+| touch\_triggers                         | Description not available.                                                                                                                                                                                                                     |
+| tractor\_kill\_speed                    | Description not available.                                                                                                                                                                                                                     |
+| tractor\_speed\_scale                   | Description not available.                                                                                                                                                                                                                     |
+| turn\_radius\_max                       | Description not available.                                                                                                                                                                                                                     |
+| turn\_rate                              | Maximum \# of degrees monster can turn per second                                                                                                                                                                                              |
+| turn\_threshold                         | Description not available.                                                                                                                                                                                                                     |
+| turn\_ticks                             | Description not available.                                                                                                                                                                                                                     |
+| use\_aas                                | extension of the aas file to use for navigation.                                                                                                                                                                                               |
+| use\_combat\_bbox                       | Use a bounding box for damage and not per-poly hit detection.                                                                                                                                                                                  |
+| vehicledamagescale                      | Description not available.                                                                                                                                                                                                                     |
+| velocity\_xy                            | Description not available.                                                                                                                                                                                                                     |
+| velocity\_z                             | Description not available.                                                                                                                                                                                                                     |
+| velocity\_z\_fast                       | Description not available.                                                                                                                                                                                                                     |
+| wait                                    | How long to wait before following path. Monster will be unresponsive until this time has passed.                                                                                                                                               |
+| wander\_radius                          | Description not available.                                                                                                                                                                                                                     |
+| zip\_range                              | Description not available.                                                                                                                                                                                                                     |
 
 Inheritance
 -----------

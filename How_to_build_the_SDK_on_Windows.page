@@ -1,83 +1,47 @@
 Introduction
 ------------
 
-This is a guide on how to compile the Doom 3 or Enemy Territory: Quake
-Wars SDK on Microsoft Windows using freely available Microsoft tools. It
-assumes Microsoft Visual C++ and the Microsoft Platform SDK are
-installed and configured following the guidelines given on Microsoft's
-respective websites below.
+This is a guide on how to compile the Doom 3 or Enemy Territory: Quake Wars SDK on Microsoft Windows using freely available Microsoft tools. It assumes Microsoft Visual C++ and the Microsoft Platform SDK are installed and configured following the guidelines given on Microsoft's respective websites below.
 
 What you will need
 ------------------
 
-<div>
-
 ![](/images/2/23/D3square_25.png) **Note:** Doom 3 only:
-*A copy of the [Windows Doom 3 SDK
-v1.3.1](ftp://ftp.idsoftware.com/idstuff/doom3/source/win32 "ftp://ftp.idsoftware.com/idstuff/doom3/source/win32")*
+*A copy of the [Windows Doom 3 SDK v1.3.1](ftp://ftp.idsoftware.com/idstuff/doom3/source/win32 "ftp://ftp.idsoftware.com/idstuff/doom3/source/win32")*
 
-</div>
+![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake Wars only:
+*A copy of the [ETQW SDK v1.5](http://www.splashdamage.com/node/229 "http://www.splashdamage.com/node/229")*
 
-<div>
-
-![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake
-Wars only:
-*A copy of the [ETQW SDK
-v1.5](http://www.splashdamage.com/node/229 "http://www.splashdamage.com/node/229")*
-
-</div>
-
--   [Microsoft Visual C++ 2005 Express
-    Edition](http://msdn.microsoft.com/en-us/express/aa718401 "http://msdn.microsoft.com/en-us/express/aa718401")
--   [Microsoft Visual C++ 2005 Express Edition Service Pack
-    1](http://www.microsoft.com/download/en/details.aspx?id=804 "http://www.microsoft.com/download/en/details.aspx?id=804")
--   [Microsoft Windows Server 2003 Platform SDK
-    SP1](http://www.microsoft.com/download/en/details.aspx?id=15656 "http://www.microsoft.com/download/en/details.aspx?id=15656")
--   [Using the Platform SDK with Visual C++
-    2005](http://msdn2.microsoft.com/en-us/vstudio/aa700755.aspx "http://msdn2.microsoft.com/en-us/vstudio/aa700755.aspx")
-    -   Note regarding the Platform SDK - You only need to install the
-        Tools and Build Environment options under Microsoft Windows Core
-        SDK.
+-   [Microsoft Visual C++ 2005 Express Edition](http://msdn.microsoft.com/en-us/express/aa718401 "http://msdn.microsoft.com/en-us/express/aa718401")
+-   [Microsoft Visual C++ 2005 Express Edition Service Pack 1](http://www.microsoft.com/download/en/details.aspx?id=804 "http://www.microsoft.com/download/en/details.aspx?id=804")
+-   [Microsoft Windows Server 2003 Platform SDK SP1](http://www.microsoft.com/download/en/details.aspx?id=15656 "http://www.microsoft.com/download/en/details.aspx?id=15656")
+-   [Using the Platform SDK with Visual C++ 2005](http://msdn2.microsoft.com/en-us/vstudio/aa700755.aspx "http://msdn2.microsoft.com/en-us/vstudio/aa700755.aspx")
+    -   Note regarding the Platform SDK - You only need to install the Tools and Build Environment options under Microsoft Windows Core SDK.
 
 <span align="absbottom"> ![](/images/2/23/D3square_25.png) Doom 3 configuration and building </span>
 ----------------------------------------------------------------------------------------------------
 
-*The information in this section is specific to [Doom
-3](Doom_3 "Doom 3") .*
+*The information in this section is specific to [Doom 3](Doom_3 "Doom 3") .*
 
-Open the D3Game.vcproj file. Under Solution Explorer pane on the left,
-right-click on Game and go to properties. Under Configuration
-Properties -\> Linker -\> Input -\> Additional Dependencies, remove any
-instances of odbc32.lib and odbccp32.lib. You have to do this for each
-compile type (eg Release, Debug).
+Open the D3Game.vcproj file. Under Solution Explorer pane on the left, right-click on Game and go to properties. Under Configuration Properties -\> Linker -\> Input -\> Additional Dependencies, remove any instances of odbc32.lib and odbccp32.lib. You have to do this for each compile type (eg Release, Debug).
 
 <span align="absbottom"> ![](/images/7/7e/Etqwsquare_25.png) ETQW configuration and building </span>
 ----------------------------------------------------------------------------------------------------
 
-*The information in this section is specific to [Enemy Territory: Quake
-Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .*
+*The information in this section is specific to [Enemy Territory: Quake Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .*
 
-You will need to add the following lines to 'SDK
-1.5/source/framework/BuildDefines.inc':
+You will need to add the following lines to 'SDK 1.5/source/framework/BuildDefines.inc':
 
        #ifndef SD_PUBLIC_BUILD
                #define SD_PUBLIC_BUILD
        #endif
 
-Without this, odd bugs will occur when running your code, even if it is
-unmodified from the base SDK code.
+Without this, odd bugs will occur when running your code, even if it is unmodified from the base SDK code.
 
-Next, open 'SDK 1.5/source/etqw\_sdk.sln', choose a configuration from
-the dropdown and click build. The build output will end up in 'SDK
-1.5/source/build/win32/\<configuration name\>/gamex86.dll'.
+Next, open 'SDK 1.5/source/etqw\_sdk.sln', choose a configuration from the dropdown and click build. The build output will end up in 'SDK 1.5/source/build/win32/\<configuration name\>/gamex86.dll'.
 
 Package your build
 ------------------
 
-Now create a text file with a single "0" in it and save it as
-'binary.conf'. Zip both the 'binary.conf' and the newly compiled
-'gamex86.dll' into their own .pk4 file (example - windows\_build.pk4)
-and place it into your mod folder. Conventionally the .PK4 is named
-game00x.pk4, where x is the same number as used in binary.conf, e.g.
-game000.pk4 for Windows, but this is not required.
+Now create a text file with a single "0" in it and save it as 'binary.conf'. Zip both the 'binary.conf' and the newly compiled 'gamex86.dll' into their own .pk4 file (example - windows\_build.pk4) and place it into your mod folder. Conventionally the .PK4 is named game00x.pk4, where x is the same number as used in binary.conf, e.g. game000.pk4 for Windows, but this is not required.
 

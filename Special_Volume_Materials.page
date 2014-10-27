@@ -1,27 +1,19 @@
-Special volume materials are material shaders which mark the brush
-volumes to which they are applied with unique properties.
+Special volume materials are material shaders which mark the brush volumes to which they are applied with unique properties.
 
 "Common" materials
 ------------------
 
-There are a bunch of special volume materials which are used commonly
-(Hence their group name) because their special properties are
-particularly usefull. Also note the most of these materials are not
-visible in-game, unless said otherwise.
+There are a bunch of special volume materials which are used commonly (Hence their group name) because their special properties are particularly usefull. Also note the most of these materials are not visible in-game, unless said otherwise.
 
--   textures/common/player\_clip - Brushes textured with this material
-    are solid to the player only.
+-   textures/common/player\_clip - Brushes textured with this material are solid to the player only.
 
 <!-- -->
 
--   textures/common/ladder - Brushes with this texture, as the name
-    suggests, function as ladders that the player climb up or down. This
-    material has a collision box although it's not visible in-game.
+-   textures/common/ladder - Brushes with this texture, as the name suggests, function as ladders that the player climb up or down. This material has a collision box although it's not visible in-game.
 
 <!-- -->
 
--   textures/common/monsterclip - Brushes textured with this material
-    are solid to monsters only.
+-   textures/common/monsterclip - Brushes textured with this material are solid to monsters only.
 
 Material setup
 --------------

@@ -1,20 +1,9 @@
-This parameter is used to force the GUI renderer to assume a different
-aspect ratio for a particular item. So, if you have a GUI that doesn't
-fit into the 4:3 normal aspect ratio, you can still use it and have text
-with a perfect ratio.
+This parameter is used to force the GUI renderer to assume a different aspect ratio for a particular item. So, if you have a GUI that doesn't fit into the 4:3 normal aspect ratio, you can still use it and have text with a perfect ratio.
 
-I'm still unsure on how to use this, but apparently, it assumes the new
-width is the total width of the item. So a forceaspectwidth of half your
-normal width would result on a flatten-looking text.
+I'm still unsure on how to use this, but apparently, it assumes the new width is the total width of the item. So a forceaspectwidth of half your normal width would result on a flatten-looking text.
 
-Also, for this parameter to work, you must place a new, empty
-[windowDef](WindowDef_%28GUI_item_type%29 "WindowDef (GUI item type)")
-inside the item you're already using. This is because the parameter will
-only act on items that are considered *complex* items. More information
-[here](https://web.archive.org/web/20121205063522/http://www.doom3world.org/phpbb2/viewtopic.php?t=3556 "http://www.doom3world.org/phpbb2/viewtopic.php?t=3556")
-.
+Also, for this parameter to work, you must place a new, empty [windowDef](WindowDef_%28GUI_item_type%29 "WindowDef (GUI item type)") inside the item you're already using. This is because the parameter will only act on items that are considered *complex* items. More information [here](https://web.archive.org/web/20121205063522/http://www.doom3world.org/phpbb2/viewtopic.php?t=3556 "http://www.doom3world.org/phpbb2/viewtopic.php?t=3556") .
 
-\
  The value of this property cannot be changed at runtime.
 
 Syntax
@@ -36,5 +25,4 @@ Example(s)
         visible 1
     }
 
-\
 

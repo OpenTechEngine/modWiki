@@ -1,69 +1,34 @@
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/6/69/Q4square_bg.png) The information on this page is
-specific to [Quake 4](Quake_4 "Quake 4") .
-
-</div>
+![](/images/6/69/Q4square_bg.png) The information on this page is specific to [Quake 4](Quake_4 "Quake 4") .
 
 ------------------------------------------------------------------------
 
-This page describes the Quake 4 specific functionality of the built-in
-map editor. For general information common to all [id Tech
-4](Id_Tech_4 "Id Tech 4") games' editors please see the [map
-editor](Map_editor "Map editor") page. QuakeEdit can be started by
-typing "
-[editor](Editor_%28console_command%29 "Editor (console command)") " in
-the [console](Console "Console") or by starting Quake 4 with "+editor"
-in the shortcut's target command parameters. The best way to start
-QuakeEdit is from its own shortcut. See [launching the editor straight
-away](Startup_parameters#Launching_the_editor "Startup parameters") .
+This page describes the Quake 4 specific functionality of the built-in map editor. For general information common to all [id Tech 4](Id_Tech_4 "Id Tech 4") games' editors please see the [map editor](Map_editor "Map editor") page. QuakeEdit can be started by typing " [editor](Editor_%28console_command%29 "Editor (console command)") " in the [console](Console "Console") or by starting Quake 4 with "+editor" in the shortcut's target command parameters. The best way to start QuakeEdit is from its own shortcut. See [launching the editor straight away](Startup_parameters#Launching_the_editor "Startup parameters") .
 
 Requirements
 ------------
 
-Despite the fact that Quake 4 runs on other platforms, QuakeEdit
-requires Windows 2000/XP. It's recommended that QuakeEdit is run on
-machines with better performance than the minimum system requirements of
-the game unless you only want to edit small maps and that you have a
-three-button mouse. A suggested minimum system specification for editing
-maps would be:
+Despite the fact that Quake 4 runs on other platforms, QuakeEdit requires Windows 2000/XP. It's recommended that QuakeEdit is run on machines with better performance than the minimum system requirements of the game unless you only want to edit small maps and that you have a three-button mouse. A suggested minimum system specification for editing maps would be:
 
 -   2Ghz CPU or equivalent
 -   768mb RAM
--   A video card capable of displaying [vertex and fragment
-    programs](Vertex_and_fragment_programs "Vertex and fragment programs")
+-   A video card capable of displaying [vertex and fragment programs](Vertex_and_fragment_programs "Vertex and fragment programs")
 
 Troubleshooting
 ---------------
 
-This section describes bugs or peculiar behaviour of QuakeEdit and any
-known solutions. If you find a bug not covered here you might try
-quitting the editor, deleting the
-[editor.cfg](CFG_%28file_format%29 "CFG (file format)") file present in
-the / [q4base (folder)](Q4base_%28folder%29 "Q4base (folder)") folder
-and restarting the editor. This will revert the editor to its defaults.
-If you have a problem with the toolbar and this doesn't fix your problem
-try also deleting the "toolsx86.ini" file in your windows directory.
+This section describes bugs or peculiar behaviour of QuakeEdit and any known solutions. If you find a bug not covered here you might try quitting the editor, deleting the [editor.cfg](CFG_%28file_format%29 "CFG (file format)") file present in the / [q4base (folder)](Q4base_%28folder%29 "Q4base (folder)") folder and restarting the editor. This will revert the editor to its defaults. If you have a problem with the toolbar and this doesn't fix your problem try also deleting the "toolsx86.ini" file in your windows directory.
 
 ### When compiling the map I get an error
 
-Please check the [Common Mapping
-Issues](Common_Mapping_Issues "Common Mapping Issues") page for all
-known compiler error messages and solutions.
+Please check the [Common Mapping Issues](Common_Mapping_Issues "Common Mapping Issues") page for all known compiler error messages and solutions.
 
 ### Grid lines don't show up
 
-Make sure [antialiasing](Antialiasing "Antialiasing") is set to *Off* or
-*Application controlled* in your graphics driver control panel in
-Windows. Also make sure the [in-game
-AA](R_multiSamples_%28cvar%29 "R multiSamples (cvar)") is set to off
-too.
+Make sure [antialiasing](Antialiasing "Antialiasing") is set to *Off* or *Application controlled* in your graphics driver control panel in Windows. Also make sure the [in-game AA](R_multiSamples_%28cvar%29 "R multiSamples (cvar)") is set to off too.
 
 ### The windows taskbar and other windows are too bright
 
-Quake 4's brightness defaults to 1.2 so you should start QuakeEdit with
-"+set [r\_brightness](R_brightness_%28cvar%29 "R brightness (cvar)") 1".
+Quake 4's brightness defaults to 1.2 so you should start QuakeEdit with "+set [r\_brightness](R_brightness_%28cvar%29 "R brightness (cvar)") 1".
 
 ### X doesn't show up in the editor but does in the game
 
@@ -71,20 +36,13 @@ Go to View \> Show and make sure X is selected.
 
 ### The main view is very sluggish when click-dragging
 
-Press F2 to bring up Quake 4, bring down the console, close the Quake 4
-window in the cross button on the top right.
+Press F2 to bring up Quake 4, bring down the console, close the Quake 4 window in the cross button on the top right.
 
 ### There are many black textures in the texture browser
 
-Quake 4 comes with a lot of redundant, nonfunctional material shaders.
-The problem is that the declarations reference image files that were not
-shipped with the game.
+Quake 4 comes with a lot of redundant, nonfunctional material shaders. The problem is that the declarations reference image files that were not shipped with the game.
 
-At present no level editor, including the built in editor, validates
-each shader to ensure the images exist. This results in a texture
-browser where half the textures listed are of no use.
+At present no level editor, including the built in editor, validates each shader to ensure the images exist. This results in a texture browser where half the textures listed are of no use.
 
-In the case of Doom 3, there is a workaround and the same solution could
-be applied to other games. Check [eutectic's clean
-paks](Eutectic%27s_clean_paks "Eutectic's clean paks") for more details.
+In the case of Doom 3, there is a workaround and the same solution could be applied to other games. Check [eutectic's clean paks](Eutectic%27s_clean_paks "Eutectic's clean paks") for more details.
 

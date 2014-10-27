@@ -1,15 +1,6 @@
-Whether or not [events](GUI_item_events "GUI item events") will be
-ignored for this item; using a value of 1 makes sure events such as
-onMouseEnter won't get fired by this item. This is needed, for example,
-when you have decorative items on top of a button item - the topmost
-item would be the one receiving the mouse events (even if they haven't
-been declared), while the real button below it would be ignored. With
-noevents, mouse events will correctly be executed on the button item.
+Whether or not [events](GUI_item_events "GUI item events") will be ignored for this item; using a value of 1 makes sure events such as onMouseEnter won't get fired by this item. This is needed, for example, when you have decorative items on top of a button item - the topmost item would be the one receiving the mouse events (even if they haven't been declared), while the real button below it would be ignored. With noevents, mouse events will correctly be executed on the button item.
 
-Using this property on an item can also disable events on all subitems
-that are nested inside of it (
-[reference](https://web.archive.org/web/20080905164004/http://www.doom3world.org/phpbb2/viewtopic.php?t=12275 "http://www.doom3world.org/phpbb2/viewtopic.php?t=12275")
-).
+Using this property on an item can also disable events on all subitems that are nested inside of it ( [reference](https://web.archive.org/web/20080905164004/http://www.doom3world.org/phpbb2/viewtopic.php?t=12275 "http://www.doom3world.org/phpbb2/viewtopic.php?t=12275") ).
 
 Syntax
 ------
@@ -26,5 +17,4 @@ Example(s)
 
     noevents 1
 
-\
 

@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Weapon_hyperblaster_%28entity%29 "http://modwiki.net/w/index.php?title=Weapon_hyperblaster_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Weapon_hyperblaster_%28entity%29 "http://modwiki.net/w/index.php?title=Weapon_hyperblaster_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Weapon_hyperblaster_%28entity%29 "http://modwiki.net/w/index.php?title=Weapon_hyperblaster_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Weapon_hyperblaster_%28entity%29 "http://modwiki.net/w/index.php?title=Weapon_hyperblaster_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -28,117 +10,116 @@ HyperBlaster
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                              DESCRIPTION
-  -------------------------------- ----------------------------
-  ammoRegenStep                    Description not available.
-  ammoRegenTime                    Description not available.
-  ammoRequired                     Description not available.
-  ammoType                         Description not available.
-  angle                            Description not available.
-  anim                             Description not available.
-  bind                             Description not available.
-  bindOrientated                   Description not available.
-  bindToBody                       Description not available.
-  bindToJoint                      Description not available.
-  bindanim                         Description not available.
-  cameraTarget                     Description not available.
-  cinematic                        Description not available.
-  classname                        Description not available.
-  clipSize                         Description not available.
-  clipmodel                        Description not available.
-  cone                             Description not available.
-  crosshairOffsetX                 Description not available.
-  crosshairOffsetY                 Description not available.
-  cylinder                         Description not available.
-  def\_dropItem                    Description not available.
-  def\_mod1                        Description not available.
-  def\_persona                     Description not available.
-  def\_projectile                  Description not available.
-  def\_viewStyle                   Description not available.
-  def\_viewStyle1                  Description not available.
-  dodecahedron                     Description not available.
-  editor\_color                    Description not available.
-  editor\_maxs                     Description not available.
-  editor\_menu                     Description not available.
-  editor\_mins                     Description not available.
-  editor\_usage                    HyperBlaster
-  fireRate                         Description not available.
-  flashColor                       Description not available.
-  flashPointLight                  Description not available.
-  flashRadius                      Description not available.
-  flashTime                        Description not available.
-  flashViewOffset                  Description not available.
-  foreshorten                      Description not available.
-  fx\_muzzleflash                  Description not available.
-  fx\_muzzleflash\_world           Description not available.
-  fx\_respawn                      Description not available.
-  glightOffset                     Description not available.
-  glightRadius                     Description not available.
-  gui                              Description not available.
-  guiTarget                        Description not available.
-  health                           Description not available.
-  hide                             Description not available.
-  hidesurface                      Description not available.
-  instance                         Description not available.
-  inv\_icon                        Description not available.
-  inv\_item                        Description not available.
-  inv\_name                        Description not available.
-  inv\_start\_ammo\_hyperblaster   Description not available.
-  inv\_weapon                      Description not available.
-  joint\_attach                    Description not available.
-  joint\_view\_battery             Description not available.
-  joint\_view\_flash               Description not available.
-  joint\_view\_guiLight            Description not available.
-  joint\_world\_flash              Description not available.
-  maxs                             Description not available.
-  mins                             Description not available.
-  model                            Description not available.
-  model\_view                      Description not available.
-  model\_view\_strogg              Description not available.
-  model\_world                     Description not available.
-  mtr\_crosshair                   Description not available.
-  mtr\_flashShader                 Description not available.
-  mtr\_guiLightShader              Description not available.
-  mtr\_icon                        Description not available.
-  muzzle\_kick\_angles             Description not available.
-  muzzle\_kick\_maxtime            Description not available.
-  muzzle\_kick\_offset             Description not available.
-  muzzle\_kick\_time               Description not available.
-  name                             Description not available.
-  net\_syncPhysics                 Description not available.
-  networkSync                      Description not available.
-  neverDormant                     Description not available.
-  noclipmodel                      Description not available.
-  origin                           Description not available.
-  recoilAngles                     Description not available.
-  recoilTime                       Description not available.
-  rotation                         Description not available.
-  scriptobject                     Description not available.
-  shadow\_lod\_distance            Description not available.
-  size                             Description not available.
-  snd\_acquire                     Description not available.
-  snd\_battery\_spin               Description not available.
-  snd\_battery\_spindown           Description not available.
-  snd\_battery\_spinup             Description not available.
-  snd\_noAmmo                      Description not available.
-  snd\_quaddamage                  Description not available.
-  solidForTeam                     Description not available.
-  spawnclass                       Description not available.
-  spread                           Description not available.
-  spread\_mp                       Description not available.
-  target                           Description not available.
-  trigger\_anim                    Description not available.
-  usable                           Description not available.
-  weaponAngleOffsetAverages        Description not available.
-  weaponAngleOffsetMax             Description not available.
-  weaponAngleOffsetScale           Description not available.
-  weaponOffsetScale                Description not available.
-  weaponOffsetTime                 Description not available.
-  weaponclass                      Description not available.
-  weaponname                       Description not available.
+| KEY                            | DESCRIPTION                |
+|--------------------------------|----------------------------|
+| ammoRegenStep                  | Description not available. |
+| ammoRegenTime                  | Description not available. |
+| ammoRequired                   | Description not available. |
+| ammoType                       | Description not available. |
+| angle                          | Description not available. |
+| anim                           | Description not available. |
+| bind                           | Description not available. |
+| bindOrientated                 | Description not available. |
+| bindToBody                     | Description not available. |
+| bindToJoint                    | Description not available. |
+| bindanim                       | Description not available. |
+| cameraTarget                   | Description not available. |
+| cinematic                      | Description not available. |
+| classname                      | Description not available. |
+| clipSize                       | Description not available. |
+| clipmodel                      | Description not available. |
+| cone                           | Description not available. |
+| crosshairOffsetX               | Description not available. |
+| crosshairOffsetY               | Description not available. |
+| cylinder                       | Description not available. |
+| def\_dropItem                  | Description not available. |
+| def\_mod1                      | Description not available. |
+| def\_persona                   | Description not available. |
+| def\_projectile                | Description not available. |
+| def\_viewStyle                 | Description not available. |
+| def\_viewStyle1                | Description not available. |
+| dodecahedron                   | Description not available. |
+| editor\_color                  | Description not available. |
+| editor\_maxs                   | Description not available. |
+| editor\_menu                   | Description not available. |
+| editor\_mins                   | Description not available. |
+| editor\_usage                  | HyperBlaster               |
+| fireRate                       | Description not available. |
+| flashColor                     | Description not available. |
+| flashPointLight                | Description not available. |
+| flashRadius                    | Description not available. |
+| flashTime                      | Description not available. |
+| flashViewOffset                | Description not available. |
+| foreshorten                    | Description not available. |
+| fx\_muzzleflash                | Description not available. |
+| fx\_muzzleflash\_world         | Description not available. |
+| fx\_respawn                    | Description not available. |
+| glightOffset                   | Description not available. |
+| glightRadius                   | Description not available. |
+| gui                            | Description not available. |
+| guiTarget                      | Description not available. |
+| health                         | Description not available. |
+| hide                           | Description not available. |
+| hidesurface                    | Description not available. |
+| instance                       | Description not available. |
+| inv\_icon                      | Description not available. |
+| inv\_item                      | Description not available. |
+| inv\_name                      | Description not available. |
+| inv\_start\_ammo\_hyperblaster | Description not available. |
+| inv\_weapon                    | Description not available. |
+| joint\_attach                  | Description not available. |
+| joint\_view\_battery           | Description not available. |
+| joint\_view\_flash             | Description not available. |
+| joint\_view\_guiLight          | Description not available. |
+| joint\_world\_flash            | Description not available. |
+| maxs                           | Description not available. |
+| mins                           | Description not available. |
+| model                          | Description not available. |
+| model\_view                    | Description not available. |
+| model\_view\_strogg            | Description not available. |
+| model\_world                   | Description not available. |
+| mtr\_crosshair                 | Description not available. |
+| mtr\_flashShader               | Description not available. |
+| mtr\_guiLightShader            | Description not available. |
+| mtr\_icon                      | Description not available. |
+| muzzle\_kick\_angles           | Description not available. |
+| muzzle\_kick\_maxtime          | Description not available. |
+| muzzle\_kick\_offset           | Description not available. |
+| muzzle\_kick\_time             | Description not available. |
+| name                           | Description not available. |
+| net\_syncPhysics               | Description not available. |
+| networkSync                    | Description not available. |
+| neverDormant                   | Description not available. |
+| noclipmodel                    | Description not available. |
+| origin                         | Description not available. |
+| recoilAngles                   | Description not available. |
+| recoilTime                     | Description not available. |
+| rotation                       | Description not available. |
+| scriptobject                   | Description not available. |
+| shadow\_lod\_distance          | Description not available. |
+| size                           | Description not available. |
+| snd\_acquire                   | Description not available. |
+| snd\_battery\_spin             | Description not available. |
+| snd\_battery\_spindown         | Description not available. |
+| snd\_battery\_spinup           | Description not available. |
+| snd\_noAmmo                    | Description not available. |
+| snd\_quaddamage                | Description not available. |
+| solidForTeam                   | Description not available. |
+| spawnclass                     | Description not available. |
+| spread                         | Description not available. |
+| spread\_mp                     | Description not available. |
+| target                         | Description not available. |
+| trigger\_anim                  | Description not available. |
+| usable                         | Description not available. |
+| weaponAngleOffsetAverages      | Description not available. |
+| weaponAngleOffsetMax           | Description not available. |
+| weaponAngleOffsetScale         | Description not available. |
+| weaponOffsetScale              | Description not available. |
+| weaponOffsetTime               | Description not available. |
+| weaponclass                    | Description not available. |
+| weaponname                     | Description not available. |
 
 Inheritance
 -----------

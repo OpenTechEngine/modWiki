@@ -1,14 +1,12 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-MCG: damage effect direct call, damageFromEnt is the entity the damage
-should appear to come from on the indicator, it can be NULL/"none"
+MCG: damage effect direct call, damageFromEnt is the entity the damage should appear to come from on the indicator, it can be NULL/"none"
 
 Usage
 -----
@@ -30,5 +28,4 @@ Notes
 
 tba
 
-\
 

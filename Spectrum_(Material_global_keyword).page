@@ -1,10 +1,7 @@
 Description
 -----------
 
-Restricts light interaction to those lights with a matching spectrum.
-Without a matching spectrum, no illumination takes place. In other
-words, the material is invisible until it's illuminated by a light with
-a matching spectrum.
+Restricts light interaction to those lights with a matching spectrum. Without a matching spectrum, no illumination takes place. In other words, the material is invisible until it's illuminated by a light with a matching spectrum.
 
 Usage
 -----
@@ -21,9 +18,7 @@ Parameters
 Notes
 -----
 
-Light spectrum is defined within light shaders using the same keyword.
-For example the following material and light shader use the same
-spectrum...
+Light spectrum is defined within light shaders using the same keyword. For example the following material and light shader use the same spectrum...
 
     textures/hell/pentastic1_spectrum
     {
@@ -56,5 +51,4 @@ spectrum...
             }
     }
 
-\
 

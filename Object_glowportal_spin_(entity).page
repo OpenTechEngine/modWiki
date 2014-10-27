@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Object_glowportal_spin_%28entity%29 "http://www.modwiki.net/w/index.php?title=Object_glowportal_spin_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Object_glowportal_spin_%28entity%29 "http://www.modwiki.net/w/index.php?title=Object_glowportal_spin_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Object_glowportal_spin_%28entity%29 "http://www.modwiki.net/w/index.php?title=Object_glowportal_spin_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Object_glowportal_spin_%28entity%29 "http://www.modwiki.net/w/index.php?title=Object_glowportal_spin_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -28,52 +10,51 @@ Creates a portal when triggered
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                   DESCRIPTION
-  --------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------
-  alertMonsters         Description not available.
-  buddy                 the name of the other portal to link to.
-  build\_reach          Description not available.
-  cameraTarget          name of entity to use for remote view
-  closeDelay            the number of seconds to wait before automatically closing. 0 = Stay Open (default: 1)
-  deformType            Description not available.
-  distanceCull          cuts off the area portal for a given portal if player(s) are more than this many units from it (performance benefits). defaults to shaderParm5+4.
-  distanceToggle        if specified, the portal will be closed by default and pop open when a player is within this many units of it.
-  editor\_color         Description not available.
-  editor\_maxs          Description not available.
-  editor\_mins          Description not available.
-  editor\_rotatable     Description not available.
-  editor\_showangle     Description not available.
-  editor\_usage         Creates a portal when triggered
-  editor\_usage2        Description not available.
-  editor\_var XXXX      Description not available.
-  fast\_open            Description not available.
-  fx\_close             Description not available.
-  fx\_open              Description not available.
-  glowPortal            Description not available.
-  inherit               Description not available.
-  maxs                  Description not available.
-  mins                  Description not available.
-  model                 Description not available.
-  monsterportal         Description not available.
-  noTeleport            whether to teleport objects that touch the portal
-  partner               Description not available.
-  remove\_on\_close     Description not available.
-  shaderParm5           specifies the far distance at which the portal will fade out (negative will guarantee the destination will never draw)
-  shaderParm6           specifies the near distance at which the portal will fade out
-  skin                  use when multiple portals in view (skins/portal2.skin, skins/portal3.skin)
-  skin\_onlyWarp        Description not available.
-  snd\_close            Description not available.
-  snd\_loop             Description not available.
-  snd\_open             Description not available.
-  snd\_portal\_entity   Description not available.
-  snd\_portal\_spark    Description not available.
-  sparkCount            Description not available.
-  sparkTimeMin          Description not available.
-  sparkTimeRnd          Description not available.
-  spawnclass            Description not available.
+| KEY                 | DESCRIPTION                                                                                                                                       |
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| alertMonsters       | Description not available.                                                                                                                        |
+| buddy               | the name of the other portal to link to.                                                                                                          |
+| build\_reach        | Description not available.                                                                                                                        |
+| cameraTarget        | name of entity to use for remote view                                                                                                             |
+| closeDelay          | the number of seconds to wait before automatically closing. 0 = Stay Open (default: 1)                                                            |
+| deformType          | Description not available.                                                                                                                        |
+| distanceCull        | cuts off the area portal for a given portal if player(s) are more than this many units from it (performance benefits). defaults to shaderParm5+4. |
+| distanceToggle      | if specified, the portal will be closed by default and pop open when a player is within this many units of it.                                    |
+| editor\_color       | Description not available.                                                                                                                        |
+| editor\_maxs        | Description not available.                                                                                                                        |
+| editor\_mins        | Description not available.                                                                                                                        |
+| editor\_rotatable   | Description not available.                                                                                                                        |
+| editor\_showangle   | Description not available.                                                                                                                        |
+| editor\_usage       | Creates a portal when triggered                                                                                                                   |
+| editor\_usage2      | Description not available.                                                                                                                        |
+| editor\_var XXXX    | Description not available.                                                                                                                        |
+| fast\_open          | Description not available.                                                                                                                        |
+| fx\_close           | Description not available.                                                                                                                        |
+| fx\_open            | Description not available.                                                                                                                        |
+| glowPortal          | Description not available.                                                                                                                        |
+| inherit             | Description not available.                                                                                                                        |
+| maxs                | Description not available.                                                                                                                        |
+| mins                | Description not available.                                                                                                                        |
+| model               | Description not available.                                                                                                                        |
+| monsterportal       | Description not available.                                                                                                                        |
+| noTeleport          | whether to teleport objects that touch the portal                                                                                                 |
+| partner             | Description not available.                                                                                                                        |
+| remove\_on\_close   | Description not available.                                                                                                                        |
+| shaderParm5         | specifies the far distance at which the portal will fade out (negative will guarantee the destination will never draw)                            |
+| shaderParm6         | specifies the near distance at which the portal will fade out                                                                                     |
+| skin                | use when multiple portals in view (skins/portal2.skin, skins/portal3.skin)                                                                        |
+| skin\_onlyWarp      | Description not available.                                                                                                                        |
+| snd\_close          | Description not available.                                                                                                                        |
+| snd\_loop           | Description not available.                                                                                                                        |
+| snd\_open           | Description not available.                                                                                                                        |
+| snd\_portal\_entity | Description not available.                                                                                                                        |
+| snd\_portal\_spark  | Description not available.                                                                                                                        |
+| sparkCount          | Description not available.                                                                                                                        |
+| sparkTimeMin        | Description not available.                                                                                                                        |
+| sparkTimeRnd        | Description not available.                                                                                                                        |
+| spawnclass          | Description not available.                                                                                                                        |
 
 Inheritance
 -----------

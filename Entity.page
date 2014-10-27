@@ -1,82 +1,32 @@
-**Entities** are functional objects placed in a map ("actors" to the
-Unreal mappers). [Lights](Light "Light") , monsters, items, doors,
-ect... are all examples of entities.
+**Entities** are functional objects placed in a map ("actors" to the Unreal mappers). [Lights](Light "Light") , monsters, items, doors, ect... are all examples of entities.
 
-An entity is a combination of an
-[entityDef](Entitydef_%28decl%29 "Entitydef (decl)") type and a [spawn
-class](Spawn_class "Spawn class") , and in many cases a [map entity
-dictionary](Map_entity_dictionary "Map entity dictionary") and/or a
-[script object](Script_object "Script object") . Entities also have a
-name unique from any other entity in the world.
+An entity is a combination of an [entityDef](Entitydef_%28decl%29 "Entitydef (decl)") type and a [spawn class](Spawn_class "Spawn class") , and in many cases a [map entity dictionary](Map_entity_dictionary "Map entity dictionary") and/or a [script object](Script_object "Script object") . Entities also have a name unique from any other entity in the world.
 
 People most commonly refer to an entity by the entityDef type.
 
-Entities are dynamic are most commonly controlled by their spawn class
-or script object, but may be modified by game logic, other entities or
-level [scripts](Script_%28folder%29 "Script (folder)") .
+Entities are dynamic are most commonly controlled by their spawn class or script object, but may be modified by game logic, other entities or level [scripts](Script_%28folder%29 "Script (folder)") .
 
 Entity Interactions
 -------------------
 
-Entity chains are the core of setting up interactions between entities
-in a map. By linking entities together one can instruct the game to
-perform an event when a specific condition is met. An example would be
-having a light turn on when the player enters a room.
+Entity chains are the core of setting up interactions between entities in a map. By linking entities together one can instruct the game to perform an event when a specific condition is met. An example would be having a light turn on when the player enters a room.
 
-One of the more common parent entities in a entity chain are simple
-triggers. They can be identified by the "trigger\_" prefix in their
-name. These entities simply trigger their targets when the player comes
-in contact with their bounding box.
+One of the more common parent entities in a entity chain are simple triggers. They can be identified by the "trigger\_" prefix in their name. These entities simply trigger their targets when the player comes in contact with their bounding box.
 
-Most entities are capable of acting as triggers, even though they aren't
-classified as such. What condition an entity responds to varies from
-entity to entity. In the case of monsters, they will trigger any
-entities they are targeted to when they die.
+Most entities are capable of acting as triggers, even though they aren't classified as such. What condition an entity responds to varies from entity to entity. In the case of monsters, they will trigger any entities they are targeted to when they die.
 
-A few select entities perform special actions when they are triggered.
-These entities can be identified by the "target\_" prefix in their name.
-An example is the target\_lock entity which will lock or unlock any
-targeted doors when it's triggered.
+A few select entities perform special actions when they are triggered. These entities can be identified by the "target\_" prefix in their name. An example is the target\_lock entity which will lock or unlock any targeted doors when it's triggered.
 
-To assign targets to an entity, you simply add "target" key/value pairs
-using the entity inspector window. As an alternative, you can select the
-parent entity, followed by any intended target entities and connecting
-them using Selection \> Connect entities (CTRL + K).
+To assign targets to an entity, you simply add "target" key/value pairs using the entity inspector window. As an alternative, you can select the parent entity, followed by any intended target entities and connecting them using Selection \> Connect entities (CTRL + K).
 
 Aditional comments concerning Entity Chaining
 ---------------------------------------------
 
-Entity chaining can be explained as a visual representation for event
-driven code. A simplified translation of this would be, if x occurs then
-do y. An example of such an event could be when a door opens, or when a
-monster is killed. Lets look at such an example. If player walks over an
-area then open a door, wait 3 seconds and flip on a light. This is an
-event driven sequence. Nothing occurs until the player walks over this
-spot. If the player does not walk over the spot nothing will happen.
-Lets look at one possible way that this might be set up. First a trigger
-would need to be created. In this example we will create a trigger\_once
-entity. The trigger\_once would target the door. The door would in turn
-target a second trigger\_once with the parameter
+Entity chaining can be explained as a visual representation for event driven code. A simplified translation of this would be, if x occurs then do y. An example of such an event could be when a door opens, or when a monster is killed. Lets look at such an example. If player walks over an area then open a door, wait 3 seconds and flip on a light. This is an event driven sequence. Nothing occurs until the player walks over this spot. If the player does not walk over the spot nothing will happen. Lets look at one possible way that this might be set up. First a trigger would need to be created. In this example we will create a trigger\_once entity. The trigger\_once would target the door. The door would in turn target a second trigger\_once with the parameter
 
 Wait 3
 
-This would cause the trigger to wait 3 seconds before processing its
-commands. This trigger would in turn target the light. As you can see
-you have a chain of events occurring, these events are controlled by the
-prebuilt code functions. These prebuilt code functions are refered to as
-entities in the game and have a graphical representation. It’s easiest
-if you remember that everything you do on a computer passes code behind
-the scenes. An example is this webpage it is done by html code. That
-code basically says if you type in this address; present this text in
-this font in this format to the user. The same is true for the Doom
-editor everything you do within it creates or executes code. So entity
-chaining basically is processing a chain of logic with prebuilt
-functions. Whether its shooting an enemy or picking up an object, you
-are creating an order of events to follow. It’s always best to plan out
-the entire sequence before trying to build it. In many cases several
-different entities can provide the same functionality. An example is if
-you wanted a brush to rise up from the floor. Several entities could be
-used for this to list a few..
+This would cause the trigger to wait 3 seconds before processing its commands. This trigger would in turn target the light. As you can see you have a chain of events occurring, these events are controlled by the prebuilt code functions. These prebuilt code functions are refered to as entities in the game and have a graphical representation. It’s easiest if you remember that everything you do on a computer passes code behind the scenes. An example is this webpage it is done by html code. That code basically says if you type in this address; present this text in this font in this format to the user. The same is true for the Doom editor everything you do within it creates or executes code. So entity chaining basically is processing a chain of logic with prebuilt functions. Whether its shooting an enemy or picking up an object, you are creating an order of events to follow. It’s always best to plan out the entire sequence before trying to build it. In many cases several different entities can provide the same functionality. An example is if you wanted a brush to rise up from the floor. Several entities could be used for this to list a few..
 
 1.  func\_door You could set the door to toggle positions.
 2.  func\_riser Simply triggering this would achieve the effect
@@ -85,29 +35,12 @@ used for this to list a few..
 
 etc…
 
-In fact you could simply bind your brush to one of these instead of
-simply creating one out of a brush. Often in coding there are multiple
-ways to achieve the same goal. In fact all the functions provided by
-entities can be done with scripting inside the game engine. Its up to
-you to decide what method is best for you. For those not comfortable
-with scripting or more familiar with click and drag approaches, entity
-chaining might reduce development times. Those individuals that are
-comfortable with scripting or text environments might find scripting
-easier.
-
-\
+In fact you could simply bind your brush to one of these instead of simply creating one out of a brush. Often in coding there are multiple ways to achieve the same goal. In fact all the functions provided by entities can be done with scripting inside the game engine. Its up to you to decide what method is best for you. For those not comfortable with scripting or more familiar with click and drag approaches, entity chaining might reduce development times. Those individuals that are comfortable with scripting or text environments might find scripting easier.
 
 The Worldspawn
 --------------
 
-The worldspawn is a very specific type of entity. All maps must have
-one, and only one, worldspawn entity. Its purpose is to act as a
-container for every static brush in your map. If you get a "no
-worldspawn in map" message in the console when you try to load a map
-then, for some strange reason, the worldspawn information was lost and
-you must restore it. **Make a backup of your .
-[MAP](MAP_%28file_format%29 "MAP (file format)") file** and open the
-copy in a text editor and make sure it starts with:
+The worldspawn is a very specific type of entity. All maps must have one, and only one, worldspawn entity. Its purpose is to act as a container for every static brush in your map. If you get a "no worldspawn in map" message in the console when you try to load a map then, for some strange reason, the worldspawn information was lost and you must restore it. **Make a backup of your . [MAP](MAP_%28file_format%29 "MAP (file format)") file** and open the copy in a text editor and make sure it starts with:
 
     Version 2 
     // entity 0 
@@ -119,9 +52,5 @@ If not, replace the first four lines with the above.
 
 ### Worldspawn's Call property
 
-Worldspawn's `     call    ` property can be used to execute a script
-when the map starts. Note that worldspawn does not appear in the
-editor's entities list. To select worldspawn go to the Entity Inspector
-(hotkey ' `     N    ` ') and select the worldspawn class from the
-topmost dropdown.
+Worldspawn's `     call    ` property can be used to execute a script when the map starts. Note that worldspawn does not appear in the editor's entities list. To select worldspawn go to the Entity Inspector (hotkey ' `     N    ` ') and select the worldspawn class from the topmost dropdown.
 

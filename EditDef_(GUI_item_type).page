@@ -1,11 +1,7 @@
-![An editDef from
-Doom3](/images/thumb/9/98/Gui_example_editdef.png/180px-Gui_example_editdef.png)\
+![An editDef from Doom3](/images/thumb/9/98/Gui_example_editdef.png/180px-Gui_example_editdef.png)
  *An editDef from Doom3*
 
-Just like a
-[windowDef](WindowDef_%28GUI_item_type%29 "WindowDef (GUI item type)") ,
-but accepts a text input by the user. An editable text field. Can't be
-used as in-game GUI.
+Just like a [windowDef](WindowDef_%28GUI_item_type%29 "WindowDef (GUI item type)") , but accepts a text input by the user. An editable text field. Can't be used as in-game GUI.
 
 Additional properties
 ---------------------
@@ -34,7 +30,5 @@ Example(s)
         textaligny  -6
         forecolor   0.6, 0.8, 0.8, 1
     }
-
-\
 
 

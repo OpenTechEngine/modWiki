@@ -1,51 +1,32 @@
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/f/f9/Etqwsquare_bg.png) The information on this page is
-specific to [Enemy Territory: Quake
-Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
-
-</div>
+![](/images/f/f9/Etqwsquare_bg.png) The information on this page is specific to [Enemy Territory: Quake Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
 
 ------------------------------------------------------------------------
 
-The Quake Wars bots work mainly on groups of bot\_action entities
-specified in WorldEdit and managed via the map script.
+The Quake Wars bots work mainly on groups of bot\_action entities specified in WorldEdit and managed via the map script.
 
-The bot actions are basically hints on what types of goals are where,
-the bot AI pretty much decides what to do and when from the actions that
-are active. The designer basically helps keep things manageable by
-switching groups of action off and on as the objectives progress.
+The bot actions are basically hints on what types of goals are where, the bot AI pretty much decides what to do and when from the actions that are active. The designer basically helps keep things manageable by switching groups of action off and on as the objectives progress.
 
-Note: While it has it's roots in the Fritzbot system, since navigation
-is handled by the [AAS](AAS "AAS") system part of the grunt work for the
-designer in setting up navigation has been removed (well, shifted).
+Note: While it has it's roots in the Fritzbot system, since navigation is handled by the [AAS](AAS "AAS") system part of the grunt work for the designer in setting up navigation has been removed (well, shifted).
 
 In game
 -------
 
 For a quick look at at bot actions in the retail maps use the cvars
 
-[net\_allowCheats](Net_allowCheats_%28cvar%29 "Net allowCheats (cvar)")
-1
+[net\_allowCheats](Net_allowCheats_%28cvar%29 "Net allowCheats (cvar)") 1
 
-[bot\_drawActions](Bot_drawActions_%28cvar%29 "Bot drawActions (cvar)")
-1
+[bot\_drawActions](Bot_drawActions_%28cvar%29 "Bot drawActions (cvar)") 1
 
 and start a game against bots.
 
 In editor
 ---------
 
-bot\_action - looking through 'Available Keys' in the property editor
-for one of these entities is also informative. Or on the [splash damage
-wiki](http://wiki.splashdamage.com/index.php/Entity_bot_action "http://wiki.splashdamage.com/index.php/Entity_bot_action")
-(with some description of values missing).
+bot\_action - looking through 'Available Keys' in the property editor for one of these entities is also informative. Or on the [splash damage wiki](http://wiki.splashdamage.com/index.php/Entity_bot_action "http://wiki.splashdamage.com/index.php/Entity_bot_action") (with some description of values missing).
 
 The main key/values:
 
-groupID - number of the group. More about this later. humanGoal and
-stroggGoal - the number for the goal type, which is as follows.
+groupID - number of the group. More about this later. humanGoal and stroggGoal - the number for the goal type, which is as follows.
 
 From BotAI\_Actions.h:
 
@@ -92,30 +73,21 @@ From BotAI\_Actions.h:
     38  ACTION_DROP_PRIORITY_DEPLOYABLE,
     39  ACTION_MCP_ROUTE_MARKER
 
-A suggestion would be saving this list to a file, or keeping this page
-open because we'll be looking it up a lot.
+A suggestion would be saving this list to a file, or keeping this page open because we'll be looking it up a lot.
 
-Armed with this list and the information from property editor, looking
-at bot\_drawactions makes more sense.
+Armed with this list and the information from property editor, looking at bot\_drawactions makes more sense.
 
-\
  bot\_action entities are supported by:
 
-bot\_action\_bbox - which are used to give a more specific area for the
-action to be done, for example mine laying area, airstrikes.
+bot\_action\_bbox - which are used to give a more specific area for the action to be done, for example mine laying area, airstrikes.
 
-These are set up in seeming backward manner with the bbox targeting the
-bot\_action entity.
+These are set up in seeming backward manner with the bbox targeting the bot\_action entity.
 
-bot\_dynamic\_obstacle - used for dynamic objective like bridge building
-and barrier destruction.
+bot\_dynamic\_obstacle - used for dynamic objective like bridge building and barrier destruction.
 
 and more.
 
-\
- It would be best to work through adding bot support for a map objective
-by objective, team by team. Plan out all the action groups first.
-Example from valley map script:
+ It would be best to work through adding bot support for a map objective by objective, team by team. Plan out all the action groups first. Example from valley map script:
 
     // Objective One - Build Bridge
     #define VAL_OBJ_CONSTRUCT_BRIDGE            2
@@ -124,13 +96,9 @@ Example from valley map script:
     #define VAL_STROGG_DEFEND_BRIDGE            5
     #define VAL_STROGG_DEPLOY_BRIDGE            6
 
-\
- A name for the action group is used in the map script, but a number is
-used for the groupID set on the bot\_action entities in worldedit.
+ A name for the action group is used in the map script, but a number is used for the groupID set on the bot\_action entities in worldedit.
 
-\
- The actions in the retail maps follow a basic grouping plan for each
-objective.
+ The actions in the retail maps follow a basic grouping plan for each objective.
 
 Group for the actual objective
 
@@ -142,17 +110,13 @@ Group for defending teams actions
 
 Group for defending teams deploys
 
-\
  So on to adding the actions:
 
-Again using valley as example (which can be adapted to sdks example map
-).
+Again using valley as example (which can be adapted to sdks example map ).
 
 VAL\_OBJ\_CONSTRUCT\_BRIDGE ie groupID 2
 
-This is actual objective can be focussed on one bot\_action near the
-construction point and a bot\_action\_bbox around the actual build
-materials.
+This is actual objective can be focussed on one bot\_action near the construction point and a bot\_action\_bbox around the actual build materials.
 
 so we want ACTION\_MAJOR\_OBJ\_BUILD ie 3
 
@@ -162,38 +126,29 @@ and ACTION\_PREVENT\_BUILD ie 5
 
 stroggGoal 5
 
-\
- For the others, attacking/defending team action groups are the variety
-of actions you think would help, looking at the list of action types to
-see the kind of goals available, camping, sniping, supply crates, mines,
-airstrikes.
+ For the others, attacking/defending team action groups are the variety of actions you think would help, looking at the list of action types to see the kind of goals available, camping, sniping, supply crates, mines, airstrikes.
 
-Wandering through the retail maps with bot\_drawactions, and filtering
-with the other bot\_ cvars will help getting a handle on things.
+Wandering through the retail maps with bot\_drawactions, and filtering with the other bot\_ cvars will help getting a handle on things.
 
 Map Scripting
 -------------
 
 The retail map scripts are essential study.
 
-Bot setup for each objective is done along with the other objective
-scripting.
+Bot setup for each objective is done along with the other objective scripting.
 
-The main operations are switching off previous action groups and
-switching on the next.
+The main operations are switching off previous action groups and switching on the next.
 
 objManager.activateBotActionGroup( VAL\_OBJ\_CONSTRUCT\_BRIDGE );
 
-Since a name has been defined to correspond to a groupID (or was it the
-other way round ) you can reference it this way.
+Since a name has been defined to correspond to a groupID (or was it the other way round ) you can reference it this way.
 
 Most of the other functions seem pretty self explanatory.
 
 Building the aas
 ----------------
 
-Before the bots can even move around it needs a valid navigation map (
-[AAS](AAS "AAS") ).
+Before the bots can even move around it needs a valid navigation map ( [AAS](AAS "AAS") ).
 
 This is done in worldedit via the Compile-\>Custom Tool menu.
 

@@ -1,15 +1,6 @@
-<div id="stub" class="boilerplate metadata">
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Particle_%28decl%29 "http://www.modwiki.net/w/index.php?title=Particle_%28decl%29&action=edit") </span> .*
 
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Particle_%28decl%29 "http://www.modwiki.net/w/index.php?title=Particle_%28decl%29&action=edit")
-</span> .*
-
-</div>
-
-Particle declarations reference a material and provide the parameters
-needed to reproduce a particle stream in game.
+Particle declarations reference a material and provide the parameters needed to reproduce a particle stream in game.
 
 Syntax
 ------
@@ -27,34 +18,34 @@ Keywords
 
 ### Global
 
-  Keywords & Usage     Description
-  -------------------- -------------
-  depthHack \<bool\>   ???
+| Keywords & Usage   | Description |
+|--------------------|-------------|
+| depthHack \<bool\> | ???         |
 
 ### Stage
 
-  Keywords & Usage                                 Description
-  ------------------------------------------------ -------------
-  count \<number\>                                 ???
-  material \<name\>                                ???
-  time \<time\>                                    ???
-  cycles \<number\>                                ???
-  bunching \<number\>                              ???
-  distribution \<shape\> \<x\> \<y\> \<z\>         ???
-  direction \<shape\> \<number\>                   ???
-  orientation \<type\>                             ???
-  speed \<number\>                                 ???
-  size \<number\>                                  ???
-  aspect \<number\>                                ???
-  fadeIn \<number\>                                ???
-  fadeOut \<number\>                               ???
-  fadeIndex \<number\>                             ???
-  color \<red\> \<green\> \<blue\> \<alpha\>       ???
-  fadeColor \<red\> \<green\> \<blue\> \<alpha\>   ???
-  offset \<x\> \<y\> \<z\>                         ???
-  gravity \<type\> \<value\>                       ???
-  rotation \<value\> to \<value\>                  ???
-  randomDistribution \<bool\>                      ???
-  boundsExpansion \<value\>                        ???
+| Keywords & Usage                               | Description |
+|------------------------------------------------|-------------|
+| count \<number\>                               | ???         |
+| material \<name\>                              | ???         |
+| time \<time\>                                  | ???         |
+| cycles \<number\>                              | ???         |
+| bunching \<number\>                            | ???         |
+| distribution \<shape\> \<x\> \<y\> \<z\>       | ???         |
+| direction \<shape\> \<number\>                 | ???         |
+| orientation \<type\>                           | ???         |
+| speed \<number\>                               | ???         |
+| size \<number\>                                | ???         |
+| aspect \<number\>                              | ???         |
+| fadeIn \<number\>                              | ???         |
+| fadeOut \<number\>                             | ???         |
+| fadeIndex \<number\>                           | ???         |
+| color \<red\> \<green\> \<blue\> \<alpha\>     | ???         |
+| fadeColor \<red\> \<green\> \<blue\> \<alpha\> | ???         |
+| offset \<x\> \<y\> \<z\>                       | ???         |
+| gravity \<type\> \<value\>                     | ???         |
+| rotation \<value\> to \<value\>                | ???         |
+| randomDistribution \<bool\>                    | ???         |
+| boundsExpansion \<value\>                      | ???         |
 
 

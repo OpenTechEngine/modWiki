@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Func_door_%28entity%29 "http://www.modwiki.net/w/index.php?title=Func_door_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Func_door_%28entity%29 "http://www.modwiki.net/w/index.php?title=Func_door_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Func_door_%28entity%29 "http://www.modwiki.net/w/index.php?title=Func_door_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Func_door_%28entity%29 "http://www.modwiki.net/w/index.php?title=Func_door_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -33,67 +15,66 @@ Good for:
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                 DESCRIPTION
-  ------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  angle               Determines the opening direction.
-  anim                Description not available.
-  bind                Description not available.
-  bindOrientated      Description not available.
-  bindToBody          Description not available.
-  bindToJoint         Description not available.
-  bindanim            Description not available.
-  cameraTarget        Description not available.
-  cinematic           Description not available.
-  classname           Description not available.
-  clipmodel           Description not available.
-  cone                Description not available.
-  crusher             Description not available.
-  cylinder            Description not available.
-  dmg                 Damage to do to the entity which stops a door from closing.
-  editor\_bool XXXX   Description not available.
-  editor\_color       Description not available.
-  editor\_maxs        Description not available.
-  editor\_mins        Description not available.
-  editor\_mover       Description not available.
-  editor\_snd XXXX    Description not available.
-  editor\_usage       Door.
-  editor\_var XXXX    Description not available.
-  guiTarget           Description not available.
-  health              If set, the door opens when sufficient damage is done to it.
-  hide                Description not available.
-  lip                 lip remaining at end of move.
-  locked              used in conjunction with no\_touch,the door must be triggered by a trigger, after which it works normally. if locked = 1 then the door opens when unlocked, if locked = 2 then the door just becomes unlocked..
-  maxs                Description not available.
-  mins                Description not available.
-  model               Description not available.
-  name                Description not available.
-  networkSync         Description not available.
-  neverDormant        Description not available.
-  noGrab              Description not available.
-  no\_touch           Defines if the door opens when a creature (a player or NPC) comes near it. (Default is **1** )
-  noclipmodel         Description not available.
-  origin              Description not available.
-  rotation            Description not available.
-  scriptobject        Description not available.
-  size                Description not available.
-  skin\_xray          Description not available.
-  slowmo              Description not available.
-  snd\_close          Description not available.
-  snd\_locked         Description not available.
-  snd\_open           Description not available.
-  snd\_opened         Description not available.
-  snd\_unlocked       Description not available.
-  solidForTeam        Description not available.
-  spawnclass          Description not available.
-  speed               movement speed.
-  start\_open         Description not available.
-  target              Description not available.
-  team                All doors with the same "team" value (arbitrary text strings allowed) will open and close synchronously as soon as one of the doors gets triggered. Useful for double doors.
-  triggersize         sets the amount the trigger extends from the door.
-  wait                The duration in seconds until the door closes after it opened. In Doom 3, the default value is **3** seconds.
+| KEY               | DESCRIPTION                                                                                                                                                                                                     |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| angle             | Determines the opening direction.                                                                                                                                                                               |
+| anim              | Description not available.                                                                                                                                                                                      |
+| bind              | Description not available.                                                                                                                                                                                      |
+| bindOrientated    | Description not available.                                                                                                                                                                                      |
+| bindToBody        | Description not available.                                                                                                                                                                                      |
+| bindToJoint       | Description not available.                                                                                                                                                                                      |
+| bindanim          | Description not available.                                                                                                                                                                                      |
+| cameraTarget      | Description not available.                                                                                                                                                                                      |
+| cinematic         | Description not available.                                                                                                                                                                                      |
+| classname         | Description not available.                                                                                                                                                                                      |
+| clipmodel         | Description not available.                                                                                                                                                                                      |
+| cone              | Description not available.                                                                                                                                                                                      |
+| crusher           | Description not available.                                                                                                                                                                                      |
+| cylinder          | Description not available.                                                                                                                                                                                      |
+| dmg               | Damage to do to the entity which stops a door from closing.                                                                                                                                                     |
+| editor\_bool XXXX | Description not available.                                                                                                                                                                                      |
+| editor\_color     | Description not available.                                                                                                                                                                                      |
+| editor\_maxs      | Description not available.                                                                                                                                                                                      |
+| editor\_mins      | Description not available.                                                                                                                                                                                      |
+| editor\_mover     | Description not available.                                                                                                                                                                                      |
+| editor\_snd XXXX  | Description not available.                                                                                                                                                                                      |
+| editor\_usage     | Door.                                                                                                                                                                                                           |
+| editor\_var XXXX  | Description not available.                                                                                                                                                                                      |
+| guiTarget         | Description not available.                                                                                                                                                                                      |
+| health            | If set, the door opens when sufficient damage is done to it.                                                                                                                                                    |
+| hide              | Description not available.                                                                                                                                                                                      |
+| lip               | lip remaining at end of move.                                                                                                                                                                                   |
+| locked            | used in conjunction with no\_touch,the door must be triggered by a trigger, after which it works normally. if locked = 1 then the door opens when unlocked, if locked = 2 then the door just becomes unlocked.. |
+| maxs              | Description not available.                                                                                                                                                                                      |
+| mins              | Description not available.                                                                                                                                                                                      |
+| model             | Description not available.                                                                                                                                                                                      |
+| name              | Description not available.                                                                                                                                                                                      |
+| networkSync       | Description not available.                                                                                                                                                                                      |
+| neverDormant      | Description not available.                                                                                                                                                                                      |
+| noGrab            | Description not available.                                                                                                                                                                                      |
+| no\_touch         | Defines if the door opens when a creature (a player or NPC) comes near it. (Default is **1** )                                                                                                                  |
+| noclipmodel       | Description not available.                                                                                                                                                                                      |
+| origin            | Description not available.                                                                                                                                                                                      |
+| rotation          | Description not available.                                                                                                                                                                                      |
+| scriptobject      | Description not available.                                                                                                                                                                                      |
+| size              | Description not available.                                                                                                                                                                                      |
+| skin\_xray        | Description not available.                                                                                                                                                                                      |
+| slowmo            | Description not available.                                                                                                                                                                                      |
+| snd\_close        | Description not available.                                                                                                                                                                                      |
+| snd\_locked       | Description not available.                                                                                                                                                                                      |
+| snd\_open         | Description not available.                                                                                                                                                                                      |
+| snd\_opened       | Description not available.                                                                                                                                                                                      |
+| snd\_unlocked     | Description not available.                                                                                                                                                                                      |
+| solidForTeam      | Description not available.                                                                                                                                                                                      |
+| spawnclass        | Description not available.                                                                                                                                                                                      |
+| speed             | movement speed.                                                                                                                                                                                                 |
+| start\_open       | Description not available.                                                                                                                                                                                      |
+| target            | Description not available.                                                                                                                                                                                      |
+| team              | All doors with the same "team" value (arbitrary text strings allowed) will open and close synchronously as soon as one of the doors gets triggered. Useful for double doors.                                    |
+| triggersize       | sets the amount the trigger extends from the door.                                                                                                                                                              |
+| wait              | The duration in seconds until the door closes after it opened. In Doom 3, the default value is **3** seconds.                                                                                                   |
 
 Inheritance
 -----------
@@ -114,6 +95,5 @@ Notes
 
 <!-- -->
 
--   To create a door operated only by triggers: set **no\_touch** to
-    **1** , and set **wait** to **-1** .
+-   To create a door operated only by triggers: set **no\_touch** to **1** , and set **wait** to **-1** .
 

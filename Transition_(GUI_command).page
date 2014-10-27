@@ -1,35 +1,21 @@
-Animates an item property from one value to another. This is equivalent
-to what's usually called an 'easing' or 'tweening' animation somewhere
-else. It works a lot like the
-[set](Set_%28GUI_command%29 "Set (GUI command)") command, except that it
-interpolates the values in-between during a certain time to create
-smooth visual transitions.
+Animates an item property from one value to another. This is equivalent to what's usually called an 'easing' or 'tweening' animation somewhere else. It works a lot like the [set](Set_%28GUI_command%29 "Set (GUI command)") command, except that it interpolates the values in-between during a certain time to create smooth visual transitions.
 
 Syntax
 ------
 
     transition property oldValue newValue time [start_inertia stop_force]
 
-*property* is the name of a property in the current item, or a reference
-to a property on another item (through the "itemName::propertyName"
-syntax).
+*property* is the name of a property in the current item, or a reference to a property on another item (through the "itemName::propertyName" syntax).
 
 *oldValue* is the actual or starting value on the animation.
 
 *newValue* is the future or desired value on the animation.
 
-*time* is the time, in miliseconds, that the transition will take. The
-transition begins as soon as the command is called, and lasts for the
-time declared here.
+*time* is the time, in miliseconds, that the transition will take. The transition begins as soon as the command is called, and lasts for the time declared here.
 
-*start\_inertia* is the starting inertia for the value change. It
-defaults to 0 and it means a direct, linear starting animation; the
-maximum seems to be 1 and that means it starts slowly and then
-accelerates.
+*start\_inertia* is the starting inertia for the value change. It defaults to 0 and it means a direct, linear starting animation; the maximum seems to be 1 and that means it starts slowly and then accelerates.
 
-*stop\_force* is the stopping force for the change value. It defaults to
-0 and that means a direct, linear ending animation; the maximum seems to
-be 1 and that means it slowly deaccelerates to a complete stop.
+*stop\_force* is the stopping force for the change value. It defaults to 0 and that means a direct, linear ending animation; the maximum seems to be 1 and that means it slowly deaccelerates to a complete stop.
 
 Example(s)
 ----------
@@ -39,5 +25,4 @@ Example(s)
     transition "menu_2::rect" "32, 64, 160, 32" "32, 96, 160,32" "400" "1" "1"; // An 'eased', smooth animation
     transition "menu_2::rect" "32, 64, 160, 32" "32, 96, 160,32" "400" "0" "0"; // A 'linear' animation
 
-\
 

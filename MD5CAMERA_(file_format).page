@@ -1,41 +1,30 @@
 Overview
 --------
 
-MD5Camera files are ascii (plain text) files that contain camera path
-data. This data controls the position, rotation, and field of view for
-cinematic cameras. They are part of the .
-[MD5](MD5_%28file_format%29 "MD5 (file format)") format system. The
-other MD5 formats are:
+MD5Camera files are ascii (plain text) files that contain camera path data. This data controls the position, rotation, and field of view for cinematic cameras. They are part of the . [MD5](MD5_%28file_format%29 "MD5 (file format)") format system. The other MD5 formats are:
 
- . [MD5MESH](MD5MESH_%28file_format%29 "MD5MESH (file format)") 
-:   Low resolution polygonal mesh exported from a 3D application.
+ . [MD5MESH](MD5MESH_%28file_format%29 "MD5MESH (file format)")   
+Low resolution polygonal mesh exported from a 3D application.
 
- . [MD5ANIM](MD5ANIM_%28file_format%29 "MD5ANIM (file format)") 
-:   Contains animation sequence data, the positions of bones etc. during
-    animation.
+ . [MD5ANIM](MD5ANIM_%28file_format%29 "MD5ANIM (file format)")   
+Contains animation sequence data, the positions of bones etc. during animation.
 
 Model Format Syntax
 -------------------
 
 ### MD5 Header
 
-All MD5 format files start with the MD5 header, regardless the specific
-filetype. The header is the first section in the file and is as such...
+All MD5 format files start with the MD5 header, regardless the specific filetype. The header is the first section in the file and is as such...
 
     MD5Version <integer>
     commandline "<string>"
 
--   MD5Version - An integer that defines the current MD5 specification
-    version. This should always read 10.
--   commandline - A string that contains the command line parameters
-    passed to the
-    [exportmodels](Exportmodels_%28console_command%29 "Exportmodels (console command)")
-    console command.
+-   MD5Version - An integer that defines the current MD5 specification version. This should always read 10.
+-   commandline - A string that contains the command line parameters passed to the [exportmodels](Exportmodels_%28console_command%29 "Exportmodels (console command)") console command.
 
 ### Filetype Specific Parameters
 
-This section contains filetype specifc parameters. The filetype specific
-parameters make up the second section in the file.
+This section contains filetype specifc parameters. The filetype specific parameters make up the second section in the file.
 
 In the case of MD5Camera the filetype specific parameters are as such...
 
@@ -43,17 +32,13 @@ In the case of MD5Camera the filetype specific parameters are as such...
     frameRate <integer>
     numCuts <integer>
 
--   numFrames - An integer that defines the total number of frames in
-    the animation.
--   frameRate - An integer that defines the rate of playback in frames
-    per second.
--   numCuts - An integer that defines the number of cuts in the
-    animation.
+-   numFrames - An integer that defines the total number of frames in the animation.
+-   frameRate - An integer that defines the rate of playback in frames per second.
+-   numCuts - An integer that defines the number of cuts in the animation.
 
 ### Ordered Lists
 
-The third section in the file contains ordered lists. These lists
-contain data relevant to the type declared.
+The third section in the file contains ordered lists. These lists contain data relevant to the type declared.
 
     <string> {
             [element 1]
@@ -62,11 +47,9 @@ contain data relevant to the type declared.
             ... ect ...
     }
 
-First, the type of list is declared (\<string\>). Then the body of the
-list is contained within curly brackets.
+First, the type of list is declared (\<string\>). Then the body of the list is contained within curly brackets.
 
-The list is constructed of a series of elements each on a new line. The
-number of elements varies depending on type.
+The list is constructed of a series of elements each on a new line. The number of elements varies depending on type.
 
 In the case of MD5Camera there are two ordered lists.
 
@@ -76,13 +59,11 @@ Each element of the cuts ordered list is structured like so ...
 
     [frameNumber]
 
--   frameNumber - An integer that defines the frame where a cut takes
-    place.
+-   frameNumber - An integer that defines the frame where a cut takes place.
 
 The number of elements is dependant on the number of cuts.
 
-For instance, if there are five cuts, there should be five frame indexes
-listed.
+For instance, if there are five cuts, there should be five frame indexes listed.
 
 #### Camera
 
@@ -90,21 +71,13 @@ Each element of the camera ordered list is structured like so ...
 
     ( [X Pos] [Y Pos] [Z Pos] ) ( [Orientation] ) [FOV]
 
--   X Pos - a floating point number that defines the position of the
-    camera on the X axis.
--   Y Pos - a floating point number that defines the position of the
-    camera on the Y axis.
--   Z Pos - a floating point number that defines the position of the
-    camera on the Z axis.
--   Orientation - a rotational
-    [quaternion](http://www.gamedev.net/reference/articles/article1095.asp "http://www.gamedev.net/reference/articles/article1095.asp")
-    that defines the orientation of the camera. (Only the X, Y, and Z
-    components are stored. W is calculated on the fly.)
--   FOV - a floating point number that defines the field of view of the
-    camera.
+-   X Pos - a floating point number that defines the position of the camera on the X axis.
+-   Y Pos - a floating point number that defines the position of the camera on the Y axis.
+-   Z Pos - a floating point number that defines the position of the camera on the Z axis.
+-   Orientation - a rotational [quaternion](http://www.gamedev.net/reference/articles/article1095.asp "http://www.gamedev.net/reference/articles/article1095.asp") that defines the orientation of the camera. (Only the X, Y, and Z components are stored. W is calculated on the fly.)
+-   FOV - a floating point number that defines the field of view of the camera.
 
 The number of elements is dependant on the number of frames.
 
-If there are five frames total, there should be five camera keyframes
-listed.
+If there are five frames total, there should be five camera keyframes listed.
 

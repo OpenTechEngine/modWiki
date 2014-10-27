@@ -1,8 +1,7 @@
 Description
 -----------
 
-The **deform** keyword applies the specified type of deformation to a
-material shader.
+The **deform** keyword applies the specified type of deformation to a material shader.
 
 Usage
 -----
@@ -15,60 +14,50 @@ Parameters
 ----------
 
 -   \<type\> - The deformation type to be used.
--   \<parameters\> - The exact definition varies depending on the type
-    of deform.
+-   \<parameters\> - The exact definition varies depending on the type of deform.
 
 ### Types
 
- eyeBall 
-:   Used for eyeball materials on NPCs to allow for pupils to move along
-    with whatever the NPC is looking at.
+ eyeBall   
+Used for eyeball materials on NPCs to allow for pupils to move along with whatever the NPC is looking at.
 
- expand \<amount\> 
-:   Expand the surface along it's normals.
+ expand \<amount\>   
+Expand the surface along it's normals.
 
- flare \<size\> 
-:   Used for light flares which are seen as bloom-like areas around
-    light fixtures.
+ flare \<size\>   
+Used for light flares which are seen as bloom-like areas around light fixtures.
 
- move \<amount\> 
-:   Moves the surfaces along it's X axis.
-:   Example:
+ move \<amount\>   
+Moves the surfaces along it's X axis.
 
-        deform move (time * 1)
+Example:
 
- particle \<particleDecl\> 
-:   Emit the specified particles from the surface.
+    deform move (time * 1)
 
- particle2 \<particleDecl\> 
-:   It will emit particles like **particle** while ignoring the surface
-    area. As a result, small surfaces emit as much particles as large
-    surfaces.
+ particle \<particleDecl\>   
+Emit the specified particles from the surface.
 
- sprite 
-:   Causes any surface to which this material is applied to behave as a
-    sprite in that it always faces the player.
+ particle2 \<particleDecl\>   
+It will emit particles like **particle** while ignoring the surface area. As a result, small surfaces emit as much particles as large surfaces.
 
- tube 
-:   Causes the surface to appear bent around a tube.
+ sprite   
+Causes any surface to which this material is applied to behave as a sprite in that it always faces the player.
 
- turbulent \<table\> \<range\> \<timeoffset\> \<domain\> 
-:   Causes wave-like distortion based on the given table.
-:   Example:
+ tube   
+Causes the surface to appear bent around a tube.
 
-        deform turbulent sinTable 0.05 (time * 1) 10
+ turbulent \<table\> \<range\> \<timeoffset\> \<domain\>   
+Causes wave-like distortion based on the given table.
+
+Example:
+
+    deform turbulent sinTable 0.05 (time * 1) 10
 
 Notes
 -----
 
-Any material shaders that make use of the deform keyword coupled with
-flare, sprite, tube, eyeball, cannot be illuminated by lights because
-these types of deforms are rendered in a separate pass.
+Any material shaders that make use of the deform keyword coupled with flare, sprite, tube, eyeball, cannot be illuminated by lights because these types of deforms are rendered in a separate pass.
 
-The examples, **move** and **expand** types were taken from the [id.sdk:
-Tables &
-Materials](http://iddevnet.com/doom3/materials.php "http://iddevnet.com/doom3/materials.php")
-page.
+The examples, **move** and **expand** types were taken from the [id.sdk: Tables & Materials](http://iddevnet.com/doom3/materials.php "http://iddevnet.com/doom3/materials.php") page.
 
-\
 

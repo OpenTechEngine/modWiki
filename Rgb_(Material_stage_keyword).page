@@ -1,8 +1,7 @@
 Description
 -----------
 
-The **rgb** keyword multiples the red, green, and blue channels of the
-associated map by the given value.
+The **rgb** keyword multiples the red, green, and blue channels of the associated map by the given value.
 
 Usage
 -----
@@ -12,14 +11,12 @@ Usage
 Parameters
 ----------
 
--   *colorval* - the value by which the red, green, and blue channels of
-    the image map should be multiplied
+-   *colorval* - the value by which the red, green, and blue channels of the image map should be multiplied
 
 Example
 -------
 
-The following stage reduces the intensity of the red, green, and blue
-channels by half.
+The following stage reduces the intensity of the red, green, and blue channels by half.
 
     {
        map path/to/image.tga
@@ -38,5 +35,4 @@ This keyword is a shorthand way to acomplish the following...
        blue 0.5
     }
 
-\
 

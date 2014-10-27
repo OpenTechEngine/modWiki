@@ -1,20 +1,17 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Fades to the given color up to the given alpha over the given time in
-seconds.
+Fades to the given color up to the given alpha over the given time in seconds.
 
 Usage
 -----
 
-*void* fadeTo( *vector* **color** , *float* **alpha** , *float* **time**
-)
+*void* fadeTo( *vector* **color** , *float* **alpha** , *float* **time** )
 
 Parameters
 ----------
@@ -34,5 +31,4 @@ Notes
 
 This script event does not return any values.
 
-\
 

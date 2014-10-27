@@ -1,18 +1,11 @@
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/6/69/Q4square_bg.png) The information on this page is
-specific to [Quake 4](Quake_4 "Quake 4") .
-
-</div>
+![](/images/6/69/Q4square_bg.png) The information on this page is specific to [Quake 4](Quake_4 "Quake 4") .
 
 ------------------------------------------------------------------------
 
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -20,8 +13,7 @@ Description
 Usage
 -----
 
-*string* matchPrefix( *string* **prefix** , *string* **previousPrefix**
-)
+*string* matchPrefix( *string* **prefix** , *string* **previousPrefix** )
 
 Parameters
 ----------
@@ -39,5 +31,4 @@ Notes
 
 Not available.
 
-\
 

@@ -1,50 +1,47 @@
 Description
 -----------
 
-idEntity is the base [spawn class](Spawn_class "Spawn class") of
-[entities](Entity "Entity") .
+idEntity is the base [spawn class](Spawn_class "Spawn class") of [entities](Entity "Entity") .
 
-All other spawn classes inherit its functions, variables and events, but
-may override them to produce different behavior than idEntity.
+All other spawn classes inherit its functions, variables and events, but may override them to produce different behavior than idEntity.
 
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as [spawn
-arguments](SpawnArgs "SpawnArgs") , that function with this entity.\
+The following is a list of key/value pairs, also known as [spawn arguments](SpawnArgs "SpawnArgs") , that function with this entity.
 
-  KEY                     DESCRIPTION
-  ----------------------- --------------------------------------------------------------------------------------------------------------
-  angle                   Yaw angle of entity.
-  bind                    Entity to bind to.
-  bindOrientated          Description not available.
-  bindToBody              Description not available.
-  bindToJoint             Description not available.
-  bindanim                Description not available.
-  cameraTarget            Description not available.
-  cinematic               Description not available.
-  classname               [EntityDef](Entitydef_%28decl%29 "Entitydef (decl)") to load [spawnArgs](SpawnArgs "SpawnArgs") from.
-  clipmodel               Name of [clip model](Clip_model "Clip model") to load.
-  cone                    Set up clip model as cone with this number of sides. Use mins/maxs to set bounds.
-  cylinder                Set up [clip model](Clip_model "Clip model") as cone with this number of sides. Use mins/maxs to set bounds.
-  guiTarget               Description not available.
-  health                  Health.
-  hide                    Hide visual model and disable clip.
-  maxs                    Max bounds of [clip model](Clip_model "Clip model") .
-  mins                    Min bounds of [clip model](Clip_model "Clip model") .
-  model                   name of visual model.
-  name                    Unique name of entity.
-  networkSync             Description not available.
-  neverDormant            Description not available.
-  noclipmodel             Do not set up a [clip model](Clip_model "Clip model") .
-  origin                  Initial world coordinates of entity.
-  rotation                rotation matrix.
-  scriptobject            Type of [script object](Script_object "Script object") for entity to use.
-  size                    Size of [clip model](Clip_model "Clip model") , alternative to mins/maxs.
-  solidForTeam            Description not available.
-  spawnclass              The [spawn class](Spawn_class "Spawn class") type as string.
-  target                  Prefix, entity to add to [target](Targets "Targets") list.
-  noDynamicInteractions   Don't create any light and shadow interactions for this entity after the level load is completed.
+| KEY                   | DESCRIPTION                                                                                                  |
+|-----------------------|--------------------------------------------------------------------------------------------------------------|
+| angle                 | Yaw angle of entity.                                                                                         |
+| bind                  | Entity to bind to.                                                                                           |
+| bindOrientated        | Description not available.                                                                                   |
+| bindToBody            | Description not available.                                                                                   |
+| bindToJoint           | Description not available.                                                                                   |
+| bindanim              | Description not available.                                                                                   |
+| cameraTarget          | Description not available.                                                                                   |
+| cinematic             | Description not available.                                                                                   |
+| classname             | [EntityDef](Entitydef_%28decl%29 "Entitydef (decl)") to load [spawnArgs](SpawnArgs "SpawnArgs") from.        |
+| clipmodel             | Name of [clip model](Clip_model "Clip model") to load.                                                       |
+| cone                  | Set up clip model as cone with this number of sides. Use mins/maxs to set bounds.                            |
+| cylinder              | Set up [clip model](Clip_model "Clip model") as cone with this number of sides. Use mins/maxs to set bounds. |
+| guiTarget             | Description not available.                                                                                   |
+| health                | Health.                                                                                                      |
+| hide                  | Hide visual model and disable clip.                                                                          |
+| maxs                  | Max bounds of [clip model](Clip_model "Clip model") .                                                        |
+| mins                  | Min bounds of [clip model](Clip_model "Clip model") .                                                        |
+| model                 | name of visual model.                                                                                        |
+| name                  | Unique name of entity.                                                                                       |
+| networkSync           | Description not available.                                                                                   |
+| neverDormant          | Description not available.                                                                                   |
+| noclipmodel           | Do not set up a [clip model](Clip_model "Clip model") .                                                      |
+| origin                | Initial world coordinates of entity.                                                                         |
+| rotation              | rotation matrix.                                                                                             |
+| scriptobject          | Type of [script object](Script_object "Script object") for entity to use.                                    |
+| size                  | Size of [clip model](Clip_model "Clip model") , alternative to mins/maxs.                                    |
+| solidForTeam          | Description not available.                                                                                   |
+| spawnclass            | The [spawn class](Spawn_class "Spawn class") type as string.                                                 |
+| target                | Prefix, entity to add to [target](Targets "Targets") list.                                                   |
+| noDynamicInteractions | Don't create any light and shadow interactions for this entity after the level load is completed.            |
 
 Inheritance
 -----------
@@ -54,8 +51,7 @@ This entity is derived from the following:
 -   *[idClass](IdClass_%28class%29 "IdClass (class)")*
     -   ***idEntity***
 
-**Note** : Entries marked in italics are classes defined in the [game
-code](Coding#Game_code "Coding") .
+**Note** : Entries marked in italics are classes defined in the [game code](Coding#Game_code "Coding") .
 
 Events
 ------

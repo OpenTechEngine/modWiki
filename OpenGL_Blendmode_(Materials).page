@@ -1,99 +1,77 @@
 Rendering
 ---------
 
-Doom 3 uses the OpenGL API to render graphics to the screen. Each frame
-is stored in what is called a frame buffer. Each polygon in view is
-rendered to the frame buffer one at a time, stage by stage, pixel by
-pixel.
+Doom 3 uses the OpenGL API to render graphics to the screen. Each frame is stored in what is called a frame buffer. Each polygon in view is rendered to the frame buffer one at a time, stage by stage, pixel by pixel.
 
 Layers
 ------
 
-OpenGL blend modes explain to the renderer how two graphic layers, a
-source and destination layer, are to be mixed together.
+OpenGL blend modes explain to the renderer how two graphic layers, a source and destination layer, are to be mixed together.
 
-The source layer is usually the RGB color data in a texture image file.
-This texture is gathered from the material shader applied to the current
-polygon. The actual image used in the source layer is generally defined
-through use of the map keyword.
+The source layer is usually the RGB color data in a texture image file. This texture is gathered from the material shader applied to the current polygon. The actual image used in the source layer is generally defined through use of the map keyword.
 
-The destination layer is the color data currently existing in the frame
-buffer.
+The destination layer is the color data currently existing in the frame buffer.
 
 The Blend Function
 ------------------
 
-Each layer is essentially broken down into pixels and each pixel in the
-source layer is combined with the corresponding pixel in the destination
-layer using a mathmatical formula. This formula is the blend function.
+Each layer is essentially broken down into pixels and each pixel in the source layer is combined with the corresponding pixel in the destination layer using a mathmatical formula. This formula is the blend function.
 
 The formula reads as follows:
 
     [source * (srcBlend)] + [destination * (dstBlend)]
 
-The blend keyword defines both the source blend and destination blend
-through the use of aliases however you are not limited to using aliases.
+The blend keyword defines both the source blend and destination blend through the use of aliases however you are not limited to using aliases.
 
-Both the source blend and destination blend can be defined separately
-like so...
+Both the source blend and destination blend can be defined separately like so...
 
     blend [srcBlend], [dstBlend]
 
 Source Blend (srcBlend)
 -----------------------
 
-The following values are valid for the source blend part of the
-equation.
+The following values are valid for the source blend part of the equation.
 
-  ---------------------------- ------------------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Alias                        Value              Description
-  gl\_one                      1                  This is the value 1. When multiplied by the source, the value stays the same. The value of the color information does not change.
-  gl\_zero                     0                  This is the value 0. When multiplied by the source, all RGB data in the source becomes zero (essentially black).
-  gl\_dst\_color               destination        This is the value of color data currently in the destination (frame buffer). The value of that information depends on the information supplied by previous stages.
-  gl\_one\_minus\_dst\_color   1 - destination    This is nearly the same as GL\_DST\_COLOR except that the value for each component color is inverted by subtracting it from one. (i.e. R = 1.0 - DST.R, G = 1.0 - DST.G, B = 1.0 - DST.B, etc.)
-  gl\_src\_alpha               source alpha       The TGA file being used for the source data must have an alpha channel in addition to its RGB channels (for a total of four channels). The alpha channel is an 8-bit black and white only channel. An entirely white alpha channel will not darken the source.
-  gl\_one\_minus\_src\_alpha   1 - source alpha   This is the same as GL\_SRC\_ALPHA except that the value in the alpha channel is inverted by subtracting it from one. (i.e. A=1.0 - SRC.A)
-  ---------------------------- ------------------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|----------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Alias                      | Value            | Description                                                                                                                                                                                                                                                    |
+| gl\_one                    | 1                | This is the value 1. When multiplied by the source, the value stays the same. The value of the color information does not change.                                                                                                                              |
+| gl\_zero                   | 0                | This is the value 0. When multiplied by the source, all RGB data in the source becomes zero (essentially black).                                                                                                                                               |
+| gl\_dst\_color             | destination      | This is the value of color data currently in the destination (frame buffer). The value of that information depends on the information supplied by previous stages.                                                                                             |
+| gl\_one\_minus\_dst\_color | 1 - destination  | This is nearly the same as GL\_DST\_COLOR except that the value for each component color is inverted by subtracting it from one. (i.e. R = 1.0 - DST.R, G = 1.0 - DST.G, B = 1.0 - DST.B, etc.)                                                                |
+| gl\_src\_alpha             | source alpha     | The TGA file being used for the source data must have an alpha channel in addition to its RGB channels (for a total of four channels). The alpha channel is an 8-bit black and white only channel. An entirely white alpha channel will not darken the source. |
+| gl\_one\_minus\_src\_alpha | 1 - source alpha | This is the same as GL\_SRC\_ALPHA except that the value in the alpha channel is inverted by subtracting it from one. (i.e. A=1.0 - SRC.A)                                                                                                                     |
 
 Destination Blend (dstBlend)
 ----------------------------
 
-The following values are valid for the destination blend part of the
-equation.
+The following values are valid for the destination blend part of the equation.
 
-  ---------------------------- ------------------ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Alias                        Value              Description
-  gl\_one                      1                  This is the value 1. When multiplied by the destination, the value stays the same the value of the color information does not change.
-  gl\_zero                     0                  This is the value 0. When multiplied by the destination, all RGB data in the destination becomes zero (essentially black).
-  gl\_src\_color               source             This is the value of color data currently in the source (which is the texture being manipulated here).
-  gl\_one\_minus\_src\_color   1 - source         This is the value of color data currently in source, but subtracted from one (i.e. inverted).
-  gl\_src\_alpha               source alpha       The TGA file being used for the source data must have an alpha channel in addition to its RGB channels (four a total of four channels). The alpha channel is an 8-bit black and white only channel. An entirely white alpha channel will not darken the source.
-  gl\_one\_minus\_src\_alpha   1 - source alpha   This is the same as GL\_SRC\_ALPHA except that the value in the alpha channel is inverted by subtracting it from one. (i.e. A=1.0 - SRC.A).
-  ---------------------------- ------------------ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|----------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Alias                      | Value            | Description                                                                                                                                                                                                                                                     |
+| gl\_one                    | 1                | This is the value 1. When multiplied by the destination, the value stays the same the value of the color information does not change.                                                                                                                           |
+| gl\_zero                   | 0                | This is the value 0. When multiplied by the destination, all RGB data in the destination becomes zero (essentially black).                                                                                                                                      |
+| gl\_src\_color             | source           | This is the value of color data currently in the source (which is the texture being manipulated here).                                                                                                                                                          |
+| gl\_one\_minus\_src\_color | 1 - source       | This is the value of color data currently in source, but subtracted from one (i.e. inverted).                                                                                                                                                                   |
+| gl\_src\_alpha             | source alpha     | The TGA file being used for the source data must have an alpha channel in addition to its RGB channels (four a total of four channels). The alpha channel is an 8-bit black and white only channel. An entirely white alpha channel will not darken the source. |
+| gl\_one\_minus\_src\_alpha | 1 - source alpha | This is the same as GL\_SRC\_ALPHA except that the value in the alpha channel is inverted by subtracting it from one. (i.e. A=1.0 - SRC.A).                                                                                                                     |
 
 Blend Aliases
 -------------
 
-The following parameters for the keyword blend are aliases for a
-specific set of source and destination values...
+The following parameters for the keyword blend are aliases for a specific set of source and destination values...
 
-  ---------- ---------------- ----------------------------
-  Alias      Source           Destination
-  add        gl\_one          gl\_one
-  blend      gl\_src\_alpha   gl\_one\_minus\_src\_alpha
-  filter     gl\_dst\_color   gl\_zero
-  modulate   gl\_dst\_color   gl\_zero
-  none       gl\_zero         gl\_one
-  ---------- ---------------- ----------------------------
+|----------|----------------|----------------------------|
+| Alias    | Source         | Destination                |
+| add      | gl\_one        | gl\_one                    |
+| blend    | gl\_src\_alpha | gl\_one\_minus\_src\_alpha |
+| filter   | gl\_dst\_color | gl\_zero                   |
+| modulate | gl\_dst\_color | gl\_zero                   |
+| none     | gl\_zero       | gl\_one                    |
 
 Computing a Result
 ------------------
 
-Rather than think of the entire texture as a whole and how the blend
-function computes a result, it maybe easier to think of the red, green,
-blue, and alpha values that correspond to a single pixel in the source
-and destination layers, because that is essentially what the computer is
-processing... one pixel of each layer at a time.
+Rather than think of the entire texture as a whole and how the blend function computes a result, it maybe easier to think of the red, green, blue, and alpha values that correspond to a single pixel in the source and destination layers, because that is essentially what the computer is processing... one pixel of each layer at a time.
 
 So, let's say the blend mode is add. That's ...
 
@@ -107,12 +85,9 @@ Because gl\_one equals 1 the formula can be simplified like so...
 
     [source * 1] + [destination * 1]
 
-Now, let's say that two coorisponding pixels from the source and
-destination layers are being plugged into the function where the source
-pixel is white and the destination pixel is black.
+Now, let's say that two coorisponding pixels from the source and destination layers are being plugged into the function where the source pixel is white and the destination pixel is black.
 
-Each pixel contains a red, green, blue, and alpha channel. Each channel
-is computed as a separate value.
+Each pixel contains a red, green, blue, and alpha channel. Each channel is computed as a separate value.
 
     [1,1,1,0 * 1)] + [0,0,0,0, * 1]
 

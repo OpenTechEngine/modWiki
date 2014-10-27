@@ -1,24 +1,8 @@
-The ZIP file format is a popular data compression and archival format. A
-ZIP file contains one or more files that have been compressed or stored.
+The ZIP file format is a popular data compression and archival format. A ZIP file contains one or more files that have been compressed or stored.
 
-The format was originally designed by Phil Katz for PKZIP. However, many
-software utilities other than PKZIP itself are now available to create,
-modify or open ZIP files, notably WinZip, BOMArchiveHelper, PicoZip,
-Info-ZIP, WinRAR and 7-Zip. Microsoft has also included minimal ZIP
-support (under the name "compressed folders") in later versions of its
-Windows operating system.
+The format was originally designed by Phil Katz for PKZIP. However, many software utilities other than PKZIP itself are now available to create, modify or open ZIP files, notably WinZip, BOMArchiveHelper, PicoZip, Info-ZIP, WinRAR and 7-Zip. Microsoft has also included minimal ZIP support (under the name "compressed folders") in later versions of its Windows operating system.
 
-ZIP files generally use the file extensions ".zip" or ".ZIP" and the
-MIME media type application/zip. Some software uses the ZIP file format
-as a wrapper for a large number of small items. Generally when this is
-done a different file extension is used. Examples of this usage are Java
-Jar files, id Software .pk3/.pk4 files, package files for StepMania and
-Winamp, and some OpenOffice.org document formats. The OpenDocument
-format is usually sent as a Jar file, so it can be easily uncompressed
-and compressed using tools for ZIP files.
+ZIP files generally use the file extensions ".zip" or ".ZIP" and the MIME media type application/zip. Some software uses the ZIP file format as a wrapper for a large number of small items. Generally when this is done a different file extension is used. Examples of this usage are Java Jar files, id Software .pk3/.pk4 files, package files for StepMania and Winamp, and some OpenOffice.org document formats. The OpenDocument format is usually sent as a Jar file, so it can be easily uncompressed and compressed using tools for ZIP files.
 
-In Doom 3, the ZIP format also used. The PK4 files are just renamed from
-ZIP, and can be opened by
-[WinZIP](http://www.winzip.com/ "http://www.winzip.com") ,
-[WinRAR](http://www.winrar.com/ "http://www.winrar.com") or PK4Scape.
+In Doom 3, the ZIP format also used. The PK4 files are just renamed from ZIP, and can be opened by [WinZIP](http://www.winzip.com/ "http://www.winzip.com") , [WinRAR](http://www.winrar.com/ "http://www.winrar.com") or PK4Scape.
 

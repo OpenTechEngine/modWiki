@@ -1,70 +1,30 @@
-![Illustration depicting the relationship between various declarations
-and media
-assets](/images/thumb/a/a9/Declarations.gif/300px-Declarations.gif)\
- *Illustration depicting the relationship between various declarations
-and media assets*
+![Illustration depicting the relationship between various declarations and media assets](/images/thumb/a/a9/Declarations.gif/300px-Declarations.gif)
+ *Illustration depicting the relationship between various declarations and media assets*
 
-The general purpose of a declaration is to define a name for a reuseable
-asset that shares a common set of properties. A few examples would be...
+The general purpose of a declaration is to define a name for a reuseable asset that shares a common set of properties. A few examples would be...
 
--   A material shader declaration defines a material name which when
-    referenced by brushes in a level, model, skin, or particle dictate
-    what images to use and how they should be rendered.
--   A sound shader declaration defines a sound name which when
-    referenced by a speaker entity, AI script or effect dictates what
-    sounds to use and how loud they should be played.
--   A skin declaration defines a skin name which when referenced by
-    models or entities dictates what material shaders to replace and
-    what material shaders to replace them with.
--   An entity declaration defines an entity name which when referenced
-    by the game itself dictates what key/value pairs should be used by
-    default.
+-   A material shader declaration defines a material name which when referenced by brushes in a level, model, skin, or particle dictate what images to use and how they should be rendered.
+-   A sound shader declaration defines a sound name which when referenced by a speaker entity, AI script or effect dictates what sounds to use and how loud they should be played.
+-   A skin declaration defines a skin name which when referenced by models or entities dictates what material shaders to replace and what material shaders to replace them with.
+-   An entity declaration defines an entity name which when referenced by the game itself dictates what key/value pairs should be used by default.
 
-Declarations often times reference other declarations. A key example
-would be entity declarations which can reference nearly every
-declaration type including other entity declarations.
+Declarations often times reference other declarations. A key example would be entity declarations which can reference nearly every declaration type including other entity declarations.
 
-When a declaration references another declaration, it inherits those
-properties. Case in point, an entity references a given model
-declaration. The entity is assigned a model based on that model
-declaration rather than explicitly specifiying which file to use in the
-entity declaration itself.
+When a declaration references another declaration, it inherits those properties. Case in point, an entity references a given model declaration. The entity is assigned a model based on that model declaration rather than explicitly specifiying which file to use in the entity declaration itself.
 
-The same is true of key/value pairs (a.k.a. spawn arguments). Case in
-point,
-[monster\_demon\_imp](Monster_demon_imp_%28entity%29 "Monster demon imp (entity)")
-does not explicitly define a **bleed** key/value pair. But because it
-inherits properties from
-[monster\_default](Monster_default_%28entity%29 "Monster default (entity)")
-, it has a **bleed** key/value pair.
+The same is true of key/value pairs (a.k.a. spawn arguments). Case in point, [monster\_demon\_imp](Monster_demon_imp_%28entity%29 "Monster demon imp (entity)") does not explicitly define a **bleed** key/value pair. But because it inherits properties from [monster\_default](Monster_default_%28entity%29 "Monster default (entity)") , it has a **bleed** key/value pair.
 
-This inheritance is useful because it allows you to create a declaration
-that is nearly identical to another without the need to copy and paste
-it or modify the original. You simply reference the original declaration
-and add whatever unique properties you wish.
+This inheritance is useful because it allows you to create a declaration that is nearly identical to another without the need to copy and paste it or modify the original. You simply reference the original declaration and add whatever unique properties you wish.
 
 Syntax
 ------
 
-A single declaration consists of a header and body. The header is
-composed of a name and sometimes a descriptor that defines the type of
-declaration (descriptors are not needed if the declaration is put in its
-respective [file
-format](File_formats#Declaration_containers "File formats") ; for
-example you wouldn't need to put "material" before your material decls
-in an . [MTR](MTR_%28file_format%29 "MTR (file format)") file). The body
-of a definition is enclosed in curly brackets.
+A single declaration consists of a header and body. The header is composed of a name and sometimes a descriptor that defines the type of declaration (descriptors are not needed if the declaration is put in its respective [file format](File_formats#Declaration_containers "File formats") ; for example you wouldn't need to put "material" before your material decls in an . [MTR](MTR_%28file_format%29 "MTR (file format)") file). The body of a definition is enclosed in curly brackets.
 
-<div>
-
-![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake
-Wars only:
+![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake Wars only:
 *Declaration descriptors are always needed*
 
-</div>
-
-. [DEF](DEF_%28file_format%29 "DEF (file format)") files are the
-standard container for declarations.
+. [DEF](DEF_%28file_format%29 "DEF (file format)") files are the standard container for declarations.
 
 A few examples of headers would be...
 
@@ -74,12 +34,7 @@ A few examples of headers would be...
 
     entityDef aas_types
 
-The purpose of a declaration is to define the properties and behavior of
-game content. More than one type of decl can be included in a single
-file however, for organizational purposes it's recommended that they are
-kept separate. Alternatively you can also put just one decl in a single
-file, allowing you to use the operating system's own file system to
-navigate the declarations.
+The purpose of a declaration is to define the properties and behavior of game content. More than one type of decl can be included in a single file however, for organizational purposes it's recommended that they are kept separate. Alternatively you can also put just one decl in a single file, allowing you to use the operating system's own file system to navigate the declarations.
 
 Universal declaration types
 ---------------------------
@@ -100,8 +55,7 @@ These declarations are handled by the engine:
 <span align="absbottom"> ![](/images/2/23/D3square_25.png) D3 Declaration types </span>
 ---------------------------------------------------------------------------------------
 
-*The information in this section is specific to [Doom
-3](Doom_3 "Doom 3") .*
+*The information in this section is specific to [Doom 3](Doom_3 "Doom 3") .*
 
 Along with the universal decls Doom 3 provides the following:
 
@@ -115,8 +69,7 @@ Along with the universal decls Doom 3 provides the following:
 <span align="absbottom"> ![Q4](/images/e/e8/Q4square_25.png) Q4 Declaration types </span>
 -----------------------------------------------------------------------------------------
 
-*The information in this section is specific to [Quake
-4](Quake_4 "Quake 4") .*
+*The information in this section is specific to [Quake 4](Quake_4 "Quake 4") .*
 
 Along with the universal decls Quake 4 provides the following:
 
@@ -129,7 +82,5 @@ Along with the universal decls Quake 4 provides the following:
 Editing tools
 -------------
 
-Since declarations are plain-text files, a simple [text
-editor](Text_editor "Text editor") can be used to edit or create
-declarations.
+Since declarations are plain-text files, a simple [text editor](Text_editor "Text editor") can be used to edit or create declarations.
 

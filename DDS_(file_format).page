@@ -1,22 +1,9 @@
 Description
 -----------
 
-The DirectDraw Surface graphics file format was established by Microsoft
-for use with the DirectX SDK. The format is specifically designed for
-use in real-time rendering applications, such as 3D games. It can be
-used to store textures, cubemaps, mipmap levels, and allows for
-compression. Due to the fact that most video cards natively support DXTn
-texture compression, use of this format can save memory on the video
-card.
+The DirectDraw Surface graphics file format was established by Microsoft for use with the DirectX SDK. The format is specifically designed for use in real-time rendering applications, such as 3D games. It can be used to store textures, cubemaps, mipmap levels, and allows for compression. Due to the fact that most video cards natively support DXTn texture compression, use of this format can save memory on the video card.
 
-Drivers can perform this compression on the fly thanks to the
-GL\_ARB\_texture\_compression extension. Thus, it would appear the only
-advantage of DDS is just reduced space (meaning faster loading) without
-"double degradation" caused by recompressing already-compressed formats
-like JPEG. However, DDS files expose this automated process to artists.
-This allows the image author to correct or prevent artifacts that might
-occur in a completely automated compression process, or even emphasize
-specific parts of an image's MIP maps.
+Drivers can perform this compression on the fly thanks to the GL\_ARB\_texture\_compression extension. Thus, it would appear the only advantage of DDS is just reduced space (meaning faster loading) without "double degradation" caused by recompressing already-compressed formats like JPEG. However, DDS files expose this automated process to artists. This allows the image author to correct or prevent artifacts that might occur in a completely automated compression process, or even emphasize specific parts of an image's MIP maps.
 
 General File Format Specifications
 ----------------------------------
@@ -40,53 +27,26 @@ Color Depth
 Engine specific issues
 ----------------------
 
-Doom 3 makes use of .DDS files when running at a quality setting lower
-than "Ultra" in order to save texture memory (except for normal maps
-which only use the .DDS versions at "Medium" or below).
+Doom 3 makes use of .DDS files when running at a quality setting lower than "Ultra" in order to save texture memory (except for normal maps which only use the .DDS versions at "Medium" or below).
 
-You can force everything to load from the TGA files by setting
-[image\_usePrecompressedTextures](Image_usePrecompressedTextures_%28cvar%29 "Image usePrecompressedTextures (cvar)")
-to 0. The images will still get compressed dynamically at load time
-(which will slow down loading significantly), but it will make it so
-that when you change a TGA it will actually show up in game without
-having to regenerate the DDS files. You can also set
-[image\_useCompression](Image_useCompression_%28cvar%29 "Image useCompression (cvar)")
-and
-[image\_useNormalCompression](Image_useNormalCompression_%28cvar%29 "Image useNormalCompression (cvar)")
-to 0, which will prevent them from getting compressed at load time (this
-is similar to running in ultra quality mode).
+You can force everything to load from the TGA files by setting [image\_usePrecompressedTextures](Image_usePrecompressedTextures_%28cvar%29 "Image usePrecompressedTextures (cvar)") to 0. The images will still get compressed dynamically at load time (which will slow down loading significantly), but it will make it so that when you change a TGA it will actually show up in game without having to regenerate the DDS files. You can also set [image\_useCompression](Image_useCompression_%28cvar%29 "Image useCompression (cvar)") and [image\_useNormalCompression](Image_useNormalCompression_%28cvar%29 "Image useNormalCompression (cvar)") to 0, which will prevent them from getting compressed at load time (this is similar to running in ultra quality mode).
 
-***Notice:*** This means that if you make changes to a texture and you
-are running a quality level lower than "Ultra", you will not see the
-changes because Doom 3 ís reading from the .DDS file.
+***Notice:*** This means that if you make changes to a texture and you are running a quality level lower than "Ultra", you will not see the changes because Doom 3 ís reading from the .DDS file.
 
-If you don't have .DDS files for every texture you have made, Doom 3
-will create them for you, but separate utilities are often used to
-convert a .TGA or other texture format into a .DDS format. Some of these
-tools are available here:
+If you don't have .DDS files for every texture you have made, Doom 3 will create them for you, but separate utilities are often used to convert a .TGA or other texture format into a .DDS format. Some of these tools are available here:
 
--   [nVidia Texture
-    Tools](http://developer.nvidia.com/object/nv_texture_tools.html "http://developer.nvidia.com/object/nv_texture_tools.html")
--   [ATI
-    Compressonator](http://www.ati.com/developer/compressonator.html "http://www.ati.com/developer/compressonator.html")
+-   [nVidia Texture Tools](http://developer.nvidia.com/object/nv_texture_tools.html "http://developer.nvidia.com/object/nv_texture_tools.html")
+-   [ATI Compressonator](http://www.ati.com/developer/compressonator.html "http://www.ati.com/developer/compressonator.html")
 
 Notes
 -----
 
-To convert an image to DDS, you can use the same tool id used: The
-[Compressonator](http://www.ati.com/developer/compressonator.html "http://www.ati.com/developer/compressonator.html")
-from ATI.
+To convert an image to DDS, you can use the same tool id used: The [Compressonator](http://www.ati.com/developer/compressonator.html "http://www.ati.com/developer/compressonator.html") from ATI.
 
--   To create DDS files in Photoshop you must download the [Nvidia DDS
-    plugin](http://developer.nvidia.com/object/nv_texture_tools.html "http://developer.nvidia.com/object/nv_texture_tools.html")
-    .
--   To create and edit DDS files in The Gimp, you must download a [DDS
-    plugin](https://web.archive.org/web/20121205072325/http://nifelheim.dyndns.org/~cocidius/dds/ "http://nifelheim.dyndns.org/~cocidius/dds/")
-    .
+-   To create DDS files in Photoshop you must download the [Nvidia DDS plugin](http://developer.nvidia.com/object/nv_texture_tools.html "http://developer.nvidia.com/object/nv_texture_tools.html") .
+-   To create and edit DDS files in The Gimp, you must download a [DDS plugin](https://web.archive.org/web/20121205072325/http://nifelheim.dyndns.org/~cocidius/dds/ "http://nifelheim.dyndns.org/~cocidius/dds/") .
 
-See the [Texturing](Texturing "Texturing") page for which DXTn method to
-use depending on the [image](Images "Images") .
+See the [Texturing](Texturing "Texturing") page for which DXTn method to use depending on the [image](Images "Images") .
 
-A DDS file, and its MIP maps, may be edited. See [Editing MIP
-Maps](Editing_MIP_Maps "Editing MIP Maps")
+A DDS file, and its MIP maps, may be edited. See [Editing MIP Maps](Editing_MIP_Maps "Editing MIP Maps")
 

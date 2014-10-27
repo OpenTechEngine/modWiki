@@ -1,39 +1,12 @@
-**Brush carving** is a technique used to improve performance by
-splitting large faces into smaller ones in such a way as to reduce the
-numbers of lights hitting any one surface. The *light count* of a
-surface is important in Doom 3 as it affects the number of operations
-performed by the shaders in order to correctly render lighting on that
-surface.
+**Brush carving** is a technique used to improve performance by splitting large faces into smaller ones in such a way as to reduce the numbers of lights hitting any one surface. The *light count* of a surface is important in Doom 3 as it affects the number of operations performed by the shaders in order to correctly render lighting on that surface.
 
 A level designer has three options with regard to brush carving.
 
--   Manually split brushes using the clipper tool, ensuring that the
-    resulting brushes are not merged at optimisation by changing texture
-    parameters (including alignment), or converting one of the brushes
-    into a [patch](Patch "Patch") backed up with [caulk](Caulk "Caulk")
-    . Although some mappers prefer this option as it gives the greatest
-    control over triangle count, it also dramatically increases the
-    designer's workload and is likely to make little difference unless a
-    very large number of manual cuts are performed.
--   Compile the map with the [lightCarve](LightCarve "LightCarve")
-    parameter, which causes the compiler to automatically split polygons
-    along light boundaries. This produces the optimum lightcount, but
-    can increase polycount unnecessarily if not carefully used.
--   Ignore the issue completely and perform no carving. This was the
-    option preferred by id software on the grounds that carving created
-    extra work for level designers while providing only a small
-    difference in performance.
+-   Manually split brushes using the clipper tool, ensuring that the resulting brushes are not merged at optimisation by changing texture parameters (including alignment), or converting one of the brushes into a [patch](Patch "Patch") backed up with [caulk](Caulk "Caulk") . Although some mappers prefer this option as it gives the greatest control over triangle count, it also dramatically increases the designer's workload and is likely to make little difference unless a very large number of manual cuts are performed.
+-   Compile the map with the [lightCarve](LightCarve "LightCarve") parameter, which causes the compiler to automatically split polygons along light boundaries. This produces the optimum lightcount, but can increase polycount unnecessarily if not carefully used.
+-   Ignore the issue completely and perform no carving. This was the option preferred by id software on the grounds that carving created extra work for level designers while providing only a small difference in performance.
 
-The preferred choice depends very much on the content of the map being
-created. The designers at id could get away with not carving since most
-of their maps are very detailed with many small triangles, so light
-count is not much of an issue. In contrast, a map consisting of large
-rooms with unbroken faces might suffer greatly from excessive light
-counts, so carving would be highly recommended.
+The preferred choice depends very much on the content of the map being created. The designers at id could get away with not carving since most of their maps are very detailed with many small triangles, so light count is not much of an issue. In contrast, a map consisting of large rooms with unbroken faces might suffer greatly from excessive light counts, so carving would be highly recommended.
 
-If very high lightcounts are experienced during playtesting, check that
-the [r\_useScissor](R_useScissor_%28cvar%29 "R useScissor (cvar)") CVar
-is set to 1. The use of light scissors massively reduces the performance
-drop due to lightcount by limiting a light's effect to the area of
-screen space contained within its volume.
+If very high lightcounts are experienced during playtesting, check that the [r\_useScissor](R_useScissor_%28cvar%29 "R useScissor (cvar)") CVar is set to 1. The use of light scissors massively reduces the performance drop due to lightcount by limiting a light's effect to the area of screen space contained within its volume.
 

@@ -1,17 +1,12 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Gets the current angular velocity of this entity. The angular velocity
-of a physics object is a vector that passes through the center of mass.
-The direction of this vector defines the axis of rotation and the
-magnitude defines the rate of rotation about the axis in radians per
-second.
+Gets the current angular velocity of this entity. The angular velocity of a physics object is a vector that passes through the center of mass. The direction of this vector defines the axis of rotation and the magnitude defines the rate of rotation about the axis in radians per second.
 
 Usage
 -----
@@ -34,5 +29,4 @@ Notes
 
 This script event returns the angular velocity as a vector.
 
-\
 

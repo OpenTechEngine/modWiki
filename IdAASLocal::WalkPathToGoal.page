@@ -1,19 +1,10 @@
-<div id="attention" class="boilerplate metadata"
-style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
-
 **This page is in urgent need of attention because: *Unfinished***
 
-If you disagree with this, please explain why on [its talk
-page](Talk:IdAASLocal::WalkPathToGoal "Talk:IdAASLocal::WalkPathToGoal")
-.
-
-</div>
+If you disagree with this, please explain why on [its talk page](Talk:IdAASLocal::WalkPathToGoal "Talk:IdAASLocal::WalkPathToGoal") .
 
 ### [idAASLocal](Src/game/ai/AAS_pathing.cpp_%28source_file%29 "Src/game/ai/AAS pathing.cpp (source file)") ::WalkPathToGoal
 
-With WalkPathToGoal we start to get into some of the AAS details and it
-starts to get fun ;) As far as I can tell, WalkPathToGoal is only called
-from PathToGoal in the 1.3 sdk. WalkPathToGoal
+With WalkPathToGoal we start to get into some of the AAS details and it starts to get fun ;) As far as I can tell, WalkPathToGoal is only called from PathToGoal in the 1.3 sdk. WalkPathToGoal
 
      
     /*
@@ -41,8 +32,7 @@ Next the path is initialized.
         path.secondaryGoal = origin;
         path.reachability = NULL;
 
-The path type is set to PATHTYPE\_WALK. All available options are listed
-below for reference.
+The path type is set to PATHTYPE\_WALK. All available options are listed below for reference.
 
      
     enum {
@@ -52,17 +42,13 @@ below for reference.
         PATHTYPE_JUMP
     };
 
-If we don’t have an aas file or we are already in the goalAreaNum set
-the moveGoal to the goal position vector passed in and return true,
-there is a WalkPathToGoal.
+If we don’t have an aas file or we are already in the goalAreaNum set the moveGoal to the goal position vector passed in and return true, there is a WalkPathToGoal.
 
      
     if ( file == NULL || areaNum == goalAreaNum ) {
         path.moveGoal = goalOrigin;
         return true;
     }
-
-\
 
      
     lastAreas[0] = lastAreas[1] = lastAreas[2] = lastAreas[3] = areaNum;
@@ -74,10 +60,7 @@ These variables will be used while looping below, lets just take a look.
      
     for ( i = 0; i < maxWalkPathIterations; i++ ) {
 
-We are entering a pretty long for loop that is used to iteratively walk
-nodes in the path to perform path smoothing and optimization.
-maxWalkPathIterations is declared at the top of AAS\_pathing, here is
-that declaration as well as some other ones that we will need soon.
+We are entering a pretty long for loop that is used to iteratively walk nodes in the path to perform path smoothing and optimization. maxWalkPathIterations is declared at the top of AAS\_pathing, here is that declaration as well as some other ones that we will need soon.
 
      
     #define SUBSAMPLE_WALK_PATH       1
@@ -86,8 +69,7 @@ that declaration as well as some other ones that we will need soon.
     const float       maxWalkPathDistance     = 500.0f;
     const float       walkPathSampleDistance      = 8.0f;
 
-So loop 10 times to return the next ten reachabilities in the path and
-see if we can walk directly to them.
+So loop 10 times to return the next ten reachabilities in the path and see if we can walk directly to them.
 
      
     if ( !idAASLocal::RouteToGoalArea( curAreaNum, path.moveGoal, goalAreaNum,
@@ -95,40 +77,22 @@ see if we can walk directly to them.
         break;
     }
 
-Each iteration through the loop we make a call to RouteToGoalArea. We
-pass in the curAreaNum which is(the area we are currently in or know we
-can get to) , path.moveGoal which is where we want to get to,
-goalAreaNum – the area that contains the moveGoal, travelFlags – flags
-that represent the type of travel allowed like TFL\_WALK, travelTime, by
-reference, so that RouteToGoal can set it for us, and reach, well, its
-address, cause pointers to pointers to objects are fun (ok, RouteToGoal
-will set reach as well)
+Each iteration through the loop we make a call to RouteToGoalArea. We pass in the curAreaNum which is(the area we are currently in or know we can get to) , path.moveGoal which is where we want to get to, goalAreaNum – the area that contains the moveGoal, travelFlags – flags that represent the type of travel allowed like TFL\_WALK, travelTime, by reference, so that RouteToGoal can set it for us, and reach, well, its address, cause pointers to pointers to objects are fun (ok, RouteToGoal will set reach as well)
 
-RouteToGoalArea will use the information passed to find the best route
-to the goal and set the reachability that gets you there as well as the
-travel time it should take. Because routes are cached in memory per goal
-area after being calculated each successive call to the routine is just
-a quick lookup to what was calculated on the first call to it. by
-calling it inside a loop we can walk up the path and smooth out
-movement.
+RouteToGoalArea will use the information passed to find the best route to the goal and set the reachability that gets you there as well as the travel time it should take. Because routes are cached in memory per goal area after being calculated each successive call to the routine is just a quick lookup to what was calculated on the first call to it. by calling it inside a loop we can walk up the path and smooth out movement.
 
      
     if ( !reach ) {
         return false;
     }
 
-At any time in the loop if RouteToGoalArea can’t give us the next
-reachability to get to the goal we return false indicating failure to
-WalkPathToGoal. If we have a reachability to the next section of the
-path then we continue on processing.
+At any time in the loop if RouteToGoalArea can’t give us the next reachability to get to the goal we return false indicating failure to WalkPathToGoal. If we have a reachability to the next section of the path then we continue on processing.
 
      
     // no need to check through the first area
     if ( areaNum != curAreaNum ) {
 
 TODO: Finish this routine up
-
-\
 
      
      

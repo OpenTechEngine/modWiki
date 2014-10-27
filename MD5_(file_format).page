@@ -1,126 +1,69 @@
 Overview
 --------
 
-MD5 is a proprietary but open format specific to Doom 3 and allows
-models to be animated by the use of an internal skeleton. Generally two
-files are needed to make a functional MD5 model; md5mesh and md5anim.
-The 3rd, md5camera, allows the creation and use of complex camera paths
-used during cut scenes. See the different pages for syntax explanation
+MD5 is a proprietary but open format specific to Doom 3 and allows models to be animated by the use of an internal skeleton. Generally two files are needed to make a functional MD5 model; md5mesh and md5anim. The 3rd, md5camera, allows the creation and use of complex camera paths used during cut scenes. See the different pages for syntax explanation
 
- . [MD5MESH](MD5MESH_%28file_format%29 "MD5MESH (file format)") 
-:   Low resolution polygonal mesh exported from a 3D application.
+ . [MD5MESH](MD5MESH_%28file_format%29 "MD5MESH (file format)")   
+Low resolution polygonal mesh exported from a 3D application.
 
- . [MD5ANIM](MD5ANIM_%28file_format%29 "MD5ANIM (file format)") 
-:   Contains animation sequence data, the positions of bones etc. during
-    animation.
+ . [MD5ANIM](MD5ANIM_%28file_format%29 "MD5ANIM (file format)")   
+Contains animation sequence data, the positions of bones etc. during animation.
 
- . [MD5CAMERA](MD5CAMERA_%28file_format%29 "MD5CAMERA (file format)") 
-:   Animated cameras for use in cut scenes.
+ . [MD5CAMERA](MD5CAMERA_%28file_format%29 "MD5CAMERA (file format)")   
+Animated cameras for use in cut scenes.
 
 Export
 ------
 
-Maya 4.5 was the 3D package primarily used for the creation of animated
-characters during the development of Doom 3, Quake 4, and possibly Prey.
-Models were saved in .mb (Maya Binary) format and converted through the
-use of an [export declaration](Export_%28decl%29 "Export (decl)") , the
-console command
-[exportModels](Exportmodels_%28console_command%29 "Exportmodels (console command)")
-, and a DLL by the name of MayaImportx86.
+Maya 4.5 was the 3D package primarily used for the creation of animated characters during the development of Doom 3, Quake 4, and possibly Prey. Models were saved in .mb (Maya Binary) format and converted through the use of an [export declaration](Export_%28decl%29 "Export (decl)") , the console command [exportModels](Exportmodels_%28console_command%29 "Exportmodels (console command)") , and a DLL by the name of MayaImportx86.
 
-It goes without saying that you stand the best chance for success if you
-follow the same workflow. However, there are third party tools and
-alternative versions of MayaImportx86.dll listed below you can use
-should you be working with a package other than Maya version 4.5.
+It goes without saying that you stand the best chance for success if you follow the same workflow. However, there are third party tools and alternative versions of MayaImportx86.dll listed below you can use should you be working with a package other than Maya version 4.5.
 
-It's also important to note that the alternate versions of
-MayaImportx86.dll were intended for use with Doom 3 and there have been
-reports that they do not function correctly with other Doom 3 engine
-based games. In other words, if you only have Quake 4 or Prey at your
-disposal, you may encounter some compatibility issues that have yet to
-be resolved. You may be forced to borrow a copy of Doom 3 for export
-purposes.
+It's also important to note that the alternate versions of MayaImportx86.dll were intended for use with Doom 3 and there have been reports that they do not function correctly with other Doom 3 engine based games. In other words, if you only have Quake 4 or Prey at your disposal, you may encounter some compatibility issues that have yet to be resolved. You may be forced to borrow a copy of Doom 3 for export purposes.
 
-For a detailed overview of the conversion from [Maya to
-MD5](Maya_to_MD5 "Maya to MD5") please read the corresponding article.
+For a detailed overview of the conversion from [Maya to MD5](Maya_to_MD5 "Maya to MD5") please read the corresponding article.
 
 Tools
 -----
 
-A list of useful developer and user-created tools for export and import
-of the various MD5 file formats follows.
+A list of useful developer and user-created tools for export and import of the various MD5 file formats follows.
 
 ### Maya
 
--   [MayaImportx86 version
-    4.5](http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya45.zip "http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya45.zip")
--   [MayaImportx86 version
-    5.0](http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya50.zip "http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya50.zip")
--   [MayaImportx86 version
-    6.0](http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya60.zip "http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya60.zip")
--   [MD5 to Maya
-    Importer](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=6278 "http://www.doom3world.org/phpbb2/viewtopic.php?t=6278") -
-    seith
--   [Maya to MD5+mtr exporter by Chris 'hyperion\_5'
-    Edwards](http://scripts.zbufferstudios.com/ "http://scripts.zbufferstudios.com/") -
-    instructions and discussion \*
-    [here](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=19710 "http://www.doom3world.org/phpbb2/viewtopic.php?t=19710")
+-   [MayaImportx86 version 4.5](http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya45.zip "http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya45.zip")
+-   [MayaImportx86 version 5.0](http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya50.zip "http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya50.zip")
+-   [MayaImportx86 version 6.0](http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya60.zip "http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya60.zip")
+-   [MD5 to Maya Importer](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=6278 "http://www.doom3world.org/phpbb2/viewtopic.php?t=6278") - seith
+-   [Maya to MD5+mtr exporter by Chris 'hyperion\_5' Edwards](http://scripts.zbufferstudios.com/ "http://scripts.zbufferstudios.com/") - instructions and discussion \* [here](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=19710 "http://www.doom3world.org/phpbb2/viewtopic.php?t=19710")
 
 ### 3d Studio Max
 
--   [3D Studio Max to MD5
-    Exporter](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=1914 "http://www.doom3world.org/phpbb2/viewtopic.php?t=1914") -
-    der\_ton
--   [3D Studio Max to Md5
-    Exporter](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=4618 "http://www.doom3world.org/phpbb2/viewtopic.php?t=4618") -
-    BeRSeRKeR
--   [MD5 to 3D Studio Max
-    Importer](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=3229 "http://www.doom3world.org/phpbb2/viewtopic.php?t=3229") -
-    der\_ton
+-   [3D Studio Max to MD5 Exporter](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=1914 "http://www.doom3world.org/phpbb2/viewtopic.php?t=1914") - der\_ton
+-   [3D Studio Max to Md5 Exporter](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=4618 "http://www.doom3world.org/phpbb2/viewtopic.php?t=4618") - BeRSeRKeR
+-   [MD5 to 3D Studio Max Importer](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=3229 "http://www.doom3world.org/phpbb2/viewtopic.php?t=3229") - der\_ton
 
 ### Blender
 
--   [Blender to MD5
-    Exporter](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=1711 "http://www.doom3world.org/phpbb2/viewtopic.php?t=1711") -
-    der\_ton
--   [MD5 to Blender
-    Importer](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=6901 "http://www.doom3world.org/phpbb2/viewtopic.php?t=6901") -
-    der\_ton
+-   [Blender to MD5 Exporter](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=1711 "http://www.doom3world.org/phpbb2/viewtopic.php?t=1711") - der\_ton
+-   [MD5 to Blender Importer](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=6901 "http://www.doom3world.org/phpbb2/viewtopic.php?t=6901") - der\_ton
 
 ### Lightwave
 
--   [Lightwave to MD5
-    Import/Export](https://web.archive.org/web/20121205072339/http://home.mindspring.com/~iclint/lightwave/lwplug.html "http://home.mindspring.com/~iclint/lightwave/lwplug.html") -
-    clintonman
-    [Tutorials](https://web.archive.org/web/20121205072339/http://home.mindspring.com/~iclint/lightwave/index.html "http://home.mindspring.com/~iclint/lightwave/index.html")
--   [Lightwave to MD5
-    Exporter](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=4595 "http://www.doom3world.org/phpbb2/viewtopic.php?t=4595") -
-    bozo
--   [Lightwave to MD5Camera
-    Exporter](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=6493 "http://www.doom3world.org/phpbb2/viewtopic.php?t=6493") -
-    rich\_is\_bored & der\_ton
+-   [Lightwave to MD5 Import/Export](https://web.archive.org/web/20121205072339/http://home.mindspring.com/~iclint/lightwave/lwplug.html "http://home.mindspring.com/~iclint/lightwave/lwplug.html") - clintonman [Tutorials](https://web.archive.org/web/20121205072339/http://home.mindspring.com/~iclint/lightwave/index.html "http://home.mindspring.com/~iclint/lightwave/index.html")
+-   [Lightwave to MD5 Exporter](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=4595 "http://www.doom3world.org/phpbb2/viewtopic.php?t=4595") - bozo
+-   [Lightwave to MD5Camera Exporter](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=6493 "http://www.doom3world.org/phpbb2/viewtopic.php?t=6493") - rich\_is\_bored & der\_ton
 
 ### Softimage
 
--   [XSI to MD5
-    Exporter](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?p=79932#79932 "http://www.doom3world.org/phpbb2/viewtopic.php?p=79932#79932") -
-    senkusha
+-   [XSI to MD5 Exporter](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?p=79932#79932 "http://www.doom3world.org/phpbb2/viewtopic.php?p=79932#79932") - senkusha
 
 ### DirectX
 
--   [XFile to MD5
-    Converter](http://oddityinteractive.com/OddityEngine2/phpBB3/viewtopic.php?f=5&p=18&sid=216b7cae7a305a14d1074e259ce0f1cd#p18 "http://oddityinteractive.com/OddityEngine2/phpBB3/viewtopic.php?f=5&p=18&sid=216b7cae7a305a14d1074e259ce0f1cd#p18") -
-    genetransfer
+-   [XFile to MD5 Converter](http://oddityinteractive.com/OddityEngine2/phpBB3/viewtopic.php?f=5&p=18&sid=216b7cae7a305a14d1074e259ce0f1cd#p18 "http://oddityinteractive.com/OddityEngine2/phpBB3/viewtopic.php?f=5&p=18&sid=216b7cae7a305a14d1074e259ce0f1cd#p18") - genetransfer
 
 ### Modelviewer
 
--   [MD5
-    ModelViewer](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=1281 "http://www.doom3world.org/phpbb2/viewtopic.php?t=1281") -
-    der\_ton
--   [MD5
-    ModelViewer](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=2305 "http://www.doom3world.org/phpbb2/viewtopic.php?t=2305") -
-    KPixel
--   [MD5
-    ModelViewer](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=2552 "http://www.doom3world.org/phpbb2/viewtopic.php?t=2552") -
-    JayVee (Open Source!)
+-   [MD5 ModelViewer](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=1281 "http://www.doom3world.org/phpbb2/viewtopic.php?t=1281") - der\_ton
+-   [MD5 ModelViewer](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=2305 "http://www.doom3world.org/phpbb2/viewtopic.php?t=2305") - KPixel
+-   [MD5 ModelViewer](https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=2552 "http://www.doom3world.org/phpbb2/viewtopic.php?t=2552") - JayVee (Open Source!)
 

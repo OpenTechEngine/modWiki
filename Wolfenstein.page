@@ -1,126 +1,122 @@
-<div style="margin-top: -3em; margin-bottom: 1em; padding-top: 1px">
-
 Welcome to ![](/images/5/5d/Rtcw2square_bg.png) modwiki.net
 
-We currently have [9,357](Special:Statistics "Special:Statistics")
-articles.
+We currently have [9,357](Special:Statistics "Special:Statistics") articles.
 
-</div>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><div style="padding: .4em .9em .9em">
+<h3>Editing Categories:</h3>
+<dl>
+<dt> <a href="Modding" class="uri" title="Modding">Modding</a> </dt>
+<dd>General information about producing and distributing mods
+</dd>
+<dt> <a href="Coding" class="uri" title="Coding">Coding</a> </dt>
+<dd>Modification of the engine's source code
+</dd>
+<dt> <a href="Mapping" class="uri" title="Mapping">Mapping</a> </dt>
+<dd>Information about level design and the tools
+</dd>
+<dt> <a href="Modelling" class="uri" title="Modelling">Modelling</a> </dt>
+<dd>Modelling and file format information
+</dd>
+<dt> <a href="Texturing" class="uri" title="Texturing">Texturing</a> </dt>
+<dd>Explanation of material shaders and image files
+</dd>
+<dt> <a href="Scripting" class="uri" title="Scripting">Scripting</a> </dt>
+<dd>Information about Scripting for GUIs and Levels
+</dd>
+<dt> <a href="Declarations" class="uri" title="Declarations">Declarations</a> </dt>
+<dd>Declarations define the properties and behavior of game content
+</dd>
+<dt> <a href="Audio_design" title="Audio design">Audio design</a> </dt>
+<dd>The creation of musical tracks and sound effects
+</dd>
+</dl>
+</div></td>
+<td align="left"><div style="padding: .4em .9em .9em;">
+<h3>Featured Articles:</h3>
+<dl>
+<dt> <a href="How_to_get_help" title="How to get help">How to get help</a> </dt>
+<dd>A good introduction to the use of this wiki
+</dd>
+<dt> <a href="Console" class="uri" title="Console">Console</a> </dt>
+<dd>Everything you need to know about the console
+<ul>
+<li><a href="CVars_%28Wolf%29" title="CVars (Wolf)">CVars</a></li>
+<li><a href="Commands_%28Wolf%29" title="Commands (Wolf)">Commands</a></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt> <a href="Script_events" title="Script events">Script events</a> </dt>
+<dd>id Tech 4 relevant script events
+</dd>
+<dt> <a href="Startup_parameters" title="Startup parameters">Startup parameters</a> </dt>
+<dd>Parameters you can add when starting Wolfenstein
+</dd>
+<dt> <a href="Folder_structure_%28Wolf%29" title="Folder structure (Wolf)">Folder structure</a> </dt>
+<dd>An overview over the folders used by Wolfenstein
+</dd>
+<dt> <a href="File_formats" title="File formats">File formats</a> </dt>
+<dd>All the different file formats used by Wolfenstein
+</dd>
+<dt> <a href="Tutorial_list" title="Tutorial list">Tutorial list</a> </dt>
+<dd>An extensive list to tutorials on a wide range of topics
+</dd>
+</dl>
+</div></td>
+</tr>
+</tbody>
+</table>
 
-+--------------------------------------+--------------------------------------+
-| <div                                 | <div                                 |
-| style="padding: .4em .9em .9em">     | style="padding: .4em .9em .9em;">    |
-|                                      |                                      |
-| ### Editing Categories:              | ### Featured Articles:               |
-|                                      |                                      |
-|  [Modding](Modding "Modding")        |  [How to get help](How_to_get_help " |
-| :   General information about        | How to get help")                    |
-|     producing and distributing mods  | :   A good introduction to the use   |
-|                                      |     of this wiki                     |
-|  [Coding](Coding "Coding")           |                                      |
-| :   Modification of the engine's     |  [Console](Console "Console")        |
-|     source code                      | :   Everything you need to know      |
-|                                      |     about the console                |
-|  [Mapping](Mapping "Mapping")        |     -   [CVars](CVars_%28Wolf%29 "CV |
-| :   Information about level design   | ars (Wolf)")                         |
-|     and the tools                    |     -   [Commands](Commands_%28Wolf% |
-|                                      | 29 "Commands (Wolf)")                |
-|  [Modelling](Modelling "Modelling")  |                                      |
-| :   Modelling and file format        | <!-- -->                             |
-|     information                      |                                      |
-|                                      |  [Script events](Script_events "Scri |
-|  [Texturing](Texturing "Texturing")  | pt events")                          |
-| :   Explanation of material shaders  | :   id Tech 4 relevant script events |
-|     and image files                  |                                      |
-|                                      |  [Startup parameters](Startup_parame |
-|  [Scripting](Scripting "Scripting")  | ters "Startup parameters")           |
-| :   Information about Scripting for  | :   Parameters you can add when      |
-|     GUIs and Levels                  |     starting Wolfenstein             |
-|                                      |                                      |
-|  [Declarations](Declarations "Declar |  [Folder structure](Folder_structure |
-| ations")                             | _%28Wolf%29 "Folder structure (Wolf) |
-| :   Declarations define the          | ")                                   |
-|     properties and behavior of game  | :   An overview over the folders     |
-|     content                          |     used by Wolfenstein              |
-|                                      |                                      |
-|  [Audio design](Audio_design "Audio  |  [File formats](File_formats "File f |
-| design")                             | ormats")                             |
-| :   The creation of musical tracks   | :   All the different file formats   |
-|     and sound effects                |     used by Wolfenstein              |
-|                                      |                                      |
-| </div>                               |  [Tutorial list](Tutorial_list "Tuto |
-|                                      | rial list")                          |
-|                                      | :   An extensive list to tutorials   |
-|                                      |     on a wide range of topics        |
-|                                      |                                      |
-|                                      | </div>                               |
-+--------------------------------------+--------------------------------------+
-
-+--------------------------------------+--------------------------------------+
-| <div                                 | <div                                 |
-| style="padding: .4em .9em .9em">     | style="padding: .4em .9em .9em;">    |
-|                                      |                                      |
-| ### New to the site?                 | ### Wolfenstein game and engine:     |
-|                                      |                                      |
-| This wiki is focused on documenting  | Wolfenstein differs from Doom 3 in   |
-| the various aspects involved with    | the following ways...                |
-| developing assets, levels and        |                                      |
-| modifications based on the [id       | -   Add points here                  |
-| Tech](Id_Tech "Id Tech") engines. If |                                      |
-| you're new to the site or a wiki in  | Wolfenstein was developed by [Raven  |
-| general, please visit the            | Software](https://web.archive.org/we |
-| [about](modwiki:About "modwiki:About | b/20121106083701/http://www.ravensof |
-| ")                                   | t.com/ "http://www.ravensoft.com/")  |
-| page to learn more about this        | , [Threewave                         |
-| project.                             | Software](http://www.threewavesoftwa |
-|                                      | re.com/ "http://www.threewavesoftwar |
-| ### Want to help?                    | e.com/")                             |
-|                                      | and published by                     |
-| As modwiki is a community project,   | [Activision](http://www.activision.c |
-| feel free to                         | om/ "http://www.activision.com")     |
-| [register](Special:Userlogin "Specia | . Release date for the PC version    |
-| l:Userlogin")                        | was August 18, 2009.                 |
-| and join us on this great endeavor!  |                                      |
-| Please check out the [style          | ### System Requirements:             |
-| guide](modwiki:Style_guide "modwiki: |                                      |
-| Style guide")                        | -   Operating System: Windows        |
-| for some general editing guidelines. |     XP/Vista                         |
-| Visit [open                          | -   CPU: Pentium 4 3.2 GHz or AMD    |
-| tasks](modwiki:Open_tasks "modwiki:O |     Athlon 64 3400+                  |
-| pen tasks")                          | -   Memory: 1GB                      |
-| to find out which pages need help.   | -   Storage: 8GB                     |
-| You can also visit the               | -   Sound: 100% DirectX 9.0c         |
-| [sandbox](modwiki:Sandbox "modwiki:S |     Compliant / 16-bit               |
-| andbox")                             | -   Video: 100% DirectX 9.0c         |
-| to experiment with the wiki markup   |     Compliant / 256MB RAM            |
-| language. To learn how to edit or    |                                      |
-| create pages, please take a look     | </div>                               |
-| [here](Help:Editing "Help:Editing")  |                                      |
-| .                                    |                                      |
-|                                      |                                      |
-| But most importantly, if you gain    |                                      |
-| something from this resource, please |                                      |
-| give back.                           |                                      |
-|                                      |                                      |
-| ### High quality links:              |                                      |
-|                                      |                                      |
-| Other interesting id Tech engine     |                                      |
-| editing sites:                       |                                      |
-|                                      |                                      |
-|  [www.doom3world.org](https://web.ar |                                      |
-| chive.org/web/20121106083701/http:// |                                      |
-| www.doom3world.org/ "http://www.doom |                                      |
-| 3world.org")                         |                                      |
-| :   The premier discussion forum for |                                      |
-|     all Doom 3 engine games          |                                      |
-|                                      |                                      |
-|  [www.iddevnet.com](http://www.iddev |                                      |
-| net.com/ "http://www.iddevnet.com/") |                                      |
-|                                      |                                      |
-| :   The official id Software website |                                      |
-|     for Doom 3 engine editing        |                                      |
-|                                      |                                      |
-| </div>                               |                                      |
-+--------------------------------------+--------------------------------------+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><div style="padding: .4em .9em .9em">
+<h3>New to the site?</h3>
+<p>This wiki is focused on documenting the various aspects involved with developing assets, levels and modifications based on the <a href="Id_Tech" title="Id Tech">id Tech</a> engines. If you're new to the site or a wiki in general, please visit the <a href="modwiki:About" title="modwiki:About">about</a> page to learn more about this project.</p>
+<h3>Want to help?</h3>
+<p>As modwiki is a community project, feel free to <a href="Special:Userlogin" title="Special:Userlogin">register</a> and join us on this great endeavor! Please check out the <a href="modwiki:Style_guide" title="modwiki:Style guide">style guide</a> for some general editing guidelines. Visit <a href="modwiki:Open_tasks" title="modwiki:Open tasks">open tasks</a> to find out which pages need help. You can also visit the <a href="modwiki:Sandbox" title="modwiki:Sandbox">sandbox</a> to experiment with the wiki markup language. To learn how to edit or create pages, please take a look <a href="Help:Editing" title="Help:Editing">here</a> .</p>
+<p>But most importantly, if you gain something from this resource, please give back.</p>
+<h3>High quality links:</h3>
+<p>Other interesting id Tech engine editing sites:</p>
+<dl>
+<dt> <a href="https://web.archive.org/web/20121106083701/http://www.doom3world.org/" title="http://www.doom3world.org">www.doom3world.org</a> </dt>
+<dd>The premier discussion forum for all Doom 3 engine games
+</dd>
+<dt> <a href="http://www.iddevnet.com/" title="http://www.iddevnet.com/">www.iddevnet.com</a> </dt>
+<dd>The official id Software website for Doom 3 engine editing
+</dd>
+</dl>
+</div></td>
+<td align="left"><div style="padding: .4em .9em .9em;">
+<h3>Wolfenstein game and engine:</h3>
+<p>Wolfenstein differs from Doom 3 in the following ways...</p>
+<ul>
+<li>Add points here</li>
+</ul>
+<p>Wolfenstein was developed by <a href="https://web.archive.org/web/20121106083701/http://www.ravensoft.com/" title="http://www.ravensoft.com/">Raven Software</a> , <a href="http://www.threewavesoftware.com/" title="http://www.threewavesoftware.com/">Threewave Software</a> and published by <a href="http://www.activision.com/" title="http://www.activision.com">Activision</a> . Release date for the PC version was August 18, 2009.</p>
+<h3>System Requirements:</h3>
+<ul>
+<li>Operating System: Windows XP/Vista</li>
+<li>CPU: Pentium 4 3.2 GHz or AMD Athlon 64 3400+</li>
+<li>Memory: 1GB</li>
+<li>Storage: 8GB</li>
+<li>Sound: 100% DirectX 9.0c Compliant / 16-bit</li>
+<li>Video: 100% DirectX 9.0c Compliant / 256MB RAM</li>
+</ul>
+</div></td>
+</tr>
+</tbody>
+</table>
 
 

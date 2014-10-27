@@ -1,8 +1,7 @@
 Description
 -----------
 
-The texgen stage keyword modifies the texture coordinates of the
-associated map as required by certain effects, such as skyboxes.
+The texgen stage keyword modifies the texture coordinates of the associated map as required by certain effects, such as skyboxes.
 
 Usage
 -----
@@ -14,21 +13,17 @@ Parameters
 
 The **type** parameter can be any of the following values:
 
- normal 
-:   Unknown effect.
+ normal   
+Unknown effect.
 
- skybox 
-:   Set the appropriate texture coordinates for a skybox. The associated
-    stage should be a
-    [cameraCubeMap](CameraCubeMap_%28Material_stage_keyword%29 "CameraCubeMap (Material stage keyword)")
-    .
+ skybox   
+Set the appropriate texture coordinates for a skybox. The associated stage should be a [cameraCubeMap](CameraCubeMap_%28Material_stage_keyword%29 "CameraCubeMap (Material stage keyword)") .
 
- wobblesky \<x\> \<y\> \<z\> 
-:   Same as **skybox** , but rotate the coordinates according to the
-    axis given
+ wobblesky \<x\> \<y\> \<z\>   
+Same as **skybox** , but rotate the coordinates according to the axis given
 
- reflect 
-:   Use the defined stage map for environment mapping.
+ reflect   
+Use the defined stage map for environment mapping.
 
 Example
 -------
@@ -44,14 +39,11 @@ The following is a typical skybox map stage.
 Notes
 -----
 
-Setting the "z" component of "wobblesky" to a positive value causes the
-skybox to rotate continuously around the vertical axis. This is used in
-Doom 3 in some of the Hell levels.
+Setting the "z" component of "wobblesky" to a positive value causes the skybox to rotate continuously around the vertical axis. This is used in Doom 3 in some of the Hell levels.
 
 See also
 --------
 
 [How to add a sky](How_to_add_a_sky "How to add a sky")
 
-\
 

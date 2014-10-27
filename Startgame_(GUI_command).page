@@ -5,14 +5,11 @@ Syntax
 
     startgame map
 
-*map* is the name of the map to load. This is used only in intro.gui and
-mainmenu.gui- it is not known whether it can be called from in-game
-guis.
+*map* is the name of the map to load. This is used only in intro.gui and mainmenu.gui- it is not known whether it can be called from in-game guis.
 
 Example(s)
 ----------
 
     set "cmd" "startgame map/mars_city1";
 
-\
 

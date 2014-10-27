@@ -1,8 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -71,8 +70,7 @@ Examples
 Notes
 -----
 
-The value returned bares relation to the status of eight possible
-buttons as defined in the SDK under UsercmdGen.h...
+The value returned bares relation to the status of eight possible buttons as defined in the SDK under UsercmdGen.h...
 
     // usercmd_t->button bits
     const int BUTTON_ATTACK         = BIT(0);
@@ -84,13 +82,8 @@ buttons as defined in the SDK under UsercmdGen.h...
     const int BUTTON_6              = BIT(6);
     const int BUTTON_7              = BIT(7);
 
-Each button's status is stored as a single bit in a eight bit binary
-number. Each button is represented by either a 1 or 0 which corresponds
-with either an on or off state. The resulting binary number therefore
-represents the status of each button.
+Each button's status is stored as a single bit in a eight bit binary number. Each button is represented by either a 1 or 0 which corresponds with either an on or off state. The resulting binary number therefore represents the status of each button.
 
-The example above depicts a way to determine which buttons are being
-pressed via getButtons.
+The example above depicts a way to determine which buttons are being pressed via getButtons.
 
-\
 

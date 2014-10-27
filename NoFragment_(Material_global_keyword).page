@@ -1,8 +1,7 @@
 Description
 -----------
 
-Brushes with materials which have this keyword are not affected by
-polygon segmentation at the map compilation stage.
+Brushes with materials which have this keyword are not affected by polygon segmentation at the map compilation stage.
 
 Usage
 -----
@@ -19,8 +18,6 @@ Not Available.
 Notes
 -----
 
-Excessive use of materials with this keyword will be performant
-counter-producive as they aren't optimised for visibility.
+Excessive use of materials with this keyword will be performant counter-producive as they aren't optimised for visibility.
 
-\
 

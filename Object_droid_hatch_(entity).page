@@ -1,104 +1,84 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Object_droid_hatch_%28entity%29 "http://www.modwiki.net/w/index.php?title=Object_droid_hatch_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Object_droid_hatch_%28entity%29 "http://www.modwiki.net/w/index.php?title=Object_droid_hatch_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Object_droid_hatch_%28entity%29 "http://www.modwiki.net/w/index.php?title=Object_droid_hatch_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Object_droid_hatch_%28entity%29 "http://www.modwiki.net/w/index.php?title=Object_droid_hatch_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
 
-Droid hatch capable of spawning droids when triggered. Use
-auto\_retrigger to close hatch and spawn more droids.
+Droid hatch capable of spawning droids when triggered. Use auto\_retrigger to close hatch and spawn more droids.
 
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                            DESCRIPTION
-  ------------------------------ ----------------------------------------------------------------------------------------------------------------------
-  accepts\_wounds                Description not available.
-  accurateguitrace               Description not available.
-  alignToJoint                   Description not available.
-  angle                          Description not available.
-  anim                           The anim to play when the case is triggered. Ie. on the droid hatch this would be 'open'
-  anim\_encased\_monster\_exit   The animation to play on the monster when it exits the case. Ex: 'droid\_hatch\_exit'
-  anim\_encased\_monster\_idle   The animation to play on the monster while it is encased. Ex: 'droid\_hatch\_idle'
-  anim\_retrigger                The anim to play when the case is re-triggered. Ie. on the droid hatch this would be 'close'
-  applyDamageEffects             Description not available.
-  auto\_retrigger\_delay         -1 = Never retrigger, Greater than or equal to 0 = Seconds to wait before automatically retriggering this case. (-1)
-  bind                           Description not available.
-  bindOrientated                 Description not available.
-  bindToBody                     Description not available.
-  bindToJoint                    Description not available.
-  bindanim                       Description not available.
-  cameraTarget                   Description not available.
-  cinematic                      Description not available.
-  classname                      Description not available.
-  clipmodel                      Description not available.
-  cone                           Description not available.
-  cylinder                       Description not available.
-  def\_monster                   The monster def to spawn. For the droid hatch, this would be 'monster\_droid'
-  defaultAnim                    Description not available.
-  dispose\_delay                 Description not available.
-  editor\_color                  Description not available.
-  editor\_maxs                   Description not available.
-  editor\_mins                   Description not available.
-  editor\_rotatable              Description not available.
-  editor\_showangle              Description not available.
-  editor\_usage                  Droid hatch capable of spawning droids when triggered. Use auto\_retrigger to close hatch and spawn more droids.
-  editor\_var XXXX               Description not available.
-  fx\_steamblast                 Description not available.
-  gravity                        Description not available.
-  guiTarget                      Description not available.
-  health                         Description not available.
-  hide                           Description not available.
-  ignoreGravityZones             Description not available.
-  inherit                        Description not available.
-  matter                         Description not available.
-  max\_monsters                  The total number of encased monsters to spawn. -1 = infinite (1)
-  maxs                           Description not available.
-  mins                           Description not available.
-  model                          Description not available.
-  monster\_hide                  1 = hide the encased monster prior to triggering him 0 = visible (0)
-  monster\_offset                The offset relative to the case which determines the monsters encased position.
-  moveToJoint                    Description not available.
-  name                           Description not available.
-  networkSync                    Description not available.
-  neverDormant                   Description not available.
-  noJawFlap                      Description not available.
-  noPortal                       Description not available.
-  noclipmodel                    Description not available.
-  offset\_aim                    Description not available.
-  origin                         Description not available.
-  push\_cosine                   Description not available.
-  pushes                         Description not available.
-  rotation                       Description not available.
-  scriptobject                   Description not available.
-  size                           Description not available.
-  snd\_closehatch                Description not available.
-  snd\_openhatch                 Description not available.
-  solidForTeam                   Description not available.
-  sound\_bone                    Description not available.
-  spawnclass                     Description not available.
-  target                         Description not available.
+| KEY                          | DESCRIPTION                                                                                                          |
+|------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| accepts\_wounds              | Description not available.                                                                                           |
+| accurateguitrace             | Description not available.                                                                                           |
+| alignToJoint                 | Description not available.                                                                                           |
+| angle                        | Description not available.                                                                                           |
+| anim                         | The anim to play when the case is triggered. Ie. on the droid hatch this would be 'open'                             |
+| anim\_encased\_monster\_exit | The animation to play on the monster when it exits the case. Ex: 'droid\_hatch\_exit'                                |
+| anim\_encased\_monster\_idle | The animation to play on the monster while it is encased. Ex: 'droid\_hatch\_idle'                                   |
+| anim\_retrigger              | The anim to play when the case is re-triggered. Ie. on the droid hatch this would be 'close'                         |
+| applyDamageEffects           | Description not available.                                                                                           |
+| auto\_retrigger\_delay       | -1 = Never retrigger, Greater than or equal to 0 = Seconds to wait before automatically retriggering this case. (-1) |
+| bind                         | Description not available.                                                                                           |
+| bindOrientated               | Description not available.                                                                                           |
+| bindToBody                   | Description not available.                                                                                           |
+| bindToJoint                  | Description not available.                                                                                           |
+| bindanim                     | Description not available.                                                                                           |
+| cameraTarget                 | Description not available.                                                                                           |
+| cinematic                    | Description not available.                                                                                           |
+| classname                    | Description not available.                                                                                           |
+| clipmodel                    | Description not available.                                                                                           |
+| cone                         | Description not available.                                                                                           |
+| cylinder                     | Description not available.                                                                                           |
+| def\_monster                 | The monster def to spawn. For the droid hatch, this would be 'monster\_droid'                                        |
+| defaultAnim                  | Description not available.                                                                                           |
+| dispose\_delay               | Description not available.                                                                                           |
+| editor\_color                | Description not available.                                                                                           |
+| editor\_maxs                 | Description not available.                                                                                           |
+| editor\_mins                 | Description not available.                                                                                           |
+| editor\_rotatable            | Description not available.                                                                                           |
+| editor\_showangle            | Description not available.                                                                                           |
+| editor\_usage                | Droid hatch capable of spawning droids when triggered. Use auto\_retrigger to close hatch and spawn more droids.     |
+| editor\_var XXXX             | Description not available.                                                                                           |
+| fx\_steamblast               | Description not available.                                                                                           |
+| gravity                      | Description not available.                                                                                           |
+| guiTarget                    | Description not available.                                                                                           |
+| health                       | Description not available.                                                                                           |
+| hide                         | Description not available.                                                                                           |
+| ignoreGravityZones           | Description not available.                                                                                           |
+| inherit                      | Description not available.                                                                                           |
+| matter                       | Description not available.                                                                                           |
+| max\_monsters                | The total number of encased monsters to spawn. -1 = infinite (1)                                                     |
+| maxs                         | Description not available.                                                                                           |
+| mins                         | Description not available.                                                                                           |
+| model                        | Description not available.                                                                                           |
+| monster\_hide                | 1 = hide the encased monster prior to triggering him 0 = visible (0)                                                 |
+| monster\_offset              | The offset relative to the case which determines the monsters encased position.                                      |
+| moveToJoint                  | Description not available.                                                                                           |
+| name                         | Description not available.                                                                                           |
+| networkSync                  | Description not available.                                                                                           |
+| neverDormant                 | Description not available.                                                                                           |
+| noJawFlap                    | Description not available.                                                                                           |
+| noPortal                     | Description not available.                                                                                           |
+| noclipmodel                  | Description not available.                                                                                           |
+| offset\_aim                  | Description not available.                                                                                           |
+| origin                       | Description not available.                                                                                           |
+| push\_cosine                 | Description not available.                                                                                           |
+| pushes                       | Description not available.                                                                                           |
+| rotation                     | Description not available.                                                                                           |
+| scriptobject                 | Description not available.                                                                                           |
+| size                         | Description not available.                                                                                           |
+| snd\_closehatch              | Description not available.                                                                                           |
+| snd\_openhatch               | Description not available.                                                                                           |
+| solidForTeam                 | Description not available.                                                                                           |
+| sound\_bone                  | Description not available.                                                                                           |
+| spawnclass                   | Description not available.                                                                                           |
+| target                       | Description not available.                                                                                           |
 
 Inheritance
 -----------

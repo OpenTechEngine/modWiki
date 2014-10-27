@@ -9,81 +9,46 @@ Articles
 
 ### Enemy Territory: Quake Wars
 
-[Bot world state update
-issue](Bot_world_state_update_issue "Bot world state update issue")
-
-\
+[Bot world state update issue](Bot_world_state_update_issue "Bot world state update issue")
 
 Files
 -----
-
-<div style="padding: .4em .9em .9em;">
-
-<div style="text-align: left; margin-left: 60px;">
 
 `      `
 -   / [src](Src_%28source_folder%29 "Src (source folder)")
     -   / [cm](Cm_%28source_folder%29 "Cm (source folder)")
     -   / [d3xp](D3xp_%28source_folder%29 "D3xp (source folder)")
-        -   /
-            [ai](D3xp/ai_%28source_folder%29 "D3xp/ai (source folder)")
-        -   /
-            [anim](D3xp/anim_%28source_folder%29 "D3xp/anim (source folder)")
-        -   /
-            [gamesys](D3xp/gamesys_%28source_folder%29 "D3xp/gamesys (source folder)")
-        -   /
-            [physics](D3xp/physics_%28source_folder%29 "D3xp/physics (source folder)")
-        -   /
-            [script](D3xp/script_%28source_folder%29 "D3xp/script (source folder)")
-    -   /
-        [framework](Framework_%28source_folder%29 "Framework (source folder)")
-        -   /
-            [async](Framework/async_%28source_folder%29 "Framework/async (source folder)")
+        -   / [ai](D3xp/ai_%28source_folder%29 "D3xp/ai (source folder)")
+        -   / [anim](D3xp/anim_%28source_folder%29 "D3xp/anim (source folder)")
+        -   / [gamesys](D3xp/gamesys_%28source_folder%29 "D3xp/gamesys (source folder)")
+        -   / [physics](D3xp/physics_%28source_folder%29 "D3xp/physics (source folder)")
+        -   / [script](D3xp/script_%28source_folder%29 "D3xp/script (source folder)")
+    -   / [framework](Framework_%28source_folder%29 "Framework (source folder)")
+        -   / [async](Framework/async_%28source_folder%29 "Framework/async (source folder)")
     -   / [game](Game_%28source_folder%29 "Game (source folder)")
-        -   /
-            [ai](Game/ai_%28source_folder%29 "Game/ai (source folder)")
-        -   /
-            [anim](Game/anim_%28source_folder%29 "Game/anim (source folder)")
-        -   /
-            [gamesys](Game/gamesys_%28source_folder%29 "Game/gamesys (source folder)")
-        -   /
-            [physics](Game/physics_%28source_folder%29 "Game/physics (source folder)")
-        -   /
-            [script](Game/script_%28source_folder%29 "Game/script (source folder)")
+        -   / [ai](Game/ai_%28source_folder%29 "Game/ai (source folder)")
+        -   / [anim](Game/anim_%28source_folder%29 "Game/anim (source folder)")
+        -   / [gamesys](Game/gamesys_%28source_folder%29 "Game/gamesys (source folder)")
+        -   / [physics](Game/physics_%28source_folder%29 "Game/physics (source folder)")
+        -   / [script](Game/script_%28source_folder%29 "Game/script (source folder)")
     -   / [idlib](Idlib_%28source_folder%29 "Idlib (source folder)")
-        -   /
-            [bv](Idlib/bv_%28source_folder%29 "Idlib/bv (source folder)")
-        -   /
-            [containers](Idlib/containers_%28source_folder%29 "Idlib/containers (source folder)")
-        -   /
-            [geometry](Idlib/geometry_%28source_folder%29 "Idlib/geometry (source folder)")
-        -   /
-            [hashing](Idlib/hashing_%28source_folder%29 "Idlib/hashing (source folder)")
-        -   /
-            [math](Idlib/math_%28source_folder%29 "Idlib/math (source folder)")
-    -   /
-        [MayaImport](MayaImport_%28source_folder%29 "MayaImport (source folder)")
-        -   /
-            [Maya4.5](MayaImport/Maya4.5_%28source_folder%29 "MayaImport/Maya4.5 (source folder)")
-        -   /
-            [maya5.0](MayaImport/maya5.0_%28source_folder%29 "MayaImport/maya5.0 (source folder)")
-        -   /
-            [Maya6.0](MayaImport/Maya6.0_%28source_folder%29 "MayaImport/Maya6.0 (source folder)")
-    -   /
-        [renderer](Renderer_%28source_folder%29 "Renderer (source folder)")
+        -   / [bv](Idlib/bv_%28source_folder%29 "Idlib/bv (source folder)")
+        -   / [containers](Idlib/containers_%28source_folder%29 "Idlib/containers (source folder)")
+        -   / [geometry](Idlib/geometry_%28source_folder%29 "Idlib/geometry (source folder)")
+        -   / [hashing](Idlib/hashing_%28source_folder%29 "Idlib/hashing (source folder)")
+        -   / [math](Idlib/math_%28source_folder%29 "Idlib/math (source folder)")
+    -   / [MayaImport](MayaImport_%28source_folder%29 "MayaImport (source folder)")
+        -   / [Maya4.5](MayaImport/Maya4.5_%28source_folder%29 "MayaImport/Maya4.5 (source folder)")
+        -   / [maya5.0](MayaImport/maya5.0_%28source_folder%29 "MayaImport/maya5.0 (source folder)")
+        -   / [Maya6.0](MayaImport/Maya6.0_%28source_folder%29 "MayaImport/Maya6.0 (source folder)")
+    -   / [renderer](Renderer_%28source_folder%29 "Renderer (source folder)")
     -   / [sound](Sound_%28source_folder%29 "Sound (source folder)")
     -   / [sys](Sys_%28source_folder%29 "Sys (source folder)")
-        -   /
-            [linux](Sys/linux_%28source_folder%29 "Sys/linux (source folder)")
-        -   /
-            [scons](Sys/scons_%28source_folder%29 "Sys/scons (source folder)")
+        -   / [linux](Sys/linux_%28source_folder%29 "Sys/linux (source folder)")
+        -   / [scons](Sys/scons_%28source_folder%29 "Sys/scons (source folder)")
     -   / [tools](Tools_%28source_folder%29 "Tools (source folder)")
-        -   /
-            [compilers](Tools/compilers_%28source_folder%29 "Tools/compilers (source folder)")
-            -   /
-                [aas](Tools/compilers/aas_%28source_folder%29 "Tools/compilers/aas (source folder)")
+        -   / [compilers](Tools/compilers_%28source_folder%29 "Tools/compilers (source folder)")
+            -   / [aas](Tools/compilers/aas_%28source_folder%29 "Tools/compilers/aas (source folder)")
     -   / [ui](Ui_%28source_folder%29 "Ui (source folder)")
 
-</div>
 
-</div>

@@ -14,34 +14,23 @@ Parameters
 ----------
 
 -   [Option] - Optional compilation filter.
-    -   editorOutput - Converts messages to the
-        [DoomEdit](DoomEdit "DoomEdit") output window.
+    -   editorOutput - Converts messages to the [DoomEdit](DoomEdit "DoomEdit") output window.
     -   draw - Not functional.
-    -   [lightCarve](LightCarve "LightCarve") - Split polygons along
-        light volume edges.
+    -   [lightCarve](LightCarve "LightCarve") - Split polygons along light volume edges.
     -   glView - Not functional.
-    -   noAAS - Doesn't create
-        [AAS](AAS_%28file_format%29 "AAS (file format)") files.
-    -   noCarve - Doesn't cut any surfaces as if they had the
-        [noFragment](NoFragment_%28Material_global_keyword%29 "NoFragment (Material global keyword)")
-        global keyword.
+    -   noAAS - Doesn't create [AAS](AAS_%28file_format%29 "AAS (file format)") files.
+    -   noCarve - Doesn't cut any surfaces as if they had the [noFragment](NoFragment_%28Material_global_keyword%29 "NoFragment (Material global keyword)") global keyword.
     -   noClipSides - Doesn't clip overlaping solid brushes.
-    -   noCM - Doesn't create [collision
-        map](CM_%28file_format%29 "CM (file format)") .
-    -   noCurves - Makes curves invisible but their collision model is
-        still generated.
-    -   noFlood - Skips the flooding of the level allowing it to have
-        leaks.
-    -   noLightCarve - Doesn't split polygons based on light volume
-        edges. Default behaviour.
+    -   noCM - Doesn't create [collision map](CM_%28file_format%29 "CM (file format)") .
+    -   noCurves - Makes curves invisible but their collision model is still generated.
+    -   noFlood - Skips the flooding of the level allowing it to have leaks.
+    -   noLightCarve - Doesn't split polygons based on light volume edges. Default behaviour.
     -   noModels - Not functional.
     -   noOpt - Doesn't merge/remove redundant polygons.
     -   noTJunc - Doesn't create T-Junctions and also auto-forces noOpt.
     -   v - Shows additional information whilst compiling.
-    -   verboseEntities - Shows additional information on entities like
-        removal of degenerate polygons.
-    -   shadowOpt [int] - Sets the static shadow computation
-        optimisation type.
+    -   verboseEntities - Shows additional information on entities like removal of degenerate polygons.
+    -   shadowOpt [int] - Sets the static shadow computation optimisation type.
         -   0 - No optimization.
         -   1 - SO\_MERGE\_SURFACES. Default behaviour.
         -   2 - SO\_CULL\_OCCLUDED.
@@ -53,11 +42,7 @@ Parameters
 
     dmap shadowopt 3 <mapname>
 
--   [Filename] - Name of .
-    [MAP](MAP_%28file_format%29 "MAP (file format)") file (without the
-    extension). If your map is in a subfolder of the /
-    [maps](Maps_%28folder%29 "Maps (folder)") directory you will need to
-    include the relative path to it, for instance:
+-   [Filename] - Name of . [MAP](MAP_%28file_format%29 "MAP (file format)") file (without the extension). If your map is in a subfolder of the / [maps](Maps_%28folder%29 "Maps (folder)") directory you will need to include the relative path to it, for instance:
 
 <!-- -->
 
@@ -66,19 +51,8 @@ Parameters
 Notes
 -----
 
-This command will take a .MAP file and generate a .
-[CM](CM_%28file_format%29 "CM (file format)") , .
-[PROC](PROC_%28file_format%29 "PROC (file format)") and sometimes one or
-more . [AAS](AAS_%28file_format%29 "AAS (file format)") files. See also
-the [map formats](Maps_%28folder%29 "Maps (folder)") page and the
-[testmap](Testmap_%28console_command%29 "Testmap (console command)")
-console command.
-
-\
-
-<div>
+This command will take a .MAP file and generate a . [CM](CM_%28file_format%29 "CM (file format)") , . [PROC](PROC_%28file_format%29 "PROC (file format)") and sometimes one or more . [AAS](AAS_%28file_format%29 "AAS (file format)") files. See also the [map formats](Maps_%28folder%29 "Maps (folder)") page and the [testmap](Testmap_%28console_command%29 "Testmap (console command)") console command.
 
 ![](/images/e/e8/Q4square_25.png) **Note:** Quake 4 only:
 *This command does not function under the Linux build of Quake 4.*
 
-</div>

@@ -18,30 +18,15 @@ Not Available.
 Notes
 -----
 
-This turns the entire surface into a mirror (see also the
-[mirrorRenderMap](MirrorRenderMap_%28Material_stage_keyword%29 "MirrorRenderMap (Material stage keyword)")
-stage keyword). Mirrors have certain limitations; the following
-situations can provoke visual artefacts:
+This turns the entire surface into a mirror (see also the [mirrorRenderMap](MirrorRenderMap_%28Material_stage_keyword%29 "MirrorRenderMap (Material stage keyword)") stage keyword). Mirrors have certain limitations; the following situations can provoke visual artefacts:
 
--   They act as portals which mean they cannot be broken by any other
-    surfaces whose materials have the
-    [areaportal](Areaportal_%28Material_global_keyword%29 "Areaportal (Material global keyword)")
-    global keyword.
+-   They act as portals which mean they cannot be broken by any other surfaces whose materials have the [areaportal](Areaportal_%28Material_global_keyword%29 "Areaportal (Material global keyword)") global keyword.
 -   Two mirror surfaces which are within line of sight with each other.
--   Used with the
-    [twoSided](TwoSided_%28Material_global_keyword%29 "TwoSided (Material global keyword)")
-    global keyword.
+-   Used with the [twoSided](TwoSided_%28Material_global_keyword%29 "TwoSided (Material global keyword)") global keyword.
 
-[![By using visportals to divide a map into areas, one can prevent the
-space immediately behind a mirror from affecting the
-mirror.](/images/b/b8/Mirror.png)\
- *By using visportals to divide a map into areas, one can prevent the
-space immediately behind a mirror from affecting the mirror. (Click to
-Enlarge)*](/images/b/b8/Mirror.png "By using visportals to divide a map into areas, one can prevent the space immediately behind a mirror from affecting the mirror.")
+[![By using visportals to divide a map into areas, one can prevent the space immediately behind a mirror from affecting the mirror.](/images/b/b8/Mirror.png)
+ *By using visportals to divide a map into areas, one can prevent the space immediately behind a mirror from affecting the mirror. (Click to Enlarge)*](/images/b/b8/Mirror.png "By using visportals to divide a map into areas, one can prevent the space immediately behind a mirror from affecting the mirror.")
 
-In the image to the right, two visportals divide the space into three
-areas. Because of this, the space with the mirror is independant from
-the area behind it and thus the mirror renders correctly.
+In the image to the right, two visportals divide the space into three areas. Because of this, the space with the mirror is independant from the area behind it and thus the mirror renders correctly.
 
-\
 

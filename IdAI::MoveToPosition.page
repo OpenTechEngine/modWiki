@@ -1,13 +1,9 @@
 bool [idAI](Src/game/ai/AI.cpp_%28source_file%29 "Src/game/ai/AI.cpp (source file)") ::MoveToPosition( const idVec3 &pos )
 --------------------------------------------------------------------------------------------------------------------------
 
-One would call MoveToPosition if they have decided on a place to go, and
-want to get there.
+One would call MoveToPosition if they have decided on a place to go, and want to get there.
 
-MoveToPosition will return a Boolean value indicating that it was able
-to set up state that will successfully get us to the position. The end
-result of calling MoveToPosition is that the AI’s move state is updated
-to reflect the type of movement desired and destination to get to.
+MoveToPosition will return a Boolean value indicating that it was able to set up state that will successfully get us to the position. The end result of calling MoveToPosition is that the AI’s move state is updated to reflect the type of movement desired and destination to get to.
 
 It starts out like:
 
@@ -24,14 +20,11 @@ It starts out like:
         aasPath_t   path;
      
 
-org will be our “original‿ goal position to get to. areaNum will be an
-index to an area.
+org will be our “original‿ goal position to get to. areaNum will be an index to an area.
 
-***If you are not familiar with what an area is, read the q3 bot paper,
-it will be worth it. At least chapter 6.***
+***If you are not familiar with what an area is, read the q3 bot paper, it will be worth it. At least chapter 6.***
 
-path really isn’t used in MoveToPosition, but is a required parameter to
-PathToGoal and so is declared here an passed in to be filled.
+path really isn’t used in MoveToPosition, but is a required parameter to PathToGoal and so is declared here an passed in to be filled.
 
      
     // if i have reached the position mentioned, set status and exit
@@ -40,50 +33,32 @@ PathToGoal and so is declared here an passed in to be filled.
             return true;
         }
 
-So first check to see if the AI has reached the postion passed in by the
-caller. ReachedPos uses a few different ways to check if the position
-has been reached, so pass moveCommand in to help it choose the best way
-to check. If the position has been reached, set the status to
-MOVE\_STATUS\_DONE and return true to let the caller know we have
-MovedToPosition ;)
+So first check to see if the AI has reached the postion passed in by the caller. ReachedPos uses a few different ways to check if the position has been reached, so pass moveCommand in to help it choose the best way to check. If the position has been reached, set the status to MOVE\_STATUS\_DONE and return true to let the caller know we have MovedToPosition ;)
 
      
     org = pos;
     move.toAreaNum = 0;
     if ( aas ) {
 
-Some quick initialization and a check to see if the Area Awareness
-System is ready and off we go, but to where?
+Some quick initialization and a check to see if the Area Awareness System is ready and off we go, but to where?
 
      
      
     move.toAreaNum = PointReachableAreaNum( org );
 
-move is an idMoveState, it is used to keep track of what’s up with
-navigation, later in idAI::Think it will be checked to set up an actual
-direction to move to. toAreaNum is the area number we want to go to
-[idAI::PointReachableAreaNum](IdAI::PointReachableAreaNum "IdAI::PointReachableAreaNum")
-will make sure that there is a point that the AI can reach and return
-the area number of that point.
+move is an idMoveState, it is used to keep track of what’s up with navigation, later in idAI::Think it will be checked to set up an actual direction to move to. toAreaNum is the area number we want to go to [idAI::PointReachableAreaNum](IdAI::PointReachableAreaNum "IdAI::PointReachableAreaNum") will make sure that there is a point that the AI can reach and return the area number of that point.
 
      
         aas->PushPointIntoAreaNum( move.toAreaNum, org );
 
-Go to
-[idAI::PushPointIntoAreaNum](IdAI::PushPointIntoAreaNum "IdAI::PushPointIntoAreaNum")
-for brian’s input on PushPointIntoAreaNum.
+Go to [idAI::PushPointIntoAreaNum](IdAI::PushPointIntoAreaNum "IdAI::PushPointIntoAreaNum") for brian’s input on PushPointIntoAreaNum.
 
-So we have a valid goal area number and position. We need to know
-whether we can get there from where we are, but where are we?
+So we have a valid goal area number and position. We need to know whether we can get there from where we are, but where are we?
 
      
         areaNum = PointReachableAreaNum( physicsObj.GetOrigin() );
 
-Given an origin and a destination vector and their corresponding area
-numbers, PathToGoal will return true if there is a path. Notice if there
-isn’t a valid path the move state is set to
-MOVE\_STATUS\_DEST\_UNREACHABLE and false is returned to indicate the AI
-can not MoveToPosition.
+Given an origin and a destination vector and their corresponding area numbers, PathToGoal will return true if there is a path. Notice if there isn’t a valid path the move state is set to MOVE\_STATUS\_DEST\_UNREACHABLE and false is returned to indicate the AI can not MoveToPosition.
 
          
         if ( !PathToGoal( path, areaNum, physicsObj.GetOrigin(), move.toAreaNum, org ) ) {
@@ -93,11 +68,7 @@ can not MoveToPosition.
         }
     }
 
-Next check if move.toAreaNum was set. It could be 0 here if there was no
-aas, or if aas couldn’t find a reachable area and returned 0. if it
-wasn’t set, we check to see if we can find a direction to wander around
-in. NewWanderDir will return true if it found a direction and will set
-up some state to check later.
+Next check if move.toAreaNum was set. It could be 0 here if there was no aas, or if aas couldn’t find a reachable area and returned 0. if it wasn’t set, we check to see if we can find a direction to wander around in. NewWanderDir will return true if it found a direction and will set up some state to check later.
 
      
     if ( !move.toAreaNum && !NewWanderDir( org ) ) {
@@ -106,13 +77,9 @@ up some state to check later.
         return false;
     }
 
-\
- If the aas system and NewWanderDir fail to find somewhere to go set the
-move state to MOVE\_STATUS\_DEST\_UNREACHABLE and return false.
+ If the aas system and NewWanderDir fail to find somewhere to go set the move state to MOVE\_STATUS\_DEST\_UNREACHABLE and return false.
 
-If one of them worked, set up some success state in move and return
-true. Notice that status is set to MOVE\_STATUS\_MOVING and
-AI\_MOVE\_DONE is false.
+If one of them worked, set up some success state in move and return true. Notice that status is set to MOVE\_STATUS\_MOVING and AI\_MOVE\_DONE is false.
 
      
         // path is good or NewWanderDir worked - set up state for later
@@ -129,14 +96,9 @@ AI\_MOVE\_DONE is false.
         return true;
     }
 
-Lets finish up this with a few details about how these MoveFunctions are
-called. There are a few different methods in idAI that are high level
-movement methods. These include MoveToPosition, MoveToEntity,
-MoveToEnemy, and MoveToCover
+Lets finish up this with a few details about how these MoveFunctions are called. There are a few different methods in idAI that are high level movement methods. These include MoveToPosition, MoveToEntity, MoveToEnemy, and MoveToCover
 
-MoveToPosition is called a couple of different ways from scripts. While
-looking at the scripts notice how states that are set in MoveToPosition
-are checked here to determine what to do next.
+MoveToPosition is called a couple of different ways from scripts. While looking at the scripts notice how states that are set in MoveToPosition are checked here to determine what to do next.
 
      
     /*
@@ -171,9 +133,7 @@ are checked here to determine what to do next.
         }
     }
 
-This script calls it each frame, seems expensive, wonder if it is
-necessary? would it still work if it were every N frames? Something to
-test anyway, anything to save cpu cycles…
+This script calls it each frame, seems expensive, wonder if it is necessary? would it still work if it were every N frames? Something to test anyway, anything to save cpu cycles…
 
      
     /*
@@ -313,8 +273,5 @@ Notice how this script calls it once, then follows it with a while:
      
     while( !AI_HIT_ENEMY && !AI_MOVE_DONE && !AI_BLOCKED && ( sys.getTime() < endtime ) ) {
 
-This seems more appropriate calling in to get the path once, then using
-the path until you have a reason to change it. Even if you wanted to
-update the goal position very frequently every frame seems like
-overkill?
+This seems more appropriate calling in to get the path once, then using the path until you have a reason to change it. Even if you wanted to update the goal position very frequently every frame seems like overkill?
 

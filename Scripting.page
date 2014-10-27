@@ -1,59 +1,32 @@
-<div align="left"
-style="float:right; font-size: 17px;background: #FFFFEE; padding: 5px; border: 1px solid #000000; padding-left: 15px; padding-right: 15px; margin-left: 15px; margin-right: 15px; padding-bottom: 15px; width: 400px;">
-
-<div align="right" style="font-size: 10px; text-align=right;">
-
 [What's this?](Help:Reference_box "Help:Reference box")
 
-</div>
-
-<div>
-
 **Scripting quick reference**
-
-</div>
 
 ------------------------------------------------------------------------
 
 <span style="font-size: 14px"> </span>
--   [SCRIPT (file
-    format)](SCRIPT_%28file_format%29 "SCRIPT (file format)")
+-   [SCRIPT (file format)](SCRIPT_%28file_format%29 "SCRIPT (file format)")
 -   Script events
-    ![D3](/images/2/23/D3square_25.png) [Doom 3 script
-    events](Script_events_%28Doom_3%29 "Script events (Doom 3)")
-    ![Q4](/images/e/e8/Q4square_25.png) [Quake 4 script
-    events](Script_events_%28Quake_4%29 "Script events (Quake 4)")
-    ![Prey](/images/b/ba/Preysquare_25.png) [Prey script
-    events](Script_events_%28Prey%29 "Script events (Prey)")
-    ![ETQW](/images/7/7e/Etqwsquare_25.png) [ET:QW script
-    events](Script_events_%28ETQW%29 "Script events (ETQW)")
+    ![D3](/images/2/23/D3square_25.png) [Doom 3 script events](Script_events_%28Doom_3%29 "Script events (Doom 3)")
+    ![Q4](/images/e/e8/Q4square_25.png) [Quake 4 script events](Script_events_%28Quake_4%29 "Script events (Quake 4)")
+    ![Prey](/images/b/ba/Preysquare_25.png) [Prey script events](Script_events_%28Prey%29 "Script events (Prey)")
+    ![ETQW](/images/7/7e/Etqwsquare_25.png) [ET:QW script events](Script_events_%28ETQW%29 "Script events (ETQW)")
 -   [Scripting basics](Scripting_basics "Scripting basics")
 -   [Script objects](Script_object "Script object")
 
-</div>
+Scripting is a specific domain of programming. It focuses more on specifying *what* should be done *instead of how* . Mostly read by a script interpreter instead of being compiled to bytecode.
 
-Scripting is a specific domain of programming. It focuses more on
-specifying *what* should be done *instead of how* . Mostly read by a
-script interpreter instead of being compiled to bytecode.
-
-On [id Tech 4](Id_Tech_4 "Id Tech 4") , it is used to allow mappers or
-modders to change behavior without recompiling the bytecode, only a map
-restart is needed to parse the script again.
+On [id Tech 4](Id_Tech_4 "Id Tech 4") , it is used to allow mappers or modders to change behavior without recompiling the bytecode, only a map restart is needed to parse the script again.
 
 Different fields
 ----------------
 
 The various forms of scripting in id Tech 4 are:
 
--   [Level scripting](Level_scripting "Level scripting") - Used for
-    scripting events in levels.
--   [Weapon scripting](Weapon_scripting "Weapon scripting") - Used for
-    defining the behavior of weapons.
--   [AI scripting](AI_scripting "AI scripting") - Used for defining the
-    behavior of monsters and characters.
--   [GUI scripting](GUI_scripting "GUI scripting") - Used for defining
-    the behavior and appearance of game [GUIs](GUIs "GUIs") . Uses a
-    separate scripting system.
+-   [Level scripting](Level_scripting "Level scripting") - Used for scripting events in levels.
+-   [Weapon scripting](Weapon_scripting "Weapon scripting") - Used for defining the behavior of weapons.
+-   [AI scripting](AI_scripting "AI scripting") - Used for defining the behavior of monsters and characters.
+-   [GUI scripting](GUI_scripting "GUI scripting") - Used for defining the behavior and appearance of game [GUIs](GUIs "GUIs") . Uses a separate scripting system.
 
 Check out the separate topics to get more specific scripting info.
 
@@ -62,71 +35,51 @@ Definitions
 
 These definitions are related to scripting.
 
- Script parser 
-:   The program reading a script file, here it the [game
-    binary](Coding#Game_code "Coding") of the respective id Tech 4 game.
+ Script parser   
+The program reading a script file, here it the [game binary](Coding#Game_code "Coding") of the respective id Tech 4 game.
 
- Syntax 
-:   The rules defining a scripting language.
+ Syntax   
+The rules defining a scripting language.
 
- Keyword 
-:   Special word, reserved by the language to mark the start of a
-    language construct.
+ Keyword   
+Special word, reserved by the language to mark the start of a language construct.
 
- Operator 
-:   Special symbol, reserved by the language to show what operation
-    should be done.
+ Operator   
+Special symbol, reserved by the language to show what operation should be done.
 
- Variable 
-:   A variable can be thought of as a named container used to store a
-    value. It can only be of one [data type](Data_types "Data types") at
-    a time
+ Variable   
+A variable can be thought of as a named container used to store a value. It can only be of one [data type](Data_types "Data types") at a time
 
- Data type 
-:   See [data types](Data_types "Data types") .
+ Data type   
+See [data types](Data_types "Data types") .
 
- Reference 
-:   A special variable that can reference an entity.
+ Reference   
+A special variable that can reference an entity.
 
- Function or method 
-:   A function is a structure to group commands so they can be reused
-    later in the script. It is also possible to give it a return type
-    and value.
+ Function or method   
+A function is a structure to group commands so they can be reused later in the script. It is also possible to give it a return type and value.
 
- Return value 
-:   Once a function has finished it's commands, it can *return* a
-    result.
+ Return value   
+Once a function has finished it's commands, it can *return* a result.
 
- Return type 
-:   Defines the data type of the return value, must be given when
-    defining a function
+ Return type   
+Defines the data type of the return value, must be given when defining a function
 
- Object 
-:   A reference to the [script object](Script_object "Script object") of
-    an entity.
+ Object   
+A reference to the [script object](Script_object "Script object") of an entity.
 
- Event 
-:   Also called [script event](Script_events "Script events") , these
-    are commands via a reference or identifier.
-
-\
+ Event   
+Also called [script event](Script_events "Script events") , these are commands via a reference or identifier.
 
 Syntax
 ------
 
--   To find out about script file syntax, see the [.SCRIPT
-    format](SCRIPT_%28file_format%29 "SCRIPT (file format)") reference.
--   If you want to start immediately, go read some tutorials on [level
-    scripting](Tutorial_list#Level_scripting "Tutorial list") .
--   If you are looking for a more steady introduction to scripting,
-    check out the [scripting
-    basics](Scripting_basics "Scripting basics") page.
-
-\
+-   To find out about script file syntax, see the [.SCRIPT format](SCRIPT_%28file_format%29 "SCRIPT (file format)") reference.
+-   If you want to start immediately, go read some tutorials on [level scripting](Tutorial_list#Level_scripting "Tutorial list") .
+-   If you are looking for a more steady introduction to scripting, check out the [scripting basics](Scripting_basics "Scripting basics") page.
 
 Related
 -------
 
-See also the editing of declarations, which is not exactly a part of
-scripting but an important part of editing for id Tech 4 engine.
+See also the editing of declarations, which is not exactly a part of scripting but an important part of editing for id Tech 4 engine.
 

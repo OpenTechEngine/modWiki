@@ -1,126 +1,134 @@
-<div style="margin-top: -3em; margin-bottom: 1em; padding-top: 1px">
-
 Welcome to ![](/images/c/cb/D3square_bg.png) modwiki.net
 
-We currently have [9,357](Special:Statistics "Special:Statistics")
-articles.
+We currently have [9,357](Special:Statistics "Special:Statistics") articles.
 
-</div>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><div style="padding: .4em .9em .9em">
+<h3>Editing Categories:</h3>
+<dl>
+<dt> <a href="Modding" class="uri" title="Modding">Modding</a> </dt>
+<dd>General information about producing and distributing mods
+</dd>
+<dt> <a href="Coding" class="uri" title="Coding">Coding</a> </dt>
+<dd>Modification of the engine's source code
+</dd>
+<dt> <a href="Mapping" class="uri" title="Mapping">Mapping</a> </dt>
+<dd>Information about level design and the tools
+</dd>
+<dt> <a href="Modelling" class="uri" title="Modelling">Modelling</a> </dt>
+<dd>Modelling and file format information
+</dd>
+<dt> <a href="Texturing" class="uri" title="Texturing">Texturing</a> </dt>
+<dd>Explanation of material shaders and image files
+</dd>
+<dt> <a href="Scripting" class="uri" title="Scripting">Scripting</a> </dt>
+<dd>Information about Scripting for GUIs and Levels
+</dd>
+<dt> <a href="Declarations" class="uri" title="Declarations">Declarations</a> </dt>
+<dd>Declarations define the properties and behavior of game content
+</dd>
+<dt> <a href="Audio_design" title="Audio design">Audio design</a> </dt>
+<dd>The creation of musical tracks and sound effects
+</dd>
+</dl>
+</div></td>
+<td align="left"><div style="padding: .4em .9em .9em;">
+<h3>Featured Articles:</h3>
+<dl>
+<dt> <a href="How_to_get_help" title="How to get help">How to get help</a> </dt>
+<dd>A good introduction to the use of this wiki
+</dd>
+<dt> <a href="Console" class="uri" title="Console">Console</a> </dt>
+<dd>Everything you need to know about the Doom 3 engine console
+<ul>
+<li><a href="CVars_%28Doom_3%29" title="CVars (Doom 3)">CVars</a></li>
+<li><a href="Commands_%28Doom_3%29" title="Commands (Doom 3)">Commands</a></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt> <a href="Script_events_%28Doom_3%29" title="Script events (Doom 3)">Script events</a> </dt>
+<dd>Doom 3 relevant script events
+</dd>
+<dt> <a href="Startup_parameters" title="Startup parameters">Startup parameters</a> </dt>
+<dd>Parameters you can add when starting Doom 3
+</dd>
+<dt> <a href="Folder_structure_%28Doom_3%29" title="Folder structure (Doom 3)">Folder structure</a> </dt>
+<dd>An overview over the folders used by Doom 3
+</dd>
+<dt> <a href="File_formats" title="File formats">File formats</a> </dt>
+<dd>All the different file formats used by the Doom 3 engine
+</dd>
+<dt> <a href="Tutorial_list" title="Tutorial list">Tutorial list</a> </dt>
+<dd>An extensive list to tutorials on a wide range of topics
+</dd>
+</dl>
+</div></td>
+</tr>
+</tbody>
+</table>
 
-+--------------------------------------+--------------------------------------+
-| <div                                 | <div                                 |
-| style="padding: .4em .9em .9em">     | style="padding: .4em .9em .9em;">    |
-|                                      |                                      |
-| ### Editing Categories:              | ### Featured Articles:               |
-|                                      |                                      |
-|  [Modding](Modding "Modding")        |  [How to get help](How_to_get_help " |
-| :   General information about        | How to get help")                    |
-|     producing and distributing mods  | :   A good introduction to the use   |
-|                                      |     of this wiki                     |
-|  [Coding](Coding "Coding")           |                                      |
-| :   Modification of the engine's     |  [Console](Console "Console")        |
-|     source code                      | :   Everything you need to know      |
-|                                      |     about the Doom 3 engine console  |
-|  [Mapping](Mapping "Mapping")        |     -   [CVars](CVars_%28Doom_3%29 " |
-| :   Information about level design   | CVars (Doom 3)")                     |
-|     and the tools                    |     -   [Commands](Commands_%28Doom_ |
-|                                      | 3%29 "Commands (Doom 3)")            |
-|  [Modelling](Modelling "Modelling")  |                                      |
-| :   Modelling and file format        | <!-- -->                             |
-|     information                      |                                      |
-|                                      |  [Script events](Script_events_%28Do |
-|  [Texturing](Texturing "Texturing")  | om_3%29 "Script events (Doom 3)")    |
-| :   Explanation of material shaders  | :   Doom 3 relevant script events    |
-|     and image files                  |                                      |
-|                                      |  [Startup parameters](Startup_parame |
-|  [Scripting](Scripting "Scripting")  | ters "Startup parameters")           |
-| :   Information about Scripting for  | :   Parameters you can add when      |
-|     GUIs and Levels                  |     starting Doom 3                  |
-|                                      |                                      |
-|  [Declarations](Declarations "Declar |  [Folder structure](Folder_structure |
-| ations")                             | _%28Doom_3%29 "Folder structure (Doo |
-| :   Declarations define the          | m 3)")                               |
-|     properties and behavior of game  | :   An overview over the folders     |
-|     content                          |     used by Doom 3                   |
-|                                      |                                      |
-|  [Audio design](Audio_design "Audio  |  [File formats](File_formats "File f |
-| design")                             | ormats")                             |
-| :   The creation of musical tracks   | :   All the different file formats   |
-|     and sound effects                |     used by the Doom 3 engine        |
-|                                      |                                      |
-| </div>                               |  [Tutorial list](Tutorial_list "Tuto |
-|                                      | rial list")                          |
-|                                      | :   An extensive list to tutorials   |
-|                                      |     on a wide range of topics        |
-|                                      |                                      |
-|                                      | </div>                               |
-+--------------------------------------+--------------------------------------+
-
-+--------------------------------------+--------------------------------------+
-| <div                                 | <div                                 |
-| style="padding: .4em .9em .9em">     | style="padding: .4em .9em .9em;">    |
-|                                      |                                      |
-| ### New to the site?                 | ### Doom 3 game and engine:          |
-|                                      |                                      |
-| This wiki is focused on documenting  | The Doom 3 engine made its debut on  |
-| the various aspects involved with    | August 2004 with the release of Doom |
-| developing assets, levels and        | 3. It introduces several advantages  |
-| modifications based on the [id       | over current available engines:      |
-| Tech](Id_Tech "Id Tech") engines. If |                                      |
-| you're new to the site or a wiki in  | -   Unified lighting system          |
-| general, please visit the            | -   Fully dynamic shadowing          |
-| [about](modwiki:About "modwiki:About | -   Interactive,                     |
-| ")                                   |     resolution-independent surfaces, |
-| page to learn more about this        |     called [GUIs](GUIs "GUIs")       |
-| project.                             | -   Built-in editors sharing the     |
-|                                      |     same renderer pipeline as the    |
-| ### Want to help?                    |     game                             |
-|                                      | -   Strong and flexible scripting    |
-| As modwiki is a community project,   |     language                         |
-| feel free to                         | -   Material shaders with bump- and  |
-| [register](Special:Userlogin "Specia |     specularity-map support          |
-| l:Userlogin")                        | -   Physics system                   |
-| and join us on this great endeavor!  | -   Inverse Kinematics for           |
-| Please check out the [style          |     characters/monsters              |
-| guide](modwiki:Style_guide "modwiki: |                                      |
-| Style guide")                        | Doom 3 was created by [id            |
-| for some general editing guidelines. | Software](http://www.idsoftware.com/ |
-| Visit [open                          |  "http://www.idsoftware.com")        |
-| tasks](modwiki:Open_tasks "modwiki:O | and published by                     |
-| pen tasks")                          | [Activision](http://www.activision.c |
-| to find out which pages need help.   | om/ "http://www.activision.com")     |
-| You can also visit the               | . Release date for the PC version    |
-| [sandbox](modwiki:Sandbox "modwiki:S | was August 3, 2004.                  |
-| andbox")                             |                                      |
-| to experiment with the wiki markup   | ### System Requirements:             |
-| language. To learn how to edit or    |                                      |
-| create pages, please take a look     | -   Operating System: Windows        |
-| [here](Help:Editing "Help:Editing")  |     2000/XP, Mac OSX, Linux          |
-| .                                    | -   CPU: Pentium 4 1.5 or Athlon XP  |
-|                                      |     1500+                            |
-| But most importantly, if you gain    | -   Memory: 384MB                    |
-| something from this resource, please | -   Storage: 2.2GB                   |
-| give back.                           | -   Sound: 100% DirectX 9.0b         |
-|                                      |     Compliant / 16-bit               |
-| ### High quality links:              | -   Video: 100% DirectX 9.0b         |
-|                                      |     Compliant / 64MB RAM             |
-| Other interesting id Tech engine     |                                      |
-| editing sites:                       | ROE Expansion:                       |
-|                                      |                                      |
-|  [www.doom3world.org](https://web.ar | -   Storage: Additional 1030MB       |
-| chive.org/web/20121205052850/http:// | -   Video: 100% DirectX 9.0c         |
-| www.doom3world.org/ "http://www.doom |     Compliant                        |
-| 3world.org")                         |                                      |
-| :   The premier discussion forum for | </div>                               |
-|     all Doom 3 engine games          |                                      |
-|                                      |                                      |
-|  [www.iddevnet.com](http://www.iddev |                                      |
-| net.com/ "http://www.iddevnet.com/") |                                      |
-|                                      |                                      |
-| :   The official id Software website |                                      |
-|     for Doom 3 engine editing        |                                      |
-|                                      |                                      |
-| </div>                               |                                      |
-+--------------------------------------+--------------------------------------+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><div style="padding: .4em .9em .9em">
+<h3>New to the site?</h3>
+<p>This wiki is focused on documenting the various aspects involved with developing assets, levels and modifications based on the <a href="Id_Tech" title="Id Tech">id Tech</a> engines. If you're new to the site or a wiki in general, please visit the <a href="modwiki:About" title="modwiki:About">about</a> page to learn more about this project.</p>
+<h3>Want to help?</h3>
+<p>As modwiki is a community project, feel free to <a href="Special:Userlogin" title="Special:Userlogin">register</a> and join us on this great endeavor! Please check out the <a href="modwiki:Style_guide" title="modwiki:Style guide">style guide</a> for some general editing guidelines. Visit <a href="modwiki:Open_tasks" title="modwiki:Open tasks">open tasks</a> to find out which pages need help. You can also visit the <a href="modwiki:Sandbox" title="modwiki:Sandbox">sandbox</a> to experiment with the wiki markup language. To learn how to edit or create pages, please take a look <a href="Help:Editing" title="Help:Editing">here</a> .</p>
+<p>But most importantly, if you gain something from this resource, please give back.</p>
+<h3>High quality links:</h3>
+<p>Other interesting id Tech engine editing sites:</p>
+<dl>
+<dt> <a href="https://web.archive.org/web/20121205052850/http://www.doom3world.org/" title="http://www.doom3world.org">www.doom3world.org</a> </dt>
+<dd>The premier discussion forum for all Doom 3 engine games
+</dd>
+<dt> <a href="http://www.iddevnet.com/" title="http://www.iddevnet.com/">www.iddevnet.com</a> </dt>
+<dd>The official id Software website for Doom 3 engine editing
+</dd>
+</dl>
+</div></td>
+<td align="left"><div style="padding: .4em .9em .9em;">
+<h3>Doom 3 game and engine:</h3>
+<p>The Doom 3 engine made its debut on August 2004 with the release of Doom 3. It introduces several advantages over current available engines:</p>
+<ul>
+<li>Unified lighting system</li>
+<li>Fully dynamic shadowing</li>
+<li>Interactive, resolution-independent surfaces, called <a href="GUIs" class="uri" title="GUIs">GUIs</a></li>
+<li>Built-in editors sharing the same renderer pipeline as the game</li>
+<li>Strong and flexible scripting language</li>
+<li>Material shaders with bump- and specularity-map support</li>
+<li>Physics system</li>
+<li>Inverse Kinematics for characters/monsters</li>
+</ul>
+<p>Doom 3 was created by <a href="http://www.idsoftware.com/" title="http://www.idsoftware.com">id Software</a> and published by <a href="http://www.activision.com/" title="http://www.activision.com">Activision</a> . Release date for the PC version was August 3, 2004.</p>
+<h3>System Requirements:</h3>
+<ul>
+<li>Operating System: Windows 2000/XP, Mac OSX, Linux</li>
+<li>CPU: Pentium 4 1.5 or Athlon XP 1500+</li>
+<li>Memory: 384MB</li>
+<li>Storage: 2.2GB</li>
+<li>Sound: 100% DirectX 9.0b Compliant / 16-bit</li>
+<li>Video: 100% DirectX 9.0b Compliant / 64MB RAM</li>
+</ul>
+<p>ROE Expansion:</p>
+<ul>
+<li>Storage: Additional 1030MB</li>
+<li>Video: 100% DirectX 9.0c Compliant</li>
+</ul>
+</div></td>
+</tr>
+</tbody>
+</table>
 
 

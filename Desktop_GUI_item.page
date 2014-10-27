@@ -1,12 +1,6 @@
-The *Desktop* is the main [item](GUI_items "GUI items") that makes a
-[GUI](GUIs "GUIs") . As the first item, it contains all other items
-nested on it, as well as some special [GUI item
-events](GUI_item_events "GUI item events") .
+The *Desktop* is the main [item](GUI_items "GUI items") that makes a [GUI](GUIs "GUIs") . As the first item, it contains all other items nested on it, as well as some special [GUI item events](GUI_item_events "GUI item events") .
 
-The desktop GUI is a
-[windowDef](WindowDef_%28GUI_item_type%29 "WindowDef (GUI item type)")
-item and follows the same syntax of other items, with a few
-reservations. For example:
+The desktop GUI is a [windowDef](WindowDef_%28GUI_item_type%29 "WindowDef (GUI item type)") item and follows the same syntax of other items, with a few reservations. For example:
 
     windowDef Desktop { 
         rect        0, 0, 640, 480 
@@ -14,17 +8,7 @@ reservations. For example:
         ...
     }
 
-You will notice its size (used on the
-[rect](Rect_%28GUI_item_property%29 "Rect (GUI item property)")
-property) is defined as 640x480. This does not mean this GUI is
-restricted for this resolution! Instead, it means it takes the full
-screen in any other resolution, as the [GUI](GUIs "GUIs") system uses
-these values as a basis for the screen coordinates. In the end, this
-makes no difference at all; you just have to remember to design your GUI
-screens based on a similar resolution, or calculate the equivalents when
-translating your coordinates to the GUI script code.
+You will notice its size (used on the [rect](Rect_%28GUI_item_property%29 "Rect (GUI item property)") property) is defined as 640x480. This does not mean this GUI is restricted for this resolution! Instead, it means it takes the full screen in any other resolution, as the [GUI](GUIs "GUIs") system uses these values as a basis for the screen coordinates. In the end, this makes no difference at all; you just have to remember to design your GUI screens based on a similar resolution, or calculate the equivalents when translating your coordinates to the GUI script code.
 
-This is akin to what other games use. For example, the Unreal Tournament
-engine uses a maximum screen size of 1x1. In the end, they mean the same
-thing, but just uses different powers for parameters.
+This is akin to what other games use. For example, the Unreal Tournament engine uses a maximum screen size of 1x1. In the end, they mean the same thing, but just uses different powers for parameters.
 

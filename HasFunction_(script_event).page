@@ -1,14 +1,12 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Checks if an entity has a specific function in it's associated script
-object.
+Checks if an entity has a specific function in it's associated script object.
 
 Usage
 -----
@@ -28,9 +26,6 @@ Examples
 Notes
 -----
 
-Also see
-[callFunction](CallFunction_%28script_event%29 "CallFunction (script event)")
-.
+Also see [callFunction](CallFunction_%28script_event%29 "CallFunction (script event)") .
 
-\
 

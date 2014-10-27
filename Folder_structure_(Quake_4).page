@@ -1,301 +1,128 @@
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/6/69/Q4square_bg.png) The information on this page is
-specific to [Quake 4](Quake_4 "Quake 4") .
-
-</div>
+![](/images/6/69/Q4square_bg.png) The information on this page is specific to [Quake 4](Quake_4 "Quake 4") .
 
 ------------------------------------------------------------------------
 
-This is the folder structure of Quake 4. It should be noted that these
-folders are not present in the base folder itself. Instead, these
-folders and the assets contained therein are stored in [PK4
-archives](PK4_%28file_format%29 "PK4 (file format)") .
+This is the folder structure of Quake 4. It should be noted that these folders are not present in the base folder itself. Instead, these folders and the assets contained therein are stored in [PK4 archives](PK4_%28file_format%29 "PK4 (file format)") .
 
-+--------------------------------------+--------------------------------------+
-| <div                                 | ### /q4base                          |
-| style="padding: .4em .9em .9em;">    |                                      |
-|                                      | This is the default Quake 4 mod      |
-| ### Folder structure:                | directory. The contents of this      |
-|                                      | directory include all the game       |
-| <div                                 | assets used in the game. Mods for    |
-| style="text-align: left; margin-left | Quake 4 should be created in their   |
-| : 10px; font-size: 14px;">           | own directory in the main Quake 4    |
-|                                      | installation folder as a brother     |
-| `         `                          | folder to /q4base. In the engine     |
-| -   /                                | code your mods' base name is always  |
-|     [q4base](Folder_structure_%28Qua | called "base" no matter the actual   |
-| ke_4%29#.2Fq4base "Folder structure  | physical name. You set the game to   |
-| (Quake 4)")                          | use a different folder as base with  |
-|     -   /                            | the                                  |
-|         [af](Folder_structure_%28Qua | [fs\_game](Fs_game_%28cvar%29 "Fs ga |
-| ke_4%29#.2Fq4base.2Faf "Folder struc | me (cvar)")                          |
-| ture (Quake 4)")                     | cvar.                                |
-|     -   /                            |                                      |
-|         [cfg](Folder_structure_%28Qu | You can also set the                 |
-| ake_4%29#.2Fq4base.2Fcfg "Folder str | [fs\_game\_base](Fs_game_base_%28cva |
-| ucture (Quake 4)")                   | r%29 "Fs game base (cvar)")          |
-|     -   /                            | cvar to let you base a mod off base  |
-|         [def](Folder_structure_%28Qu | game and your own content as usual   |
-| ake_4%29#.2Fq4base.2Fdef "Folder str | as well as an additional mod.        |
-| ucture (Quake 4)")                   |                                      |
-|     -   /                            | **Note:** While you probably want to |
-|         [demos](Folder_structure_%28 | work on your mod with the assets     |
-| Quake_4%29#.2Fq4base.2Fdemos "Folder | decompressed and available in the    |
-|  structure (Quake 4)")               | Quake 4 folder structure, when you   |
-|     -   /                            | release your mod you should put them |
-|         [effects](Folder_structure_% | into .                               |
-| 28Quake_4%29#.2Fq4base.2Feffects "Fo | [PK4](PK4_%28file_format%29 "PK4 (fi |
-| lder structure (Quake 4)")           | le format)")                         |
-|     -   /                            | files.                               |
-|         [efxs](Folder_structure_%28Q |                                      |
-| uake_4%29#.2Fq4base.2Fefxs "Folder s | ### /q4base/af                       |
-| tructure (Quake 4)")                 |                                      |
-|     -   /                            | This folder contains .AF files which |
-|         [fonts](Folder_structure_%28 | setup the [articulated figure        |
-| Quake_4%29#.2Fq4base.2Ffonts "Folder | declarations](Af_%28decl%29 "Af (dec |
-|  structure (Quake 4)")               | l)")                                 |
-|     -   /                            | .                                    |
-|         [gfx](Folder_structure_%28Qu |                                      |
-| ake_4%29#.2Fq4base.2Fgfx.2F "Folder  | ### /q4base/cfg                      |
-| structure (Quake 4)")                |                                      |
-|         -   /                        | ### /q4base/def                      |
-|             [2d](Folder_structure_%2 |                                      |
-| 8Quake_4%29#.2Fq4base.2Fgfx.2F2d "Fo | This folder contains .DEF files      |
-| lder structure (Quake 4)")           | which contain                        |
-|         -   /                        | [declarations](Declarations "Declara |
-|             [decals](Folder_structur | tions")                              |
-| e_%28Quake_4%29#.2Fq4base.2Fgfx.2Fde | for entities, models and             |
-| cals "Folder structure (Quake 4)")   | modelexport.                         |
-|         -   /                        |                                      |
-|             [effects](Folder_structu | ### /q4base/demos                    |
-| re_%28Quake_4%29#.2Fq4base.2Fgfx.2Fe |                                      |
-| ffects "Folder structure (Quake 4)") | This folder contains .               |
-|         -   /                        | [DEMO](DEMO_%28file_format%29 "DEMO  |
-|             [env](Folder_structure_% | (file format)")                      |
-| 28Quake_4%29#.2Fq4base.2Fgfx.2Fenv " | files which are gameplay recordings. |
-| Folder structure (Quake 4)")         |                                      |
-|         -   /                        | ### /q4base/effects                  |
-|             [guis](Folder_structure_ |                                      |
-| %28Quake_4%29#.2Fq4base.2Fgfx.2Fguis | This folder contains .               |
-|  "Folder structure (Quake 4)")       | [FX](FX_%28file_format%29 "FX (file  |
-|         -   /                        | format)")                            |
-|             [lights](Folder_structur | files which in turn contain [effect  |
-| e_%28Quake_4%29#.2Fq4base.2Fgfx.2Fli | declarations](Effect_%28decl%29 "Eff |
-| ghts "Folder structure (Quake 4)")   | ect (decl)")                         |
-|         -   /                        | .                                    |
-|             [mp](Folder_structure_%2 |                                      |
-| 8Quake_4%29#.2Fq4base.2Fgfx.2Fmp "Fo | ### /q4base/efxs                     |
-| lder structure (Quake 4)")           |                                      |
-|         -   /                        | This folder contains .               |
-|             [objectives](Folder_stru | [EFX](EFX_%28file_format%29 "EFX (fi |
-| cture_%28Quake_4%29#.2Fq4base.2Fgfx. | le format)")                         |
-| 2Fobjectives "Folder structure (Quak | files which containt reverb          |
-| e 4)")                               | information for maps.                |
-|     -   /                            |                                      |
-|         [glprogs](Folder_structure_% | ### /q4base/fonts                    |
-| 28Quake_4%29#.2Fq4base.2Fglprogs "Fo |                                      |
-| lder structure (Quake 4)")           | ### /q4base/gfx                      |
-|     -   /                            |                                      |
-|         [guides](Folder_structure_%2 | ### /q4base/gfx/2d                   |
-| 8Quake_4%29#.2Fq4base.2Fguides "Fold |                                      |
-| er structure (Quake 4)")             | ### /q4base/gfx/decals               |
-|     -   /                            |                                      |
-|         [guis](Folder_structure_%28Q | ### /q4base/gfx/effects              |
-| uake_4%29#.2Fq4base.2Fguis "Folder s |                                      |
-| tructure (Quake 4)")                 | This folder contains .               |
-|     -   /                            | [TGA](TGA_%28file_format%29 "TGA (fi |
-|         [lipsync](Folder_structure_% | le format)")                         |
-| 28Quake_4%29#.2Fq4base.2Flipsync "Fo | files used in effects.               |
-| lder structure (Quake 4)")           |                                      |
-|     -   /                            | ### /q4base/gfx/env                  |
-|         [maps](Folder_structure_%28Q |                                      |
-| uake_4%29#.2Fq4base.2Fmaps "Folder s | This folder contains                 |
-| tructure (Quake 4)")                 | [images](Images "Images") for        |
-|     -   /                            | [environment                         |
-|         [materials](Folder_structure | maps](Cube_maps "Cube maps") which   |
-| _%28Quake_4%29#.2Fq4base.2Fmaterials | are textures applied to the inside   |
-|  "Folder structure (Quake 4)")       | faces of a skybox to give the        |
-|     -   /                            | appearance of large spaces.          |
-|         [models](Folder_structure_%2 |                                      |
-| 8Quake_4%29#.2Fq4base.2Fmodels "Fold | ### /q4base/gfx/guis                 |
-| er structure (Quake 4)")             |                                      |
-|     -   /                            | This folder contains .               |
-|         [playbacks](Folder_structure | [TGA](TGA_%28file_format%29 "TGA (fi |
-| _%28Quake_4%29#.2Fq4base.2Fplaybacks | le format)")                         |
-|  "Folder structure (Quake 4)")       | files used in the user interface.    |
-|     -   /                            |                                      |
-|         [progimg](Folder_structure_% | ### /q4base/gfx/lights               |
-| 28Quake_4%29#.2Fq4base.2Fprogimg "Fo |                                      |
-| lder structure (Quake 4)")           | This folder contains .               |
-|     -   /                            | [TGA](TGA_%28file_format%29 "TGA (fi |
-|         [scripts](Folder_structure_% | le format)")                         |
-| 28Quake_4%29#.2Fq4base.2Fscripts "Fo | files which become available for use |
-| lder structure (Quake 4)")           | in [light                            |
-|     -   /                            | materials](Material_%28decl%29 "Mate |
-|         [skins](Folder_structure_%28 | rial (decl)")                        |
-| Quake_4%29#.2Fq4base.2Fskins "Folder | to create 'light styles' that        |
-|  structure (Quake 4)")               | modulate what light projects onto    |
-|     -   /                            | the surfaces of the world.           |
-|         [sound](Folder_structure_%28 |                                      |
-| Quake_4%29#.2Fq4base.2Fsound "Folder | ### /q4base/gfx/mp                   |
-|  structure (Quake 4)")               |                                      |
-|     -   /                            | ### /q4base/gfx/objectives           |
-|         [strings](Folder_structure_% |                                      |
-| 28Quake_4%29#.2Fq4base.2Fstrings "Fo | ### /q4base/glprogs                  |
-| lder structure (Quake 4)")           |                                      |
-|     -   /                            | This folder contains .               |
-|         [textures](Folder_structure_ | [VFP](VFP_%28file_format%29 "VFP (fi |
-| %28Quake_4%29#.2Fq4base.2Ftextures " | le format)")                         |
-| Folder structure (Quake 4)")         | and .                                |
-|     -   /                            | [VP](VP_%28file_format%29 "VP (file  |
-|         [video](Folder_structure_%28 | format)")                            |
-| Quake_4%29#.2Fq4base.2Fvideo "Folder | files which become available for use |
-|  structure (Quake 4)")               | in                                   |
-|                                      | [materials](Material_%28decl%29 "Mat |
-| </div>                               | erial (decl)")                       |
-|                                      | for [visual special                  |
-| </div>                               | effects](Vertex_and_fragment_program |
-|                                      | s "Vertex and fragment programs")    |
-|                                      | .                                    |
-|                                      |                                      |
-|                                      | ### /q4base/guides                   |
-|                                      |                                      |
-|                                      | This folder contains .GUIDE files    |
-|                                      | which contain [material guide        |
-|                                      | declarations](Guide_%28decl%29 "Guid |
-|                                      | e (decl)")                           |
-|                                      | .                                    |
-|                                      |                                      |
-|                                      | ### /q4base/guis                     |
-|                                      |                                      |
-|                                      | This folder contains .GUI files      |
-|                                      | which setup the [graphical user      |
-|                                      | interfaces](GUIs "GUIs") .           |
-|                                      |                                      |
-|                                      | ### /q4base/lipsync                  |
-|                                      |                                      |
-|                                      | This folder contains .LIPSYNC files  |
-|                                      | which contain [lipsync               |
-|                                      | declarations](Lipsync_%28decl%29 "Li |
-|                                      | psync (decl)")                       |
-|                                      | .                                    |
-|                                      |                                      |
-|                                      | ### /q4base/maps                     |
-|                                      |                                      |
-|                                      | This folder contains the .           |
-|                                      | [MAP](MAP_%28file_format%29 "MAP (fi |
-|                                      | le format)")                         |
-|                                      | , .                                  |
-|                                      | [CM](CM_%28file_format%29 "CM (file  |
-|                                      | format)")                            |
-|                                      | , .                                  |
-|                                      | [PROC](PROC_%28file_format%29 "PROC  |
-|                                      | (file format)")                      |
-|                                      | , and .                              |
-|                                      | [AAS](AAS_%28file_format%29 "AAS (fi |
-|                                      | le format)")                         |
-|                                      | files for each map. Should there be  |
-|                                      | any .BAK files there they should be  |
-|                                      | removed prior to distribution as     |
-|                                      | these are just backup versions       |
-|                                      | created by the [map                  |
-|                                      | editor](Map_editor "Map editor") .   |
-|                                      |                                      |
-|                                      | ### /q4base/materials                |
-|                                      |                                      |
-|                                      | This folder contains .MTR files      |
-|                                      | which setup the [material            |
-|                                      | declarations](Material_%28decl%29 "M |
-|                                      | aterial (decl)")                     |
-|                                      | .                                    |
-|                                      |                                      |
-|                                      | ### /q4base/models                   |
-|                                      |                                      |
-|                                      | This folder contains numerous        |
-|                                      | sub-directories where the following  |
-|                                      | file formats can be found:           |
-|                                      |                                      |
-|                                      |  Model formats                       |
-|                                      | :   .                                |
-|                                      |     [ASE](ASE_%28file_format%29 "ASE |
-|                                      |  (file format)")                     |
-|                                      |     , .                              |
-|                                      |     [LWO](LWO_%28file_format%29 "LWO |
-|                                      |  (file format)")                     |
-|                                      |     , .                              |
-|                                      |     [MD5](MD5_%28file_format%29 "MD5 |
-|                                      |  (file format)")                     |
-|                                      |     .                                |
-|                                      |                                      |
-|                                      |  Image formats                       |
-|                                      | :   .                                |
-|                                      |     [TGA](TGA_%28file_format%29 "TGA |
-|                                      |  (file format)")                     |
-|                                      |     , .                              |
-|                                      |     [DDS](DDS_%28file_format%29 "DDS |
-|                                      |  (file format)")                     |
-|                                      |     , .                              |
-|                                      |     [JPG](JPG_%28file_format%29 "JPG |
-|                                      |  (file format)")                     |
-|                                      |     .                                |
-|                                      |                                      |
-|                                      |  Other formats                       |
-|                                      | :   .                                |
-|                                      |     [CM](CM_%28file_format%29 "CM (f |
-|                                      | ile format)")                        |
-|                                      |     .                                |
-|                                      |                                      |
-|                                      | ### /q4base/playbacks                |
-|                                      |                                      |
-|                                      | ### /q4base/progimg                  |
-|                                      |                                      |
-|                                      | ### /q4base/scripts                  |
-|                                      |                                      |
-|                                      | ### /q4base/skins                    |
-|                                      |                                      |
-|                                      | This folder contains .SKIN files     |
-|                                      | which setup the [skin                |
-|                                      | declarations](Skin_%28decl%29 "Skin  |
-|                                      | (decl)")                             |
-|                                      | .                                    |
-|                                      |                                      |
-|                                      | ### /q4base/sound                    |
-|                                      |                                      |
-|                                      | ### /q4base/strings                  |
-|                                      |                                      |
-|                                      | This folder contains .               |
-|                                      | [LANG](LANG_%28file_format%29 "LANG  |
-|                                      | (file format)")                      |
-|                                      | files which are used for             |
-|                                      | localization. The engine loads all   |
-|                                      | of the files from this folder and    |
-|                                      | parses the numbered strings within   |
-|                                      | these files to make them available   |
-|                                      | to the code, [GUIs](GUIs "GUIs") and |
-|                                      | [maps](Mapping "Mapping") .          |
-|                                      |                                      |
-|                                      | ### /q4base/textures                 |
-|                                      |                                      |
-|                                      | This folder contains .               |
-|                                      | [TGA](TGA_%28file_format%29 "TGA (fi |
-|                                      | le format)")                         |
-|                                      | or .                                 |
-|                                      | [JPG](JPG_%28file_format%29 "JPG (fi |
-|                                      | le format)")                         |
-|                                      | files which become available for use |
-|                                      | as assets in [material               |
-|                                      | declarations](Material_%28decl%29 "M |
-|                                      | aterial (decl)")                     |
-|                                      | .                                    |
-|                                      |                                      |
-|                                      | ### /q4base/video                    |
-|                                      |                                      |
-|                                      | This folder contains .               |
-|                                      | [ROQ](ROQ_%28file_format%29 "ROQ (fi |
-|                                      | le format)")                         |
-|                                      | files which are movies.              |
-+--------------------------------------+--------------------------------------+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><div style="padding: .4em .9em .9em;">
+<h3>Folder structure:</h3>
+<div style="text-align: left; margin-left: 10px; font-size: 14px;">
+<code>         </code>
+<ul>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base" title="Folder structure (Quake 4)">q4base</a>
+<ul>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Faf" title="Folder structure (Quake 4)">af</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fcfg" title="Folder structure (Quake 4)">cfg</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fdef" title="Folder structure (Quake 4)">def</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fdemos" title="Folder structure (Quake 4)">demos</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Feffects" title="Folder structure (Quake 4)">effects</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fefxs" title="Folder structure (Quake 4)">efxs</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Ffonts" title="Folder structure (Quake 4)">fonts</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fgfx.2F" title="Folder structure (Quake 4)">gfx</a>
+<ul>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fgfx.2F2d" title="Folder structure (Quake 4)">2d</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fgfx.2Fdecals" title="Folder structure (Quake 4)">decals</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fgfx.2Feffects" title="Folder structure (Quake 4)">effects</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fgfx.2Fenv" title="Folder structure (Quake 4)">env</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fgfx.2Fguis" title="Folder structure (Quake 4)">guis</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fgfx.2Flights" title="Folder structure (Quake 4)">lights</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fgfx.2Fmp" title="Folder structure (Quake 4)">mp</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fgfx.2Fobjectives" title="Folder structure (Quake 4)">objectives</a></li>
+</ul></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fglprogs" title="Folder structure (Quake 4)">glprogs</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fguides" title="Folder structure (Quake 4)">guides</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fguis" title="Folder structure (Quake 4)">guis</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Flipsync" title="Folder structure (Quake 4)">lipsync</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fmaps" title="Folder structure (Quake 4)">maps</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fmaterials" title="Folder structure (Quake 4)">materials</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fmodels" title="Folder structure (Quake 4)">models</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fplaybacks" title="Folder structure (Quake 4)">playbacks</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fprogimg" title="Folder structure (Quake 4)">progimg</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fscripts" title="Folder structure (Quake 4)">scripts</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fskins" title="Folder structure (Quake 4)">skins</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fsound" title="Folder structure (Quake 4)">sound</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fstrings" title="Folder structure (Quake 4)">strings</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Ftextures" title="Folder structure (Quake 4)">textures</a></li>
+<li>/ <a href="Folder_structure_%28Quake_4%29#.2Fq4base.2Fvideo" title="Folder structure (Quake 4)">video</a></li>
+</ul></li>
+</ul>
+</div>
+</div></td>
+<td align="left"><h3>/q4base</h3>
+<p>This is the default Quake 4 mod directory. The contents of this directory include all the game assets used in the game. Mods for Quake 4 should be created in their own directory in the main Quake 4 installation folder as a brother folder to /q4base. In the engine code your mods' base name is always called &quot;base&quot; no matter the actual physical name. You set the game to use a different folder as base with the <a href="Fs_game_%28cvar%29" title="Fs game (cvar)">fs_game</a> cvar.</p>
+<p>You can also set the <a href="Fs_game_base_%28cvar%29" title="Fs game base (cvar)">fs_game_base</a> cvar to let you base a mod off base game and your own content as usual as well as an additional mod.</p>
+<p><strong>Note:</strong> While you probably want to work on your mod with the assets decompressed and available in the Quake 4 folder structure, when you release your mod you should put them into . <a href="PK4_%28file_format%29" title="PK4 (file format)">PK4</a> files.</p>
+<h3>/q4base/af</h3>
+<p>This folder contains .AF files which setup the <a href="Af_%28decl%29" title="Af (decl)">articulated figure declarations</a> .</p>
+<h3>/q4base/cfg</h3>
+<h3>/q4base/def</h3>
+<p>This folder contains .DEF files which contain <a href="Declarations" title="Declarations">declarations</a> for entities, models and modelexport.</p>
+<h3>/q4base/demos</h3>
+<p>This folder contains . <a href="DEMO_%28file_format%29" title="DEMO (file format)">DEMO</a> files which are gameplay recordings.</p>
+<h3>/q4base/effects</h3>
+<p>This folder contains . <a href="FX_%28file_format%29" title="FX (file format)">FX</a> files which in turn contain <a href="Effect_%28decl%29" title="Effect (decl)">effect declarations</a> .</p>
+<h3>/q4base/efxs</h3>
+<p>This folder contains . <a href="EFX_%28file_format%29" title="EFX (file format)">EFX</a> files which containt reverb information for maps.</p>
+<h3>/q4base/fonts</h3>
+<h3>/q4base/gfx</h3>
+<h3>/q4base/gfx/2d</h3>
+<h3>/q4base/gfx/decals</h3>
+<h3>/q4base/gfx/effects</h3>
+<p>This folder contains . <a href="TGA_%28file_format%29" title="TGA (file format)">TGA</a> files used in effects.</p>
+<h3>/q4base/gfx/env</h3>
+<p>This folder contains <a href="Images" title="Images">images</a> for <a href="Cube_maps" title="Cube maps">environment maps</a> which are textures applied to the inside faces of a skybox to give the appearance of large spaces.</p>
+<h3>/q4base/gfx/guis</h3>
+<p>This folder contains . <a href="TGA_%28file_format%29" title="TGA (file format)">TGA</a> files used in the user interface.</p>
+<h3>/q4base/gfx/lights</h3>
+<p>This folder contains . <a href="TGA_%28file_format%29" title="TGA (file format)">TGA</a> files which become available for use in <a href="Material_%28decl%29" title="Material (decl)">light materials</a> to create 'light styles' that modulate what light projects onto the surfaces of the world.</p>
+<h3>/q4base/gfx/mp</h3>
+<h3>/q4base/gfx/objectives</h3>
+<h3>/q4base/glprogs</h3>
+<p>This folder contains . <a href="VFP_%28file_format%29" title="VFP (file format)">VFP</a> and . <a href="VP_%28file_format%29" title="VP (file format)">VP</a> files which become available for use in <a href="Material_%28decl%29" title="Material (decl)">materials</a> for <a href="Vertex_and_fragment_programs" title="Vertex and fragment programs">visual special effects</a> .</p>
+<h3>/q4base/guides</h3>
+<p>This folder contains .GUIDE files which contain <a href="Guide_%28decl%29" title="Guide (decl)">material guide declarations</a> .</p>
+<h3>/q4base/guis</h3>
+<p>This folder contains .GUI files which setup the <a href="GUIs" title="GUIs">graphical user interfaces</a> .</p>
+<h3>/q4base/lipsync</h3>
+<p>This folder contains .LIPSYNC files which contain <a href="Lipsync_%28decl%29" title="Lipsync (decl)">lipsync declarations</a> .</p>
+<h3>/q4base/maps</h3>
+<p>This folder contains the . <a href="MAP_%28file_format%29" title="MAP (file format)">MAP</a> , . <a href="CM_%28file_format%29" title="CM (file format)">CM</a> , . <a href="PROC_%28file_format%29" title="PROC (file format)">PROC</a> , and . <a href="AAS_%28file_format%29" title="AAS (file format)">AAS</a> files for each map. Should there be any .BAK files there they should be removed prior to distribution as these are just backup versions created by the <a href="Map_editor" title="Map editor">map editor</a> .</p>
+<h3>/q4base/materials</h3>
+<p>This folder contains .MTR files which setup the <a href="Material_%28decl%29" title="Material (decl)">material declarations</a> .</p>
+<h3>/q4base/models</h3>
+<p>This folder contains numerous sub-directories where the following file formats can be found:</p>
+<dl>
+<dt> Model formats </dt>
+<dd>. <a href="ASE_%28file_format%29" title="ASE (file format)">ASE</a> , . <a href="LWO_%28file_format%29" title="LWO (file format)">LWO</a> , . <a href="MD5_%28file_format%29" title="MD5 (file format)">MD5</a> .
+</dd>
+<dt> Image formats </dt>
+<dd>. <a href="TGA_%28file_format%29" title="TGA (file format)">TGA</a> , . <a href="DDS_%28file_format%29" title="DDS (file format)">DDS</a> , . <a href="JPG_%28file_format%29" title="JPG (file format)">JPG</a> .
+</dd>
+<dt> Other formats </dt>
+<dd>. <a href="CM_%28file_format%29" title="CM (file format)">CM</a> .
+</dd>
+</dl>
+<h3>/q4base/playbacks</h3>
+<h3>/q4base/progimg</h3>
+<h3>/q4base/scripts</h3>
+<h3>/q4base/skins</h3>
+<p>This folder contains .SKIN files which setup the <a href="Skin_%28decl%29" title="Skin (decl)">skin declarations</a> .</p>
+<h3>/q4base/sound</h3>
+<h3>/q4base/strings</h3>
+<p>This folder contains . <a href="LANG_%28file_format%29" title="LANG (file format)">LANG</a> files which are used for localization. The engine loads all of the files from this folder and parses the numbered strings within these files to make them available to the code, <a href="GUIs" class="uri" title="GUIs">GUIs</a> and <a href="Mapping" title="Mapping">maps</a> .</p>
+<h3>/q4base/textures</h3>
+<p>This folder contains . <a href="TGA_%28file_format%29" title="TGA (file format)">TGA</a> or . <a href="JPG_%28file_format%29" title="JPG (file format)">JPG</a> files which become available for use as assets in <a href="Material_%28decl%29" title="Material (decl)">material declarations</a> .</p>
+<h3>/q4base/video</h3>
+<p>This folder contains . <a href="ROQ_%28file_format%29" title="ROQ (file format)">ROQ</a> files which are movies.</p></td>
+</tr>
+</tbody>
+</table>
 
 

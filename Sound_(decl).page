@@ -1,35 +1,15 @@
-<div align="left"
-style="float:right; font-size: 17px;background: #FFFFEE; padding: 5px; border: 1px solid #000000; padding-left: 15px; padding-right: 15px; margin-left: 15px; margin-right: 15px; padding-bottom: 15px; width: 400px;">
-
-<div align="right" style="font-size: 10px; text-align=right;">
-
 [What's this?](Help:Reference_box "Help:Reference box")
 
-</div>
-
-<div>
-
 **Sound shaders quick reference**
-
-</div>
 
 ------------------------------------------------------------------------
 
 <span style="font-size: 14px"> </span>
 -   [keywords](Sound_%28keywords%29 "Sound (keywords)")
 
-</div>
+Sounds shaders are primarily used to define a set of similar but different sounds (like footsteps or dripping water) for the purpose of breaking the monotony of using a single sound repeatedly. They also can dictate default settings for a speaker in which the sound is applied (like global, volume, etc.)
 
-Sounds shaders are primarily used to define a set of similar but
-different sounds (like footsteps or dripping water) for the purpose of
-breaking the monotony of using a single sound repeatedly. They also can
-dictate default settings for a speaker in which the sound is applied
-(like global, volume, etc.)
-
-To use a sound in the game it is not required to create a sound shader
-however, without a shader the sound files must be referenced directly as
-they will not be listed in the sound browser or media inspector from
-within the level editor.
+To use a sound in the game it is not required to create a sound shader however, without a shader the sound files must be referenced directly as they will not be listed in the sound browser or media inspector from within the level editor.
 
 Syntax
 ------
@@ -43,21 +23,11 @@ Syntax
       ...
     }
 
-Sound shader declarations begin with a header which consists of the text
-"sound" followed by the *name* of the sound shader.
+Sound shader declarations begin with a header which consists of the text "sound" followed by the *name* of the sound shader.
 
-The header is followed by the body of the declaration which is enclosed
-in curly brackets. The body contains one or more
-[keywords](Sound_%28keywords%29 "Sound (keywords)") followed by a series
-of sound file references.
+The header is followed by the body of the declaration which is enclosed in curly brackets. The body contains one or more [keywords](Sound_%28keywords%29 "Sound (keywords)") followed by a series of sound file references.
 
-You can include references to as many sound files as you like. However,
-keep in mind that the number of sounds that are actually loaded and used
-will be determined by the value of the CVar
-[s\_maxSoundsPerShader](S_maxSoundsPerShader_%28cvar%29 "S maxSoundsPerShader (cvar)")
-. This CVar's value changes when selecting a different quality setting.
+You can include references to as many sound files as you like. However, keep in mind that the number of sounds that are actually loaded and used will be determined by the value of the CVar [s\_maxSoundsPerShader](S_maxSoundsPerShader_%28cvar%29 "S maxSoundsPerShader (cvar)") . This CVar's value changes when selecting a different quality setting.
 
-For more information on sound shaders, refer to the [iddevnet sounds
-page](http://www.iddevnet.com/doom3/sounds.php "http://www.iddevnet.com/doom3/sounds.php")
-]
+For more information on sound shaders, refer to the [iddevnet sounds page](http://www.iddevnet.com/doom3/sounds.php "http://www.iddevnet.com/doom3/sounds.php") ]
 

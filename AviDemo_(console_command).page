@@ -1,9 +1,7 @@
 Description
 -----------
 
-This command will play a .
-[DEMO](DEMO_%28file_format%29 "DEMO (file format)") and output the
-frames as a . [TGA](TGA_%28file_format%29 "TGA (file format)") images.
+This command will play a . [DEMO](DEMO_%28file_format%29 "DEMO (file format)") and output the frames as a . [TGA](TGA_%28file_format%29 "TGA (file format)") images.
 
 Usage
 -----
@@ -20,22 +18,13 @@ Parameters
 Notes
 -----
 
-This command will generate a lot of .
-[TGA](TGA_%28file_format%29 "TGA (file format)") files, be sure to free
-up disk space before running it. Related CVars:
+This command will generate a lot of . [TGA](TGA_%28file_format%29 "TGA (file format)") files, be sure to free up disk space before running it. Related CVars:
 
--   [com\_aviDemoHeight](Com_aviDemoHeight_%28cvar%29 "Com aviDemoHeight (cvar)") -
-    You can select the height of each frame.
--   [com\_aviDemoSamples](Com_aviDemoSamples_%28cvar%29 "Com aviDemoSamples (cvar)") -
-    You can select the [antialiasing](Antialiasing "Antialiasing")
-    factor of each frame.
--   [com\_aviDemoTics](Com_aviDemoTics_%28cvar%29 "Com aviDemoTics (cvar)") -
-    You can select how many frames per second should be generated.
--   [com\_aviDemoWidth](Com_aviDemoWidth_%28cvar%29 "Com aviDemoWidth (cvar)") -
-    You can select the width of each frame.
+-   [com\_aviDemoHeight](Com_aviDemoHeight_%28cvar%29 "Com aviDemoHeight (cvar)") - You can select the height of each frame.
+-   [com\_aviDemoSamples](Com_aviDemoSamples_%28cvar%29 "Com aviDemoSamples (cvar)") - You can select the [antialiasing](Antialiasing "Antialiasing") factor of each frame.
+-   [com\_aviDemoTics](Com_aviDemoTics_%28cvar%29 "Com aviDemoTics (cvar)") - You can select how many frames per second should be generated.
+-   [com\_aviDemoWidth](Com_aviDemoWidth_%28cvar%29 "Com aviDemoWidth (cvar)") - You can select the width of each frame.
 
-Tutorial on creating Avi demos: [Recording Avi
-Demos](http://doom.freakygaming.com/tutorials/record_avi_videos_in_doom_3.html "http://doom.freakygaming.com/tutorials/record_avi_videos_in_doom_3.html")
+Tutorial on creating Avi demos: [Recording Avi Demos](http://doom.freakygaming.com/tutorials/record_avi_videos_in_doom_3.html "http://doom.freakygaming.com/tutorials/record_avi_videos_in_doom_3.html")
 
-\
 

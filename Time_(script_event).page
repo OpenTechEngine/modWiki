@@ -1,14 +1,12 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Specifies the amount of time an object will take to perform its
-movement.
+Specifies the amount of time an object will take to perform its movement.
 
 Usage
 -----
@@ -28,9 +26,6 @@ Examples
 Notes
 -----
 
-This script event does not return any values. The example above will
-cause the entity to take 3 seconds to perform whichever movement command
-comes after its time is set.
+This script event does not return any values. The example above will cause the entity to take 3 seconds to perform whichever movement command comes after its time is set.
 
-\
 

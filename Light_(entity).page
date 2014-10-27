@@ -1,38 +1,36 @@
 Description
 -----------
 
-The light entity is used to create point lights, spot lights, projected
-lights, ambient lights, or otherwise fog.
+The light entity is used to create point lights, spot lights, projected lights, ambient lights, or otherwise fog.
 
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                   DESCRIPTION
-  --------------------- ---------------------------------------------------------------------------------------------------------
-  texture               The light/fog/ambient shader to use.
-  color                 The color to use.
-  shaderParm3           The value to assign shaderParm 3.
-  shaderParm4           The value to assign shaderParm 4.
-  shaderParm5           The value to assign shaderParm 5.
-  shaderParm6           The value to assign shaderParm 6.
-  shaderParm7           The value to assign shaderParm 7.
-  count                 How many times this light must be triggered to toggle.
-  break                 Break the light when triggered.
-  model                 The model to use.
-  broken                The model to use when the light is broken.
-  hideModelOnBreak      Hide the model when it is broken.
-  health                The amount of damage the light can sustain. A health of 0 is nonbreakable.
-  target                The entit(y/ies) to trip if activated.
-  levels                The number of times a light must be triggered until it turns off. Each time it's brightness is reduced.
-  start\_off            The light will start in an off state.
-  snd\_broken           The sound shader to use when broken.
-  mtr\_broken           The material shader to use when broken.
-  color\_demonic        The color to use if in demonic mode.
-  mat\_demonic          The material shader to use if in demonic mode.
-  leave\_demonic\_mat   The material shader defined in mat\_demonic stays active when the effect expires.
+| KEY                 | DESCRIPTION                                                                                             |
+|---------------------|---------------------------------------------------------------------------------------------------------|
+| texture             | The light/fog/ambient shader to use.                                                                    |
+| color               | The color to use.                                                                                       |
+| shaderParm3         | The value to assign shaderParm 3.                                                                       |
+| shaderParm4         | The value to assign shaderParm 4.                                                                       |
+| shaderParm5         | The value to assign shaderParm 5.                                                                       |
+| shaderParm6         | The value to assign shaderParm 6.                                                                       |
+| shaderParm7         | The value to assign shaderParm 7.                                                                       |
+| count               | How many times this light must be triggered to toggle.                                                  |
+| break               | Break the light when triggered.                                                                         |
+| model               | The model to use.                                                                                       |
+| broken              | The model to use when the light is broken.                                                              |
+| hideModelOnBreak    | Hide the model when it is broken.                                                                       |
+| health              | The amount of damage the light can sustain. A health of 0 is nonbreakable.                              |
+| target              | The entit(y/ies) to trip if activated.                                                                  |
+| levels              | The number of times a light must be triggered until it turns off. Each time it's brightness is reduced. |
+| start\_off          | The light will start in an off state.                                                                   |
+| snd\_broken         | The sound shader to use when broken.                                                                    |
+| mtr\_broken         | The material shader to use when broken.                                                                 |
+| color\_demonic      | The color to use if in demonic mode.                                                                    |
+| mat\_demonic        | The material shader to use if in demonic mode.                                                          |
+| leave\_demonic\_mat | The material shader defined in mat\_demonic stays active when the effect expires.                       |
 
 Inheritance
 -----------
@@ -44,10 +42,7 @@ This entity is derived from the following entities:
 Notes
 -----
 
-Bear in mind a few of the above keys can be modified in realtime with
-the 'Light Editor', which is defaulted to J on the keyboard.
+Bear in mind a few of the above keys can be modified in realtime with the 'Light Editor', which is defaulted to J on the keyboard.
 
-A function was added to the light entity in Q4Edit, that allows users to
-drag out the light radius with the mouse, as opposed to having to
-manually type in dimensions into the light editor.
+A function was added to the light entity in Q4Edit, that allows users to drag out the light radius with the mouse, as opposed to having to manually type in dimensions into the light editor.
 

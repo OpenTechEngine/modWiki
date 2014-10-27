@@ -1,17 +1,11 @@
-The color of the border that's used by the item, when the
-[bordersize](Bordersize_%28GUI_item_property%29 "Bordersize (GUI item property)")
-property is higher than 0.
+The color of the border that's used by the item, when the [bordersize](Bordersize_%28GUI_item_property%29 "Bordersize (GUI item property)") property is higher than 0.
 
 Syntax
 ------
 
     bordercolor r, g, b, a
 
-Each of the RGB values define the ammount of color coming from each of
-the Red, Green, and Blue channels, respectively - ranging from 0 or no
-value, to 1 or full value. The a (or alpha) value is the ammount or
-opacity the backcolor will have - 0 being totally transparent and 1
-being totally opaque.
+Each of the RGB values define the ammount of color coming from each of the Red, Green, and Blue channels, respectively - ranging from 0 or no value, to 1 or full value. The a (or alpha) value is the ammount or opacity the backcolor will have - 0 being totally transparent and 1 being totally opaque.
 
 Default value
 -------------
@@ -23,5 +17,4 @@ Example(s)
 
     bordercolor 0.4, 0.6, 0.6, 0
 
-\
 

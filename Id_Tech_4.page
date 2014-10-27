@@ -1,132 +1,75 @@
-*The title given to this article is incorrect due to [technical
-limitations](http://en.wikipedia.org/wiki/Naming_conventions_%28technical_restrictions%29 "wikipedia:Naming_conventions_(technical_restrictions)")
-. The correct title is **id Tech 4*** .
+*The title given to this article is incorrect due to [technical limitations](http://en.wikipedia.org/wiki/Naming_conventions_%28technical_restrictions%29 "wikipedia:Naming_conventions_(technical_restrictions)") . The correct title is **id Tech 4*** .
 
 History and features
 --------------------
 
-The id Tech 4 family was formerly referred to by its first
-representative, the "Doom 3 engine". It is only recently that id
-Software stopped using game names for their engine families and
-introduced the name "id Tech" for engine families going back to the
-Quake 2 engine. ("id Tech 1" does not seem to be used. It must also be
-noted that the corresponding family, the "Quake engine" cannot be
-licensed anymore.)
+The id Tech 4 family was formerly referred to by its first representative, the "Doom 3 engine". It is only recently that id Software stopped using game names for their engine families and introduced the name "id Tech" for engine families going back to the Quake 2 engine. ("id Tech 1" does not seem to be used. It must also be noted that the corresponding family, the "Quake engine" cannot be licensed anymore.)
 
-The Doom 3 engine was started by John Carmack after he finished working
-on the Quake 3 engine. Meanwhile, the rest of id Software was still
-working on the Quake 3: Team Arena expansion. The engine made its debut
-on August 2004 with the release of Doom 3.
+The Doom 3 engine was started by John Carmack after he finished working on the Quake 3 engine. Meanwhile, the rest of id Software was still working on the Quake 3: Team Arena expansion. The engine made its debut on August 2004 with the release of Doom 3.
 
-id Tech 4 technology introduced several advantages over the available
-engines back then and even in the present:
+id Tech 4 technology introduced several advantages over the available engines back then and even in the present:
 
--   Unified lighting paradigm: every surface goes through the same
-    rendering pipeline whether it is level geometry, a dynamic entity, a
-    model, etc. leading to visual coherency.
--   Fully dynamic shadowing through robust stencil buffers for easy and
-    predictable lighting conditions. Optionally, projected lights can be
-    used to fake soft shadows.
--   Interactive, resolution-independent surfaces, called
-    [GUIs](GUIs "GUIs") . No more blurry computer screens, or limited
-    toggle switches.
--   Very short map compilation times (measured in seconds even for large
-    complex maps) rather than hours and using the same level of machines
-    used for playing instead of having to use dedicated compilation
-    farms like lightmap-based engines.
+-   Unified lighting paradigm: every surface goes through the same rendering pipeline whether it is level geometry, a dynamic entity, a model, etc. leading to visual coherency.
+-   Fully dynamic shadowing through robust stencil buffers for easy and predictable lighting conditions. Optionally, projected lights can be used to fake soft shadows.
+-   Interactive, resolution-independent surfaces, called [GUIs](GUIs "GUIs") . No more blurry computer screens, or limited toggle switches.
+-   Very short map compilation times (measured in seconds even for large complex maps) rather than hours and using the same level of machines used for playing instead of having to use dedicated compilation farms like lightmap-based engines.
 -   Built-in editors sharing the same renderer pipeline as the game.
--   Very little dependence on proprietary formats for greater
-    flexibility when modding.
--   Strong and flexible scripting language that allows diverse effects
-    from replicating native entity behaviour to changing
-    [CVars](Console#CVars "Console") in real-time. Maps no longer have
-    to be boringly static.
+-   Very little dependence on proprietary formats for greater flexibility when modding.
+-   Strong and flexible scripting language that allows diverse effects from replicating native entity behaviour to changing [CVars](Console#CVars "Console") in real-time. Maps no longer have to be boringly static.
 
 ### OpenGL
 
-The id Tech 4 renderer is based on the OpenGL API. OpenGL is graphics
-standard and development environment introduced by
-[SGI](http://www.sgi.com/ "http://www.sgi.com/") in 1992. It's a
-multi-platform standard and in constant evolution through the OpenGL
-Architecture Review Board (ARB). For extended information see the
-[OpenGL Homepage](http://www.opengl.org/ "http://www.opengl.org/") .
+The id Tech 4 renderer is based on the OpenGL API. OpenGL is graphics standard and development environment introduced by [SGI](http://www.sgi.com/ "http://www.sgi.com/") in 1992. It's a multi-platform standard and in constant evolution through the OpenGL Architecture Review Board (ARB). For extended information see the [OpenGL Homepage](http://www.opengl.org/ "http://www.opengl.org/") .
 
 Structure
 ---------
 
-id Tech 4 is effectively described by: the game engine, the [game
-binary](Coding#Game_code "Coding") , [scripts](Scripting "Scripting") ,
-[declarations](Declarations "Declarations") and assets, which together
-in a specific instance describe a game.
+id Tech 4 is effectively described by: the game engine, the [game binary](Coding#Game_code "Coding") , [scripts](Scripting "Scripting") , [declarations](Declarations "Declarations") and assets, which together in a specific instance describe a game.
 
 ### File system
 
-Loading of game binary, declaration files and assets are governed by the
-files system paths.
+Loading of game binary, declaration files and assets are governed by the files system paths.
 
 In order of "fall back" when searching for a given filename:
 
--   fs\_base - which points to the base folder. The base folder contains
-    the files for the retail game.
+-   fs\_base - which points to the base folder. The base folder contains the files for the retail game.
 
 <!-- -->
 
--   fs\_game\_base - this was added in Doom3 1.3 to allow a fall back to
-    the expansion pack for mods to be based off.
+-   fs\_game\_base - this was added in Doom3 1.3 to allow a fall back to the expansion pack for mods to be based off.
 
 <!-- -->
 
 -   fs\_game - the currently loaded mod folder.
 
-Ie when the file system (in game engine) tries to load a file it looks
-in fs\_game first. If it can't find the file it tries to load the from
-fs\_game\_base, and then finally fs\_base.
+Ie when the file system (in game engine) tries to load a file it looks in fs\_game first. If it can't find the file it tries to load the from fs\_game\_base, and then finally fs\_base.
 
-The engine loads the game binary which will then tell it what asset
-files to load, more often defined in declaration files than directly in
-code.
+The engine loads the game binary which will then tell it what asset files to load, more often defined in declaration files than directly in code.
 
-Files can be contained in . [PK4
-files](PK4_%28file_format%29 "PK4 (file format)") files. The "pure
-system" allows enforcement of loading files contained in PK4s only as
-well as verifying checksums of PK4s as form of cheat protection for
-networked games.
+Files can be contained in . [PK4 files](PK4_%28file_format%29 "PK4 (file format)") files. The "pure system" allows enforcement of loading files contained in PK4s only as well as verifying checksums of PK4s as form of cheat protection for networked games.
 
-Precedence of file loading from PK4s follows descending alphabetical
-order. Ie if a file of the same name exists in files pak000.pk4,
-pak001.pk4, the file system will hit pak001.pk4 first.
+Precedence of file loading from PK4s follows descending alphabetical order. Ie if a file of the same name exists in files pak000.pk4, pak001.pk4, the file system will hit pak001.pk4 first.
 
 List of announced games making use of id Tech 4
 -----------------------------------------------
 
 ### [Doom 3](Doom_3 "Doom 3")
 
--   Oficial website:
-    [www.doom3.com](http://www.doom3.com/ "http://www.doom3.com")
--   Latest version: 1.3.1 (merged codebase with Doom 3: Resurrection of
-    Evil expansion). Since the original release, some functionality was
-    added while deprecated and/or unused functionality was removed.
+-   Oficial website: [www.doom3.com](http://www.doom3.com/ "http://www.doom3.com")
+-   Latest version: 1.3.1 (merged codebase with Doom 3: Resurrection of Evil expansion). Since the original release, some functionality was added while deprecated and/or unused functionality was removed.
     -   1.3.1 adds Intel-Mac support.
-    -   All r\_hdr\_\* and r\_sb\_\* [CVars](Console#CVars "Console")
-        were removed in v1.3.
+    -   All r\_hdr\_\* and r\_sb\_\* [CVars](Console#CVars "Console") were removed in v1.3.
 
 ### [Quake 4](Quake_4 "Quake 4")
 
--   Official website:
-    [www.quake4game.com](http://www.quake4game.com/ "http://www.quake4game.com")
--   Latest version: 1.4.2 (splits multiplayer game code to separate base
-    folder q4mp, customizable tick rate, built-in http server for
-    autodownloading and more).
-    -   Added portal culling based on distance, static shadows, default
-        ambient light value, AI and weapon scripts are folded into the
-        game code; editors were improved, streamlined and split off the
-        executable into their own library.
+-   Official website: [www.quake4game.com](http://www.quake4game.com/ "http://www.quake4game.com")
+-   Latest version: 1.4.2 (splits multiplayer game code to separate base folder q4mp, customizable tick rate, built-in http server for autodownloading and more).
+    -   Added portal culling based on distance, static shadows, default ambient light value, AI and weapon scripts are folded into the game code; editors were improved, streamlined and split off the executable into their own library.
     -   "Modest changes from Doom 3" - John Carmack
 
 ### [Prey](Prey "Prey")
 
--   Official website:
-    [www.prey.com](http://www.prey.com/ "http://www.prey.com")
+-   Official website: [www.prey.com](http://www.prey.com/ "http://www.prey.com")
 -   Latest version: 1.3 (adds mac compatibility)
     -   Enhanced portal behaviour.
     -   SMP (Multi-CPU) optimizations
@@ -135,77 +78,40 @@ List of announced games making use of id Tech 4
 
 ### [Enemy Territory: Quake Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars")
 
--   Official website:
-    [www.enemyterritory.com](http://www.enemyterritory.com/ "http://www.enemyterritory.com")
+-   Official website: [www.enemyterritory.com](http://www.enemyterritory.com/ "http://www.enemyterritory.com")
 -   Latest version: 1.0.10826.32242 (patch 1.1)
-    -   MegaTexture functionality: totally new rendering technology
-        developed by id Software that crunches millions of polygons and
-        a gigabyte-scale texture into a single, seamless and untiled
-        landscape with unique detail down to the square inch or the
-        un-obscured distant horizon.
+    -   MegaTexture functionality: totally new rendering technology developed by id Software that crunches millions of polygons and a gigabyte-scale texture into a single, seamless and untiled landscape with unique detail down to the square inch or the un-obscured distant horizon.
     -   "ET:QW is a heavily modified Doom 3 game." - John Carmack
-    -   "The editor for ETQW is part of the game, currently, in the same
-        way it is for Doom 3 (although it's been split off into a set of
-        dlls rather than being part of the exe, unless I'm mistaken)." -
-        Wils, Splash Damage
-    -   Each MegaTexture starts as a 5Gb source texture containing
-        diffuse and bumpmap information and can be compressed to around
-        500Mb.
-    -   MegaTexture size is independent of terrain mesh area and its
-        compression is user-selectable allowing for custom maps that are
-        no larger in download size than DOOM 3 and Quake 4 custom maps.
-    -   Terrain is a mesh with no LoD and rendered fully to the horizon.
-        Gaps in the mesh can be created to build caves and tunnels with
-        standard geometry.
-    -   Includes more flexible [distance-based
-        visportals](Visportal#Distance_based_visportals "Visportal")
-        than Quake 4 to section off entire buildings.
-    -   Models support native LoD using the same normalmap across
-        levels.
-    -   "As of right now we support .ma, .obj, .lwo, .ase, and our own
-        .surf format. If the engine can load it as a model, you can use
-        it as a terrain model. Last I checked, we tended to use .lwo
-        most frequently, followed by .obj."
-    -   "The ETQW map format (.world) is a new format that supports
-        easily adding new primitive types, metadata such as grouping
-        information, and arbitrary properties on everything. The base
-        primitive data stored will be familiar:\
-         Faces have planes, a 2D texture matrix + offset, material, and
-        texture bounds (a new little toy we've cooked up.) Patches have
-        control points and UV data, as well as their own additional
-        texturing info. The format also supports references to other
-        .worlds (these can be nested inside of each other.)"
-    -   "You can import old format .maps. (Unless something breaks
-        between now and release)"
-    -   There won't be a need to provide the .WORLD file with custom
-        maps releases.
-    -   For performance reasons, there will be a strong incentive to
-        processing map assets which the engine will handle. Examples
-        include compressing textures, converting declarations to binary
-        formats, unrolling templates, etc.
+    -   "The editor for ETQW is part of the game, currently, in the same way it is for Doom 3 (although it's been split off into a set of dlls rather than being part of the exe, unless I'm mistaken)." - Wils, Splash Damage
+    -   Each MegaTexture starts as a 5Gb source texture containing diffuse and bumpmap information and can be compressed to around 500Mb.
+    -   MegaTexture size is independent of terrain mesh area and its compression is user-selectable allowing for custom maps that are no larger in download size than DOOM 3 and Quake 4 custom maps.
+    -   Terrain is a mesh with no LoD and rendered fully to the horizon. Gaps in the mesh can be created to build caves and tunnels with standard geometry.
+    -   Includes more flexible [distance-based visportals](Visportal#Distance_based_visportals "Visportal") than Quake 4 to section off entire buildings.
+    -   Models support native LoD using the same normalmap across levels.
+    -   "As of right now we support .ma, .obj, .lwo, .ase, and our own .surf format. If the engine can load it as a model, you can use it as a terrain model. Last I checked, we tended to use .lwo most frequently, followed by .obj."
+    -   "The ETQW map format (.world) is a new format that supports easily adding new primitive types, metadata such as grouping information, and arbitrary properties on everything. The base primitive data stored will be familiar:
+         Faces have planes, a 2D texture matrix + offset, material, and texture bounds (a new little toy we've cooked up.) Patches have control points and UV data, as well as their own additional texturing info. The format also supports references to other .worlds (these can be nested inside of each other.)"
+    -   "You can import old format .maps. (Unless something breaks between now and release)"
+    -   There won't be a need to provide the .WORLD file with custom maps releases.
+    -   For performance reasons, there will be a strong incentive to processing map assets which the engine will handle. Examples include compressing textures, converting declarations to binary formats, unrolling templates, etc.
     -   The GUI system is now fully exposed in the game SDK.
 
 ### [Wolfenstein](Wolfenstein "Wolfenstein")
 
--   Official website:
-    [www.wolfenstein.com](http://www.wolfenstein.com/ "http://www.wolfenstein.com")
+-   Official website: [www.wolfenstein.com](http://www.wolfenstein.com/ "http://www.wolfenstein.com")
 -   Latest version: 1.1
 -   Single player and Multiplayer are two seperate branches
 -   Single player - evolved from Quake 4 branch.
     -   OpenGL renderer replaced with Directx 9 deferred renderer.
-    -   File streaming system labeled 'Streamtech' using [stream
-        packs](Stream_packs "Stream packs") .
-    -   UI using [Scaleform
-        GFX](http://www.scaleform.com/ "http://www.scaleform.com/")
-    -   Physics handled by
-        [Havok](http://www.havok.com/ "http://www.havok.com/")
+    -   File streaming system labeled 'Streamtech' using [stream packs](Stream_packs "Stream packs") .
+    -   UI using [Scaleform GFX](http://www.scaleform.com/ "http://www.scaleform.com/")
+    -   Physics handled by [Havok](http://www.havok.com/ "http://www.havok.com/")
 -   Multi player - evolved from ETQW branch.
     -   Can use MD5r models of single player format.
 
 ### [Brink](Brink "Brink")
 
--   Official website:
-    [www.brinkthegame.com](http://www.brinkthegame.com/ "http://www.brinkthegame.com")
+-   Official website: [www.brinkthegame.com](http://www.brinkthegame.com/ "http://www.brinkthegame.com")
 -   Latest Patch? (Unspecified updater versions)
     -   Extended MegaTexture technology
     -   OpenGL Deferred renderer (4 render targets)

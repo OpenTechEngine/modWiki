@@ -1,21 +1,11 @@
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/f/f9/Etqwsquare_bg.png) The information on this page is
-specific to [Enemy Territory: Quake
-Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
-
-</div>
+![](/images/f/f9/Etqwsquare_bg.png) The information on this page is specific to [Enemy Territory: Quake Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
 
 ------------------------------------------------------------------------
 
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type
-[idEntity](IdEntity_%28class%29 "IdEntity (class)") . Has spawn class
-specific implementation.
+This event operates on an instance of the [game class](Game_class "Game class") type [idEntity](IdEntity_%28class%29 "IdEntity (class)") . Has spawn class specific implementation.
 
 Description
 -----------
@@ -30,9 +20,7 @@ Usage
 Parameters
 ----------
 
-[team] - team object. Global object pointers for team objects are named
-**gdfTeam** and **stroggTeam** Can be set to
-[null](%24null_entity_%28scripting%29 "$null entity (scripting)") .
+[team] - team object. Global object pointers for team objects are named **gdfTeam** and **stroggTeam** Can be set to [null](%24null_entity_%28scripting%29 "$null entity (scripting)") .
 
 Examples
 --------
@@ -43,23 +31,16 @@ Examples
 Notes
 -----
 
-Calls SetGameTeam on the entities [spawn
-class](Spawn_class "Spawn class") . SetGameClass has spawn class
-specific implementations on the following:
+Calls SetGameTeam on the entities [spawn class](Spawn_class "Spawn class") . SetGameClass has spawn class specific implementations on the following:
 
 **idEntity** : Does nothing.
 
 **idActor** , **idItem** , **idProjectile** : Sets team.
 
-**idPlayer** : Sets team, calls OnSetTeam function on entities script
-object. Sets player to spectate if team is NULL.
+**idPlayer** : Sets team, calls OnSetTeam function on entities script object. Sets player to spectate if team is NULL.
 
-**sdScriptEntity** : Sets team, calls OnSetTeam function on entities
-script object. Many entities use this function to manage the change.
+**sdScriptEntity** : Sets team, calls OnSetTeam function on entities script object. Many entities use this function to manage the change.
 
-Has counterpart
-[getGameTeam](GetGameTeam_%28script_event%29 "GetGameTeam (script event)")
-.
+Has counterpart [getGameTeam](GetGameTeam_%28script_event%29 "GetGameTeam (script event)") .
 
-\
 

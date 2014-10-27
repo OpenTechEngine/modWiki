@@ -1,8 +1,6 @@
-This called when the GUI starts. For world GUIs, this is called the
-first time the user rolls the cursor over the GUI.
+This called when the GUI starts. For world GUIs, this is called the first time the user rolls the cursor over the GUI.
 
-Should be used on the [Desktop GUI
-item](Desktop_GUI_item "Desktop GUI item") .
+Should be used on the [Desktop GUI item](Desktop_GUI_item "Desktop GUI item") .
 
 Example(s)
 ----------
@@ -11,5 +9,4 @@ Example(s)
         ...
     }
 
-\
 

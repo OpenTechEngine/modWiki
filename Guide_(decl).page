@@ -1,19 +1,8 @@
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/6/69/Q4square_bg.png) The information on this page is
-specific to [Quake 4](Quake_4 "Quake 4") .
-
-</div>
+![](/images/6/69/Q4square_bg.png) The information on this page is specific to [Quake 4](Quake_4 "Quake 4") .
 
 ------------------------------------------------------------------------
 
-Guides are declarations which act as material templates used in place of
-a full [material](Material_%28decl%29 "Material (decl)") declaration.
-Their sole function is to simplify creation of new materials. Just like
-templates or stationary or even forms in every day life, guides save
-time and effort by leaving just a few blank spots for you to fill in.
-These blank spots are called parameters.
+Guides are declarations which act as material templates used in place of a full [material](Material_%28decl%29 "Material (decl)") declaration. Their sole function is to simplify creation of new materials. Just like templates or stationary or even forms in every day life, guides save time and effort by leaving just a few blank spots for you to fill in. These blank spots are called parameters.
 
 Syntax
 ------
@@ -25,31 +14,16 @@ Syntax
         [etc]
     }
 
-Guides are started with a header which consists of the guide keyword
-followed by the *name* of the guide and inside parenthesis separated by
-commas all the parameters that need to be suplied to that particular
-guide. They are then followed by the body of the declaration which is
-enclosed in curly brackets; here you use all the usual material
-declaration keywords and stages. The difference from a regular material
-declaration though is that instead of pointing to actual assets (like a
-texture, colour value, etc.) you point to the parameters defined in the
-header. The names of the parameters are entirely up to you. Guides
-should be put in a .
-[GUIDE](GUIDE_%28file_format%29 "GUIDE (file format)") file in the /
-[guides](Guides_%28folder%29 "Guides (folder)") folder.
+Guides are started with a header which consists of the guide keyword followed by the *name* of the guide and inside parenthesis separated by commas all the parameters that need to be suplied to that particular guide. They are then followed by the body of the declaration which is enclosed in curly brackets; here you use all the usual material declaration keywords and stages. The difference from a regular material declaration though is that instead of pointing to actual assets (like a texture, colour value, etc.) you point to the parameters defined in the header. The names of the parameters are entirely up to you. Guides should be put in a . [GUIDE](GUIDE_%28file_format%29 "GUIDE (file format)") file in the / [guides](Guides_%28folder%29 "Guides (folder)") folder.
 
-You then reference the guide by using the following in your .
-[MTR](MTR_%28file_format%29 "MTR (file format)") file:
+You then reference the guide by using the following in your . [MTR](MTR_%28file_format%29 "MTR (file format)") file:
 
     guide [name_of_material] [name_of_guide]("[parm1]", "[parm2]", "[etc]")
 
 Example
 -------
 
-As an example, the majority of surfaces in the game use a [diffuse,
-specular, height and normal maps](Texturing "Texturing") so let's assume
-you have three new custom brick textures you want to use in your mod.
-After creating the actual textures you have:
+As an example, the majority of surfaces in the game use a [diffuse, specular, height and normal maps](Texturing "Texturing") so let's assume you have three new custom brick textures you want to use in your mod. After creating the actual textures you have:
 
     brick1_d.tga
     brick1_local.tga
@@ -66,8 +40,7 @@ After creating the actual textures you have:
     brick3_h.tga
     brick3_s.tga
 
-Now you're going to have to write three times the following material for
-each set of brick textures:
+Now you're going to have to write three times the following material for each set of brick textures:
 
     textures/mymod/brick1
     {
@@ -78,9 +51,7 @@ each set of brick textures:
         specularmap textures/mymod/brick1_s
     }
 
-As you can see even though each of those three brick surfaces will use
-different textures they will still behave the same way. That's where
-guides come in. You could write a guide that does this for you like so:
+As you can see even though each of those three brick surfaces will use different textures they will still behave the same way. That's where guides come in. You could write a guide that does this for you like so:
 
     guide my_guide(TextureParm)
     {
@@ -91,30 +62,17 @@ guides come in. You could write a guide that does this for you like so:
         specularmap textures/TextureParm_s
     }
 
-It looks just like the material declaration above except for the header
-and the paths/filenames to the textures point to the parameter defined
-in the header instead of an actual texture asset.
+It looks just like the material declaration above except for the header and the paths/filenames to the textures point to the parameter defined in the header instead of an actual texture asset.
 
-Now, whenever you want to write those three brick materials using this
-guide instead of having to write the material declaration as usual you
-simply point to the guide declaration (our template) like so:
+Now, whenever you want to write those three brick materials using this guide instead of having to write the material declaration as usual you simply point to the guide declaration (our template) like so:
 
     guide textures/mymod/brick1 my_guide("mymod/brick1")
     guide textures/mymod/brick2 my_guide("mymod/brick2")
     guide textures/mymod/brick3 my_guide("mymod/brick3")
 
-You start by telling the engine you're using a guide instead of a full
-material, then you declarate the path/name of the material that will
-appear in the editor (just as you'd do in a regular material
-declaration), you follow that with the name of the guide you'll be using
-for this material followed by the parameter(s) required by the guide
-inside parenthesis, each of which enclosed in quotes. You write these
-"simplified" materials in a .MTR next to your other materials as usual.
+You start by telling the engine you're using a guide instead of a full material, then you declarate the path/name of the material that will appear in the editor (just as you'd do in a regular material declaration), you follow that with the name of the guide you'll be using for this material followed by the parameter(s) required by the guide inside parenthesis, each of which enclosed in quotes. You write these "simplified" materials in a .MTR next to your other materials as usual.
 
-What the game is doing is copying & pasting the content of the guide
-into each of these materials substituting the parameter with the one you
-supply so at run-time the "guide textures/mymod/brick3
-my\_guide("mymod/brick3")" for instance would become:
+What the game is doing is copying & pasting the content of the guide into each of these materials substituting the parameter with the one you supply so at run-time the "guide textures/mymod/brick3 my\_guide("mymod/brick3")" for instance would become:
 
     textures/mymod/brick3
     {
@@ -125,13 +83,7 @@ my\_guide("mymod/brick3")" for instance would become:
         specularmap textures/mymod/brick3_s
     }
 
-Just as if you had written it yourself. As shown in the syntax section
-you can have more than one parameter. Let's look at the example above.
-All our brick textures use the four texture maps but let's say you
-wanted to use a different height scale value for each of the surfaces.
-You wanted to use 2 (the default) for brick1 but 4 and 1 for brick2 and
-brick3 respectively. This is easily done by creating the following
-guide:
+Just as if you had written it yourself. As shown in the syntax section you can have more than one parameter. Let's look at the example above. All our brick textures use the four texture maps but let's say you wanted to use a different height scale value for each of the surfaces. You wanted to use 2 (the default) for brick1 but 4 and 1 for brick2 and brick3 respectively. This is easily done by creating the following guide:
 
     guide my_guide_customheight(TextureParm, HeightParm)
     {
@@ -142,52 +94,30 @@ guide:
         specularmap textures/TextureParm_s
     }
 
-Now, not only will the actual textures in the three brick materials but
-also the height scale so notice the two parameters in the header and the
-fact the "2" in the
-[heightmap](Heightmap_%28Image_program_function%29 "Heightmap (Image program function)")
-function was replaced by a parameter which we've named HeightParm in the
-header. Our three brick material declarations now become:
+Now, not only will the actual textures in the three brick materials but also the height scale so notice the two parameters in the header and the fact the "2" in the [heightmap](Heightmap_%28Image_program_function%29 "Heightmap (Image program function)") function was replaced by a parameter which we've named HeightParm in the header. Our three brick material declarations now become:
 
     guide textures/mymod/brick1 my_guide("mymod/brick1")
     guide textures/mymod/brick2 my_guide_customheight("mymod/brick2", "4")
     guide textures/mymod/brick3 my_guide_customheight("mymod/brick3", "1")
 
-Remember, we still wanted brick1 to use the default value of 2 so we
-keep using the original guide but brick2 and brick3 reference our new
-guide that expects a custom height scale value as a second parameter.
+Remember, we still wanted brick1 to use the default value of 2 so we keep using the original guide but brick2 and brick3 reference our new guide that expects a custom height scale value as a second parameter.
 
 Recap
 -----
 
-Guides are conceptually a more complex architecture for materials but
-they are simple to understand with an example and save a lot of time and
-confusion if you have lots of materials that can be "colapsed" into
-referencing guides instead. The important points to bear in mind are:
+Guides are conceptually a more complex architecture for materials but they are simple to understand with an example and save a lot of time and confusion if you have lots of materials that can be "colapsed" into referencing guides instead. The important points to bear in mind are:
 
 -   guides are put into .GUIDE files.
--   they use a header that declares one or more parameters (the maximum
-    number of parameter is 32).
+-   they use a header that declares one or more parameters (the maximum number of parameter is 32).
 -   you can name the guides and parameters whatever you want.
--   inside the curly brackets they are written like material
-    declarations but with parameters substituting real assets.
--   material declarations (in .MTR files) reference the guides by
-    supplying its name and assets for parameters.
--   to make full use of guides it's important to attach the according
-    suffix to the filenames of your texture assets: diffuse maps should
-    end with "\_d", normal maps should end with "\_local", height maps
-    should end with "\_h" and specular maps should end with "\_s".
-    Although less used your [hit maps](Texturing#Hit_Maps "Texturing")
-    should end with "\_hit". This should be done whether or not you use
-    guides, simply as a way to quickly know which texture is which when
-    your browsing your /
-    [textures](Textures_%28folder%29 "Textures (folder)") folder.
+-   inside the curly brackets they are written like material declarations but with parameters substituting real assets.
+-   material declarations (in .MTR files) reference the guides by supplying its name and assets for parameters.
+-   to make full use of guides it's important to attach the according suffix to the filenames of your texture assets: diffuse maps should end with "\_d", normal maps should end with "\_local", height maps should end with "\_h" and specular maps should end with "\_s". Although less used your [hit maps](Texturing#Hit_Maps "Texturing") should end with "\_hit". This should be done whether or not you use guides, simply as a way to quickly know which texture is which when your browsing your / [textures](Textures_%28folder%29 "Textures (folder)") folder.
 
 Built-in guides
 ---------------
 
-Quake 4 comes with around 60 guides that you can use right away. For
-reference, here is a list of their names and required parameters:
+Quake 4 comes with around 60 guides that you can use right away. For reference, here is a list of their names and required parameters:
 
     generic_shader(TextureParm)
     generic_variant_noheight(LocalParm, TextureParm)
@@ -253,10 +183,7 @@ These are some new example guides you can add to your mod:
         specularmap textures/TextureParm_s
     }
 
-While most materials in Quake 4 use a height map, in [Doom
-3](Doom_3 "Doom 3") height maps were used sparingly so the guide above
-can be used instead of generic\_shader.
+While most materials in Quake 4 use a height map, in [Doom 3](Doom_3 "Doom 3") height maps were used sparingly so the guide above can be used instead of generic\_shader.
 
-Another example of a guide you can add is presented in the
-[visportal](Visportal#Distance_based_visportals "Visportal") article.
+Another example of a guide you can add is presented in the [visportal](Visportal#Distance_based_visportals "Visportal") article.
 

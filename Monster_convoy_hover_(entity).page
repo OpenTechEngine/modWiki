@@ -1,98 +1,78 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Monster_convoy_hover_%28entity%29 "http://modwiki.net/w/index.php?title=Monster_convoy_hover_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Monster_convoy_hover_%28entity%29 "http://modwiki.net/w/index.php?title=Monster_convoy_hover_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Monster_convoy_hover_%28entity%29 "http://modwiki.net/w/index.php?title=Monster_convoy_hover_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Monster_convoy_hover_%28entity%29 "http://modwiki.net/w/index.php?title=Monster_convoy_hover_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
 
-A smaller strogg flyer. Not so big. Kinda tiny. !large, and this version
-hovers.
+A smaller strogg flyer. Not so big. Kinda tiny. !large, and this version hovers.
 
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                                   DESCRIPTION
-  ------------------------------------- ----------------------------------------------------------------------------------
-  action\_blasterAttack                 Description not available.
-  action\_blasterAttack\_maxRange       Description not available.
-  action\_blasterAttack\_maxRange2d     Description not available.
-  action\_blasterAttack\_minRange2d     Description not available.
-  action\_blasterAttack\_noturn         Description not available.
-  action\_blasterAttack\_overrideLegs   Description not available.
-  action\_blasterAttack\_rate           Description not available.
-  allowFlipEject                        Description not available.
-  attackRange                           Description not available.
-  attack\_blaster\_accuracy             Description not available.
-  attack\_blaster\_cone                 Description not available.
-  attack\_bomb\_accuracy                Description not available.
-  attack\_bomb\_cone                    Description not available.
-  bleed                                 Description not available.
-  damaged\_threshold                    Description not available.
-  dbText                                Description not available.
-  dbTitle                               Description not available.
-  def\_attack\_blaster                  Description not available.
-  def\_attack\_bomb                     Description not available.
-  def\_position                         Description not available.
-  dodecahedron                          Description not available.
-  editor\_color                         Description not available.
-  editor\_maxs                          Description not available.
-  editor\_mins                          Description not available.
-  editor\_showangle                     Description not available.
-  editor\_usage                         A smaller strogg flyer. Not so big. Kinda tiny. !large, and this version hovers.
-  flee\_not\_die                        Description not available.
-  flee\_threshold                       Description not available.
-  flying                                Description not available.
-  fov                                   Description not available.
-  fx\_base\_attack\_flash               Description not available.
-  fx\_bombflash                         Description not available.
-  fx\_damage\_transition                Description not available.
-  fx\_damaged                           Description not available.
-  fx\_death                             Description not available.
-  fx\_exhaust                           Description not available.
-  fx\_exhaust\_damaged                  Description not available.
-  fx\_laser                             Description not available.
-  fx\_muzzleflash                       Description not available.
-  health                                Description not available.
-  joint\_gun\_left                      Description not available.
-  joint\_gun\_right                     Description not available.
-  joint\_thruster                       Description not available.
-  mass                                  Description not available.
-  maxDistance                           Description not available.
-  maxHeight                             Description not available.
-  maxs                                  Description not available.
-  minDistance                           Description not available.
-  minHeight                             Description not available.
-  mins                                  Description not available.
-  model                                 Description not available.
-  painThreshold                         Description not available.
-  remove\_on\_death                     Description not available.
-  snd\_flyloop                          Description not available.
-  spawnclass                            Description not available.
-  startdamaged                          Description not available.
-  suppress\_range                       Description not available.
-  suppress\_rate                        Description not available.
-  turn\_rate                            Description not available.
+| KEY                                 | DESCRIPTION                                                                      |
+|-------------------------------------|----------------------------------------------------------------------------------|
+| action\_blasterAttack               | Description not available.                                                       |
+| action\_blasterAttack\_maxRange     | Description not available.                                                       |
+| action\_blasterAttack\_maxRange2d   | Description not available.                                                       |
+| action\_blasterAttack\_minRange2d   | Description not available.                                                       |
+| action\_blasterAttack\_noturn       | Description not available.                                                       |
+| action\_blasterAttack\_overrideLegs | Description not available.                                                       |
+| action\_blasterAttack\_rate         | Description not available.                                                       |
+| allowFlipEject                      | Description not available.                                                       |
+| attackRange                         | Description not available.                                                       |
+| attack\_blaster\_accuracy           | Description not available.                                                       |
+| attack\_blaster\_cone               | Description not available.                                                       |
+| attack\_bomb\_accuracy              | Description not available.                                                       |
+| attack\_bomb\_cone                  | Description not available.                                                       |
+| bleed                               | Description not available.                                                       |
+| damaged\_threshold                  | Description not available.                                                       |
+| dbText                              | Description not available.                                                       |
+| dbTitle                             | Description not available.                                                       |
+| def\_attack\_blaster                | Description not available.                                                       |
+| def\_attack\_bomb                   | Description not available.                                                       |
+| def\_position                       | Description not available.                                                       |
+| dodecahedron                        | Description not available.                                                       |
+| editor\_color                       | Description not available.                                                       |
+| editor\_maxs                        | Description not available.                                                       |
+| editor\_mins                        | Description not available.                                                       |
+| editor\_showangle                   | Description not available.                                                       |
+| editor\_usage                       | A smaller strogg flyer. Not so big. Kinda tiny. !large, and this version hovers. |
+| flee\_not\_die                      | Description not available.                                                       |
+| flee\_threshold                     | Description not available.                                                       |
+| flying                              | Description not available.                                                       |
+| fov                                 | Description not available.                                                       |
+| fx\_base\_attack\_flash             | Description not available.                                                       |
+| fx\_bombflash                       | Description not available.                                                       |
+| fx\_damage\_transition              | Description not available.                                                       |
+| fx\_damaged                         | Description not available.                                                       |
+| fx\_death                           | Description not available.                                                       |
+| fx\_exhaust                         | Description not available.                                                       |
+| fx\_exhaust\_damaged                | Description not available.                                                       |
+| fx\_laser                           | Description not available.                                                       |
+| fx\_muzzleflash                     | Description not available.                                                       |
+| health                              | Description not available.                                                       |
+| joint\_gun\_left                    | Description not available.                                                       |
+| joint\_gun\_right                   | Description not available.                                                       |
+| joint\_thruster                     | Description not available.                                                       |
+| mass                                | Description not available.                                                       |
+| maxDistance                         | Description not available.                                                       |
+| maxHeight                           | Description not available.                                                       |
+| maxs                                | Description not available.                                                       |
+| minDistance                         | Description not available.                                                       |
+| minHeight                           | Description not available.                                                       |
+| mins                                | Description not available.                                                       |
+| model                               | Description not available.                                                       |
+| painThreshold                       | Description not available.                                                       |
+| remove\_on\_death                   | Description not available.                                                       |
+| snd\_flyloop                        | Description not available.                                                       |
+| spawnclass                          | Description not available.                                                       |
+| startdamaged                        | Description not available.                                                       |
+| suppress\_range                     | Description not available.                                                       |
+| suppress\_rate                      | Description not available.                                                       |
+| turn\_rate                          | Description not available.                                                       |
 
 Inheritance
 -----------

@@ -1,8 +1,7 @@
 Description
 -----------
 
-The **alphazeroclamp** keyword prevents the alpha channel of this stage
-from tiling by forcing 100% opacity outside normalized UV coordinates.
+The **alphazeroclamp** keyword prevents the alpha channel of this stage from tiling by forcing 100% opacity outside normalized UV coordinates.
 
 Usage
 -----
@@ -22,12 +21,10 @@ Not available.
 Notes
 -----
 
-The stage specific version of this keyword is used to override the
-effects of the global keywords...
+The stage specific version of this keyword is used to override the effects of the global keywords...
 
 -   [alphazeroclamp](Alphazeroclamp_%28Material_global_keyword%29 "Alphazeroclamp (Material global keyword)")
 -   [clamp](Clamp_%28Material_global_keyword%29 "Clamp (Material global keyword)")
 -   [zeroclamp](Zeroclamp_%28Material_global_keyword%29 "Zeroclamp (Material global keyword)")
 
-\
 

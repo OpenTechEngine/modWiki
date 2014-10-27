@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Movable_microscope_%28entity%29 "http://modwiki.net/w/index.php?title=Movable_microscope_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Movable_microscope_%28entity%29 "http://modwiki.net/w/index.php?title=Movable_microscope_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Movable_microscope_%28entity%29 "http://modwiki.net/w/index.php?title=Movable_microscope_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Movable_microscope_%28entity%29 "http://modwiki.net/w/index.php?title=Movable_microscope_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -28,104 +10,103 @@ Description not available.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                    DESCRIPTION
-  ---------------------- ------------------------------------------------------------------------------
-  CraneAttachable        Description not available.
-  ShuttleAttachable      Description not available.
-  accepts\_wounds        Description not available.
-  accurateguitrace       Description not available.
-  alignToJoint           Description not available.
-  angle                  Description not available.
-  angularFriction        Angular friction in the range [0-1] where 0 is no friction
-  anim                   Description not available.
-  applyDamageEffects     Description not available.
-  bind                   Description not available.
-  bindOrientated         Description not available.
-  bindToBody             Description not available.
-  bindToJoint            Description not available.
-  bindanim               Description not available.
-  bouncyness             How much the object bounces in the range [0-1] where 0 is no bounce.
-  bowVisibilityType      Description not available.
-  cameraTarget           Description not available.
-  cinematic              Description not available.
-  classname              Description not available.
-  clipmodel              Description not available.
-  clipshrink             Shrink the visual model with an epsilon and use it as a clip model.
-  collideDist\_min       Description not available.
-  cone                   Description not available.
-  cylinder               Description not available.
-  def\_damage            Description not available.
-  def\_debrisspawner     Description not available.
-  def\_hoverController   Description not available.
-  def\_reaction          Description not available.
-  density                Volume of the object times the density is the mass.
-  dispose\_delay         Description not available.
-  editor\_bool XXXX      Description not available.
-  editor\_color          Description not available.
-  editor\_def XXXX       Description not available.
-  editor\_maxs           Description not available.
-  editor\_mins           Description not available.
-  editor\_model XXXX     Description not available.
-  editor\_rotatable      Description not available.
-  editor\_showangles     Description not available.
-  editor\_usage10        Description not available.
-  editor\_usage11        Description not available.
-  editor\_usage12        Description not available.
-  editor\_usage13        Description not available.
-  editor\_usage2         Description not available.
-  editor\_usage3         Description not available.
-  editor\_usage4         Description not available.
-  editor\_usage5         Description not available.
-  editor\_usage6         Description not available.
-  editor\_usage7         Description not available.
-  editor\_usage8         Description not available.
-  editor\_usage9         Description not available.
-  editor\_var XXXX       Description not available.
-  friction               Friction with contacting surfaces in the range [0-1] where 0 is no friction.
-  gravity                Description not available.
-  guiTarget              Description not available.
-  health                 If set the moveable takes damage and is removed when killed
-  hide                   Description not available.
-  hover\_freq            Description not available.
-  hover\_gravity         Description not available.
-  hover\_height\_frac    Description not available.
-  hover\_rotation        Description not available.
-  hover\_tension         Description not available.
-  ignoreGravityZones     Description not available.
-  inherit                Description not available.
-  init\_avelocity        Initial angular velocity set when activated.
-  init\_velocity         Initial linear velocity set when activated.
-  linearFriction         Friction through air in the range [0-1] where 0 is no friction
-  matter                 Description not available.
-  maxs                   Description not available.
-  min\_snd\_bounce       Description not available.
-  mins                   Description not available.
-  model                  Description not available.
-  moveToJoint            Description not available.
-  name                   Description not available.
-  networkSync            Description not available.
-  neverDormant           Description not available.
-  noJawFlap              Description not available.
-  noPortal               Description not available.
-  noclipmodel            Description not available.
-  nodrop                 Description not available.
-  noimpact               Description not available.
-  notPushable            Description not available.
-  offset\_aim            Description not available.
-  origin                 Description not available.
-  push\_cosine           Description not available.
-  pushes                 Description not available.
-  rotation               Description not available.
-  scriptobject           Description not available.
-  size                   Description not available.
-  snd\_bounce            Description not available.
-  solidForTeam           Description not available.
-  spawnclass             Description not available.
-  target                 Description not available.
-  unbindondeath          Description not available.
+| KEY                  | DESCRIPTION                                                                  |
+|----------------------|------------------------------------------------------------------------------|
+| CraneAttachable      | Description not available.                                                   |
+| ShuttleAttachable    | Description not available.                                                   |
+| accepts\_wounds      | Description not available.                                                   |
+| accurateguitrace     | Description not available.                                                   |
+| alignToJoint         | Description not available.                                                   |
+| angle                | Description not available.                                                   |
+| angularFriction      | Angular friction in the range [0-1] where 0 is no friction                   |
+| anim                 | Description not available.                                                   |
+| applyDamageEffects   | Description not available.                                                   |
+| bind                 | Description not available.                                                   |
+| bindOrientated       | Description not available.                                                   |
+| bindToBody           | Description not available.                                                   |
+| bindToJoint          | Description not available.                                                   |
+| bindanim             | Description not available.                                                   |
+| bouncyness           | How much the object bounces in the range [0-1] where 0 is no bounce.         |
+| bowVisibilityType    | Description not available.                                                   |
+| cameraTarget         | Description not available.                                                   |
+| cinematic            | Description not available.                                                   |
+| classname            | Description not available.                                                   |
+| clipmodel            | Description not available.                                                   |
+| clipshrink           | Shrink the visual model with an epsilon and use it as a clip model.          |
+| collideDist\_min     | Description not available.                                                   |
+| cone                 | Description not available.                                                   |
+| cylinder             | Description not available.                                                   |
+| def\_damage          | Description not available.                                                   |
+| def\_debrisspawner   | Description not available.                                                   |
+| def\_hoverController | Description not available.                                                   |
+| def\_reaction        | Description not available.                                                   |
+| density              | Volume of the object times the density is the mass.                          |
+| dispose\_delay       | Description not available.                                                   |
+| editor\_bool XXXX    | Description not available.                                                   |
+| editor\_color        | Description not available.                                                   |
+| editor\_def XXXX     | Description not available.                                                   |
+| editor\_maxs         | Description not available.                                                   |
+| editor\_mins         | Description not available.                                                   |
+| editor\_model XXXX   | Description not available.                                                   |
+| editor\_rotatable    | Description not available.                                                   |
+| editor\_showangles   | Description not available.                                                   |
+| editor\_usage10      | Description not available.                                                   |
+| editor\_usage11      | Description not available.                                                   |
+| editor\_usage12      | Description not available.                                                   |
+| editor\_usage13      | Description not available.                                                   |
+| editor\_usage2       | Description not available.                                                   |
+| editor\_usage3       | Description not available.                                                   |
+| editor\_usage4       | Description not available.                                                   |
+| editor\_usage5       | Description not available.                                                   |
+| editor\_usage6       | Description not available.                                                   |
+| editor\_usage7       | Description not available.                                                   |
+| editor\_usage8       | Description not available.                                                   |
+| editor\_usage9       | Description not available.                                                   |
+| editor\_var XXXX     | Description not available.                                                   |
+| friction             | Friction with contacting surfaces in the range [0-1] where 0 is no friction. |
+| gravity              | Description not available.                                                   |
+| guiTarget            | Description not available.                                                   |
+| health               | If set the moveable takes damage and is removed when killed                  |
+| hide                 | Description not available.                                                   |
+| hover\_freq          | Description not available.                                                   |
+| hover\_gravity       | Description not available.                                                   |
+| hover\_height\_frac  | Description not available.                                                   |
+| hover\_rotation      | Description not available.                                                   |
+| hover\_tension       | Description not available.                                                   |
+| ignoreGravityZones   | Description not available.                                                   |
+| inherit              | Description not available.                                                   |
+| init\_avelocity      | Initial angular velocity set when activated.                                 |
+| init\_velocity       | Initial linear velocity set when activated.                                  |
+| linearFriction       | Friction through air in the range [0-1] where 0 is no friction               |
+| matter               | Description not available.                                                   |
+| maxs                 | Description not available.                                                   |
+| min\_snd\_bounce     | Description not available.                                                   |
+| mins                 | Description not available.                                                   |
+| model                | Description not available.                                                   |
+| moveToJoint          | Description not available.                                                   |
+| name                 | Description not available.                                                   |
+| networkSync          | Description not available.                                                   |
+| neverDormant         | Description not available.                                                   |
+| noJawFlap            | Description not available.                                                   |
+| noPortal             | Description not available.                                                   |
+| noclipmodel          | Description not available.                                                   |
+| nodrop               | Description not available.                                                   |
+| noimpact             | Description not available.                                                   |
+| notPushable          | Description not available.                                                   |
+| offset\_aim          | Description not available.                                                   |
+| origin               | Description not available.                                                   |
+| push\_cosine         | Description not available.                                                   |
+| pushes               | Description not available.                                                   |
+| rotation             | Description not available.                                                   |
+| scriptobject         | Description not available.                                                   |
+| size                 | Description not available.                                                   |
+| snd\_bounce          | Description not available.                                                   |
+| solidForTeam         | Description not available.                                                   |
+| spawnclass           | Description not available.                                                   |
+| target               | Description not available.                                                   |
+| unbindondeath        | Description not available.                                                   |
 
 Inheritance
 -----------

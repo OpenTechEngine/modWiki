@@ -1,8 +1,7 @@
 Description
 -----------
 
-This command converts model and animation files into the native md5
-format, based on options defined in a model definition file..
+This command converts model and animation files into the native md5 format, based on options defined in a model definition file..
 
 Usage
 -----
@@ -14,18 +13,13 @@ At the console type...
 Parameters
 ----------
 
-If no .def file is given, default behaviour is to export all models
-modified since last call.
+If no .def file is given, default behaviour is to export all models modified since last call.
 
 -   [def] - .def file containing model definitions.
 
 Notes
 -----
 
-Additional documentation at
-[iddevnet.com](http://www.iddevnet.com/doom3/modelexport.php "http://www.iddevnet.com/doom3/modelexport.php")
-Also see [modeling tutorials](Tutorial_list#Modelling "Tutorial list")
-for information on using this command.
+Additional documentation at [iddevnet.com](http://www.iddevnet.com/doom3/modelexport.php "http://www.iddevnet.com/doom3/modelexport.php") Also see [modeling tutorials](Tutorial_list#Modelling "Tutorial list") for information on using this command.
 
-\
 

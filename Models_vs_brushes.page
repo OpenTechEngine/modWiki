@@ -1,78 +1,25 @@
-Unlike previous games, where [models](Modelling "Modelling") and level
-geometry had distinct and non-overlapping functions, the unified
-lighting model of [id Tech 4](Id_Tech_4 "Id Tech 4") gives
-[mappers](Mapping "Mapping") an unprecedented level of choice in the
-techniques used to create geometry. Some mappers build almost everything
-in a 3D application, and use the level editors only to assemble
-pre-built models, whereas others prefer to create complex structures out
-of brushes and [patches](Patch "Patch") avoiding 3D applications
-entirely.
+Unlike previous games, where [models](Modelling "Modelling") and level geometry had distinct and non-overlapping functions, the unified lighting model of [id Tech 4](Id_Tech_4 "Id Tech 4") gives [mappers](Mapping "Mapping") an unprecedented level of choice in the techniques used to create geometry. Some mappers build almost everything in a 3D application, and use the level editors only to assemble pre-built models, whereas others prefer to create complex structures out of brushes and [patches](Patch "Patch") avoiding 3D applications entirely.
 
-The ideal division between the usage of models and in-editor geometry is
-a source of perpetual debate amongst mappers.
+The ideal division between the usage of models and in-editor geometry is a source of perpetual debate amongst mappers.
 
 Considerations
 --------------
 
--   **Optimisation** . Map geometry is automatically optimized during
-    the compilation from brushes into triangles, while models require
-    manual optimization before they are exported. This may result in an
-    increased workload for the modeller, but also allows more control
-    over the triangulation process than that afforded by brush
-    compilation.
--   **Sealing the void** . Imported models cannot seal the map from the
-    void. This means that if models are used for general terrain and
-    room structure, care must be taken to position caulk brushes
-    appropriately to ensure that the map is sealed.
--   **Vertex colour** . Models can provide vertex colours which are
-    multiplied with the model texture to introduce low-frequency colour
-    variation over the model surface. Brushes and patches do not support
-    vertex colours.
--   **Texturing** . Various texturing operations may vary in their
-    ease-of-use between 3D applications and the level editors. For
-    example, precisely aligning a hand-painted texture is far easier on
-    a model (using a UV editing tool), whereas flowing a repeating
-    texture along a curved patch may be more convenient in the editor.
--   **Sizing flexibility** . Various unsatisfactory hacks
-    notwithstanding, models cannot be resized in the editor once they
-    have been imported. This means that the size needs to be correct at
-    export, or else the surrounding brush geometry will need to be
-    resized to match.
--   **Personal preference** . Ultimately the decision to use models or
-    in-editor construction is affected by the mapper's own preferences
-    and skills with the various tools. 3D applications can be
-    challenging to learn for new users, but experienced modellers may
-    find the level editors to be limiting and prefer to make use of
-    their existing skillset.
+-   **Optimisation** . Map geometry is automatically optimized during the compilation from brushes into triangles, while models require manual optimization before they are exported. This may result in an increased workload for the modeller, but also allows more control over the triangulation process than that afforded by brush compilation.
+-   **Sealing the void** . Imported models cannot seal the map from the void. This means that if models are used for general terrain and room structure, care must be taken to position caulk brushes appropriately to ensure that the map is sealed.
+-   **Vertex colour** . Models can provide vertex colours which are multiplied with the model texture to introduce low-frequency colour variation over the model surface. Brushes and patches do not support vertex colours.
+-   **Texturing** . Various texturing operations may vary in their ease-of-use between 3D applications and the level editors. For example, precisely aligning a hand-painted texture is far easier on a model (using a UV editing tool), whereas flowing a repeating texture along a curved patch may be more convenient in the editor.
+-   **Sizing flexibility** . Various unsatisfactory hacks notwithstanding, models cannot be resized in the editor once they have been imported. This means that the size needs to be correct at export, or else the surrounding brush geometry will need to be resized to match.
+-   **Personal preference** . Ultimately the decision to use models or in-editor construction is affected by the mapper's own preferences and skills with the various tools. 3D applications can be challenging to learn for new users, but experienced modellers may find the level editors to be limiting and prefer to make use of their existing skillset.
 
 Culling of models
 -----------------
 
-**Missing image:
-*/w/images/thumb/e/e9/Bsp\_vs\_models\_1.jpg/180px-Bsp\_vs\_models\_1.jpg*
-Visibility culling**
+**Missing image: */w/images/thumb/e/e9/Bsp\_vs\_models\_1.jpg/180px-Bsp\_vs\_models\_1.jpg* Visibility culling**
 
-\
  *Visibility culling*
 
-Another consideration is that models behave differently with regards to
-[visibility culling](Visportal "Visportal") than level geometry. The top
-part of image on the right shows a corridor with
-[r\_showPortals](R_showPortals_%28cvar%29 "R showPortals (cvar)") 1,
-[r\_useScissor](R_useScissor_%28cvar%29 "R useScissor (cvar)") 0 and
-[r\_showTris](R_showTris_%28cvar%29 "R showTris (cvar)") 2. In the red
-circle area you can see that the portal is green (i.e. open) and that
-the engine is rendering the alcove on the right. However, the alcove is
-empty. If you strafe left a bit (the lower part of the image) you can
-see that two boxes (which are two func\_static) show up.
+Another consideration is that models behave differently with regards to [visibility culling](Visportal "Visportal") than level geometry. The top part of image on the right shows a corridor with [r\_showPortals](R_showPortals_%28cvar%29 "R showPortals (cvar)") 1, [r\_useScissor](R_useScissor_%28cvar%29 "R useScissor (cvar)") 0 and [r\_showTris](R_showTris_%28cvar%29 "R showTris (cvar)") 2. In the red circle area you can see that the portal is green (i.e. open) and that the engine is rendering the alcove on the right. However, the alcove is empty. If you strafe left a bit (the lower part of the image) you can see that two boxes (which are two func\_static) show up.
 
-Despite the above, this functionality is a double-edged sword. Although
-in the above example, models will not show up until they're nearly
-visible and thus an advantage, other situations arise where the vis
-portal is closed but models may still be "visible" to the engine because
-a very small part of them are on the other side of the portal. Since
-they are models, they are not cut by the visportal and that's why they
-show in their entirety, because they are being drawn relative to their
-bounding box limits (the 'box' that contains the object). This can
-become a problem with big models that span visportals.
+Despite the above, this functionality is a double-edged sword. Although in the above example, models will not show up until they're nearly visible and thus an advantage, other situations arise where the vis portal is closed but models may still be "visible" to the engine because a very small part of them are on the other side of the portal. Since they are models, they are not cut by the visportal and that's why they show in their entirety, because they are being drawn relative to their bounding box limits (the 'box' that contains the object). This can become a problem with big models that span visportals.
 

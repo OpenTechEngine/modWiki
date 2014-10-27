@@ -1,125 +1,58 @@
-<div align="left"
-style="float:right; font-size: 17px;background: #FFFFEE; padding: 5px; border: 1px solid #000000; padding-left: 15px; padding-right: 15px; margin-left: 15px; margin-right: 15px; padding-bottom: 15px; width: 400px;">
-
-<div align="right" style="font-size: 10px; text-align=right;">
-
 [What's this?](Help:Reference_box "Help:Reference box")
 
-</div>
-
-<div>
-
 **Console quick reference**
-
-</div>
 
 ------------------------------------------------------------------------
 
 <span style="font-size: 14px"> </span>
 **Cvar listings**
 
-![](/images/2/23/D3square_25.png) [Doom 3 CVar
-listing](CVars_%28Doom_3%29 "CVars (Doom 3)")
-[Resurrection of Evil specific
-CVars](CVars_%28Resurrection_of_Evil%29 "CVars (Resurrection of Evil)")
-![](/images/e/e8/Q4square_25.png) [Quake 4 CVar
-listing](CVars_%28Quake_4%29 "CVars (Quake 4)")
-![](/images/b/ba/Preysquare_25.png) [Prey CVar
-listing](CVars_%28Prey%29 "CVars (Prey)")
-![](/images/7/7e/Etqwsquare_25.png) [ET:QW CVar
-listing](CVars_%28ETQW%29 "CVars (ETQW)")
+![](/images/2/23/D3square_25.png) [Doom 3 CVar listing](CVars_%28Doom_3%29 "CVars (Doom 3)")
+[Resurrection of Evil specific CVars](CVars_%28Resurrection_of_Evil%29 "CVars (Resurrection of Evil)")
+![](/images/e/e8/Q4square_25.png) [Quake 4 CVar listing](CVars_%28Quake_4%29 "CVars (Quake 4)")
+![](/images/b/ba/Preysquare_25.png) [Prey CVar listing](CVars_%28Prey%29 "CVars (Prey)")
+![](/images/7/7e/Etqwsquare_25.png) [ET:QW CVar listing](CVars_%28ETQW%29 "CVars (ETQW)")
 **Console command listings**
 
-![](/images/2/23/D3square_25.png) [Doom 3 console command
-listing](Commands_%28Doom_3%29 "Commands (Doom 3)")
-[Resurrection of Evil specific console
-commands](Commands_%28Resurrection_of_Evil%29 "Commands (Resurrection of Evil)")
-![](/images/e/e8/Q4square_25.png) [Quake 4 console command
-listing](Commands_%28Quake_4%29 "Commands (Quake 4)")
-![](/images/b/ba/Preysquare_25.png) [Prey console command
-listing](Commands_%28Prey%29 "Commands (Prey)")
-![](/images/7/7e/Etqwsquare_25.png) [ET:QW console command
-listing](Commands_%28ETQW%29 "Commands (ETQW)")
+![](/images/2/23/D3square_25.png) [Doom 3 console command listing](Commands_%28Doom_3%29 "Commands (Doom 3)")
+[Resurrection of Evil specific console commands](Commands_%28Resurrection_of_Evil%29 "Commands (Resurrection of Evil)")
+![](/images/e/e8/Q4square_25.png) [Quake 4 console command listing](Commands_%28Quake_4%29 "Commands (Quake 4)")
+![](/images/b/ba/Preysquare_25.png) [Prey console command listing](Commands_%28Prey%29 "Commands (Prey)")
+![](/images/7/7e/Etqwsquare_25.png) [ET:QW console command listing](Commands_%28ETQW%29 "Commands (ETQW)")
 **Impulse listing**
 
 [Impulses (key and button bindings)](Impulse "Impulse")
 
-</div>
-
-The console is a fundamental part of [id Tech 4](Id_Tech_4 "Id Tech 4")
-games: it is used for example to relate debug to the developer and
-status information for troubleshooting general game problems. To access
-the console you need to press "Ctrl + Alt + \~". To simplify access to
-the console take a look
-[here](Com_allowConsole_%28cvar%29 "Com allowConsole (cvar)") . Aside
-from gaining information you can also interact with the engine through
-CVars and Commands.
-
-<div>
+The console is a fundamental part of [id Tech 4](Id_Tech_4 "Id Tech 4") games: it is used for example to relate debug to the developer and status information for troubleshooting general game problems. To access the console you need to press "Ctrl + Alt + ~". To simplify access to the console take a look [here](Com_allowConsole_%28cvar%29 "Com allowConsole (cvar)") . Aside from gaining information you can also interact with the engine through CVars and Commands.
 
 ![](/images/9/97/Rtcw2square_25.png) **Note:** Wolfenstein only:
-*(SP)
-[com\_allowConsole](Com_allowConsole_%28cvar%29 "Com allowConsole (cvar)")
-must be set via command line or wolf.cfg for console access.*
-
-</div>
+*(SP) [com\_allowConsole](Com_allowConsole_%28cvar%29 "Com allowConsole (cvar)") must be set via command line or wolf.cfg for console access.*
 
 CVars
 -----
 
-**CVar's** (console variables) are used to hold scalar or string
-variables that can be changed or displayed at the console as well as
-accessed directly in code. CVars are mostly used to hold settings that
-can be changed from the console or saved to and loaded from the
-[configuration files](CFG_%28file_format%29 "CFG (file format)") . CVars
-are also occasionally used to communicate information between different
-modules of the program, and new CVars [can be
-created](How_to_add_CVar%27s "How to add CVar's") on mods.
+**CVar's** (console variables) are used to hold scalar or string variables that can be changed or displayed at the console as well as accessed directly in code. CVars are mostly used to hold settings that can be changed from the console or saved to and loaded from the [configuration files](CFG_%28file_format%29 "CFG (file format)") . CVars are also occasionally used to communicate information between different modules of the program, and new CVars [can be created](How_to_add_CVar%27s "How to add CVar's") on mods.
 
-CVars are restricted from having the same names as console commands to
-keep the console interface from being ambiguous. CVars can be accessed
-from the console in four ways:
+CVars are restricted from having the same names as console commands to keep the console interface from being ambiguous. CVars can be accessed from the console in four ways:
 
-  INPUT                                                                      RESULT
-  -------------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------
-  cvarName                                                                   Prints the current value and a short description.
-  cvarName [X]                                                               Sets the value to X if the variable exists.
-  [set](Set_%28console_command%29 "Set (console command)") cvarName [X]      As above, but creates the CVar if not present.
-  [seta](Seta_%28console_command%29 "Seta (console command)") cvarName [X]   As above, but also stores the CVar value in [game]config.cfg so that it will be the default value. Never use seta on the command line!
-  conCommand \$cvarName                                                      Executes a given console command using the value of the specified CVar as input.
+| INPUT                                                                    | RESULT                                                                                                                                 |
+|--------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| cvarName                                                                 | Prints the current value and a short description.                                                                                      |
+| cvarName [X]                                                             | Sets the value to X if the variable exists.                                                                                            |
+| [set](Set_%28console_command%29 "Set (console command)") cvarName [X]    | As above, but creates the CVar if not present.                                                                                         |
+| [seta](Seta_%28console_command%29 "Seta (console command)") cvarName [X] | As above, but also stores the CVar value in [game]config.cfg so that it will be the default value. Never use seta on the command line! |
+| conCommand $cvarName                                                     | Executes a given console command using the value of the specified CVar as input.                                                       |
 
-A full list of the cvars, and a brief description can be generated using
-the
-[listCvars](ListCvars_%28console_command%29 "ListCvars (console command)")
-console command.
+A full list of the cvars, and a brief description can be generated using the [listCvars](ListCvars_%28console_command%29 "ListCvars (console command)") console command.
 
-It should be noted that many cvars are not intended to be changed by
-players, and are intended only for developers / mappers. Many of these
-cvars are marked as "cheat protected", which is indicated by CH in the
-output of cvarList. Cheat protected cvars cannot be modified from the
-default values during online play and so have no effect, but if tweaked
-can have a negative effect on single-player games, or when watching
-demos or using the various editors, as these respect cheat protected
-cvars. Therefore, it is strongly recommended that players do not adjust
-cheat protected cvars unless they know the specific effect of that CVar.
+It should be noted that many cvars are not intended to be changed by players, and are intended only for developers / mappers. Many of these cvars are marked as "cheat protected", which is indicated by CH in the output of cvarList. Cheat protected cvars cannot be modified from the default values during online play and so have no effect, but if tweaked can have a negative effect on single-player games, or when watching demos or using the various editors, as these respect cheat protected cvars. Therefore, it is strongly recommended that players do not adjust cheat protected cvars unless they know the specific effect of that CVar.
 
 Console commands
 ----------------
 
-**Console commands** are instructions that are typed directly into the
-console to perform various tasks. These tasks may range from things
-users may wish to do (eg recordNetDemo to record a demo of the current
-multiplayer game), through to internal functions used by the game (such
-as updateSI which triggers a refresh of the serverinfo data).
+**Console commands** are instructions that are typed directly into the console to perform various tasks. These tasks may range from things users may wish to do (eg recordNetDemo to record a demo of the current multiplayer game), through to internal functions used by the game (such as updateSI which triggers a refresh of the serverinfo data).
 
-Some commands require one or more parameters, most will report their
-usage by typing them without parameters. A full list of console commands
-and a brief description can be generated using the
-[listCmds](ListCmds_%28console_command%29 "ListCmds (console command)")
-console command.
+Some commands require one or more parameters, most will report their usage by typing them without parameters. A full list of console commands and a brief description can be generated using the [listCmds](ListCmds_%28console_command%29 "ListCmds (console command)") console command.
 
-They can also be used indirectly, for instance through [GUI
-scripts](GUI_scripting "GUI scripting") by using the [set
-command](Set_%28GUI_command%29 "Set (GUI command)") , or programmtically
-changed via the game-code or engine via the cvarSystem interface.
+They can also be used indirectly, for instance through [GUI scripts](GUI_scripting "GUI scripting") by using the [set command](Set_%28GUI_command%29 "Set (GUI command)") , or programmtically changed via the game-code or engine via the cvarSystem interface.
 

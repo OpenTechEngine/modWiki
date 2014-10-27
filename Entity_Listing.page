@@ -1,8 +1,7 @@
 Entity Listing
 --------------
 
-This article will contain a list of all entities in each respective
-game.
+This article will contain a list of all entities in each respective game.
 
 Each entity will have it's own page with the following content...
 
@@ -11,24 +10,17 @@ Each entity will have it's own page with the following content...
 -   Inheritance all the way down to it's spawnclass from the gamecode.
 -   Any notes that don't fall into the above mentioned points.
 
-I've used the [light entity](Light_%28entity%29 "Light (entity)") for a
-rough draft.
+I've used the [light entity](Light_%28entity%29 "Light (entity)") for a rough draft.
 
-I've also written a python program to generated skeleton articles. I've
-used the [monster\_zombie\_fat
-entity](Monster_zombie_fat_%28entity%29 "Monster zombie fat (entity)")
-to test a manual upload of such an article.
+I've also written a python program to generated skeleton articles. I've used the [monster\_zombie\_fat entity](Monster_zombie_fat_%28entity%29 "Monster zombie fat (entity)") to test a manual upload of such an article.
 
 I intend to automate upload in the near future.
 
 Comments and suggestions are welcomed.
 
-At present each list has been compiled by grepping the corresponding
-/def folder for the keyword "entityDef". Duplicates have been removed.
+At present each list has been compiled by grepping the corresponding /def folder for the keyword "entityDef". Duplicates have been removed.
 
-Eventually this list should be categorized. Probably by function. For
-example, triggers, targets, actors, ect. It should be more apparent
-after a few entity articles have been written.
+Eventually this list should be categorized. Probably by function. For example, triggers, targets, actors, ect. It should be more apparent after a few entity articles have been written.
 
 May Appear In Multiple Games
 ----------------------------
@@ -1308,8 +1300,7 @@ Quake 4
 -   [ammo\_machinegun](Ammo_machinegun_%28entity%29 "Ammo machinegun (entity)")
 -   [ammo\_machinegun\_moveable](Ammo_machinegun_moveable_%28entity%29 "Ammo machinegun moveable (entity)")
 -   [ammo\_machinegun\_mp](Ammo_machinegun_mp_%28entity%29 "Ammo machinegun mp (entity)")
--   [ammo\_moveable](Ammo_moveable_%28entity%29 "Ammo moveable (entity)")
-    {
+-   [ammo\_moveable](Ammo_moveable_%28entity%29 "Ammo moveable (entity)") {
 -   [ammo\_nailgun](Ammo_nailgun_%28entity%29 "Ammo nailgun (entity)")
 -   [ammo\_nailgun\_moveable](Ammo_nailgun_moveable_%28entity%29 "Ammo nailgun moveable (entity)")
 -   [ammo\_nailgun\_mp](Ammo_nailgun_mp_%28entity%29 "Ammo nailgun mp (entity)")
@@ -1646,10 +1637,8 @@ Quake 4
 -   [damage\_tactical\_machinegun](Damage_tactical_machinegun_%28entity%29 "Damage tactical machinegun (entity)")
 -   [damage\_tactical\_railgun](Damage_tactical_railgun_%28entity%29 "Damage tactical railgun (entity)")
 -   [damage\_tactical\_shotgun](Damage_tactical_shotgun_%28entity%29 "Damage tactical shotgun (entity)")
--   [damage\_toxin\_novehicle\_1000](Damage_toxin_novehicle_1000_%28entity%29 "Damage toxin novehicle 1000 (entity)")
-    {
--   [damage\_toxin\_novehicle\_25](Damage_toxin_novehicle_25_%28entity%29 "Damage toxin novehicle 25 (entity)")
-    {
+-   [damage\_toxin\_novehicle\_1000](Damage_toxin_novehicle_1000_%28entity%29 "Damage toxin novehicle 1000 (entity)") {
+-   [damage\_toxin\_novehicle\_25](Damage_toxin_novehicle_25_%28entity%29 "Damage toxin novehicle 25 (entity)") {
 -   [damage\_tram\_flyer\_rocket](Damage_tram_flyer_rocket_%28entity%29 "Damage tram flyer rocket (entity)")
 -   [damage\_tramcar\_explode](Damage_tramcar_explode_%28entity%29 "Damage tramcar explode (entity)")
 -   [damage\_tramgun](Damage_tramgun_%28entity%29 "Damage tramgun (entity)")
@@ -1939,8 +1928,7 @@ Quake 4
 -   [exploding\_barrel\_small\_ignite](Exploding_barrel_small_ignite_%28entity%29 "Exploding barrel small ignite (entity)")
 -   [exploding\_barrel\_small\_launch](Exploding_barrel_small_launch_%28entity%29 "Exploding barrel small launch (entity)")
 -   [foomable\_barrel\_red\_stroyent](Foomable_barrel_red_stroyent_%28entity%29 "Foomable barrel red stroyent (entity)")
--   [foomable\_barrel\_red\_stroyent\_launch](Foomable_barrel_red_stroyent_launch_%28entity%29 "Foomable barrel red stroyent launch (entity)")
-    {
+-   [foomable\_barrel\_red\_stroyent\_launch](Foomable_barrel_red_stroyent_launch_%28entity%29 "Foomable barrel red stroyent launch (entity)") {
 -   [foomable\_barrel\_tram](Foomable_barrel_tram_%28entity%29 "Foomable barrel tram (entity)")
 -   [func\_camera\_follow](Func_camera_follow_%28entity%29 "Func camera follow (entity)")
 -   [func\_camera\_portalsky](Func_camera_portalsky_%28entity%29 "Func camera portalsky (entity)")
@@ -2066,14 +2054,11 @@ Quake 4
 -   [level\_EggshellTop](Level_EggshellTop_%28entity%29 "Level EggshellTop (entity)")
 -   [level\_laserCoupling](Level_laserCoupling_%28entity%29 "Level laserCoupling (entity)")
 -   [lipsync\_anderson\_1](Lipsync_anderson_1_%28entity%29 "Lipsync anderson 1 (entity)")
--   [lipsync\_anderson\_2](Lipsync_anderson_2_%28entity%29 "Lipsync anderson 2 (entity)")
-    {
+-   [lipsync\_anderson\_2](Lipsync_anderson_2_%28entity%29 "Lipsync anderson 2 (entity)") {
 -   [lipsync\_bidwell\_1](Lipsync_bidwell_1_%28entity%29 "Lipsync bidwell 1 (entity)")
--   [lipsync\_bidwell\_2](Lipsync_bidwell_2_%28entity%29 "Lipsync bidwell 2 (entity)")
-    {
+-   [lipsync\_bidwell\_2](Lipsync_bidwell_2_%28entity%29 "Lipsync bidwell 2 (entity)") {
 -   [lipsync\_cortez\_1](Lipsync_cortez_1_%28entity%29 "Lipsync cortez 1 (entity)")
--   [lipsync\_cortez\_2](Lipsync_cortez_2_%28entity%29 "Lipsync cortez 2 (entity)")
-    {
+-   [lipsync\_cortez\_2](Lipsync_cortez_2_%28entity%29 "Lipsync cortez 2 (entity)") {
 -   [lipsync\_marine\_act1\_1](Lipsync_marine_act1_1_%28entity%29 "Lipsync marine act1 1 (entity)")
 -   [lipsync\_marine\_act1\_1\_h](Lipsync_marine_act1_1_h_%28entity%29 "Lipsync marine act1 1 h (entity)")
 -   [lipsync\_marine\_act1\_2](Lipsync_marine_act1_2_%28entity%29 "Lipsync marine act1 2 (entity)")
@@ -2090,53 +2075,32 @@ Quake 4
 -   [lipsync\_marine\_act1\_7\_h](Lipsync_marine_act1_7_h_%28entity%29 "Lipsync marine act1 7 h (entity)")
 -   [lipsync\_marine\_act1\_8](Lipsync_marine_act1_8_%28entity%29 "Lipsync marine act1 8 (entity)")
 -   [lipsync\_marine\_act1\_8\_h](Lipsync_marine_act1_8_h_%28entity%29 "Lipsync marine act1 8 h (entity)")
--   [lipsync\_marine\_act2\_1](Lipsync_marine_act2_1_%28entity%29 "Lipsync marine act2 1 (entity)")
-    {
--   [lipsync\_marine\_act2\_1\_h](Lipsync_marine_act2_1_h_%28entity%29 "Lipsync marine act2 1 h (entity)")
-    {
--   [lipsync\_marine\_act2\_2](Lipsync_marine_act2_2_%28entity%29 "Lipsync marine act2 2 (entity)")
-    {
--   [lipsync\_marine\_act2\_2\_h](Lipsync_marine_act2_2_h_%28entity%29 "Lipsync marine act2 2 h (entity)")
-    {
--   [lipsync\_marine\_act2\_3](Lipsync_marine_act2_3_%28entity%29 "Lipsync marine act2 3 (entity)")
-    {
--   [lipsync\_marine\_act2\_3\_h](Lipsync_marine_act2_3_h_%28entity%29 "Lipsync marine act2 3 h (entity)")
-    {
--   [lipsync\_marine\_act2\_4](Lipsync_marine_act2_4_%28entity%29 "Lipsync marine act2 4 (entity)")
-    {
--   [lipsync\_marine\_act2\_4\_h](Lipsync_marine_act2_4_h_%28entity%29 "Lipsync marine act2 4 h (entity)")
-    {
--   [lipsync\_marine\_act2\_5](Lipsync_marine_act2_5_%28entity%29 "Lipsync marine act2 5 (entity)")
-    {
--   [lipsync\_marine\_act2\_5\_h](Lipsync_marine_act2_5_h_%28entity%29 "Lipsync marine act2 5 h (entity)")
-    {
--   [lipsync\_marine\_act2\_6](Lipsync_marine_act2_6_%28entity%29 "Lipsync marine act2 6 (entity)")
-    {
--   [lipsync\_marine\_act2\_6\_h](Lipsync_marine_act2_6_h_%28entity%29 "Lipsync marine act2 6 h (entity)")
-    {
--   [lipsync\_marine\_act2\_7](Lipsync_marine_act2_7_%28entity%29 "Lipsync marine act2 7 (entity)")
-    {
--   [lipsync\_marine\_act2\_7\_h](Lipsync_marine_act2_7_h_%28entity%29 "Lipsync marine act2 7 h (entity)")
-    {
--   [lipsync\_marine\_act2\_8](Lipsync_marine_act2_8_%28entity%29 "Lipsync marine act2 8 (entity)")
-    {
--   [lipsync\_marine\_act2\_8\_h](Lipsync_marine_act2_8_h_%28entity%29 "Lipsync marine act2 8 h (entity)")
-    {
+-   [lipsync\_marine\_act2\_1](Lipsync_marine_act2_1_%28entity%29 "Lipsync marine act2 1 (entity)") {
+-   [lipsync\_marine\_act2\_1\_h](Lipsync_marine_act2_1_h_%28entity%29 "Lipsync marine act2 1 h (entity)") {
+-   [lipsync\_marine\_act2\_2](Lipsync_marine_act2_2_%28entity%29 "Lipsync marine act2 2 (entity)") {
+-   [lipsync\_marine\_act2\_2\_h](Lipsync_marine_act2_2_h_%28entity%29 "Lipsync marine act2 2 h (entity)") {
+-   [lipsync\_marine\_act2\_3](Lipsync_marine_act2_3_%28entity%29 "Lipsync marine act2 3 (entity)") {
+-   [lipsync\_marine\_act2\_3\_h](Lipsync_marine_act2_3_h_%28entity%29 "Lipsync marine act2 3 h (entity)") {
+-   [lipsync\_marine\_act2\_4](Lipsync_marine_act2_4_%28entity%29 "Lipsync marine act2 4 (entity)") {
+-   [lipsync\_marine\_act2\_4\_h](Lipsync_marine_act2_4_h_%28entity%29 "Lipsync marine act2 4 h (entity)") {
+-   [lipsync\_marine\_act2\_5](Lipsync_marine_act2_5_%28entity%29 "Lipsync marine act2 5 (entity)") {
+-   [lipsync\_marine\_act2\_5\_h](Lipsync_marine_act2_5_h_%28entity%29 "Lipsync marine act2 5 h (entity)") {
+-   [lipsync\_marine\_act2\_6](Lipsync_marine_act2_6_%28entity%29 "Lipsync marine act2 6 (entity)") {
+-   [lipsync\_marine\_act2\_6\_h](Lipsync_marine_act2_6_h_%28entity%29 "Lipsync marine act2 6 h (entity)") {
+-   [lipsync\_marine\_act2\_7](Lipsync_marine_act2_7_%28entity%29 "Lipsync marine act2 7 (entity)") {
+-   [lipsync\_marine\_act2\_7\_h](Lipsync_marine_act2_7_h_%28entity%29 "Lipsync marine act2 7 h (entity)") {
+-   [lipsync\_marine\_act2\_8](Lipsync_marine_act2_8_%28entity%29 "Lipsync marine act2 8 (entity)") {
+-   [lipsync\_marine\_act2\_8\_h](Lipsync_marine_act2_8_h_%28entity%29 "Lipsync marine act2 8 h (entity)") {
 -   [lipsync\_morris\_1](Lipsync_morris_1_%28entity%29 "Lipsync morris 1 (entity)")
--   [lipsync\_morris\_2](Lipsync_morris_2_%28entity%29 "Lipsync morris 2 (entity)")
-    {
+-   [lipsync\_morris\_2](Lipsync_morris_2_%28entity%29 "Lipsync morris 2 (entity)") {
 -   [lipsync\_rhodes\_1](Lipsync_rhodes_1_%28entity%29 "Lipsync rhodes 1 (entity)")
--   [lipsync\_rhodes\_2](Lipsync_rhodes_2_%28entity%29 "Lipsync rhodes 2 (entity)")
-    {
+-   [lipsync\_rhodes\_2](Lipsync_rhodes_2_%28entity%29 "Lipsync rhodes 2 (entity)") {
 -   [lipsync\_sledge\_1](Lipsync_sledge_1_%28entity%29 "Lipsync sledge 1 (entity)")
--   [lipsync\_sledge\_2](Lipsync_sledge_2_%28entity%29 "Lipsync sledge 2 (entity)")
-    {
+-   [lipsync\_sledge\_2](Lipsync_sledge_2_%28entity%29 "Lipsync sledge 2 (entity)") {
 -   [lipsync\_strauss\_1](Lipsync_strauss_1_%28entity%29 "Lipsync strauss 1 (entity)")
--   [lipsync\_strauss\_2](Lipsync_strauss_2_%28entity%29 "Lipsync strauss 2 (entity)")
-    {
+-   [lipsync\_strauss\_2](Lipsync_strauss_2_%28entity%29 "Lipsync strauss 2 (entity)") {
 -   [lipsync\_voss\_1](Lipsync_voss_1_%28entity%29 "Lipsync voss 1 (entity)")
--   [lipsync\_voss\_2](Lipsync_voss_2_%28entity%29 "Lipsync voss 2 (entity)")
-    {
+-   [lipsync\_voss\_2](Lipsync_voss_2_%28entity%29 "Lipsync voss 2 (entity)") {
 -   [marine\_fighter\_projectile](Marine_fighter_projectile_%28entity%29 "Marine fighter projectile (entity)")
 -   [masterMapList](MasterMapList_%28entity%29 "MasterMapList (entity)")
 -   [mcc\_char\_doctor](Mcc_char_doctor_%28entity%29 "Mcc char doctor (entity)")
@@ -2260,8 +2224,7 @@ Quake 4
 -   [monster\_makron\_jr](Monster_makron_jr_%28entity%29 "Monster makron jr (entity)")
 -   [monster\_makron\_legs](Monster_makron_legs_%28entity%29 "Monster makron legs (entity)")
 -   [monster\_network\_guardian](Monster_network_guardian_%28entity%29 "Monster network guardian (entity)")
--   [monster\_network\_guardian\_process](Monster_network_guardian_process_%28entity%29 "Monster network guardian process (entity)")
-    {
+-   [monster\_network\_guardian\_process](Monster_network_guardian_process_%28entity%29 "Monster network guardian process (entity)") {
 -   [monster\_repair\_bot](Monster_repair_bot_%28entity%29 "Monster repair bot (entity)")
 -   [monster\_scientist](Monster_scientist_%28entity%29 "Monster scientist (entity)")
 -   [monster\_sentry](Monster_sentry_%28entity%29 "Monster sentry (entity)")
@@ -2313,10 +2276,8 @@ Quake 4
 -   [moveable\_barrel\_test](Moveable_barrel_test_%28entity%29 "Moveable barrel test (entity)")
 -   [moveable\_barrel\_test2](Moveable_barrel_test2_%28entity%29 "Moveable barrel test2 (entity)")
 -   [moveable\_bonesaw](Moveable_bonesaw_%28entity%29 "Moveable bonesaw (entity)")
--   [moveable\_breakable](Moveable_breakable_%28entity%29 "Moveable breakable (entity)")
-    {
--   [moveable\_breakonimpact](Moveable_breakonimpact_%28entity%29 "Moveable breakonimpact (entity)")
-    {
+-   [moveable\_breakable](Moveable_breakable_%28entity%29 "Moveable breakable (entity)") {
+-   [moveable\_breakonimpact](Moveable_breakonimpact_%28entity%29 "Moveable breakonimpact (entity)") {
 -   [moveable\_convoy\_bigjunk1](Moveable_convoy_bigjunk1_%28entity%29 "Moveable convoy bigjunk1 (entity)")
 -   [moveable\_convoy\_roadpanel](Moveable_convoy_roadpanel_%28entity%29 "Moveable convoy roadpanel (entity)")
 -   [moveable\_crate\_ammobox](Moveable_crate_ammobox_%28entity%29 "Moveable crate ammobox (entity)")
@@ -2396,23 +2357,18 @@ Quake 4
 -   [moveable\_podDoor\_1a](Moveable_podDoor_1a_%28entity%29 "Moveable podDoor 1a (entity)")
 -   [moveable\_podDoor\_2](Moveable_podDoor_2_%28entity%29 "Moveable podDoor 2 (entity)")
 -   [moveable\_stage\_break](Moveable_stage_break_%28entity%29 "Moveable stage break (entity)")
--   [moveable\_stage\_break\_begin](Moveable_stage_break_begin_%28entity%29 "Moveable stage break begin (entity)")
-    {
--   [moveable\_stage\_break\_finish](Moveable_stage_break_finish_%28entity%29 "Moveable stage break finish (entity)")
-    {
+-   [moveable\_stage\_break\_begin](Moveable_stage_break_begin_%28entity%29 "Moveable stage break begin (entity)") {
+-   [moveable\_stage\_break\_finish](Moveable_stage_break_finish_%28entity%29 "Moveable stage break finish (entity)") {
 -   [moveable\_stage\_burn](Moveable_stage_burn_%28entity%29 "Moveable stage burn (entity)")
 -   [moveable\_stage\_explode](Moveable_stage_explode_%28entity%29 "Moveable stage explode (entity)")
 -   [moveable\_stage\_ignite](Moveable_stage_ignite_%28entity%29 "Moveable stage ignite (entity)")
 -   [moveable\_stage\_launch](Moveable_stage_launch_%28entity%29 "Moveable stage launch (entity)")
--   [moveable\_stage\_launch\_red](Moveable_stage_launch_red_%28entity%29 "Moveable stage launch red (entity)")
-    {
+-   [moveable\_stage\_launch\_red](Moveable_stage_launch_red_%28entity%29 "Moveable stage launch red (entity)") {
 -   [moveable\_stage\_launch\_tram](Moveable_stage_launch_tram_%28entity%29 "Moveable stage launch tram (entity)")
 -   [moveable\_stage\_randomdelay](Moveable_stage_randomdelay_%28entity%29 "Moveable stage randomdelay (entity)")
 -   [moveable\_stage\_waitfordead](Moveable_stage_waitfordead_%28entity%29 "Moveable stage waitfordead (entity)")
--   [moveable\_stage\_waitforimpact](Moveable_stage_waitforimpact_%28entity%29 "Moveable stage waitforimpact (entity)")
-    {
--   [moveable\_stage\_waitfortrigger](Moveable_stage_waitfortrigger_%28entity%29 "Moveable stage waitfortrigger (entity)")
-    {
+-   [moveable\_stage\_waitforimpact](Moveable_stage_waitforimpact_%28entity%29 "Moveable stage waitforimpact (entity)") {
+-   [moveable\_stage\_waitfortrigger](Moveable_stage_waitfortrigger_%28entity%29 "Moveable stage waitfortrigger (entity)") {
 -   [moveable\_strogg\_pallet\_64](Moveable_strogg_pallet_64_%28entity%29 "Moveable strogg pallet 64 (entity)")
 -   [mp\_ctf\_assaultpoint](Mp_ctf_assaultpoint_%28entity%29 "Mp ctf assaultpoint (entity)")
 -   [mp\_ctf\_flag](Mp_ctf_flag_%28entity%29 "Mp ctf flag (entity)")
@@ -2643,12 +2599,9 @@ Quake 4
 -   [putra\_pistonB](Putra_pistonB_%28entity%29 "Putra pistonB (entity)")
 -   [Putra\_Ragdoll](Putra_Ragdoll_%28entity%29 "Putra Ragdoll (entity)")
 -   [react\_convoy\_pump](React_convoy_pump_%28entity%29 "React convoy pump (entity)")
--   [react\_Terminal\_BCover\_Lrg01](React_Terminal_BCover_Lrg01_%28entity%29 "React Terminal BCover Lrg01 (entity)")
-    {
--   [react\_Terminal\_BCover\_Sm01](React_Terminal_BCover_Sm01_%28entity%29 "React Terminal BCover Sm01 (entity)")
-    {
--   [react\_Terminal\_TSD](React_Terminal_TSD_%28entity%29 "React Terminal TSD (entity)")
-    {
+-   [react\_Terminal\_BCover\_Lrg01](React_Terminal_BCover_Lrg01_%28entity%29 "React Terminal BCover Lrg01 (entity)") {
+-   [react\_Terminal\_BCover\_Sm01](React_Terminal_BCover_Sm01_%28entity%29 "React Terminal BCover Sm01 (entity)") {
+-   [react\_Terminal\_TSD](React_Terminal_TSD_%28entity%29 "React Terminal TSD (entity)") {
 -   [recomp\_BoomBox](Recomp_BoomBox_%28entity%29 "Recomp BoomBox (entity)")
 -   [recomp\_chain](Recomp_chain_%28entity%29 "Recomp chain (entity)")
 -   [recomp\_character\_kane](Recomp_character_kane_%28entity%29 "Recomp character kane (entity)")
@@ -3078,19 +3031,15 @@ Prey
 -   [character\_trent\_slab](Character_trent_slab_%28entity%29 "Character trent slab (entity)")
 -   [character\_underwear](Character_underwear_%28entity%29 "Character underwear (entity)")
 -   [character\_underwear\_bloody](Character_underwear_bloody_%28entity%29 "Character underwear bloody (entity)")
--   [character\_underwear\_feedinga](Character_underwear_feedinga_%28entity%29 "Character underwear feedinga (entity)")
-    {
--   [character\_underwear\_feedingb](Character_underwear_feedingb_%28entity%29 "Character underwear feedingb (entity)")
-    {
--   [character\_underwear\_feedingd](Character_underwear_feedingd_%28entity%29 "Character underwear feedingd (entity)")
-    {
+-   [character\_underwear\_feedinga](Character_underwear_feedinga_%28entity%29 "Character underwear feedinga (entity)") {
+-   [character\_underwear\_feedingb](Character_underwear_feedingb_%28entity%29 "Character underwear feedingb (entity)") {
+-   [character\_underwear\_feedingd](Character_underwear_feedingd_%28entity%29 "Character underwear feedingd (entity)") {
 -   [character\_underwear\_salvage](Character_underwear_salvage_%28entity%29 "Character underwear salvage (entity)")
 -   [character\_underwear\_salvageboss](Character_underwear_salvageboss_%28entity%29 "Character underwear salvageboss (entity)")
 -   [character\_underwear\_slab](Character_underwear_slab_%28entity%29 "Character underwear slab (entity)")
 -   [character\_underwear2](Character_underwear2_%28entity%29 "Character underwear2 (entity)")
 -   [character\_underwear2\_bloody](Character_underwear2_bloody_%28entity%29 "Character underwear2 bloody (entity)")
--   [character\_underwear2\_feedingb](Character_underwear2_feedingb_%28entity%29 "Character underwear2 feedingb (entity)")
-    {
+-   [character\_underwear2\_feedingb](Character_underwear2_feedingb_%28entity%29 "Character underwear2 feedingb (entity)") {
 -   [character\_underwear2\_slab](Character_underwear2_slab_%28entity%29 "Character underwear2 slab (entity)")
 -   [character\_underwear3](Character_underwear3_%28entity%29 "Character underwear3 (entity)")
 -   [character\_yuppie\_body](Character_yuppie_body_%28entity%29 "Character yuppie body (entity)")

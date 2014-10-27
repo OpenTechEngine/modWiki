@@ -1,8 +1,7 @@
 Description
 -----------
 
-Assigns a console instruction or series of instructions to the press of
-a key.
+Assigns a console instruction or series of instructions to the press of a key.
 
 Usage
 -----
@@ -15,22 +14,17 @@ Parameters
 ----------
 
 -   [key] - The keyboard key to assign.
--   [instruction] - The console instruction or series of instructions.
-    Valid instructions are console commands, cvars, and
-    [impulses](Impulse "Impulse") .
+-   [instruction] - The console instruction or series of instructions. Valid instructions are console commands, cvars, and [impulses](Impulse "Impulse") .
 
 Notes
 -----
 
-Instructions that require spaces should be enclosed in quotation marks
-like so...
+Instructions that require spaces should be enclosed in quotation marks like so...
 
     bind f12 "screenshot 640 480"
 
-Multiple instructions can be bound to a key by using semicolons as
-separators...
+Multiple instructions can be bound to a key by using semicolons as separators...
 
     bind F11 "r_useOptimizedShadows 0;r_lightSourceRadius 5;screenshot 1024 768 64"
 
-\
 

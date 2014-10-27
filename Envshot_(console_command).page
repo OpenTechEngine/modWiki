@@ -1,8 +1,7 @@
 Description
 -----------
 
-Captures six square images for use as a [cube
-map](Cube_maps "Cube maps") .
+Captures six square images for use as a [cube map](Cube_maps "Cube maps") .
 
 Usage
 -----
@@ -15,27 +14,18 @@ Parameters
 ----------
 
 -   [prefix] - The prefix used to name each image.
--   [size] - The horizontal and vertical resolution to save the images
-    at.
--   [blends] - Number of image samples; works as forced anti-aliasing
-    for rendered cubemap images
+-   [size] - The horizontal and vertical resolution to save the images at.
+-   [blends] - Number of image samples; works as forced anti-aliasing for rendered cubemap images
 
 Notes
 -----
 
 The capture point is the player's current position.
 
-The player is included in captures if the CVar
-[pm\_thirdperson](Pm_thirdPerson_%28cvar%29 "Pm thirdPerson (cvar)") is
-enabled.
+The player is included in captures if the CVar [pm\_thirdperson](Pm_thirdPerson_%28cvar%29 "Pm thirdPerson (cvar)") is enabled.
 
-Images are saved as 24-bit tgas to the
-[env](Env_%28folder%29 "Env (folder)") directory.
+Images are saved as 24-bit tgas to the [env](Env_%28folder%29 "Env (folder)") directory.
 
-There have been reports that under certain circumstances this command
-does not export seamless cubemaps. The current cause is believed to be
-the screen resolution. The command is reported to work properly when
-running the game at 640 x 480.
+There have been reports that under certain circumstances this command does not export seamless cubemaps. The current cause is believed to be the screen resolution. The command is reported to work properly when running the game at 640 x 480.
 
-\
 

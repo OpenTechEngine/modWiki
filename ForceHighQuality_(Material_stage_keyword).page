@@ -1,17 +1,9 @@
 Description
 -----------
 
-The **forceHighQuality** stage keyword causes the game to render the
-associated stage *without* using [texture
-compression](Texturing#Compressed_and_Uncompressed "Texturing") in any
-quality mode. Without this keyword, the map would be compressed
-according to the defaults for the selected quality mode (bumpmaps only
-in High, bumpmaps and diffusemaps in Medium or Low).
+The **forceHighQuality** stage keyword causes the game to render the associated stage *without* using [texture compression](Texturing#Compressed_and_Uncompressed "Texturing") in any quality mode. Without this keyword, the map would be compressed according to the defaults for the selected quality mode (bumpmaps only in High, bumpmaps and diffusemaps in Medium or Low).
 
-This keyword is stronger than
-[highquality](Highquality_%28Material_stage_keyword%29 "Highquality (Material stage keyword)")
-which only affects Medium and High quality modes. It should only be used
-for textures that absolutely must never be compressed.
+This keyword is stronger than [highquality](Highquality_%28Material_stage_keyword%29 "Highquality (Material stage keyword)") which only affects Medium and High quality modes. It should only be used for textures that absolutely must never be compressed.
 
 Usage
 -----
@@ -39,14 +31,7 @@ Notes
 
 One place where you could use this keyword is the HUD.
 
-<div>
-
 ![](/images/e/e8/Q4square_25.png) **Note:** Quake 4 only:
-*This keyword does not work with
-[image\_ignoreHighQuality](Image_ignoreHighQuality_%28cvar%29 "Image ignoreHighQuality (cvar)")
-set to 1. That may or not be the case with Doom 3.*
+*This keyword does not work with [image\_ignoreHighQuality](Image_ignoreHighQuality_%28cvar%29 "Image ignoreHighQuality (cvar)") set to 1. That may or not be the case with Doom 3.*
 
-</div>
-
-\
 

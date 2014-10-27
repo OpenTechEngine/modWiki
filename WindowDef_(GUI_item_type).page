@@ -1,18 +1,9 @@
-![windowDef example
-preview](/images/thumb/9/93/Gui_example_windowdef.png/120px-Gui_example_windowdef.png)\
+![windowDef example preview](/images/thumb/9/93/Gui_example_windowdef.png/120px-Gui_example_windowdef.png)
  *windowDef example preview*
 
-Pretty much the standard visual [item](GUI_items "GUI items") type. When
-creating [GUIs](GUIs "GUIs") , around 98% of the items you use in your
-script will be windowDefs. Also, all other item types work as extended
-windowDefs; from an OOP perspective, think of windowDef as a class and
-all other item types as being its subclasses.
+Pretty much the standard visual [item](GUI_items "GUI items") type. When creating [GUIs](GUIs "GUIs") , around 98% of the items you use in your script will be windowDefs. Also, all other item types work as extended windowDefs; from an OOP perspective, think of windowDef as a class and all other item types as being its subclasses.
 
-All in all, a windowDef can contain text strings; it can act as a
-button; it can work as an static decoration graphic; it can work as an
-invisible element that serve other scripting purposes, such as
-containing a code execution timeline; it can also hold specific,
-separated data.
+All in all, a windowDef can contain text strings; it can act as a button; it can work as an static decoration graphic; it can work as an invisible element that serve other scripting purposes, such as containing a code execution timeline; it can also hold specific, separated data.
 
 Additional properties
 ---------------------
@@ -38,5 +29,4 @@ Example(s)
         font        "fonts/english"
     }
 
-\
 

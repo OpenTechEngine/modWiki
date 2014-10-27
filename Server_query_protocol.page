@@ -1,32 +1,19 @@
-<div id="stub" class="boilerplate metadata">
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Server_query_protocol "http://www.modwiki.net/w/index.php?title=Server_query_protocol&action=edit") </span> .*
 
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Server_query_protocol "http://www.modwiki.net/w/index.php?title=Server_query_protocol&action=edit")
-</span> .*
-
-</div>
-
-All [id Tech 4](Id_Tech_4 "Id Tech 4") engines have a means of querying
-servers to gather info about a particular server. Mostly the protocol is
-slightly different for different games.
+All [id Tech 4](Id_Tech_4 "Id Tech 4") engines have a means of querying servers to gather info about a particular server. Mostly the protocol is slightly different for different games.
 
 <span align="absbottom"> ![](/images/2/23/D3square_25.png) Doom 3 version </span>
 ---------------------------------------------------------------------------------
 
-*The information in this section is specific to [Doom
-3](Doom_3 "Doom 3") .*
+*The information in this section is specific to [Doom 3](Doom_3 "Doom 3") .*
 
 ### Querying the master server
 
-Doom 3 - Master Server communications
-[http://dev.kquery.com/index.php?article=44](https://web.archive.org/web/20121205043404/http://dev.kquery.com/index.php?article=44 "http://dev.kquery.com/index.php?article=44")
+Doom 3 - Master Server communications [http://dev.kquery.com/index.php?article=44](https://web.archive.org/web/20121205043404/http://dev.kquery.com/index.php?article=44 "http://dev.kquery.com/index.php?article=44")
 
 #### Request
 
-Send a UDP packet to master server for query a list of Doom 3 servers.
-The known master sever is **idnet.ua-corp.com:27650** .
+Send a UDP packet to master server for query a list of Doom 3 servers. The known master sever is **idnet.ua-corp.com:27650** .
 
 Data block
 
@@ -81,17 +68,13 @@ Data block
 <span align="absbottom"> ![](/images/7/7e/Etqwsquare_25.png) ET:QW version </span>
 ----------------------------------------------------------------------------------
 
-*The information in this section is specific to [Enemy Territory: Quake
-Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .*
+*The information in this section is specific to [Enemy Territory: Quake Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .*
 
-The version used in Enemy Territory: Quake Wars works slightly
-different. Because users are required to login, access to the master
-servers doesn't seem to be possible for unauthenticated users.
+The version used in Enemy Territory: Quake Wars works slightly different. Because users are required to login, access to the master servers doesn't seem to be possible for unauthenticated users.
 
 ### Server Feed
 
-Luckily, the list of servers is available from a second source. The
-current URLs for server lists are:
+Luckily, the list of servers is available from a second source. The current URLs for server lists are:
 
 Demo server list
 
@@ -101,10 +84,7 @@ Full game
 
 [http://etqw-ipgetter.demonware.net/ipgetter/](https://web.archive.org/web/20121205043404/http://etqw-ipgetter.demonware.net/ipgetter/ "http://etqw-ipgetter.demonware.net/ipgetter/")
 
-Sending an HTTP GET request to one of these URLs will return an HTTP
-message with as content a list of \<IP\>:\<PORT\> pairs per line. Each
-entry is a functioning server and needs to be polled for extra
-information.
+Sending an HTTP GET request to one of these URLs will return an HTTP message with as content a list of \<IP\>:\<PORT\> pairs per line. Each entry is a functioning server and needs to be polled for extra information.
 
 ### Data Block
 
@@ -151,12 +131,7 @@ In Version 1.0 and 1.1 the Client Data Block was
 
 ### Source
 
--   [community forums: SD Post Data
-    Block](https://web.archive.org/web/20121205043404/http://community.enemyterritory.com/forums/showpost.php?p=129140&postcount=50 "http://community.enemyterritory.com/forums/showpost.php?p=129140&postcount=50")
--   [community forums: SD Post Client Datablock Patch
-    1.2](https://web.archive.org/web/20121205043404/http://community.enemyterritory.com/forums/showpost.php?p=198258&postcount=56 "http://community.enemyterritory.com/forums/showpost.php?p=198258&postcount=56")
--   [Enemy Territory Quake Wars protocol
-    documented](https://web.archive.org/web/20121205043404/http://www.return1.net/site/news/read/13/ "http://www.return1.net/site/news/read/13/") -
-    it has some great hex examples to show how a dump of the traffic
-    looks like.
+-   [community forums: SD Post Data Block](https://web.archive.org/web/20121205043404/http://community.enemyterritory.com/forums/showpost.php?p=129140&postcount=50 "http://community.enemyterritory.com/forums/showpost.php?p=129140&postcount=50")
+-   [community forums: SD Post Client Datablock Patch 1.2](https://web.archive.org/web/20121205043404/http://community.enemyterritory.com/forums/showpost.php?p=198258&postcount=56 "http://community.enemyterritory.com/forums/showpost.php?p=198258&postcount=56")
+-   [Enemy Territory Quake Wars protocol documented](https://web.archive.org/web/20121205043404/http://www.return1.net/site/news/read/13/ "http://www.return1.net/site/news/read/13/") - it has some great hex examples to show how a dump of the traffic looks like.
 

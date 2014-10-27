@@ -1,14 +1,9 @@
 Description
 -----------
 
-The **alphaTest** stage keyword makes parts of a diffuse map texture
-invisible depending on the alpha channel. If the alpha value of a pixel
-is less than the threshold given as the parameter to alphaTest, that
-pixel will not be drawn.
+The **alphaTest** stage keyword makes parts of a diffuse map texture invisible depending on the alpha channel. If the alpha value of a pixel is less than the threshold given as the parameter to alphaTest, that pixel will not be drawn.
 
-This is useful for rendering grids, gratings and so on, where parts of
-the texture must be transparent. It does *not* permit partial
-transparency of diffusemap textures.
+This is useful for rendering grids, gratings and so on, where parts of the texture must be transparent. It does *not* permit partial transparency of diffusemap textures.
 
 Usage
 -----
@@ -18,8 +13,7 @@ Usage
 Parameters
 ----------
 
--   [cutoff] - the alpha value at which point the diffuse stage is
-    drawn. Any values less than this are not drawn.
+-   [cutoff] - the alpha value at which point the diffuse stage is drawn. Any values less than this are not drawn.
 
 Example
 -------
@@ -29,30 +23,16 @@ None.
 Notes
 -----
 
-This is the only way for a diffuse stage to make use of alpha
-transparency.
+This is the only way for a diffuse stage to make use of alpha transparency.
 
-The only other blend mode that allows for alpha transparency is blend
-and it does not recieve lighting.
+The only other blend mode that allows for alpha transparency is blend and it does not recieve lighting.
 
-Unfortunately alphatest is limited in that each pixel is either 100%
-opaque, or 100% transparent.
+Unfortunately alphatest is limited in that each pixel is either 100% opaque, or 100% transparent.
 
-While alphaTest is a stage specific keyword, it has an effect on all
-stages. To counter that, use the keyword
-[ignoreAlphaTest](IgnoreAlphaTest_%28Material_stage_keyword%29 "IgnoreAlphaTest (Material stage keyword)")
-in stages where you do not want to apply the alphaTest.
+While alphaTest is a stage specific keyword, it has an effect on all stages. To counter that, use the keyword [ignoreAlphaTest](IgnoreAlphaTest_%28Material_stage_keyword%29 "IgnoreAlphaTest (Material stage keyword)") in stages where you do not want to apply the alphaTest.
 
-Photoshop 7 does not save transparency information into an alpha channel
-when dealing with targa images. You must download the updated [Targa
-export
-plugin](http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544 "http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544")
-from [Adobe](http://www.adobe.com/ "http://www.adobe.com") . All other
-versions of Photoshop work correctly.
+Photoshop 7 does not save transparency information into an alpha channel when dealing with targa images. You must download the updated [Targa export plugin](http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544 "http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544") from [Adobe](http://www.adobe.com/ "http://www.adobe.com") . All other versions of Photoshop work correctly.
 
-Applying an alphatested material to a brush will make it so that the
-brush cannot be used to seal off the map from the void. This can be
-noticed when the pointfile line goes straight through a brush.
+Applying an alphatested material to a brush will make it so that the brush cannot be used to seal off the map from the void. This can be noticed when the pointfile line goes straight through a brush.
 
-\
 

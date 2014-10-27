@@ -1,19 +1,8 @@
-<div id="attention" class="boilerplate metadata"
-style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
+**This page is in urgent need of attention because: *this page contains unfinished sections***
 
-**This page is in urgent need of attention because: *this page contains
-unfinished sections***
+If you disagree with this, please explain why on [its talk page](Talk:Table_%28decl%29 "Talk:Table (decl)") .
 
-If you disagree with this, please explain why on [its talk
-page](Talk:Table_%28decl%29 "Talk:Table (decl)") .
-
-</div>
-
-A table declaration is nothing more than a definition of a list of
-values bound to a name. They are mostly used to iterate a list of common
-values in [materials](Material_%28decl%29 "Material (decl)") or [GUI
-scripts](GUI_scripting "GUI scripting") . A key example would be lights
-that fade in and out or strobe in a clear pattern.
+A table declaration is nothing more than a definition of a list of values bound to a name. They are mostly used to iterate a list of common values in [materials](Material_%28decl%29 "Material (decl)") or [GUI scripts](GUI_scripting "GUI scripting") . A key example would be lights that fade in and out or strobe in a clear pattern.
 
 Declaration
 -----------
@@ -22,69 +11,45 @@ Declaring a table is fairly simple when you look at the syntax.
 
     table <tablename> { [snap] [clamp] { <data>, <data>, ... } }
 
-The **snap** and **clamp** parameters are optional btu can be used
-together. They are explained in detail in the rest of this article. The
-**data** consists of single [float](Data_types#float "Data types")
-values.
+The **snap** and **clamp** parameters are optional btu can be used together. They are explained in detail in the rest of this article. The **data** consists of single [float](Data_types#float "Data types") values.
 
 Using a table
 -------------
 
-Square bracket operators are used to get a certain value out of a table.
-The indexes of the elements start from 0.
+Square bracket operators are used to get a certain value out of a table. The indexes of the elements start from 0.
 
     tablename [ <expression> ]
 
-The expression between brackets can result in an integer or floating
-point number. You can use the [simple script
-operators](SCRIPT_%28file_format%29#Simple_Operators "SCRIPT (file format)") \*,
-%, + and - as well, next to the following predefined variables:
+The expression between brackets can result in an integer or floating point number. You can use the [simple script operators](SCRIPT_%28file_format%29#Simple_Operators "SCRIPT (file format)") \*, %, + and - as well, next to the following predefined variables:
 
--   time: a floating point value which increases continually as the map
-    progresses.
--   parm0 - parm11: parameters which can be set from script, game code
-    or the map editor.
+-   time: a floating point value which increases continually as the map progresses.
+-   parm0 - parm11: parameters which can be set from script, game code or the map editor.
 -   global0 - global7: Unused, although they exist.
--   sound: represents the amplitude of the sound the assigned entity
-    generates. Used for pulsing materials synchronized with the sound.
+-   sound: represents the amplitude of the sound the assigned entity generates. Used for pulsing materials synchronized with the sound.
 
-The expression does not need to result in a real index in the table. If
-you index an item which does not exist, the game will always return
-something. The exact behavior is defined by the mentioned **snap** and
-**clamp** parameters.
+The expression does not need to result in a real index in the table. If you index an item which does not exist, the game will always return something. The exact behavior is defined by the mentioned **snap** and **clamp** parameters.
 
 ### Snap parameter
 
-If the **snap** parameter is added, requesting data by the use of a
-floating point number will always return the item with the nearest
-index. If the parameter is not set, the game will interpolate between
-two values.
+If the **snap** parameter is added, requesting data by the use of a floating point number will always return the item with the nearest index. If the parameter is not set, the game will interpolate between two values.
 
 Let us define two tables:
 
     table squarewave { snap { 0, 1} }
     table linearwave { { 0, 1 } }
 
-Now requesting **squarewave [ 0.6 ]** will return 1, whereas
-**linearwave [ 0.6 ]** will return 0.6 because the game interpolates
-between 1 and 0.
+Now requesting **squarewave [ 0.6 ]** will return 1, whereas **linearwave [ 0.6 ]** will return 0.6 because the game interpolates between 1 and 0.
 
-Similarly, **squareWave [ 0.3 ]** will return 0 and **linearWave [ 0.3
-]** will return - you guessed it - 0.3.
+Similarly, **squareWave [ 0.3 ]** will return 0 and **linearWave [ 0.3 ]** will return - you guessed it - 0.3.
 
 ### Clamp parameter
 
-If the **clamp** parameter is added, requesting an index which is less
-than 0 or higher than the highest index in the table will return the
-first, respectively last element from the table. If the parameter is not
-set, the table will wrap around.
+If the **clamp** parameter is added, requesting an index which is less than 0 or higher than the highest index in the table will return the first, respectively last element from the table. If the parameter is not set, the table will wrap around.
 
 Use in materials
 ----------------
 
-Given the above definitions, we can define a material that uses the
-current time, combined with the linear table, to fade an overlay image
-in and out
+Given the above definitions, we can define a material that uses the current time, combined with the linear table, to fade an overlay image in and out
 
     table linearwave {{ 0, 1 }}
 
@@ -104,19 +69,9 @@ in and out
 Use in GUI scripts
 ------------------
 
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Table_%28decl%29 "http://www.modwiki.net/w/index.php?title=Table_%28decl%29&action=edit")
-</span> .*
-
-</div>
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Table_%28decl%29 "http://www.modwiki.net/w/index.php?title=Table_%28decl%29&action=edit") </span> .*
 
 -   Needs some GUI examples. See external links.
-
-\
 
 External links
 --------------

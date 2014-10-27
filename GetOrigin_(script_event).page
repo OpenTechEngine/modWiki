@@ -1,14 +1,12 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Returns the current position of this entity (relative to bind parent if
-any).
+Returns the current position of this entity (relative to bind parent if any).
 
 Usage
 -----
@@ -29,8 +27,6 @@ Examples
 Notes
 -----
 
-This script event returns the value of this entity's origin key/value
-pair as a vector.
+This script event returns the value of this entity's origin key/value pair as a vector.
 
-\
 

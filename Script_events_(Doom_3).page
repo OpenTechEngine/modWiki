@@ -1,10 +1,4 @@
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/c/cb/D3square_bg.png) The information on this page is
-specific to [Doom 3](Doom_3 "Doom 3") .
-
-</div>
+![](/images/c/cb/D3square_bg.png) The information on this page is specific to [Doom 3](Doom_3 "Doom 3") .
 
 ------------------------------------------------------------------------
 
@@ -15,9 +9,7 @@ Existing script events as of version 1.3.1302 (1.3).
 System Events
 -------------
 
-Events declared in [idThread](IdThread_%28class%29 "IdThread (class)") ,
-accessible via [sys](Scripting_basics#sys "Scripting basics")
-identifier.
+Events declared in [idThread](IdThread_%28class%29 "IdThread (class)") , accessible via [sys](Scripting_basics#sys "Scripting basics") identifier.
 
 -   [angToForward](AngToForward_%28script_event%29 "AngToForward (script event)")
 -   [angToRight](AngToRight_%28script_event%29 "AngToRight (script event)")
@@ -99,9 +91,7 @@ identifier.
 Entity Events
 -------------
 
-Events declared in the [base spawn
-class](Base_spawn_class "Base spawn class")
-[idEntity](IdEntity_%28class%29 "IdEntity (class)")
+Events declared in the [base spawn class](Base_spawn_class "Base spawn class") [idEntity](IdEntity_%28class%29 "IdEntity (class)")
 
 All entities have these events.
 
@@ -172,8 +162,7 @@ All entities have these events.
 idActor Events
 --------------
 
-Events declared in the [spawn class](Spawn_class "Spawn class")
-[idActor](IdActor_%28class%29 "IdActor (class)")
+Events declared in the [spawn class](Spawn_class "Spawn class") [idActor](IdActor_%28class%29 "IdActor (class)")
 
 -   [animDistance](AnimDistance_%28script_event%29 "AnimDistance (script event)")
 -   [animLength](AnimLength_%28script_event%29 "AnimLength (script event)")
@@ -208,8 +197,7 @@ Events declared in the [spawn class](Spawn_class "Spawn class")
 idAFEntity\_ClawFourFingers Events
 ----------------------------------
 
-Events declared in the [spawn class](Spawn_class "Spawn class")
-[idAFEntity\_ClawFourFingers](IdAFEntity_ClawFourFingers_%28class%29 "IdAFEntity ClawFourFingers (class)")
+Events declared in the [spawn class](Spawn_class "Spawn class") [idAFEntity\_ClawFourFingers](IdAFEntity_ClawFourFingers_%28class%29 "IdAFEntity ClawFourFingers (class)")
 
 -   [setFingerAngle](SetFingerAngle_%28script_event%29 "SetFingerAngle (script event)")
 -   [stopFingers](StopFingers_%28script_event%29 "StopFingers (script event)")
@@ -217,8 +205,7 @@ Events declared in the [spawn class](Spawn_class "Spawn class")
 idAI Events
 -----------
 
-Events declared in the [spawn class](Spawn_class "Spawn class")
-[idAI](IdAI_%28class%29 "IdAI (class)")
+Events declared in the [spawn class](Spawn_class "Spawn class") [idAI](IdAI_%28class%29 "IdAI (class)")
 
 -   [allowDamage](AllowDamage_%28script_event%29 "AllowDamage (script event)")
 -   [allowHiddenMovement](AllowHiddenMovement_%28script_event%29 "AllowHiddenMovement (script event)")
@@ -342,8 +329,7 @@ Events declared in the [spawn class](Spawn_class "Spawn class")
 
 ### idAI\_Vagary Events
 
-Events declared in the [spawn class](Spawn_class "Spawn class")
-[idAI\_Vagary](IdAI_Vagary_%28class%29 "IdAI Vagary (class)")
+Events declared in the [spawn class](Spawn_class "Spawn class") [idAI\_Vagary](IdAI_Vagary_%28class%29 "IdAI Vagary (class)")
 
 -   [vagary\_ChooseObjectToThrow](Vagary_ChooseObjectToThrow_%28script_event%29 "Vagary ChooseObjectToThrow (script event)")
 -   [vagary\_ThrowObjectAtEnemy](Vagary_ThrowObjectAtEnemy_%28script_event%29 "Vagary ThrowObjectAtEnemy (script event)")
@@ -351,8 +337,7 @@ Events declared in the [spawn class](Spawn_class "Spawn class")
 idAnimated Events
 -----------------
 
-Events declared in the [spawn class](Spawn_class "Spawn class")
-[idAnimated](IdAnimated_%28class%29 "IdAnimated (class)")
+Events declared in the [spawn class](Spawn_class "Spawn class") [idAnimated](IdAnimated_%28class%29 "IdAnimated (class)")
 
 -   [launchMissiles](LaunchMissiles_%28script_event%29 "LaunchMissiles (script event)")
 -   [leftFoot](LeftFoot_%28script_event%29 "LeftFoot (script event)")
@@ -362,8 +347,7 @@ Events declared in the [spawn class](Spawn_class "Spawn class")
 idAnimatedEntity Events
 -----------------------
 
-Events declared in the [spawn class](Spawn_class "Spawn class")
-[idAnimatedEntity](IdAnimatedEntity_%28class%29 "IdAnimatedEntity (class)")
+Events declared in the [spawn class](Spawn_class "Spawn class") [idAnimatedEntity](IdAnimatedEntity_%28class%29 "IdAnimatedEntity (class)")
 
 -   [clearAllJoints](ClearAllJoints_%28script_event%29 "ClearAllJoints (script event)")
 -   [clearJoint](ClearJoint_%28script_event%29 "ClearJoint (script event)")
@@ -376,8 +360,7 @@ Events declared in the [spawn class](Spawn_class "Spawn class")
 idCameraAnim Events
 -------------------
 
-Events declared in the [spawn class](Spawn_class "Spawn class")
-[idCameraAnim](IdCameraAnim_%28class%29 "IdCameraAnim (class)")
+Events declared in the [spawn class](Spawn_class "Spawn class") [idCameraAnim](IdCameraAnim_%28class%29 "IdCameraAnim (class)")
 
 -   [start](Start_%28script_event%29 "Start (script event)")
 -   [stop](Stop_%28script_event%29 "Stop (script event)")
@@ -385,16 +368,14 @@ Events declared in the [spawn class](Spawn_class "Spawn class")
 idCombatNode Events
 -------------------
 
-Events declared in the [spawn class](Spawn_class "Spawn class")
-[idCombatNode](IdCombatNode_%28class%29 "IdCombatNode (class)")
+Events declared in the [spawn class](Spawn_class "Spawn class") [idCombatNode](IdCombatNode_%28class%29 "IdCombatNode (class)")
 
 -   [markUsed](MarkUsed_%28script_event%29 "MarkUsed (script event)")
 
 idDoor Events
 -------------
 
-Events declared in the [spawn class](Spawn_class "Spawn class")
-[idDoor](IdDoor_%28class%29 "IdDoor (class)")
+Events declared in the [spawn class](Spawn_class "Spawn class") [idDoor](IdDoor_%28class%29 "IdDoor (class)")
 
 -   [close](Close_%28script_event%29 "Close (script event)")
 -   [disable](Disable_%28script_event%29 "Disable (script event)")
@@ -407,16 +388,14 @@ Events declared in the [spawn class](Spawn_class "Spawn class")
 idForcefield Events
 -------------------
 
-Events declared in the [spawn class](Spawn_class "Spawn class")
-[idForceField](IdForceField_%28class%29 "IdForceField (class)")
+Events declared in the [spawn class](Spawn_class "Spawn class") [idForceField](IdForceField_%28class%29 "IdForceField (class)")
 
 -   [Toggle](Toggle_%28script_event%29 "Toggle (script event)")
 
 idLight Events
 --------------
 
-Events declared in the [spawn class](Spawn_class "Spawn class")
-[idLight](IdLight_%28class%29 "IdLight (class)")
+Events declared in the [spawn class](Spawn_class "Spawn class") [idLight](IdLight_%28class%29 "IdLight (class)")
 
 -   [fadeInLight](FadeInLight_%28script_event%29 "FadeInLight (script event)")
 -   [fadeOutLight](FadeOutLight_%28script_event%29 "FadeOutLight (script event)")
@@ -429,13 +408,10 @@ Events declared in the [spawn class](Spawn_class "Spawn class")
 -   [setRadiusXYZ](SetRadiusXYZ_%28script_event%29 "SetRadiusXYZ (script event)")
 -   [setShader](SetShader_%28script_event%29 "SetShader (script event)")
 
-\
-
 idMoveable Events
 -----------------
 
-Events declared in the [spawn class](Spawn_class "Spawn class")
-[idMoveAble](IdMoveAble_%28class%29 "IdMoveAble (class)")
+Events declared in the [spawn class](Spawn_class "Spawn class") [idMoveAble](IdMoveAble_%28class%29 "IdMoveAble (class)")
 
 -   [becomeNonSolid](BecomeNonSolid_%28script_event%29 "BecomeNonSolid (script event)")
 -   [enableDamage](EnableDamage_%28script_event%29 "EnableDamage (script event)")
@@ -444,8 +420,7 @@ Events declared in the [spawn class](Spawn_class "Spawn class")
 idMover Events
 --------------
 
-Events declared in the [spawn class](Spawn_class "Spawn class")
-[idMover](IdMover_%28class%29 "IdMover (class)")
+Events declared in the [spawn class](Spawn_class "Spawn class") [idMover](IdMover_%28class%29 "IdMover (class)")
 
 -   [accelSound](AccelSound_%28script_event%29 "AccelSound (script event)")
 -   [accelTime](AccelTime_%28script_event%29 "AccelTime (script event)")
@@ -481,8 +456,7 @@ Events declared in the [spawn class](Spawn_class "Spawn class")
 idPlayer Events
 ---------------
 
-Events declared in the [spawn class](Spawn_class "Spawn class")
-[idPlayer](IdPlayer_%28class%29 "IdPlayer (class)")
+Events declared in the [spawn class](Spawn_class "Spawn class") [idPlayer](IdPlayer_%28class%29 "IdPlayer (class)")
 
 -   [disableWeapon](DisableWeapon_%28script_event%29 "DisableWeapon (script event)")
 -   [enableWeapon](EnableWeapon_%28script_event%29 "EnableWeapon (script event)")
@@ -499,16 +473,14 @@ Events declared in the [spawn class](Spawn_class "Spawn class")
 idProjectile Events
 -------------------
 
-Events declared in the [spawn class](Spawn_class "Spawn class")
-[idProjectile](IdProjectile_%28class%29 "IdProjectile (class)")
+Events declared in the [spawn class](Spawn_class "Spawn class") [idProjectile](IdProjectile_%28class%29 "IdProjectile (class)")
 
 -   [getProjectileState](GetProjectileState_%28script_event%29 "GetProjectileState (script event)")
 
 idWeapon Events
 ---------------
 
-Events declared in the [spawn class](Spawn_class "Spawn class")
-[idWeapon](IdWeapon_%28class%29 "IdWeapon (class)")
+Events declared in the [spawn class](Spawn_class "Spawn class") [idWeapon](IdWeapon_%28class%29 "IdWeapon (class)")
 
 -   [addToClip](AddToClip_%28script_event%29 "AddToClip (script event)")
 -   [allowDrop](AllowDrop_%28script_event%29 "AllowDrop (script event)")

@@ -1,93 +1,32 @@
-This page serves as an introduction to the SDK of any [id Tech
-4](Id_Tech_4 "Id Tech 4") game, and is intended for absolute beginners.
-If some parts are unclear, please post in this article's
-**[talk](Talk:Beginner%27s_Tutorial_%28Part_2%29_The_SDK "Talk:Beginner's Tutorial (Part 2) The SDK")**
-page.
+This page serves as an introduction to the SDK of any [id Tech 4](Id_Tech_4 "Id Tech 4") game, and is intended for absolute beginners. If some parts are unclear, please post in this article's **[talk](Talk:Beginner%27s_Tutorial_%28Part_2%29_The_SDK "Talk:Beginner's Tutorial (Part 2) The SDK")** page.
 
 Introduction
 ------------
 
-This particular tutorial is NOT meant to tell you how to code with the
-SDK, it only explains what it is and what you can do with it. This
-tutorial assumes that you already read the [Beginner's Tutorial (Part 1)
-Filetypes](Beginner%27s_Tutorial_%28Part_1%29_Filetypes "Beginner's Tutorial (Part 1) Filetypes")
-to understand the various files used in the Doom 3 environment. The
-tutorial is not dependent on a particular OS, but for convenience only
-the name *gamex86.dll* is mentioned which is not available on Linux or
-Mac OS. Since the tutorial is not focusing on actual implementation, it
-doesn't matter whether we refer to *gamex86.dll* or *gamex86.so* .
+This particular tutorial is NOT meant to tell you how to code with the SDK, it only explains what it is and what you can do with it. This tutorial assumes that you already read the [Beginner's Tutorial (Part 1) Filetypes](Beginner%27s_Tutorial_%28Part_1%29_Filetypes "Beginner's Tutorial (Part 1) Filetypes") to understand the various files used in the Doom 3 environment. The tutorial is not dependent on a particular OS, but for convenience only the name *gamex86.dll* is mentioned which is not available on Linux or Mac OS. Since the tutorial is not focusing on actual implementation, it doesn't matter whether we refer to *gamex86.dll* or *gamex86.so* .
 
 General design
 --------------
 
-Doom 3 is designed in several parts, which can be viewed as independent
-modules. Each of this modules has a specific task and all combined
-together make up the game that you know as Doom 3. The main parts of
-this game are: Doom 3 executable: This is the core of the game engine
-and contains all of the code that is required to load the other parts.
-This part is inaccessible to moders and can not be modified by normal
-means (except with reverse engineering or special tools). This
-executable contains the startup code, the resources for the dialogs in
-the editor, scripting-, render-, sound- and networkengine and various
-other parts to interface with your operating system.
+Doom 3 is designed in several parts, which can be viewed as independent modules. Each of this modules has a specific task and all combined together make up the game that you know as Doom 3. The main parts of this game are: Doom 3 executable: This is the core of the game engine and contains all of the code that is required to load the other parts. This part is inaccessible to moders and can not be modified by normal means (except with reverse engineering or special tools). This executable contains the startup code, the resources for the dialogs in the editor, scripting-, render-, sound- and networkengine and various other parts to interface with your operating system.
 
-gamex86.dll: This is the actual game code and is accessible via the SDK.
-It contains the low-level interface with the renderengine and the game
-logic. It defines the rules for your game and is also responsible for
-loading maps, loading all mapobjects, making the mapobjects available to
-the renderengine and doing everything else required to run your game.
-This file may be named differently on other operating systems like Linux
-or Mac OS.
+gamex86.dll: This is the actual game code and is accessible via the SDK. It contains the low-level interface with the renderengine and the game logic. It defines the rules for your game and is also responsible for loading maps, loading all mapobjects, making the mapobjects available to the renderengine and doing everything else required to run your game. This file may be named differently on other operating systems like Linux or Mac OS.
 
-PK4: The PK4 files contain the high-level parts of your game. It
-consists of the art resources, sounds, textures, materials, scripts and
-other stuff.
+PK4: The PK4 files contain the high-level parts of your game. It consists of the art resources, sounds, textures, materials, scripts and other stuff.
 
 Scripts vs. SDK
 ---------------
 
-Even though script files are stored within the PK4 files as part of the
-high-level gamecode, in this context, they are worth mentioning here
-separately. Scripts also contain gamecode, just like gamex86.dll does.
-The major difference between the scriptcode and DLL code is that the DLL
-contains machine instructions which are directly processable by your
-CPU, while scriptcode is simply ASCII text interpreted by the script
-engine. In theory, you can program most of the gamelogic in scripts as
-well.
+Even though script files are stored within the PK4 files as part of the high-level gamecode, in this context, they are worth mentioning here separately. Scripts also contain gamecode, just like gamex86.dll does. The major difference between the scriptcode and DLL code is that the DLL contains machine instructions which are directly processable by your CPU, while scriptcode is simply ASCII text interpreted by the script engine. In theory, you can program most of the gamelogic in scripts as well.
 
-Many functions are accessible via scripting, so you may not need to
-modify the SDK for many purposes. However, the SDK is much more
-versatile and allows you to utilize the full capacity and speed of your
-machine. Also, in order to do something with a script, you must have
-appropriate functions in the SDK to be used by the script. While
-scripting is quite powerful, it will not give you full access to all
-data structures and features that may be required for a full game
-implementation.
+Many functions are accessible via scripting, so you may not need to modify the SDK for many purposes. However, the SDK is much more versatile and allows you to utilize the full capacity and speed of your machine. Also, in order to do something with a script, you must have appropriate functions in the SDK to be used by the script. While scripting is quite powerful, it will not give you full access to all data structures and features that may be required for a full game implementation.
 
 SDK Code
 --------
 
-The SDK is a C++ project repository and contains all the files required
-to compile the gamex86.dll. This includes the CPP and H files, which
-contain the actual code, as well as the makefiles, workspace files and
-others, depending on the operating system. In order to use the SDK you
-must install a suitable compiler for your operating system. For your
-convenience you can install a debugger (if it didn't come with your
-compiler) but it is not strictly necessary. You can code without use of
-a debugger and rely on log files instead, although it has some
-advantages as well as disadvantages over a debugger.
+The SDK is a C++ project repository and contains all the files required to compile the gamex86.dll. This includes the CPP and H files, which contain the actual code, as well as the makefiles, workspace files and others, depending on the operating system. In order to use the SDK you must install a suitable compiler for your operating system. For your convenience you can install a debugger (if it didn't come with your compiler) but it is not strictly necessary. You can code without use of a debugger and rely on log files instead, although it has some advantages as well as disadvantages over a debugger.
 
-In order to understand the C++ code you should first get a good book on
-C++ or alternatively look up some C++ tutorials. There are a lot of
-websites and newsgroups with this topic. Firing up
-[Google](http://www.google.com/ "http://www.google.com") and using 'C++
-tutorial' as your search term should yield a nice list of such sites.
-For USENET you can use comp.lang.c++ or alt.comp.lang.learn.c-c++ as a
-good starting place. It is possible to start with the SDK straight away.
-However, the SDK code is quite complex for a beginner, so you might
-think about writing some small sample applications to get familiar with
-the C++ syntax and your compiler environment. Keywords you should focus
-on are:
+In order to understand the C++ code you should first get a good book on C++ or alternatively look up some C++ tutorials. There are a lot of websites and newsgroups with this topic. Firing up [Google](http://www.google.com/ "http://www.google.com") and using 'C++ tutorial' as your search term should yield a nice list of such sites. For USENET you can use comp.lang.c++ or alt.comp.lang.learn.c-c++ as a good starting place. It is possible to start with the SDK straight away. However, the SDK code is quite complex for a beginner, so you might think about writing some small sample applications to get familiar with the C++ syntax and your compiler environment. Keywords you should focus on are:
 
 -   constructor/destructor
 -   instance, object, class, method, function
@@ -96,42 +35,21 @@ on are:
 -   operator overloading
 -   (virtual) function
 
-Depending on your previous experience with computer programming, these
-concepts may be more or less easy for you to understand. Of course these
-terms just should get you started on object oriented programming with
-C++ and is not a complete list of stuff you should get familiar with.
-The terms are ordered in the way you should get familiar with them. This
-is not an exhaustive list and you should basically know how to program C
-with the newer C++ concepts like *streams* . If you don't know how C
-code looks or how to create functions, please learn how to do so first.
+Depending on your previous experience with computer programming, these concepts may be more or less easy for you to understand. Of course these terms just should get you started on object oriented programming with C++ and is not a complete list of stuff you should get familiar with. The terms are ordered in the way you should get familiar with them. This is not an exhaustive list and you should basically know how to program C with the newer C++ concepts like *streams* . If you don't know how C code looks or how to create functions, please learn how to do so first.
 
 What to do with this SDK Code?
 ------------------------------
 
-As explained above, you can either use scripts or the SDK in order to
-implement your game. So when should you use what? The answer is not so
-clear cut as it may seem. Depending on your familiarity with C++, you
-might opt for coding everything in C++. This would be a valid thing to
-do, but it may not be the best course of action. The reason is that in
-C++, bugs can cause much severe problems then in scripting, and they may
-be hard to find.
+As explained above, you can either use scripts or the SDK in order to implement your game. So when should you use what? The answer is not so clear cut as it may seem. Depending on your familiarity with C++, you might opt for coding everything in C++. This would be a valid thing to do, but it may not be the best course of action. The reason is that in C++, bugs can cause much severe problems then in scripting, and they may be hard to find.
 
-Scripting is at a much higher level, therefore you don't need to know
-all the internal details compared to the C++ code. So when you want to
-implement a new weapon or modify the behaviour of the AI, scripting is
-faster (in terms of implementation) than doing the same in C++. If you
-need to change specific aspects of the game you might have to resort to
-using the SDK because not everything is possible with scripting.
+Scripting is at a much higher level, therefore you don't need to know all the internal details compared to the C++ code. So when you want to implement a new weapon or modify the behaviour of the AI, scripting is faster (in terms of implementation) than doing the same in C++. If you need to change specific aspects of the game you might have to resort to using the SDK because not everything is possible with scripting.
 
-So the general advice would be: do as much as you can by scripting
-because it can be changed easily. Everything else needing more
-processing power or low-level access must be done in C++ coding.
+So the general advice would be: do as much as you can by scripting because it can be changed easily. Everything else needing more processing power or low-level access must be done in C++ coding.
 
 Whats up with this compiler thing?
 ----------------------------------
 
-When you look into the SDK and open *player.cpp* for example, you may
-see some strange things like:
+When you look into the SDK and open *player.cpp* for example, you may see some strange things like:
 
        idPlayer::idPlayer()
        {
@@ -151,31 +69,17 @@ see some strange things like:
           ...
        }
 
-This is just an example and in this case it is the constructor for the
-idPlayer class which represents your player character. The one you can
-see on screen when you type
+This is just an example and in this case it is the constructor for the idPlayer class which represents your player character. The one you can see on screen when you type
 
     com_thirdperson 1
 
-in the console. As you can see in this example, some variables are
-initialized with some default values. In order for the CPU to actually
-understand what it should do you must first translate it from the human
-readable representation (the code shown above) into machine code. In
-order to do this, you always have to do three steps.
+in the console. As you can see in this example, some variables are initialized with some default values. In order for the CPU to actually understand what it should do you must first translate it from the human readable representation (the code shown above) into machine code. In order to do this, you always have to do three steps.
 
 1.  Write code such as above
 2.  Compile the code into an object file
-3.  Link the object file into an executable file or shared library.
-    (Windows users mostly know this as a DLL file.)
+3.  Link the object file into an executable file or shared library. (Windows users mostly know this as a DLL file.)
 
-Since you are most likely using either the Windows Developer Environment
-from Microsoft or using the provided makefiles for use in Linux, you
-don't have to do all of this manually. You only have to run the
-appropriate command to trigger these actions, the environment is doing
-these steps for you.
+Since you are most likely using either the Windows Developer Environment from Microsoft or using the provided makefiles for use in Linux, you don't have to do all of this manually. You only have to run the appropriate command to trigger these actions, the environment is doing these steps for you.
 
-When finished you can copy the library file to your mod directory and
-run Doom 3 with your mod to test your changes. If you made a mistake or
-the code doesn't do what you wanted, then go back to step one and repeat
-until you are satisfied.
+When finished you can copy the library file to your mod directory and run Doom 3 with your mod to test your changes. If you made a mistake or the code doesn't do what you wanted, then go back to step one and repeat until you are satisfied.
 

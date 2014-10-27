@@ -1,8 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -12,8 +11,7 @@ Modifies the orientation of the joint based on the transform type.
 Usage
 -----
 
-void setJointAngle( float jointnum, float transform\_type, vector angles
-)
+void setJointAngle( float jointnum, float transform\_type, vector angles )
 
 Parameters
 ----------
@@ -30,5 +28,4 @@ Notes
 
 tba
 
-\
 

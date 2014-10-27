@@ -1,21 +1,11 @@
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/f/f9/Etqwsquare_bg.png) The information on this page is
-specific to [Enemy Territory: Quake
-Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
-
-</div>
+![](/images/f/f9/Etqwsquare_bg.png) The information on this page is specific to [Enemy Territory: Quake Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
 
 ------------------------------------------------------------------------
 
 Description
 -----------
 
-sdCVarWrapper is used to provide access to a [cvar](Console "Console")
-from the script system, specifically via an object reference returned by
-the system event
-[getCVar](GetCVar_%28script_event%29 "GetCVar (script event)") .
+sdCVarWrapper is used to provide access to a [cvar](Console "Console") from the script system, specifically via an object reference returned by the system event [getCVar](GetCVar_%28script_event%29 "GetCVar (script event)") .
 
 Inheritance
 -----------
@@ -25,8 +15,7 @@ This class is derived from the following:
 -   *[idClass](IdClass_%28class%29 "IdClass (class)")*
     -   *[sdCVarWrapper](SdCVarWrapper_%28class%29 "SdCVarWrapper (class)")*
 
-**Note** : Entries marked in italics are classes defined in the [game
-code](Coding#Game_code "Coding") .
+**Note** : Entries marked in italics are classes defined in the [game code](Coding#Game_code "Coding") .
 
 Events
 ------

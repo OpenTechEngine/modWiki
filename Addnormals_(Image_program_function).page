@@ -1,8 +1,7 @@
 Description
 -----------
 
-This function will add the normals of two normal map images and
-normalize the result.
+This function will add the normals of two normal map images and normalize the result.
 
 Usage
 -----
@@ -20,8 +19,7 @@ Example
 
 Add two normal maps...
 
-Combining both a height and a normal bump map using this function. This
-is the most common usage of addnormals.
+Combining both a height and a normal bump map using this function. This is the most common usage of addnormals.
 
     textures/height_and_normal
     {
@@ -54,5 +52,4 @@ Notes
 
 None.
 
-\
 

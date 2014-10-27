@@ -1,5 +1,4 @@
-LipSync declarations define the associated visemes to use in order for a
-character to convincingly speak the given text.
+LipSync declarations define the associated visemes to use in order for a character to convincingly speak the given text.
 
 Syntax
 ------
@@ -14,21 +13,14 @@ Syntax
        ...
     }
 
-The first line begins with the text "lipSync" which defines this
-declaration to be of the lipSync type. This is followed by the name of
-the declaration.
+The first line begins with the text "lipSync" which defines this declaration to be of the lipSync type. This is followed by the name of the declaration.
 
-The declaration is then opened with an opening bracket and closed with a
-closing bracket.
+The declaration is then opened with an opening bracket and closed with a closing bracket.
 
-Inside the declaration is a series of fields and values. All values are
-strings enclosed in quotation marks.
+Inside the declaration is a series of fields and values. All values are strings enclosed in quotation marks.
 
 -   [description] - The spoken text.
--   [text] - This field is in the form of a string reference. The value
-    resolves to the translation of the spoken text as gathered from the
-    coorisponding [language
-    file](LANG_%28file_format%29 "LANG (file format)") .
+-   [text] - This field is in the form of a string reference. The value resolves to the translation of the spoken text as gathered from the coorisponding [language file](LANG_%28file_format%29 "LANG (file format)") .
 -   [visemes] - Two values are assigned to this field...
     -   [lang] - The language for which the viseme data applies.
     -   [data] - The actual viseme data.
@@ -43,39 +35,23 @@ According to wikipedia a viseme is...
     view sounds visually - effectively, "lip-reading" the entire human face. In computer animation,
     visemes can be used as intermediate poses to give the illusion of speaking.
 
-So in the case of Quake 4, the data field of a visemes line is comprised
-of a series of visemes. Each of which describes to the engine the state
-of the face of a character much like key frames in an animation. When
-these visemes are applied to a character in sequence it gives the
-apperance that the character's facial movements are in sync with a given
-sound.
+So in the case of Quake 4, the data field of a visemes line is comprised of a series of visemes. Each of which describes to the engine the state of the face of a character much like key frames in an animation. When these visemes are applied to a character in sequence it gives the apperance that the character's facial movements are in sync with a given sound.
 
 ### Visemes Syntax
 
-As an example taken directly from Quake 4 source files, the viseme data
-for "On my way, sir." looks like so...
+As an example taken directly from Quake 4 source files, the viseme data for "On my way, sir." looks like so...
 
     "x12n <On> AA22z n3u <my> m3q AY3q <way> w8r EY7q x5g <sir> s3k ER17x x12o "
 
 Some things to note...
 
--   The use of \<\> to enclose words. These are markers to indicate
-    comments. They are not interpreted by the engine. Their sole purpose
-    is to make it easier for the end user to read.
--   The use of phonemes as listed on [Annosoft's Phoneme Codes
-    Webpage](https://web.archive.org/web/20100521043500/http://www.annosoft.com/phoneset.htm "http://www.annosoft.com/phoneset.htm")
--   The use of a number directly following each phoneme. This defines
-    the duration of a given phoneme. It's currently unknown what unit of
-    measure this is in. It could be frames, milliseconds, samples,
-    ect...
--   The use of a single lowercase letter directly following the
-    duration. This defines the intensity of the phoneme for mouth
-    movement, where a would be the lowest value and z would be the
-    highest value.
+-   The use of \<\> to enclose words. These are markers to indicate comments. They are not interpreted by the engine. Their sole purpose is to make it easier for the end user to read.
+-   The use of phonemes as listed on [Annosoft's Phoneme Codes Webpage](https://web.archive.org/web/20100521043500/http://www.annosoft.com/phoneset.htm "http://www.annosoft.com/phoneset.htm")
+-   The use of a number directly following each phoneme. This defines the duration of a given phoneme. It's currently unknown what unit of measure this is in. It could be frames, milliseconds, samples, ect...
+-   The use of a single lowercase letter directly following the duration. This defines the intensity of the phoneme for mouth movement, where a would be the lowest value and z would be the highest value.
 -   The use of spaces to separate both viseme groups and comments.
 
-It is also possible to cue facial expressions by including the following
-modifiers in the visemes data field...
+It is also possible to cue facial expressions by including the following modifiers in the visemes data field...
 
 -   {furrow}
 -   {idle}

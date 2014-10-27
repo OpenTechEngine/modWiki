@@ -1,19 +1,15 @@
-Used to make a GUI trigger any target entities attached to the GUI
-entity.
+Used to make a GUI trigger any target entities attached to the GUI entity.
 
 Syntax
 ------
 
     activate
 
-The command has no parameters, set the *target* key on the GUI entity to
-control the attached entities. It needs to be used with
-[set](Set_%28GUI_command%29 "Set (GUI command)") .
+The command has no parameters, set the *target* key on the GUI entity to control the attached entities. It needs to be used with [set](Set_%28GUI_command%29 "Set (GUI command)") .
 
 Example(s)
 ----------
 
     set "cmd" "activate";
 
-\
 

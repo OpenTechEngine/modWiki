@@ -1,8 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -28,10 +27,8 @@ Examples
 Notes
 -----
 
-This script event returns the length of time between game frames as a
-float.
+This script event returns the length of time between game frames as a float.
 
 This is not related to renderer frame rate.
 
-\
 

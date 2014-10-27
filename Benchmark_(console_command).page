@@ -1,9 +1,7 @@
 Description
 -----------
 
-Renders the scene with
-[r\_screenFraction](R_screenFraction_%28cvar%29 "R screenFraction (cvar)")
-set at 100 down to 10 in increments of 10.
+Renders the scene with [r\_screenFraction](R_screenFraction_%28cvar%29 "R screenFraction (cvar)") set at 100 down to 10 in increments of 10.
 
 Usage
 -----
@@ -20,10 +18,6 @@ This console command does not accept parameters.
 Notes
 -----
 
-Benchmark doesn't re-run any of the game code and doesn't regenerate
-shadows so it's almost completely GPU dependant. More video memory
-probably won't help in this case unless that single scene is using more
-textures than can fit in vram.
+Benchmark doesn't re-run any of the game code and doesn't regenerate shadows so it's almost completely GPU dependant. More video memory probably won't help in this case unless that single scene is using more textures than can fit in vram.
 
-\
 

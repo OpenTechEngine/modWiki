@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Player_artificial_mp_%28entity%29 "http://modwiki.net/w/index.php?title=Player_artificial_mp_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Player_artificial_mp_%28entity%29 "http://modwiki.net/w/index.php?title=Player_artificial_mp_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Player_artificial_mp_%28entity%29 "http://modwiki.net/w/index.php?title=Player_artificial_mp_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Player_artificial_mp_%28entity%29 "http://modwiki.net/w/index.php?title=Player_artificial_mp_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -28,527 +10,526 @@ Description not available.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                               DESCRIPTION
-  --------------------------------- ----------------------------
-  CraneAttachable                   Description not available.
-  RailAttachable                    Description not available.
-  ShuttleAttachable                 Description not available.
-  accepts\_wounds                   Description not available.
-  accurateguitrace                  Description not available.
-  alignToJoint                      Description not available.
-  ammo\_acid                        Description not available.
-  ammo\_autocannon                  Description not available.
-  ammo\_autocannon\_grenade         Description not available.
-  ammo\_crawler                     Description not available.
-  ammo\_crawler\_red                Description not available.
-  ammo\_energy                      Description not available.
-  ammo\_rifle                       Description not available.
-  ammo\_sniper                      Description not available.
-  ammo\_spiritpower                 Description not available.
-  angle                             Description not available.
-  anim                              Description not available.
-  applyDamageEffects                Description not available.
-  armor                             Description not available.
-  armor\_protection                 Description not available.
-  bind                              Description not available.
-  bindOrientated                    Description not available.
-  bindToBody                        Description not available.
-  bindToJoint                       Description not available.
-  bindanim                          Description not available.
-  blink\_max                        Description not available.
-  blink\_min                        Description not available.
-  bone\_camera                      Description not available.
-  bone\_chest                       Description not available.
-  bone\_focus                       Description not available.
-  bone\_head                        Description not available.
-  bone\_hips                        Description not available.
-  bone\_jaw                         Description not available.
-  bone\_leftEye                     Description not available.
-  bone\_rightEye                    Description not available.
-  bone\_waist                       Description not available.
-  bone\_weapon\_bind                Description not available.
-  cameraTarget                      Description not available.
-  cinematic                         Description not available.
-  classname                         Description not available.
-  clipmodel                         Description not available.
-  cone                              Description not available.
-  current\_weapon                   Description not available.
-  cursor                            Description not available.
-  cylinder                          Description not available.
-  damageScaleInSpirit               Description not available.
-  damage\_scale XXXX                Description not available.
-  damage\_zone XXXX                 Description not available.
-  ddaCreatureDeath                  Description not available.
-  ddaDamage                         Description not available.
-  ddaDeath                          Description not available.
-  ddaFlailAdjust                    Description not available.
-  ddaFlailLevel                     Description not available.
-  ddaIndexMax                       Description not available.
-  ddaUpdateRate                     Description not available.
-  dda\_heartbeat                    Description not available.
-  deathWalkDeathPowerIncreaseRate   Description not available.
-  deathWalkFOVChange                Description not available.
-  deathWalkFlashChange              Description not available.
-  deathWalkMaxWraiths               Description not available.
-  deathWalkMinTime                  Description not available.
-  deathWalkPowerDrain               Description not available.
-  deathWalkPowerEnergyBoost         Description not available.
-  deathWalkPowerMax                 Description not available.
-  deathWalkPowerStart               Description not available.
-  deathWalkTimer                    Description not available.
-  deathWalkWraithDamage             Description not available.
-  deathWalk\_firstTimeDelay         Description not available.
-  deathWraithHealthAmount           Description not available.
-  deathWraithPowerAmount            Description not available.
-  deathWraithSpiritAmount           Description not available.
-  deathwalkBodyDropDelayMS          Description not available.
-  deathwalkFOV                      Description not available.
-  deathwalkOffsetBelowPortal        Description not available.
-  def\_damageFatalFall              Description not available.
-  def\_damageFellOnto               Description not available.
-  def\_damageHardFall               Description not available.
-  def\_damageSoftFall               Description not available.
-  def\_deathProxy                   Description not available.
-  def\_deathProxy\_mp               Description not available.
-  def\_deathWalkProxy               Description not available.
-  def\_deathWraith                  Description not available.
-  def\_dropsSoul                    Description not available.
-  def\_guihand                      Description not available.
-  def\_hawkpower                    Description not available.
-  def\_possessedProxy               Description not available.
-  def\_precache1                    Description not available.
-  def\_precache2                    Description not available.
-  def\_precache3                    Description not available.
-  def\_precache4                    Description not available.
-  def\_precache5                    Description not available.
-  def\_precache6                    Description not available.
-  def\_precache7                    Description not available.
-  def\_precache8                    Description not available.
-  def\_precacheWraith               Description not available.
-  def\_resurrect\_damage            Description not available.
-  def\_spiritProxy                  Description not available.
-  def\_weapon0                      Description not available.
-  def\_weapon1                      Description not available.
-  def\_weapon10                     Description not available.
-  def\_weapon11                     Description not available.
-  def\_weapon12                     Description not available.
-  def\_weapon13                     Description not available.
-  def\_weapon14                     Description not available.
-  def\_weapon15                     Description not available.
-  def\_weapon2                      Description not available.
-  def\_weapon3                      Description not available.
-  def\_weapon4                      Description not available.
-  def\_weapon5                      Description not available.
-  def\_weapon6                      Description not available.
-  def\_weapon7                      Description not available.
-  def\_weapon8                      Description not available.
-  def\_weapon9                      Description not available.
-  density                           Description not available.
-  dispose\_delay                    Description not available.
-  fallDist\_fatal                   Description not available.
-  fallDist\_jump                    Description not available.
-  fallDist\_soft                    Description not available.
-  fov                               Description not available.
-  fx\_spiritReturn                  Description not available.
-  fx\_spiritWalkFlash               Description not available.
-  gravity                           Description not available.
-  guiTarget                         Description not available.
-  hangID                            Description not available.
-  head\_joint                       Description not available.
-  head\_offset                      Description not available.
-  health                            Description not available.
-  healthRecharge                    Description not available.
-  healthRechargeDelay               Description not available.
-  healthRechargeRate                Description not available.
-  hide                              Description not available.
-  hud                               Description not available.
-  ignoreGravityZones                Description not available.
-  ik\_ankle1                        Description not available.
-  ik\_ankle2                        Description not available.
-  ik\_dir1                          Description not available.
-  ik\_dir2                          Description not available.
-  ik\_foot1                         Description not available.
-  ik\_foot2                         Description not available.
-  ik\_footDownTrace                 Description not available.
-  ik\_footSize                      Description not available.
-  ik\_footUpTrace                   Description not available.
-  ik\_hip1                          Description not available.
-  ik\_hip2                          Description not available.
-  ik\_knee1                         Description not available.
-  ik\_knee2                         Description not available.
-  ik\_minWaistAnkleDist             Description not available.
-  ik\_minWaistFloorDist             Description not available.
-  ik\_numLegs                       Description not available.
-  ik\_tiltWaist                     Description not available.
-  ik\_usePivot                      Description not available.
-  ik\_waist                         Description not available.
-  immunityspirit1                   Description not available.
-  inherit                           Description not available.
-  item                              Description not available.
-  jawbone\_Head                     Description not available.
-  jawbone\_LeftBrow                 Description not available.
-  jawbone\_LeftCheek                Description not available.
-  jawbone\_LeftCorner               Description not available.
-  jawbone\_LeftLowerLip             Description not available.
-  jawbone\_LeftUpperLip             Description not available.
-  jawbone\_MidBrow                  Description not available.
-  jawbone\_MidLowerLip              Description not available.
-  jawbone\_MidUpperLip              Description not available.
-  jawbone\_RightBrow                Description not available.
-  jawbone\_RightCheek               Description not available.
-  jawbone\_RightCorner              Description not available.
-  jawbone\_RightLowerLip            Description not available.
-  jawbone\_RightUpperLip            Description not available.
-  jawbone\_jaw                      Description not available.
-  jawflagRMin\_Head                 Description not available.
-  jawflapR\_Head                    Description not available.
-  jawflapR\_Jaw                     Description not available.
-  jawflapR\_MidLowerLip             Description not available.
-  jawflapR\_MidUpperLip             Description not available.
-  jawflapTMin\_LeftBrow             Description not available.
-  jawflapTMin\_MidBrow              Description not available.
-  jawflapTMin\_RightBrow            Description not available.
-  jawflapT\_Head                    Description not available.
-  jawflapT\_LeftBrow                Description not available.
-  jawflapT\_LeftCheek               Description not available.
-  jawflapT\_LeftCorner              Description not available.
-  jawflapT\_LeftLowerLip            Description not available.
-  jawflapT\_LeftUpperLip            Description not available.
-  jawflapT\_MidBrow                 Description not available.
-  jawflapT\_MidLowerLip             Description not available.
-  jawflapT\_MidUpperLip             Description not available.
-  jawflapT\_RightBrow               Description not available.
-  jawflapT\_RightCheek              Description not available.
-  jawflapT\_RightCorner             Description not available.
-  jawflapT\_RightLowerLip           Description not available.
-  jawflapT\_RightUpperLip           Description not available.
-  kickDamping                       Description not available.
-  kickSpring                        Description not available.
-  lighterColorB                     Description not available.
-  lighterColorG                     Description not available.
-  lighterColorR                     Description not available.
-  lighterCoolRate                   Description not available.
-  lighterHeatRate                   Description not available.
-  lighter\_radius                   Description not available.
-  lighter\_ysize                    Description not available.
-  lighter\_yspeed                   Description not available.
-  lighter\_zsize                    Description not available.
-  lighter\_zspeed                   Description not available.
-  matter                            Description not available.
-  maxCrashlandVolumedB              Description not available.
-  max\_ammo\_acid                   Description not available.
-  max\_ammo\_autocannon             Description not available.
-  max\_ammo\_autocannon\_grenade    Description not available.
-  max\_ammo\_crawler                Description not available.
-  max\_ammo\_crawler\_red           Description not available.
-  max\_ammo\_energy                 Description not available.
-  max\_ammo\_rifle                  Description not available.
-  max\_ammo\_sniper                 Description not available.
-  max\_ammo\_spiritpower            Description not available.
-  maxarmor                          Description not available.
-  maxhealth                         Description not available.
-  maxs                              Description not available.
-  minCrashlandVolumedB              Description not available.
-  minResurrectHealth                Description not available.
-  mins                              Description not available.
-  model                             Description not available.
-  model\_head                       Description not available.
-  model\_mp0                        Description not available.
-  model\_mp1                        Description not available.
-  model\_mp10                       Description not available.
-  model\_mp11                       Description not available.
-  model\_mp12                       Description not available.
-  model\_mp13                       Description not available.
-  model\_mp14                       Description not available.
-  model\_mp15                       Description not available.
-  model\_mp16                       Description not available.
-  model\_mp17                       Description not available.
-  model\_mp18                       Description not available.
-  model\_mp2                        Description not available.
-  model\_mp3                        Description not available.
-  model\_mp4                        Description not available.
-  model\_mp5                        Description not available.
-  model\_mp6                        Description not available.
-  model\_mp7                        Description not available.
-  model\_mp8                        Description not available.
-  model\_mp9                        Description not available.
-  moveToJoint                       Description not available.
-  mtr\_deathWalk                    Description not available.
-  mtr\_icon\_chat                   Description not available.
-  mtr\_icon\_lag                    Description not available.
-  mtr\_icon\_sameteam               Description not available.
-  mtr\_lighter                      Description not available.
-  mtr\_modelPortrait0               Description not available.
-  mtr\_modelPortrait1               Description not available.
-  mtr\_modelPortrait10              Description not available.
-  mtr\_modelPortrait11              Description not available.
-  mtr\_modelPortrait12              Description not available.
-  mtr\_modelPortrait13              Description not available.
-  mtr\_modelPortrait14              Description not available.
-  mtr\_modelPortrait15              Description not available.
-  mtr\_modelPortrait16              Description not available.
-  mtr\_modelPortrait17              Description not available.
-  mtr\_modelPortrait18              Description not available.
-  mtr\_modelPortrait2               Description not available.
-  mtr\_modelPortrait3               Description not available.
-  mtr\_modelPortrait4               Description not available.
-  mtr\_modelPortrait5               Description not available.
-  mtr\_modelPortrait6               Description not available.
-  mtr\_modelPortrait7               Description not available.
-  mtr\_modelPortrait8               Description not available.
-  mtr\_modelPortrait9               Description not available.
-  mtr\_modelPortraitThumb0          Description not available.
-  mtr\_modelPortraitThumb1          Description not available.
-  mtr\_modelPortraitThumb10         Description not available.
-  mtr\_modelPortraitThumb11         Description not available.
-  mtr\_modelPortraitThumb12         Description not available.
-  mtr\_modelPortraitThumb13         Description not available.
-  mtr\_modelPortraitThumb14         Description not available.
-  mtr\_modelPortraitThumb15         Description not available.
-  mtr\_modelPortraitThumb16         Description not available.
-  mtr\_modelPortraitThumb17         Description not available.
-  mtr\_modelPortraitThumb18         Description not available.
-  mtr\_modelPortraitThumb2          Description not available.
-  mtr\_modelPortraitThumb3          Description not available.
-  mtr\_modelPortraitThumb4          Description not available.
-  mtr\_modelPortraitThumb5          Description not available.
-  mtr\_modelPortraitThumb6          Description not available.
-  mtr\_modelPortraitThumb7          Description not available.
-  mtr\_modelPortraitThumb8          Description not available.
-  mtr\_modelPortraitThumb9          Description not available.
-  mtr\_spiritWalk                   Description not available.
-  name                              Description not available.
-  networkSync                       Description not available.
-  neverDormant                      Description not available.
-  noJawFlap                         Description not available.
-  noPortal                          Description not available.
-  noclipmodel                       Description not available.
-  numAttackComments                 Description not available.
-  offset\_aim                       Description not available.
-  offset\_lighter                   Description not available.
-  origin                            Description not available.
-  pain\_delay                       Description not available.
-  pm\_bboxwidth                     Description not available.
-  pm\_crouchbob                     Description not available.
-  pm\_crouchheight                  Description not available.
-  pm\_crouchrate                    Description not available.
-  pm\_crouchspeed                   Description not available.
-  pm\_crouchviewheight              Description not available.
-  pm\_deadheight                    Description not available.
-  pm\_deadviewheight                Description not available.
-  pm\_jumpheight                    Description not available.
-  pm\_maxviewpitch                  Description not available.
-  pm\_minviewpitch                  Description not available.
-  pm\_modelview                     Description not available.
-  pm\_noclipspeed                   Description not available.
-  pm\_normalheight                  Description not available.
-  pm\_normalviewheight              Description not available.
-  pm\_runbob                        Description not available.
-  pm\_stamina                       Description not available.
-  pm\_staminarate                   Description not available.
-  pm\_staminathreshold              Description not available.
-  pm\_stepsize                      Description not available.
-  pm\_walkbob                       Description not available.
-  pm\_walkspeed                     Description not available.
-  possessionTime                    Description not available.
-  prepareForDeathWorldDelay         Description not available.
-  produces\_splats                  Description not available.
-  push\_cosine                      Description not available.
-  pushes                            Description not available.
-  ragdoll                           Description not available.
-  requirement\_bowvision            Description not available.
-  requirement\_deathwalk            Description not available.
-  requirement\_hunterhand           Description not available.
-  requirement\_lighter              Description not available.
-  requirement\_spiritwalk           Description not available.
-  requirement\_talon                Description not available.
-  requirement\_wallwalk             Description not available.
-  respawn\_delay                    Description not available.
-  resurrectFOVChange                Description not available.
-  resurrectFlashChange              Description not available.
-  rifleAmmoRechargeMax              Description not available.
-  rifleAmmoRechargeRate             Description not available.
-  rotation                          Description not available.
-  scriptobject                      Description not available.
-  size                              Description not available.
-  skin\_Spiritwalk                  Description not available.
-  skin\_mpspirit0                   Description not available.
-  skin\_mpspirit1                   Description not available.
-  skin\_mpspirit10                  Description not available.
-  skin\_mpspirit11                  Description not available.
-  skin\_mpspirit12                  Description not available.
-  skin\_mpspirit13                  Description not available.
-  skin\_mpspirit14                  Description not available.
-  skin\_mpspirit15                  Description not available.
-  skin\_mpspirit16                  Description not available.
-  skin\_mpspirit17                  Description not available.
-  skin\_mpspirit18                  Description not available.
-  skin\_mpspirit2                   Description not available.
-  skin\_mpspirit3                   Description not available.
-  skin\_mpspirit4                   Description not available.
-  skin\_mpspirit5                   Description not available.
-  skin\_mpspirit6                   Description not available.
-  skin\_mpspirit7                   Description not available.
-  skin\_mpspirit8                   Description not available.
-  skin\_mpspirit9                   Description not available.
-  snd\_death                        Description not available.
-  snd\_deathWalkActivate            Description not available.
-  snd\_deathWalkDeactivate          Description not available.
-  snd\_deathWalkIdle                Description not available.
-  snd\_death\_female                Description not available.
-  snd\_firstDeathWalk1              Description not available.
-  snd\_firstDeathWalk2              Description not available.
-  snd\_firstDeathWalk3              Description not available.
-  snd\_footstep\_altmetal           Description not available.
-  snd\_footstep\_cardboard          Description not available.
-  snd\_footstep\_flesh              Description not available.
-  snd\_footstep\_forcefield         Description not available.
-  snd\_footstep\_glass              Description not available.
-  snd\_footstep\_liquid             Description not available.
-  snd\_footstep\_metal              Description not available.
-  snd\_footstep\_pipe               Description not available.
-  snd\_footstep\_stone              Description not available.
-  snd\_footstep\_tile               Description not available.
-  snd\_footstep\_wallwalk           Description not available.
-  snd\_footstep\_wood               Description not available.
-  snd\_healthpulse                  Description not available.
-  snd\_hitFeedback                  Description not available.
-  snd\_hitSpiritFeedback            Description not available.
-  snd\_hitTeamFeedback              Description not available.
-  snd\_jump                         Description not available.
-  snd\_land\_altmetal               Description not available.
-  snd\_land\_cardboard              Description not available.
-  snd\_land\_flesh                  Description not available.
-  snd\_land\_forcefield             Description not available.
-  snd\_land\_glass                  Description not available.
-  snd\_land\_liquid                 Description not available.
-  snd\_land\_metal                  Description not available.
-  snd\_land\_pipe                   Description not available.
-  snd\_land\_stone                  Description not available.
-  snd\_land\_tile                   Description not available.
-  snd\_land\_wallwalk               Description not available.
-  snd\_land\_wood                   Description not available.
-  snd\_lighter\_off                 Description not available.
-  snd\_lighter\_on                  Description not available.
-  snd\_lighter\_toohot              Description not available.
-  snd\_lowhealth                    Description not available.
-  snd\_pain\_huge                   Description not available.
-  snd\_pain\_huge\_female           Description not available.
-  snd\_pain\_large                  Description not available.
-  snd\_pain\_large\_female          Description not available.
-  snd\_pain\_medium                 Description not available.
-  snd\_pain\_medium\_female         Description not available.
-  snd\_pain\_small                  Description not available.
-  snd\_pain\_small\_female          Description not available.
-  snd\_spiritReturn                 Description not available.
-  snd\_spiritWalkActivate           Description not available.
-  snd\_spiritWalkDeactivate         Description not available.
-  snd\_spiritWalkDenied             Description not available.
-  snd\_spiritWalkIdle               Description not available.
-  snd\_spiritpulse                  Description not available.
-  snd\_talonAttack0                 Description not available.
-  snd\_talonAttack1                 Description not available.
-  snd\_talonAttack2                 Description not available.
-  snd\_talonAttack3                 Description not available.
-  snd\_talonAttack4                 Description not available.
-  snd\_talonAttack5                 Description not available.
-  snd\_wallwalkActivate             Description not available.
-  snd\_wallwalkDeactivate           Description not available.
-  snd\_wallwalkIdle                 Description not available.
-  solidForTeam                      Description not available.
-  spawnclass                        Description not available.
-  spiritDrainHeartbeat              Description not available.
-  spirit\_weapon                    Description not available.
-  stamina                           Description not available.
-  talonAttackCommentTime            Description not available.
-  target                            Description not available.
-  text\_modelName0                  Description not available.
-  text\_modelName1                  Description not available.
-  text\_modelName10                 Description not available.
-  text\_modelName11                 Description not available.
-  text\_modelName12                 Description not available.
-  text\_modelName13                 Description not available.
-  text\_modelName14                 Description not available.
-  text\_modelName15                 Description not available.
-  text\_modelName16                 Description not available.
-  text\_modelName17                 Description not available.
-  text\_modelName18                 Description not available.
-  text\_modelName2                  Description not available.
-  text\_modelName3                  Description not available.
-  text\_modelName4                  Description not available.
-  text\_modelName5                  Description not available.
-  text\_modelName6                  Description not available.
-  text\_modelName7                  Description not available.
-  text\_modelName8                  Description not available.
-  text\_modelName9                  Description not available.
-  weapon                            Description not available.
-  weapon0\_allowempty               Description not available.
-  weapon0\_best                     Description not available.
-  weapon0\_cycle                    Description not available.
-  weapon0\_toggle                   Description not available.
-  weapon10\_allowempty              Description not available.
-  weapon10\_best                    Description not available.
-  weapon10\_cycle                   Description not available.
-  weapon10\_toggle                  Description not available.
-  weapon11\_allowempty              Description not available.
-  weapon11\_best                    Description not available.
-  weapon11\_cycle                   Description not available.
-  weapon11\_toggle                  Description not available.
-  weapon12\_allowempty              Description not available.
-  weapon12\_best                    Description not available.
-  weapon12\_cycle                   Description not available.
-  weapon12\_toggle                  Description not available.
-  weapon13\_allowempty              Description not available.
-  weapon13\_best                    Description not available.
-  weapon13\_cycle                   Description not available.
-  weapon13\_toggle                  Description not available.
-  weapon14\_allowempty              Description not available.
-  weapon14\_best                    Description not available.
-  weapon14\_cycle                   Description not available.
-  weapon14\_toggle                  Description not available.
-  weapon15\_allowempty              Description not available.
-  weapon15\_best                    Description not available.
-  weapon15\_cycle                   Description not available.
-  weapon15\_toggle                  Description not available.
-  weapon1\_allowempty               Description not available.
-  weapon1\_best                     Description not available.
-  weapon1\_cycle                    Description not available.
-  weapon1\_toggle                   Description not available.
-  weapon2\_allowempty               Description not available.
-  weapon2\_best                     Description not available.
-  weapon2\_cycle                    Description not available.
-  weapon2\_toggle                   Description not available.
-  weapon3\_allowempty               Description not available.
-  weapon3\_best                     Description not available.
-  weapon3\_cycle                    Description not available.
-  weapon3\_toggle                   Description not available.
-  weapon4\_allowempty               Description not available.
-  weapon4\_best                     Description not available.
-  weapon4\_cycle                    Description not available.
-  weapon4\_toggle                   Description not available.
-  weapon5\_allowempty               Description not available.
-  weapon5\_best                     Description not available.
-  weapon5\_cycle                    Description not available.
-  weapon5\_toggle                   Description not available.
-  weapon6\_allowempty               Description not available.
-  weapon6\_best                     Description not available.
-  weapon6\_cycle                    Description not available.
-  weapon6\_toggle                   Description not available.
-  weapon7\_allowempty               Description not available.
-  weapon7\_best                     Description not available.
-  weapon7\_cycle                    Description not available.
-  weapon7\_toggle                   Description not available.
-  weapon8\_allowempty               Description not available.
-  weapon8\_best                     Description not available.
-  weapon8\_cycle                    Description not available.
-  weapon8\_toggle                   Description not available.
-  weapon9\_allowempty               Description not available.
-  weapon9\_best                     Description not available.
-  weapon9\_cycle                    Description not available.
-  weapon9\_toggle                   Description not available.
+| KEY                             | DESCRIPTION                |
+|---------------------------------|----------------------------|
+| CraneAttachable                 | Description not available. |
+| RailAttachable                  | Description not available. |
+| ShuttleAttachable               | Description not available. |
+| accepts\_wounds                 | Description not available. |
+| accurateguitrace                | Description not available. |
+| alignToJoint                    | Description not available. |
+| ammo\_acid                      | Description not available. |
+| ammo\_autocannon                | Description not available. |
+| ammo\_autocannon\_grenade       | Description not available. |
+| ammo\_crawler                   | Description not available. |
+| ammo\_crawler\_red              | Description not available. |
+| ammo\_energy                    | Description not available. |
+| ammo\_rifle                     | Description not available. |
+| ammo\_sniper                    | Description not available. |
+| ammo\_spiritpower               | Description not available. |
+| angle                           | Description not available. |
+| anim                            | Description not available. |
+| applyDamageEffects              | Description not available. |
+| armor                           | Description not available. |
+| armor\_protection               | Description not available. |
+| bind                            | Description not available. |
+| bindOrientated                  | Description not available. |
+| bindToBody                      | Description not available. |
+| bindToJoint                     | Description not available. |
+| bindanim                        | Description not available. |
+| blink\_max                      | Description not available. |
+| blink\_min                      | Description not available. |
+| bone\_camera                    | Description not available. |
+| bone\_chest                     | Description not available. |
+| bone\_focus                     | Description not available. |
+| bone\_head                      | Description not available. |
+| bone\_hips                      | Description not available. |
+| bone\_jaw                       | Description not available. |
+| bone\_leftEye                   | Description not available. |
+| bone\_rightEye                  | Description not available. |
+| bone\_waist                     | Description not available. |
+| bone\_weapon\_bind              | Description not available. |
+| cameraTarget                    | Description not available. |
+| cinematic                       | Description not available. |
+| classname                       | Description not available. |
+| clipmodel                       | Description not available. |
+| cone                            | Description not available. |
+| current\_weapon                 | Description not available. |
+| cursor                          | Description not available. |
+| cylinder                        | Description not available. |
+| damageScaleInSpirit             | Description not available. |
+| damage\_scale XXXX              | Description not available. |
+| damage\_zone XXXX               | Description not available. |
+| ddaCreatureDeath                | Description not available. |
+| ddaDamage                       | Description not available. |
+| ddaDeath                        | Description not available. |
+| ddaFlailAdjust                  | Description not available. |
+| ddaFlailLevel                   | Description not available. |
+| ddaIndexMax                     | Description not available. |
+| ddaUpdateRate                   | Description not available. |
+| dda\_heartbeat                  | Description not available. |
+| deathWalkDeathPowerIncreaseRate | Description not available. |
+| deathWalkFOVChange              | Description not available. |
+| deathWalkFlashChange            | Description not available. |
+| deathWalkMaxWraiths             | Description not available. |
+| deathWalkMinTime                | Description not available. |
+| deathWalkPowerDrain             | Description not available. |
+| deathWalkPowerEnergyBoost       | Description not available. |
+| deathWalkPowerMax               | Description not available. |
+| deathWalkPowerStart             | Description not available. |
+| deathWalkTimer                  | Description not available. |
+| deathWalkWraithDamage           | Description not available. |
+| deathWalk\_firstTimeDelay       | Description not available. |
+| deathWraithHealthAmount         | Description not available. |
+| deathWraithPowerAmount          | Description not available. |
+| deathWraithSpiritAmount         | Description not available. |
+| deathwalkBodyDropDelayMS        | Description not available. |
+| deathwalkFOV                    | Description not available. |
+| deathwalkOffsetBelowPortal      | Description not available. |
+| def\_damageFatalFall            | Description not available. |
+| def\_damageFellOnto             | Description not available. |
+| def\_damageHardFall             | Description not available. |
+| def\_damageSoftFall             | Description not available. |
+| def\_deathProxy                 | Description not available. |
+| def\_deathProxy\_mp             | Description not available. |
+| def\_deathWalkProxy             | Description not available. |
+| def\_deathWraith                | Description not available. |
+| def\_dropsSoul                  | Description not available. |
+| def\_guihand                    | Description not available. |
+| def\_hawkpower                  | Description not available. |
+| def\_possessedProxy             | Description not available. |
+| def\_precache1                  | Description not available. |
+| def\_precache2                  | Description not available. |
+| def\_precache3                  | Description not available. |
+| def\_precache4                  | Description not available. |
+| def\_precache5                  | Description not available. |
+| def\_precache6                  | Description not available. |
+| def\_precache7                  | Description not available. |
+| def\_precache8                  | Description not available. |
+| def\_precacheWraith             | Description not available. |
+| def\_resurrect\_damage          | Description not available. |
+| def\_spiritProxy                | Description not available. |
+| def\_weapon0                    | Description not available. |
+| def\_weapon1                    | Description not available. |
+| def\_weapon10                   | Description not available. |
+| def\_weapon11                   | Description not available. |
+| def\_weapon12                   | Description not available. |
+| def\_weapon13                   | Description not available. |
+| def\_weapon14                   | Description not available. |
+| def\_weapon15                   | Description not available. |
+| def\_weapon2                    | Description not available. |
+| def\_weapon3                    | Description not available. |
+| def\_weapon4                    | Description not available. |
+| def\_weapon5                    | Description not available. |
+| def\_weapon6                    | Description not available. |
+| def\_weapon7                    | Description not available. |
+| def\_weapon8                    | Description not available. |
+| def\_weapon9                    | Description not available. |
+| density                         | Description not available. |
+| dispose\_delay                  | Description not available. |
+| fallDist\_fatal                 | Description not available. |
+| fallDist\_jump                  | Description not available. |
+| fallDist\_soft                  | Description not available. |
+| fov                             | Description not available. |
+| fx\_spiritReturn                | Description not available. |
+| fx\_spiritWalkFlash             | Description not available. |
+| gravity                         | Description not available. |
+| guiTarget                       | Description not available. |
+| hangID                          | Description not available. |
+| head\_joint                     | Description not available. |
+| head\_offset                    | Description not available. |
+| health                          | Description not available. |
+| healthRecharge                  | Description not available. |
+| healthRechargeDelay             | Description not available. |
+| healthRechargeRate              | Description not available. |
+| hide                            | Description not available. |
+| hud                             | Description not available. |
+| ignoreGravityZones              | Description not available. |
+| ik\_ankle1                      | Description not available. |
+| ik\_ankle2                      | Description not available. |
+| ik\_dir1                        | Description not available. |
+| ik\_dir2                        | Description not available. |
+| ik\_foot1                       | Description not available. |
+| ik\_foot2                       | Description not available. |
+| ik\_footDownTrace               | Description not available. |
+| ik\_footSize                    | Description not available. |
+| ik\_footUpTrace                 | Description not available. |
+| ik\_hip1                        | Description not available. |
+| ik\_hip2                        | Description not available. |
+| ik\_knee1                       | Description not available. |
+| ik\_knee2                       | Description not available. |
+| ik\_minWaistAnkleDist           | Description not available. |
+| ik\_minWaistFloorDist           | Description not available. |
+| ik\_numLegs                     | Description not available. |
+| ik\_tiltWaist                   | Description not available. |
+| ik\_usePivot                    | Description not available. |
+| ik\_waist                       | Description not available. |
+| immunityspirit1                 | Description not available. |
+| inherit                         | Description not available. |
+| item                            | Description not available. |
+| jawbone\_Head                   | Description not available. |
+| jawbone\_LeftBrow               | Description not available. |
+| jawbone\_LeftCheek              | Description not available. |
+| jawbone\_LeftCorner             | Description not available. |
+| jawbone\_LeftLowerLip           | Description not available. |
+| jawbone\_LeftUpperLip           | Description not available. |
+| jawbone\_MidBrow                | Description not available. |
+| jawbone\_MidLowerLip            | Description not available. |
+| jawbone\_MidUpperLip            | Description not available. |
+| jawbone\_RightBrow              | Description not available. |
+| jawbone\_RightCheek             | Description not available. |
+| jawbone\_RightCorner            | Description not available. |
+| jawbone\_RightLowerLip          | Description not available. |
+| jawbone\_RightUpperLip          | Description not available. |
+| jawbone\_jaw                    | Description not available. |
+| jawflagRMin\_Head               | Description not available. |
+| jawflapR\_Head                  | Description not available. |
+| jawflapR\_Jaw                   | Description not available. |
+| jawflapR\_MidLowerLip           | Description not available. |
+| jawflapR\_MidUpperLip           | Description not available. |
+| jawflapTMin\_LeftBrow           | Description not available. |
+| jawflapTMin\_MidBrow            | Description not available. |
+| jawflapTMin\_RightBrow          | Description not available. |
+| jawflapT\_Head                  | Description not available. |
+| jawflapT\_LeftBrow              | Description not available. |
+| jawflapT\_LeftCheek             | Description not available. |
+| jawflapT\_LeftCorner            | Description not available. |
+| jawflapT\_LeftLowerLip          | Description not available. |
+| jawflapT\_LeftUpperLip          | Description not available. |
+| jawflapT\_MidBrow               | Description not available. |
+| jawflapT\_MidLowerLip           | Description not available. |
+| jawflapT\_MidUpperLip           | Description not available. |
+| jawflapT\_RightBrow             | Description not available. |
+| jawflapT\_RightCheek            | Description not available. |
+| jawflapT\_RightCorner           | Description not available. |
+| jawflapT\_RightLowerLip         | Description not available. |
+| jawflapT\_RightUpperLip         | Description not available. |
+| kickDamping                     | Description not available. |
+| kickSpring                      | Description not available. |
+| lighterColorB                   | Description not available. |
+| lighterColorG                   | Description not available. |
+| lighterColorR                   | Description not available. |
+| lighterCoolRate                 | Description not available. |
+| lighterHeatRate                 | Description not available. |
+| lighter\_radius                 | Description not available. |
+| lighter\_ysize                  | Description not available. |
+| lighter\_yspeed                 | Description not available. |
+| lighter\_zsize                  | Description not available. |
+| lighter\_zspeed                 | Description not available. |
+| matter                          | Description not available. |
+| maxCrashlandVolumedB            | Description not available. |
+| max\_ammo\_acid                 | Description not available. |
+| max\_ammo\_autocannon           | Description not available. |
+| max\_ammo\_autocannon\_grenade  | Description not available. |
+| max\_ammo\_crawler              | Description not available. |
+| max\_ammo\_crawler\_red         | Description not available. |
+| max\_ammo\_energy               | Description not available. |
+| max\_ammo\_rifle                | Description not available. |
+| max\_ammo\_sniper               | Description not available. |
+| max\_ammo\_spiritpower          | Description not available. |
+| maxarmor                        | Description not available. |
+| maxhealth                       | Description not available. |
+| maxs                            | Description not available. |
+| minCrashlandVolumedB            | Description not available. |
+| minResurrectHealth              | Description not available. |
+| mins                            | Description not available. |
+| model                           | Description not available. |
+| model\_head                     | Description not available. |
+| model\_mp0                      | Description not available. |
+| model\_mp1                      | Description not available. |
+| model\_mp10                     | Description not available. |
+| model\_mp11                     | Description not available. |
+| model\_mp12                     | Description not available. |
+| model\_mp13                     | Description not available. |
+| model\_mp14                     | Description not available. |
+| model\_mp15                     | Description not available. |
+| model\_mp16                     | Description not available. |
+| model\_mp17                     | Description not available. |
+| model\_mp18                     | Description not available. |
+| model\_mp2                      | Description not available. |
+| model\_mp3                      | Description not available. |
+| model\_mp4                      | Description not available. |
+| model\_mp5                      | Description not available. |
+| model\_mp6                      | Description not available. |
+| model\_mp7                      | Description not available. |
+| model\_mp8                      | Description not available. |
+| model\_mp9                      | Description not available. |
+| moveToJoint                     | Description not available. |
+| mtr\_deathWalk                  | Description not available. |
+| mtr\_icon\_chat                 | Description not available. |
+| mtr\_icon\_lag                  | Description not available. |
+| mtr\_icon\_sameteam             | Description not available. |
+| mtr\_lighter                    | Description not available. |
+| mtr\_modelPortrait0             | Description not available. |
+| mtr\_modelPortrait1             | Description not available. |
+| mtr\_modelPortrait10            | Description not available. |
+| mtr\_modelPortrait11            | Description not available. |
+| mtr\_modelPortrait12            | Description not available. |
+| mtr\_modelPortrait13            | Description not available. |
+| mtr\_modelPortrait14            | Description not available. |
+| mtr\_modelPortrait15            | Description not available. |
+| mtr\_modelPortrait16            | Description not available. |
+| mtr\_modelPortrait17            | Description not available. |
+| mtr\_modelPortrait18            | Description not available. |
+| mtr\_modelPortrait2             | Description not available. |
+| mtr\_modelPortrait3             | Description not available. |
+| mtr\_modelPortrait4             | Description not available. |
+| mtr\_modelPortrait5             | Description not available. |
+| mtr\_modelPortrait6             | Description not available. |
+| mtr\_modelPortrait7             | Description not available. |
+| mtr\_modelPortrait8             | Description not available. |
+| mtr\_modelPortrait9             | Description not available. |
+| mtr\_modelPortraitThumb0        | Description not available. |
+| mtr\_modelPortraitThumb1        | Description not available. |
+| mtr\_modelPortraitThumb10       | Description not available. |
+| mtr\_modelPortraitThumb11       | Description not available. |
+| mtr\_modelPortraitThumb12       | Description not available. |
+| mtr\_modelPortraitThumb13       | Description not available. |
+| mtr\_modelPortraitThumb14       | Description not available. |
+| mtr\_modelPortraitThumb15       | Description not available. |
+| mtr\_modelPortraitThumb16       | Description not available. |
+| mtr\_modelPortraitThumb17       | Description not available. |
+| mtr\_modelPortraitThumb18       | Description not available. |
+| mtr\_modelPortraitThumb2        | Description not available. |
+| mtr\_modelPortraitThumb3        | Description not available. |
+| mtr\_modelPortraitThumb4        | Description not available. |
+| mtr\_modelPortraitThumb5        | Description not available. |
+| mtr\_modelPortraitThumb6        | Description not available. |
+| mtr\_modelPortraitThumb7        | Description not available. |
+| mtr\_modelPortraitThumb8        | Description not available. |
+| mtr\_modelPortraitThumb9        | Description not available. |
+| mtr\_spiritWalk                 | Description not available. |
+| name                            | Description not available. |
+| networkSync                     | Description not available. |
+| neverDormant                    | Description not available. |
+| noJawFlap                       | Description not available. |
+| noPortal                        | Description not available. |
+| noclipmodel                     | Description not available. |
+| numAttackComments               | Description not available. |
+| offset\_aim                     | Description not available. |
+| offset\_lighter                 | Description not available. |
+| origin                          | Description not available. |
+| pain\_delay                     | Description not available. |
+| pm\_bboxwidth                   | Description not available. |
+| pm\_crouchbob                   | Description not available. |
+| pm\_crouchheight                | Description not available. |
+| pm\_crouchrate                  | Description not available. |
+| pm\_crouchspeed                 | Description not available. |
+| pm\_crouchviewheight            | Description not available. |
+| pm\_deadheight                  | Description not available. |
+| pm\_deadviewheight              | Description not available. |
+| pm\_jumpheight                  | Description not available. |
+| pm\_maxviewpitch                | Description not available. |
+| pm\_minviewpitch                | Description not available. |
+| pm\_modelview                   | Description not available. |
+| pm\_noclipspeed                 | Description not available. |
+| pm\_normalheight                | Description not available. |
+| pm\_normalviewheight            | Description not available. |
+| pm\_runbob                      | Description not available. |
+| pm\_stamina                     | Description not available. |
+| pm\_staminarate                 | Description not available. |
+| pm\_staminathreshold            | Description not available. |
+| pm\_stepsize                    | Description not available. |
+| pm\_walkbob                     | Description not available. |
+| pm\_walkspeed                   | Description not available. |
+| possessionTime                  | Description not available. |
+| prepareForDeathWorldDelay       | Description not available. |
+| produces\_splats                | Description not available. |
+| push\_cosine                    | Description not available. |
+| pushes                          | Description not available. |
+| ragdoll                         | Description not available. |
+| requirement\_bowvision          | Description not available. |
+| requirement\_deathwalk          | Description not available. |
+| requirement\_hunterhand         | Description not available. |
+| requirement\_lighter            | Description not available. |
+| requirement\_spiritwalk         | Description not available. |
+| requirement\_talon              | Description not available. |
+| requirement\_wallwalk           | Description not available. |
+| respawn\_delay                  | Description not available. |
+| resurrectFOVChange              | Description not available. |
+| resurrectFlashChange            | Description not available. |
+| rifleAmmoRechargeMax            | Description not available. |
+| rifleAmmoRechargeRate           | Description not available. |
+| rotation                        | Description not available. |
+| scriptobject                    | Description not available. |
+| size                            | Description not available. |
+| skin\_Spiritwalk                | Description not available. |
+| skin\_mpspirit0                 | Description not available. |
+| skin\_mpspirit1                 | Description not available. |
+| skin\_mpspirit10                | Description not available. |
+| skin\_mpspirit11                | Description not available. |
+| skin\_mpspirit12                | Description not available. |
+| skin\_mpspirit13                | Description not available. |
+| skin\_mpspirit14                | Description not available. |
+| skin\_mpspirit15                | Description not available. |
+| skin\_mpspirit16                | Description not available. |
+| skin\_mpspirit17                | Description not available. |
+| skin\_mpspirit18                | Description not available. |
+| skin\_mpspirit2                 | Description not available. |
+| skin\_mpspirit3                 | Description not available. |
+| skin\_mpspirit4                 | Description not available. |
+| skin\_mpspirit5                 | Description not available. |
+| skin\_mpspirit6                 | Description not available. |
+| skin\_mpspirit7                 | Description not available. |
+| skin\_mpspirit8                 | Description not available. |
+| skin\_mpspirit9                 | Description not available. |
+| snd\_death                      | Description not available. |
+| snd\_deathWalkActivate          | Description not available. |
+| snd\_deathWalkDeactivate        | Description not available. |
+| snd\_deathWalkIdle              | Description not available. |
+| snd\_death\_female              | Description not available. |
+| snd\_firstDeathWalk1            | Description not available. |
+| snd\_firstDeathWalk2            | Description not available. |
+| snd\_firstDeathWalk3            | Description not available. |
+| snd\_footstep\_altmetal         | Description not available. |
+| snd\_footstep\_cardboard        | Description not available. |
+| snd\_footstep\_flesh            | Description not available. |
+| snd\_footstep\_forcefield       | Description not available. |
+| snd\_footstep\_glass            | Description not available. |
+| snd\_footstep\_liquid           | Description not available. |
+| snd\_footstep\_metal            | Description not available. |
+| snd\_footstep\_pipe             | Description not available. |
+| snd\_footstep\_stone            | Description not available. |
+| snd\_footstep\_tile             | Description not available. |
+| snd\_footstep\_wallwalk         | Description not available. |
+| snd\_footstep\_wood             | Description not available. |
+| snd\_healthpulse                | Description not available. |
+| snd\_hitFeedback                | Description not available. |
+| snd\_hitSpiritFeedback          | Description not available. |
+| snd\_hitTeamFeedback            | Description not available. |
+| snd\_jump                       | Description not available. |
+| snd\_land\_altmetal             | Description not available. |
+| snd\_land\_cardboard            | Description not available. |
+| snd\_land\_flesh                | Description not available. |
+| snd\_land\_forcefield           | Description not available. |
+| snd\_land\_glass                | Description not available. |
+| snd\_land\_liquid               | Description not available. |
+| snd\_land\_metal                | Description not available. |
+| snd\_land\_pipe                 | Description not available. |
+| snd\_land\_stone                | Description not available. |
+| snd\_land\_tile                 | Description not available. |
+| snd\_land\_wallwalk             | Description not available. |
+| snd\_land\_wood                 | Description not available. |
+| snd\_lighter\_off               | Description not available. |
+| snd\_lighter\_on                | Description not available. |
+| snd\_lighter\_toohot            | Description not available. |
+| snd\_lowhealth                  | Description not available. |
+| snd\_pain\_huge                 | Description not available. |
+| snd\_pain\_huge\_female         | Description not available. |
+| snd\_pain\_large                | Description not available. |
+| snd\_pain\_large\_female        | Description not available. |
+| snd\_pain\_medium               | Description not available. |
+| snd\_pain\_medium\_female       | Description not available. |
+| snd\_pain\_small                | Description not available. |
+| snd\_pain\_small\_female        | Description not available. |
+| snd\_spiritReturn               | Description not available. |
+| snd\_spiritWalkActivate         | Description not available. |
+| snd\_spiritWalkDeactivate       | Description not available. |
+| snd\_spiritWalkDenied           | Description not available. |
+| snd\_spiritWalkIdle             | Description not available. |
+| snd\_spiritpulse                | Description not available. |
+| snd\_talonAttack0               | Description not available. |
+| snd\_talonAttack1               | Description not available. |
+| snd\_talonAttack2               | Description not available. |
+| snd\_talonAttack3               | Description not available. |
+| snd\_talonAttack4               | Description not available. |
+| snd\_talonAttack5               | Description not available. |
+| snd\_wallwalkActivate           | Description not available. |
+| snd\_wallwalkDeactivate         | Description not available. |
+| snd\_wallwalkIdle               | Description not available. |
+| solidForTeam                    | Description not available. |
+| spawnclass                      | Description not available. |
+| spiritDrainHeartbeat            | Description not available. |
+| spirit\_weapon                  | Description not available. |
+| stamina                         | Description not available. |
+| talonAttackCommentTime          | Description not available. |
+| target                          | Description not available. |
+| text\_modelName0                | Description not available. |
+| text\_modelName1                | Description not available. |
+| text\_modelName10               | Description not available. |
+| text\_modelName11               | Description not available. |
+| text\_modelName12               | Description not available. |
+| text\_modelName13               | Description not available. |
+| text\_modelName14               | Description not available. |
+| text\_modelName15               | Description not available. |
+| text\_modelName16               | Description not available. |
+| text\_modelName17               | Description not available. |
+| text\_modelName18               | Description not available. |
+| text\_modelName2                | Description not available. |
+| text\_modelName3                | Description not available. |
+| text\_modelName4                | Description not available. |
+| text\_modelName5                | Description not available. |
+| text\_modelName6                | Description not available. |
+| text\_modelName7                | Description not available. |
+| text\_modelName8                | Description not available. |
+| text\_modelName9                | Description not available. |
+| weapon                          | Description not available. |
+| weapon0\_allowempty             | Description not available. |
+| weapon0\_best                   | Description not available. |
+| weapon0\_cycle                  | Description not available. |
+| weapon0\_toggle                 | Description not available. |
+| weapon10\_allowempty            | Description not available. |
+| weapon10\_best                  | Description not available. |
+| weapon10\_cycle                 | Description not available. |
+| weapon10\_toggle                | Description not available. |
+| weapon11\_allowempty            | Description not available. |
+| weapon11\_best                  | Description not available. |
+| weapon11\_cycle                 | Description not available. |
+| weapon11\_toggle                | Description not available. |
+| weapon12\_allowempty            | Description not available. |
+| weapon12\_best                  | Description not available. |
+| weapon12\_cycle                 | Description not available. |
+| weapon12\_toggle                | Description not available. |
+| weapon13\_allowempty            | Description not available. |
+| weapon13\_best                  | Description not available. |
+| weapon13\_cycle                 | Description not available. |
+| weapon13\_toggle                | Description not available. |
+| weapon14\_allowempty            | Description not available. |
+| weapon14\_best                  | Description not available. |
+| weapon14\_cycle                 | Description not available. |
+| weapon14\_toggle                | Description not available. |
+| weapon15\_allowempty            | Description not available. |
+| weapon15\_best                  | Description not available. |
+| weapon15\_cycle                 | Description not available. |
+| weapon15\_toggle                | Description not available. |
+| weapon1\_allowempty             | Description not available. |
+| weapon1\_best                   | Description not available. |
+| weapon1\_cycle                  | Description not available. |
+| weapon1\_toggle                 | Description not available. |
+| weapon2\_allowempty             | Description not available. |
+| weapon2\_best                   | Description not available. |
+| weapon2\_cycle                  | Description not available. |
+| weapon2\_toggle                 | Description not available. |
+| weapon3\_allowempty             | Description not available. |
+| weapon3\_best                   | Description not available. |
+| weapon3\_cycle                  | Description not available. |
+| weapon3\_toggle                 | Description not available. |
+| weapon4\_allowempty             | Description not available. |
+| weapon4\_best                   | Description not available. |
+| weapon4\_cycle                  | Description not available. |
+| weapon4\_toggle                 | Description not available. |
+| weapon5\_allowempty             | Description not available. |
+| weapon5\_best                   | Description not available. |
+| weapon5\_cycle                  | Description not available. |
+| weapon5\_toggle                 | Description not available. |
+| weapon6\_allowempty             | Description not available. |
+| weapon6\_best                   | Description not available. |
+| weapon6\_cycle                  | Description not available. |
+| weapon6\_toggle                 | Description not available. |
+| weapon7\_allowempty             | Description not available. |
+| weapon7\_best                   | Description not available. |
+| weapon7\_cycle                  | Description not available. |
+| weapon7\_toggle                 | Description not available. |
+| weapon8\_allowempty             | Description not available. |
+| weapon8\_best                   | Description not available. |
+| weapon8\_cycle                  | Description not available. |
+| weapon8\_toggle                 | Description not available. |
+| weapon9\_allowempty             | Description not available. |
+| weapon9\_best                   | Description not available. |
+| weapon9\_cycle                  | Description not available. |
+| weapon9\_toggle                 | Description not available. |
 
 Inheritance
 -----------

@@ -1,15 +1,4 @@
-<div align="center"
-style="background: #FFFFCC; padding: 5px; border: 1px solid #000000;">
-
-**NOTE:** Megatexture functionality is broken in the stock versions of
-Doom 3, Quake 4, and Prey due to a missing fragment program,
-megatexture.vfp. However, with a suitable replacement, the information
-documented in this article is still applicable. At present, you can find
-a mod that provides you with the necessary file
-[here](http://doom3.filefront.com/file/Megatexture_Technology_Mod;72779 "http://doom3.filefront.com/file/Megatexture_Technology_Mod;72779")
-.
-
-</div>
+**NOTE:** Megatexture functionality is broken in the stock versions of Doom 3, Quake 4, and Prey due to a missing fragment program, megatexture.vfp. However, with a suitable replacement, the information documented in this article is still applicable. At present, you can find a mod that provides you with the necessary file [here](http://doom3.filefront.com/file/Megatexture_Technology_Mod;72779 "http://doom3.filefront.com/file/Megatexture_Technology_Mod;72779") .
 
 Description
 -----------
@@ -26,18 +15,11 @@ At the console type...
 Parameters
 ----------
 
-[Filename] - Name of . [TGA](TGA_%28file_format%29 "TGA (file format)")
-file (without the extension).
+[Filename] - Name of . [TGA](TGA_%28file_format%29 "TGA (file format)") file (without the extension).
 
 Notes
 -----
 
-This command will take a .TGA file present in the
-[\\megatexture](Megatexture_%28folder%29 "Megatexture (folder)") folder
-and generate a new texture with four components named
-\<filename\>\_preview.tga and a \<filename\>.
-[MEGA](MEGA_%28file_format%29 "MEGA (file format)") file. This console
-command seems to be not entirely functional in Doom 3.
+This command will take a .TGA file present in the [\\megatexture](Megatexture_%28folder%29 "Megatexture (folder)") folder and generate a new texture with four components named \<filename\>\_preview.tga and a \<filename\>. [MEGA](MEGA_%28file_format%29 "MEGA (file format)") file. This console command seems to be not entirely functional in Doom 3.
 
-\
 

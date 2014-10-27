@@ -1,23 +1,14 @@
-<div id="delete" class="boilerplate metadata"
-style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
+**This page is a candidate for deletion, because: *This is a key/value pair, not a script event.***
 
-**This page is a candidate for deletion, because: *This is a key/value
-pair, not a script event.***
+If you disagree with its speedy deletion, please explain why on [its talk page](Talk:ClipSize_%28script_event%29 "Talk:ClipSize (script event)") .
 
-If you disagree with its speedy deletion, please explain why on [its
-talk
-page](Talk:ClipSize_%28script_event%29 "Talk:ClipSize (script event)") .
-
-</div>
-
-\
  1. File Path
 
       =  /doom3/base..../def   # Stored in file "pak000.pk4"
 
       Open file  "weapon_'X'gun.def"  using notepad
 
-2\. entityDef weapon\_ 'X' gun { \#\# Weapon Definition
+2. entityDef weapon\_ 'X' gun { \#\# Weapon Definition
 
                .
                .
@@ -27,7 +18,6 @@ page](Talk:ClipSize_%28script_event%29 "Talk:ClipSize (script event)") .
 
 "clipSize" "60" \<====== the weapon's clipSize
 
-\
  default "clipSize"
 
 machine gun,chaingun = 60
@@ -38,6 +28,5 @@ rocket = 5
 
 plasma gun = 50 ............ etc
 
-\
  Note: .pk4 file can be depressed .
 

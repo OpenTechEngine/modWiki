@@ -1,7 +1,4 @@
-A comment as a string. Apparently this should be used somewhere else
-(maybe there's some dev option to show comments or, more probably, it's
-viewable by D3Radiant), since it's better to use the // or /\* \*/
-notations to place comments on the script source itself.
+A comment as a string. Apparently this should be used somewhere else (maybe there's some dev option to show comments or, more probably, it's viewable by D3Radiant), since it's better to use the // or /\* \*/ notations to place comments on the script source itself.
 
 The value of this property cannot be changed at runtime.
 
@@ -19,7 +16,5 @@ Example(s)
 ----------
 
     comment  "gui_parm1 set value as text for office owner's name\nall text can be set on parm's if you need it"
-
-\
 
 

@@ -1,51 +1,21 @@
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](AAS "http://www.modwiki.net/w/index.php?title=AAS&action=edit")
-</span> .*
-
-</div>
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](AAS "http://www.modwiki.net/w/index.php?title=AAS&action=edit") </span> .*
 
 The Area Awareness System is the navigation system that the AI uses.
 
-An AAS map is a simplified 3D map of the level compiled from the solid
-[brush](Brush "Brush") work in the .map file. Areas are the most
-simplified volume so navigation within an [Area](Area "Area") is simple
-point to point. [Reachabilities](Reachabilities "Reachabilities")
-between Areas are then calculated.
+An AAS map is a simplified 3D map of the level compiled from the solid [brush](Brush "Brush") work in the .map file. Areas are the most simplified volume so navigation within an [Area](Area "Area") is simple point to point. [Reachabilities](Reachabilities "Reachabilities") between Areas are then calculated.
 
-Brushes with the material monster clip (a misnomer since it only clips
-the aas map, which isn't used for collision) are also read by the ass
-compiler.
+Brushes with the material monster clip (a misnomer since it only clips the aas map, which isn't used for collision) are also read by the ass compiler.
 
-As noted the aas compiler works on brushes, and ignores models an
-patches. There is an exception with patch support being a command line
-option, however with the common usage of using patches for decals it is
-not an efficient option.
+As noted the aas compiler works on brushes, and ignores models an patches. There is an exception with patch support being a command line option, however with the common usage of using patches for decals it is not an efficient option.
 
-<div>
+![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake Wars only:
+*The aas compiler has been extended to support compiling the terrain mesh into the aas.*
 
-![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake
-Wars only:
-*The aas compiler has been extended to support compiling the terrain
-mesh into the aas.*
+One of the most useful cvars for debugging AAS maps is: [Aas\_showAreas](Aas_showAreas_%28cvar%29 "Aas showAreas (cvar)")
 
-</div>
+The aas compiler can be invoked with the [runAAS (console command)](RunAAS_%28console_command%29 "RunAAS (console command)") .
 
-One of the most useful cvars for debugging AAS maps is:
-[Aas\_showAreas](Aas_showAreas_%28cvar%29 "Aas showAreas (cvar)")
-
-The aas compiler can be invoked with the [runAAS (console
-command)](RunAAS_%28console_command%29 "RunAAS (console command)") .
-
-The aas compiler works by looking for "use\_aas" keys on map entities to
-read the aas type. It creates a different aas map per aas type. It then
-flood fills from those entities, using the bounding size in the setting.
-For example: in Doom 3 the common sizes are aas48 - 48x48x82 for
-humanoid sized monsters and aas96 - 96x96x96 for larger, with very large
-boss monsters getting their own type.
+The aas compiler works by looking for "use\_aas" keys on map entities to read the aas type. It creates a different aas map per aas type. It then flood fills from those entities, using the bounding size in the setting. For example: in Doom 3 the common sizes are aas48 - 48x48x82 for humanoid sized monsters and aas96 - 96x96x96 for larger, with very large boss monsters getting their own type.
 
 In ETQW there are two types, one for players and another for vehicles.
 

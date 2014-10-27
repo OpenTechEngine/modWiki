@@ -1,43 +1,22 @@
-<div id="attention" class="boilerplate metadata"
-style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
+**This page is in urgent need of attention because: *Unfinished sections***
 
-**This page is in urgent need of attention because: *Unfinished
-sections***
+If you disagree with this, please explain why on [its talk page](Talk:Scripting_basics "Talk:Scripting basics") .
 
-If you disagree with this, please explain why on [its talk
-page](Talk:Scripting_basics "Talk:Scripting basics") .
+[SCRIPT](SCRIPT_%28file_format%29 "SCRIPT (file format)") files define a scripted sequence of events, the behavior of weapons, or the AI of actors. The files themselves are ascii (plain text) and can be edited/created in a text editor like notepad.
 
-</div>
-
-[SCRIPT](SCRIPT_%28file_format%29 "SCRIPT (file format)") files define a
-scripted sequence of events, the behavior of weapons, or the AI of
-actors. The files themselves are ascii (plain text) and can be
-edited/created in a text editor like notepad.
-
-Scripts use a proprietary language similar to C++, Java, and other
-languages but it's very rudimentary and nowhere near as complex.
+Scripts use a proprietary language similar to C++, Java, and other languages but it's very rudimentary and nowhere near as complex.
 
 Basics of Programming
 ---------------------
 
-Programming and scripting are essentially the same task. The only
-distinguishable difference between the two is scripting is instructing a
-specific program to perform a task where as programming involves writing
-a program itself.
+Programming and scripting are essentially the same task. The only distinguishable difference between the two is scripting is instructing a specific program to perform a task where as programming involves writing a program itself.
 
-The general concept behind scripting is the same and so, in order to
-script you need to learn to program. But, it's not nearly as scary as it
-sounds.
+The general concept behind scripting is the same and so, in order to script you need to learn to program. But, it's not nearly as scary as it sounds.
 
-When you are scripting you are telling objects to perform certain tasks.
-But these objects don’t understand English. You need to talk to them in
-a manner that they can understand.
+When you are scripting you are telling objects to perform certain tasks. But these objects don’t understand English. You need to talk to them in a manner that they can understand.
 
-For the time being we will relate to the way people perform tasks. Let’s
-say you want to open a door. We all know how to do so but this simple
-task can be broken down into a series of basic steps.
+For the time being we will relate to the way people perform tasks. Let’s say you want to open a door. We all know how to do so but this simple task can be broken down into a series of basic steps.
 
-\
  **Opening a Door**
 
 1.  Extend your hand to reach the door.
@@ -45,52 +24,38 @@ task can be broken down into a series of basic steps.
 3.  Turn the knob.
 4.  Pull the knob.
 
-\
- To even make things worse those basic steps can be broken down even
-further.
+ To even make things worse those basic steps can be broken down even further.
 
-\
  **Extend your hand to reach the door.**
 
 1.  Raise your arm.
 2.  Rotate your forearm.
 3.  Open your hand.
 
-\
- You can see how even a simple task like opening a door is actually
-comprised of a lengthy list of basic actions. This is the basis of
-scripting in Doom 3 and programming in general. You cannot just tell a
-machine to run. You have to tell all its moving parts to perform basic
-actions.
+ You can see how even a simple task like opening a door is actually comprised of a lengthy list of basic actions. This is the basis of scripting in Doom 3 and programming in general. You cannot just tell a machine to run. You have to tell all its moving parts to perform basic actions.
 
 General Syntax
 --------------
 
-The following is a list of special characters with a special meaning;
-they need to be remembered.
+The following is a list of special characters with a special meaning; they need to be remembered.
 
- ; 
-:   Follows all commands. More than one command may exist on a single
-    line. Informs the engine that the following is the end of a command.
+ ;   
+Follows all commands. More than one command may exist on a single line. Informs the engine that the following is the end of a command.
 
 <!-- -->
 
     sys.print;
 
- // 
-:   Comment. Declares the text from this point to the end of the line a
-    comment and is not executed. Can also be used to null out a line of
-    code for debugging.
+ //   
+Comment. Declares the text from this point to the end of the line a comment and is not executed. Can also be used to null out a line of code for debugging.
 
 <!-- -->
 
     // This text will not be executed. 
      
 
- /\* and \*/ 
-:   Comment. Declares the text from /\* to \*/ a comment and the text
-    contained therein is not executed. Can also be used to null out a
-    portion of code for debugging.
+ /\* and \*/   
+Comment. Declares the text from /\* to \*/ a comment and the text contained therein is not executed. Can also be used to null out a portion of code for debugging.
 
 <!-- -->
 
@@ -99,25 +64,14 @@ they need to be remembered.
 Getting started
 ---------------
 
-First of all, it is recommended to use a good editor with syntax
-highlighting. This allows you to see typing errors because the
-highlighted color changes if the editor doesn't know your input. To find
-a suitable text editor, see [tools for editing script
-files](SCRIPT_%28file_format%29#Editing_tools "SCRIPT (file format)") .
+First of all, it is recommended to use a good editor with syntax highlighting. This allows you to see typing errors because the highlighted color changes if the editor doesn't know your input. To find a suitable text editor, see [tools for editing script files](SCRIPT_%28file_format%29#Editing_tools "SCRIPT (file format)") .
 
-Now to start with something, we will make a small and easy level script.
-These are the easiest to start with and make a nice introduction to
-scripting. What do we need?
+Now to start with something, we will make a small and easy level script. These are the easiest to start with and make a nice introduction to scripting. What do we need?
 
--   A map with a player spawn point in it. (Use anything you have, be it
-    a simple box with a light in it.)
--   A script file with the same name as the map, placed in the maps
-    folder.
+-   A map with a player spawn point in it. (Use anything you have, be it a simple box with a light in it.)
+-   A script file with the same name as the map, placed in the maps folder.
 
-Open the map and create a new brush. Select it, then open the "Entities"
-inspector/window. Now add a key "call" with the value "main". What this
-means for this example is that a function named "main" will be called
-when the map loads.
+Open the map and create a new brush. Select it, then open the "Entities" inspector/window. Now add a key "call" with the value "main". What this means for this example is that a function named "main" will be called when the map loads.
 
 Now open the script file and paste this code fragment in it.
 
@@ -126,36 +80,24 @@ Now open the script file and paste this code fragment in it.
         sys.println("^3World!");
     }
 
-If you now run the map, open your console by pressing Ctrl + Alt + \~.
-If all went well, there should be a line with the text "Hello World!" in
-two different colors. This example might be far from impressive, but it
-should be enough to let you experiment once you have read more about
-scripting.
+If you now run the map, open your console by pressing Ctrl + Alt + ~. If all went well, there should be a line with the text "Hello World!" in two different colors. This example might be far from impressive, but it should be enough to let you experiment once you have read more about scripting.
 
-With that out of the way, let's look at some theory first. If you
-already know C or some other procedure-based language, feel free to
-quickly read the following 2 parts. If you are completely new to it,
-these sections should teach you the basics.
+With that out of the way, let's look at some theory first. If you already know C or some other procedure-based language, feel free to quickly read the following 2 parts. If you are completely new to it, these sections should teach you the basics.
 
 Variables
 ---------
 
-A variable is a container used to store a value. Think of it as an alias
-used to refer to a value without referencing the value directly.
+A variable is a container used to store a value. Think of it as an alias used to refer to a value without referencing the value directly.
 
 ### Declaration
 
-Before a variable can be used it must be declared for a specific [data
-type](Data_types "Data types") . By assigning a data type you are
-defining what kind of values can be stored in a specific variable.
+Before a variable can be used it must be declared for a specific [data type](Data_types "Data types") . By assigning a data type you are defining what kind of values can be stored in a specific variable.
 
-Say we want to create a variable called "foo" and store a number in it.
-The variable declaration would look like this:
+Say we want to create a variable called "foo" and store a number in it. The variable declaration would look like this:
 
     float foo;
 
-If you would need more then one variable of the same type, you could
-write
+If you would need more then one variable of the same type, you could write
 
     float foo1;
     float foo2;
@@ -168,26 +110,17 @@ To actually put a number in it, you would do this:
 
     foo = 2;
 
-More examples of can be found on the [Data
-types](Data_types "Data types") page, see the common types.
+More examples of can be found on the [Data types](Data_types "Data types") page, see the common types.
 
-Now, how to put variables to use? The nice thing is that you can write
-the variable's name where you would normally put a value of that type.
-This way, you can use the same code over and over without changing that
-line of code. You just assign a new value to the variable instead of
-copying your code and changing the value there.
+Now, how to put variables to use? The nice thing is that you can write the variable's name where you would normally put a value of that type. This way, you can use the same code over and over without changing that line of code. You just assign a new value to the variable instead of copying your code and changing the value there.
 
 ### Operations
 
-Now you basically know what a variable does. However, the assignment
-operation is just one of many.
+Now you basically know what a variable does. However, the assignment operation is just one of many.
 
-Imagine that you want to make a counter. You would first need to check
-the old value and then assign the new one to it. Of course, this would
-take a lot of work.
+Imagine that you want to make a counter. You would first need to check the old value and then assign the new one to it. Of course, this would take a lot of work.
 
-Luckily, we can do basic operations with values. They can be as easy as
-this:
+Luckily, we can do basic operations with values. They can be as easy as this:
 
     1 + 1
 
@@ -213,37 +146,28 @@ Division
 
 Modulo (Results in the remainder of a division)
 
-Since an operation results in a value of the same type, you can store
-the results of an operation in a variable:
+Since an operation results in a value of the same type, you can store the results of an operation in a variable:
 
     foo = 1 + 1;
 
 Now back to the counter example:
 
-Remember that a variable is an alias to a value? That way, we can use a
-variable with an operation:
+Remember that a variable is an alias to a value? That way, we can use a variable with an operation:
 
     foo = foo + 1;
 
-Variables are especially useful in functions, so make sure you
-understand this part before going to that section.
+Variables are especially useful in functions, so make sure you understand this part before going to that section.
 
 Logical structures
 ------------------
 
-So far we explained how to define variables and do a little arithmetic
-with them. While this is certainly useful for making counters, those
-counters can never be put to use if you couldn't compare their value
-against another to do something. This is where logical structures come
-in. They allow you to exclude or repeat certain instructions based on a
-logical condition.
+So far we explained how to define variables and do a little arithmetic with them. While this is certainly useful for making counters, those counters can never be put to use if you couldn't compare their value against another to do something. This is where logical structures come in. They allow you to exclude or repeat certain instructions based on a logical condition.
 
 We'll start with a basic one, the **if** structure.
 
 ### If structure
 
-The name says all: " **if** the condition is true, **do** ...". Take the
-following code for example:
+The name says all: " **if** the condition is true, **do** ...". Take the following code for example:
 
     boolean condition1 = true;
     boolean condition2 = false;
@@ -256,19 +180,11 @@ following code for example:
         var1 = var1 - 2;
     }
 
-Seeing how only *condition1* is set to true, only the statements inside
-the first **if** structure will be executed. In this case, *var1* will
-be set to '2'. Of course, using static variables as conditions is not of
-great use because we could as well comment out all statements for which
-the condition was false. To really harness the power of logical
-structures we need logical operations, which we'll discuss next.
+Seeing how only *condition1* is set to true, only the statements inside the first **if** structure will be executed. In this case, *var1* will be set to '2'. Of course, using static variables as conditions is not of great use because we could as well comment out all statements for which the condition was false. To really harness the power of logical structures we need logical operations, which we'll discuss next.
 
 ### Logical Operations
 
-Logical operators are symbols which return a boolean value, just like
-the arithmetic operators return a number. However, these operators work
-on more than just **float** -type variables. See the list below for
-details, the data types the operators work on are between parentheses.
+Logical operators are symbols which return a boolean value, just like the arithmetic operators return a number. However, these operators work on more than just **float** -type variables. See the list below for details, the data types the operators work on are between parentheses.
 
 -   ==
 
@@ -321,20 +237,15 @@ Here are some examples:
     // etc. 
      
 
-Also note that you can mix arithmetic and boolean operators, for
-example:
+Also note that you can mix arithmetic and boolean operators, for example:
 
      var1 + 5 == var2
 
-The script compiler will process *var1* + 5 first and the compare the
-float values. Because they're both 10, the resulting value will be
-**true** .
+The script compiler will process *var1* + 5 first and the compare the float values. Because they're both 10, the resulting value will be **true** .
 
 ### While structure
 
-A *while* structure executes a set of instructions as long as a given
-statement is true. It analyses conditions the same way *if* structures
-do. For example:
+A *while* structure executes a set of instructions as long as a given statement is true. It analyses conditions the same way *if* structures do. For example:
 
      
     float myVar = 0;
@@ -345,51 +256,36 @@ do. For example:
         myVar++;
     }
 
-myVar starts out with a value of 0. As long as its value is smaller than
-10, it will be displayed in the console, then incremented by 1.
+myVar starts out with a value of 0. As long as its value is smaller than 10, it will be displayed in the console, then incremented by 1.
 
-\
  The *while* loop will do two things:
 
--   First, it will print the text "myVar:" followed by myVar's value,
-    then start a new line.
--   Then, it will add 1 to myVar's value. The "++" after the variable
-    name means the variable will be incremented by 1. (This is like
-    typing *myVar = myVar + 1* .)
+-   First, it will print the text "myVar:" followed by myVar's value, then start a new line.
+-   Then, it will add 1 to myVar's value. The "++" after the variable name means the variable will be incremented by 1. (This is like typing *myVar = myVar + 1* .)
 
 ### For structure
 
-This structure is the odd one because it combines the repeat condition
-of the **while** structure with the initializer statements, the
-condition and the increment combined.
+This structure is the odd one because it combines the repeat condition of the **while** structure with the initializer statements, the condition and the increment combined.
 
 TODO: elaborate use and examples
 
 Functions or Methods
 --------------------
 
-Functions are used to group certain statements and let you reuse them in
-other parts of the code.
+Functions are used to group certain statements and let you reuse them in other parts of the code.
 
 You will use them for one of the following reasons:
 
--   They can just group some statements so that you don't need to
-    copy/paste them over again.
+-   They can just group some statements so that you don't need to copy/paste them over again.
 -   They group statements which will need to be called by a map entity.
--   They can execute some statements which needs different input values
-    from time to time. (The input values will be called *parameters* ,
-    read on for more.)
--   They can execute a few statements to calculate or generate one
-    value.
+-   They can execute some statements which needs different input values from time to time. (The input values will be called *parameters* , read on for more.)
+-   They can execute a few statements to calculate or generate one value.
 
 ### Declaration
 
 #### Simple
 
-Just like a variable needs a declaration, a function needs to be
-declared to be used by the script parser. We will start with the first
-use, grouping statements. (Which is the easiest) You should be able to
-figure out what the folowing function does as a whole.
+Just like a variable needs a declaration, a function needs to be declared to be used by the script parser. We will start with the first use, grouping statements. (Which is the easiest) You should be able to figure out what the folowing function does as a whole.
 
     void printHello() {
         sys.print("Hello ");
@@ -398,26 +294,16 @@ figure out what the folowing function does as a whole.
 
 Let's take a look at it in detail:
 
--   The first line defines the return type, function's name and
-    parameters. (More on those later on.)
--   The function consists of everything enclosed in the first set of
-    curly brackets ('{' and '}') after the function's definition.
+-   The first line defines the return type, function's name and parameters. (More on those later on.)
+-   The function consists of everything enclosed in the first set of curly brackets ('{' and '}') after the function's definition.
 
-These functions can also be called by map entitities. Just give them a
-key "call" with your function's name as a value.
+These functions can also be called by map entitities. Just give them a key "call" with your function's name as a value.
 
 #### Using parameters
 
-Another reason to use funtions is reusability. What this means is that
-you can reuse parts of your script instead of writing it again. Reusing
-code helps in reducing mistakes since you only have to fix a mistake
-once. If you would have copied and pasted the code, you might need to
-fix it multiple times.
+Another reason to use funtions is reusability. What this means is that you can reuse parts of your script instead of writing it again. Reusing code helps in reducing mistakes since you only have to fix a mistake once. If you would have copied and pasted the code, you might need to fix it multiple times.
 
-To make a function be reusable, it will need to operate on different
-things. So, we'll simply put those in variables and feed those to the
-function. You could define all variables globally, but functions have a
-nicer way of doing things using *parameters* . Example:
+To make a function be reusable, it will need to operate on different things. So, we'll simply put those in variables and feed those to the function. You could define all variables globally, but functions have a nicer way of doing things using *parameters* . Example:
 
      
     // This function makes an entity rotate around the Z axis, it takes spinTime seconds to complete one turn
@@ -431,19 +317,13 @@ nicer way of doing things using *parameters* . Example:
         spinZ(10, sys.getEntity("func_mover_2"));
     }
 
-As you can see, the first line now can have one or more *variable*
-definitions between the round brackets. The calling statements set the
-values accordingly.
+As you can see, the first line now can have one or more *variable* definitions between the round brackets. The calling statements set the values accordingly.
 
 #### Return values
 
-Finally the last reason: calculating or choosing values. Sometimes you
-will need to do some math in several places, or check a few conditions.
-Wouldn't it be handy to place them in a function and get one nice value
-instead of duplicating the code everywhere?
+Finally the last reason: calculating or choosing values. Sometimes you will need to do some math in several places, or check a few conditions. Wouldn't it be handy to place them in a function and get one nice value instead of duplicating the code everywhere?
 
-Return values let you do that -- the function does its magic and returns
-one single value. Here is an example:
+Return values let you do that -- the function does its magic and returns one single value. Here is an example:
 
      
     // Returns true when entities are near each other
@@ -465,24 +345,13 @@ one single value. Here is an example:
         }
     }
 
-Note that this is just an example: it is only written to show how return
-values work. Also take a look at the entites: this example shows the use
-of **\$entityname** and the **if** / **else** structure.
+Note that this is just an example: it is only written to show how return values work. Also take a look at the entites: this example shows the use of **$entityname** and the **if** / **else** structure.
 
 ### More examples
 
-Here is a somewhat longer example, combining a few of the discussed
-things.
+Here is a somewhat longer example, combining a few of the discussed things.
 
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Scripting_basics "http://www.modwiki.net/w/index.php?title=Scripting_basics&action=edit")
-</span> .*
-
-</div>
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Scripting_basics "http://www.modwiki.net/w/index.php?title=Scripting_basics&action=edit") </span> .*
 
     boolean doorisunlocked;
      
@@ -523,75 +392,48 @@ it](Scripting_basics "http://www.modwiki.net/w/index.php?title=Scripting_basics&
 Entities
 --------
 
-If you play a map, nearly everything you see is actually an entity. They
-form movable furniture, working machines, weapon, monsters and even the
-player itself. If they are used in so many places, wouldn't it be
-logical to have control over them through scripting? The answer is
-'yes', of course. You can control entities through scripts, as long as
-you know their name.
+If you play a map, nearly everything you see is actually an entity. They form movable furniture, working machines, weapon, monsters and even the player itself. If they are used in so many places, wouldn't it be logical to have control over them through scripting? The answer is 'yes', of course. You can control entities through scripts, as long as you know their name.
 
-Now all we need is an exact way to "talk" to those entities. That is
-what **script events** do: send a certain message to an entity, and the
-entity can do something with it. If you look at them in the script, they
-look a lot like functions. The only difference is that you always need
-to specify which entity you are sending 'the message' to. Now let's look
-at an example, shall we:
+Now all we need is an exact way to "talk" to those entities. That is what **script events** do: send a certain message to an entity, and the entity can do something with it. If you look at them in the script, they look a lot like functions. The only difference is that you always need to specify which entity you are sending 'the message' to. Now let's look at an example, shall we:
 
     $my_entity.setWorldOrigin('57 68 19');
 
-The first part before the dot is the reference to the entity we want to
-affect. This is called a reference.
+The first part before the dot is the reference to the entity we want to affect. This is called a reference.
 
 In this example we were using an *Immediate reference* .
 
-Immediate references are simple: if you know the name of the entity in
-the map, then you just stick a \$ and write the name.
+Immediate references are simple: if you know the name of the entity in the map, then you just stick a $ and write the name.
 
-In this case there would have to be an entity named "my\_entity" in the
-map.
+In this case there would have to be an entity named "my\_entity" in the map.
 
-<div>
-
-![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake
-Wars only:
+![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake Wars only:
 *(Enemy Territory does not have support for immediate references.)*
-
-</div>
 
 ### The calling
 
 Next, the dot .
 
-It simply indicates that the following will be a function call on the
-referenced entity.
+It simply indicates that the following will be a function call on the referenced entity.
 
-In this case it's a [script event](Script_event "Script event") .
-setWorldOrigin is an event that sets the position of the entity in the
-world. We won't worry further about this because it's not a functional
-example.
+In this case it's a [script event](Script_event "Script event") . setWorldOrigin is an event that sets the position of the entity in the world. We won't worry further about this because it's not a functional example.
 
 ### The other way to reference
 
-Using a named reference. We can declare a variable as an entity
-reference.
+Using a named reference. We can declare a variable as an entity reference.
 
      
     entity myEntityReference;
 
-Then we'll be able to set it to what we want, reset it to reference
-another entity, or set it to references returned from functions.
+Then we'll be able to set it to what we want, reset it to reference another entity, or set it to references returned from functions.
 
-In this case we are going to set it to our pal named "my\_entity" which
-we know is in the map (theoretically, for this example).
+In this case we are going to set it to our pal named "my\_entity" which we know is in the map (theoretically, for this example).
 
      
     myEntityReference = sys.getEntity( "my_entity" );
 
-What sys.getEntity does is look for the entity name we pass in, and
-returns a reference to it, which we are catching in our own reference.
+What sys.getEntity does is look for the entity name we pass in, and returns a reference to it, which we are catching in our own reference.
 
-Now we have our reference set we can call a function on it like in the
-first example.
+Now we have our reference set we can call a function on it like in the first example.
 
      
     myEntityReference.setWorldOrigin('57 68 19');
@@ -600,14 +442,9 @@ Fantastic.
 
 ### sys
 
-In a similar way to accessing entities we can access the system events
-on the current thread using the sys identifier. It is for events that
-don't really make much sense being part of an entity, like game
-functions and utilities.
+In a similar way to accessing entities we can access the system events on the current thread using the sys identifier. It is for events that don't really make much sense being part of an entity, like game functions and utilities.
 
-Looking at the list for Doom 3 [Doom 3 System
-events](Script_events_%28Doom_3%29#System_Events "Script events (Doom 3)")
-we can see there's a lot of sys events.
+Looking at the list for Doom 3 [Doom 3 System events](Script_events_%28Doom_3%29#System_Events "Script events (Doom 3)") we can see there's a lot of sys events.
 
 In this example we call two events via sys:
 
@@ -622,17 +459,13 @@ println, which prints a line of text to the console.
      sys.println("Current game time is " + tempfloat + " seconds.");
     }
 
-You'll see in the first part we stored the game time in a variable, then
-added it to the string we were creating as the parameter for println.
+You'll see in the first part we stored the game time in a variable, then added it to the string we were creating as the parameter for println.
 
-The scripting system makes it easy to work with strings, you can append
-other strings, different variables simply with the + operator.
+The scripting system makes it easy to work with strings, you can append other strings, different variables simply with the + operator.
 
 ### Spawning entities
 
-(More info on sys.spawn() and an example. See Q4 wiki @
-[[1]](http://www.iddevnet.com/quake4/BasicScriptTutorial "http://www.iddevnet.com/quake4/BasicScriptTutorial")
-)
+(More info on sys.spawn() and an example. See Q4 wiki @ [[1]](http://www.iddevnet.com/quake4/BasicScriptTutorial "http://www.iddevnet.com/quake4/BasicScriptTutorial") )
 
 ### Example
 
@@ -668,20 +501,16 @@ other strings, different variables simply with the + operator.
 
 ### Overview of script events
 
-A reference of scripting commands (events) can be found on the [script
-events](Script_events "Script events") page.
+A reference of scripting commands (events) can be found on the [script events](Script_events "Script events") page.
 
 Keep in mind that all commands are case sensitive.
 
 Threads
 -------
 
-In all previous parts of code, we assumed that a called function would
-always return. What if we call a function which will never end, but
-still want to run some other code?
+In all previous parts of code, we assumed that a called function would always return. What if we call a function which will never end, but still want to run some other code?
 
-Let's take a closer look by means of an example. Suppose we want to make
-two machines run and write the following code:
+Let's take a closer look by means of an example. Suppose we want to make two machines run and write the following code:
 
      
     void runMachine1() {
@@ -713,22 +542,11 @@ two machines run and write the following code:
         runMachine2();
     }
 
-Making them run for the duration of the map might not be so obvious as
-it appears. The **while** loop will keep on running. However, this will
-stop the code for machine 2 to be called because *runMachine1* () is
-still running. Switching the order of the function calls in the *main*
-routine is not an option either. So how to make both code blocks execute
-separated from each other?
+Making them run for the duration of the map might not be so obvious as it appears. The **while** loop will keep on running. However, this will stop the code for machine 2 to be called because *runMachine1* () is still running. Switching the order of the function calls in the *main* routine is not an option either. So how to make both code blocks execute separated from each other?
 
-That is where [threads](Thread_%28scripting%29 "Thread (scripting)")
-come into play. Threads execute code without disturbing the flow of
-other threads. (Exceptions exist, which will be discussed later.) If we
-would now call a never-ending function, we would run it in a different
-thread so the function calling it can still execute other statements.
+That is where [threads](Thread_%28scripting%29 "Thread (scripting)") come into play. Threads execute code without disturbing the flow of other threads. (Exceptions exist, which will be discussed later.) If we would now call a never-ending function, we would run it in a different thread so the function calling it can still execute other statements.
 
-Doom 3 can't change random parts of code into threads, only functions
-can be run as a thread. In fact, it is only a matter of putting the
-**thread** statement in front of a normal function call.
+Doom 3 can't change random parts of code into threads, only functions can be run as a thread. In fact, it is only a matter of putting the **thread** statement in front of a normal function call.
 
 The updated *main* routine for the previous example:
 
@@ -741,56 +559,37 @@ Now both functions run in a separate thread and run happily ever after.
 
 ### Special uses
 
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Scripting_basics "http://www.modwiki.net/w/index.php?title=Scripting_basics&action=edit")
-</span> .*
-
-</div>
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Scripting_basics "http://www.modwiki.net/w/index.php?title=Scripting_basics&action=edit") </span> .*
 
 TODO: explain threadnames, killThread, thread-ids and terminate.
 
 Namespaces
 ----------
 
-These Declare a block which can include functions and variables,
-avoiding name conflicts. (similar to C++ namespaces)
+These Declare a block which can include functions and variables, avoiding name conflicts. (similar to C++ namespaces)
 
-These are used in Doom 3 to isolate a map script's functions and
-variables from the others.
+These are used in Doom 3 to isolate a map script's functions and variables from the others.
 
 To get access to a member of a namespace, the following syntax is used:
 
     namespace::member
 
-The main.script and attendant event.script are part of the default,
-global namespace.
+The main.script and attendant event.script are part of the default, global namespace.
 
 Objects
 -------
 
-A script object is a way of organizing variables and functions that are
-related to an [entity](Entity "Entity") . It is analogous to a class in
-object orientated programming terms.
+A script object is a way of organizing variables and functions that are related to an [entity](Entity "Entity") . It is analogous to a class in object orientated programming terms.
 
-Its uses are wide, ranging from weapons and AI, to extending existing
-entities.
+Its uses are wide, ranging from weapons and AI, to extending existing entities.
 
-While an entity's [spawn class](Spawn_class "Spawn class") strongly
-defines runtime behavior, script objects are generally used to create
-variation on that behavior within its framework.
+While an entity's [spawn class](Spawn_class "Spawn class") strongly defines runtime behavior, script objects are generally used to create variation on that behavior within its framework.
 
-The spawn class sets up and runs a script object if the key/value pair
-"scriptobject" on the entity's [spawnArgs](SpawnArgs "SpawnArgs") is set
-to a valid object type.
+The spawn class sets up and runs a script object if the key/value pair "scriptobject" on the entity's [spawnArgs](SpawnArgs "SpawnArgs") is set to a valid object type.
 
 ### Working on objects
 
-In order to call a function of a script object a valid object reference
-must be set up.
+In order to call a function of a script object a valid object reference must be set up.
 
 Example:
 
@@ -799,24 +598,11 @@ Example:
     myMonster = sys.getEntity("monster_sam");
     myMonster.wake_on_trigger();
 
-Line 1 declares an object reference of monster\_base type. The script
-compiler will issue an [error](Error "Error") if there is no script
-object of that type.
+Line 1 declares an object reference of monster\_base type. The script compiler will issue an [error](Error "Error") if there is no script object of that type.
 
-\
- Line 2 sets the reference to an entity. For the sake of this example we
-are assuming the entity "monster\_sam" is an entity running a script
-object of monster\_base type, or one that inherits monster\_base. An
-object reference will be set to
-[\$null\_entity](%24null_entity_%28scripting%29 "$null entity (scripting)")
-if the entity you are trying to set the variable to does not have a
-object of that type.
+ Line 2 sets the reference to an entity. For the sake of this example we are assuming the entity "monster\_sam" is an entity running a script object of monster\_base type, or one that inherits monster\_base. An object reference will be set to [$null\_entity](%24null_entity_%28scripting%29 "$null entity (scripting)") if the entity you are trying to set the variable to does not have a object of that type.
 
-\
- Line 3 calls the object function wake\_on\_trigger(), which we know is
-a function defined in the script object monster\_base. If the function
-was not declared in the script object the script interpreter would issue
-a [warning](Warning "Warning") .
+ Line 3 calls the object function wake\_on\_trigger(), which we know is a function defined in the script object monster\_base. If the function was not declared in the script object the script interpreter would issue a [warning](Warning "Warning") .
 
 ### Creating your own script object
 
@@ -829,7 +615,5 @@ Advanced aspects
 
 ### virtual functions
 
-Declares a function on base script object type. Used for more advanced
-scripting techniques. Should only be declared in [global
-namespace](Global_namespace "Global namespace") .
+Declares a function on base script object type. Used for more advanced scripting techniques. Should only be declared in [global namespace](Global_namespace "Global namespace") .
 

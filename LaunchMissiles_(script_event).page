@@ -1,8 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -12,8 +11,7 @@ Launches a projectile.
 Usage
 -----
 
-void launchMissiles( string projectilename, string sound, string
-launchbone, string targetbone, float numshots, float framedelay )
+void launchMissiles( string projectilename, string sound, string launchbone, string targetbone, float numshots, float framedelay )
 
 Parameters
 ----------
@@ -30,5 +28,4 @@ Notes
 
 tba
 
-\
 

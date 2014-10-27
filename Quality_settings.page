@@ -1,12 +1,9 @@
-These are the [CVars](Console "Console") and other game features that
-change depending on which quality level you select in the system options
-menu.
+These are the [CVars](Console "Console") and other game features that change depending on which quality level you select in the system options menu.
 
 <span align="absbottom"> ![](/images/2/23/D3square_25.png) Doom 3 </span>
 -------------------------------------------------------------------------
 
-*The information in this section is specific to [Doom
-3](Doom_3 "Doom 3") .*
+*The information in this section is specific to [Doom 3](Doom_3 "Doom 3") .*
 
 Doom 3
 
@@ -138,13 +135,10 @@ Texture Budget
 
 512mb
 
-\
-
 <span align="absbottom"> ![Q4](/images/e/e8/Q4square_25.png) Quake 4 </span>
 ----------------------------------------------------------------------------
 
-*The information in this section is specific to [Quake
-4](Quake_4 "Quake 4") .*
+*The information in this section is specific to [Quake 4](Quake_4 "Quake 4") .*
 
 Quake 4
 
@@ -296,13 +290,7 @@ Texture Budget
 
 512mb
 
-\* nVidia GeForce 3 and 4MX cards use palettized normal maps in Medium
-and Low quality settings so this CVar is set to "1" on these cards. All
-other supported cards use
-[DXT5](DDS_%28file_format%29 "DDS (file format)") compression.
+\* nVidia GeForce 3 and 4MX cards use palettized normal maps in Medium and Low quality settings so this CVar is set to "1" on these cards. All other supported cards use [DXT5](DDS_%28file_format%29 "DDS (file format)") compression.
 
-You can use the
-[listImages](ListImages_%28console_command%29 "ListImages (console command)")
-console command to keep tabs on the texture memory usage of each
-setting.
+You can use the [listImages](ListImages_%28console_command%29 "ListImages (console command)") console command to keep tabs on the texture memory usage of each setting.
 

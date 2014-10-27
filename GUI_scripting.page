@@ -1,17 +1,6 @@
-<div align="left"
-style="float:right; font-size: 17px;background: #FFFFEE; padding: 5px; border: 1px solid #000000; padding-left: 15px; padding-right: 15px; margin-left: 15px; margin-right: 15px; padding-bottom: 15px; width: 400px;">
-
-<div align="right" style="font-size: 10px; text-align=right;">
-
 [What's this?](Help:Reference_box "Help:Reference box")
 
-</div>
-
-<div>
-
 **GUI scripting quick reference**
-
-</div>
 
 ------------------------------------------------------------------------
 
@@ -22,44 +11,16 @@ style="float:right; font-size: 17px;background: #FFFFEE; padding: 5px; border: 1
 -   [GUI item events](GUI_item_events "GUI item events")
 -   [GUI commands](GUI_commands "GUI commands")
 
-</div>
+GUI scripting is the system used on the [GUI files](GUI_%28file_format%29 "GUI (file format)") when creating [GUIs](GUIs "GUIs") . The GUI scripting syntax is very different from the one featured on other scripting systems available on the engine. More than a programming language, it's a layout system, where you can create buttons and images that will be displayed; its scripting features are also quite limited, and oftenly, a developer has to resort to using external script (for example, some [level scripting](Level_scripting "Level scripting") ) to add advanced features to a given GUI.
 
-GUI scripting is the system used on the [GUI
-files](GUI_%28file_format%29 "GUI (file format)") when creating
-[GUIs](GUIs "GUIs") . The GUI scripting syntax is very different from
-the one featured on other scripting systems available on the engine.
-More than a programming language, it's a layout system, where you can
-create buttons and images that will be displayed; its scripting features
-are also quite limited, and oftenly, a developer has to resort to using
-external script (for example, some [level
-scripting](Level_scripting "Level scripting") ) to add advanced features
-to a given GUI.
+Still, it's a very powerful system to use, as it allows a multitude of new interactions inside the game and is quite easy to work with (you can change [GUI](GUI_%28file_format%29 "GUI (file format)") files externally and reload them inside the game without having to recompile or restart anything).
 
-Still, it's a very powerful system to use, as it allows a multitude of
-new interactions inside the game and is quite easy to work with (you can
-change [GUI](GUI_%28file_format%29 "GUI (file format)") files externally
-and reload them inside the game without having to recompile or restart
-anything).
-
-Also, notice that this system is a natural evolution of what's called
-the [Team Arena menu
-system](http://www.linux.ucla.edu/~phaethon/q3tamenu/q3tamenu.html "http://www.linux.ucla.edu/~phaethon/q3tamenu/q3tamenu.html")
-, a similar GUI system that has been available on id Software's Team
-Arena version of the Quake 3 engine.
+Also, notice that this system is a natural evolution of what's called the [Team Arena menu system](http://www.linux.ucla.edu/~phaethon/q3tamenu/q3tamenu.html "http://www.linux.ucla.edu/~phaethon/q3tamenu/q3tamenu.html") , a similar GUI system that has been available on id Software's Team Arena version of the Quake 3 engine.
 
 General schematics
 ------------------
 
-A GUI script is composed of several different elements "windowDefs",
-"renderDefs" or other types of elements, refered on this wiki as
-"items". Each item is an screen element, whether visible or not, and it
-is used to build interface elements such as buttons, text fields,
-windows, menus and so on. Think of it as floating HTML elements, or
-Visual Basic elements, or Flash symbols/movieclips, or XUL box tags.
-It's an standard approach to [markup-based user
-interfaces](http://en.wikipedia.org/wiki/User_interface_markup_language "http://en.wikipedia.org/wiki/User_interface_markup_language")
-, although the Doom 3 GUI system syntax itself looks more like an script
-than a markup system.
+A GUI script is composed of several different elements "windowDefs", "renderDefs" or other types of elements, refered on this wiki as "items". Each item is an screen element, whether visible or not, and it is used to build interface elements such as buttons, text fields, windows, menus and so on. Think of it as floating HTML elements, or Visual Basic elements, or Flash symbols/movieclips, or XUL box tags. It's an standard approach to [markup-based user interfaces](http://en.wikipedia.org/wiki/User_interface_markup_language "http://en.wikipedia.org/wiki/User_interface_markup_language") , although the Doom 3 GUI system syntax itself looks more like an script than a markup system.
 
 This is a sample GUI script:
 
@@ -88,30 +49,18 @@ This is a sample GUI script:
         }
     }
 
-This example is a blank screen, with a "Hello world." text on top of it,
-and a button that hides the text. You can see there's one main windowDef
-(the [Desktop GUI item](Desktop_GUI_item "Desktop GUI item") ) which
-always has a fixed name and size - it's the main document windowDef,
-let's say - and it contains several children windowDefs inside of it,
-which make up the elements on screen.
+This example is a blank screen, with a "Hello world." text on top of it, and a button that hides the text. You can see there's one main windowDef (the [Desktop GUI item](Desktop_GUI_item "Desktop GUI item") ) which always has a fixed name and size - it's the main document windowDef, let's say - and it contains several children windowDefs inside of it, which make up the elements on screen.
 
 Reference
 ---------
 
-The reference is meant to be a list of everything that can be done
-inside a GUI.
+The reference is meant to be a list of everything that can be done inside a GUI.
 
--   [Items](GUI_items "GUI items") - Each GUI is made of several
-    different items of different types.
--   [Item properties](GUI_item_properties "GUI item properties") - Each
-    item can have a lot of properties define how they look like and how
-    they act.
--   [Variables types](GUI_variable_types "GUI variable types") - Each
-    item can also have additional variables.
--   [Events](GUI_item_events "GUI item events") - Items can have events
-    that get called under certain conditions.
--   [Commands](GUI_commands "GUI commands") - And of course, items can
-    have some commands for simple scripting.
+-   [Items](GUI_items "GUI items") - Each GUI is made of several different items of different types.
+-   [Item properties](GUI_item_properties "GUI item properties") - Each item can have a lot of properties define how they look like and how they act.
+-   [Variables types](GUI_variable_types "GUI variable types") - Each item can also have additional variables.
+-   [Events](GUI_item_events "GUI item events") - Items can have events that get called under certain conditions.
+-   [Commands](GUI_commands "GUI commands") - And of course, items can have some commands for simple scripting.
 
 Additional syntax
 -----------------
@@ -120,24 +69,15 @@ There are two special syntax cases: *comments* and *includes* .
 
 ### Comments
 
-Comments are the classical *unusable* part of a GUI script. Lines marked
-as comments are completelly ignored by the game, so you can use comments
-to create special annotations on the script -- something you need to
-remember, something you need people that's messing with the code to
-know, something you want to turn off, etc. The GUI script accepts the
-two classical comment notations: "//" and "/\* \*/".
+Comments are the classical *unusable* part of a GUI script. Lines marked as comments are completelly ignored by the game, so you can use comments to create special annotations on the script -- something you need to remember, something you need people that's messing with the code to know, something you want to turn off, etc. The GUI script accepts the two classical comment notations: "//" and "/\* \*/".
 
-The comment marker "//" is used on the beginning of lines you want to
-mark as comments. Everything from the "//" on is ignored, so you can use
-comments on lines with code to mention important information. Example:
+The comment marker "//" is used on the beginning of lines you want to mark as comments. Everything from the "//" on is ignored, so you can use comments on lines with code to mention important information. Example:
 
     // Makes the title invisible
     set "title::visible" "0";
     set "button::alreadyClicked" "1"; // So it'll remember not to execute anymore
 
-And the comment markers "/\* \*/" are used to start and end comment
-blocks. They're more fit to large pieces of text, or just multiline
-ones. Example:
+And the comment markers "/\* \*/" are used to start and end comment blocks. They're more fit to large pieces of text, or just multiline ones. Example:
 
     /*
     War Is Peace
@@ -145,32 +85,20 @@ ones. Example:
     Ignorance Is Strength
     */
 
-Remember that adding comments delimiters are the easiest way to "turn
-off" certain parts of the code - to "comment out" them - so it's pretty
-normal to see comment blocks which actually contain scripts.
+Remember that adding comments delimiters are the easiest way to "turn off" certain parts of the code - to "comment out" them - so it's pretty normal to see comment blocks which actually contain scripts.
 
 ### Includes
 
-Includes exist to save on space and help reusing code. To do includes,
-use the *\#include* keyword. With this keyword, you can include separate
-scripts (from other files) directly into your code -- when the script
-gets interpreted by the GUI system, it behaves as if the script it's
-referencing was included on that same line. For example,
+Includes exist to save on space and help reusing code. To do includes, use the *\#include* keyword. With this keyword, you can include separate scripts (from other files) directly into your code -- when the script gets interpreted by the GUI system, it behaves as if the script it's referencing was included on that same line. For example,
 
     #include "guis/gui_flicker.pd" 
 
-It's the same as copying & pasting the content of guis/gui\_flicker.pd
-file on this line.
+It's the same as copying & pasting the content of guis/gui\_flicker.pd file on this line.
 
-Using \#include is great for organization and portability, and you can
-use it anywhere on your GUI script. It also works exactly like the
-\#include statement in Flash's ActionScript.
+Using \#include is great for organization and portability, and you can use it anywhere on your GUI script. It also works exactly like the \#include statement in Flash's ActionScript.
 
 External links
 --------------
 
--   [GUIs at
-    iddevnet.com](http://www.iddevnet.com/doom3/guis.php "http://www.iddevnet.com/doom3/guis.php") -
-    A lengthy explanation of the GUI system and its syntax. Very good
-    resource.
+-   [GUIs at iddevnet.com](http://www.iddevnet.com/doom3/guis.php "http://www.iddevnet.com/doom3/guis.php") - A lengthy explanation of the GUI system and its syntax. Very good resource.
 

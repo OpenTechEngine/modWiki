@@ -1,30 +1,21 @@
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/6/69/Q4square_bg.png) The information on this page is
-specific to [Quake 4](Quake_4 "Quake 4") .
-
-</div>
+![](/images/6/69/Q4square_bg.png) The information on this page is specific to [Quake 4](Quake_4 "Quake 4") .
 
 ------------------------------------------------------------------------
 
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Plays an [effect](Effect_%28decl%29 "Effect (decl)") on a particular
-location of the entity.
+Plays an [effect](Effect_%28decl%29 "Effect (decl)") on a particular location of the entity.
 
 Usage
 -----
 
-*void* playEffect( *string* **effectName** , *string* **boneName** ,
-*float* **loop** )
+*void* playEffect( *string* **effectName** , *string* **boneName** , *float* **loop** )
 
 Parameters
 ----------
@@ -43,5 +34,4 @@ Notes
 
 This script event does not return any values.
 
-\
 

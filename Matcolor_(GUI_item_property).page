@@ -1,30 +1,11 @@
-The color used to render the item material (from the
-[background](Background_%28GUI_item_property%29 "Background (GUI item property)")
-property).
+The color used to render the item material (from the [background](Background_%28GUI_item_property%29 "Background (GUI item property)") property).
 
 Syntax
 ------
 
     matcolor r, g, b, a
 
-This can be a bit tricky: instead of a simple color definition as in the
-[forecolor](Forecolor_%28GUI_item_property%29 "Forecolor (GUI item property)")
-or
-[backcolor](Backcolor_%28GUI_item_property%29 "Backcolor (GUI item property)")
-properties, this color defines how much of the original color, from each
-channel, will be used. The default '1, 1, 1, 1' value says that all
-values from each channel should be used, and the shader will be rendered
-as it is; however, by setting a channel to any value lower than 1, you
-can filter color channels from the rendered material, altering its
-color. With a white material, using a value of '0, 1, 0, 1' would create
-a green material, for example. This is useful when creating grayscale
-materials: by using different matcolor settings, you can have different
-colors rendered using the same assets. When creating a HUD for a Blue vs
-Red game, for example, you could create grayscale HUD assets then simply
-use '1, 0, 0, 1' values for the red team GUIs and '0, 0, 1, 1' values
-for the blue team GUIs. The last value, *a* or Alpha, is the opacity of
-the material -- and it is rendered on top of the item's background
-color, if any.
+This can be a bit tricky: instead of a simple color definition as in the [forecolor](Forecolor_%28GUI_item_property%29 "Forecolor (GUI item property)") or [backcolor](Backcolor_%28GUI_item_property%29 "Backcolor (GUI item property)") properties, this color defines how much of the original color, from each channel, will be used. The default '1, 1, 1, 1' value says that all values from each channel should be used, and the shader will be rendered as it is; however, by setting a channel to any value lower than 1, you can filter color channels from the rendered material, altering its color. With a white material, using a value of '0, 1, 0, 1' would create a green material, for example. This is useful when creating grayscale materials: by using different matcolor settings, you can have different colors rendered using the same assets. When creating a HUD for a Blue vs Red game, for example, you could create grayscale HUD assets then simply use '1, 0, 0, 1' values for the red team GUIs and '0, 0, 1, 1' values for the blue team GUIs. The last value, *a* or Alpha, is the opacity of the material -- and it is rendered on top of the item's background color, if any.
 
 Default value
 -------------
@@ -36,5 +17,4 @@ Example(s)
 
     matcolor 1, 1, 1, 1
 
-\
 

@@ -1,14 +1,12 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Specifies the duration an object takes to decelerate down from its
-maximum speed to 0.
+Specifies the duration an object takes to decelerate down from its maximum speed to 0.
 
 Usage
 -----
@@ -29,11 +27,6 @@ Examples
 Notes
 -----
 
-This script event does not return any values. In the example above it
-will cause the entity to take 3 seconds to decelerate from its maximum
-speed. An entity's decelTime should not be higher than the entity's
-time. Logically, you can't take 4 seconds to decelerate, when the time
-for an object is only 2 seconds long.
+This script event does not return any values. In the example above it will cause the entity to take 3 seconds to decelerate from its maximum speed. An entity's decelTime should not be higher than the entity's time. Logically, you can't take 4 seconds to decelerate, when the time for an object is only 2 seconds long.
 
-\
 

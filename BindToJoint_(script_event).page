@@ -1,30 +1,24 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Fixes this entity's position and orientation relative to a bone on
-another entity, such that when the master's bone moves, so does this
-entity.
+Fixes this entity's position and orientation relative to a bone on another entity, such that when the master's bone moves, so does this entity.
 
 Usage
 -----
 
-*void* bindToJoint( *entity* **master** , *string* **boneName** ,
-*float* **rotateWithMaster** )
+*void* bindToJoint( *entity* **master** , *string* **boneName** , *float* **rotateWithMaster** )
 
 Parameters
 ----------
 
 -   [master] - The entity that this entity should be bound to.
--   [boneName] - The name of the bone of the master that this entity
-    should be bound to.
--   [rotateWithMaster] - Whether this entity should rotate with the
-    master or not.
+-   [boneName] - The name of the bone of the master that this entity should be bound to.
+-   [rotateWithMaster] - Whether this entity should rotate with the master or not.
 
 Examples
 --------
@@ -37,5 +31,4 @@ Notes
 
 This script event does not return any values.
 
-\
 

@@ -1,8 +1,7 @@
 Description
 -----------
 
-This command loads a . [MAP](MAP_%28file_format%29 "MAP (file format)")
-file for development testing. See notes for details.
+This command loads a . [MAP](MAP_%28file_format%29 "MAP (file format)") file for development testing. See notes for details.
 
 Usage
 -----
@@ -19,15 +18,8 @@ Parameters
 Notes
 -----
 
-The map must have been previously compiled. See also the
-[testmap](Testmap_%28console_command%29 "Testmap (console command)") and
-[map](Map_%28console_command%29 "Map (console command)") console
-commands.
+The map must have been previously compiled. See also the [testmap](Testmap_%28console_command%29 "Testmap (console command)") and [map](Map_%28console_command%29 "Map (console command)") console commands.
 
-The devmap command appears to do the same thing as the map command.
-However, the name implies that it is used for development testing in
-which case there may be some benefit to it's use although currently any
-difference between the commands is not known.
+The devmap command appears to do the same thing as the map command. However, the name implies that it is used for development testing in which case there may be some benefit to it's use although currently any difference between the commands is not known.
 
-\
 

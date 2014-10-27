@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Trigger_sequence_%28entity%29 "http://modwiki.net/w/index.php?title=Trigger_sequence_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Trigger_sequence_%28entity%29 "http://modwiki.net/w/index.php?title=Trigger_sequence_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Trigger_sequence_%28entity%29 "http://modwiki.net/w/index.php?title=Trigger_sequence_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Trigger_sequence_%28entity%29 "http://modwiki.net/w/index.php?title=Trigger_sequence_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -28,74 +10,73 @@ Trigger sequencer. This trigger must be targeted at an
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                  DESCRIPTION
-  -------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Defaults XXXX        Description not available.
-  The XXXX             Description not available.
-  accepts\_wounds      Description not available.
-  accurateguitrace     Description not available.
-  alignToJoint         Description not available.
-  angle                Description not available.
-  anim                 Description not available.
-  anyTouch             Description not available.
-  applyDamageEffects   Description not available.
-  bind                 Description not available.
-  bindOrientated       Description not available.
-  bindToBody           Description not available.
-  bindToJoint          Description not available.
-  bindanim             Description not available.
-  callRef              script function to call when triggered which takes trigger/entity reference as parm. Preset to 'Sequence'; if this key is changed, this trigger will not function as described.
-  cameraTarget         Description not available.
-  cinematic            Description not available.
-  classname            Description not available.
-  clipmodel            Description not available.
-  cone                 Description not available.
-  continues XXXX       Description not available.
-  cylinder             Description not available.
-  delay                seconds to wait before firing after triggered.
-  dispose\_delay       Description not available.
-  editor\_bool XXXX    Description not available.
-  editor\_color        Description not available.
-  editor\_maxs         Description not available.
-  editor\_mins         Description not available.
-  editor\_usage        Trigger sequencer. This trigger must be targeted at an
-  editor\_var XXXX     Description not available.
-  entities.            Description not available.
-  gravity              Description not available.
-  guiTarget            Description not available.
-  health               Description not available.
-  hide                 Description not available.
-  ignoreGravityZones   Description not available.
-  maxs                 Description not available.
-  mins                 Description not available.
-  model                Description not available.
-  moveToJoint          Description not available.
-  name                 Description not available.
-  networkSync          Description not available.
-  neverDormant         Description not available.
-  noClient             Description not available.
-  noJawFlap            Description not available.
-  noPortal             Description not available.
-  noTouch              Description not available.
-  noclipmodel          Description not available.
-  offset\_aim          Description not available.
-  origin               Description not available.
-  push\_cosine         Description not available.
-  pushes               Description not available.
-  random               wait variance. trigger waits wait + or - random after firing targets before triggering again.
-  random\_delay        Description not available.
-  rotation             Description not available.
-  scriptobject         Description not available.
-  size                 Description not available.
-  solidForTeam         Description not available.
-  spawnclass           Description not available.
-  target               Description not available.
-  their XXXX           Description not available.
-  through XXXX         Description not available.
-  wait                 seconds between possible triggerings of the this trigger. Use '-1' to indicate one time only.
+| KEY                | DESCRIPTION                                                                                                                                                                     |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Defaults XXXX      | Description not available.                                                                                                                                                      |
+| The XXXX           | Description not available.                                                                                                                                                      |
+| accepts\_wounds    | Description not available.                                                                                                                                                      |
+| accurateguitrace   | Description not available.                                                                                                                                                      |
+| alignToJoint       | Description not available.                                                                                                                                                      |
+| angle              | Description not available.                                                                                                                                                      |
+| anim               | Description not available.                                                                                                                                                      |
+| anyTouch           | Description not available.                                                                                                                                                      |
+| applyDamageEffects | Description not available.                                                                                                                                                      |
+| bind               | Description not available.                                                                                                                                                      |
+| bindOrientated     | Description not available.                                                                                                                                                      |
+| bindToBody         | Description not available.                                                                                                                                                      |
+| bindToJoint        | Description not available.                                                                                                                                                      |
+| bindanim           | Description not available.                                                                                                                                                      |
+| callRef            | script function to call when triggered which takes trigger/entity reference as parm. Preset to 'Sequence'; if this key is changed, this trigger will not function as described. |
+| cameraTarget       | Description not available.                                                                                                                                                      |
+| cinematic          | Description not available.                                                                                                                                                      |
+| classname          | Description not available.                                                                                                                                                      |
+| clipmodel          | Description not available.                                                                                                                                                      |
+| cone               | Description not available.                                                                                                                                                      |
+| continues XXXX     | Description not available.                                                                                                                                                      |
+| cylinder           | Description not available.                                                                                                                                                      |
+| delay              | seconds to wait before firing after triggered.                                                                                                                                  |
+| dispose\_delay     | Description not available.                                                                                                                                                      |
+| editor\_bool XXXX  | Description not available.                                                                                                                                                      |
+| editor\_color      | Description not available.                                                                                                                                                      |
+| editor\_maxs       | Description not available.                                                                                                                                                      |
+| editor\_mins       | Description not available.                                                                                                                                                      |
+| editor\_usage      | Trigger sequencer. This trigger must be targeted at an                                                                                                                          |
+| editor\_var XXXX   | Description not available.                                                                                                                                                      |
+| entities.          | Description not available.                                                                                                                                                      |
+| gravity            | Description not available.                                                                                                                                                      |
+| guiTarget          | Description not available.                                                                                                                                                      |
+| health             | Description not available.                                                                                                                                                      |
+| hide               | Description not available.                                                                                                                                                      |
+| ignoreGravityZones | Description not available.                                                                                                                                                      |
+| maxs               | Description not available.                                                                                                                                                      |
+| mins               | Description not available.                                                                                                                                                      |
+| model              | Description not available.                                                                                                                                                      |
+| moveToJoint        | Description not available.                                                                                                                                                      |
+| name               | Description not available.                                                                                                                                                      |
+| networkSync        | Description not available.                                                                                                                                                      |
+| neverDormant       | Description not available.                                                                                                                                                      |
+| noClient           | Description not available.                                                                                                                                                      |
+| noJawFlap          | Description not available.                                                                                                                                                      |
+| noPortal           | Description not available.                                                                                                                                                      |
+| noTouch            | Description not available.                                                                                                                                                      |
+| noclipmodel        | Description not available.                                                                                                                                                      |
+| offset\_aim        | Description not available.                                                                                                                                                      |
+| origin             | Description not available.                                                                                                                                                      |
+| push\_cosine       | Description not available.                                                                                                                                                      |
+| pushes             | Description not available.                                                                                                                                                      |
+| random             | wait variance. trigger waits wait + or - random after firing targets before triggering again.                                                                                   |
+| random\_delay      | Description not available.                                                                                                                                                      |
+| rotation           | Description not available.                                                                                                                                                      |
+| scriptobject       | Description not available.                                                                                                                                                      |
+| size               | Description not available.                                                                                                                                                      |
+| solidForTeam       | Description not available.                                                                                                                                                      |
+| spawnclass         | Description not available.                                                                                                                                                      |
+| target             | Description not available.                                                                                                                                                      |
+| their XXXX         | Description not available.                                                                                                                                                      |
+| through XXXX       | Description not available.                                                                                                                                                      |
+| wait               | seconds between possible triggerings of the this trigger. Use '-1' to indicate one time only.                                                                                   |
 
 Inheritance
 -----------

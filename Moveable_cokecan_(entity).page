@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Moveable_cokecan_%28entity%29 "http://www.modwiki.net/w/index.php?title=Moveable_cokecan_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Moveable_cokecan_%28entity%29 "http://www.modwiki.net/w/index.php?title=Moveable_cokecan_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Moveable_cokecan_%28entity%29 "http://www.modwiki.net/w/index.php?title=Moveable_cokecan_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Moveable_cokecan_%28entity%29 "http://www.modwiki.net/w/index.php?title=Moveable_cokecan_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -28,77 +10,76 @@ Description not available.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                  DESCRIPTION
-  -------------------- ------------------------------------------------------------------------------------------
-  allowStep            Set to 0 to prevent monsters from ever walking over this object.
-  angle                Description not available.
-  anim                 Description not available.
-  bind                 Description not available.
-  bindOrientated       Description not available.
-  bindToBody           Description not available.
-  bindToJoint          Description not available.
-  bindanim             Description not available.
-  bouncyness           How much the object bounces in the range [0-1] where 0 is no bounce.
-  broken               Description not available.
-  cameraTarget         Description not available.
-  cinematic            Description not available.
-  classname            Description not available.
-  clipmodel            Description not available.
-  clipshrink           Shrink the visual model with an epsilon and use it as a clip model.
-  cone                 Description not available.
-  cylinder             Description not available.
-  density              Volume of the object times the density is the mass.
-  editor\_bool XXXX    Description not available.
-  editor\_color        Description not available.
-  editor\_maxs         Description not available.
-  editor\_mins         Description not available.
-  editor\_model XXXX   Description not available.
-  editor\_rotatable    Description not available.
-  editor\_usage10      Description not available.
-  editor\_usage11      Description not available.
-  editor\_usage12      Description not available.
-  editor\_usage13      Description not available.
-  editor\_usage2       Description not available.
-  editor\_usage3       Description not available.
-  editor\_usage4       Description not available.
-  editor\_usage5       Description not available.
-  editor\_usage6       Description not available.
-  editor\_usage7       Description not available.
-  editor\_usage8       Description not available.
-  editor\_usage9       Description not available.
-  editor\_var XXXX     Description not available.
-  explode              Description not available.
-  friction             Friction with contacting surfaces in the range [0-1] where 0 is no friction.
-  guiTarget            Description not available.
-  health               If set the visual model changes to 'broken' when the health drops down to or below zero.
-  hide                 Description not available.
-  inherit              Description not available.
-  maxs                 Description not available.
-  mins                 Description not available.
-  model                Description not available.
-  name                 Description not available.
-  networkSync          Description not available.
-  neverDormant         Description not available.
-  noGrab               Description not available.
-  noclipmodel          Description not available.
-  nodrop               Description not available.
-  noimpact             Description not available.
-  nonsolid             Make the object non-solid.
-  notPushable          Description not available.
-  origin               Description not available.
-  rotation             Description not available.
-  scriptobject         Description not available.
-  size                 Description not available.
-  skin\_xray           Description not available.
-  slowmo               Description not available.
-  snd\_bounce          Description not available.
-  solidForTeam         Description not available.
-  spawnclass           Description not available.
-  target               Description not available.
-  unbindondeath        Description not available.
+| KEY                | DESCRIPTION                                                                              |
+|--------------------|------------------------------------------------------------------------------------------|
+| allowStep          | Set to 0 to prevent monsters from ever walking over this object.                         |
+| angle              | Description not available.                                                               |
+| anim               | Description not available.                                                               |
+| bind               | Description not available.                                                               |
+| bindOrientated     | Description not available.                                                               |
+| bindToBody         | Description not available.                                                               |
+| bindToJoint        | Description not available.                                                               |
+| bindanim           | Description not available.                                                               |
+| bouncyness         | How much the object bounces in the range [0-1] where 0 is no bounce.                     |
+| broken             | Description not available.                                                               |
+| cameraTarget       | Description not available.                                                               |
+| cinematic          | Description not available.                                                               |
+| classname          | Description not available.                                                               |
+| clipmodel          | Description not available.                                                               |
+| clipshrink         | Shrink the visual model with an epsilon and use it as a clip model.                      |
+| cone               | Description not available.                                                               |
+| cylinder           | Description not available.                                                               |
+| density            | Volume of the object times the density is the mass.                                      |
+| editor\_bool XXXX  | Description not available.                                                               |
+| editor\_color      | Description not available.                                                               |
+| editor\_maxs       | Description not available.                                                               |
+| editor\_mins       | Description not available.                                                               |
+| editor\_model XXXX | Description not available.                                                               |
+| editor\_rotatable  | Description not available.                                                               |
+| editor\_usage10    | Description not available.                                                               |
+| editor\_usage11    | Description not available.                                                               |
+| editor\_usage12    | Description not available.                                                               |
+| editor\_usage13    | Description not available.                                                               |
+| editor\_usage2     | Description not available.                                                               |
+| editor\_usage3     | Description not available.                                                               |
+| editor\_usage4     | Description not available.                                                               |
+| editor\_usage5     | Description not available.                                                               |
+| editor\_usage6     | Description not available.                                                               |
+| editor\_usage7     | Description not available.                                                               |
+| editor\_usage8     | Description not available.                                                               |
+| editor\_usage9     | Description not available.                                                               |
+| editor\_var XXXX   | Description not available.                                                               |
+| explode            | Description not available.                                                               |
+| friction           | Friction with contacting surfaces in the range [0-1] where 0 is no friction.             |
+| guiTarget          | Description not available.                                                               |
+| health             | If set the visual model changes to 'broken' when the health drops down to or below zero. |
+| hide               | Description not available.                                                               |
+| inherit            | Description not available.                                                               |
+| maxs               | Description not available.                                                               |
+| mins               | Description not available.                                                               |
+| model              | Description not available.                                                               |
+| name               | Description not available.                                                               |
+| networkSync        | Description not available.                                                               |
+| neverDormant       | Description not available.                                                               |
+| noGrab             | Description not available.                                                               |
+| noclipmodel        | Description not available.                                                               |
+| nodrop             | Description not available.                                                               |
+| noimpact           | Description not available.                                                               |
+| nonsolid           | Make the object non-solid.                                                               |
+| notPushable        | Description not available.                                                               |
+| origin             | Description not available.                                                               |
+| rotation           | Description not available.                                                               |
+| scriptobject       | Description not available.                                                               |
+| size               | Description not available.                                                               |
+| skin\_xray         | Description not available.                                                               |
+| slowmo             | Description not available.                                                               |
+| snd\_bounce        | Description not available.                                                               |
+| solidForTeam       | Description not available.                                                               |
+| spawnclass         | Description not available.                                                               |
+| target             | Description not available.                                                               |
+| unbindondeath      | Description not available.                                                               |
 
 Inheritance
 -----------

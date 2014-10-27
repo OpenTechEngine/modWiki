@@ -1,50 +1,14 @@
-<div id="attention" class="boilerplate metadata"
-style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
+**This page is in urgent need of attention because: *Needs wiki formatting, code tags, style guide etc.***
 
-**This page is in urgent need of attention because: *Needs wiki
-formatting, code tags, style guide etc.***
+If you disagree with this, please explain why on [its talk page](Talk:Func_ladder_%28entity%29 "Talk:Func ladder (entity)") .
 
-If you disagree with this, please explain why on [its talk
-page](Talk:Func_ladder_%28entity%29 "Talk:Func ladder (entity)") .
+Ladders! by Calrathan If you've played Quake2, HalfLife, or a number of other newer games, you've seen and used ladders. What better way is there of going up and down? iD software proposed jump pads, but if you're like the hundreds of other mod authors out there who want a touch of realism, jump and accelerator pads just won't do! So why are you here? To get ladders working in Quake3 of course!
 
-</div>
+ 1. PLAYER MOVEMENT CODE For those of you who aren't really well versed in the code, I'll go into a little background on bg\_pmove.c. This is the file that controls all of the different ways a client can move. Because we're allowed to change it, it is included in both the cgame [for prediction] module, and the game [for actual movement] module. Just remember to compile BOTH of these projects after we're done, or Ranger / Mynx / Bitterman / Whoever will have a major case of the jitters. =) The player movement code basically has two main parts. Almost all of the movement code is called from void PmoveSingle (pmove\_t \*pmove). This function, with the help of a bunch of if statements, takes the state of the player and determines which type of movement they're allowed to make. The different movement functions are: PM\_NoclipMove, PM\_DeadMove, PM\_FlyMove, PM\_GrappleMove, PM\_AirMove, PM\_WaterJumpMove, PM\_WaterMove, PM\_WalkMove & PM\_AirMove.
 
-Ladders! by Calrathan If you've played Quake2, HalfLife, or a number of
-other newer games, you've seen and used ladders. What better way is
-there of going up and down? iD software proposed jump pads, but if
-you're like the hundreds of other mod authors out there who want a touch
-of realism, jump and accelerator pads just won't do! So why are you
-here? To get ladders working in Quake3 of course!
+What this tutorial [hopefully] will show you, is how to make PM\_LadderMove, as well as the functions and modifications needed to check and see if we're on the ladder.
 
-\
- 1. PLAYER MOVEMENT CODE For those of you who aren't really well versed
-in the code, I'll go into a little background on bg\_pmove.c. This is
-the file that controls all of the different ways a client can move.
-Because we're allowed to change it, it is included in both the cgame
-[for prediction] module, and the game [for actual movement] module. Just
-remember to compile BOTH of these projects after we're done, or Ranger /
-Mynx / Bitterman / Whoever will have a major case of the jitters. =) The
-player movement code basically has two main parts. Almost all of the
-movement code is called from void PmoveSingle (pmove\_t \*pmove). This
-function, with the help of a bunch of if statements, takes the state of
-the player and determines which type of movement they're allowed to
-make. The different movement functions are: PM\_NoclipMove,
-PM\_DeadMove, PM\_FlyMove, PM\_GrappleMove, PM\_AirMove,
-PM\_WaterJumpMove, PM\_WaterMove, PM\_WalkMove & PM\_AirMove.
-
-What this tutorial [hopefully] will show you, is how to make
-PM\_LadderMove, as well as the functions and modifications needed to
-check and see if we're on the ladder.
-
-\
- 2. THE DEFINITIONS As with every C/C++ program, before you use
-something, you need to define it. So let's do just that. We'll need a
-flag that we can set somewhere when we really ARE on the ladder, so we
-don't need to check more than once per client frame. In bg\_pmove.c
-there is a global definition of a a structure "pml" of type "pml\_t".
-This player movement structure is just the place to add this flag. Go
-ahead and open up bg\_local.h and look for the structure definiton. When
-you get there, add the hilighted line below.
+ 2. THE DEFINITIONS As with every C/C++ program, before you use something, you need to define it. So let's do just that. We'll need a flag that we can set somewhere when we really ARE on the ladder, so we don't need to check more than once per client frame. In bg\_pmove.c there is a global definition of a a structure "pml" of type "pml\_t". This player movement structure is just the place to add this flag. Go ahead and open up bg\_local.h and look for the structure definiton. When you get there, add the hilighted line below.
 
 typedef struct {
 
@@ -66,19 +30,7 @@ typedef struct {
 
 } pml\_t;
 
-Sorry, but we're not quite done with our definitions. Open up
-bg\_pmove.c and look at the "movement parameters" section. You'll notice
-that there seem to be different settings for different types of motion.
-the scale variables basically set the maximum velocity. The accelerate
-variables determine how quickly you reach maximum velocity, and the
-friction values determine how quickly you stop. Because we're moving
-vertically, we obviously can't go as fast as normal running. Ladders
-aren't like running surfaces which we slip and slide on. Movement is
-very discrete on ladders, so we want to reach our maxiumum speed right
-away, and we want to stop right away. [ Can you imagine floating upward
-on a ladder even after you stopped moving? ] Because of all these
-factors, I chose the following values for our ladder. Feel free to play
-with them and see what happens.
+Sorry, but we're not quite done with our definitions. Open up bg\_pmove.c and look at the "movement parameters" section. You'll notice that there seem to be different settings for different types of motion. the scale variables basically set the maximum velocity. The accelerate variables determine how quickly you reach maximum velocity, and the friction values determine how quickly you stop. Because we're moving vertically, we obviously can't go as fast as normal running. Ladders aren't like running surfaces which we slip and slide on. Movement is very discrete on ladders, so we want to reach our maxiumum speed right away, and we want to stop right away. [ Can you imagine floating upward on a ladder even after you stopped moving? ] Because of all these factors, I chose the following values for our ladder. Feel free to play with them and see what happens.
 
      // movement parameters
      float  pm_stopspeed = 100;
@@ -100,11 +52,7 @@ with them and see what happens.
      float  pm_waterfriction = 1;
      float  pm_flightfriction = 3;
 
-3\. FRICTION! Now that we've made our little friction, acceleration and
-scale variables, it's time to implement them. Make sence? Good. Scroll
-down to around line 200 in bg\_pmove.c. This should put you smack dab in
-the center of static void PM\_Friction( void ). Adding the following
-hilighted lines will add our specified friction iff we're on the ladder.
+3. FRICTION! Now that we've made our little friction, acceleration and scale variables, it's time to implement them. Make sence? Good. Scroll down to around line 200 in bg\_pmove.c. This should put you smack dab in the center of static void PM\_Friction( void ). Adding the following hilighted lines will add our specified friction iff we're on the ladder.
 
      // apply flying friction
      if ( pm->ps->powerups[PW_FLIGHT] || pm->ps->pm_type == PM_SPECTATOR ) {
@@ -123,72 +71,40 @@ hilighted lines will add our specified friction iff we're on the ladder.
      }
      newspeed /= speed;
 
-4\. DOIN' THE MOVE We're at the point were we need to make our actual
-functions. The first one will perform the actual movement physics, and
-the second one is used to check if we're on the ladder. The order
-doesn't really matter at this point, we just need to make sure we paste
-these functions into bg\_pmove.c somewhere BEFORE the function void
-PmoveSingle (pmove\_t \*pmove). I can't stress this enough. I've already
-recieved emails from people who put it in past that function, and got
-compiler errors complaining of a function "redefinition". If you don't
-care about how this works, just go ahead and grab the code below. If you
-do, I'll go into it a little. First off, I swiped the PM\_WaterMove()
-code for PM\_LadderMove(). Why? Because its basically the same idea. In
-water you have full 360° motion; we have 360° motion here. You might not
-believe me when I say that, but it's true so long as you're on the
-ladder. That brings us to the CheckLadder() function. This one is fairly
-simple. We trace a box forward the size of our playermodel. If any point
-on this box hits a ladder, then we're concidered on it. It sets the flag
-and returns.
+4. DOIN' THE MOVE We're at the point were we need to make our actual functions. The first one will perform the actual movement physics, and the second one is used to check if we're on the ladder. The order doesn't really matter at this point, we just need to make sure we paste these functions into bg\_pmove.c somewhere BEFORE the function void PmoveSingle (pmove\_t \*pmove). I can't stress this enough. I've already recieved emails from people who put it in past that function, and got compiler errors complaining of a function "redefinition". If you don't care about how this works, just go ahead and grab the code below. If you do, I'll go into it a little. First off, I swiped the PM\_WaterMove() code for PM\_LadderMove(). Why? Because its basically the same idea. In water you have full 360° motion; we have 360° motion here. You might not believe me when I say that, but it's true so long as you're on the ladder. That brings us to the CheckLadder() function. This one is fairly simple. We trace a box forward the size of our playermodel. If any point on this box hits a ladder, then we're concidered on it. It sets the flag and returns.
 
-\
  /\*
 
 ###### =======
 
 PM\_LadderMove() by: Calrathan [Arthur Tomlin]
 
-Right now all I know is that this works for VERTICAL ladders. Ladders
-with angles on them (urban2 for AQ2) haven't been tested.
+Right now all I know is that this works for VERTICAL ladders. Ladders with angles on them (urban2 for AQ2) haven't been tested.
 
 ###### =======
 
 -   /
 
-static void PM\_LadderMove( void ) { int i; vec3\_t wishvel; float
-wishspeed; vec3\_t wishdir; float scale; float vel;
+static void PM\_LadderMove( void ) { int i; vec3\_t wishvel; float wishspeed; vec3\_t wishdir; float scale; float vel;
 
 PM\_Friction ();
 
 scale = PM\_CmdScale( &pm-\>cmd );
 
-// user intentions [what the user is attempting to do] if ( !scale ) {
-wishvel[0] = 0; wishvel[1] = 0; wishvel[2] = 0; } else { // if they're
-trying to move... lets calculate it for (i=0 ; i\<3 ; i++) wishvel[i] =
-scale \* pml.forward[i]\*pm-\>cmd.forwardmove + scale \*
-pml.right[i]\*pm-\>cmd.rightmove; wishvel[2] += scale \*
-pm-\>cmd.upmove; }
+// user intentions [what the user is attempting to do] if ( !scale ) { wishvel[0] = 0; wishvel[1] = 0; wishvel[2] = 0; } else { // if they're trying to move... lets calculate it for (i=0 ; i\<3 ; i++) wishvel[i] = scale \* pml.forward[i]\*pm-\>cmd.forwardmove + scale \* pml.right[i]\*pm-\>cmd.rightmove; wishvel[2] += scale \* pm-\>cmd.upmove; }
 
 VectorCopy (wishvel, wishdir); wishspeed = VectorNormalize(wishdir);
 
-if ( wishspeed \> pm-\>ps-\>speed \* pm\_ladderScale ) { wishspeed =
-pm-\>ps-\>speed \* pm\_ladderScale; }
+if ( wishspeed \> pm-\>ps-\>speed \* pm\_ladderScale ) { wishspeed = pm-\>ps-\>speed \* pm\_ladderScale; }
 
 PM\_Accelerate (wishdir, wishspeed, pm\_ladderAccelerate);
 
-// This SHOULD help us with sloped ladders, but it remains untested. if
-( pml.groundPlane && DotProduct( pm-\>ps-\>velocity,
-pml.groundTrace.plane.normal ) \< 0 ) { vel =
-VectorLength(pm-\>ps-\>velocity); // slide along the ground plane [the
-ladder section under our feet] PM\_ClipVelocity (pm-\>ps-\>velocity,
-pml.groundTrace.plane.normal, pm-\>ps-\>velocity, OVERCLIP );
+// This SHOULD help us with sloped ladders, but it remains untested. if ( pml.groundPlane && DotProduct( pm-\>ps-\>velocity, pml.groundTrace.plane.normal ) \< 0 ) { vel = VectorLength(pm-\>ps-\>velocity); // slide along the ground plane [the ladder section under our feet] PM\_ClipVelocity (pm-\>ps-\>velocity, pml.groundTrace.plane.normal, pm-\>ps-\>velocity, OVERCLIP );
 
-VectorNormalize(pm-\>ps-\>velocity); VectorScale(pm-\>ps-\>velocity,
-vel, pm-\>ps-\>velocity); }
+VectorNormalize(pm-\>ps-\>velocity); VectorScale(pm-\>ps-\>velocity, vel, pm-\>ps-\>velocity); }
 
 PM\_SlideMove( qfalse ); // move without gravity }
 
-\
  /\*
 
 ###### =
@@ -199,60 +115,23 @@ CheckLadder [ ARTHUR TOMLIN ]
 
 -   /
 
-void CheckLadder( void ) { vec3\_t flatforward,spot; trace\_t trace;
-pml.ladder = qfalse; // check for ladder flatforward[0] =
-pml.forward[0]; flatforward[1] = pml.forward[1]; flatforward[2] = 0;
-VectorNormalize (flatforward); VectorMA (pm-\>ps-\>origin, 1,
-flatforward, spot); pm-\>trace (&trace, pm-\>ps-\>origin, pm-\>mins,
-pm-\>maxs, spot, pm-\>ps-\>clientNum, MASK\_PLAYERSOLID);
+void CheckLadder( void ) { vec3\_t flatforward,spot; trace\_t trace; pml.ladder = qfalse; // check for ladder flatforward[0] = pml.forward[0]; flatforward[1] = pml.forward[1]; flatforward[2] = 0; VectorNormalize (flatforward); VectorMA (pm-\>ps-\>origin, 1, flatforward, spot); pm-\>trace (&trace, pm-\>ps-\>origin, pm-\>mins, pm-\>maxs, spot, pm-\>ps-\>clientNum, MASK\_PLAYERSOLID);
 
-if ((trace.fraction \< 1) && (trace.surfaceFlags & SURF\_LADDER))
-pml.ladder = qtrue;
+if ((trace.fraction \< 1) && (trace.surfaceFlags & SURF\_LADDER)) pml.ladder = qtrue;
 
 }
 
-\
- 5. FINISHING OFF The last step is to modify our void PmoveSingl e
-(pmove\_t \*pmove) function [you know, the one that controlls almost all
-of the player movement stuff?] to include our ladders. You'll find the
-function around line 1,900. This part if fairly simple. We just run our
-function to check if we're on a ladder, and then if we are, we run the
-ladder physics. We place this after water move, so if you're in the
-water it ignores the ladder altogether. Add the red lines. Have fun!
+ 5. FINISHING OFF The last step is to modify our void PmoveSingl e (pmove\_t \*pmove) function [you know, the one that controlls almost all of the player movement stuff?] to include our ladders. You'll find the function around line 1,900. This part if fairly simple. We just run our function to check if we're on a ladder, and then if we are, we run the ladder physics. We place this after water move, so if you're in the water it ignores the ladder altogether. Add the red lines. Have fun!
 
 // set groundentity PM\_GroundTrace();
 
 if ( pm-\>ps-\>pm\_type == PM\_DEAD ) { PM\_DeadMove (); }
 
-PM\_DropTimers(); CheckLadder(); // ARTHUR TOMLIN check and see if
-they're on a ladder
+PM\_DropTimers(); CheckLadder(); // ARTHUR TOMLIN check and see if they're on a ladder
 
-if ( pm-\>ps-\>powerups[PW\_FLIGHT] ) { // flight powerup doesn't allow
-jump and has different friction PM\_FlyMove(); } else if
-(pm-\>ps-\>pm\_flags & PMF\_GRAPPLE\_PULL) { PM\_GrappleMove(); // We
-can wiggle a bit PM\_AirMove(); } else if (pm-\>ps-\>pm\_flags &
-PMF\_TIME\_WATERJUMP) { PM\_WaterJumpMove(); } else if (
-pm-\>waterlevel \> 1 ) { // swimming PM\_WaterMove(); } else if
-(pml.ladder) { PM\_LadderMove(); } else if ( pml.walking ) { // walking
-on ground PM\_WalkMove(); } else { // airborne PM\_AirMove(); }
+if ( pm-\>ps-\>powerups[PW\_FLIGHT] ) { // flight powerup doesn't allow jump and has different friction PM\_FlyMove(); } else if (pm-\>ps-\>pm\_flags & PMF\_GRAPPLE\_PULL) { PM\_GrappleMove(); // We can wiggle a bit PM\_AirMove(); } else if (pm-\>ps-\>pm\_flags & PMF\_TIME\_WATERJUMP) { PM\_WaterJumpMove(); } else if ( pm-\>waterlevel \> 1 ) { // swimming PM\_WaterMove(); } else if (pml.ladder) { PM\_LadderMove(); } else if ( pml.walking ) { // walking on ground PM\_WalkMove(); } else { // airborne PM\_AirMove(); }
 
-\
+6. PUTTING LADDERS IN MAPS There we go, the Ladder code is done. But, we still have a problem. Ladders don't seem to work in your maps, even if you did a direct .BSP conversion! Oh no! Easy fix. Have your map designers [or for the versitile, do it yourself] make a box around your ladders. This box should be given a texture of "common/ladderclip". Edit your "quake3\\baseq3\\scripts\\common.shader" file, and insert the lines: textures/common/ladderclip { qer\_trans 0.40 surfaceparm nolightmap surfaceparm nomarks surfaceparm nodraw surfaceparm nonsolid surfaceparm playerclip surfaceparm noimpact surfaceparm ladder }
 
-6\. PUTTING LADDERS IN MAPS There we go, the Ladder code is done. But, we
-still have a problem. Ladders don't seem to work in your maps, even if
-you did a direct .BSP conversion! Oh no! Easy fix. Have your map
-designers [or for the versitile, do it yourself] make a box around your
-ladders. This box should be given a texture of "common/ladderclip". Edit
-your "quake3\\baseq3\\scripts\\common.shader" file, and insert the
-lines: textures/common/ladderclip { qer\_trans 0.40 surfaceparm
-nolightmap surfaceparm nomarks surfaceparm nodraw surfaceparm nonsolid
-surfaceparm playerclip surfaceparm noimpact surfaceparm ladder }
-
-Before you leave, I'd like to remind you to rebuild BOTH the "game" and
-"cgame" module. This will the client side prediction work properly with
-ladders [ aka no shaking like a mofo ]. Compile your map, and there we
-have it. Working ladders. =) 7. ADDENDUM Known issue: Player's legs stay
-in previous state, sometimes as if they're running in midair. When we
-get a player animation tutorial up, I'll update this to reflect the
-"fix".
+Before you leave, I'd like to remind you to rebuild BOTH the "game" and "cgame" module. This will the client side prediction work properly with ladders [ aka no shaking like a mofo ]. Compile your map, and there we have it. Working ladders. =) 7. ADDENDUM Known issue: Player's legs stay in previous state, sometimes as if they're running in midair. When we get a player animation tutorial up, I'll update this to reflect the "fix".
 

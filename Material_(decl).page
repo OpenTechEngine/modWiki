@@ -1,60 +1,28 @@
-<div align="left"
-style="float:right; font-size: 17px;background: #FFFFEE; padding: 5px; border: 1px solid #000000; padding-left: 15px; padding-right: 15px; margin-left: 15px; margin-right: 15px; padding-bottom: 15px; width: 400px;">
-
-<div align="right" style="font-size: 10px; text-align=right;">
-
 [What's this?](Help:Reference_box "Help:Reference box")
 
-</div>
-
-<div>
-
 **Material shaders quick reference**
-
-</div>
 
 ------------------------------------------------------------------------
 
 <span style="font-size: 14px"> </span>
 ![](/images/2/23/D3square_25.png) **Doom 3**
 
--   [Global
-    keywords](Global_material_keywords_%28Doom_3%29 "Global material keywords (Doom 3)")
--   [Stage specific
-    keywords](Stage_material_keywords_%28Doom_3%29 "Stage material keywords (Doom 3)")
+-   [Global keywords](Global_material_keywords_%28Doom_3%29 "Global material keywords (Doom 3)")
+-   [Stage specific keywords](Stage_material_keywords_%28Doom_3%29 "Stage material keywords (Doom 3)")
 
 ![](/images/e/e8/Q4square_25.png) **Quake 4**
 
--   [Global
-    keywords](Global_material_keywords_%28Quake_4%29 "Global material keywords (Quake 4)")
--   [Stage specific
-    keywords](Stage_material_keywords_%28Quake_4%29 "Stage material keywords (Quake 4)")
+-   [Global keywords](Global_material_keywords_%28Quake_4%29 "Global material keywords (Quake 4)")
+-   [Stage specific keywords](Stage_material_keywords_%28Quake_4%29 "Stage material keywords (Quake 4)")
 
 ![](/images/b/ba/Preysquare_25.png) **Prey**
 
--   [Global
-    keywords](Global_material_keywords_%28Prey%29 "Global material keywords (Prey)")
--   [Stage specific
-    keywords](Stage_material_keywords_%28Prey%29 "Stage material keywords (Prey)")
+-   [Global keywords](Global_material_keywords_%28Prey%29 "Global material keywords (Prey)")
+-   [Stage specific keywords](Stage_material_keywords_%28Prey%29 "Stage material keywords (Prey)")
 
-</div>
+Materials are a list of structured commands and parameters which define the appearance and physical properties of the surfaces to which a specific material is applied. They tell the id tech 4 engine how to combine a set of [images](Images "Images") to create a visible texture and how the player and other objects should interact with it. The textures you see on the different surfaces in the game are created using these materials.
 
-Materials are a list of structured commands and parameters which define
-the appearance and physical properties of the surfaces to which a
-specific material is applied. They tell the id tech 4 engine how to
-combine a set of [images](Images "Images") to create a visible texture
-and how the player and other objects should interact with it. The
-textures you see on the different surfaces in the game are created using
-these materials.
-
-Material shaders are similar to Quake 3's shaders, but with much more
-power and flexibility. Almost all aspects of a material shader from
-stages down to individual keywords can be dynamically influenced through
-the use of simple conditional branching, expressions, and
-[shaderparms](Shaderparm "Shaderparm") . On hardware that supports them,
-materials can even have [vertex and fragment
-programs](Vertex_and_fragment_programs "Vertex and fragment programs")
-applied to any number of their stages.
+Material shaders are similar to Quake 3's shaders, but with much more power and flexibility. Almost all aspects of a material shader from stages down to individual keywords can be dynamically influenced through the use of simple conditional branching, expressions, and [shaderparms](Shaderparm "Shaderparm") . On hardware that supports them, materials can even have [vertex and fragment programs](Vertex_and_fragment_programs "Vertex and fragment programs") applied to any number of their stages.
 
 Syntax
 ------
@@ -66,32 +34,19 @@ Syntax
       }
     }
 
-Material shader declarations begin with a header which consists only of
-the *name* of the material.
+Material shader declarations begin with a header which consists only of the *name* of the material.
 
-The header is followed by the body of the declaration which is enclosed
-in curly brackets.
+The header is followed by the body of the declaration which is enclosed in curly brackets.
 
 The body is composed of a *global* section and one or more *stages* .
 
-The global section contains one or more [global
-keywords](Global_material_keywords_%28Doom_3%29 "Global material keywords (Doom 3)")
-. Global keywords affect a material as a whole.
+The global section contains one or more [global keywords](Global_material_keywords_%28Doom_3%29 "Global material keywords (Doom 3)") . Global keywords affect a material as a whole.
 
-Each stage is contained within its own set of curly brackets and
-contains one or more [stage specific
-keywords](Stage_material_keywords_%28Doom_3%29 "Stage material keywords (Doom 3)")
-and/or vertex and fragment programs. Stage keywords affect only the
-stage they are contained within.
+Each stage is contained within its own set of curly brackets and contains one or more [stage specific keywords](Stage_material_keywords_%28Doom_3%29 "Stage material keywords (Doom 3)") and/or vertex and fragment programs. Stage keywords affect only the stage they are contained within.
 
-You can use two forward slashes to insert comments anywhere in the
-material. Anything after these in the same line will be ignored by the
-engine:
+You can use two forward slashes to insert comments anywhere in the material. Anything after these in the same line will be ignored by the engine:
 
     // This is a comment
 
-For more information on materials, refer to the **Quick and Dirty
-Material Shader Primer** at
-[http://www.doom3world.org/phpbb2/viewtopic.php?t=6617](https://web.archive.org/web/20121122081345/http://www.doom3world.org/phpbb2/viewtopic.php?t=6617 "http://www.doom3world.org/phpbb2/viewtopic.php?t=6617")
-.
+For more information on materials, refer to the **Quick and Dirty Material Shader Primer** at [http://www.doom3world.org/phpbb2/viewtopic.php?t=6617](https://web.archive.org/web/20121122081345/http://www.doom3world.org/phpbb2/viewtopic.php?t=6617 "http://www.doom3world.org/phpbb2/viewtopic.php?t=6617") .
 

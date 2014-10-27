@@ -1,9 +1,7 @@
 Description
 -----------
 
-This command will grab all the images created by [image program
-functions](Stage_material_keywords_%28Doom_3%29 "Stage material keywords (Doom 3)")
-from the video memory and export them to a folder named *progimg* .
+This command will grab all the images created by [image program functions](Stage_material_keywords_%28Doom_3%29 "Stage material keywords (Doom 3)") from the video memory and export them to a folder named *progimg* .
 
 Usage
 -----
@@ -20,11 +18,8 @@ This console command does not accept parameters.
 Notes
 -----
 
-This command is useful when you want to see the result an image program
-function has on a given stage of a material shader.
+This command is useful when you want to see the result an image program function has on a given stage of a material shader.
 
-This command takes a good while to execute as every image referenced by
-a image program function is exported.
+This command takes a good while to execute as every image referenced by a image program function is exported.
 
-\
 

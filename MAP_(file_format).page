@@ -1,30 +1,22 @@
 Overview
 --------
 
-The MAP file is an ASCII text type of files used by
-[DoomEdit](DoomEdit "DoomEdit") to store individual game levels. This
-file has all the static geometry and entities. Before a level can be
-played it has to be compiled. See the [mapping](Mapping "Mapping")
-section for more information on handling map files.
+The MAP file is an ASCII text type of files used by [DoomEdit](DoomEdit "DoomEdit") to store individual game levels. This file has all the static geometry and entities. Before a level can be played it has to be compiled. See the [mapping](Mapping "Mapping") section for more information on handling map files.
 
 Map Format Syntax
 -----------------
 
-Generally, MAPs consist of entities. Some are called 'brushwork
-entities' for the obvious fact that they contain brush definitions.
+Generally, MAPs consist of entities. Some are called 'brushwork entities' for the obvious fact that they contain brush definitions.
 
 ### Comments
 
-The MAP file format supports in-line comments. Comment blocks are not
-supported.
+The MAP file format supports in-line comments. Comment blocks are not supported.
 
-To start a comment, place two forward slashes. ( '//' ) Everything
-behind these markers is ignored.
+To start a comment, place two forward slashes. ( '//' ) Everything behind these markers is ignored.
 
 ### Header
 
-The first non-empty/non-comment line contains the header, which
-currently consists of nothing more than the version.
+The first non-empty/non-comment line contains the header, which currently consists of nothing more than the version.
 
 For Doom 3, the header is:
 
@@ -32,27 +24,19 @@ For Doom 3, the header is:
 
 ### Entities
 
-An entity definition starts by a curly open brace, ( '{' ) and runs on
-till a matching curly closing brace is found. ( '}' )
+An entity definition starts by a curly open brace, ( '{' ) and runs on till a matching curly closing brace is found. ( '}' )
 
-The next lines contain the entity's key/value pairs. First comes the
-name, then the value. Both are enclosed in double quotes, with a space
-in between.
+The next lines contain the entity's key/value pairs. First comes the name, then the value. Both are enclosed in double quotes, with a space in between.
 
 After those keys and values, one or more brush definitions may follow.
 
-**Note:** An entity should at least have a "spawnclass" key, otherwise
-unpredictable behaviour might occur.
+**Note:** An entity should at least have a "spawnclass" key, otherwise unpredictable behaviour might occur.
 
-**Note:** The first entity should have a "spawnclass" key with value
-"worldspawn". Brush definitions which don't need to be in a seperate
-entity should be placed in this entity. There can only be **one** entity
-with this spawnclass in a whole MAP file.
+**Note:** The first entity should have a "spawnclass" key with value "worldspawn". Brush definitions which don't need to be in a seperate entity should be placed in this entity. There can only be **one** entity with this spawnclass in a whole MAP file.
 
 #### Brush definition
 
-A brush definition starts and ends with curly braces, just like entities
-do.
+A brush definition starts and ends with curly braces, just like entities do.
 
     // brush x
     {
@@ -63,65 +47,38 @@ do.
     }
     }
 
-\
- Before each brush definition is mostly a comment line with the brush
-number, although this is not required as it is used by the editor only.
+ Before each brush definition is mostly a comment line with the brush number, although this is not required as it is used by the editor only.
 
-The first line of the brush definition specifies the type of brush. In
-Doom 3, this is currently **brushDef3** for brush volumes or
-**patchDef2** for patches.
+The first line of the brush definition specifies the type of brush. In Doom 3, this is currently **brushDef3** for brush volumes or **patchDef2** for patches.
 
-\
- After the type, the actual data follows - once more bounded by curly
-braces.
+ After the type, the actual data follows - once more bounded by curly braces.
 
 ##### Brush Volume definition
 
-A brush volume is a convex primitive defined by infinite planes. Because
-of this, it must have at least four sides although it usually has six.
+A brush volume is a convex primitive defined by infinite planes. Because of this, it must have at least four sides although it usually has six.
 
-The data consists of multiple lines, one for each plane defining the
-volume:
+The data consists of multiple lines, one for each plane defining the volume:
 
     (plane equation) ( ( xxscale xyscale xoffset ) ( yxscale yyscale yoffset ) ) "material" ?
 
-The 4 numbers forming the plane equation are nothing more than the
-normal vector of the plane and it's Euclidean (shortest) distance to the
-origin.
+The 4 numbers forming the plane equation are nothing more than the normal vector of the plane and it's Euclidean (shortest) distance to the origin.
 
-The next 6 numbers are used to store the texture mapping. Each group of
-3 numbers is actually a row in a 3x3 matrix where the bottom row is
-always '0 0 1'. In the code, it is referred to as a "texture matrix".
-Such a matrix is commonly used in geometry to transform a 2D coordinate
-vector (with the Z value set to 1) to another coordinate system.
+The next 6 numbers are used to store the texture mapping. Each group of 3 numbers is actually a row in a 3x3 matrix where the bottom row is always '0 0 1'. In the code, it is referred to as a "texture matrix". Such a matrix is commonly used in geometry to transform a 2D coordinate vector (with the Z value set to 1) to another coordinate system.
 
-At the place of the question mark, extra numbers may or may not show up.
-It is unknown what they do, though it could be a mistake of the editor
-or some obscure feature. (More proof is needed to verify their use.)
+At the place of the question mark, extra numbers may or may not show up. It is unknown what they do, though it could be a mistake of the editor or some obscure feature. (More proof is needed to verify their use.)
 
 ##### Patch definition
 
-The patches used in the id Tech 4 engine are Bezier surfaces. These
-surfaces are defined by both *data points* and *control points* . Data
-points are points which are always part of the surface and thus
-influence the surface directly. Control points merely "attract" the
-surface towards them but offers a finer control in this way. The exact
-theory used for these surfaces is explained on sites dealing with Bezier
-mathematics, see [External links](MAP_%28file_format%29#External_links)
-for more info.
+The patches used in the id Tech 4 engine are Bezier surfaces. These surfaces are defined by both *data points* and *control points* . Data points are points which are always part of the surface and thus influence the surface directly. Control points merely "attract" the surface towards them but offers a finer control in this way. The exact theory used for these surfaces is explained on sites dealing with Bezier mathematics, see [External links](MAP_%28file_format%29#External_links) for more info.
 
-The data for a patch definition consists of several things. First are
-these two lines:
+The data for a patch definition consists of several things. First are these two lines:
 
      "material"
      ( xoffset yoffset rotation xscale yscale )
 
-The first line specifies the material to apply to it, and the second
-specifies the texture settings with 5 those numbers.
+The first line specifies the material to apply to it, and the second specifies the texture settings with 5 those numbers.
 
-After that follows a matrix of points to define the control grid. The
-first and last line consist of an opening respectively closing brace.
-The rows are bounded with braces as well.
+After that follows a matrix of points to define the control grid. The first and last line consist of an opening respectively closing brace. The rows are bounded with braces as well.
 
 For a 3 x 3 patch: (4 data points, 5 control points)
 
@@ -131,9 +88,7 @@ For a 3 x 3 patch: (4 data points, 5 control points)
     ( ( x7 y7 z7 u7 v7 ) ( x8 y8 z8 u8 v8 ) ( x9 y9 z9 u9 v9 ) )
     )
 
-Each point has 5 coordinates where the first 3 are the 3D coordinates,
-the last 2 are the Bezier "blossom" coordinates. (Again, check the
-theory.)
+Each point has 5 coordinates where the first 3 are the 3D coordinates, the last 2 are the Bezier "blossom" coordinates. (Again, check the theory.)
 
 Complete Example
 ----------------
@@ -173,19 +128,10 @@ Complete Example
 External Links
 --------------
 
--   [Quark Documentation on Brush Face
-    Formats](https://web.archive.org/web/20091212230433/http://quark.planetquake.gamespy.com/infobase/src.topics.face.html#bp "http://quark.planetquake.gamespy.com/infobase/src.topics.face.html#bp")
--   [Quark Documentation on Bezier
-    Patches](https://web.archive.org/web/20091212230433/http://quark.planetquake.gamespy.com/infobase/src.pas.bezier.html#quadmath "http://quark.planetquake.gamespy.com/infobase/src.pas.bezier.html#quadmath")
--   [Doom3World: Texture
-    matrix](https://web.archive.org/web/20091212230433/http://www.doom3world.org/phpbb2/viewtopic.php?t=11101 "http://www.doom3world.org/phpbb2/viewtopic.php?t=11101")
--   [Doom3World: brush format in the .map
-    file](https://web.archive.org/web/20091212230433/http://www.doom3world.org/phpbb2/viewtopic.php?t=13639 "http://www.doom3world.org/phpbb2/viewtopic.php?t=13639")
-    (Experimental research on the plane equations)
--   [.map Doom3World: Format texture
-    specification.](https://web.archive.org/web/20091212230433/http://www.doom3world.org/phpbb2/viewtopic.php?t=16228 "http://www.doom3world.org/phpbb2/viewtopic.php?t=16228")
-    (Research on the texture specification)
--   **(Needs more links to some references/introduction on Bezier
-    mathematics.)** Consult
-    [Google](http://www.google.com/ "http://www.google.com") for now.
+-   [Quark Documentation on Brush Face Formats](https://web.archive.org/web/20091212230433/http://quark.planetquake.gamespy.com/infobase/src.topics.face.html#bp "http://quark.planetquake.gamespy.com/infobase/src.topics.face.html#bp")
+-   [Quark Documentation on Bezier Patches](https://web.archive.org/web/20091212230433/http://quark.planetquake.gamespy.com/infobase/src.pas.bezier.html#quadmath "http://quark.planetquake.gamespy.com/infobase/src.pas.bezier.html#quadmath")
+-   [Doom3World: Texture matrix](https://web.archive.org/web/20091212230433/http://www.doom3world.org/phpbb2/viewtopic.php?t=11101 "http://www.doom3world.org/phpbb2/viewtopic.php?t=11101")
+-   [Doom3World: brush format in the .map file](https://web.archive.org/web/20091212230433/http://www.doom3world.org/phpbb2/viewtopic.php?t=13639 "http://www.doom3world.org/phpbb2/viewtopic.php?t=13639") (Experimental research on the plane equations)
+-   [.map Doom3World: Format texture specification.](https://web.archive.org/web/20091212230433/http://www.doom3world.org/phpbb2/viewtopic.php?t=16228 "http://www.doom3world.org/phpbb2/viewtopic.php?t=16228") (Research on the texture specification)
+-   **(Needs more links to some references/introduction on Bezier mathematics.)** Consult [Google](http://www.google.com/ "http://www.google.com") for now.
 

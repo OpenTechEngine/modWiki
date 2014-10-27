@@ -1,8 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -17,10 +16,8 @@ Usage
 Parameters
 ----------
 
--   [min] - The new coordinates for the minimum corner of this entity's
-    bounding box.
--   [max] - The new coordinates for the maximum corner of this entity's
-    bounding box.
+-   [min] - The new coordinates for the minimum corner of this entity's bounding box.
+-   [max] - The new coordinates for the maximum corner of this entity's bounding box.
 
 Examples
 --------
@@ -33,5 +30,4 @@ Notes
 
 This script event does not return any values.
 
-\
 

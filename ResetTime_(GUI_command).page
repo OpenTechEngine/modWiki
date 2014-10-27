@@ -1,19 +1,13 @@
-Resets the time for a given item. This is used to "go back in time" and
-restart pieces of code executed on
-[onTime](OnTime_%28GUI_item_event%29 "OnTime (GUI item event)") event
-blocks.
+Resets the time for a given item. This is used to "go back in time" and restart pieces of code executed on [onTime](OnTime_%28GUI_item_event%29 "OnTime (GUI item event)") event blocks.
 
 Syntax
 ------
 
     resetTime [[item] time]
 
-*item* is the name of the target [GUI item](GUI_items "GUI items") that
-will have its time changed. If this parameter is omitted, the resetTime
-command applies to the current item (where this command running from).
+*item* is the name of the target [GUI item](GUI_items "GUI items") that will have its time changed. If this parameter is omitted, the resetTime command applies to the current item (where this command running from).
 
-*time* is the new time that will be applied to the target item, in
-miliseconds. If this parameter is also omitted, it assumes time to be 0.
+*time* is the new time that will be applied to the target item, in miliseconds. If this parameter is also omitted, it assumes time to be 0.
 
 Example(s)
 ----------
@@ -21,5 +15,4 @@ Example(s)
     resetTime "animHandler" "0";
     resetTime "10";
 
-\
 

@@ -1,12 +1,6 @@
-Model declarations define a model reference that associates a mesh, it's
-animations, and any additional settings with a given name so that they
-can be referenced as a group. This can prove useful. For instance,
-allowing you to reuse animations with different models provided they
-share the same skeleton.
+Model declarations define a model reference that associates a mesh, it's animations, and any additional settings with a given name so that they can be referenced as a group. This can prove useful. For instance, allowing you to reuse animations with different models provided they share the same skeleton.
 
-It's generally used with animated models although there doesn't appear
-to be any indication that you couldn't use them with a static model as
-well.
+It's generally used with animated models although there doesn't appear to be any indication that you couldn't use them with a static model as well.
 
 Syntax
 ------
@@ -26,88 +20,84 @@ Syntax
        channel [name] ( [joints] )   
     }
 
-Model declarations begin with a header which consists of the keyword
-"model" followed by the name of the model.
+Model declarations begin with a header which consists of the keyword "model" followed by the name of the model.
 
-The header is followed by the body of the declaration which is enclosed
-in curly brackets.
+The header is followed by the body of the declaration which is enclosed in curly brackets.
 
 The body is composed of a series of keywords and their parameters.
 
 Keywords
 --------
 
- inherit 
-:   Causes a model declaration to inherit the properties of the
-    specified model declaration
-:   inherit [model]
+ inherit   
+Causes a model declaration to inherit the properties of the specified model declaration
 
-    -   [model] - The model declaration to inherit from
+    inherit [model]
 
-<!-- -->
-
- skin 
-:   Applies a skin declaration
-:   skin [skin]
-
-    -   [skin] - The skin declaration to apply
+-   [model] - The model declaration to inherit from
 
 <!-- -->
 
- mesh 
-:   Defines the model associated with this model declaration
-:   mesh [file]
+ skin   
+Applies a skin declaration
 
-    -   [file] - The MD5mesh to use
+    skin [skin]
 
-<!-- -->
-
- remove 
-:   Removes the specified animation from the list of inherited
-    animations
-:   remove [anim]
-
-    -   [anim] - The name of the animation to remove
+-   [skin] - The skin declaration to apply
 
 <!-- -->
 
- anim 
-:   Associates an animation with this model declaration. Optionally
-    opens a new set of curly brackets for use with frame commands.
-:   anim [name] [file]
+ mesh   
+Defines the model associated with this model declaration
 
-    -   [name] - The name to use
-    -   [file] - The MD5anim to use
+    mesh [file]
 
-<!-- -->
-
- offset 
-:   An offset to apply to this model
-:   offset [xyz]
-
-    -   [xyz] - A series of coordinates separated by commas
+-   [file] - The MD5mesh to use
 
 <!-- -->
 
- channel 
-:   Defines a group of joints so that animations can be applied to a
-    select portions of a model
-:   channel [name] ( [joints] )
+ remove   
+Removes the specified animation from the list of inherited animations
 
-    -   [name] - The name of the channel
-    -   [joints] - A list of joints
+    remove [anim]
+
+-   [anim] - The name of the animation to remove
+
+<!-- -->
+
+ anim   
+Associates an animation with this model declaration. Optionally opens a new set of curly brackets for use with frame commands.
+
+    anim [name] [file]
+
+-   [name] - The name to use
+-   [file] - The MD5anim to use
+
+<!-- -->
+
+ offset   
+An offset to apply to this model
+
+    offset [xyz]
+
+-   [xyz] - A series of coordinates separated by commas
+
+<!-- -->
+
+ channel   
+Defines a group of joints so that animations can be applied to a select portions of a model
+
+    channel [name] ( [joints] )
+
+-   [name] - The name of the channel
+-   [joints] - A list of joints
 
 Frame Commands
 --------------
 
-Through the use of the anim keyword, it is possible to trigger events on
-a per frame basis. This is accomplished by opening a new set of curly
-brackets as outlined in the syntax section.
+Through the use of the anim keyword, it is possible to trigger events on a per frame basis. This is accomplished by opening a new set of curly brackets as outlined in the syntax section.
 
-Within this unique set of curly brackets you can issue commands on a per
-frame basis. This allows you to play footstep sounds in sequence with a
-walking animation, throw fireballs in sequence with a throwing
-animation, ect...
+Within this unique set of curly brackets you can issue commands on a per frame basis. This allows you to play footstep sounds in sequence with a walking animation, throw fireballs in sequence with a throwing animation, ect...
 
 To further elaborate on the proper syntax...
 
@@ -120,217 +110,196 @@ To further elaborate on the proper syntax...
        }
     ...
 
--   [number] - Refers to the frame number in the sequence where the
-    command should be issued
+-   [number] - Refers to the frame number in the sequence where the command should be issued
 -   [command] - A frame command and it's corresponding parameters.
 
- call 
-:   Calls the specified script function
-:   call [function]
+ call   
+Calls the specified script function
 
-    -   [function] - The name of the script function to call
+    call [function]
 
-<!-- -->
-
- object\_call 
-:   Calls the specified script function on the entity
-:   object_call [function]
-
-    -   [function] - The name of the entity specific script function to
-        call
+-   [function] - The name of the script function to call
 
 <!-- -->
 
- event 
-:   Sends the specified event to the entity
-:   event [name] [args]
+ object\_call   
+Calls the specified script function on the entity
 
-    -   [name] - The name of the coded event
-    -   [args] - Any arguments expected by the event
+    object_call [function]
 
-<!-- -->
-
- sound 
-:   Plays the specified sound on any available channel
-:   sound [snd]
-
-    -   [snd] - The sound file or shader to play
+-   [function] - The name of the entity specific script function to call
 
 <!-- -->
 
- sound\_voice 
-:   Plays the specified sound on the specified channel. If a sound is
-    being played on the body channel, and another sound is requested to
-    play, then the first sound is halted. Since the footstep sounds are
-    all defined to be on the body channel, there will never be 2
-    footstep sounds played twice on the same entity at the same time.
-:   sound_voice [snd]
+ event   
+Sends the specified event to the entity
 
-    -   [snd] - The sound file or shader to play
+    event [name] [args]
+
+-   [name] - The name of the coded event
+-   [args] - Any arguments expected by the event
 
 <!-- -->
 
- sound\_voice2 
-:   Plays the specified sound on the specified channel. If a sound is
-    being played on the body channel, and another sound is requested to
-    play, then the first sound is halted. Since the footstep sounds are
-    all defined to be on the body channel, there will never be 2
-    footstep sounds played twice on the same entity at the same time.
-:   sound_voice2 [snd]
+ sound   
+Plays the specified sound on any available channel
 
-    -   [snd] - The sound file or shader to play
+    sound [snd]
+
+-   [snd] - The sound file or shader to play
 
 <!-- -->
 
- sound\_body 
-:   Plays the specified sound on the specified channel. If a sound is
-    being played on the body channel, and another sound is requested to
-    play, then the first sound is halted. Since the footstep sounds are
-    all defined to be on the body channel, there will never be 2
-    footstep sounds played twice on the same entity at the same time.
-:   sound_body [snd]
+ sound\_voice   
+Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
 
-    -   [snd] - The sound file or shader to play
+    sound_voice [snd]
+
+-   [snd] - The sound file or shader to play
 
 <!-- -->
 
- sound\_body2 
-:   Plays the specified sound on the specified channel. If a sound is
-    being played on the body channel, and another sound is requested to
-    play, then the first sound is halted. Since the footstep sounds are
-    all defined to be on the body channel, there will never be 2
-    footstep sounds played twice on the same entity at the same time.
-:   sound_body2 [snd]
+ sound\_voice2   
+Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
 
-    -   [snd] - The sound file or shader to play
+    sound_voice2 [snd]
+
+-   [snd] - The sound file or shader to play
 
 <!-- -->
 
- sound\_body3 
-:   Plays the specified sound on the specified channel. If a sound is
-    being played on the body channel, and another sound is requested to
-    play, then the first sound is halted. Since the footstep sounds are
-    all defined to be on the body channel, there will never be 2
-    footstep sounds played twice on the same entity at the same time.
-:   sound_body3 [snd]
+ sound\_body   
+Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
 
-    -   [snd] - The sound file or shader to play
+    sound_body [snd]
+
+-   [snd] - The sound file or shader to play
 
 <!-- -->
 
- sound\_weapon 
-:   Plays the specified sound on the specified channel. If a sound is
-    being played on the body channel, and another sound is requested to
-    play, then the first sound is halted. Since the footstep sounds are
-    all defined to be on the body channel, there will never be 2
-    footstep sounds played twice on the same entity at the same time.
-:   sound_weapon [snd]
+ sound\_body2   
+Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
 
-    -   [snd] - The sound file or shader to play
+    sound_body2 [snd]
+
+-   [snd] - The sound file or shader to play
 
 <!-- -->
 
- sound\_global 
-:   Plays the specified sound on the specified channel. If a sound is
-    being played on the body channel, and another sound is requested to
-    play, then the first sound is halted. Since the footstep sounds are
-    all defined to be on the body channel, there will never be 2
-    footstep sounds played twice on the same entity at the same time.
-:   sound_global [snd]
+ sound\_body3   
+Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
 
-    -   [snd] - The sound file or shader to play
+    sound_body3 [snd]
+
+-   [snd] - The sound file or shader to play
 
 <!-- -->
 
- sound\_item 
-:   Plays the specified sound on the specified channel. If a sound is
-    being played on the body channel, and another sound is requested to
-    play, then the first sound is halted. Since the footstep sounds are
-    all defined to be on the body channel, there will never be 2
-    footstep sounds played twice on the same entity at the same time.
-:   sound_item [snd]
+ sound\_weapon   
+Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
 
-    -   [snd] - The sound file or shader to play
+    sound_weapon [snd]
+
+-   [snd] - The sound file or shader to play
 
 <!-- -->
 
- sound\_chatter 
-:   Plays the specified sound on the specified channel. If a sound is
-    being played on the body channel, and another sound is requested to
-    play, then the first sound is halted. Since the footstep sounds are
-    all defined to be on the body channel, there will never be 2
-    footstep sounds played twice on the same entity at the same time.
-:   sound_chatter [snd]
+ sound\_global   
+Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
 
-    -   [snd] - The sound file or shader to play
+    sound_global [snd]
+
+-   [snd] - The sound file or shader to play
 
 <!-- -->
 
- skin 
-:   Changes the model's skin
-:   skin [skin]
+ sound\_item   
+Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
 
-    -   [skin] - The name of the skin declaration to apply
+    sound_item [snd]
 
-<!-- -->
-
- fx 
-:   Triggers an effect defined by the declaration
-:   fx [name]
-
-    -   [name] - The name of the effect to trigger
+-   [snd] - The sound file or shader to play
 
 <!-- -->
 
- trigger 
-:   Triggers the level trigger
-:   trigger [name]
+ sound\_chatter   
+Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
 
-    -   [name] - The name of the trigger to activate
+    sound_chatter [snd]
 
-<!-- -->
-
- recordDemo 
-:   Starts recording a demo or stops recording if blank
-:   recordDemo [name]
-
-    -   [name] - The name of the demo to start recording
+-   [snd] - The sound file or shader to play
 
 <!-- -->
 
- aviGame 
-:   Starts an aviGame. Useful for making animations to be used on video
-    screens (such as all the talking head videos in Doom 3)
-:   aviGame [name]
+ skin   
+Changes the model's skin
 
-    -   [name] - The name of the image sequence to output
+    skin [skin]
+
+-   [skin] - The name of the skin declaration to apply
+
+<!-- -->
+
+ fx   
+Triggers an effect defined by the declaration
+
+    fx [name]
+
+-   [name] - The name of the effect to trigger
+
+<!-- -->
+
+ trigger   
+Triggers the level trigger
+
+    trigger [name]
+
+-   [name] - The name of the trigger to activate
+
+<!-- -->
+
+ recordDemo   
+Starts recording a demo or stops recording if blank
+
+    recordDemo [name]
+
+-   [name] - The name of the demo to start recording
+
+<!-- -->
+
+ aviGame   
+Starts an aviGame. Useful for making animations to be used on video screens (such as all the talking head videos in Doom 3)
+
+    aviGame [name]
+
+-   [name] - The name of the image sequence to output
 
 ### Frame Command Aliases
 
-  COMMAND                     ALIAS
-  --------------------------- ---------------------------
-  triggerSmokeParticle        event triggerParticles
-  melee                       event attackMelee
-  direct\_damage              event directDamage
-  attack\_begin               event attackBegin
-  attack\_end                 event attackEnd
-  muzzle\_flash               event muzzleFlash
-  create\_missile             event createMissile
-  launch\_missile             event launchMissile
-  fire\_missile\_at\_target   event fireMissileAtTarget
-  footstep                    event footstep
-  leftfoot                    event leftfoot
-  rightfoot                   event rightfoot
-  jump                        event jump
-  enableEyeFocus              event enableEyeFocus
-  disableEyeFocus             event disableEyeFocus
-  disableGravity              event disableGravity
-  enableGravity               event enableGravity
-  enableClip                  event enableClip
-  disableClip                 event disableClip
-  enableWalkIK                event enableWalkIK
-  disableWalkIK               event disableWalkIK
-  enableLegIK                 event enableLegIK
-  disableLegIK                event disableLegIK
+| COMMAND                   | ALIAS                     |
+|---------------------------|---------------------------|
+| triggerSmokeParticle      | event triggerParticles    |
+| melee                     | event attackMelee         |
+| direct\_damage            | event directDamage        |
+| attack\_begin             | event attackBegin         |
+| attack\_end               | event attackEnd           |
+| muzzle\_flash             | event muzzleFlash         |
+| create\_missile           | event createMissile       |
+| launch\_missile           | event launchMissile       |
+| fire\_missile\_at\_target | event fireMissileAtTarget |
+| footstep                  | event footstep            |
+| leftfoot                  | event leftfoot            |
+| rightfoot                 | event rightfoot           |
+| jump                      | event jump                |
+| enableEyeFocus            | event enableEyeFocus      |
+| disableEyeFocus           | event disableEyeFocus     |
+| disableGravity            | event disableGravity      |
+| enableGravity             | event enableGravity       |
+| enableClip                | event enableClip          |
+| disableClip               | event disableClip         |
+| enableWalkIK              | event enableWalkIK        |
+| disableWalkIK             | event disableWalkIK       |
+| enableLegIK               | event enableLegIK         |
+| disableLegIK              | event disableLegIK        |
 
 

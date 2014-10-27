@@ -1,27 +1,17 @@
-Runs a [script](Scripting "Scripting") defined by the user. This is the
-real way to extend the GUI functionality: while you can create all kinds
-of fancy graphics on the GUI, it can't do much feature-wise. To
-integrate the GUI script with the rest of the game engine, you'll want
-to use this command to run external scripts or functions.
+Runs a [script](Scripting "Scripting") defined by the user. This is the real way to extend the GUI functionality: while you can create all kinds of fancy graphics on the GUI, it can't do much feature-wise. To integrate the GUI script with the rest of the game engine, you'll want to use this command to run external scripts or functions.
 
-Notice that a script can also be called using the
-[set](Set_%28GUI_command%29 "Set (GUI command)") command with *cmd* and
-*runscript* parameters. id Software used this a lot on their code, as it
-allows you to call specific functions within scripts.
+Notice that a script can also be called using the [set](Set_%28GUI_command%29 "Set (GUI command)") command with *cmd* and *runscript* parameters. id Software used this a lot on their code, as it allows you to call specific functions within scripts.
 
 Syntax
 ------
 
     runScript script
 
-*script* is the name of a script to run. On Doom 3, this is usually a
-reference to a GUI parameter defined on your map, so most GUI scripts
-can be reused.
+*script* is the name of a script to run. On Doom 3, this is usually a reference to a GUI parameter defined on your map, so most GUI scripts can be reused.
 
 Example(s)
 ----------
 
     runScript "gui::gui_parm6";
 
-\
 

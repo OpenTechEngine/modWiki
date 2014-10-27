@@ -8,9 +8,7 @@ Usage
 
     shakes [<amount>]
 
-The shake intensity is calculated by multiplying the
-[volume](Volume_%28Sound_shader_keyword%29 "Volume (Sound shader keyword)")
-setting with *amount* . The value is optional, it defaults to **1** .
+The shake intensity is calculated by multiplying the [volume](Volume_%28Sound_shader_keyword%29 "Volume (Sound shader keyword)") setting with *amount* . The value is optional, it defaults to **1** .
 
 Example
 -------

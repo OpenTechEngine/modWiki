@@ -1,8 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -17,14 +16,12 @@ float random( float range )
 Parameters
 ----------
 
--   [range] - a number value that represents the largest possble value
-    to be returned.
+-   [range] - a number value that represents the largest possble value to be returned.
 
 Examples
 --------
 
-This example generates a random number between `     min    ` and
-`     max    `
+This example generates a random number between `     min    ` and `     max    `
 
      
     float min = 10;
@@ -35,8 +32,6 @@ This example generates a random number between `     min    ` and
 Notes
 -----
 
-Returns the same set of random numbers every time the game is run. Just
-change the seed for a different set of numbers.
+Returns the same set of random numbers every time the game is run. Just change the seed for a different set of numbers.
 
-\
 

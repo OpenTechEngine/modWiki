@@ -1,8 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -31,10 +30,6 @@ Notes
 
 This script event does not return any values.
 
-Note that most spawn args are evaluated when this entity spawns in, so
-this will not change the entity's behavior in most cases. This is
-chiefly for saving data the script needs in an entity for later
-retrieval.
+Note that most spawn args are evaluated when this entity spawns in, so this will not change the entity's behavior in most cases. This is chiefly for saving data the script needs in an entity for later retrieval.
 
-\
 

@@ -2,9 +2,7 @@ Adding a new [console](Console "Console") variable (CVar):
 
 The files that must be modified are /src/gamesys/syscvar.\*
 
-Let's use the example of adding a CVar to globally lower the volume of
-sounds that AI hear. We want to add a CVar called dm\_ai\_sndvol so we
-can adjust the volume of sounds that AI hear in realtime in the console.
+Let's use the example of adding a CVar to globally lower the volume of sounds that AI hear. We want to add a CVar called dm\_ai\_sndvol so we can adjust the volume of sounds that AI hear in realtime in the console.
 
 Step 1. Add a declaration of the CVar in /src/gamesys/syscvar.cpp
 -----------------------------------------------------------------
@@ -19,75 +17,60 @@ The syntax is:
     idCVar <SDK variable name>( "<variable name ingame>", "<default value>", <FLAGS>, 
     "<Brief description of the variable>" ); 
 
-Note that the default value is stored as a string. These things are
-parsed just like key/value pairs, so the name and default value are both
-strings.
-
-\
+Note that the default value is stored as a string. These things are parsed just like key/value pairs, so the name and default value are both strings.
 
 ### Type Flags:
 
-These flags define the CVar type. If one of them is not set on your
-CVar, it will default to type string.
+These flags define the CVar type. If one of them is not set on your CVar, it will default to type string.
 
- CVAR\_BOOL 
-:   Defines the CVar as a boolean variable.
+ CVAR\_BOOL   
+Defines the CVar as a boolean variable.
 
- CVAR\_INTEGER 
-:   Defines the CVar as an integer variable.
+ CVAR\_INTEGER   
+Defines the CVar as an integer variable.
 
- CVAR\_FLOAT 
-:   Defines the CVar as a float variable.
+ CVAR\_FLOAT   
+Defines the CVar as a float variable.
 
 ### Info Flags:
 
- CVAR\_GAME, CVAR\_RENDERER 
-:   Identifies the CVar as having to do with the game, or having to do
-    with the renderer. Since we can't add anything to the renderer, I'm
-    guessing we'll always ue CVAR\_GAME.
+ CVAR\_GAME, CVAR\_RENDERER   
+Identifies the CVar as having to do with the game, or having to do with the renderer. Since we can't add anything to the renderer, I'm guessing we'll always ue CVAR\_GAME.
 
 <!-- -->
 
- CVAR\_ARCHIVE 
-:   If set, the value of this CVar will be stored to your DoomConfig.cfg
-    file, and saved. When you next start the game, the CVar will have
-    the same value, it will NOT go back to the default. (You can see
-    what the default value was and set it back yourself by using
-    listcvars \<the CVar\>).
+ CVAR\_ARCHIVE   
+If set, the value of this CVar will be stored to your DoomConfig.cfg file, and saved. When you next start the game, the CVar will have the same value, it will NOT go back to the default. (You can see what the default value was and set it back yourself by using listcvars \<the CVar\>).
 
 <!-- -->
 
- CVAR\_NETWORKSYNC 
-:   Probably means that in multiplayer games, this is read from the
-    server, so individuals cannot change it to a different setting on
-    their client. Examples include jump height, walking speed, etc.
+ CVAR\_NETWORKSYNC   
+Probably means that in multiplayer games, this is read from the server, so individuals cannot change it to a different setting on their client. Examples include jump height, walking speed, etc.
 
 <!-- -->
 
- CVAR\_SERVERINFO 
-:   Server settings
+ CVAR\_SERVERINFO   
+Server settings
 
 <!-- -->
 
- CVAR\_USERINFO 
-:   User settings
+ CVAR\_USERINFO   
+User settings
 
 <!-- -->
 
- CVAR\_INIT 
-:   Marks a cvar so that it can only be modified from the command line.
-    See [Startup parameters](Startup_parameters "Startup parameters") .
+ CVAR\_INIT   
+Marks a cvar so that it can only be modified from the command line. See [Startup parameters](Startup_parameters "Startup parameters") .
 
 <!-- -->
 
- CVAR\_ROM 
-:   Marks the CVar as read only. (Can be changed in binary code trough a
-    certain function)
+ CVAR\_ROM   
+Marks the CVar as read only. (Can be changed in binary code trough a certain function)
 
 <!-- -->
 
- CVAR\_NOCHEAT 
-:   Used to mark a CVar as a non-special one.
+ CVAR\_NOCHEAT   
+Used to mark a CVar as a non-special one.
 
 **If no info flag is given, the CVar is marked as a cheat.**
 
@@ -103,20 +86,14 @@ Code:
 
     extern idCVar cv_ai_sndvol; 
 
-This step is pretty self explanatory, just add the extern declaration in
-syscvar.h. (Unfortunately, changing syscvar.h requires a recompile of
-all the src, since it is included in game\_local.h, and that is included
-in pretty much everything.)
+This step is pretty self explanatory, just add the extern declaration in syscvar.h. (Unfortunately, changing syscvar.h requires a recompile of all the src, since it is included in game\_local.h, and that is included in pretty much everything.)
 
 Step 3. Using the CVar in the SDK
 ---------------------------------
 
-To set and read the variable: use the appropriate idCvar::Set\* and
-idCVar::Get\* functions, where the \* is replaced with the CVar type
-that you declared before.
+To set and read the variable: use the appropriate idCvar::Set\* and idCVar::Get\* functions, where the \* is replaced with the CVar type that you declared before.
 
-For example, suppose we want to use our cv\_ai\_sndvol in the code.
-Suppose we want to subtract it from some value InitialVolume.
+For example, suppose we want to use our cv\_ai\_sndvol in the code. Suppose we want to subtract it from some value InitialVolume.
 
 Code:
 
@@ -128,19 +105,11 @@ Similarly, to set it in the SDK; Code:
 
 Side note: Manipulating CVars ingame in the console:
 
-To see a list of CVars ingame, use "
-[listCvars](ListCvars_%28console_command%29 "ListCvars (console command)")
-\<your search string\>" To see a description of a CVar, use
-"listcvars -help \<your search string\>" To see the current and default
-value of the CVar, just type the cvar name in the console. To set the
-value of a CVar, use " [set
-(Command)](Set_%28Command%29 "Set (Command)") \<cvar name\> \<value\>"
+To see a list of CVars ingame, use " [listCvars](ListCvars_%28console_command%29 "ListCvars (console command)") \<your search string\>" To see a description of a CVar, use "listcvars -help \<your search string\>" To see the current and default value of the CVar, just type the cvar name in the console. To set the value of a CVar, use " [set (Command)](Set_%28Command%29 "Set (Command)") \<cvar name\> \<value\>"
 
-You can also omit the "set" and just type "\<cvar name\> \<value\>" to
-set the value with less typing.
+You can also omit the "set" and just type "\<cvar name\> \<value\>" to set the value with less typing.
 
 More info can be found in: src/framework/cvarsystem.h
 
-This file actually contains a lot of documentation in the form of
-comments.
+This file actually contains a lot of documentation in the form of comments.
 

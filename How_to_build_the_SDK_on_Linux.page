@@ -1,76 +1,49 @@
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/c/cb/D3square_bg.png) The information on this page is
-specific to [Doom 3](Doom_3 "Doom 3") .
-
-</div>
+![](/images/c/cb/D3square_bg.png) The information on this page is specific to [Doom 3](Doom_3 "Doom 3") .
 
 ------------------------------------------------------------------------
 
 Introduction
 ------------
 
-This is a guide on how to compile the SDK on linux and package your mod.
-It assumes basic knowledge of linux, the command line, and using a
-package manager for your particular distribution.
+This is a guide on how to compile the SDK on linux and package your mod. It assumes basic knowledge of linux, the command line, and using a package manager for your particular distribution.
 
 Requirements
 ------------
 
 -   A fairly modern linux distribution
--   [The SDK v1.3.1
-    package](https://web.archive.org/web/20100722231610/http://zerowing.idsoftware.com:6969/stats.html?info_hash=dfcabae6d2a7c6ad23d4c1c466f25cb60262ff21 "http://zerowing.idsoftware.com:6969/stats.html?info_hash=dfcabae6d2a7c6ad23d4c1c466f25cb60262ff21")
-    (torrent)
+-   [The SDK v1.3.1 package](https://web.archive.org/web/20100722231610/http://zerowing.idsoftware.com:6969/stats.html?info_hash=dfcabae6d2a7c6ad23d4c1c466f25cb60262ff21 "http://zerowing.idsoftware.com:6969/stats.html?info_hash=dfcabae6d2a7c6ad23d4c1c466f25cb60262ff21") (torrent)
 -   GCC 4.x
 -   Scons 0.96 - distribution specific
 -   X11 development libraries, usually called libx11-dev
--   OpenGL development libraries, usually called xlibmesa-gl-dev -
-    distribution specific
+-   OpenGL development libraries, usually called xlibmesa-gl-dev - distribution specific
 
-Please note that you *MUST* use GCC 3.3 if compiling any SDK prior to
-v1.3.1. The guide will go over how to deal with a system having more
-than one version of GCC.
+Please note that you *MUST* use GCC 3.3 if compiling any SDK prior to v1.3.1. The guide will go over how to deal with a system having more than one version of GCC.
 
 Step 1. Unpacking the SDK
 -------------------------
 
-After you have downloaded the SDK, you need to run the file to extract
-and install the files. On most systems, the .run file will need to be
-granted execute permission before it can be run.
+After you have downloaded the SDK, you need to run the file to extract and install the files. On most systems, the .run file will need to be granted execute permission before it can be run.
 
     linux $ chmod +x doom3-linux-1.3.1302-sdk.x86.run
 
-Then, run the file, and follow the on screen instructions. This guide is
-going to assume that the package was extracted to
-/usr/local/games/doom3-sdk, but you can extract it to where ever you
-would like. Note that if you want to install it to the default location,
-you will need to be root. The example below shows the usage of
-`     sudo    ` to achieve root, but you can also use `     su    ` or
-simply install it to another user-writable directory.
+Then, run the file, and follow the on screen instructions. This guide is going to assume that the package was extracted to /usr/local/games/doom3-sdk, but you can extract it to where ever you would like. Note that if you want to install it to the default location, you will need to be root. The example below shows the usage of `     sudo    ` to achieve root, but you can also use `     su    ` or simply install it to another user-writable directory.
 
     linux $ sudo ./doom3-linux-1.3.1302-sdk.x86.run
 
-Afterwards, you might want to give everyone write access to the sdk
-folder, so a plain user can make changes:
+Afterwards, you might want to give everyone write access to the sdk folder, so a plain user can make changes:
 
     linux $ sudo chmod -R 777 /usr/local/games/doom3-sdk
 
 Step 2. Running scons
 ---------------------
 
-If you have all of the libraries set up and GCC is the default compiler,
-then compiling the SDK should be as simple as:
+If you have all of the libraries set up and GCC is the default compiler, then compiling the SDK should be as simple as:
 
     linux $ cd /usr/local/games/doom3-sdk/src
     linux $ scons BUILD="release"
     ...
 
-Note that when running scons without the BUILD parameter, it will
-default to compiling a debug version of the source. This is good for
-testing things, but due to the massive inflation in filesize (3.6MB for
-release compared to around 20MB for debug) modifications intended for
-release should always be compiled with this.
+Note that when running scons without the BUILD parameter, it will default to compiling a debug version of the source. This is good for testing things, but due to the massive inflation in filesize (3.6MB for release compared to around 20MB for debug) modifications intended for release should always be compiled with this.
 
 ### Successful build
 
@@ -82,22 +55,16 @@ During compilation, there will be plenty of warnings, which is normal.
 
 ### Missing OpenGL libraries
 
-If your OpenGL libraries are missing, you will receive thousands of
-errors in the file "renderer/glext.h", and it will finally die with the
-message:
+If your OpenGL libraries are missing, you will receive thousands of errors in the file "renderer/glext.h", and it will finally die with the message:
 
     scons: *** [build/debug/d3xp/d3xp/AF.os] Error 1
     scons: building terminated because of errors.
 
-If this is the error you have, then you must install the xlibmesa-gl-dev
-package, or any other package that provides the files for
-/usr/include/GL. These libraries require the libx11-dev libraries, so it
-is almost impossible to get specific x11 errors instead of this.
+If this is the error you have, then you must install the xlibmesa-gl-dev package, or any other package that provides the files for /usr/include/GL. These libraries require the libx11-dev libraries, so it is almost impossible to get specific x11 errors instead of this.
 
 ### Wrong compiler version
 
-If you are using any GCC version other than 3.3 while trying to build
-the SDK prior to v1.3.1, you will receive errors like this:
+If you are using any GCC version other than 3.3 while trying to build the SDK prior to v1.3.1, you will receive errors like this:
 
     game/AF.cpp:741: warning: enumeration value `DECLAF_CONSTRAINT_INVALID' not handled in switch
     game/AF.cpp: In member function `bool idAF::Load(idEntity*, const char*)':
@@ -105,70 +72,51 @@ the SDK prior to v1.3.1, you will receive errors like this:
     scons: *** [build/debug/game/game/AF.os] Error 1
     scons: building terminated because of errors.
 
-Make sure you have the gcc-3.3 package installed, and then explicity
-pass that you want to use g++ 3.3 to scons like this:
+Make sure you have the gcc-3.3 package installed, and then explicity pass that you want to use g++ 3.3 to scons like this:
 
     linux $ scons CXX="g++-3.3"
 
 ### Building on x86\_64 (AMD64)
 
-If you are compiling in a native 64-bit environment, it will be
-necessary to tell GCC to compile and link objects in 32-bit mode.
+If you are compiling in a native 64-bit environment, it will be necessary to tell GCC to compile and link objects in 32-bit mode.
 
-The provided scons configuration file does not include a mechanism to
-modify the linker flags, so you must do it manually. Edit the file
-*src/SConstruct* , here you will see the following around line 274:
+The provided scons configuration file does not include a mechanism to modify the linker flags, so you must do it manually. Edit the file *src/SConstruct* , here you will see the following around line 274:
 
     BASELINKFLAGS = [ ]
 
-This line specifies a list of strings which should be used as link
-flags. Modify this line to be:
+This line specifies a list of strings which should be used as link flags. Modify this line to be:
 
     BASELINKFLAGS = [ "-m32" ]
 
-This will allow objects to be linked in 32-bit mode. You must now
-instruct scons to tell GCC you want to compile the objects in 32-bit
-mode. This can be accomplished by setting the BASEFLAGS for scons with:
+This will allow objects to be linked in 32-bit mode. You must now instruct scons to tell GCC you want to compile the objects in 32-bit mode. This can be accomplished by setting the BASEFLAGS for scons with:
 
     linux $ scons BASEFLAGS="-m32"
 
-**Note:** You may need to install libc6 before compiling. Debian /
-Ubuntu users can do this by executing "sudo apt-get install
-libc6-dev-i386".
+**Note:** You may need to install libc6 before compiling. Debian / Ubuntu users can do this by executing "sudo apt-get install libc6-dev-i386".
 
 Packaging the file into a pk4
 -----------------------------
 
-Now, package everything into a pk4 for inclusion with your mod. First,
-you'll need a file called binary.conf, and it needs to contain a single
-"2".
+Now, package everything into a pk4 for inclusion with your mod. First, you'll need a file called binary.conf, and it needs to contain a single "2".
 
     linux $ echo "2" > binary.conf
 
-Next you will need to rename your gamex86-xxxx.so file by removing
-either the -base or -d3xp suffix, depending on if your building for
-vanilla Doom 3 or the expansion respectively.
+Next you will need to rename your gamex86-xxxx.so file by removing either the -base or -d3xp suffix, depending on if your building for vanilla Doom 3 or the expansion respectively.
 
-Then throw the renamed gamex86.so and binary.conf into a zip file named
-(for example) game01.pk4:
+Then throw the renamed gamex86.so and binary.conf into a zip file named (for example) game01.pk4:
 
     linux $ zip game01.pk4 gamex86.so binary.conf
 
-This will generate a zip file called game01.pk4 containing gamex86.so
-and binary.conf. If you are building for the expansion, be sure to use
-the proper gamex86.so.
+This will generate a zip file called game01.pk4 containing gamex86.so and binary.conf. If you are building for the expansion, be sure to use the proper gamex86.so.
 
-Note that you can get scons to build the appropriate pk4s for you by
-calling it as such:
+Note that you can get scons to build the appropriate pk4s for you by calling it as such:
 
     linux $ scons BUILD_GAMEPAK=1
 
-As with any other scons option, it is saved in your site.conf, so you
-only have to use that argument the first time.
+As with any other scons option, it is saved in your site.conf, so you only have to use that argument the first time.
 
 Wrap Up
 -------
 
-Please make any comments pertaining to problems or suggestions on the
-[Discussion Page](Talk:Building_on_linux "Talk:Building on linux")
+Please make any comments pertaining to problems or suggestions on the [Discussion Page](Talk:Building_on_linux "Talk:Building on linux")
 

@@ -1,8 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -30,10 +29,6 @@ Notes
 
 This script event does not return any values.
 
-This is the position the entity was spawned in unless the "origin" key
-is changed. Note that there is no guarantee that the entity won't be
-stuck in another entity when moved, so care should be taken to make sure
-that isn't possible.
+This is the position the entity was spawned in unless the "origin" key is changed. Note that there is no guarantee that the entity won't be stuck in another entity when moved, so care should be taken to make sure that isn't possible.
 
-\
 

@@ -1,100 +1,90 @@
-<div style="margin-top: -3em; margin-bottom: 1em; padding-top: 1px">
-
 Welcome to modwiki.net
 
-We currently have [9,357](Special:Statistics "Special:Statistics")
-articles.
+We currently have [9,357](Special:Statistics "Special:Statistics") articles.
 
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><div style="padding: .4em .9em .9em">
+<h3>New to the site?</h3>
+<p>This wiki is focused on documenting the various aspects involved with developing assets, levels and modifications based on the <a href="Id_Tech" title="Id Tech">id Tech</a> engines. If you're new to the site or a wiki in general, please visit the <a href="modwiki:About" title="modwiki:About">about</a> page to learn more about this project.</p>
+<h3>Want to help?</h3>
+<p>As modwiki is a community project, feel free to <a href="Special:Userlogin" title="Special:Userlogin">register</a> and join us on this great endeavor! Please check out the <a href="modwiki:Style_guide" title="modwiki:Style guide">style guide</a> for some general editing guidelines. Visit <a href="modwiki:Open_tasks" title="modwiki:Open tasks">open tasks</a> to find out which pages need help. You can also visit the <a href="modwiki:Sandbox" title="modwiki:Sandbox">sandbox</a> to experiment with the wiki markup language. To learn how to edit or create pages, please take a look <a href="Help:Editing" title="Help:Editing">here</a> .</p>
+<p>But most importantly, if you gain something from this resource, please give back.</p>
+<h3>High quality links:</h3>
+<p>Other interesting id Tech engine editing sites:</p>
+<dl>
+<dt> <a href="https://web.archive.org/web/20121205045219/http://www.doom3world.org/" title="http://www.doom3world.org">www.doom3world.org</a> </dt>
+<dd>The premier discussion forum for all Doom 3 engine games
+</dd>
+<dt> <a href="http://www.iddevnet.com/" title="http://www.iddevnet.com/">www.iddevnet.com</a> </dt>
+<dd>The official id Software website for id Tech 4 engine editing. (Only id games are listed there. Specific game pages link to the websites of the respective developers.)
+</dd>
+<dt> <a href="http://www.shikadi.net/moddingwiki/" title="http://www.shikadi.net/moddingwiki/">http://www.shikadi.net/moddingwiki</a> </dt>
+<dd>ModdingWiki keeps track of modding old-school games running on id and apogee game engines.
+</dd>
+</dl>
 </div>
+<p><br /></p>
+<p><br /></p></td>
+<td align="left"><div style="padding: .4em .9em .4em;">
+<h3><a href="Id_Tech_4" title="Id Tech 4">id Tech 4</a> games:</h3>
+</div>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><img src="/images/b/bf/D3square.png" /></td>
+<td align="left"><h3><a href="Doom_3" title="Doom 3">Doom 3</a></h3>
+and Resurrection of Evil add-on</td>
+</tr>
+<tr class="even">
+<td align="left"><img src="/images/2/2c/Q4square.png" /></td>
+<td align="left"><h3><a href="Quake_4" title="Quake 4">Quake 4</a></h3></td>
+</tr>
+<tr class="odd">
+<td align="left"><img src="/images/a/a1/Preysquare.png" /></td>
+<td align="left"><h3><a href="Prey" class="uri" title="Prey">Prey</a></h3></td>
+</tr>
+<tr class="even">
+<td align="left"><img src="/images/f/ff/Etqwsquare.png" /></td>
+<td align="left"><h3><a href="Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">Enemy Territory: Quake Wars</a></h3></td>
+</tr>
+<tr class="odd">
+<td align="left"><img src="/images/f/f3/Rtcw2square.png" /></td>
+<td align="left"><h3><a href="Wolfenstein" class="uri" title="Wolfenstein">Wolfenstein</a></h3></td>
+</tr>
+</tbody>
+</table>
+<div style="padding: .4em .9em .4em;">
+<h3><a href="Id_Tech_5" title="Id Tech 5">id Tech 5</a> games:</h3>
+</div>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><img src="/images/7/75/Ragesquare.png" /></td>
+<td align="left"><h3><a href="Rage" class="uri" title="Rage">Rage</a></h3></td>
+</tr>
+<tr class="even">
+<td align="left"><img src="/images/b/bf/D3square.png" /></td>
+<td align="left"><h3><a href="Doom_4" title="Doom 4">Doom 4</a></h3>
+<em>not yet released</em></td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+</tbody>
+</table>
 
-+--------------------------------------+--------------------------------------+
-| <div                                 | <div                                 |
-| style="padding: .4em .9em .9em">     | style="padding: .4em .9em .4em;">    |
-|                                      |                                      |
-| ### New to the site?                 | ### [id Tech 4](Id_Tech_4 "Id Tech 4 |
-|                                      | ") games:                            |
-| This wiki is focused on documenting  |                                      |
-| the various aspects involved with    | </div>                               |
-| developing assets, levels and        |                                      |
-| modifications based on the [id       | +----------------------------------- |
-| Tech](Id_Tech "Id Tech") engines. If | ---+-------------------------------- |
-| you're new to the site or a wiki in  | ------+                              |
-| general, please visit the            | | ![](/images/b/bf/D3square.png)     |
-| [about](modwiki:About "modwiki:About |    | ### [Doom 3](Doom_3 "Doom 3")   |
-| ")                                   |       |                              |
-| page to learn more about this        | |                                    |
-| project.                             |    |                                 |
-|                                      |       |                              |
-| ### Want to help?                    | |                                    |
-|                                      |    | and Resurrection of Evil add-on |
-| As modwiki is a community project,   |       |                              |
-| feel free to                         | +----------------------------------- |
-| [register](Special:Userlogin "Specia | ---+-------------------------------- |
-| l:Userlogin")                        | ------+                              |
-| and join us on this great endeavor!  | | ![](/images/2/2c/Q4square.png)     |
-| Please check out the [style          |    | ### [Quake 4](Quake_4 "Quake 4" |
-| guide](modwiki:Style_guide "modwiki: | )     |                              |
-| Style guide")                        | +----------------------------------- |
-| for some general editing guidelines. | ---+-------------------------------- |
-| Visit [open                          | ------+                              |
-| tasks](modwiki:Open_tasks "modwiki:O | | ![](/images/a/a1/Preysquare.png)   |
-| pen tasks")                          |    | ### [Prey](Prey "Prey")         |
-| to find out which pages need help.   |       |                              |
-| You can also visit the               | +----------------------------------- |
-| [sandbox](modwiki:Sandbox "modwiki:S | ---+-------------------------------- |
-| andbox")                             | ------+                              |
-| to experiment with the wiki markup   | | ![](/images/f/ff/Etqwsquare.png)   |
-| language. To learn how to edit or    |    | ### [Enemy Territory: Quake War |
-| create pages, please take a look     | s](En |                              |
-| [here](Help:Editing "Help:Editing")  | |                                    |
-| .                                    |    | emy_Territory:_Quake_Wars "Enem |
-|                                      | y Ter |                              |
-| But most importantly, if you gain    | |                                    |
-| something from this resource, please |    | ritory: Quake Wars")            |
-| give back.                           |       |                              |
-|                                      | +----------------------------------- |
-| ### High quality links:              | ---+-------------------------------- |
-|                                      | ------+                              |
-| Other interesting id Tech engine     | | ![](/images/f/f3/Rtcw2square.png)  |
-| editing sites:                       |    | ### [Wolfenstein](Wolfenstein " |
-|                                      | Wolfe |                              |
-|  [www.doom3world.org](https://web.ar | |                                    |
-| chive.org/web/20121205045219/http:// |    | nstein")                        |
-| www.doom3world.org/ "http://www.doom |       |                              |
-| 3world.org")                         | +----------------------------------- |
-| :   The premier discussion forum for | ---+-------------------------------- |
-|     all Doom 3 engine games          | ------+                              |
-|                                      |                                      |
-|  [www.iddevnet.com](http://www.iddev | <div                                 |
-| net.com/ "http://www.iddevnet.com/") | style="padding: .4em .9em .4em;">    |
-|                                      |                                      |
-| :   The official id Software website | ### [id Tech 5](Id_Tech_5 "Id Tech 5 |
-|     for id Tech 4 engine editing.    | ") games:                            |
-|     (Only id games are listed there. |                                      |
-|     Specific game pages link to the  | </div>                               |
-|     websites of the respective       |                                      |
-|     developers.)                     | +----------------------------------- |
-|                                      | ---+-------------------------------- |
-|  [http://www.shikadi.net/moddingwiki | ------+                              |
-| ](http://www.shikadi.net/moddingwiki | | ![](/images/7/75/Ragesquare.png)   |
-| / "http://www.shikadi.net/moddingwik |    | ### [Rage](Rage "Rage")         |
-| i/")                                 |       |                              |
-| :   ModdingWiki keeps track of       | +----------------------------------- |
-|     modding old-school games running | ---+-------------------------------- |
-|     on id and apogee game engines.   | ------+                              |
-|                                      | | ![](/images/b/bf/D3square.png)     |
-| </div>                               |    | ### [Doom 4](Doom_4 "Doom 4")   |
-|                                      |       |                              |
-| \                                    | |                                    |
-|                                      |    |                                 |
-| \                                    |       |                              |
-|                                      | |                                    |
-|                                      |    | *not yet released*              |
-|                                      |       |                              |
-|                                      | +----------------------------------- |
-|                                      | ---+-------------------------------- |
-|                                      | ------+                              |
-+--------------------------------------+--------------------------------------+
-
-\
 

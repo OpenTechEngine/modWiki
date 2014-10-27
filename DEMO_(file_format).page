@@ -1,24 +1,4 @@
-These files are recordings usually done for benchmark purposes, they can
-have live gameplay or static scenes and are stored in /
-[demos](Demos_%28folder%29 "Demos (folder)") . Even after the
-introduction of LZW compression in v1.3 they remain big files. These
-files are created with two console commands:
-[demoShot](DemoShot_%28console_command%29 "DemoShot (console command)")
-for static scenes and
-[recordDemo](RecordDemo_%28console_command%29 "RecordDemo (console command)")
-for rolling demos. Use the
-[stopRecording](StopRecording_%28console_command%29 "StopRecording (console command)")
-console command to stop a the recording of a rolling demo.
+These files are recordings usually done for benchmark purposes, they can have live gameplay or static scenes and are stored in / [demos](Demos_%28folder%29 "Demos (folder)") . Even after the introduction of LZW compression in v1.3 they remain big files. These files are created with two console commands: [demoShot](DemoShot_%28console_command%29 "DemoShot (console command)") for static scenes and [recordDemo](RecordDemo_%28console_command%29 "RecordDemo (console command)") for rolling demos. Use the [stopRecording](StopRecording_%28console_command%29 "StopRecording (console command)") console command to stop a the recording of a rolling demo.
 
-You can playback demos with the
-[playDemo](PlayDemo_%28console_command%29 "PlayDemo (console command)")
-console command (it works on both types of demos). If you wish to
-benchmark using a demo see the
-[timeDemo](TimeDemo_%28console_command%29 "TimeDemo (console command)")
-and
-[timeDemoQuit](TimeDemoQuit_%28console_command%29 "TimeDemoQuit (console command)")
-console commands (you should set "
-[com\_compressDemos](Com_compressDemos_%28cvar%29 "Com compressDemos (cvar)")
-0" in the console to avoid any slowdowns during the benchmark due to
-decompression).
+You can playback demos with the [playDemo](PlayDemo_%28console_command%29 "PlayDemo (console command)") console command (it works on both types of demos). If you wish to benchmark using a demo see the [timeDemo](TimeDemo_%28console_command%29 "TimeDemo (console command)") and [timeDemoQuit](TimeDemoQuit_%28console_command%29 "TimeDemoQuit (console command)") console commands (you should set " [com\_compressDemos](Com_compressDemos_%28cvar%29 "Com compressDemos (cvar)") 0" in the console to avoid any slowdowns during the benchmark due to decompression).
 

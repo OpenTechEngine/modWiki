@@ -1,126 +1,137 @@
-<div style="margin-top: -3em; margin-bottom: 1em; padding-top: 1px">
-
 Welcome to ![](/images/6/69/Q4square_bg.png) modwiki.net
 
-We currently have [9,357](Special:Statistics "Special:Statistics")
-articles.
+We currently have [9,357](Special:Statistics "Special:Statistics") articles.
 
-</div>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><div style="padding: .4em .9em .9em">
+<h3>Editing Categories:</h3>
+<dl>
+<dt> <a href="Modding" class="uri" title="Modding">Modding</a> </dt>
+<dd>General information about producing and distributing mods
+</dd>
+<dt> <a href="Coding" class="uri" title="Coding">Coding</a> </dt>
+<dd>Modification of the engine's source code
+</dd>
+<dt> <a href="Mapping" class="uri" title="Mapping">Mapping</a> </dt>
+<dd>Information about level design and the tools
+</dd>
+<dt> <a href="Modelling" class="uri" title="Modelling">Modelling</a> </dt>
+<dd>Modelling and file format information
+</dd>
+<dt> <a href="Texturing" class="uri" title="Texturing">Texturing</a> </dt>
+<dd>Explanation of material shaders and image files
+</dd>
+<dt> <a href="Scripting" class="uri" title="Scripting">Scripting</a> </dt>
+<dd>Information about Scripting for GUIs and Levels
+</dd>
+<dt> <a href="Declarations" class="uri" title="Declarations">Declarations</a> </dt>
+<dd>Declarations define the properties and behavior of game content
+</dd>
+<dt> <a href="Audio_design" title="Audio design">Audio design</a> </dt>
+<dd>The creation of musical tracks and sound effects
+</dd>
+</dl>
+</div></td>
+<td align="left"><div style="padding: .4em .9em .9em;">
+<h3>Featured Articles:</h3>
+<dl>
+<dt> <a href="How_to_get_help" title="How to get help">How to get help</a> </dt>
+<dd>A good introduction to the use of this wiki
+</dd>
+<dt> <a href="Console" class="uri" title="Console">Console</a> </dt>
+<dd>Everything you need to know about the Doom 3 engine console
+<ul>
+<li><a href="CVars_%28Quake_4%29" title="CVars (Quake 4)">CVars</a></li>
+<li><a href="Commands_%28Quake_4%29" title="Commands (Quake 4)">Commands</a></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt> <a href="Script_events_%28Quake_4%29" title="Script events (Quake 4)">Script events</a> </dt>
+<dd>Quake 4 relevant script events
+</dd>
+<dt> <a href="Startup_parameters" title="Startup parameters">Startup parameters</a> </dt>
+<dd>Parameters you can add when starting Quake 4
+</dd>
+<dt> <a href="Folder_structure_%28Quake_4%29" title="Folder structure (Quake 4)">Folder structure</a> </dt>
+<dd>An overview over the folders used by Quake 4
+</dd>
+<dt> <a href="File_formats" title="File formats">File formats</a> </dt>
+<dd>All the different file formats used by the Doom 3 engine
+</dd>
+<dt> <a href="Tutorial_list" title="Tutorial list">Tutorial list</a> </dt>
+<dd>An extensive list to tutorials on a wide range of topics
+</dd>
+</dl>
+</div></td>
+</tr>
+</tbody>
+</table>
 
-+--------------------------------------+--------------------------------------+
-| <div                                 | <div                                 |
-| style="padding: .4em .9em .9em">     | style="padding: .4em .9em .9em;">    |
-|                                      |                                      |
-| ### Editing Categories:              | ### Featured Articles:               |
-|                                      |                                      |
-|  [Modding](Modding "Modding")        |  [How to get help](How_to_get_help " |
-| :   General information about        | How to get help")                    |
-|     producing and distributing mods  | :   A good introduction to the use   |
-|                                      |     of this wiki                     |
-|  [Coding](Coding "Coding")           |                                      |
-| :   Modification of the engine's     |  [Console](Console "Console")        |
-|     source code                      | :   Everything you need to know      |
-|                                      |     about the Doom 3 engine console  |
-|  [Mapping](Mapping "Mapping")        |     -   [CVars](CVars_%28Quake_4%29  |
-| :   Information about level design   | "CVars (Quake 4)")                   |
-|     and the tools                    |     -   [Commands](Commands_%28Quake |
-|                                      | _4%29 "Commands (Quake 4)")          |
-|  [Modelling](Modelling "Modelling")  |                                      |
-| :   Modelling and file format        | <!-- -->                             |
-|     information                      |                                      |
-|                                      |  [Script events](Script_events_%28Qu |
-|  [Texturing](Texturing "Texturing")  | ake_4%29 "Script events (Quake 4)")  |
-| :   Explanation of material shaders  | :   Quake 4 relevant script events   |
-|     and image files                  |                                      |
-|                                      |  [Startup parameters](Startup_parame |
-|  [Scripting](Scripting "Scripting")  | ters "Startup parameters")           |
-| :   Information about Scripting for  | :   Parameters you can add when      |
-|     GUIs and Levels                  |     starting Quake 4                 |
-|                                      |                                      |
-|  [Declarations](Declarations "Declar |  [Folder structure](Folder_structure |
-| ations")                             | _%28Quake_4%29 "Folder structure (Qu |
-| :   Declarations define the          | ake 4)")                             |
-|     properties and behavior of game  | :   An overview over the folders     |
-|     content                          |     used by Quake 4                  |
-|                                      |                                      |
-|  [Audio design](Audio_design "Audio  |  [File formats](File_formats "File f |
-| design")                             | ormats")                             |
-| :   The creation of musical tracks   | :   All the different file formats   |
-|     and sound effects                |     used by the Doom 3 engine        |
-|                                      |                                      |
-| </div>                               |  [Tutorial list](Tutorial_list "Tuto |
-|                                      | rial list")                          |
-|                                      | :   An extensive list to tutorials   |
-|                                      |     on a wide range of topics        |
-|                                      |                                      |
-|                                      | </div>                               |
-+--------------------------------------+--------------------------------------+
-
-+--------------------------------------+--------------------------------------+
-| <div                                 | <div                                 |
-| style="padding: .4em .9em .9em">     | style="padding: .4em .9em .9em;">    |
-|                                      |                                      |
-| ### New to the site?                 | ### Quake 4 game and engine:         |
-|                                      |                                      |
-| This wiki is focused on documenting  | Quake 4 introduces new editors,      |
-| the various aspects involved with    | cvars, events, file formats,         |
-| developing assets, levels and        | directories, and the following       |
-| modifications based on the [id       | functionality:                       |
-| Tech](Id_Tech "Id Tech") engines. If |                                      |
-| you're new to the site or a wiki in  | -   Lipsync support                  |
-| general, please visit the            | -   Guides for easier material       |
-| [about](modwiki:About "modwiki:About |     creation                         |
-| ")                                   | -   Improved ambient lighting        |
-| page to learn more about this        | -   Squad based AI                   |
-| project.                             | -   Portal Skies                     |
-|                                      | -   CG/HLSL Shaders                  |
-| ### Want to help?                    | -   Playback editor/entities         |
-|                                      | -   Gravity related entities         |
-| As modwiki is a community project,   | -   FX files/editor (improved        |
-| feel free to                         |     particles)                       |
-| [register](Special:Userlogin "Specia | -   Improved Level Editor            |
-| l:Userlogin")                        | -   Bugfixes in GUI editor           |
-| and join us on this great endeavor!  | -   Improved Networking              |
-| Please check out the [style          | -   New script events                |
-| guide](modwiki:Style_guide "modwiki: | -   Tools moved into separate .dll   |
-| Style guide")                        |                                      |
-| for some general editing guidelines. | Much of the AI and weapon            |
-| Visit [open                          | functionality moved into compiled    |
-| tasks](modwiki:Open_tasks "modwiki:O | code.                                |
-| pen tasks")                          |                                      |
-| to find out which pages need help.   | Quake 4 was created by [Raven        |
-| You can also visit the               | Software](https://web.archive.org/we |
-| [sandbox](modwiki:Sandbox "modwiki:S | b/20121120031347/http://www.ravensof |
-| andbox")                             | t.com/ "http://www.ravensoft.com")   |
-| to experiment with the wiki markup   | and published by                     |
-| language. To learn how to edit or    | [Activision](http://www.activision.c |
-| create pages, please take a look     | om/ "http://www.activision.com")     |
-| [here](Help:Editing "Help:Editing")  | . Release date for the PC version    |
-| .                                    | was October 18, 2005.                |
-|                                      |                                      |
-| But most importantly, if you gain    | ### System Requirements:             |
-| something from this resource, please |                                      |
-| give back.                           | -   Operating System: Windows        |
-|                                      |     2000/XP, Mac OSX, Linux          |
-| ### High quality links:              | -   CPU: Pentium 4 2.0 or Athlon XP  |
-|                                      |     2000+                            |
-| Other interesting id Tech engine     | -   Memory: 512MB                    |
-| editing sites:                       | -   Storage: 2.8GB                   |
-|                                      | -   Sound: 100% DirectX 9.0c         |
-|  [www.doom3world.org](https://web.ar |     Compliant / 16-bit               |
-| chive.org/web/20121120031347/http:// | -   Video: 100% DirectX 9.0c         |
-| www.doom3world.org/ "http://www.doom |     Compliant / 64MB RAM             |
-| 3world.org")                         |                                      |
-| :   The premier discussion forum for | \</div\>                             |
-|     all Doom 3 engine games          |                                      |
-|                                      | </div>                               |
-|  [www.iddevnet.com/quake4](http://ww |                                      |
-| w.iddevnet.com/quake4/ "http://www.i |                                      |
-| ddevnet.com/quake4/")                |                                      |
-| :   The official id Software website |                                      |
-|     for Quake 4 engine editing       |                                      |
-|                                      |                                      |
-| </div>                               |                                      |
-+--------------------------------------+--------------------------------------+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><div style="padding: .4em .9em .9em">
+<h3>New to the site?</h3>
+<p>This wiki is focused on documenting the various aspects involved with developing assets, levels and modifications based on the <a href="Id_Tech" title="Id Tech">id Tech</a> engines. If you're new to the site or a wiki in general, please visit the <a href="modwiki:About" title="modwiki:About">about</a> page to learn more about this project.</p>
+<h3>Want to help?</h3>
+<p>As modwiki is a community project, feel free to <a href="Special:Userlogin" title="Special:Userlogin">register</a> and join us on this great endeavor! Please check out the <a href="modwiki:Style_guide" title="modwiki:Style guide">style guide</a> for some general editing guidelines. Visit <a href="modwiki:Open_tasks" title="modwiki:Open tasks">open tasks</a> to find out which pages need help. You can also visit the <a href="modwiki:Sandbox" title="modwiki:Sandbox">sandbox</a> to experiment with the wiki markup language. To learn how to edit or create pages, please take a look <a href="Help:Editing" title="Help:Editing">here</a> .</p>
+<p>But most importantly, if you gain something from this resource, please give back.</p>
+<h3>High quality links:</h3>
+<p>Other interesting id Tech engine editing sites:</p>
+<dl>
+<dt> <a href="https://web.archive.org/web/20121120031347/http://www.doom3world.org/" title="http://www.doom3world.org">www.doom3world.org</a> </dt>
+<dd>The premier discussion forum for all Doom 3 engine games
+</dd>
+<dt> <a href="http://www.iddevnet.com/quake4/" title="http://www.iddevnet.com/quake4/">www.iddevnet.com/quake4</a> </dt>
+<dd>The official id Software website for Quake 4 engine editing
+</dd>
+</dl>
+</div></td>
+<td align="left"><div style="padding: .4em .9em .9em;">
+<h3>Quake 4 game and engine:</h3>
+<p>Quake 4 introduces new editors, cvars, events, file formats, directories, and the following functionality:</p>
+<ul>
+<li>Lipsync support</li>
+<li>Guides for easier material creation</li>
+<li>Improved ambient lighting</li>
+<li>Squad based AI</li>
+<li>Portal Skies</li>
+<li>CG/HLSL Shaders</li>
+<li>Playback editor/entities</li>
+<li>Gravity related entities</li>
+<li>FX files/editor (improved particles)</li>
+<li>Improved Level Editor</li>
+<li>Bugfixes in GUI editor</li>
+<li>Improved Networking</li>
+<li>New script events</li>
+<li>Tools moved into separate .dll</li>
+</ul>
+<p>Much of the AI and weapon functionality moved into compiled code.</p>
+<p>Quake 4 was created by <a href="https://web.archive.org/web/20121120031347/http://www.ravensoft.com/" title="http://www.ravensoft.com">Raven Software</a> and published by <a href="http://www.activision.com/" title="http://www.activision.com">Activision</a> . Release date for the PC version was October 18, 2005.</p>
+<h3>System Requirements:</h3>
+<ul>
+<li>Operating System: Windows 2000/XP, Mac OSX, Linux</li>
+<li>CPU: Pentium 4 2.0 or Athlon XP 2000+</li>
+<li>Memory: 512MB</li>
+<li>Storage: 2.8GB</li>
+<li>Sound: 100% DirectX 9.0c Compliant / 16-bit</li>
+<li>Video: 100% DirectX 9.0c Compliant / 64MB RAM</li>
+</ul>
+<p>&lt;/div&gt;</p>
+</div></td>
+</tr>
+</tbody>
+</table>
 
 

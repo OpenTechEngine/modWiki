@@ -1,50 +1,16 @@
-In our mod I had the problem that I needed a rendering which makes a
-screenshot. This itself is pretty easy to do, but to make it more
-challenging, I needed the playermodel to NOT show up in my rendering.
-Instead I have a seperate model, that I need to put in the screenshot
-and ONLY there. In order to achieve this it took a lot of time to find
-out how to do such a thing properly, so I thought I will share it here.
-If there are some errors, please point them out so I can correct them.
+In our mod I had the problem that I needed a rendering which makes a screenshot. This itself is pretty easy to do, but to make it more challenging, I needed the playermodel to NOT show up in my rendering. Instead I have a seperate model, that I need to put in the screenshot and ONLY there. In order to achieve this it took a lot of time to find out how to do such a thing properly, so I thought I will share it here. If there are some errors, please point them out so I can correct them.
 
-Incidently this information can also help you to create a rearview
-mirror, or other stuff that you may find usefull for other types of
-mods, though there may be better ways to do this. It is still usefull
-for debugging mirrors or surveillance cameras in realtime though.
+Incidently this information can also help you to create a rearview mirror, or other stuff that you may find usefull for other types of mods, though there may be better ways to do this. It is still usefull for debugging mirrors or surveillance cameras in realtime though.
 
-The renderengine calls gameLocal for each frame. If you need to do some
-stuff like this, then the best place to put it is in idGameLocal::Draw
-or in idGameLocal::RunFrame, because the entities have been presented at
-this point already. I used Draw() for this. If you take a look at it,
-then you can see that it is pretty short and only calls
+The renderengine calls gameLocal for each frame. If you need to do some stuff like this, then the best place to put it is in idGameLocal::Draw or in idGameLocal::RunFrame, because the entities have been presented at this point already. I used Draw() for this. If you take a look at it, then you can see that it is pretty short and only calls
 
     player->playerView.RenderPlayerView( player->hud );
 
-When you want to make changes to the gameworld you should insert your
-code before this call, otherwise they may show up on you screen instead,
-which can be quite usefull.
+When you want to make changes to the gameworld you should insert your code before this call, otherwise they may show up on you screen instead, which can be quite usefull.
 
-Each rendering, also the main view that you can see in as the game
-screen is defined by a renderview structure, which contains the info how
-the rendering should be done. Most notebly it is defining the field of
-view (fov) and the screendimensions, as well as the cameraposition. So
-the first thing you have to do in order to create a rendering is to fill
-out this structure accordingly. One thing to note here is, that your
-camera doesn't neccessarily must be contained inside a brush in order to
-make a rendering of that room. For example, if your room is 200 units
-high and your camera is positioned at 400 units, it will still render
-the room as if the wall were invisible unless there is something else
-that obstructs the view, of course. You also have to fill out the width
-and height fields which reflect the size of actual renderview.
+Each rendering, also the main view that you can see in as the game screen is defined by a renderview structure, which contains the info how the rendering should be done. Most notebly it is defining the field of view (fov) and the screendimensions, as well as the cameraposition. So the first thing you have to do in order to create a rendering is to fill out this structure accordingly. One thing to note here is, that your camera doesn't neccessarily must be contained inside a brush in order to make a rendering of that room. For example, if your room is 200 units high and your camera is positioned at 400 units, it will still render the room as if the wall were invisible unless there is something else that obstructs the view, of course. You also have to fill out the width and height fields which reflect the size of actual renderview.
 
-If you want to do similar stuff like me there is one requirement. When I
-render the snapshot I don't want to see the playermodel in my own
-rendering, only my own model should show up. On the other hand, in the
-gameworld. Conversly my model should never show up in the gameworld and
-ONLY in my own rendering. In order to achieve this, there are several
-fields in the renderEntity structure dealing with view ids. A viewId is
-a simple integer number that gives a rendering a unique id. With this
-you can control where a certain model may show up or may be invisible as
-well as where a specific light should show up or a shadow.
+If you want to do similar stuff like me there is one requirement. When I render the snapshot I don't want to see the playermodel in my own rendering, only my own model should show up. On the other hand, in the gameworld. Conversly my model should never show up in the gameworld and ONLY in my own rendering. In order to achieve this, there are several fields in the renderEntity structure dealing with view ids. A viewId is a simple integer number that gives a rendering a unique id. With this you can control where a certain model may show up or may be invisible as well as where a specific light should show up or a shadow.
 
     renderworld.h:
       typedef struct renderEntity_s 
@@ -53,98 +19,42 @@ well as where a specific light should show up or a shadow.
        int suppressShadowInLightID;
        int allowSurfaceInViewID;
 
-The viewids have no particular meaning and are assigned by the SDK code
-as it sees fit, with the exception of the id 0 which means "all views".
-In the D3 game the id 1 is used for the player game screen. Surveillance
-and remote cameras, mirrors and such may each get their individual id.
-So the best is if you start from the top. In my case I used -1 as my
-renderid, assuming that cameras will count upwards, so there should be
-no clash with the id. If you want particular entities to sho up in your
-rendering, now is the time to do it. Just go through all the entities
-and set the appropriate fields from above with your renderid. If your
-entities should show up everywhere you don't need to do this. If you
-want to swap a model to be visible on one id and not on the other, you
-must backup the original id and reset it after your renderpass to the
-old value. Now comes the important step. Any entity that has been
-changed, must be updated in the renderengine. Otherwise it may not show
-up at all, or only show up in the next rendercycle.to do this you should
-use the following code (of course substituting "player" with your own
-idEntity).
+The viewids have no particular meaning and are assigned by the SDK code as it sees fit, with the exception of the id 0 which means "all views". In the D3 game the id 1 is used for the player game screen. Surveillance and remote cameras, mirrors and such may each get their individual id. So the best is if you start from the top. In my case I used -1 as my renderid, assuming that cameras will count upwards, so there should be no clash with the id. If you want particular entities to sho up in your rendering, now is the time to do it. Just go through all the entities and set the appropriate fields from above with your renderid. If your entities should show up everywhere you don't need to do this. If you want to swap a model to be visible on one id and not on the other, you must backup the original id and reset it after your renderpass to the old value. Now comes the important step. Any entity that has been changed, must be updated in the renderengine. Otherwise it may not show up at all, or only show up in the next rendercycle.to do this you should use the following code (of course substituting "player" with your own idEntity).
 
     if((pdef = player->GetModelDefHandle()) != -1)
         gameRenderWorld->UpdateEntityDef(pdef, player->GetRenderEntity());
 
-Now we are almost there. The next step is to tell the renderengine how
-we want to render:
+Now we are almost there. The next step is to tell the renderengine how we want to render:
 
     renderSystem->CropRenderSize(width, height, [true|false]);
     gameRenderWorld->RenderScene(&renderview);
 
-Now if you look at the above call, you may notice that you have to
-specify a width and a height. You may recall from above that, when you
-fill out the renderview structure, you also have to set a width and
-height. What does this mean? The answer is that these two values are
-different and have nothing to do with each other. The width and height
-in the renderview structure determines the width and height of the
-overal screenshot you want to capture. These values are related to the
-screendimensions and are scaled to the actual screen with 640x480 being
-the biggest. If you ever did some GUI stuff with D3, then you may know
-these values. This means that 640x480 mwill render the entire screen. If
-you half it, you will only get half the image. The width and height that
-you specify in the CropRenderSize() specifies the size of the actual
-output image. So if you render to a file it means the following:
-Width/Height in renderstructure set to 640x480 and a cropsize of 120x80
-will yield a fullscreen image compressed to 120x80. Conversly a
-width/height set to 320x240 and a cropsize of 1024x768 will yield an
-image which only contains half the screen, but at the size of 1024x768.
+Now if you look at the above call, you may notice that you have to specify a width and a height. You may recall from above that, when you fill out the renderview structure, you also have to set a width and height. What does this mean? The answer is that these two values are different and have nothing to do with each other. The width and height in the renderview structure determines the width and height of the overal screenshot you want to capture. These values are related to the screendimensions and are scaled to the actual screen with 640x480 being the biggest. If you ever did some GUI stuff with D3, then you may know these values. This means that 640x480 mwill render the entire screen. If you half it, you will only get half the image. The width and height that you specify in the CropRenderSize() specifies the size of the actual output image. So if you render to a file it means the following: Width/Height in renderstructure set to 640x480 and a cropsize of 120x80 will yield a fullscreen image compressed to 120x80. Conversly a width/height set to 320x240 and a cropsize of 1024x768 will yield an image which only contains half the screen, but at the size of 1024x768.
 
-Now the next step depends on what you actually need. If you want to take
-a screenshot and write it to a file then you can use:
+Now the next step depends on what you actually need. If you want to take a screenshot and write it to a file then you can use:
 
     renderSystem->CaptureRenderToFile(FileName);
 
-The filename is realtive to the doom3 basepath and is also parsed
-through the internal filesystem of Doom 3. This means you can NOT use
-for example "C:\\screenshots" as your target path. If you try this, your
-mod will immediately break to the console because it can not write the
-path and the renderengine can't continue because of an invalid reference
-count, which we come to right soon.
+The filename is realtive to the doom3 basepath and is also parsed through the internal filesystem of Doom 3. This means you can NOT use for example "C:\\screenshots" as your target path. If you try this, your mod will immediately break to the console because it can not write the path and the renderengine can't continue because of an invalid reference count, which we come to right soon.
 
-Instead of rendering to a file you can also render to an image directly
-in memory.
+Instead of rendering to a file you can also render to an image directly in memory.
 
     renderSystem->CaptureRenderToImage(texture/materialname);
 
-Depending on what you need this for it is preferably to render to an
-image instead of to a file. However, Id did NOT include the code for
-idImage in the SDK, because it would give access to a lot of the core
-rendering function. Therfefore you can not use this rendered image
-directly. You still can use this image like any other texture though. In
-my case I need the rendering for additional analysis, so I have to use
-the filemethod. If you just want to render a snapshot from a mirror,
-without further processing, then you can use the second method, which is
-much faster.
+Depending on what you need this for it is preferably to render to an image instead of to a file. However, Id did NOT include the code for idImage in the SDK, because it would give access to a lot of the core rendering function. Therfefore you can not use this rendered image directly. You still can use this image like any other texture though. In my case I need the rendering for additional analysis, so I have to use the filemethod. If you just want to render a snapshot from a mirror, without further processing, then you can use the second method, which is much faster.
 
 The next step is to undo the renderinformation:
 
     renderSystem->UnCrop();
 
-This step is important, because it ALWAYS have to come in pairs with
-CropRenderSize from above. If you forget this, you will immediately
-notice it, because Doom breakes to the console with an errormessaghe and
-your mod wont continue to run until you fixed it.
+This step is important, because it ALWAYS have to come in pairs with CropRenderSize from above. If you forget this, you will immediately notice it, because Doom breakes to the console with an errormessaghe and your mod wont continue to run until you fixed it.
 
-Since in my case I just wanted to swap a model, now I have to replace
-the entities in the renderengine with their original values. This means
-I have to do the same as above, with the reverse data:
+Since in my case I just wanted to swap a model, now I have to replace the entities in the renderengine with their original values. This means I have to do the same as above, with the reverse data:
 
     if(pdef != -1)
         gameRenderWorld->UpdateEntityDef(EntitDef, Entity);
 
-If you forget this, then your entities wont show up in the regular
-gameworld anymore. If you don't care where they show up, and used a 0
-for the viewids, then you don't have to do this as the renderer already
-knows about these entities.
+If you forget this, then your entities wont show up in the regular gameworld anymore. If you don't care where they show up, and used a 0 for the viewids, then you don't have to do this as the renderer already knows about these entities.
 
     Some of the info above MIGHT be wrong. I know it works for me, but I didn't investigate all   
     the details. If that is the case for you then it would be cool if you post about it so this

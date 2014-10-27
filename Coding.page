@@ -1,180 +1,101 @@
-<div align="left"
-style="float:right; font-size: 17px;background: #FFFFEE; padding: 5px; border: 1px solid #000000; padding-left: 15px; padding-right: 15px; margin-left: 15px; margin-right: 15px; padding-bottom: 15px; width: 400px;">
-
-<div align="right" style="font-size: 10px; text-align=right;">
-
 [What's this?](Help:Reference_box "Help:Reference box")
 
-</div>
-
-<div>
-
 **Coding quick reference**
-
-</div>
 
 ------------------------------------------------------------------------
 
 <span style="font-size: 14px"> </span>
--   [How to build the SDK on
-    Linux](How_to_build_the_SDK_on_Linux "How to build the SDK on Linux")
--   [How to build the SDK on
-    OSX](How_to_build_the_SDK_on_OSX "How to build the SDK on OSX")
--   [How to build the SDK on
-    Windows](How_to_build_the_SDK_on_Windows "How to build the SDK on Windows")
+-   [How to build the SDK on Linux](How_to_build_the_SDK_on_Linux "How to build the SDK on Linux")
+-   [How to build the SDK on OSX](How_to_build_the_SDK_on_OSX "How to build the SDK on OSX")
+-   [How to build the SDK on Windows](How_to_build_the_SDK_on_Windows "How to build the SDK on Windows")
 
-</div>
-
-All engines in the [id Tech 4](Id_Tech_4 "Id Tech 4") family are written
-in C++, a high-level programming language. Coding, as it applies to id
-Tech 4 games, is the modification of the engine's public source code to
-extend upon its capabilities.
+All engines in the [id Tech 4](Id_Tech_4 "Id Tech 4") family are written in C++, a high-level programming language. Coding, as it applies to id Tech 4 games, is the modification of the engine's public source code to extend upon its capabilities.
 
 Engine code
 -----------
 
-The engine code is available on a GPL v3 licence at [
-[[1]](https://github.com/TTimo/doom3.gpl "https://github.com/TTimo/doom3.gpl")
-]
+The engine code is available on a GPL v3 licence at [ [[1]](https://github.com/TTimo/doom3.gpl "https://github.com/TTimo/doom3.gpl") ]
 
-Among other systems, the engine contains - the common framework,
-renderer, sound system, file system, network system.
+Among other systems, the engine contains - the common framework, renderer, sound system, file system, network system.
 
 The compiled engine code is referred to as the engine executable.
 
 Game code
 ---------
 
-Game code can be downloaded as part of the respective games SDK and is
-released under the SDK EULA.
+Game code can be downloaded as part of the respective games SDK and is released under the SDK EULA.
 
-Among other systems, the game code contains - the main game logic, map
-loading, entity spawning, spawn classes, physics, networking.
+Among other systems, the game code contains - the main game logic, map loading, entity spawning, spawn classes, physics, networking.
 
-The compiled game code is referred to as the game binary. People often
-refer to the game code and the game binary interchangeably, also using
-such terms as the dll, or the SDK.
+The compiled game code is referred to as the game binary. People often refer to the game code and the game binary interchangeably, also using such terms as the dll, or the SDK.
 
-The engine/game interface, or API, is described by idGame with local
-aspects in idGameLocal.
+The engine/game interface, or API, is described by idGame with local aspects in idGameLocal.
 
-There is version check done by the game engine on loading the game
-binary in order to enforce the API which halts the game with the error
-"ERROR: wrong game DLL API version". Therefore each engine update or
-game patch is likely to 'break' compatibility of mods, necessitating the
-author to update the mod to the new game code.
+There is version check done by the game engine on loading the game binary in order to enforce the API which halts the game with the error "ERROR: wrong game DLL API version". Therefore each engine update or game patch is likely to 'break' compatibility of mods, necessitating the author to update the mod to the new game code.
 
-During development it can be handy to set
-[si\_pure](Si_pure_%28cvar%29 "Si pure (cvar)") to 0. This makes it
-possible to run the game with a modified game binary placed directly in
-the base directory. However, once you've finished making your code
-changes you should package the modified game binary for distribution as
-described in the *how to* articles linked at the top of this page.
+During development it can be handy to set [si\_pure](Si_pure_%28cvar%29 "Si pure (cvar)") to 0. This makes it possible to run the game with a modified game binary placed directly in the base directory. However, once you've finished making your code changes you should package the modified game binary for distribution as described in the *how to* articles linked at the top of this page.
 
-For more details on each file and class included in the SDK, and
-therefore what can and cannot be done, please read [The annotated
-API](The_annotated_API "The annotated API") .
+For more details on each file and class included in the SDK, and therefore what can and cannot be done, please read [The annotated API](The_annotated_API "The annotated API") .
 
 The SDK
 -------
 
-This game code project in the SDK, allows modders the ability to compile
-a new game binary for different platforms -
-gamex86.dll/gamex86.so/gameppc.dylib file for windows/linux/mac
-respectively.
+This game code project in the SDK, allows modders the ability to compile a new game binary for different platforms - gamex86.dll/gamex86.so/gameppc.dylib file for windows/linux/mac respectively.
 
--   Download the [Doom 3
-    SDK](ftp://ftp.idsoftware.com/idstuff/doom3/source/ "ftp://ftp.idsoftware.com/idstuff/doom3/source/")
-    version 1.3.1
--   Download the [Quake 4
-    SDK](ftp://ftp.idsoftware.com/idstuff/quake4/source "ftp://ftp.idsoftware.com/idstuff/quake4/source")
-    version 1.4.2
--   Download the [Prey
-    SDK](https://web.archive.org/web/20120831010417/http://www.3drealms.com/prey/download.html#sdk "http://www.3drealms.com/prey/download.html#sdk")
--   Download the [ETQW
-    SDK](https://web.archive.org/web/20120831010417/http://community.enemyterritory.com/index.php?q=node/262 "http://community.enemyterritory.com/index.php?q=node/262")
-    version 1.5
+-   Download the [Doom 3 SDK](ftp://ftp.idsoftware.com/idstuff/doom3/source/ "ftp://ftp.idsoftware.com/idstuff/doom3/source/") version 1.3.1
+-   Download the [Quake 4 SDK](ftp://ftp.idsoftware.com/idstuff/quake4/source "ftp://ftp.idsoftware.com/idstuff/quake4/source") version 1.4.2
+-   Download the [Prey SDK](https://web.archive.org/web/20120831010417/http://www.3drealms.com/prey/download.html#sdk "http://www.3drealms.com/prey/download.html#sdk")
+-   Download the [ETQW SDK](https://web.archive.org/web/20120831010417/http://community.enemyterritory.com/index.php?q=node/262 "http://community.enemyterritory.com/index.php?q=node/262") version 1.5
 
-Most of the SDKs support Visual Studio .NET 2003 and 2005 "out of the
-box".
+Most of the SDKs support Visual Studio .NET 2003 and 2005 "out of the box".
 
 Where to start
 --------------
 
 So much code!
 
-As a starting point the idGameLocal::RunFrame() function can be
-considered the entry point or the systems "main()".
+As a starting point the idGameLocal::RunFrame() function can be considered the entry point or the systems "main()".
 
-It is the part of the game loop called by the engine at 60Hz (30Hz for
-ETQW). Each call referred to as a [game frame](Game_frame "Game frame")
-.
+It is the part of the game loop called by the engine at 60Hz (30Hz for ETQW). Each call referred to as a [game frame](Game_frame "Game frame") .
 
-The idGameLocal class handles main game aspects, loading map, setting up
-the main data structures, spawning and tracking
-[entities](Entity "Entity") .
+The idGameLocal class handles main game aspects, loading map, setting up the main data structures, spawning and tracking [entities](Entity "Entity") .
 
-idEntity is the base [spawn class](Spawn_class "Spawn class") that other
-entities are derived from.
+idEntity is the base [spawn class](Spawn_class "Spawn class") that other entities are derived from.
 
 References
 ----------
 
 -   [The annotated API](The_annotated_API "The annotated API")
 -   [CVar flags](CVar_flags "CVar flags") (Description of the flags)
--   [Server query
-    protocol](Server_query_protocol "Server query protocol")
+-   [Server query protocol](Server_query_protocol "Server query protocol")
 
 Coding tutorials
 ----------------
 
--   [Adding a custom
-    keyhandler](Adding_a_custom_keyhandler "Adding a custom keyhandler")
--   [Beginner's Tutorial (Part 1)
-    Filetypes](Beginner%27s_Tutorial_%28Part_1%29_Filetypes "Beginner's Tutorial (Part 1) Filetypes")
--   [Beginner's Tutorial (Part 2) The
-    SDK](Beginner%27s_Tutorial_%28Part_2%29_The_SDK "Beginner's Tutorial (Part 2) The SDK")
--   [How to build the SDK on
-    Linux](How_to_build_the_SDK_on_Linux "How to build the SDK on Linux")
--   [How to build the SDK on
-    OSX](How_to_build_the_SDK_on_OSX "How to build the SDK on OSX")
--   [How to build the SDK on
-    Windows](How_to_build_the_SDK_on_Windows "How to build the SDK on Windows")
--   [How to add custom console
-    commands](How_to_add_custom_console_commands "How to add custom console commands")
+-   [Adding a custom keyhandler](Adding_a_custom_keyhandler "Adding a custom keyhandler")
+-   [Beginner's Tutorial (Part 1) Filetypes](Beginner%27s_Tutorial_%28Part_1%29_Filetypes "Beginner's Tutorial (Part 1) Filetypes")
+-   [Beginner's Tutorial (Part 2) The SDK](Beginner%27s_Tutorial_%28Part_2%29_The_SDK "Beginner's Tutorial (Part 2) The SDK")
+-   [How to build the SDK on Linux](How_to_build_the_SDK_on_Linux "How to build the SDK on Linux")
+-   [How to build the SDK on OSX](How_to_build_the_SDK_on_OSX "How to build the SDK on OSX")
+-   [How to build the SDK on Windows](How_to_build_the_SDK_on_Windows "How to build the SDK on Windows")
+-   [How to add custom console commands](How_to_add_custom_console_commands "How to add custom console commands")
 -   [How to add CVar's](How_to_add_CVar%27s "How to add CVar's")
--   [Rendering with the D3
-    renderengine](Rendering_with_the_D3_renderengine "Rendering with the D3 renderengine")
--   [D3 Networking:
-    Basics](D3_Networking:_Basics "D3 Networking: Basics")
--   [D3 Networking:
-    Communication](D3_Networking:_Communication "D3 Networking: Communication")
--   [D3 Networking: Setting up a test
-    session](D3_Networking:_Setting_up_a_test_session "D3 Networking: Setting up a test session")
--   [D3 Networking: Snapshot
-    synchronisation](D3_Networking:_Snapshot_synchronisation "D3 Networking: Snapshot synchronisation")
--   [D3 Networking: Server and client side
-    events](D3_Networking:_Server_and_client_side_events "D3 Networking: Server and client side events")
--   [D3 Networking: Server- and
-    UserInfo](D3_Networking:_Server-_and_UserInfo "D3 Networking: Server- and UserInfo")
--   [D3 Networking: A birth and death of an
-    entity](D3_Networking:_A_birth_and_death_of_an_entity "D3 Networking: A birth and death of an entity")
--   [D3 Networking: An overview of the
-    architecture](D3_Networking:_An_overview_of_the_architecture "D3 Networking: An overview of the architecture")
--   [D3 Networking: Delta and PVS-based
-    synchronisation](D3_Networking:_Delta_and_PVS-based_synchronisation "D3 Networking: Delta and PVS-based synchronisation")
--   [D3 Networking: Client-side
-    prediction](D3_Networking:_Client-side_prediction "D3 Networking: Client-side prediction")
--   [Q4 Networking: Encoding messages like
-    snapshots](Q4_Networking:_Encoding_messages_like_snapshots "Q4 Networking: Encoding messages like snapshots")
--   [Q4 Networking: Deltifying rockets
-    away](Q4_Networking:_Deltifying_rockets_away "Q4 Networking: Deltifying rockets away")
+-   [Rendering with the D3 renderengine](Rendering_with_the_D3_renderengine "Rendering with the D3 renderengine")
+-   [D3 Networking: Basics](D3_Networking:_Basics "D3 Networking: Basics")
+-   [D3 Networking: Communication](D3_Networking:_Communication "D3 Networking: Communication")
+-   [D3 Networking: Setting up a test session](D3_Networking:_Setting_up_a_test_session "D3 Networking: Setting up a test session")
+-   [D3 Networking: Snapshot synchronisation](D3_Networking:_Snapshot_synchronisation "D3 Networking: Snapshot synchronisation")
+-   [D3 Networking: Server and client side events](D3_Networking:_Server_and_client_side_events "D3 Networking: Server and client side events")
+-   [D3 Networking: Server- and UserInfo](D3_Networking:_Server-_and_UserInfo "D3 Networking: Server- and UserInfo")
+-   [D3 Networking: A birth and death of an entity](D3_Networking:_A_birth_and_death_of_an_entity "D3 Networking: A birth and death of an entity")
+-   [D3 Networking: An overview of the architecture](D3_Networking:_An_overview_of_the_architecture "D3 Networking: An overview of the architecture")
+-   [D3 Networking: Delta and PVS-based synchronisation](D3_Networking:_Delta_and_PVS-based_synchronisation "D3 Networking: Delta and PVS-based synchronisation")
+-   [D3 Networking: Client-side prediction](D3_Networking:_Client-side_prediction "D3 Networking: Client-side prediction")
+-   [Q4 Networking: Encoding messages like snapshots](Q4_Networking:_Encoding_messages_like_snapshots "Q4 Networking: Encoding messages like snapshots")
+-   [Q4 Networking: Deltifying rockets away](Q4_Networking:_Deltifying_rockets_away "Q4 Networking: Deltifying rockets away")
 
 Coding Tools
 ------------
 
--   [MS Visual C++
-    Beta](http://lab.msdn.microsoft.com/express/visualc/default.aspx "http://lab.msdn.microsoft.com/express/visualc/default.aspx") -
-    [Installation
-    Notes](https://web.archive.org/web/20120831010417/http://www.doom3world.org/phpbb2/viewtopic.php?p=57046 "http://www.doom3world.org/phpbb2/viewtopic.php?p=57046")
+-   [MS Visual C++ Beta](http://lab.msdn.microsoft.com/express/visualc/default.aspx "http://lab.msdn.microsoft.com/express/visualc/default.aspx") - [Installation Notes](https://web.archive.org/web/20120831010417/http://www.doom3world.org/phpbb2/viewtopic.php?p=57046 "http://www.doom3world.org/phpbb2/viewtopic.php?p=57046")
 

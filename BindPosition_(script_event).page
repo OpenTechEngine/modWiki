@@ -1,14 +1,12 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Fixes this entity's position (but not orientation) relative to another
-entity, such that when the master entity moves, so does this entity.
+Fixes this entity's position (but not orientation) relative to another entity, such that when the master entity moves, so does this entity.
 
 Usage
 -----
@@ -31,5 +29,4 @@ Notes
 
 This script event does not return any values.
 
-\
 

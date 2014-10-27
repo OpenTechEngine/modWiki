@@ -1,22 +1,11 @@
 Description
 -----------
 
-JPEG is an established lossy compression graphics file format. It
-operates on the concept that the human eye doesn't notice certain subtle
-changes in color, and that certain colors in these ranges can be removed
-from the image in order to allow it to be compressed to a smaller file
-size. The term "lossy" is given to the technique due to the fact that,
-by removing these ranges of color, the compressed image has lost some of
-the quality of the original image.
+JPEG is an established lossy compression graphics file format. It operates on the concept that the human eye doesn't notice certain subtle changes in color, and that certain colors in these ranges can be removed from the image in order to allow it to be compressed to a smaller file size. The term "lossy" is given to the technique due to the fact that, by removing these ranges of color, the compressed image has lost some of the quality of the original image.
 
-The high level of compression offered by this format made it very
-popular on the web. As the amount of data needed by games has grown
-larger and larger, this format has become useful in game development as
-well. It must be used with care, however, to ensure that the resulting
-in game textures do not suffer from too high of a loss in quality.
+The high level of compression offered by this format made it very popular on the web. As the amount of data needed by games has grown larger and larger, this format has become useful in game development as well. It must be used with care, however, to ensure that the resulting in game textures do not suffer from too high of a loss in quality.
 
-More information on the JPEG format can be found at
-[http://www.ijg.org](http://www.ijg.org/ "http://www.ijg.org") .
+More information on the JPEG format can be found at [http://www.ijg.org](http://www.ijg.org/ "http://www.ijg.org") .
 
 General File Format Specifications
 ----------------------------------
@@ -40,15 +29,9 @@ Color Depth
 Notes
 -----
 
-JPEG compression is lossy and results in artifacts. Because of this,
-it's recommended that you do not use JPEG images for your normal maps.
+JPEG compression is lossy and results in artifacts. Because of this, it's recommended that you do not use JPEG images for your normal maps.
 
-JPEG images do not support transparency or alpha channels. This makes
-them unsuitable for decals.
+JPEG images do not support transparency or alpha channels. This makes them unsuitable for decals.
 
-When saving JPEG files for use in Doom 3, be sure that you *do not* save
-using the "progressive compression" option in your [image
-editor](Texturing#Texturing_applications "Texturing") . This will cause
-both the editor and the game to crash when it attempts to parse your
-image.
+When saving JPEG files for use in Doom 3, be sure that you *do not* save using the "progressive compression" option in your [image editor](Texturing#Texturing_applications "Texturing") . This will cause both the editor and the game to crash when it attempts to parse your image.
 

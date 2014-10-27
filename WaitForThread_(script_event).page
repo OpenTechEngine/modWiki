@@ -1,10 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type
-[idThread](Thread_%28scripting%29 "Thread (scripting)") , accessible via
-[sys](Scripting_basics#sys "Scripting basics") identifier.
+This event operates on an instance of the [game class](Game_class "Game class") type [idThread](Thread_%28scripting%29 "Thread (scripting)") , accessible via [sys](Scripting_basics#sys "Scripting basics") identifier.
 
 Description
 -----------
@@ -14,8 +11,7 @@ Waits for the given thread to terminate.
 Usage
 -----
 
-*[void](Data_types#void "Data types")* waitForThread(
-*[float](Data_types#float "Data types")* **threadNumber** )
+*[void](Data_types#void "Data types")* waitForThread( *[float](Data_types#float "Data types")* **threadNumber** )
 
 Parameters
 ----------
@@ -30,8 +26,6 @@ Examples
 Notes
 -----
 
-See [threads](Thread_%28scripting%29 "Thread (scripting)") for more
-information.
+See [threads](Thread_%28scripting%29 "Thread (scripting)") for more information.
 
-\
 

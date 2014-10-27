@@ -1,8 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -12,8 +11,7 @@ Line drawing for debug visualization.
 Usage
 -----
 
-*void* debugArrow( *vector* **color** , *vector* **start** , *vector*
-**end** , *float* **size** , *float* **lifetime** )
+*void* debugArrow( *vector* **color** , *vector* **start** , *vector* **end** , *float* **size** , *float* **lifetime** )
 
 Parameters
 ----------
@@ -37,5 +35,4 @@ This script event does not return any values.
 
 Lifetime of 0 == 1 frame.
 
-\
 

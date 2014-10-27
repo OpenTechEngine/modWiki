@@ -1,8 +1,6 @@
 Locks the content of this item, making it read-only.
 
-This property is restricted to the
-[editDef](EditDef_%28GUI_item_type%29 "EditDef (GUI item type)") item
-type.
+This property is restricted to the [editDef](EditDef_%28GUI_item_type%29 "EditDef (GUI item type)") item type.
 
 Syntax
 ------
@@ -19,5 +17,4 @@ Example(s)
 
     readonly 1
 
-\
 

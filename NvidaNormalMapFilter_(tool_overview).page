@@ -1,55 +1,45 @@
 Foreword
 --------
 
-[Nvidia's Normal Map
-plugin](https://web.archive.org/web/20110906153324/http://www.google.com/search?hl=en&q=NVidia%20Texture%20Tools&btnI=I'm+Feeling+Lucky "http://www.google.com/search?hl=en&q=NVidia%20Texture%20Tools&btnI=I'm+Feeling+Lucky")
-for [Adobe Photoshop](http://www.adobe.com/ "http://www.adobe.com/") is
-primarily used to create normal maps from height maps.
+[Nvidia's Normal Map plugin](https://web.archive.org/web/20110906153324/http://www.google.com/search?hl=en&q=NVidia%20Texture%20Tools&btnI=I'm+Feeling+Lucky "http://www.google.com/search?hl=en&q=NVidia%20Texture%20Tools&btnI=I'm+Feeling+Lucky") for [Adobe Photoshop](http://www.adobe.com/ "http://www.adobe.com/") is primarily used to create normal maps from height maps.
 
-However, it's also possible to normalize an existing normal map, combine
-a normal map with a height map, as well as export special maps.
+However, it's also possible to normalize an existing normal map, combine a normal map with a height map, as well as export special maps.
 
-  ------------------------------------------------------------------------
-  ------------------------------------------------------------------------
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 
 A Word About Channels
 ---------------------
 
-It's important to note that the plugin only uses the channels that are
-selected so if you need to make use of the alpha channel with the plugin
-you must select it in the channels pallet prior to starting the plugin.
+It's important to note that the plugin only uses the channels that are selected so if you need to make use of the alpha channel with the plugin you must select it in the channels pallet prior to starting the plugin.
 
 General Interface
 -----------------
 
-[![nVidia normal map plugin
-interface](/images/b/ba/NvidiaNormalMapPlugin.gif)\
- *nVidia normal map plugin interface (Click to
-Enlarge)*](/images/b/ba/NvidiaNormalMapPlugin.gif "nVidia normal map plugin interface")
+[![nVidia normal map plugin interface](/images/b/ba/NvidiaNormalMapPlugin.gif)
+ *nVidia normal map plugin interface (Click to Enlarge)*](/images/b/ba/NvidiaNormalMapPlugin.gif "nVidia normal map plugin interface")
 
-This is the plugin interface. The following sections will explain the
-function of each checkbox, textbox, button, and display.
+This is the plugin interface. The following sections will explain the function of each checkbox, textbox, button, and display.
 
 ### Dynamic Preview
 
-The dynamic preview will display a thumbnail of the resulting normal map
-using the current settings.
+The dynamic preview will display a thumbnail of the resulting normal map using the current settings.
 
 ### "Add Height to Normal Map" Checkbox
 
-This checkbox instructs the plugin to add the normals of a height map to
-an existing normal map.
+This checkbox instructs the plugin to add the normals of a height map to an existing normal map.
 
-However, because a normal map must use the RGB channels and you cannot
-specify an image other than the image in use when the plugin is
-initiated, you must store the height information in the alpha channel of
-the normal map.
+However, because a normal map must use the RGB channels and you cannot specify an image other than the image in use when the plugin is initiated, you must store the height information in the alpha channel of the normal map.
 
-So, when using this feature it's important to also select "Alpha
-Channel" as the height source. Note that the "Alpha Channel" radio
-button is disabled by default. In order to use it you must select the
-red, green, blue, and alpha channels in the channels pallet prior to
-starting the plugin.
+So, when using this feature it's important to also select "Alpha Channel" as the height source. Note that the "Alpha Channel" radio button is disabled by default. In order to use it you must select the red, green, blue, and alpha channels in the channels pallet prior to starting the plugin.
 
 ### "Output 16:16" Checkbox
 
@@ -61,8 +51,7 @@ This also has been removed.
 
 ### "Using Multiple Layers" Checkbox
 
-By default the plugin expect you to be working with a flattened image.
-However, this checkbox allows you to work with multiple layers.
+By default the plugin expect you to be working with a flattened image. However, this checkbox allows you to work with multiple layers.
 
 ### "Signed Output" Checkbox
 
@@ -76,8 +65,7 @@ By default the plugin exports normal data as follows...
 -   Green Channel - Y axis
 -   Blue Channel - Z axis
 
-With this checkbox ticked however, the plugin exports normal data as
-follows...
+With this checkbox ticked however, the plugin exports normal data as follows...
 
 -   Red Channel - Z axis
 -   Green Channel - Y axis
@@ -85,20 +73,16 @@ follows...
 
 ### 3D Preview Button
 
-This button brings up the 3D preview pane using the settings defined in
-the 3D view section.
+This button brings up the 3D preview pane using the settings defined in the 3D view section.
 
 Height Generation
 -----------------
 
-This section defines every aspect of how the height map is converted
-into a normal map.
+This section defines every aspect of how the height map is converted into a normal map.
 
 ### "Wrap" Checkbox
 
-This checkbox enables/disables the wraping of the resulting normal map
-around the edges of the image. This is used for continuity when working
-with seamless textures.
+This checkbox enables/disables the wraping of the resulting normal map around the edges of the image. This is used for continuity when working with seamless textures.
 
 ### "Invert X" Checkbox
 
@@ -110,8 +94,7 @@ This checkbox enables/disables the inversion of Y axis normal data.
 
 ### "Min Z" Textbox
 
-This textbox envelopes the Z axis normal data to the specified value and
-above.
+This textbox envelopes the Z axis normal data to the specified value and above.
 
 ### "Scale" Textbox
 
@@ -143,13 +126,11 @@ With this selected, 72 samples are taken from the surrounding pixels.
 
 #### Du/Dv
 
-With this selected, the height map is converted into an
-environment-mapped bump map.
+With this selected, the height map is converted into an environment-mapped bump map.
 
 #### Q8W8V8U8
 
-With this selected, the height map is converted into a Q8W8V8U8 bump
-map.
+With this selected, the height map is converted into a Q8W8V8U8 bump map.
 
 3D Preview Options
 ------------------
@@ -158,13 +139,11 @@ This section defines the settings used in the 3D preview pane.
 
 ### Decal Texture
 
-This button allows you to select the color map to apply the resulting
-normal map to in the 3D preview pane.
+This button allows you to select the color map to apply the resulting normal map to in the 3D preview pane.
 
 ### "Use Decal Texture" Checkbox
 
-This checkbox enables/disables the use of a color map in the 3D preview
-pane.
+This checkbox enables/disables the use of a color map in the 3D preview pane.
 
 ### "Brigten Decal" Checkbox
 
@@ -172,8 +151,7 @@ pane.
 
 ### "Animate Light" Checkbox
 
-This checkbox enables/disables the use of an animated light in the 3D
-preview pane.
+This checkbox enables/disables the use of an animated light in the 3D preview pane.
 
 Height Source
 -------------
@@ -182,25 +160,20 @@ This section determines the source of the height map to convert.
 
 ### Alpha Channel
 
-When selceted, the plugin gathers height map data from the alpha
-channel.
+When selceted, the plugin gathers height map data from the alpha channel.
 
-Remember, the plugin only recogizes the channels selected from the
-channels pallet prior to starting the plugin. If you do not have the
-alpha channel selected this option will be disabled.
+Remember, the plugin only recogizes the channels selected from the channels pallet prior to starting the plugin. If you do not have the alpha channel selected this option will be disabled.
 
 ### Average RGB
 
-When selected, the plugin gathers height map data from an average of the
-red, green, and blue channels.
+When selected, the plugin gathers height map data from an average of the red, green, and blue channels.
 
 Alternate Conversions
 ---------------------
 
 ### Biased RGB
 
-When selected, the plugin subtracts the average color of the image from
-each texel.
+When selected, the plugin subtracts the average color of the image from each texel.
 
 ### Red
 
@@ -210,8 +183,7 @@ By default the plugin exports normal data as follows...
 -   Green Channel - Y axis
 -   Blue Channel - Z axis
 
-With this checkbox ticked, the plugin should export Z axis normal data
-in the red channel. However, it doesn't appear to work.
+With this checkbox ticked, the plugin should export Z axis normal data in the red channel. However, it doesn't appear to work.
 
 ### Green
 
@@ -221,8 +193,7 @@ By default the plugin exports normal data as follows...
 -   Green Channel - Y axis
 -   Blue Channel - Z axis
 
-With this checkbox ticked, the plugin should export Z axis normal data
-in the green channel. However, it doesn't appear to work.
+With this checkbox ticked, the plugin should export Z axis normal data in the green channel. However, it doesn't appear to work.
 
 ### Blue
 
@@ -232,37 +203,30 @@ By default the plugin exports normal data as follows...
 -   Green Channel - Y axis
 -   Blue Channel - Z axis
 
-With this checkbox ticked, the plugin should export Z axis normal data
-in the blue channel. However, it doesn't matter because the result would
-be the same.
+With this checkbox ticked, the plugin should export Z axis normal data in the blue channel. However, it doesn't matter because the result would be the same.
 
 ### Max (R,G,B)
 
-When selected, the plugin uses the maximum value from the red, green,
-and blue, channels as opposed to averaging them.
+When selected, the plugin uses the maximum value from the red, green, and blue, channels as opposed to averaging them.
 
 ### Colorspace
 
 Color space - Height = 1.0 - [(1.0 - r) \* (1.0 - g) \* (1.0 - b)]
 
-Invert all the colors, multiply them together and invert the result.
-This was an artist request.
+Invert all the colors, multiply them together and invert the result. This was an artist request.
 
 ### Normalize Only
 
-When selected, the plugin normalizes the color of each texel to make an
-hand edited normal map compliant.
+When selected, the plugin normalizes the color of each texel to make an hand edited normal map compliant.
 
 ### Convert to Height
 
-When selected, the plugin converts a normal map to a height map. This
-should be working correctly in version 8.0 or later.
+When selected, the plugin converts a normal map to a height map. This should be working correctly in version 8.0 or later.
 
 Alpha Field
 -----------
 
-Settings in this section determine what to output to the alpha channel
-if it exists.
+Settings in this section determine what to output to the alpha channel if it exists.
 
 ### Unchanged
 
@@ -276,5 +240,4 @@ When selected, the alpha channel is filled with black.
 
 When selected, the alpha channel is filled with white.
 
-\
 

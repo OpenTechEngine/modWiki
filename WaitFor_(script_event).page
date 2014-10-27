@@ -1,10 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type
-[idThread](Thread_%28scripting%29 "Thread (scripting)") , accessible via
-[sys](Scripting_basics#sys "Scripting basics") identifier.
+This event operates on an instance of the [game class](Game_class "Game class") type [idThread](Thread_%28scripting%29 "Thread (scripting)") , accessible via [sys](Scripting_basics#sys "Scripting basics") identifier.
 
 Description
 -----------
@@ -14,27 +11,18 @@ Waits for entity to complete it's move.
 Usage
 -----
 
-*[void](Data_types#void "Data types")* waitFor(
-*[entity](Data_types#entity "Data types")* **mover** )
+*[void](Data_types#void "Data types")* waitFor( *[entity](Data_types#entity "Data types")* **mover** )
 
 Parameters
 ----------
 
 [mover] - entity to wait for.
 
-Parameter only supports entities of following [spawn
-classes](Spawn_class "Spawn class") :
+Parameter only supports entities of following [spawn classes](Spawn_class "Spawn class") :
 
-![](/images/2/23/D3square_25.png) Doom 3:
-[idCameraAnim](IdCameraAnim_%28class%29 "IdCameraAnim (class)") ,
-[idMover](IdMover_%28class%29 "IdMover (class)") ,
-[idMover\_Binary](IdMover_Binary_%28class%29 "IdMover Binary (class)") .
+![](/images/2/23/D3square_25.png) Doom 3: [idCameraAnim](IdCameraAnim_%28class%29 "IdCameraAnim (class)") , [idMover](IdMover_%28class%29 "IdMover (class)") , [idMover\_Binary](IdMover_Binary_%28class%29 "IdMover Binary (class)") .
 
-![](/images/e/e8/Q4square_25.png) Quake 4:
-[idCameraAnim](IdCameraAnim_%28class%29 "IdCameraAnim (class)") ,
-[idMover](IdMover_%28class%29 "IdMover (class)") ,
-[idMover\_Binary](IdMover_Binary_%28class%29 "IdMover Binary (class)") ,
-[rvSplineMover](RvSplineMover_%28class%29 "RvSplineMover (class)")
+![](/images/e/e8/Q4square_25.png) Quake 4: [idCameraAnim](IdCameraAnim_%28class%29 "IdCameraAnim (class)") , [idMover](IdMover_%28class%29 "IdMover (class)") , [idMover\_Binary](IdMover_Binary_%28class%29 "IdMover Binary (class)") , [rvSplineMover](RvSplineMover_%28class%29 "RvSplineMover (class)")
 
 Examples
 --------
@@ -48,16 +36,9 @@ Examples
 Notes
 -----
 
-<div>
-
-![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake
-Wars only:
+![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake Wars only:
 *(This event does not apply)*
 
-</div>
+See [threads](Thread_%28scripting%29 "Thread (scripting)") for more information.
 
-See [threads](Thread_%28scripting%29 "Thread (scripting)") for more
-information.
-
-\
 

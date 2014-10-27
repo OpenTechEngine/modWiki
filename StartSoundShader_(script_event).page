@@ -1,20 +1,17 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Plays a specific sound shader on the channel and returns the length of
-the sound in seconds.
+Plays a specific sound shader on the channel and returns the length of the sound in seconds.
 
 Usage
 -----
 
-*float* startSoundShader( *string* **shaderName** , *float* **channel**
-)
+*float* startSoundShader( *string* **shaderName** , *float* **channel** )
 
 Parameters
 ----------
@@ -46,18 +43,13 @@ Notes
 
 This script event does not return any values.
 
-This is not the prefered method of playing a sound since you must ensure
-that the sound is loaded.
+This is not the prefered method of playing a sound since you must ensure that the sound is loaded.
 
 -1st param (string shaderName)
 
-The shadernames are defined within sound shader files (typically .sndshd
-files) which are placed within base/sound/ (the doom3 game ones are
-found in pak003.pk3/sound). No path is necessary for the shadernames
-located directly in the sound directory.
+The shadernames are defined within sound shader files (typically .sndshd files) which are placed within base/sound/ (the doom3 game ones are found in pak003.pk3/sound). No path is necessary for the shadernames located directly in the sound directory.
 
--2nd param (float channel) Choose one of the possible channels as
-defined by doom\_defs.script:
+-2nd param (float channel) Choose one of the possible channels as defined by doom\_defs.script:
 
     #define SND_CHANNEL_ANY     0
     #define SND_CHANNEL_VOICE   1
@@ -71,25 +63,12 @@ defined by doom\_defs.script:
     #define SND_CHANNEL_PDA     9
     #define SND_CHANNEL_DEMONIC 10
 
-If there is already a sound clip playing from the entity on the channel
-you choose, it will be cut off and replaced by the new one you specified
-in the 1st parameter. A special case is with SND\_CHANNEL\_ANY. Use of
-this channel seems to cause the sound to be played on any free channel.
+If there is already a sound clip playing from the entity on the channel you choose, it will be cut off and replaced by the new one you specified in the 1st parameter. A special case is with SND\_CHANNEL\_ANY. Use of this channel seems to cause the sound to be played on any free channel.
 
-You should use the function [cacheSoundShader (script
-command)sys.cacheSoundShader()](CacheSoundShader_%28script_command%29sys.cacheSoundShader%28%29 "CacheSoundShader (script command)sys.cacheSoundShader()")
-to cache each sound shader you wish to use. It seems to play the sound
-regardless, but unless you precache it when the map loads, you could get
-some glitches.
+You should use the function [cacheSoundShader (script command)sys.cacheSoundShader()](CacheSoundShader_%28script_command%29sys.cacheSoundShader%28%29 "CacheSoundShader (script command)sys.cacheSoundShader()") to cache each sound shader you wish to use. It seems to play the sound regardless, but unless you precache it when the map loads, you could get some glitches.
 
-It seems that this can be called from any entity - including moving
-ones. Of course with a speaker entity you can set options such as
-volume, looping and occlusion. I cannot find a way of scripting these
-things.
+It seems that this can be called from any entity - including moving ones. Of course with a speaker entity you can set options such as volume, looping and occlusion. I cannot find a way of scripting these things.
 
-You can use
-[entity.stopSound()](StopSound_%28script_command%29 "StopSound (script command)")
-to stop a sound.
+You can use [entity.stopSound()](StopSound_%28script_command%29 "StopSound (script command)") to stop a sound.
 
-\
 

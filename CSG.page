@@ -1,111 +1,56 @@
-CSG or Constructive Solid Geometry is a set operations common to many
-modelling software packages based on primitives (a cube, sphere, cone,
-etc.) to create more complex structures. Where it pertains to editing
-[id Tech 4](Id_Tech_4 "Id Tech 4") maps, CSG applies only to
-[brushes](Brush "Brush") with just two possible operations: boolean
-union and difference. The former combines two brushes into one and the
-later subtracts pieces off a brush.
+CSG or Constructive Solid Geometry is a set operations common to many modelling software packages based on primitives (a cube, sphere, cone, etc.) to create more complex structures. Where it pertains to editing [id Tech 4](Id_Tech_4 "Id Tech 4") maps, CSG applies only to [brushes](Brush "Brush") with just two possible operations: boolean union and difference. The former combines two brushes into one and the later subtracts pieces off a brush.
 
 Tools of the trade
 ------------------
 
-The two operations can be achieved through the Selection menu of the
-[map editor](Map_editor "Map editor") or the fourth set of buttons in
-the toolbar. These are:
+The two operations can be achieved through the Selection menu of the [map editor](Map_editor "Map editor") or the fourth set of buttons in the toolbar. These are:
 
 ### Subtract
 
-This operation is the equivalent of CSG boolean difference and it will
-use a brush to carve a hole or shave off a part in another brush.
+This operation is the equivalent of CSG boolean difference and it will use a brush to carve a hole or shave off a part in another brush.
 
 1.  Select the brush you'll be using to carve.
 2.  Move it to the appropriate location.
-3.  Click on the Selection \> CSG \> Subtract menu item or the
-    thirteenth button in the toolbar.
-4.  Delete the selected brush (or move it somewhere else if you wish to
-    use to carve some other piece of geometry).
+3.  Click on the Selection \> CSG \> Subtract menu item or the thirteenth button in the toolbar.
+4.  Delete the selected brush (or move it somewhere else if you wish to use to carve some other piece of geometry).
 
-Please note that you haven't actually created a brush with a hole or
-with a piece shaven off. Brushes have to always be convex solids so
-unlike in other modelling software applications Subtract in the map
-editor simply creates the desired solid using as few smaller brushes
-possible.
+Please note that you haven't actually created a brush with a hole or with a piece shaven off. Brushes have to always be convex solids so unlike in other modelling software applications Subtract in the map editor simply creates the desired solid using as few smaller brushes possible.
 
-An important fact to bear in mind when subtracting is that your carving
-brush will subtract through every brush it comes in contact with (unless
-brushes you don't want to affect have the
-[qer\_nocarve](Qer_nocarve_%28Material_global_keyword%29 "Qer nocarve (Material global keyword)")
-global keyword).
+An important fact to bear in mind when subtracting is that your carving brush will subtract through every brush it comes in contact with (unless brushes you don't want to affect have the [qer\_nocarve](Qer_nocarve_%28Material_global_keyword%29 "Qer nocarve (Material global keyword)") global keyword).
 
 ### Merge
 
-This operation is the equivalent of CSG boolean union and will combine
-two or more brushes into a single one.
+This operation is the equivalent of CSG boolean union and will combine two or more brushes into a single one.
 
 1.  Select all the brushes you want to merge.
-2.  Make sure they share at least one side with each other or are fully
-    contained by one of the brushes
-3.  Click on the Selection \> CSG \> Merge menu item or the fourteenth
-    button in the toolbar.
+2.  Make sure they share at least one side with each other or are fully contained by one of the brushes
+3.  Click on the Selection \> CSG \> Merge menu item or the fourteenth button in the toolbar.
 
-Again, due to the fact that brushes in id Tech 4 engine maps can't ever
-be concave structures, this operation will only function on brushes
-which maintain this property after being merged. If this isn't possible
-the operation is not performed and you'll see the "Cannot add a set of
-brushes with a concave hull." message in the console inspector.
+Again, due to the fact that brushes in id Tech 4 engine maps can't ever be concave structures, this operation will only function on brushes which maintain this property after being merged. If this isn't possible the operation is not performed and you'll see the "Cannot add a set of brushes with a concave hull." message in the console inspector.
 
 ### Hollow
 
-This operation is a specialised CSG subtract. It will carve out a hollow
-volume inside a brush.
+This operation is a specialised CSG subtract. It will carve out a hollow volume inside a brush.
 
 1.  Select the brush you want to make hollow.
-2.  Click on the Selection \> CSG \> Hollow menu item or the fifteenth
-    button in the toolbar.
+2.  Click on the Selection \> CSG \> Hollow menu item or the fifteenth button in the toolbar.
 
-As subtract above, you won't actually get a brush with a hollow volume
-but six thin brushes for a regular cuboid brush (less for a tetrahedron
-brush, a lot more if you use it on a sphere brush). You'll also find
-that the resultant brushes don't line up correctly and you will get
-z-fighting unless you fix them.
+As subtract above, you won't actually get a brush with a hollow volume but six thin brushes for a regular cuboid brush (less for a tetrahedron brush, a lot more if you use it on a sphere brush). You'll also find that the resultant brushes don't line up correctly and you will get z-fighting unless you fix them.
 
 ### Clipper
 
-Although not strictly part of the map editor's CSG operations the
-clipper tool allows you shave off a piece from a brush just like
-subtract or split it in two by creating an invisible plane in the 3D
-world and it'll act as a knife of sorts.
+Although not strictly part of the map editor's CSG operations the clipper tool allows you shave off a piece from a brush just like subtract or split it in two by creating an invisible plane in the 3D world and it'll act as a knife of sorts.
 
 1.  Select the brush (or brushes) you want to shave off a part or split.
-2.  Click on the Selection \> Clipper \> Toggle Clipper menu item or the
-    sixteenth button in the toolbar.
-3.  Left click somewhere to set the first vertex of the clip plane. If
-    you make a mistake hover the mouse of top of it until the cursor
-    changes to a cross and drag it around with the left mouse button.
-4.  When you're satisfied, left click again somewhere else to set the
-    second vertex of the clip plane. Make sure a line passing through
-    both points intersects with the brush in the current view you're in;
-    when this happens part of the selected brush which is usually red
-    will become yellow.
-5.  Optionally, select another viewport and left click again to set a
-    third vertex of the clip plane.
-6.  The yellow part of the brush is the section that will remain when
-    you finish this operation so drag the clip plane's vertices until
-    you're satisfied with the plane. Alternatively you can flip the
-    normal of the of the clip plane to switch which section becomes
-    yellow. You can do this by clicking on Selection \> Clipper \> Flip
-    Clip Orientation.
-7.  Optionally you may want to split the brush instead of shaving a
-    piece off it. If so then click on the Selection \> Clipper \> Split
-    Selection. This will keep both the yellow and remaining red parts of
-    the brush as separate structures.
-8.  If you're not splitting the brush and you're satisfied with the
-    position and orientation of the clip plane then click on
-    Selection \> Clipper \> Clip Selection.
+2.  Click on the Selection \> Clipper \> Toggle Clipper menu item or the sixteenth button in the toolbar.
+3.  Left click somewhere to set the first vertex of the clip plane. If you make a mistake hover the mouse of top of it until the cursor changes to a cross and drag it around with the left mouse button.
+4.  When you're satisfied, left click again somewhere else to set the second vertex of the clip plane. Make sure a line passing through both points intersects with the brush in the current view you're in; when this happens part of the selected brush which is usually red will become yellow.
+5.  Optionally, select another viewport and left click again to set a third vertex of the clip plane.
+6.  The yellow part of the brush is the section that will remain when you finish this operation so drag the clip plane's vertices until you're satisfied with the plane. Alternatively you can flip the normal of the of the clip plane to switch which section becomes yellow. You can do this by clicking on Selection \> Clipper \> Flip Clip Orientation.
+7.  Optionally you may want to split the brush instead of shaving a piece off it. If so then click on the Selection \> Clipper \> Split Selection. This will keep both the yellow and remaining red parts of the brush as separate structures.
+8.  If you're not splitting the brush and you're satisfied with the position and orientation of the clip plane then click on Selection \> Clipper \> Clip Selection.
 
-When you're confortable using the clipper you'll find using the
-following [keyboard shortcuts](DoomEdit_hotkeys "DoomEdit hotkeys") a
-big help:
+When you're confortable using the clipper you'll find using the following [keyboard shortcuts](DoomEdit_hotkeys "DoomEdit hotkeys") a big help:
 
 -   Ctrl + right click to set the clip plane's vertices.
 -   Ctrl + ENTER to flip the plane's orientation.
@@ -115,13 +60,5 @@ big help:
 A word of caution
 -----------------
 
-These CSG operations can save time (especially the clipper) but they can
-also introduce bugs. Sometimes brushes become infinitely large in one
-axis and you'll have to delete them. Other times the newly created
-brushes have vertices with positions that fall between the smallest grid
-scale. As stated above, the hollow operation will generate z-fighting
-and if not careful Subtract can carve unwanted brushes. All these
-problems can be manually fixed or reverted through the undo system or
-map backups; but if you aren't very experienced with CSG you should
-resort to edge and vertex dragging modes.
+These CSG operations can save time (especially the clipper) but they can also introduce bugs. Sometimes brushes become infinitely large in one axis and you'll have to delete them. Other times the newly created brushes have vertices with positions that fall between the smallest grid scale. As stated above, the hollow operation will generate z-fighting and if not careful Subtract can carve unwanted brushes. All these problems can be manually fixed or reverted through the undo system or map backups; but if you aren't very experienced with CSG you should resort to edge and vertex dragging modes.
 

@@ -5,11 +5,7 @@ Syntax
 
     backcolor r, g, b, a
 
-Each of the RGB values define the ammount of color coming from each of
-the Red, Green, and Blue channels, respectively - ranging from 0 or no
-value, to 1 or full value. The *a* (or alpha) value is the ammount or
-opacity the backcolor will have - 0 being totally transparent and 1
-being totally opaque.
+Each of the RGB values define the ammount of color coming from each of the Red, Green, and Blue channels, respectively - ranging from 0 or no value, to 1 or full value. The *a* (or alpha) value is the ammount or opacity the backcolor will have - 0 being totally transparent and 1 being totally opaque.
 
 Default value
 -------------
@@ -22,5 +18,4 @@ Example(s)
     backcolor 0.3, 0.5, 0.2, 1
     backcolor 1, 1, 1, 1 // equivalent to #ffffff in hex syntax
 
-\
 

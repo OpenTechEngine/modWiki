@@ -1,7 +1,4 @@
-Whether or not this item captures external events when visible. If set
-to 1, events won't be fired outside of it - think of this as being a
-popup warning message; if it's visible, the user can't interact with the
-rest of the GUI.
+Whether or not this item captures external events when visible. If set to 1, events won't be fired outside of it - think of this as being a popup warning message; if it's visible, the user can't interact with the rest of the GUI.
 
 The value of this property cannot be changed at runtime.
 
@@ -19,7 +16,5 @@ Example(s)
 ----------
 
     modal 1
-
-\
 
 

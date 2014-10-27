@@ -1,11 +1,7 @@
 Description
 -----------
 
-The **lightcarve** option to
-[dmap](Dmap_%28console_command%29 "Dmap (console command)") causes the
-map compiler to cut polygons at light boundaries (depicted by pink boxes
-in the editor) in order to reduce the number of lights hitting a given
-surface.
+The **lightcarve** option to [dmap](Dmap_%28console_command%29 "Dmap (console command)") causes the map compiler to cut polygons at light boundaries (depicted by pink boxes in the editor) in order to reduce the number of lights hitting a given surface.
 
 Usage
 -----
@@ -17,44 +13,15 @@ At the console type...
 Effective use of lightcarve
 ---------------------------
 
-Use of the lightcarve option allows the map designer to completely
-dispense with manual [carving of brushes](Brush_carving "Brush carving")
-, creating an optimal light count by sacrificing some memory efficiency,
-and increasing frame rates in the process. However, optimisation of a
-different nature is necessary if lightcarve is used to build a level.
+Use of the lightcarve option allows the map designer to completely dispense with manual [carving of brushes](Brush_carving "Brush carving") , creating an optimal light count by sacrificing some memory efficiency, and increasing frame rates in the process. However, optimisation of a different nature is necessary if lightcarve is used to build a level.
 
-When using this technique, remember that every light you place will
-cause a cut, along the boundaries of its volume. Because of this, you
-must place lights effectively to avoid creating unnecessary additional
-triangles and increasing memory usage.
+When using this technique, remember that every light you place will cause a cut, along the boundaries of its volume. Because of this, you must place lights effectively to avoid creating unnecessary additional triangles and increasing memory usage.
 
--   Always make light radii multiples of the grid size (default 8). The
-    default light radius of 300 is not a multiple of 8, and should be
-    changed to 296 or 304. By doing this you ensure that lights can be
-    lined up with each other perfectly.
--   Activate the "Show light volumes" button towards the right-hand side
-    of the main toolbar. This allows you to see all of the light volumes
-    in the level, not just the currently selected light.
--   Two light volumes that stop a small distance short of each other
-    will create extra triangles. Adjust their sizes and positions so
-    that the volumes touch each other *exactly* , so that the cut can be
-    shared between the two.
--   Similarly, a light volume that stops a small distance short of a
-    wall, floor, visportal or other brush is creating wasted triangles.
-    Move it so that its volume shares the cut with the natural level
-    geometry.
--   Do not place a light such that its boundary intersects a piece of
-    very complex brushwork. Position it so that the brushwork is either
-    contained within or outside the light volume.
--   Playtest your map with the
-    [r\_showTris](R_showTris_%28cvar%29 "R showTris (cvar)") CVar,
-    checking for thin lines of very small triangles. If you see one, you
-    probably have a light which is positioned sub-optimally.
--   Not every map is suitable for lightcarve. If the map is extremely
-    detailed, with many small triangles, lightcarve will probably make
-    little difference to frame rates but may increase memory usage
-    unnecessarily. Use both
-    [com\_showFPS](Com_showFPS_%28cvar%29 "Com showFPS (cvar)") and
-    [com\_showMemoryUsage](Com_showMemoryUsage_%28cvar%29 "Com showMemoryUsage (cvar)")
-    CVars to strike the right balance.
+-   Always make light radii multiples of the grid size (default 8). The default light radius of 300 is not a multiple of 8, and should be changed to 296 or 304. By doing this you ensure that lights can be lined up with each other perfectly.
+-   Activate the "Show light volumes" button towards the right-hand side of the main toolbar. This allows you to see all of the light volumes in the level, not just the currently selected light.
+-   Two light volumes that stop a small distance short of each other will create extra triangles. Adjust their sizes and positions so that the volumes touch each other *exactly* , so that the cut can be shared between the two.
+-   Similarly, a light volume that stops a small distance short of a wall, floor, visportal or other brush is creating wasted triangles. Move it so that its volume shares the cut with the natural level geometry.
+-   Do not place a light such that its boundary intersects a piece of very complex brushwork. Position it so that the brushwork is either contained within or outside the light volume.
+-   Playtest your map with the [r\_showTris](R_showTris_%28cvar%29 "R showTris (cvar)") CVar, checking for thin lines of very small triangles. If you see one, you probably have a light which is positioned sub-optimally.
+-   Not every map is suitable for lightcarve. If the map is extremely detailed, with many small triangles, lightcarve will probably make little difference to frame rates but may increase memory usage unnecessarily. Use both [com\_showFPS](Com_showFPS_%28cvar%29 "Com showFPS (cvar)") and [com\_showMemoryUsage](Com_showMemoryUsage_%28cvar%29 "Com showMemoryUsage (cvar)") CVars to strike the right balance.
 

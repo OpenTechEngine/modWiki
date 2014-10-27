@@ -1,167 +1,55 @@
-This page serves as an introduction to the various filetypes relevant to
-modding [id Tech 4](Id_Tech_4 "Id Tech 4") games, and is intended for
-absolute beginners. If you have doubts please post in ths article's
-[Talk](Talk:Beginner%27s_Tutorial_%28Part_1%29_Filetypes "Talk:Beginner's Tutorial (Part 1) Filetypes")
-page.
+This page serves as an introduction to the various filetypes relevant to modding [id Tech 4](Id_Tech_4 "Id Tech 4") games, and is intended for absolute beginners. If you have doubts please post in ths article's [Talk](Talk:Beginner%27s_Tutorial_%28Part_1%29_Filetypes "Talk:Beginner's Tutorial (Part 1) Filetypes") page.
 
 Introduction
 ------------
 
-On computers there are many different filetypes where each of them
-serves a specific purpose. Files are just a collection of data somewhere
-on the hard drive or RAM, and to the computer it doesn't matter what a
-file exactly contains, because this is only relevant to an application
-that tries to load the data and work with it. Nevertheless, to make it
-easier for humans to work with this files, there are some established
-format conventions. The data in a file can be split into binary and
-non-binary data. Binary data means that a single byte may contain a
-character which is in the range of 0-255 while non-binary data is
-limited to a specific range. In order to have human readable text to be
-recognized, some standardizations were created. The one rather common
-and relevant for modders is ASCII.
+On computers there are many different filetypes where each of them serves a specific purpose. Files are just a collection of data somewhere on the hard drive or RAM, and to the computer it doesn't matter what a file exactly contains, because this is only relevant to an application that tries to load the data and work with it. Nevertheless, to make it easier for humans to work with this files, there are some established format conventions. The data in a file can be split into binary and non-binary data. Binary data means that a single byte may contain a character which is in the range of 0-255 while non-binary data is limited to a specific range. In order to have human readable text to be recognized, some standardizations were created. The one rather common and relevant for modders is ASCII.
 
-ASCII data contains a subset of the binary characters, which can be
-printed (for exmaple on a printer), or control some aspect of the
-printing or display (like FormFeed, LineFeed, etc.). The control
-characters are also printable, but don't neccessarily translate to a
-readable character, and perform some function instead. For example, the
-FormFeed character should, when inserted in a text, force the printer to
-go the the next page before continuing printing. The standard set of
-ASCII characters are in the range between 0-127. There are exceptions in
-order to support foreign country characters like the Umlaute for german
-language, which are located above 127. Only characters between 0 and 127
-are really standardized. All others may vary depending on language
-settings. For a reference on the ASCII character set look at this [ASCII
-Table](http://www.lookuptables.com/ "http://www.lookuptables.com/") .
+ASCII data contains a subset of the binary characters, which can be printed (for exmaple on a printer), or control some aspect of the printing or display (like FormFeed, LineFeed, etc.). The control characters are also printable, but don't neccessarily translate to a readable character, and perform some function instead. For example, the FormFeed character should, when inserted in a text, force the printer to go the the next page before continuing printing. The standard set of ASCII characters are in the range between 0-127. There are exceptions in order to support foreign country characters like the Umlaute for german language, which are located above 127. Only characters between 0 and 127 are really standardized. All others may vary depending on language settings. For a reference on the ASCII character set look at this [ASCII Table](http://www.lookuptables.com/ "http://www.lookuptables.com/") .
 
-Commonly we refer to a file as text file when it consists only of
-characters between 1 and 127. 0 is ommited because it is not printable.
-Most editors, like Notepad will consider a file also as valid textfile
-when it contains characters above the 127th character because of the
-above mentioned language settings.
+Commonly we refer to a file as text file when it consists only of characters between 1 and 127. 0 is ommited because it is not printable. Most editors, like Notepad will consider a file also as valid textfile when it contains characters above the 127th character because of the above mentioned language settings.
 
-A binary file is a file that contains all characters without regard of
-language settings. These files can also be loaded into a text editor
-like Notepad. **BUT** you will not see the entire file in it, because a
-texteditor can not print non-printable characters (otherwise they would
-be printable :) ). **IMPORTANT:** If you load a binary file into a text
-editor and try to save it, the save will most likely become corrupted.
-Depending on the editor it may work, but you should not count on it. So
-**NEVER** try to load a binary file into an editor, edit some text in
-there and save it, because the result is most likely unusable.
+A binary file is a file that contains all characters without regard of language settings. These files can also be loaded into a text editor like Notepad. **BUT** you will not see the entire file in it, because a texteditor can not print non-printable characters (otherwise they would be printable :) ). **IMPORTANT:** If you load a binary file into a text editor and try to save it, the save will most likely become corrupted. Depending on the editor it may work, but you should not count on it. So **NEVER** try to load a binary file into an editor, edit some text in there and save it, because the result is most likely unusable.
 
 How to determine if a file is binary or not
 -------------------------------------------
 
-In order to determine what kind of file it is there are two ways to find
-this out: one is to look at the file's extension (which is the part
-after the '.' like "system32.dll" which indicates a DLL file). If you
-use Windows Explorer make sure you set extensions to be visible. The
-method of looking at the extension is pretty unreliable though as you
-can store any kind of data into a file. The extension is just a
-convention so there's nothing stoping you from putting binary data into
-a .TXT file and text data into a .EXE file even if this is confusing and
-can lead to problems. In most cases the convention will be followed, but
-it doesn't have to.
+In order to determine what kind of file it is there are two ways to find this out: one is to look at the file's extension (which is the part after the '.' like "system32.dll" which indicates a DLL file). If you use Windows Explorer make sure you set extensions to be visible. The method of looking at the extension is pretty unreliable though as you can store any kind of data into a file. The extension is just a convention so there's nothing stoping you from putting binary data into a .TXT file and text data into a .EXE file even if this is confusing and can lead to problems. In most cases the convention will be followed, but it doesn't have to.
 
-The second method of determing what kind a file is, is to look at it
-with a hex editor/viewer. If you don't have one, then you can easily
-find one by looking on google for "hex viewer download" or any of the
-major download sites with shareware tools. When you open an arbitrary
-file with such a hex viewer, you will see usually 16 columns with values
-like this:
+The second method of determing what kind a file is, is to look at it with a hex editor/viewer. If you don't have one, then you can easily find one by looking on google for "hex viewer download" or any of the major download sites with shareware tools. When you open an arbitrary file with such a hex viewer, you will see usually 16 columns with values like this:
 
     00 FE 31 ...
 
-From what we learned above, we can now determine wether a file is binary
-or not simply by looking at some of these values. If there are values
-like 0 and FE, as in the above example, you can be pretty sure that it
-is a binary file. If it contains text you will easily see it when
-loading it in an text editor, but this can be missleading. Notepad would
-display all printable characters and silently suppress the other ones.
-But you can still get an estimate if the text is interspersed with
-strange character or strangely formated. the surest way though is to
-look at it with an hexeditor.
+From what we learned above, we can now determine wether a file is binary or not simply by looking at some of these values. If there are values like 0 and FE, as in the above example, you can be pretty sure that it is a binary file. If it contains text you will easily see it when loading it in an text editor, but this can be missleading. Notepad would display all printable characters and silently suppress the other ones. But you can still get an estimate if the text is interspersed with strange character or strangely formated. the surest way though is to look at it with an hexeditor.
 
 How to create these files
 -------------------------
 
-A textfile can be created with any text editor. You can use a simple one
-like Notepad, or a more [sophisticated
-editor](Text_editor "Text editor") . One thing should be observed
-though. There is a small difference in text files between Unix, Windows
-and other operating systems. This is important because Doom 3 runs on
-many platforms. If you use the wrong format, then your mod may or may
-not run on this other system and it would be a shame to limit your
-audience for such a simple reason.
+A textfile can be created with any text editor. You can use a simple one like Notepad, or a more [sophisticated editor](Text_editor "Text editor") . One thing should be observed though. There is a small difference in text files between Unix, Windows and other operating systems. This is important because Doom 3 runs on many platforms. If you use the wrong format, then your mod may or may not run on this other system and it would be a shame to limit your audience for such a simple reason.
 
-The difference is how editors usually treat the end of a line. On Unix
-there is only one character needed to set the end of line which is CR
-(Carriage Return). On Windows many programs use CR+LF (Carriage Return +
-Line Feed) This is inserted by your text editor whenever you press the
-RETURN key and will do it correct for your operating system. Many
-editors have an option which one you want and there are also converters
-to translate between one format and the others. Depending on your
-application it may or may not work correctly with all kind of formats.
+The difference is how editors usually treat the end of a line. On Unix there is only one character needed to set the end of line which is CR (Carriage Return). On Windows many programs use CR+LF (Carriage Return + Line Feed) This is inserted by your text editor whenever you press the RETURN key and will do it correct for your operating system. Many editors have an option which one you want and there are also converters to translate between one format and the others. Depending on your application it may or may not work correctly with all kind of formats.
 
-Binary files, on the other hand, are always created with a special
-application. The content of a binary file is only machine readable and
-therefore the content dependent on the application. For example: All 3D
-[modelling](Modelling "Modelling") applications usually create binary
-files to store your models and material definitions and so on, inside a
-binary file, but this is not neccessarily so. There are a number of 3D
-file formats, which are plain ASCII as well.
+Binary files, on the other hand, are always created with a special application. The content of a binary file is only machine readable and therefore the content dependent on the application. For example: All 3D [modelling](Modelling "Modelling") applications usually create binary files to store your models and material definitions and so on, inside a binary file, but this is not neccessarily so. There are a number of 3D file formats, which are plain ASCII as well.
 
 Which type of file should be used
 ---------------------------------
 
-If your application only supports one kind of file, then the choice is
-made for you. If you have the choice between any format it depends on
-what else you want to do with it. As stated above, a binary file is not
-human readable and is instead supposed to be read directly by the
-computer without the need of translation for the benefit of a human
-reader. Loading times are therefore usually faster with binary files. On
-the other hand, if you use an ASCII format, you can extend it more
-easily and add new stuff to it without causing problems in the code. If
-you need to verify that your application reads and saves correctly it is
-much easier than with a binary file.
+If your application only supports one kind of file, then the choice is made for you. If you have the choice between any format it depends on what else you want to do with it. As stated above, a binary file is not human readable and is instead supposed to be read directly by the computer without the need of translation for the benefit of a human reader. Loading times are therefore usually faster with binary files. On the other hand, if you use an ASCII format, you can extend it more easily and add new stuff to it without causing problems in the code. If you need to verify that your application reads and saves correctly it is much easier than with a binary file.
 
-For example, if you have a brush stored in an ASCII file (like Doom 3
-does with it's . [MAP](MAP_%28file_format%29 "MAP (file format)")
-files), then it contains all the relevant positions for drawing the
-brush in 3D space. But these numbers are just text and the computer can
-not calculate with them, so they have to be converted to real numbers
-before the CPU can start calculating with them.
+For example, if you have a brush stored in an ASCII file (like Doom 3 does with it's . [MAP](MAP_%28file_format%29 "MAP (file format)") files), then it contains all the relevant positions for drawing the brush in 3D space. But these numbers are just text and the computer can not calculate with them, so they have to be converted to real numbers before the CPU can start calculating with them.
 
-For example, when you store three colours in a text file in Red, Green,
-Blue order then it may look like this:
+For example, when you store three colours in a text file in Red, Green, Blue order then it may look like this:
 
     12 212 178
 
-If you store the same information in a binary file and look at it with
-an hex viewer it would look like this:
+If you store the same information in a binary file and look at it with an hex viewer it would look like this:
 
     0C D4 B2
 
-So if you want to do some calculations with these colours, then you need
-to translate it from the text "12" into the value "12" which is "C" in
-hexadecimal number system.
+So if you want to do some calculations with these colours, then you need to translate it from the text "12" into the value "12" which is "C" in hexadecimal number system.
 
 Filetypes used by the engine
 ----------------------------
 
-The Doom 3 engine uses a mixture of binary files and ASCII files.
-Virtually all of the files that contain game asset data are ASCII files.
-This is rather advantagous for modders because they can easily change
-them without an extra application. A variety of files are binary though,
-which is either out of neccessity or because it offers other advantages.
-Most noticiably the game executable "Doom3.exe" is a binary file because
-this can not be something else. Also the "gamex86.dll" is a binary file,
-because it is, similar to the .EXE file, a binary file by nature. Other
-files that are binary are the .
-[PK4](PK4_%28file_format%29 "PK4 (file format)") files which are just
-renamed . [ZIPfiles](ZIP_%28file_format%29 "ZIP (file format)") , .
-[OGG](OGG_%28file_format%29 "OGG (file format)") files which contain
-sound, etc. See the [file formats](File_formats "File formats") for a
-complete listing of formats used in the Doom 3 engine.
+The Doom 3 engine uses a mixture of binary files and ASCII files. Virtually all of the files that contain game asset data are ASCII files. This is rather advantagous for modders because they can easily change them without an extra application. A variety of files are binary though, which is either out of neccessity or because it offers other advantages. Most noticiably the game executable "Doom3.exe" is a binary file because this can not be something else. Also the "gamex86.dll" is a binary file, because it is, similar to the .EXE file, a binary file by nature. Other files that are binary are the . [PK4](PK4_%28file_format%29 "PK4 (file format)") files which are just renamed . [ZIPfiles](ZIP_%28file_format%29 "ZIP (file format)") , . [OGG](OGG_%28file_format%29 "OGG (file format)") files which contain sound, etc. See the [file formats](File_formats "File formats") for a complete listing of formats used in the Doom 3 engine.
 

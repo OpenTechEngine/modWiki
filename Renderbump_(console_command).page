@@ -1,9 +1,7 @@
 Description
 -----------
 
-This command renders a normal map using both a high polygon and a low
-polygon model. The resulting image is intended for use on the low
-polygon model.
+This command renders a normal map using both a high polygon and a low polygon model. The resulting image is intended for use on the low polygon model.
 
 Usage
 -----
@@ -20,21 +18,12 @@ Parameters
 Notes
 -----
 
-This command gathers all of it's parameters from the material shader
-referenced by the low poly model.
+This command gathers all of it's parameters from the material shader referenced by the low poly model.
 
-Specifically, it looks at the
-[renderbump](Renderbump_%28Material_global_keyword%29 "Renderbump (Material global keyword)")
-global keyword in the material shader.
+Specifically, it looks at the [renderbump](Renderbump_%28Material_global_keyword%29 "Renderbump (Material global keyword)") global keyword in the material shader.
 
-Failure to provide the engine with enough free memory to work with can
-result in a **cant malloc x megs** error.
+Failure to provide the engine with enough free memory to work with can result in a **cant malloc x megs** error.
 
-It's recommended that you free up as much system memory (RAM) as
-possible before issuing this command by closing unnecessary programs and
-that you ensure your pagefile (virtual memory) is set to allocate at
-least as much hard drive space as your system memory if not one and a
-half times that amount.
+It's recommended that you free up as much system memory (RAM) as possible before issuing this command by closing unnecessary programs and that you ensure your pagefile (virtual memory) is set to allocate at least as much hard drive space as your system memory if not one and a half times that amount.
 
-\
 

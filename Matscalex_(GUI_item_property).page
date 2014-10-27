@@ -1,7 +1,4 @@
-Horizontal scale to be used by the material (background). This is not
-exactly a material scale value, but rather an item scale compared to the
-material: it means that a value of 2 will make the material use half of
-its original size, filling only half of the item.
+Horizontal scale to be used by the material (background). This is not exactly a material scale value, but rather an item scale compared to the material: it means that a value of 2 will make the material use half of its original size, filling only half of the item.
 
 The value of this property cannot be changed at runtime.
 
@@ -19,7 +16,5 @@ Example(s)
 ----------
 
     matscalex 2
-
-\
 
 

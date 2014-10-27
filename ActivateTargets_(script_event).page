@@ -1,14 +1,12 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Causes this entity to activate all it's targets. Similar to how a
-trigger activates entities.
+Causes this entity to activate all it's targets. Similar to how a trigger activates entities.
 
 Usage
 -----
@@ -18,8 +16,7 @@ Usage
 Parameters
 ----------
 
--   [activator] - The entity that caused the action (usually the
-    player).
+-   [activator] - The entity that caused the action (usually the player).
 
 Examples
 --------
@@ -32,5 +29,4 @@ Notes
 
 This script event does not return any values.
 
-\
 

@@ -1,85 +1,37 @@
-<div id="attention" class="boilerplate metadata"
-style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
+**This page is in urgent need of attention because: *Unfinished sections***
 
-**This page is in urgent need of attention because: *Unfinished
-sections***
+If you disagree with this, please explain why on [its talk page](Talk:Level_scripting "Talk:Level scripting") .
 
-If you disagree with this, please explain why on [its talk
-page](Talk:Level_scripting "Talk:Level scripting") .
+![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake Wars only:
+*ETQW uses a script object for it's map script. See [script object](Script_object "Script object") , [this tutorial](How_to_add_a_construction_objective "How to add a construction objective") , or the splash damage wiki [ [[1]](http://wiki.splashdamage.com/index.php/Barebones_Map_script "http://wiki.splashdamage.com/index.php/Barebones_Map_script") ].*
 
-</div>
-
-<div>
-
-![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake
-Wars only:
-*ETQW uses a script object for it's map script. See [script
-object](Script_object "Script object") , [this
-tutorial](How_to_add_a_construction_objective "How to add a construction objective")
-, or the splash damage wiki [
-[[1]](http://wiki.splashdamage.com/index.php/Barebones_Map_script "http://wiki.splashdamage.com/index.php/Barebones_Map_script")
-].*
-
-</div>
-
-Level scripting refers to scripting that is parsed during a level
-runtime. Level scripting is a very powerful tool used to control various
-entities within a level. If you have played through Doom 3 you will have
-undoubtedly noticed the complex machinery with various moving parts,
-lights, and effects. Machines like this are just one example of level
-scripting. Listing all of the various examples of level scripts would be
-next to impossible as the power of level scripting is virtually endless.
-This section is dedicated to an overview of the syntax and power of
-level scripts.
-
-<div align="left"
-style="float:right; font-size: 17px;background: #FFFFEE; padding: 5px; border: 1px solid #000000; padding-left: 15px; padding-right: 15px; margin-left: 15px; margin-right: 15px; padding-bottom: 15px; width: 400px;">
-
-<div align="right" style="font-size: 10px; text-align=right;">
+Level scripting refers to scripting that is parsed during a level runtime. Level scripting is a very powerful tool used to control various entities within a level. If you have played through Doom 3 you will have undoubtedly noticed the complex machinery with various moving parts, lights, and effects. Machines like this are just one example of level scripting. Listing all of the various examples of level scripts would be next to impossible as the power of level scripting is virtually endless. This section is dedicated to an overview of the syntax and power of level scripts.
 
 [What's this?](Help:Reference_box "Help:Reference box")
 
-</div>
-
-<div>
-
 **Scripting quick reference**
-
-</div>
 
 ------------------------------------------------------------------------
 
 <span style="font-size: 14px"> </span>
 -   [Script events](Script_events "Script events")
 
-</div>
-
 Creating the .SCRIPT File
 -------------------------
 
-It is important to first understand where the engine looks for the
-script. Level scripts should be placed in the map folder where the map
-is. The script file must be named exactly the same as the map file with
-a .SCRIPT file format instead of .MAP.
+It is important to first understand where the engine looks for the script. Level scripts should be placed in the map folder where the map is. The script file must be named exactly the same as the map file with a .SCRIPT file format instead of .MAP.
 
 -   Locate the map - it will most likely reside in Doom3\\base\\maps\\
 -   Find yourmap.map (where "yourmap" is the actual name of the map)
--   Create a file named yourmap.script (where "yourmap" is the actual
-    name of the map)
--   Edit this .script file with your favorite script editor to begin
-    level scripting.
+-   Create a file named yourmap.script (where "yourmap" is the actual name of the map)
+-   Edit this .script file with your favorite script editor to begin level scripting.
 
 The Basics
 ----------
 
 ### General Syntax
 
-Level scripting syntax follows a similar syntax to that of C or
-JavaScript language. Refer to the [SCRIPT file
-format](SCRIPT_%28file_format%29 "SCRIPT (file format)") article for a
-basic overview of syntax and the
-[Scripting\_basics](Scripting_basics "Scripting basics") article for
-beginning scripting tutorials.
+Level scripting syntax follows a similar syntax to that of C or JavaScript language. Refer to the [SCRIPT file format](SCRIPT_%28file_format%29 "SCRIPT (file format)") article for a basic overview of syntax and the [Scripting\_basics](Scripting_basics "Scripting basics") article for beginning scripting tutorials.
 
 ### Example
 
@@ -94,64 +46,37 @@ Here is an example of a simple level script:
         setup_objects();
     }
 
-\
- With a basic understanding of scripting syntax, the above script breaks
-down as follows:
+ With a basic understanding of scripting syntax, the above script breaks down as follows:
 
--   We are first declaring a new function called setup\_objects. The
-    void indicates the type of variable the function will return -- in
-    this case nothing.
--   We are referencing the entity called "fanblade" and telling it to
-    bind itself to an entity called "rotator".
--   We then move onto the main function, which will tell the function
-    setup\_objects to run on level load.
+-   We are first declaring a new function called setup\_objects. The void indicates the type of variable the function will return -- in this case nothing.
+-   We are referencing the entity called "fanblade" and telling it to bind itself to an entity called "rotator".
+-   We then move onto the main function, which will tell the function setup\_objects to run on level load.
 
-\
  It is important to note a few things in level scripting:
 
 1.  The main() function is always called when a level loads.
-2.  You must declare any functions and/or global variables before you
-    attempt to call them with main().
+2.  You must declare any functions and/or global variables before you attempt to call them with main().
 
 ### A Note on Variables and Functions
 
-Level scripts work with variables and functions as described in the
-[SCRIPT\_(file\_format)](SCRIPT_%28file_format%29 "SCRIPT (file format)")
-article and the [Scripting\_basics](Scripting_basics "Scripting basics")
-article.
-
-\
+Level scripts work with variables and functions as described in the [SCRIPT\_(file\_format)](SCRIPT_%28file_format%29 "SCRIPT (file format)") article and the [Scripting\_basics](Scripting_basics "Scripting basics") article.
 
 How to Interact With Level Scripts
 ----------------------------------
 
-Level scripts are nothing unless we can interact with them as a player
-in the level. There are 3 primary ways to accomplish level-to-script
-interaction.
+Level scripts are nothing unless we can interact with them as a player in the level. There are 3 primary ways to accomplish level-to-script interaction.
 
 ### Triggers in the Level
 
-Every trigger (apart from trigger\_fade and trigger\_hurt) has a built
-in key/val pair for calling script functions. The key/val is -
-call:script\_function.
+Every trigger (apart from trigger\_fade and trigger\_hurt) has a built in key/val pair for calling script functions. The key/val is - call:script\_function.
 
-In the editor, double click on the call keyword within the entity dialog
-and fill in the name of the script function you wish to call. When the
-trigger is triggered the it will call that function. The function must
-be declared in the .script file before attempting this.
+In the editor, double click on the call keyword within the entity dialog and fill in the name of the script function you wish to call. When the trigger is triggered the it will call that function. The function must be declared in the .script file before attempting this.
 
-Note: You cannot pass arguments to a script function using a trigger.
-This is an unfortunate limitation - see [hacking around
-limitations](Level_scripting#hacking_around_limitations) for more
-details.
+Note: You cannot pass arguments to a script function using a trigger. This is an unfortunate limitation - see [hacking around limitations](Level_scripting#hacking_around_limitations) for more details.
 
 ### GUIs
 
-In-game GUIs can function very much like triggers placed in the map. To
-call a script from a GUI first you must attach a GUI to a model or
-entity that supports a GUI display. Depending upon how the GUI was
-built, you must use a gui\_parm with the name of a script function to
-call. Most GUIs will list which gui\_parm is attached to which button.
+In-game GUIs can function very much like triggers placed in the map. To call a script from a GUI first you must attach a GUI to a model or entity that supports a GUI display. Depending upon how the GUI was built, you must use a gui\_parm with the name of a script function to call. Most GUIs will list which gui\_parm is attached to which button.
 
 #### Example
 
@@ -159,29 +84,17 @@ In the Doom 3 editor reference the gui guis/monorail/lower\_klaxxon.gui.
 
 Notice the comment on the gui:"runs the script in gui\_parm6"
 
-This means that on the entity that contains the GUI if you input a
-key/val of gui\_parm6:myscript, the myscript function will be called
-whenever the GUI is clicked.
+This means that on the entity that contains the GUI if you input a key/val of gui\_parm6:myscript, the myscript function will be called whenever the GUI is clicked.
 
 #### Notes
 
-GUIs are a different animal when it comes to scripting. GUI Scripting is
-beyond the scope of this article. While different buttons within a GUI
-can be made to call specific script functions, it is heavily dependent
-upon the type of GUI in use. You must refer to comments associated with
-a GUI to understand which gui\_parms will call scripts. Later on it may
-be necessary to write a custom GUI to handle specific needs within a
-map. While GUIs come in all designs and functions the basic principle
-that a gui\_parm must be used to call a script function remains true.
+GUIs are a different animal when it comes to scripting. GUI Scripting is beyond the scope of this article. While different buttons within a GUI can be made to call specific script functions, it is heavily dependent upon the type of GUI in use. You must refer to comments associated with a GUI to understand which gui\_parms will call scripts. Later on it may be necessary to write a custom GUI to handle specific needs within a map. While GUIs come in all designs and functions the basic principle that a gui\_parm must be used to call a script function remains true.
 
-With that said, note that every GUI will be different and as such this
-article cannot provide enough examples for each GUI, the level creator
-must use his judgment and will to determine how each GUI will interact.
+With that said, note that every GUI will be different and as such this article cannot provide enough examples for each GUI, the level creator must use his judgment and will to determine how each GUI will interact.
 
 ### The main() Function
 
-Lastly, as stated in the example, the main function may be used to call
-functions upon map load.
+Lastly, as stated in the example, the main function may be used to call functions upon map load.
 
 Extended Examples
 -----------------
@@ -203,14 +116,5 @@ follows along the lines of:
         sys.println("Area: " + area);
     }
 
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Level_scripting "http://www.modwiki.net/w/index.php?title=Level_scripting&action=edit") </span> .*
 
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Level_scripting "http://www.modwiki.net/w/index.php?title=Level_scripting&action=edit")
-</span> .*
-
-</div>

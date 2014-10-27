@@ -1,46 +1,25 @@
-A script thread is the line of execution managed by the [game
-code](Coding#Game_code "Coding") by the [game
-class](Game_class "Game class") idThread.
+A script thread is the line of execution managed by the [game code](Coding#Game_code "Coding") by the [game class](Game_class "Game class") idThread.
 
-It is typically created for a script function call from game code and
-deleted when that function exits.
+It is typically created for a script function call from game code and deleted when that function exits.
 
-A new thread is created when calling a function from within script via
-an entity reference to execute that function.
+A new thread is created when calling a function from within script via an entity reference to execute that function.
 
-When an entity spawns with a script object set it will create a thread
-to execute the init() function.
+When an entity spawns with a script object set it will create a thread to execute the init() function.
 
-[spawn classes](Spawn_class "Spawn class") with
-[FSMs](Finite_State_Machine_%28scripting%29 "Finite State Machine (scripting)")
-manage a thread for the current set state, running it each frame.
+[spawn classes](Spawn_class "Spawn class") with [FSMs](Finite_State_Machine_%28scripting%29 "Finite State Machine (scripting)") manage a thread for the current set state, running it each frame.
 
-The **sys** identifier is used within a script to call events defined on
-the [game class](Game_class "Game class") idThread, they are called on
-the idThread instance that is executing that part of the script. See
-System Events for respective game: [Script
-events](Script_events "Script events") .
+The **sys** identifier is used within a script to call events defined on the [game class](Game_class "Game class") idThread, they are called on the idThread instance that is executing that part of the script. See System Events for respective game: [Script events](Script_events "Script events") .
 
-Threads can be created from within a script itself by using the
-**thread** identifier. There are also several events for managing
-threads from within script. See [Scripting
-basics\#Threads](Scripting_basics#Threads "Scripting basics") .
+Threads can be created from within a script itself by using the **thread** identifier. There are also several events for managing threads from within script. See [Scripting basics\#Threads](Scripting_basics#Threads "Scripting basics") .
 
 Wait
 ----
 
-Since threads are part of normal [game](Coding#Game_code "Coding")
-execution, script authors using threads (including [script
-objects](Script_object "Script object") ) to set up run time behavior
-must take note of letting threads execute for a long time without
-letting threads wait. Essentially letting the overall game execution
-continue.
+Since threads are part of normal [game](Coding#Game_code "Coding") execution, script authors using threads (including [script objects](Script_object "Script object") ) to set up run time behavior must take note of letting threads execute for a long time without letting threads wait. Essentially letting the overall game execution continue.
 
 Waiting suspends execution on the thread until the specified time.
 
-While there is infinite loop protection, and a limit on events per
-frame, there may be other cases it won't catch and run time behavior
-should be planned accordingly.
+While there is infinite loop protection, and a limit on events per frame, there may be other cases it won't catch and run time behavior should be planned accordingly.
 
 ### Related Script Events
 

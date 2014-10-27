@@ -1,139 +1,78 @@
-<div id="stub" class="boilerplate metadata">
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Folder_structure_%28Prey%29 "http://www.modwiki.net/w/index.php?title=Folder_structure_%28Prey%29&action=edit") </span> .*
 
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Folder_structure_%28Prey%29 "http://www.modwiki.net/w/index.php?title=Folder_structure_%28Prey%29&action=edit")
-</span> .*
-
-</div>
-
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/d/d4/Preysquare_bg.png) The information on this page is
-specific to [Prey](Prey "Prey") .
-
-</div>
+![](/images/d/d4/Preysquare_bg.png) The information on this page is specific to [Prey](Prey "Prey") .
 
 ------------------------------------------------------------------------
 
-This is the folder structure of Prey, version 0.2.95 (demo). It should
-be noted that these folders are not present in the base folder itself.
-Instead, these folders and the assets contained therein are stored in
-[PK4 archives](PK4_%28file_format%29 "PK4 (file format)") .
+This is the folder structure of Prey, version 0.2.95 (demo). It should be noted that these folders are not present in the base folder itself. Instead, these folders and the assets contained therein are stored in [PK4 archives](PK4_%28file_format%29 "PK4 (file format)") .
 
-+--------------------------------------+--------------------------------------+
-| <div                                 | /base                                |
-| style="padding: .4em .9em .9em;">    | -----                                |
-|                                      |                                      |
-| ### Folder structure:                | /base/af                             |
-|                                      | --------                             |
-| <div                                 |                                      |
-| style="text-align: left; margin-left | /base/beams                          |
-| : 10px;">                            | -----------                          |
-|                                      |                                      |
-| `         `                          | /base/dds                            |
-| -   /                                | ---------                            |
-|     [base](Folder_structure_%28Prey% |                                      |
-| 29#.2Fbase "Folder structure (Prey)" | /base/ddsnv                          |
-| )                                    | -----------                          |
-|     -   /                            |                                      |
-|         [af](Folder_structure_%28Pre | /base/def                            |
-| y%29#.2Fbase.2Faf "Folder structure  | ---------                            |
-| (Prey)")                             |                                      |
-|     -   /                            | /base/efxs                           |
-|         [beams](Folder_structure_%28 | ----------                           |
-| Prey%29#.2Fbase.2Fbeams "Folder stru |                                      |
-| cture (Prey)")                       | /base/env                            |
-|     -   /                            | ---------                            |
-|         [dds](Folder_structure_%28Pr |                                      |
-| ey%29#.2Fbase.2Fdds "Folder structur | /base/fonts                          |
-| e (Prey)")                           | -----------                          |
-|     -   /                            |                                      |
-|         [ddsnv](Folder_structure_%28 | /base/fx                             |
-| Prey%29#.2Fbase.2Fddsnv "Folder stru | --------                             |
-| cture (Prey)")                       |                                      |
-|     -   /                            | /base/glprogs                        |
-|         [def](Folder_structure_%28Pr | -------------                        |
-| ey%29#.2Fbase.2Fdef "Folder structur |                                      |
-| e (Prey)")                           | /base/guis                           |
-|     -   /                            | ----------                           |
-|         [efxs](Folder_structure_%28P |                                      |
-| rey%29#.2Fbase.2Fefxs "Folder struct | /base/lights                         |
-| ure (Prey)")                         | ------------                         |
-|     -   /                            |                                      |
-|         [env](Folder_structure_%28Pr | /base/maps                           |
-| ey%29#.2Fbase.2Fenv "Folder structur | ----------                           |
-| e (Prey)")                           |                                      |
-|     -   /                            | /base/materials                      |
-|         [fonts](Folder_structure_%28 | ---------------                      |
-| Prey%29#.2Fbase.2Ffonts "Folder stru |                                      |
-| cture (Prey)")                       | /base/models                         |
-|     -   /                            | ------------                         |
-|         [fx](Folder_structure_%28Pre |                                      |
-| y%29#.2Fbase.2Ffx.2F "Folder structu | /base/particles                      |
-| re (Prey)")                          | ---------------                      |
-|     -   /                            |                                      |
-|         [glprogs](Folder_structure_% | /base/ppm                            |
-| 28Prey%29#.2Fbase.2Fglprogs "Folder  | ---------                            |
-| structure (Prey)")                   |                                      |
-|     -   /                            | /base/script                         |
-|         [guis](Folder_structure_%28P | ------------                         |
-| rey%29#.2Fbase.2Fguis "Folder struct |                                      |
-| ure (Prey)")                         | /base/skins                          |
-|     -   /                            | -----------                          |
-|         [lights](Folder_structure_%2 |                                      |
-| 8Prey%29#.2Fbase.2Flights "Folder st | /base/sound                          |
-| ructure (Prey)")                     | -----------                          |
-|     -   /                            |                                      |
-|         [maps](Folder_structure_%28P | /base/strings                        |
-| rey%29#.2Fbase.2Fmaps "Folder struct | -------------                        |
-| ure (Prey)")                         |                                      |
-|     -   /                            | /base/textures                       |
-|         [materials](Folder_structure | --------------                       |
-| _%28Prey%29#.2Fbase.2Fmaterials "Fol |                                      |
-| der structure (Prey)")               | /base/video                          |
-|     -   /                            | -----------                          |
-|         [models](Folder_structure_%2 |                                      |
-| 8Prey%29#.2Fbase.2Fmodels "Folder st |                                      |
-| ructure (Prey)")                     |                                      |
-|     -   /                            |                                      |
-|         [particles](Folder_structure |                                      |
-| _%28Prey%29#.2Fbase.2Fparticles "Fol |                                      |
-| der structure (Prey)")               |                                      |
-|     -   /                            |                                      |
-|         [ppm](Folder_structure_%28Pr |                                      |
-| ey%29#.2Fbase.2Fppm "Folder structur |                                      |
-| e (Prey)")                           |                                      |
-|     -   /                            |                                      |
-|         [script](Folder_structure_%2 |                                      |
-| 8Prey%29#.2Fbase.2Fscript "Folder st |                                      |
-| ructure (Prey)")                     |                                      |
-|     -   /                            |                                      |
-|         [skins](Folder_structure_%28 |                                      |
-| Prey%29#.2Fbase.2Fskins "Folder stru |                                      |
-| cture (Prey)")                       |                                      |
-|     -   /                            |                                      |
-|         [sound](Folder_structure_%28 |                                      |
-| Prey%29#.2Fbase.2Fsound "Folder stru |                                      |
-| cture (Prey)")                       |                                      |
-|     -   /                            |                                      |
-|         [strings](Folder_structure_% |                                      |
-| 28Prey%29#.2Fbase.2Fstrings "Folder  |                                      |
-| structure (Prey)")                   |                                      |
-|     -   /                            |                                      |
-|         [textures](Folder_structure_ |                                      |
-| %28Prey%29#.2Fbase.2Ftextures "Folde |                                      |
-| r structure (Prey)")                 |                                      |
-|     -   /                            |                                      |
-|         [video](Folder_structure_%28 |                                      |
-| Prey%29#.2Fbase.2Fvideo "Folder stru |                                      |
-| cture (Prey)")                       |                                      |
-|                                      |                                      |
-| </div>                               |                                      |
-|                                      |                                      |
-| </div>                               |                                      |
-+--------------------------------------+--------------------------------------+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><div style="padding: .4em .9em .9em;">
+<h3>Folder structure:</h3>
+<div style="text-align: left; margin-left: 10px;">
+<code>         </code>
+<ul>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase" title="Folder structure (Prey)">base</a>
+<ul>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Faf" title="Folder structure (Prey)">af</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Fbeams" title="Folder structure (Prey)">beams</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Fdds" title="Folder structure (Prey)">dds</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Fddsnv" title="Folder structure (Prey)">ddsnv</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Fdef" title="Folder structure (Prey)">def</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Fefxs" title="Folder structure (Prey)">efxs</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Fenv" title="Folder structure (Prey)">env</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Ffonts" title="Folder structure (Prey)">fonts</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Ffx.2F" title="Folder structure (Prey)">fx</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Fglprogs" title="Folder structure (Prey)">glprogs</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Fguis" title="Folder structure (Prey)">guis</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Flights" title="Folder structure (Prey)">lights</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Fmaps" title="Folder structure (Prey)">maps</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Fmaterials" title="Folder structure (Prey)">materials</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Fmodels" title="Folder structure (Prey)">models</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Fparticles" title="Folder structure (Prey)">particles</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Fppm" title="Folder structure (Prey)">ppm</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Fscript" title="Folder structure (Prey)">script</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Fskins" title="Folder structure (Prey)">skins</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Fsound" title="Folder structure (Prey)">sound</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Fstrings" title="Folder structure (Prey)">strings</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Ftextures" title="Folder structure (Prey)">textures</a></li>
+<li>/ <a href="Folder_structure_%28Prey%29#.2Fbase.2Fvideo" title="Folder structure (Prey)">video</a></li>
+</ul></li>
+</ul>
+</div>
+</div></td>
+<td align="left"><h2>/base</h2>
+<h2>/base/af</h2>
+<h2>/base/beams</h2>
+<h2>/base/dds</h2>
+<h2>/base/ddsnv</h2>
+<h2>/base/def</h2>
+<h2>/base/efxs</h2>
+<h2>/base/env</h2>
+<h2>/base/fonts</h2>
+<h2>/base/fx</h2>
+<h2>/base/glprogs</h2>
+<h2>/base/guis</h2>
+<h2>/base/lights</h2>
+<h2>/base/maps</h2>
+<h2>/base/materials</h2>
+<h2>/base/models</h2>
+<h2>/base/particles</h2>
+<h2>/base/ppm</h2>
+<h2>/base/script</h2>
+<h2>/base/skins</h2>
+<h2>/base/sound</h2>
+<h2>/base/strings</h2>
+<h2>/base/textures</h2>
+<h2>/base/video</h2></td>
+</tr>
+</tbody>
+</table>
 
 

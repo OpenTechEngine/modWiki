@@ -1,6 +1,4 @@
-Text to be displayed inside the item. This can be a simple text string
-or a reference to a string from a lang file (in the "\#str\_nnnnn"
-format).
+Text to be displayed inside the item. This can be a simple text string or a reference to a string from a lang file (in the "\#str\_nnnnn" format).
 
 Syntax
 ------
@@ -18,5 +16,4 @@ Example(s)
     text "Hello world."
     text "#str_01942"
 
-\
 

@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Animate_hider_%28entity%29 "http://www.modwiki.net/w/index.php?title=Animate_hider_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Animate_hider_%28entity%29 "http://www.modwiki.net/w/index.php?title=Animate_hider_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Animate_hider_%28entity%29 "http://www.modwiki.net/w/index.php?title=Animate_hider_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Animate_hider_%28entity%29 "http://www.modwiki.net/w/index.php?title=Animate_hider_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -28,68 +10,67 @@ Object that changes animation when triggered.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                  DESCRIPTION
-  -------------------- -----------------------------------------------------------------------------------
-  accepts\_wounds      Description not available.
-  accurateguitrace     Description not available.
-  alignToJoint         Description not available.
-  angle                Description not available.
-  anim                 anim to play when triggered.
-  applyDamageEffects   Description not available.
-  bind                 Description not available.
-  bindOrientated       Description not available.
-  bindToBody           Description not available.
-  bindToJoint          Description not available.
-  bindanim             Description not available.
-  blend\_in            how long to transition from the 'defaultAnim' to the triggered 'anim'
-  cameraTarget         Description not available.
-  cinematic            Description not available.
-  classname            Description not available.
-  clipmodel            Description not available.
-  cone                 Description not available.
-  cycle                how many times to play the animation after being triggered (use -1 for infinite).
-  cylinder             Description not available.
-  dispose\_delay       Description not available.
-  editor\_bool XXXX    Description not available.
-  editor\_color        Description not available.
-  editor\_maxs         Description not available.
-  editor\_mins         Description not available.
-  editor\_usage        Object that changes animation when triggered.
-  editor\_var XXXX     Description not available.
-  gravity              Description not available.
-  guiTarget            Description not available.
-  health               Description not available.
-  hide                 Description not available.
-  ignoreGravityZones   Description not available.
-  inherit              Description not available.
-  matter               Description not available.
-  maxs                 Description not available.
-  mins                 Description not available.
-  model                Description not available.
-  moveToJoint          Description not available.
-  name                 Description not available.
-  networkSync          Description not available.
-  neverDormant         Description not available.
-  noJawFlap            Description not available.
-  noPortal             Description not available.
-  noclipmodel          Description not available.
-  offset\_aim          Description not available.
-  origin               Description not available.
-  pose\_frame          which frame to use when spawning with a static pose.
-  push\_cosine         Description not available.
-  pushes               Description not available.
-  resetDefaultAnim     Description not available.
-  rotation             Description not available.
-  scriptobject         Description not available.
-  size                 Description not available.
-  solidForTeam         Description not available.
-  sound\_bone          Bone to play sounds from.
-  spawnclass           Description not available.
-  target               all entities with a matching name will be used after anim plays.
-  wait                 how long to wait before auto activating. -1 means only activate when triggered.
+| KEY                | DESCRIPTION                                                                       |
+|--------------------|-----------------------------------------------------------------------------------|
+| accepts\_wounds    | Description not available.                                                        |
+| accurateguitrace   | Description not available.                                                        |
+| alignToJoint       | Description not available.                                                        |
+| angle              | Description not available.                                                        |
+| anim               | anim to play when triggered.                                                      |
+| applyDamageEffects | Description not available.                                                        |
+| bind               | Description not available.                                                        |
+| bindOrientated     | Description not available.                                                        |
+| bindToBody         | Description not available.                                                        |
+| bindToJoint        | Description not available.                                                        |
+| bindanim           | Description not available.                                                        |
+| blend\_in          | how long to transition from the 'defaultAnim' to the triggered 'anim'             |
+| cameraTarget       | Description not available.                                                        |
+| cinematic          | Description not available.                                                        |
+| classname          | Description not available.                                                        |
+| clipmodel          | Description not available.                                                        |
+| cone               | Description not available.                                                        |
+| cycle              | how many times to play the animation after being triggered (use -1 for infinite). |
+| cylinder           | Description not available.                                                        |
+| dispose\_delay     | Description not available.                                                        |
+| editor\_bool XXXX  | Description not available.                                                        |
+| editor\_color      | Description not available.                                                        |
+| editor\_maxs       | Description not available.                                                        |
+| editor\_mins       | Description not available.                                                        |
+| editor\_usage      | Object that changes animation when triggered.                                     |
+| editor\_var XXXX   | Description not available.                                                        |
+| gravity            | Description not available.                                                        |
+| guiTarget          | Description not available.                                                        |
+| health             | Description not available.                                                        |
+| hide               | Description not available.                                                        |
+| ignoreGravityZones | Description not available.                                                        |
+| inherit            | Description not available.                                                        |
+| matter             | Description not available.                                                        |
+| maxs               | Description not available.                                                        |
+| mins               | Description not available.                                                        |
+| model              | Description not available.                                                        |
+| moveToJoint        | Description not available.                                                        |
+| name               | Description not available.                                                        |
+| networkSync        | Description not available.                                                        |
+| neverDormant       | Description not available.                                                        |
+| noJawFlap          | Description not available.                                                        |
+| noPortal           | Description not available.                                                        |
+| noclipmodel        | Description not available.                                                        |
+| offset\_aim        | Description not available.                                                        |
+| origin             | Description not available.                                                        |
+| pose\_frame        | which frame to use when spawning with a static pose.                              |
+| push\_cosine       | Description not available.                                                        |
+| pushes             | Description not available.                                                        |
+| resetDefaultAnim   | Description not available.                                                        |
+| rotation           | Description not available.                                                        |
+| scriptobject       | Description not available.                                                        |
+| size               | Description not available.                                                        |
+| solidForTeam       | Description not available.                                                        |
+| sound\_bone        | Bone to play sounds from.                                                         |
+| spawnclass         | Description not available.                                                        |
+| target             | all entities with a matching name will be used after anim plays.                  |
+| wait               | how long to wait before auto activating. -1 means only activate when triggered.   |
 
 Inheritance
 -----------

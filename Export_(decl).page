@@ -1,6 +1,4 @@
-Export declarations defining a group of files and the arguments to use
-during conversion from Maya Binary to MD5 format. Essentially you are
-defining a batch of files and parameters to process.
+Export declarations defining a group of files and the arguments to use during conversion from Maya Binary to MD5 format. Essentially you are defining a batch of files and parameters to process.
 
 Syntax
 ------
@@ -14,289 +12,266 @@ Syntax
       ...
     }
 
-Export declarations begin with a header which consists of the keyword
-"export" followed by the name of the batch. This name can referenced
-when using the exportModels command to restrict the conversion process
-to the specified files.
+Export declarations begin with a header which consists of the keyword "export" followed by the name of the batch. This name can referenced when using the exportModels command to restrict the conversion process to the specified files.
 
-The header is followed by the body of the declaration which is enclosed
-in curly brackets.
+The header is followed by the body of the declaration which is enclosed in curly brackets.
 
 The body is composed of a series of keywords and their parameters.
 
 Keywords
 --------
 
- options 
-:   Defines the default options that will be used for all future export
-    actions. Each iteration of this keyword overides the effects of
-    previous instances.
-:   options [parms]
+ options   
+Defines the default options that will be used for all future export actions. Each iteration of this keyword overides the effects of previous instances.
 
-    -   [parms] - a single parameter or a list of the parameters from
-        the following section.
+    options [parms]
+
+-   [parms] - a single parameter or a list of the parameters from the following section.
 
 <!-- -->
 
- addoptions 
-:   Appends a default option to the current set of default options. This
-    keyword functions in the same way as the options keyword with the
-    exception that it does not override any settings that are not
-    explictly redefined.
-:   addoptions [parms]
+ addoptions   
+Appends a default option to the current set of default options. This keyword functions in the same way as the options keyword with the exception that it does not override any settings that are not explictly redefined.
 
-    -   [parms] - a single parameter or a list of the parameters from
-        the following section.
+    addoptions [parms]
+
+-   [parms] - a single parameter or a list of the parameters from the following section.
 
 <!-- -->
 
- mesh 
-:   Exports an MD5mesh from a .mb file. Any options specified here will
-    be appended to the previously specified options.
-:   mesh [filename] [parms]
+ mesh   
+Exports an MD5mesh from a .mb file. Any options specified here will be appended to the previously specified options.
 
-    -   [filename] - The name of the maya binary file.
-    -   [parms] - a single parameter or a list of the parameters to
-        apply from the following section.
+    mesh [filename] [parms]
 
-<!-- -->
-
- anim 
-:   Exports an MD5anim from a .mb file. Any options specified here will
-    be appended to the previously specified options.
-:   anim [filename] [parms]
-
-    -   [filename] - The name of the maya binary file.
-    -   [parms] - a single parameter or a list of the parameters to
-        apply from the following section.
+-   [filename] - The name of the maya binary file.
+-   [parms] - a single parameter or a list of the parameters to apply from the following section.
 
 <!-- -->
 
- camera 
-:   Exports an MD5camera from a .mb file. Any options specified here
-    will be appended to the previously specified options.
-:   camera [filename] [parms]
+ anim   
+Exports an MD5anim from a .mb file. Any options specified here will be appended to the previously specified options.
 
-    -   [filename] - The name of the maya binary file.
-    -   [parms] - a single parameter or a list of the parameters to
-        apply from the following section.
+    anim [filename] [parms]
+
+-   [filename] - The name of the maya binary file.
+-   [parms] - a single parameter or a list of the parameters to apply from the following section.
+
+<!-- -->
+
+ camera   
+Exports an MD5camera from a .mb file. Any options specified here will be appended to the previously specified options.
+
+    camera [filename] [parms]
+
+-   [filename] - The name of the maya binary file.
+-   [parms] - a single parameter or a list of the parameters to apply from the following section.
 
 Parameters
 ----------
 
- -force 
-:   Ignored
+ -force   
+Ignored
 
 <!-- -->
 
- -game 
-:   Specify the mod name, which is where the relative paths are defined
-    from. This should get set automatically in 1.2
-:   -game [name]
+ -game   
+Specify the mod name, which is where the relative paths are defined from. This should get set automatically in 1.2
 
-    -   [name] - The name of the working mod folder
+    -game [name]
 
-<!-- -->
-
- -rename 
-:   Rename a joint
-:   -rename [joint name] [new name]
-
-    -   [joint name] - The name of the joint in Maya.
-    -   [new name] - The name you would like to assign this joint in the
-        MD5mesh.
+-   [name] - The name of the working mod folder
 
 <!-- -->
 
- -prefix 
-:   A string used to filter a scene so that only objects with a matching
-    prefix are exported.
-:   -prefix [prefix]
+ -rename   
+Rename a joint
 
-    -   [prefix] - The string to match objects against.
+    -rename [joint name] [new name]
 
-<!-- -->
-
- -parent 
-:   Reparent a joint
-:   -parent [joint name] [new parent]
-
-    -   [joint name] - The name of the joint to parent.
-    -   [new parent] - The name of the joint to parent to.
+-   [joint name] - The name of the joint in Maya.
+-   [new name] - The name you would like to assign this joint in the MD5mesh.
 
 <!-- -->
 
- -sourcedir 
-:   Defines the source directory where the exporter will search for
-    files.
-:   -sourcedir [directory]
+ -prefix   
+A string used to filter a scene so that only objects with a matching prefix are exported.
 
-    -   [directory] - The directory to be used
+    -prefix [prefix]
 
-<!-- -->
-
- -destdir 
-:   Defines the destination directory where the exporter will save
-    files.
-:   -destdir [directory]
-
-    -   [directory] - The directory to be used
+-   [prefix] - The string to match objects against.
 
 <!-- -->
 
- -dest 
-:   Defines the name to assign to the file currently being exported
-:   -dest [filename]
+ -parent   
+Reparent a joint
 
-    -   [filename] - The filename to be used
+    -parent [joint name] [new parent]
 
-<!-- -->
-
- -range 
-:   The range of frames to export from the timeline
-:   -range [start frame] [end frame]
-
-    -   [start frame] - The starting frame
-    -   [end frame] - The ending frame
+-   [joint name] - The name of the joint to parent.
+-   [new parent] - The name of the joint to parent to.
 
 <!-- -->
 
- -cycleStart 
-:   Shift the cycle to start on a different frame. For example, say
-    frame 1 has the left foot forward and frame 10 has the right foot
-    forward. If you would like your cycle to start with right foot
-    forward you would use "-cycleStart 10" and it will shift the cycle
-    forward 10 frames.
-:   -cycleStart [shift]
+ -sourcedir   
+Defines the source directory where the exporter will search for files.
 
-    -   [shift] - The number of frames to shift the sequence
+    -sourcedir [directory]
+
+-   [directory] - The directory to be used
 
 <!-- -->
 
- -scale 
-:   Scale your character up or down from the origin during export. For
-    example, "-scale 2" will double the size of the character.
-:   -scale [scalar]
+ -destdir   
+Defines the destination directory where the exporter will save files.
 
-    -   [scalar] - The scale multiplier (similar to percent where 1 =
-        100%, 2 = 200%, 0.5 = 50%)
+    -destdir [directory]
 
-<!-- -->
-
- -align 
-:   Will align your animation to a certain bone.
-:   -align [joint name]
-
-    -   [joint name] - The name of the joint to align to
+-   [directory] - The directory to be used
 
 <!-- -->
 
- -rotate 
-:   Changes the orientation of your animation along the Z axis
-    (up/down).
-:   -rotate [yaw]
+ -dest   
+Defines the name to assign to the file currently being exported
 
-    -   [yaw] - The angle to rotate the animation in degrees
+    -dest [filename]
 
-<!-- -->
-
- -nomesh 
-
-:   
+-   [filename] - The filename to be used
 
 <!-- -->
 
- -clearorigin 
+ -range   
+The range of frames to export from the timeline
 
-:   
+    -range [start frame] [end frame]
 
-<!-- -->
-
- -clearoriginaxis 
-
-:   
+-   [start frame] - The starting frame
+-   [end frame] - The ending frame
 
 <!-- -->
 
- -ignorescale 
-:   Ignore any scales you may have on some bones.
+ -cycleStart   
+Shift the cycle to start on a different frame. For example, say frame 1 has the left foot forward and frame 10 has the right foot forward. If you would like your cycle to start with right foot forward you would use "-cycleStart 10" and it will shift the cycle forward 10 frames.
+
+    -cycleStart [shift]
+
+-   [shift] - The number of frames to shift the sequence
 
 <!-- -->
 
- -xyzprecision 
-:   This setting adjusts the threshold for translational sensitivity. By
-    default the exporter will try and compress down the animations
-    getting rid of tiny movements. By lowering the threshold the
-    resulting animation mimicks the original more closely.
-:   -xyzprecision [precision]
+ -scale   
+Scale your character up or down from the origin during export. For example, "-scale 2" will double the size of the character.
 
-    -   [precision] - The cutoff threshold
+    -scale [scalar]
+
+-   [scalar] - The scale multiplier (similar to percent where 1 = 100%, 2 = 200%, 0.5 = 50%)
 
 <!-- -->
 
- -quatprecision 
-:   This setting adjusts the threshold for rotational sensitivity. By
-    default the exporter will try and compress down the animations
-    getting rid of tiny movements. By lowering the threshold the
-    resulting animation mimicks the original more closely.
-:   -quatprecision [precision]
+ -align   
+Will align your animation to a certain bone.
 
-    -   [precision] - The cutoff threshold
+    -align [joint name]
+
+-   [joint name] - The name of the joint to align to
 
 <!-- -->
 
- -jointthreshold 
-:   This setting adjusts the threshold for joint weight or the amount of
-    influence a bone has over surrounding vertices. By default the
-    exporter will try and compress down the animations getting rid of
-    tiny movements. By lowering the threshold the resulting animation
-    mimicks the original more closely.
-:   -jointthreshold [weight]
+ -rotate   
+Changes the orientation of your animation along the Z axis (up/down).
 
-    -   [weight] - The cutoff threshold
+    -rotate [yaw]
+
+-   [yaw] - The angle to rotate the animation in degrees
 
 <!-- -->
 
- -skipmesh 
-:   Allows you to skip certain models during export (can only be used by
-    itself)
-:   -skipmesh [name]
-
-    -   [name] - The name of the mesh
+ -nomesh   
 
 <!-- -->
 
- -keepmesh 
-:   Allows you to keep only a certain model during export (can only be
-    used by itself)
-:   -keepmesh [name]
-
-    -   [name] - The name of the mesh
+ -clearorigin   
 
 <!-- -->
 
- -jointgroup 
-:   Defines a group of joints for reference with the group keyword
-:   -jointgroup [name] [joint1] [joint2]...[jointX]
-
-    -   [name] - The name to assign to the group
-    -   [joint1],[joint2],[jointX] - The joints contained in the group
+ -clearoriginaxis   
 
 <!-- -->
 
- -group 
-:   Define a group to export (these don't affect the hierarchy)
-:   -group [name]
-
-    -   [name] - The name of a group
+ -ignorescale   
+Ignore any scales you may have on some bones.
 
 <!-- -->
 
- -keep 
-:   Define a joint that should be exported irrespective of whether it's
-    used by a mesh or not
-:   -keep [name]
+ -xyzprecision   
+This setting adjusts the threshold for translational sensitivity. By default the exporter will try and compress down the animations getting rid of tiny movements. By lowering the threshold the resulting animation mimicks the original more closely.
 
-    -   [name] - The name of a joint
+    -xyzprecision [precision]
+
+-   [precision] - The cutoff threshold
+
+<!-- -->
+
+ -quatprecision   
+This setting adjusts the threshold for rotational sensitivity. By default the exporter will try and compress down the animations getting rid of tiny movements. By lowering the threshold the resulting animation mimicks the original more closely.
+
+    -quatprecision [precision]
+
+-   [precision] - The cutoff threshold
+
+<!-- -->
+
+ -jointthreshold   
+This setting adjusts the threshold for joint weight or the amount of influence a bone has over surrounding vertices. By default the exporter will try and compress down the animations getting rid of tiny movements. By lowering the threshold the resulting animation mimicks the original more closely.
+
+    -jointthreshold [weight]
+
+-   [weight] - The cutoff threshold
+
+<!-- -->
+
+ -skipmesh   
+Allows you to skip certain models during export (can only be used by itself)
+
+    -skipmesh [name]
+
+-   [name] - The name of the mesh
+
+<!-- -->
+
+ -keepmesh   
+Allows you to keep only a certain model during export (can only be used by itself)
+
+    -keepmesh [name]
+
+-   [name] - The name of the mesh
+
+<!-- -->
+
+ -jointgroup   
+Defines a group of joints for reference with the group keyword
+
+    -jointgroup [name] [joint1] [joint2]...[jointX]
+
+-   [name] - The name to assign to the group
+-   [joint1],[joint2],[jointX] - The joints contained in the group
+
+<!-- -->
+
+ -group   
+Define a group to export (these don't affect the hierarchy)
+
+    -group [name]
+
+-   [name] - The name of a group
+
+<!-- -->
+
+ -keep   
+Define a joint that should be exported irrespective of whether it's used by a mesh or not
+
+    -keep [name]
+
+-   [name] - The name of a joint
 
 

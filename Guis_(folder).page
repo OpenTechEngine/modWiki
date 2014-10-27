@@ -1,28 +1,18 @@
-In the id Tech 4 engine, [GUIs](GUIs "GUIs") ( **G** raphical **U** ser
-**I** nterfaces) are used for many things. GUIs can open doors, toggle
-map scripts, and interact with the player and the world around them.
-They are also used for the Main Menu and for the player's HUD (Heads-Up
-Display)
+In the id Tech 4 engine, [GUIs](GUIs "GUIs") ( **G** raphical **U** ser **I** nterfaces) are used for many things. GUIs can open doors, toggle map scripts, and interact with the player and the world around them. They are also used for the Main Menu and for the player's HUD (Heads-Up Display)
 
-Below is a list of the important GUIs included with Doom 3, found in the
-*guis* folder:
+Below is a list of the important GUIs included with Doom 3, found in the *guis* folder:
 
 ### chat.GUI
 
-This GUI only displays chat messages that have been received. It
-maintains a history of four messages using 4 variables,
-**gui::gui\_alpha1** , **gui::gui\_alpha2** , etc.
+This GUI only displays chat messages that have been received. It maintains a history of four messages using 4 variables, **gui::gui\_alpha1** , **gui::gui\_alpha2** , etc.
 
 ### credits.GUI
 
-The credits for Doom 3, displayed upon beating the game or viewing the
-credits. Just an animation really.
+The credits for Doom 3, displayed upon beating the game or viewing the credits. Just an animation really.
 
 ### cursor.GUI
 
-This GUI is the player's crosshair. The bulk of this file is the code
-necessary to switch between a combat crosshair and an NPC-talk
-crosshair. Uses **gui::talkcursor** and **gui::combatcursor**
+This GUI is the player's crosshair. The bulk of this file is the code necessary to switch between a combat crosshair and an NPC-talk crosshair. Uses **gui::talkcursor** and **gui::combatcursor**
 
 ### gameover.GUI
 
@@ -30,51 +20,27 @@ This seems to be linked to EndLevel. Not sure if this is even used.
 
 ### [hud.GUI](Guis/hud.GUI "Guis/hud.GUI")
 
-The entire HUD is coded into this GUI. Many player variables are used by
-the HUD to display necessary information.
+The entire HUD is coded into this GUI. Many player variables are used by the HUD to display necessary information.
 
 ### intro.GUI
 
-The introduction to the singleplayer game in Doom 3. Uses the .ROQ files
-introid and introloop. Nothing more than an ROQ holder and animation
-control.
+The introduction to the singleplayer game in Doom 3. Uses the .ROQ files introid and introloop. Nothing more than an ROQ holder and animation control.
 
 ### mainmenu.GUI
 
-The main menu for Doom 3. Easily the biggest GUI file included with the
-retail game. Weighing in at almost 700kb, this hefty file probably
-contains more animation than any other GUI in the game. Various
-choiceDefs are used to enable/disable options like Automatic Reload,
-Automatic Weapon Switch, Resolution, Shadows, Bumpmaps. Several listDefs
-are used as well to show things like saved games, mods, and multiplayer
-servers. (these listDefs are generated in the engine, not the game code)
+The main menu for Doom 3. Easily the biggest GUI file included with the retail game. Weighing in at almost 700kb, this hefty file probably contains more animation than any other GUI in the game. Various choiceDefs are used to enable/disable options like Automatic Reload, Automatic Weapon Switch, Resolution, Shadows, Bumpmaps. Several listDefs are used as well to show things like saved games, mods, and multiplayer servers. (these listDefs are generated in the engine, not the game code)
 
-The mainmenu is a great example of having different menus interact with
-each other. It uses floats defined in Desktop to determine what window
-is open, and play the corresponding animations (there is a Savegame to
-Options animation, for example, that is triggered when you select
-options from the savegame menu)
+The mainmenu is a great example of having different menus interact with each other. It uses floats defined in Desktop to determine what window is open, and play the corresponding animations (there is a Savegame to Options animation, for example, that is triggered when you select options from the savegame menu)
 
-The mainmenu also shows how animations can be plugged into dummy
-windowDefs. Many many windowDefs with the prefix "Anim" are used in the
-mainmenu. They are not visible and do not react to any events. They are
-usually marked with "notime" "1" and have animation in their onTime.
-Calling resetTime on these dummy windows will play their animation.
-Clever one id.
+The mainmenu also shows how animations can be plugged into dummy windowDefs. Many many windowDefs with the prefix "Anim" are used in the mainmenu. They are not visible and do not react to any events. They are usually marked with "notime" "1" and have animation in their onTime. Calling resetTime on these dummy windows will play their animation. Clever one id.
 
 ### mphud.GUI
 
-Almost identical to hud.GUI, but with a few key differences. Things that
-are singleplayer-only (air meter for example) are not present.
-Naturally, the removal of these elements makes a big difference in
-filesize. Most co-op mods have added in all or most of the functionality
-from hud.GUI to mphud.GUI, which is not as hard as one would believe.
+Almost identical to hud.GUI, but with a few key differences. Things that are singleplayer-only (air meter for example) are not present. Naturally, the removal of these elements makes a big difference in filesize. Most co-op mods have added in all or most of the functionality from hud.GUI to mphud.GUI, which is not as hard as one would believe.
 
 ### mpmain.GUI
 
-The GUI that appears when escape is pressed during a multiplayer game.
-Contains submenus for configuring controls/options, and also the vote
-menu.
+The GUI that appears when escape is pressed during a multiplayer game. Contains submenus for configuring controls/options, and also the vote menu.
 
 ### mpmsgmode.GUI
 
@@ -90,16 +56,13 @@ Status window while connecting to a server
 
 ### pda.GUI
 
-One of the more complex GUIs in the game. Uses many listDefs (generated
-in the game code) to display all emails, videos, audio logs, etc.
+One of the more complex GUIs in the game. Uses many listDefs (generated in the game code) to display all emails, videos, audio logs, etc.
 
 Not quite as animated as other GUIs, and worth a look.
 
 ### restart.GUI
 
-When a player dies, this menu will be displayed. Restart level, load
-game, and quit to menu are the default options, but more could be added
-(This could be changed to statistics menu for example)
+When a player dies, this menu will be displayed. Restart level, load game, and quit to menu are the default options, but more could be added (This could be changed to statistics menu for example)
 
 ### scoreboard.GUI
 
@@ -107,8 +70,7 @@ Obviously enough, the scoreboard for multiplayer games.
 
 ### spectate.GUI
 
-The GUI displayed when a player is spectating, as opposed to the HUD.
-This will show what player is being spectated.
+The GUI displayed when a player is spectating, as opposed to the HUD. This will show what player is being spectated.
 
 ### takenotes.GUI
 

@@ -1,8 +1,7 @@
 Description
 -----------
 
-The **if** keyword causes an entire stage to be ignored if the provided
-condition evaluates to false.
+The **if** keyword causes an entire stage to be ignored if the provided condition evaluates to false.
 
 Usage
 -----
@@ -35,11 +34,8 @@ Render one stage or the other depending on the value of a shaderparm...
 Notes
 -----
 
-The uses of conditional statments are endless. Some examples would be
-textures that react to events or cycle through a series of frames.
+The uses of conditional statments are endless. Some examples would be textures that react to events or cycle through a series of frames.
 
-The variables which can be referenced, including shaderparms, are
-defined in doom\_defs.script
+The variables which can be referenced, including shaderparms, are defined in doom\_defs.script
 
-\
 

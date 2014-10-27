@@ -1,13 +1,9 @@
 Description
 -----------
 
-The **scale** stage keyword instructs the game to scale the texture in U
-and V dimensions using the specified factors.
+The **scale** stage keyword instructs the game to scale the texture in U and V dimensions using the specified factors.
 
-Due to scaling in U and V coordinates, scaling does the opposite of what
-might be expected - scaling by 2 causes the texture to be made *smaller*
-by a factor of 2, rather than bigger. In this sense the values could be
-considered "tiling" factors rather than scaling factors.
+Due to scaling in U and V coordinates, scaling does the opposite of what might be expected - scaling by 2 causes the texture to be made *smaller* by a factor of 2, rather than bigger. In this sense the values could be considered "tiling" factors rather than scaling factors.
 
 Usage
 -----
@@ -17,13 +13,11 @@ Usage
 Parameters
 ----------
 
- U scale 
-:   A floating point value that determines the texture scale on the U
-    axis.
+ U scale   
+A floating point value that determines the texture scale on the U axis.
 
- V scale 
-:   A floating point value that determines the texture scale on the V
-    axis.
+ V scale   
+A floating point value that determines the texture scale on the V axis.
 
 Example
 -------
@@ -36,8 +30,7 @@ Tile a texture into a 2-by-2 grid relative to its original size.
       scale 2, 2
     }
 
-Stretch a texture to ten times its original size (probably not a good
-idea).
+Stretch a texture to ten times its original size (probably not a good idea).
 
     {
       blend diffusemap
@@ -50,5 +43,4 @@ Notes
 
 None.
 
-\
 

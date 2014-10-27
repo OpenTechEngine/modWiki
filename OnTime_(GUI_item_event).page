@@ -1,11 +1,6 @@
-Called after a certain time has passed, since after the GUI has been
-activated. With this event, it's possible to create complex sequential
-animations, simulating a timeline. Several different onTime blocks can
-be used on the same item.
+Called after a certain time has passed, since after the GUI has been activated. With this event, it's possible to create complex sequential animations, simulating a timeline. Several different onTime blocks can be used on the same item.
 
-The current time applied to an item can also be changed with the
-[resetTime](ResetTime_%28GUI_command%29 "ResetTime (GUI command)")
-command, so complex animations can be controlled independently.
+The current time applied to an item can also be changed with the [resetTime](ResetTime_%28GUI_command%29 "ResetTime (GUI command)") command, so complex animations can be controlled independently.
 
 Example(s)
 ----------
@@ -17,5 +12,4 @@ Example(s)
         ...
     }
 
-\
 

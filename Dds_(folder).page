@@ -1,39 +1,13 @@
-DDS (Direct Draw Surface) files are a texture file format much like .
-[JPG](JPG_%28file_format%29 "JPG (file format)") or .
-[TGA](TGA_%28file_format%29 "TGA (file format)") files. The primary
-advantage of [DDS](DDS_%28file_format%29 "DDS (file format)") files is
-that they can be used to store compressed and uncompressed pixel formats
-with various mipmap levels.
+DDS (Direct Draw Surface) files are a texture file format much like . [JPG](JPG_%28file_format%29 "JPG (file format)") or . [TGA](TGA_%28file_format%29 "TGA (file format)") files. The primary advantage of [DDS](DDS_%28file_format%29 "DDS (file format)") files is that they can be used to store compressed and uncompressed pixel formats with various mipmap levels.
 
-Doom 3 makes use of .DDS files when running at a quality setting lower
-than "Ultra" in order to save texture memory (Although "High" quality
-level uses .DDS files for diffuse maps). Uncompressed textures are saved
-in duplicate .TGA format in the "base/
-[textures](Textures_%28folder%29 "Textures (folder)") " directory.
+Doom 3 makes use of .DDS files when running at a quality setting lower than "Ultra" in order to save texture memory (Although "High" quality level uses .DDS files for diffuse maps). Uncompressed textures are saved in duplicate .TGA format in the "base/ [textures](Textures_%28folder%29 "Textures (folder)") " directory.
 
-You can force everything to load from the TGA files by setting
-[image\_usePrecompressedTextures](Image_usePrecompressedTextures_%28cvar%29 "Image usePrecompressedTextures (cvar)")
-to 0. The images will still get compressed dynamically at load time
-(which will slow down loading significantly), but it will make it so
-that when you change a TGA it will actually show up in game without
-having to regenerate the DDS files. You can also set
-[image\_useCompression](Image_useCompression_%28cvar%29 "Image useCompression (cvar)")
-and
-[image\_useNormalCompression](Image_useNormalCompression_%28cvar%29 "Image useNormalCompression (cvar)")
-to 0, which will prevent them from getting compressed at load time (this
-is similar to running in ultra quality mode).
+You can force everything to load from the TGA files by setting [image\_usePrecompressedTextures](Image_usePrecompressedTextures_%28cvar%29 "Image usePrecompressedTextures (cvar)") to 0. The images will still get compressed dynamically at load time (which will slow down loading significantly), but it will make it so that when you change a TGA it will actually show up in game without having to regenerate the DDS files. You can also set [image\_useCompression](Image_useCompression_%28cvar%29 "Image useCompression (cvar)") and [image\_useNormalCompression](Image_useNormalCompression_%28cvar%29 "Image useNormalCompression (cvar)") to 0, which will prevent them from getting compressed at load time (this is similar to running in ultra quality mode).
 
-***Notice:*** This means that if you make changes to a texture and you
-are running a quality level lower than "Ultra", you will not see the
-changes because Doom 3 ís reading from the .DDS file.
+***Notice:*** This means that if you make changes to a texture and you are running a quality level lower than "Ultra", you will not see the changes because Doom 3 ís reading from the .DDS file.
 
-If you don't have .DDS files for every texture you have made, Doom 3
-will create them for you, but separate utilities are often used to
-convert a .TGA or other texture format into a .DDS format. Some of these
-tools are available here:
+If you don't have .DDS files for every texture you have made, Doom 3 will create them for you, but separate utilities are often used to convert a .TGA or other texture format into a .DDS format. Some of these tools are available here:
 
--   [nVidia Texture
-    Tools](http://developer.nvidia.com/object/nv_texture_tools.html "http://developer.nvidia.com/object/nv_texture_tools.html")
--   [ATI
-    Compressonator](http://www.ati.com/developer/compressonator.html "http://www.ati.com/developer/compressonator.html")
+-   [nVidia Texture Tools](http://developer.nvidia.com/object/nv_texture_tools.html "http://developer.nvidia.com/object/nv_texture_tools.html")
+-   [ATI Compressonator](http://www.ati.com/developer/compressonator.html "http://www.ati.com/developer/compressonator.html")
 

@@ -1,10 +1,7 @@
 [idAI](Src/game/ai/AI.cpp_%28source_file%29 "Src/game/ai/AI.cpp (source file)") ::PointReachableAreaNum
 -------------------------------------------------------------------------------------------------------
 
-This method is a wrapper around what eventually leads to an engine call
-of the same name. it will do some prep work setting up and idBounds and
-travel flags and call into
-[idAASLocal::PointReachableAreaNum](IdAASLocal::PointReachableAreaNum "IdAASLocal::PointReachableAreaNum")
+This method is a wrapper around what eventually leads to an engine call of the same name. it will do some prep work setting up and idBounds and travel flags and call into [idAASLocal::PointReachableAreaNum](IdAASLocal::PointReachableAreaNum "IdAASLocal::PointReachableAreaNum")
 
      
     /*
@@ -38,9 +35,5 @@ travel flags and call into
 
 Here is what brian at iddevnet had to say about PointReachableAreaNum
 
-It returns the closest reachable area to the specified point. If the
-point is in a reachable area already, it just returns that point,
-otherwise (for example if the given point is outside the world or inside
-some geometry) it will scan the bounding box given searching for
-reachable areas.
+It returns the closest reachable area to the specified point. If the point is in a reachable area already, it just returns that point, otherwise (for example if the given point is outside the world or inside some geometry) it will scan the bounding box given searching for reachable areas.
 

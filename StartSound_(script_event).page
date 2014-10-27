@@ -1,20 +1,17 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Plays the sound specified by the snd\_\* key/value pair on the channel
-and returns the length of the sound.
+Plays the sound specified by the snd\_\* key/value pair on the channel and returns the length of the sound.
 
 Usage
 -----
 
-*float* startSound( *string* **sound** , *float* **channel** , *float*
-**netSync** )
+*float* startSound( *string* **sound** , *float* **channel** , *float* **netSync** )
 
 Parameters
 ----------
@@ -34,8 +31,6 @@ Notes
 
 This script event does not return any values.
 
-This is the preferred method for playing sounds on an entity since it
-ensures that the sound is precached.
+This is the preferred method for playing sounds on an entity since it ensures that the sound is precached.
 
-\
 

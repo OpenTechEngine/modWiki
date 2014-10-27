@@ -1,8 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -12,9 +11,7 @@ Text drawing for debugging. align can be 0-left, 1-center, 2-right.
 Usage
 -----
 
-*void* drawText( *string* **text** , *vector* **origin** , *float*
-**scale** , *vector* **color** , *float* **align** , *float*
-**lifetime** )
+*void* drawText( *string* **text** , *vector* **origin** , *float* **scale** , *vector* **color** , *float* **align** , *float* **lifetime** )
 
 Parameters
 ----------
@@ -40,5 +37,4 @@ Notes
 
 This script event does not return any values.
 
-\
 

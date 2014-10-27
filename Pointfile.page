@@ -1,20 +1,6 @@
-A pointfile is a special file generated during map compilation when
-there is a leak. This file is created in the same directory and with the
-same filename as the . [MAP](MAP_%28file_format%29 "MAP (file format)")
-file but with the . [LIN](LIN_%28file_format%29 "LIN (file format)")
-extension instead.
+A pointfile is a special file generated during map compilation when there is a leak. This file is created in the same directory and with the same filename as the . [MAP](MAP_%28file_format%29 "MAP (file format)") file but with the . [LIN](LIN_%28file_format%29 "LIN (file format)") extension instead.
 
-To use a pointfile, load [DoomEdit](DoomEdit "DoomEdit") and go to
-File \> Pointfile and the editor will draw a red line. You can then use
-[shift + ctrl + k](DoomEdit_hotkeys "DoomEdit hotkeys") and shift +
-ctrl + l to move back and forth along the line to find the leak.
+To use a pointfile, load [DoomEdit](DoomEdit "DoomEdit") and go to File \> Pointfile and the editor will draw a red line. You can then use [shift + ctrl + k](DoomEdit_hotkeys "DoomEdit hotkeys") and shift + ctrl + l to move back and forth along the line to find the leak.
 
-<div id="stub" class="boilerplate metadata">
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Pointfile "http://www.modwiki.net/w/index.php?title=Pointfile&action=edit") </span> .*
 
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Pointfile "http://www.modwiki.net/w/index.php?title=Pointfile&action=edit")
-</span> .*
-
-</div>

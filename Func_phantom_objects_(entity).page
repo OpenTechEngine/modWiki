@@ -1,84 +1,64 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Func_phantom_objects_%28entity%29 "http://www.modwiki.net/w/index.php?title=Func_phantom_objects_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Func_phantom_objects_%28entity%29 "http://www.modwiki.net/w/index.php?title=Func_phantom_objects_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Func_phantom_objects_%28entity%29 "http://www.modwiki.net/w/index.php?title=Func_phantom_objects_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Func_phantom_objects_%28entity%29 "http://www.modwiki.net/w/index.php?title=Func_phantom_objects_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
 
-Causes moveable objects to fly at player when triggered. triggering
-toggles it on/off.
+Causes moveable objects to fly at player when triggered. triggering toggles it on/off.
 
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                DESCRIPTION
-  ------------------ ----------------------------------------------------------------------------------------
-  angle              Description not available.
-  anim               Description not available.
-  bind               Description not available.
-  bindOrientated     Description not available.
-  bindToBody         Description not available.
-  bindToJoint        Description not available.
-  bindanim           Description not available.
-  cameraTarget       Description not available.
-  cinematic          Description not available.
-  classname          Description not available.
-  clipmodel          Description not available.
-  cone               Description not available.
-  cylinder           Description not available.
-  editor\_color      Description not available.
-  editor\_maxs       Description not available.
-  editor\_mins       Description not available.
-  editor\_usage      Causes moveable objects to fly at player when triggered. triggering toggles it on/off.
-  editor\_var XXXX   Description not available.
-  end\_time          How long to throw objects. set to 0 to throw each object once
-  guiTarget          Description not available.
-  health             Description not available.
-  hide               Description not available.
-  max\_wait          Maximum time to wait before tossing object again
-  maxs               Description not available.
-  min\_wait          Minimum time to wait before tossing object again
-  mins               Description not available.
-  model              Description not available.
-  name               Description not available.
-  networkSync        Description not available.
-  neverDormant       Description not available.
-  noGrab             Description not available.
-  noclipmodel        Description not available.
-  origin             Description not available.
-  rotation           Description not available.
-  scriptobject       Description not available.
-  shake\_ang         Angles to shake object
-  shake\_time        How long objects shake before thrown
-  size               Description not available.
-  skin\_xray         Description not available.
-  slowmo             Description not available.
-  solidForTeam       Description not available.
-  spawnclass         Description not available.
-  speed              How fast objects should fly at player
-  target             Description not available.
-  time               How long it takes to toss all objects
+| KEY              | DESCRIPTION                                                                            |
+|------------------|----------------------------------------------------------------------------------------|
+| angle            | Description not available.                                                             |
+| anim             | Description not available.                                                             |
+| bind             | Description not available.                                                             |
+| bindOrientated   | Description not available.                                                             |
+| bindToBody       | Description not available.                                                             |
+| bindToJoint      | Description not available.                                                             |
+| bindanim         | Description not available.                                                             |
+| cameraTarget     | Description not available.                                                             |
+| cinematic        | Description not available.                                                             |
+| classname        | Description not available.                                                             |
+| clipmodel        | Description not available.                                                             |
+| cone             | Description not available.                                                             |
+| cylinder         | Description not available.                                                             |
+| editor\_color    | Description not available.                                                             |
+| editor\_maxs     | Description not available.                                                             |
+| editor\_mins     | Description not available.                                                             |
+| editor\_usage    | Causes moveable objects to fly at player when triggered. triggering toggles it on/off. |
+| editor\_var XXXX | Description not available.                                                             |
+| end\_time        | How long to throw objects. set to 0 to throw each object once                          |
+| guiTarget        | Description not available.                                                             |
+| health           | Description not available.                                                             |
+| hide             | Description not available.                                                             |
+| max\_wait        | Maximum time to wait before tossing object again                                       |
+| maxs             | Description not available.                                                             |
+| min\_wait        | Minimum time to wait before tossing object again                                       |
+| mins             | Description not available.                                                             |
+| model            | Description not available.                                                             |
+| name             | Description not available.                                                             |
+| networkSync      | Description not available.                                                             |
+| neverDormant     | Description not available.                                                             |
+| noGrab           | Description not available.                                                             |
+| noclipmodel      | Description not available.                                                             |
+| origin           | Description not available.                                                             |
+| rotation         | Description not available.                                                             |
+| scriptobject     | Description not available.                                                             |
+| shake\_ang       | Angles to shake object                                                                 |
+| shake\_time      | How long objects shake before thrown                                                   |
+| size             | Description not available.                                                             |
+| skin\_xray       | Description not available.                                                             |
+| slowmo           | Description not available.                                                             |
+| solidForTeam     | Description not available.                                                             |
+| spawnclass       | Description not available.                                                             |
+| speed            | How fast objects should fly at player                                                  |
+| target           | Description not available.                                                             |
+| time             | How long it takes to toss all objects                                                  |
 
 Inheritance
 -----------

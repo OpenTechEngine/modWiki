@@ -1,41 +1,27 @@
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/f/f9/Etqwsquare_bg.png) The information on this page is
-specific to [Enemy Territory: Quake
-Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
-
-</div>
+![](/images/f/f9/Etqwsquare_bg.png) The information on this page is specific to [Enemy Territory: Quake Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
 
 ------------------------------------------------------------------------
 
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type
-[idThread](Thread_%28scripting%29 "Thread (scripting)") , accessible via
-[sys](Scripting_basics#sys "Scripting basics") identifier.
+This event operates on an instance of the [game class](Game_class "Game class") type [idThread](Thread_%28scripting%29 "Thread (scripting)") , accessible via [sys](Scripting_basics#sys "Scripting basics") identifier.
 
 Description
 -----------
 
-Returns an object for a [cvar](Console "Console") that supports events
-for returning values.
+Returns an object for a [cvar](Console "Console") that supports events for returning values.
 
 Usage
 -----
 
-*[object](Data_types#object "Data types")* getCVar(
-*[string](Data_types#string "Data types")* **name** ,
-*[string](Data_types#string "Data types")* **default** )
+*[object](Data_types#object "Data types")* getCVar( *[string](Data_types#string "Data types")* **name** , *[string](Data_types#string "Data types")* **default** )
 
 Parameters
 ----------
 
 -   [name] - Name of the cvar.
--   [default] - Default value to give the cvar if it doesn't already
-    exist.
+-   [default] - Default value to give the cvar if it doesn't already exist.
 
 Examples
 --------
@@ -46,9 +32,6 @@ Examples
 Notes
 -----
 
-ETQW 1.4 has a bug where it doesn't keep track of the objects returned,
-thus each call to getCVar will create a new object. This can lead to a
-situation where the game runs out of free objects.
+ETQW 1.4 has a bug where it doesn't keep track of the objects returned, thus each call to getCVar will create a new object. This can lead to a situation where the game runs out of free objects.
 
-\
 

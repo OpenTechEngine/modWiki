@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Vehicle_shuttle_%28entity%29 "http://modwiki.net/w/index.php?title=Vehicle_shuttle_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Vehicle_shuttle_%28entity%29 "http://modwiki.net/w/index.php?title=Vehicle_shuttle_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Vehicle_shuttle_%28entity%29 "http://modwiki.net/w/index.php?title=Vehicle_shuttle_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Vehicle_shuttle_%28entity%29 "http://modwiki.net/w/index.php?title=Vehicle_shuttle_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -28,123 +10,122 @@ Shuttle vehicle
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                           DESCRIPTION
-  ----------------------------- ---------------------------------------
-  DamageOtherOnCollision        Description not available.
-  DamageSelfOnCollision         Description not available.
-  DeathActionAI                 Description not available.
-  DeathActionPlayer             Description not available.
-  ShuttleAttachable             Description not available.
-  activeGravity                 gravity vector when under control
-  altAttackFunc                 Description not available.
-  altFireToExit                 Description not available.
-  attackFunc                    Description not available.
-  beam\_tractor                 Description not available.
-  bouncyness                    bouncyness [0..1]
-  clipmodel                     Description not available.
-  def\_bindController           Description not available.
-  def\_debrisspawner            Description not available.
-  def\_domelight                Description not available.
-  def\_fireInfo                 Description not available.
-  def\_fireInfoAI               Description not available.
-  def\_guihand                  Description not available.
-  def\_hand                     Description not available.
-  def\_killpilotdamage          Description not available.
-  def\_reaction                 Description not available.
-  def\_reaction1                Description not available.
-  def\_thruster                 Description not available.
-  def\_traceController          Description not available.
-  def\_tractorhand              Description not available.
-  delay\_thrust                 Description not available.
-  density                       density of the ship (0.2)
-  dockBoost                     Description not available.
-  dockBoostFactor               Description not available.
-  domelight                     Description not available.
-  editor\_bool XXXX             Description not available.
-  editor\_color                 Description not available.
-  editor\_gui XXXX              Description not available.
-  editor\_maxs                  Description not available.
-  editor\_mins                  Description not available.
-  editor\_rotatable             Description not available.
-  editor\_snd XXXX              Description not available.
-  editor\_usage                 Shuttle vehicle
-  editor\_var XXXX              Description not available.
-  explodedelay                  seconds after death for explosion
-  feedbackslack                 Description not available.
-  feedbacktension               Description not available.
-  fireToExit                    Description not available.
-  friction\_angular             angular friction [0..1]
-  friction\_contact             contact friction [0..1]
-  friction\_linear              linear friction [0..1]
-  gibhealth                     Description not available.
-  gui                           Description not available.
-  gui\_hud                      Description not available.
-  headlight                     Description not available.
-  headlight\_color              Description not available.
-  headlight\_frustum            Description not available.
-  health                        Initial health
-  hidepilot                     Description not available.
-  inactiveGravity               gravity vector when not under control
-  inherit                       Description not available.
-  malfunctionThrustFactor       Description not available.
-  matter                        Description not available.
-  maxPower                      Description not available.
-  maxs                          Description not available.
-  mins                          Description not available.
-  model                         Description not available.
-  model\_active                 Description not available.
-  mtr\_headlight                Description not available.
-  offset\_aim                   Description not available.
-  offset\_dockingpoint          Description not available.
-  offset\_domelight             Description not available.
-  offset\_headlight             Description not available.
-  offset\_headlighttarget       Description not available.
-  offset\_pilot                 Description not available.
-  offset\_thrustB               Description not available.
-  offset\_thrustD               Description not available.
-  offset\_thrustF               Description not available.
-  offset\_thrustL               Description not available.
-  offset\_thrustR               Description not available.
-  offset\_thrustU               Description not available.
-  offset\_tractorbeamposition   Description not available.
-  offset\_tractorequilibrium    Description not available.
-  offset\_tractortraceend       Description not available.
-  offset\_tractortracestart     Description not available.
-  pilot\_eyeHeight              Description not available.
-  pilotanim                     Description not available.
-  skin                          Description not available.
-  slack                         Description not available.
-  slack\_mp                     Description not available.
-  snd\_activation               Description not available.
-  snd\_bounce                   Description not available.
-  snd\_cannon                   Description not available.
-  snd\_deactivation             Description not available.
-  snd\_death                    Description not available.
-  snd\_dying                    Description not available.
-  snd\_inuse                    Description not available.
-  snd\_tractor                  Description not available.
-  snd\_tractor\_start           Description not available.
-  snd\_tractor\_stop            Description not available.
-  soundDistance                 Description not available.
-  spawnclass                    Description not available.
-  tension                       Description not available.
-  terminalVelocity              Description not available.
-  text\_cannontip               Description not available.
-  text\_exittip                 Description not available.
-  text\_tractortip              Description not available.
-  thrustAccel                   Description not available.
-  thrustFactor                  Description not available.
-  thrustMax                     Description not available.
-  thrustMin                     Description not available.
-  thrusterCost                  Description not available.
-  tractorCost                   Description not available.
-  tractorCrosshairSize          Description not available.
-  uniqueguihud                  Description not available.
-  useCombatModel                Description not available.
-  yawlimit                      Description not available.
+| KEY                         | DESCRIPTION                           |
+|-----------------------------|---------------------------------------|
+| DamageOtherOnCollision      | Description not available.            |
+| DamageSelfOnCollision       | Description not available.            |
+| DeathActionAI               | Description not available.            |
+| DeathActionPlayer           | Description not available.            |
+| ShuttleAttachable           | Description not available.            |
+| activeGravity               | gravity vector when under control     |
+| altAttackFunc               | Description not available.            |
+| altFireToExit               | Description not available.            |
+| attackFunc                  | Description not available.            |
+| beam\_tractor               | Description not available.            |
+| bouncyness                  | bouncyness [0..1]                     |
+| clipmodel                   | Description not available.            |
+| def\_bindController         | Description not available.            |
+| def\_debrisspawner          | Description not available.            |
+| def\_domelight              | Description not available.            |
+| def\_fireInfo               | Description not available.            |
+| def\_fireInfoAI             | Description not available.            |
+| def\_guihand                | Description not available.            |
+| def\_hand                   | Description not available.            |
+| def\_killpilotdamage        | Description not available.            |
+| def\_reaction               | Description not available.            |
+| def\_reaction1              | Description not available.            |
+| def\_thruster               | Description not available.            |
+| def\_traceController        | Description not available.            |
+| def\_tractorhand            | Description not available.            |
+| delay\_thrust               | Description not available.            |
+| density                     | density of the ship (0.2)             |
+| dockBoost                   | Description not available.            |
+| dockBoostFactor             | Description not available.            |
+| domelight                   | Description not available.            |
+| editor\_bool XXXX           | Description not available.            |
+| editor\_color               | Description not available.            |
+| editor\_gui XXXX            | Description not available.            |
+| editor\_maxs                | Description not available.            |
+| editor\_mins                | Description not available.            |
+| editor\_rotatable           | Description not available.            |
+| editor\_snd XXXX            | Description not available.            |
+| editor\_usage               | Shuttle vehicle                       |
+| editor\_var XXXX            | Description not available.            |
+| explodedelay                | seconds after death for explosion     |
+| feedbackslack               | Description not available.            |
+| feedbacktension             | Description not available.            |
+| fireToExit                  | Description not available.            |
+| friction\_angular           | angular friction [0..1]               |
+| friction\_contact           | contact friction [0..1]               |
+| friction\_linear            | linear friction [0..1]                |
+| gibhealth                   | Description not available.            |
+| gui                         | Description not available.            |
+| gui\_hud                    | Description not available.            |
+| headlight                   | Description not available.            |
+| headlight\_color            | Description not available.            |
+| headlight\_frustum          | Description not available.            |
+| health                      | Initial health                        |
+| hidepilot                   | Description not available.            |
+| inactiveGravity             | gravity vector when not under control |
+| inherit                     | Description not available.            |
+| malfunctionThrustFactor     | Description not available.            |
+| matter                      | Description not available.            |
+| maxPower                    | Description not available.            |
+| maxs                        | Description not available.            |
+| mins                        | Description not available.            |
+| model                       | Description not available.            |
+| model\_active               | Description not available.            |
+| mtr\_headlight              | Description not available.            |
+| offset\_aim                 | Description not available.            |
+| offset\_dockingpoint        | Description not available.            |
+| offset\_domelight           | Description not available.            |
+| offset\_headlight           | Description not available.            |
+| offset\_headlighttarget     | Description not available.            |
+| offset\_pilot               | Description not available.            |
+| offset\_thrustB             | Description not available.            |
+| offset\_thrustD             | Description not available.            |
+| offset\_thrustF             | Description not available.            |
+| offset\_thrustL             | Description not available.            |
+| offset\_thrustR             | Description not available.            |
+| offset\_thrustU             | Description not available.            |
+| offset\_tractorbeamposition | Description not available.            |
+| offset\_tractorequilibrium  | Description not available.            |
+| offset\_tractortraceend     | Description not available.            |
+| offset\_tractortracestart   | Description not available.            |
+| pilot\_eyeHeight            | Description not available.            |
+| pilotanim                   | Description not available.            |
+| skin                        | Description not available.            |
+| slack                       | Description not available.            |
+| slack\_mp                   | Description not available.            |
+| snd\_activation             | Description not available.            |
+| snd\_bounce                 | Description not available.            |
+| snd\_cannon                 | Description not available.            |
+| snd\_deactivation           | Description not available.            |
+| snd\_death                  | Description not available.            |
+| snd\_dying                  | Description not available.            |
+| snd\_inuse                  | Description not available.            |
+| snd\_tractor                | Description not available.            |
+| snd\_tractor\_start         | Description not available.            |
+| snd\_tractor\_stop          | Description not available.            |
+| soundDistance               | Description not available.            |
+| spawnclass                  | Description not available.            |
+| tension                     | Description not available.            |
+| terminalVelocity            | Description not available.            |
+| text\_cannontip             | Description not available.            |
+| text\_exittip               | Description not available.            |
+| text\_tractortip            | Description not available.            |
+| thrustAccel                 | Description not available.            |
+| thrustFactor                | Description not available.            |
+| thrustMax                   | Description not available.            |
+| thrustMin                   | Description not available.            |
+| thrusterCost                | Description not available.            |
+| tractorCost                 | Description not available.            |
+| tractorCrosshairSize        | Description not available.            |
+| uniqueguihud                | Description not available.            |
+| useCombatModel              | Description not available.            |
+| yawlimit                    | Description not available.            |
 
 Inheritance
 -----------

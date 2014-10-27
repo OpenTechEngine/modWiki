@@ -1,34 +1,19 @@
-Startup parameters are remnants of the time that an OS consisted of
-nothing more then a console. A command was then started by giving it's
-name and optionally some parameters to change the command's behavior.
-(Take DOS as an example, or even a modern Linux terminal.) All games
-built on the [id Tech 4](Id_Tech_4 "Id Tech 4") engine allow you to
-start them with parameters as well to get a specific behaviour.
+Startup parameters are remnants of the time that an OS consisted of nothing more then a console. A command was then started by giving it's name and optionally some parameters to change the command's behavior. (Take DOS as an example, or even a modern Linux terminal.) All games built on the [id Tech 4](Id_Tech_4 "Id Tech 4") engine allow you to start them with parameters as well to get a specific behaviour.
 
 Shortcuts
 ---------
 
-Probably, you don't want to use a system console to launch a Doom 3 game
-every time you need it. It works, but you would need to start the
-console, go to the game's folder and type the command with all it's
-parameters. Imagine you would need to do that every time you want to
-play... This is where shortcuts come in. Shortcuts save the location of
-the command and it's startup parameters.
+Probably, you don't want to use a system console to launch a Doom 3 game every time you need it. It works, but you would need to start the console, go to the game's folder and type the command with all it's parameters. Imagine you would need to do that every time you want to play... This is where shortcuts come in. Shortcuts save the location of the command and it's startup parameters.
 
 ### Windows
 
-You start by creating a shortcut to the game .exe file. A few ways to do
-it:
+You start by creating a shortcut to the game .exe file. A few ways to do it:
 
--   Right click in the desired location and choose New -\> Shortcut.
-    Complete the wizard
--   Copy the game's .exe, then right click where you want your shortcut
-    to be. Select "Paste Shortcut"
--   Drag the game's .exe with your right mouse button to the desired
-    location, then release and choose "Create Shortcuts Here".
+-   Right click in the desired location and choose New -\> Shortcut. Complete the wizard
+-   Copy the game's .exe, then right click where you want your shortcut to be. Select "Paste Shortcut"
+-   Drag the game's .exe with your right mouse button to the desired location, then release and choose "Create Shortcuts Here".
 
-After this, right click on the shortcut. Select properties. The field to
-be edited is the "Target:" field. For Doom 3, it would look like:
+After this, right click on the shortcut. Select properties. The field to be edited is the "Target:" field. For Doom 3, it would look like:
 
      "c:\program files\doom3\doom3.exe"
 
@@ -40,29 +25,19 @@ After that, the whole target field should contain:
 
      "c:\program files\doom3\doom3.exe" +set r_fullscreen 0
 
-If you are more familiar with windows you can also write a .bat file to
-run the game with your parameters.
+If you are more familiar with windows you can also write a .bat file to run the game with your parameters.
 
 ### Linux
 
-By default, Linux does not support shortcuts. The only way to solve this
-is by making a script. However, newer window managers might support
-shortcuts. Scripting will always work, but it is worth it to check your
-window manager's documentation. A few step-by-step procedures are listed
-below for common window managers.
+By default, Linux does not support shortcuts. The only way to solve this is by making a script. However, newer window managers might support shortcuts. Scripting will always work, but it is worth it to check your window manager's documentation. A few step-by-step procedures are listed below for common window managers.
 
 #### Linux Scripting
 
-Lots of things are done through scripts. This can range from scripts
-which start all background processes when you start your Linux install,
-to commands which you can use like regular commands on your command
-line.
+Lots of things are done through scripts. This can range from scripts which start all background processes when you start your Linux install, to commands which you can use like regular commands on your command line.
 
-A basic script consists of nothing more then a list of commands to be
-executed by your shell. (Which does all the command line tasks)
+A basic script consists of nothing more then a list of commands to be executed by your shell. (Which does all the command line tasks)
 
-To create one, open up your favourite editor. Here's is an example of
-what it should look like:
+To create one, open up your favourite editor. Here's is an example of what it should look like:
 
      #!/bin/sh
      cd /opt/doom3/
@@ -70,20 +45,15 @@ what it should look like:
 
 Now save it. The name does not matter, as long as you remember it.
 
-You can already use this script to start the game with the specified
-parameters. For example, if the script above was saved in a file called
-*d3windowed.sh* , it would be started by typing this in a shell:
+You can already use this script to start the game with the specified parameters. For example, if the script above was saved in a file called *d3windowed.sh* , it would be started by typing this in a shell:
 
      sh d3windowed.sh
 
-It just works. In case the 'sh' part is even too much, you can make the
-script file executable on itself. To do this, issue this command:
+It just works. In case the 'sh' part is even too much, you can make the script file executable on itself. To do this, issue this command:
 
      chmod ug+x d3windowed.sh
 
-This command marks the script as executable for the file's owner (Here
-the user who created it) and members of the file's group. (Most of the
-time it's the creator's primary group)
+This command marks the script as executable for the file's owner (Here the user who created it) and members of the file's group. (Most of the time it's the creator's primary group)
 
 From now on, you can start the script by typing:
 
@@ -92,15 +62,7 @@ From now on, you can start the script by typing:
 What is a valid startup parameter
 ---------------------------------
 
-You can use any [in-game console
-command](Console#Console_commands "Console") as a startup parameter.
-This is useful if you always want that command to execute when you start
-a game. To make a valid startup parameter, prefix the command with '+'.
-If you want to use a [console variable](Console#Cvar "Console") as a
-startup parameter you need to prefix it with the
-[Set](Set_%28console_command%29 "Set (console command)") command. Some
-CVars don't require it but this way you can be sure they will all work
-correctly.
+You can use any [in-game console command](Console#Console_commands "Console") as a startup parameter. This is useful if you always want that command to execute when you start a game. To make a valid startup parameter, prefix the command with '+'. If you want to use a [console variable](Console#Cvar "Console") as a startup parameter you need to prefix it with the [Set](Set_%28console_command%29 "Set (console command)") command. Some CVars don't require it but this way you can be sure they will all work correctly.
 
 Common uses
 -----------
@@ -109,117 +71,89 @@ Common uses
 
     "d:\doom3\doom3.exe" +set r_fullscreen 0
 
-This makes the game run in windowed mode (ie not full-screen) so you can
-keep applications running on the background, and play in the foreground.
-It may also be a good idea to add +vid\_restart to ensure that the game
-does open in windowed mode. Great for keeping your favourite IM client
-or IRC app open in the background.
+This makes the game run in windowed mode (ie not full-screen) so you can keep applications running on the background, and play in the foreground. It may also be a good idea to add +vid\_restart to ensure that the game does open in windowed mode. Great for keeping your favourite IM client or IRC app open in the background.
 
 ### Launching the editor
 
     "d:\doom3\doom3.exe" +set r_mode 3 +set r_fullscreen 0 +seta r_brightness 0 +seta r_gamma 0 +vid_restart +editor
 
-This sets the Doom 3 game resolution to 640x480 (r\_mode 3), makes it
-run in windowed mode (not full-screen), sets the brightness and gamma to
-0, reloads the rendering engine and loads the map editor. Useful if you
-play the game at a lower resolution and want to use the editor at your
-normal desktop resolution.
+This sets the Doom 3 game resolution to 640x480 (r\_mode 3), makes it run in windowed mode (not full-screen), sets the brightness and gamma to 0, reloads the rendering engine and loads the map editor. Useful if you play the game at a lower resolution and want to use the editor at your normal desktop resolution.
 
 ### Launching the game to connect to a server that is running a mod
 
     "d:\doom3\doom3.exe" +set fs_game MODNAME +connect 123.123.123.123:28004
 
-This starts the game running the mod in the directory "MODNAME", and
-then connects to the server at 123.123.123.123:28004
+This starts the game running the mod in the directory "MODNAME", and then connects to the server at 123.123.123.123:28004
 
 ### Launching the game with a different path to save data
 
     d:\etqw\etqw.exe +set fs_userpath "d:\etqwdata" +set fs_savepath "d:\etqwdata" +set fs_devpath "d:\etqwdata"
 
-<div>
-
-![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake
-Wars only:
-*This will tell the game to save all screenshots, demos, config files,
-etc. into the same, custom, directory.*
-
-</div>
-
-\
+![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake Wars only:
+*This will tell the game to save all screenshots, demos, config files, etc. into the same, custom, directory.*
 
 Most Frequent Parameters
 ------------------------
 
 ### Commands
 
- connect 
-:   Connects to the given server. The server is specified as
-    hostname:port - eg "connect 123.123.123.123:28004". If the :port is
-    ommitted, the default for the game is assumed.
+ connect   
+Connects to the given server. The server is specified as hostname:port - eg "connect 123.123.123.123:28004". If the :port is ommitted, the default for the game is assumed.
 
- editor 
-:   opens the built in [Map editor](Map_editor "Map editor") upon
-    launch. Also see [mapping](Mapping "Mapping") .
+ editor   
+opens the built in [Map editor](Map_editor "Map editor") upon launch. Also see [mapping](Mapping "Mapping") .
 
- editAFs 
-:   opens the [Articulated Figure
-    Editor](Articulated_Figure_Editor "Articulated Figure Editor")
+ editAFs   
+opens the [Articulated Figure Editor](Articulated_Figure_Editor "Articulated Figure Editor")
 
- editDecls 
-:   opens the [Declaration
-    Browser](Declaration_Browser "Declaration Browser")
+ editDecls   
+opens the [Declaration Browser](Declaration_Browser "Declaration Browser")
 
- editFX 
-:   opens the [FX Editor](FX_Editor "FX Editor")
+ editFX   
+opens the [FX Editor](FX_Editor "FX Editor")
 
- editGUIs 
-:   opens the [GUI Editor](GUI_Editor "GUI Editor")
+ editGUIs   
+opens the [GUI Editor](GUI_Editor "GUI Editor")
 
- editLights 
-:   opens the [Light Editor](Light_Editor "Light Editor") and can also
-    be opened from the [Map editor](Map_editor "Map editor") by pressing
-    "j" on your keyboard
+ editLights   
+opens the [Light Editor](Light_Editor "Light Editor") and can also be opened from the [Map editor](Map_editor "Map editor") by pressing "j" on your keyboard
 
- editPDAs 
-:   opens the [PDA Editor](PDA_Editor "PDA Editor")
+ editPDAs   
+opens the [PDA Editor](PDA_Editor "PDA Editor")
 
- editPlaybacks 
-:   opens the [Playback Editor](Playback_Editor "Playback Editor")
+ editPlaybacks   
+opens the [Playback Editor](Playback_Editor "Playback Editor")
 
- editReverb 
-:   opens the [Reverb Editor](Reverb_Editor "Reverb Editor")
+ editReverb   
+opens the [Reverb Editor](Reverb_Editor "Reverb Editor")
 
- editScripts 
-:   opens the [Script Editor](Script_Editor "Script Editor")
+ editScripts   
+opens the [Script Editor](Script_Editor "Script Editor")
 
- editSounds 
-:   opens the [Sound Editor](Sound_Editor "Sound Editor")
+ editSounds   
+opens the [Sound Editor](Sound_Editor "Sound Editor")
 
- disconnect 
-:   causes the game to skip the introductory videos when starting.
+ disconnect   
+causes the game to skip the introductory videos when starting.
 
 ### CVars
 
- [com\_allowconsole](Com_allowConsole_%28cvar%29 "Com allowConsole (cvar)") 
-:   Sets if the easy console key is used.
+ [com\_allowconsole](Com_allowConsole_%28cvar%29 "Com allowConsole (cvar)")   
+Sets if the easy console key is used.
 
- [fs\_game](Fs_game_%28cvar%29 "Fs game (cvar)") 
-:   Used to load a different mod on startup.
+ [fs\_game](Fs_game_%28cvar%29 "Fs game (cvar)")   
+Used to load a different mod on startup.
 
- [fs\_game\_base](Fs_game_base_%28cvar%29 "Fs game base (cvar)") 
-:   Adds a second folder to be loaded prior to the modfolder. Useful
-    when modding a missionpack. More info here:
-    [[1]](https://web.archive.org/web/20120102134924/http://zerowing.idsoftware.com/linux/doom/fs_game_base "http://zerowing.idsoftware.com/linux/doom/fs_game_base")
+ [fs\_game\_base](Fs_game_base_%28cvar%29 "Fs game base (cvar)")   
+Adds a second folder to be loaded prior to the modfolder. Useful when modding a missionpack. More info here: [[1]](https://web.archive.org/web/20120102134924/http://zerowing.idsoftware.com/linux/doom/fs_game_base "http://zerowing.idsoftware.com/linux/doom/fs_game_base")
 
- [net\_allowcheats](Net_allowCheats_%28cvar%29 "Net allowCheats (cvar)") 
-:   Used to enable cheats.
+ [net\_allowcheats](Net_allowCheats_%28cvar%29 "Net allowCheats (cvar)")   
+Used to enable cheats.
 
- [r\_fullscreen](R_fullscreen_%28cvar%29 "R fullscreen (cvar)") 
-:   This will make the game run in fullscreen or in windowed mode.
-    Mostly in combanation with some command.
+ [r\_fullscreen](R_fullscreen_%28cvar%29 "R fullscreen (cvar)")   
+This will make the game run in fullscreen or in windowed mode. Mostly in combanation with some command.
 
- [r\_multisamples](R_multiSamples_%28cvar%29 "R multiSamples (cvar)") 
-:   Enables [antialiasing](Antialiasing "Antialiasing") and sets the
-    number of passes.
+ [r\_multisamples](R_multiSamples_%28cvar%29 "R multiSamples (cvar)")   
+Enables [antialiasing](Antialiasing "Antialiasing") and sets the number of passes.
 
 

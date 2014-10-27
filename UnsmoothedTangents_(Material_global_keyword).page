@@ -1,18 +1,9 @@
 Description
 -----------
 
-The unsmoothedTangents global keyword changes the way vertex normals are
-calculated from face normals in order to improve the shading of large
-faces. It is only relevant for surfaces that use smooth shading, such as
-static models.
+The unsmoothedTangents global keyword changes the way vertex normals are calculated from face normals in order to improve the shading of large faces. It is only relevant for surfaces that use smooth shading, such as static models.
 
-Normally vertex normals are calculated by averaging the face normals of
-surrounding faces, causing the whole model to be smooth-shaded. This
-works fine for medium-poly meshes with lots of small faces following a
-gentle curve, but causes incorrect shading on low-poly models with large
-faces or sharp angles. By adding unsmoothedTangents to the material, the
-vertex normals can be aligned with the largest adjacent face, improving
-the result in these situations.
+Normally vertex normals are calculated by averaging the face normals of surrounding faces, causing the whole model to be smooth-shaded. This works fine for medium-poly meshes with lots of small faces following a gentle curve, but causes incorrect shading on low-poly models with large faces or sharp angles. By adding unsmoothedTangents to the material, the vertex normals can be aligned with the largest adjacent face, improving the result in these situations.
 
 ![](/images/0/0c/UnsmoothedTangents.png)
 
@@ -31,9 +22,6 @@ None.
 Notes
 -----
 
-It will still be necessary to unweld faces that must not be
-smooth-shaded (such as the sides of a cube), even when this keyword is
-used.
+It will still be necessary to unweld faces that must not be smooth-shaded (such as the sides of a cube), even when this keyword is used.
 
-\
 

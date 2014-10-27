@@ -1,9 +1,4 @@
-Sets the background of an item. This can be an image in .
-[TGA](TGA_%28file_format%29 "TGA (file format)") format (a reference to
-the filename, without extension, with the path relative do the game
-installation directory) or a reference to a material on a material list
-(use the shader path/name as defined in the .
-[MTR](MTR_%28file_format%29 "MTR (file format)") file).
+Sets the background of an item. This can be an image in . [TGA](TGA_%28file_format%29 "TGA (file format)") format (a reference to the filename, without extension, with the path relative do the game installation directory) or a reference to a material on a material list (use the shader path/name as defined in the . [MTR](MTR_%28file_format%29 "MTR (file format)") file).
 
 Syntax
 ------
@@ -20,5 +15,4 @@ Example(s)
 
     background "gui/assets/scanlines"
 
-\
 

@@ -1,7 +1,4 @@
-Mapdefs are [declarations](Declarations "Declarations") that contain a
-list of general map properties. These declarations are required if you
-wish for your map to be displayed during the setup of a multiplayer
-game.
+Mapdefs are [declarations](Declarations "Declarations") that contain a list of general map properties. These declarations are required if you wish for your map to be displayed during the setup of a multiplayer game.
 
 Syntax
 ------
@@ -20,30 +17,16 @@ Syntax
            "size3" [size]
     }
 
-MapDef declarations are started with a header which consists of the
-keyword mapDef followed by the *name* of the map. They are then followed
-by the body of the declaration which is enclosed in curly brackets.
+MapDef declarations are started with a header which consists of the keyword mapDef followed by the *name* of the map. They are then followed by the body of the declaration which is enclosed in curly brackets.
 
-The name and devname values you enter here will determine how the map is
-named in the server window. The key values with the boolean field accept
-0, 1 to determine which game modes are available for play. The four size
-keys are a performance optimization and you should set them with the "
-[com\_updateLoadSize](Com_updateLoadSize_%28cvar%29 "Com updateLoadSize (cvar)")
-1" CVar after loading the map. You need to do this for all four [quality
-settings](Quality_settings "Quality settings") .
+The name and devname values you enter here will determine how the map is named in the server window. The key values with the boolean field accept 0, 1 to determine which game modes are available for play. The four size keys are a performance optimization and you should set them with the " [com\_updateLoadSize](Com_updateLoadSize_%28cvar%29 "Com updateLoadSize (cvar)") 1" CVar after loading the map. You need to do this for all four [quality settings](Quality_settings "Quality settings") .
 
 **Note:** It's normal if size0 and size1 use the same value.
 
-Alternatively you can create a batch file to do this for you. A batch
-file is an ASCII text file with the .BAT extension thus you can use
-notepad to create one. Here is an example of a batch file named
-"mapsize.bat".
+Alternatively you can create a batch file to do this for you. A batch file is an ASCII text file with the .BAT extension thus you can use notepad to create one. Here is an example of a batch file named "mapsize.bat".
 
     doom3 +com_updateLoadSize 1 +map <mappath>\<mapname>.map +quit
 
-The batch file itself can be anywhere if you set the right paths but in
-the example above it's supposed to be put in the Doom 3 folder. This
-will update the corresponding MapDef entry with the correct sizes. If
-the map is multiplayer only then do:
+The batch file itself can be anywhere if you set the right paths but in the example above it's supposed to be put in the Doom 3 folder. This will update the corresponding MapDef entry with the correct sizes. If the map is multiplayer only then do:
 
     doom3 +com_updateLoadSize 1 +si_map <mappath>\<mapname>.map +si_pure 0 +spawnserver +quit

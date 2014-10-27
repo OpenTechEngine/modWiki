@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Convoy_vehicle_walker_%28entity%29 "http://modwiki.net/w/index.php?title=Convoy_vehicle_walker_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Convoy_vehicle_walker_%28entity%29 "http://modwiki.net/w/index.php?title=Convoy_vehicle_walker_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Convoy_vehicle_walker_%28entity%29 "http://modwiki.net/w/index.php?title=Convoy_vehicle_walker_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Convoy_vehicle_walker_%28entity%29 "http://modwiki.net/w/index.php?title=Convoy_vehicle_walker_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -28,99 +10,98 @@ Walker Vehicle.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                       DESCRIPTION
-  ------------------------- ----------------------------
-  alignment\_joint          Description not available.
-  angle                     Description not available.
-  anim                      Description not available.
-  bind                      Description not available.
-  bindOrientated            Description not available.
-  bindToBody                Description not available.
-  bindToJoint               Description not available.
-  bindanim                  Description not available.
-  cameraTarget              Description not available.
-  cinematic                 Description not available.
-  classname                 Description not available.
-  clipmodel                 Description not available.
-  cone                      Description not available.
-  crashSpeedLarge           Description not available.
-  crashSpeedMedium          Description not available.
-  crashSpeedSmall           Description not available.
-  cylinder                  Description not available.
-  damageStaticChance        Description not available.
-  def\_crashDamage          Description not available.
-  def\_persona              Description not available.
-  def\_position\_driver     Description not available.
-  def\_stompDamage          Description not available.
-  dodecahedron              Description not available.
-  editor\_color             Description not available.
-  editor\_maxs              Description not available.
-  editor\_menu              Description not available.
-  editor\_mins              Description not available.
-  editor\_rotatable         Description not available.
-  editor\_usage             Walker Vehicle.
-  exit\_vehicle\_delay      Description not available.
-  fx\_death                 Description not available.
-  fx\_electrical\_stall     Description not available.
-  fx\_shield                Description not available.
-  gui                       Description not available.
-  guiTarget                 Description not available.
-  gui\_hud                  Description not available.
-  health                    Description not available.
-  healthRegenDelay          Description not available.
-  healthRegenRate           Description not available.
-  hide                      Description not available.
-  hidesurface               Description not available.
-  hudid                     Description not available.
-  inherit                   Description not available.
-  instance                  Description not available.
-  joint\_eyeOffset          Description not available.
-  lowhealth                 Description not available.
-  mass                      Description not available.
-  maxs                      Description not available.
-  mins                      Description not available.
-  model                     Description not available.
-  name                      Description not available.
-  nav\_active               Description not available.
-  networkSync               Description not available.
-  neverDormant              Description not available.
-  noclipmodel               Description not available.
-  origin                    Description not available.
-  rotation                  Description not available.
-  scriptobject              Description not available.
-  shadow\_lod\_distance     Description not available.
-  shieldHealth              Description not available.
-  shieldMaxs                Description not available.
-  shieldMins                Description not available.
-  shieldRegenDelay          Description not available.
-  shieldRegenTime           Description not available.
-  shieldSides               Description not available.
-  size                      Description not available.
-  snd\_footstep             Description not available.
-  snd\_incomingProjectile   Description not available.
-  snd\_malfunction          Description not available.
-  snd\_servo                Description not available.
-  snd\_shieldRecharge       Description not available.
-  snd\_shieldWarning        Description not available.
-  snd\_start                Description not available.
-  snd\_stop                 Description not available.
-  snd\_voiceHazard          Description not available.
-  snd\_voiceLowHealth       Description not available.
-  snd\_voiceNoExit          Description not available.
-  snd\_voiceSafe            Description not available.
-  solidForTeam              Description not available.
-  spawnclass                Description not available.
-  stepheight                Description not available.
-  strafe\_delta             Description not available.
-  target                    Description not available.
-  team                      Description not available.
-  touchtriggers             Description not available.
-  trigger\_anim             Description not available.
-  turnRate                  Description not available.
-  usable                    Description not available.
+| KEY                     | DESCRIPTION                |
+|-------------------------|----------------------------|
+| alignment\_joint        | Description not available. |
+| angle                   | Description not available. |
+| anim                    | Description not available. |
+| bind                    | Description not available. |
+| bindOrientated          | Description not available. |
+| bindToBody              | Description not available. |
+| bindToJoint             | Description not available. |
+| bindanim                | Description not available. |
+| cameraTarget            | Description not available. |
+| cinematic               | Description not available. |
+| classname               | Description not available. |
+| clipmodel               | Description not available. |
+| cone                    | Description not available. |
+| crashSpeedLarge         | Description not available. |
+| crashSpeedMedium        | Description not available. |
+| crashSpeedSmall         | Description not available. |
+| cylinder                | Description not available. |
+| damageStaticChance      | Description not available. |
+| def\_crashDamage        | Description not available. |
+| def\_persona            | Description not available. |
+| def\_position\_driver   | Description not available. |
+| def\_stompDamage        | Description not available. |
+| dodecahedron            | Description not available. |
+| editor\_color           | Description not available. |
+| editor\_maxs            | Description not available. |
+| editor\_menu            | Description not available. |
+| editor\_mins            | Description not available. |
+| editor\_rotatable       | Description not available. |
+| editor\_usage           | Walker Vehicle.            |
+| exit\_vehicle\_delay    | Description not available. |
+| fx\_death               | Description not available. |
+| fx\_electrical\_stall   | Description not available. |
+| fx\_shield              | Description not available. |
+| gui                     | Description not available. |
+| guiTarget               | Description not available. |
+| gui\_hud                | Description not available. |
+| health                  | Description not available. |
+| healthRegenDelay        | Description not available. |
+| healthRegenRate         | Description not available. |
+| hide                    | Description not available. |
+| hidesurface             | Description not available. |
+| hudid                   | Description not available. |
+| inherit                 | Description not available. |
+| instance                | Description not available. |
+| joint\_eyeOffset        | Description not available. |
+| lowhealth               | Description not available. |
+| mass                    | Description not available. |
+| maxs                    | Description not available. |
+| mins                    | Description not available. |
+| model                   | Description not available. |
+| name                    | Description not available. |
+| nav\_active             | Description not available. |
+| networkSync             | Description not available. |
+| neverDormant            | Description not available. |
+| noclipmodel             | Description not available. |
+| origin                  | Description not available. |
+| rotation                | Description not available. |
+| scriptobject            | Description not available. |
+| shadow\_lod\_distance   | Description not available. |
+| shieldHealth            | Description not available. |
+| shieldMaxs              | Description not available. |
+| shieldMins              | Description not available. |
+| shieldRegenDelay        | Description not available. |
+| shieldRegenTime         | Description not available. |
+| shieldSides             | Description not available. |
+| size                    | Description not available. |
+| snd\_footstep           | Description not available. |
+| snd\_incomingProjectile | Description not available. |
+| snd\_malfunction        | Description not available. |
+| snd\_servo              | Description not available. |
+| snd\_shieldRecharge     | Description not available. |
+| snd\_shieldWarning      | Description not available. |
+| snd\_start              | Description not available. |
+| snd\_stop               | Description not available. |
+| snd\_voiceHazard        | Description not available. |
+| snd\_voiceLowHealth     | Description not available. |
+| snd\_voiceNoExit        | Description not available. |
+| snd\_voiceSafe          | Description not available. |
+| solidForTeam            | Description not available. |
+| spawnclass              | Description not available. |
+| stepheight              | Description not available. |
+| strafe\_delta           | Description not available. |
+| target                  | Description not available. |
+| team                    | Description not available. |
+| touchtriggers           | Description not available. |
+| trigger\_anim           | Description not available. |
+| turnRate                | Description not available. |
+| usable                  | Description not available. |
 
 Inheritance
 -----------

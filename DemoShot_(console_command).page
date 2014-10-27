@@ -1,8 +1,7 @@
 Description
 -----------
 
-Takes a screenshot and saves it as a .
-[DEMO](DEMO_%28file_format%29 "DEMO (file format)") file.
+Takes a screenshot and saves it as a . [DEMO](DEMO_%28file_format%29 "DEMO (file format)") file.
 
 Usage
 -----
@@ -19,14 +18,10 @@ Parameters
 Notes
 -----
 
-If filename option is used this command will output a file with the
-following name:
+If filename option is used this command will output a file with the following name:
 
     shot_<filename>.demo
 
-These demo shots can be benchmarked with the
-[timeDemo](TimeDemo_%28console_command%29 "TimeDemo (console command)")
-console command.
+These demo shots can be benchmarked with the [timeDemo](TimeDemo_%28console_command%29 "TimeDemo (console command)") console command.
 
-\
 

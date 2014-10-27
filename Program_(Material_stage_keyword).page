@@ -1,11 +1,7 @@
 Description
 -----------
 
-The **program** keyword is an alias for the keywords
-[fragmentProgram](FragmentProgram_%28Material_stage_keyword%29 "FragmentProgram (Material stage keyword)")
-and
-[vertexProgram](VertexProgram_%28Material_stage_keyword%29 "VertexProgram (Material stage keyword)")
-.
+The **program** keyword is an alias for the keywords [fragmentProgram](FragmentProgram_%28Material_stage_keyword%29 "FragmentProgram (Material stage keyword)") and [vertexProgram](VertexProgram_%28Material_stage_keyword%29 "VertexProgram (Material stage keyword)") .
 
 Usage
 -----
@@ -15,14 +11,12 @@ Usage
 Parameters
 ----------
 
--   [prog] = The vfp file containing both the vertex and fragment
-    programs to exectute.
+-   [prog] = The vfp file containing both the vertex and fragment programs to exectute.
 
 Example
 -------
 
-Distorts the current frame using the normal map helmet\_local.tga and
-heatHazeWithMaskAndVertex.vfp...
+Distorts the current frame using the normal map helmet\_local.tga and heatHazeWithMaskAndVertex.vfp...
 
     {
        program         heatHazeWithMaskAndVertex.vfp
@@ -37,5 +31,4 @@ Notes
 
 Not available.
 
-\
 

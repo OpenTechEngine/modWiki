@@ -1,8 +1,7 @@
 Description
 -----------
 
-Creates a [bump map](Texturing#Bump_maps "Texturing") stage in a
-material shader.
+Creates a [bump map](Texturing#Bump_maps "Texturing") stage in a material shader.
 
 Usage
 -----
@@ -14,9 +13,7 @@ In the global section of your material shader type...
 Parameters
 ----------
 
--   [map] - the relative path and file name from /
-    [base](Base_%28folder%29 "Base (folder)") to the specified bump map
-    image.
+-   [map] - the relative path and file name from / [base](Base_%28folder%29 "Base (folder)") to the specified bump map image.
 
 Notes
 -----
@@ -28,5 +25,4 @@ This keyword is shorthand for...
      map [map]
     }
 
-\
 

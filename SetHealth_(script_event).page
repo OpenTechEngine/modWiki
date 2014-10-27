@@ -1,15 +1,12 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type
-[idEntity](IdEntity_%28class%29 "IdEntity (class)")
+This event operates on an instance of the [game class](Game_class "Game class") type [idEntity](IdEntity_%28class%29 "IdEntity (class)")
 
 Description
 -----------
 
-Set the health of the associated entity via the health spawn argument.
-(i.e. item, NPC, etc.)
+Set the health of the associated entity via the health spawn argument. (i.e. item, NPC, etc.)
 
 Usage
 -----
@@ -31,39 +28,21 @@ Examples
 Notes
 -----
 
-Along with setting the health variable, the event has the following
-implementation for different games:
-
-<div>
+Along with setting the health variable, the event has the following implementation for different games:
 
 ![](/images/2/23/D3square_25.png) **Note:** Doom 3 only:
-*Is an event on idAI only: Calling this event will set the
-**takesdamage** flag of the entity to **true** .*
-
-</div>
-
-<div>
+*Is an event on idAI only: Calling this event will set the **takesdamage** flag of the entity to **true** .*
 
 ![](/images/e/e8/Q4square_25.png) **Note:** Quake 4 only:
 *Event on idEntity.*
 Event on idPlayer: clamps to max health.
 
-Event on idAI: Calling this event will set the **takesdamage** flag of
-the entity to **true** . **
+Event on idAI: Calling this event will set the **takesdamage** flag of the entity to **true** . **
 
-</div>
-
-<div>
-
-![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake
-Wars only:
-*Event on idPlayer, calls script object function OnHealed if health is
-set greater than current and greater than 0.*
+![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake Wars only:
+*Event on idPlayer, calls script object function OnHealed if health is set greater than current and greater than 0.*
 Event on idProjectile.
 
 sdScriptEntity: Calls script object function OnPostDamage **
 
-</div>
-
-\
 

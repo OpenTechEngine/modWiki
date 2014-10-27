@@ -1,22 +1,11 @@
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/f/f9/Etqwsquare_bg.png) The information on this page is
-specific to [Enemy Territory: Quake
-Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
-
-</div>
+![](/images/f/f9/Etqwsquare_bg.png) The information on this page is specific to [Enemy Territory: Quake Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
 
 ------------------------------------------------------------------------
 
 Overview
 --------
 
-Read while loading the level, contains [map entity
-dictionary](Map_entity_dictionary "Map entity dictionary") for each
-entity in ASCII text. Similar to the
-[MAP](MAP_%28file_format%29 "MAP (file format)") format, minus the brush
-and patch definitions.
+Read while loading the level, contains [map entity dictionary](Map_entity_dictionary "Map entity dictionary") for each entity in ASCII text. Similar to the [MAP](MAP_%28file_format%29 "MAP (file format)") format, minus the brush and patch definitions.
 
 Map Format Syntax
 -----------------
@@ -27,13 +16,11 @@ Generally, ENTITIESs consist of entities.
 
 The ENTITIES file format supports in-line comments.
 
-To start a comment, place two forward slashes. ( '//' ) Everything
-behind these markers is ignored.
+To start a comment, place two forward slashes. ( '//' ) Everything behind these markers is ignored.
 
 ### Header
 
-The first non-empty/non-comment line contains the header, which
-currently consists of nothing more than the version.
+The first non-empty/non-comment line contains the header, which currently consists of nothing more than the version.
 
 For Enemy Territory, the header is:
 
@@ -41,19 +28,13 @@ For Enemy Territory, the header is:
 
 ### Entities
 
-An entity definition starts by a curly open brace, ( '{' ) and runs on
-till a matching curly closing brace is found. ( '}' )
+An entity definition starts by a curly open brace, ( '{' ) and runs on till a matching curly closing brace is found. ( '}' )
 
-The next lines contain the entity's key/value pairs. First comes the
-name, then the value. Both are enclosed in double quotes, with a space
-in between.
+The next lines contain the entity's key/value pairs. First comes the name, then the value. Both are enclosed in double quotes, with a space in between.
 
 After those keys and values, one or more brush definitions may follow.
 
-**Note:** An entity should at least have a "spawnclass" key, otherwise
-unpredictable behaviour might occur.
+**Note:** An entity should at least have a "spawnclass" key, otherwise unpredictable behaviour might occur.
 
-**Note:** The first entity should have a "spawnclass" key with value
-"worldspawn". There can only be **one** entity with this spawnclass in a
-whole ENTITIES file.
+**Note:** The first entity should have a "spawnclass" key with value "worldspawn". There can only be **one** entity with this spawnclass in a whole ENTITIES file.
 

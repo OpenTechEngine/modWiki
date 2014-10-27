@@ -1,16 +1,8 @@
-A game class is a class of
-[idClass](IdClass_%28class%29 "IdClass (class)") type in the [game
-code](Coding#game_code "Coding") .
+A game class is a class of [idClass](IdClass_%28class%29 "IdClass (class)") type in the [game code](Coding#game_code "Coding") .
 
-It provides real time type checking and
-[events](Event_system "Event system") .
+It provides real time type checking and [events](Event_system "Event system") .
 
-The base [spawn class](Spawn_class "Spawn class")
-[idEntity](IdEntity_%28class%29 "IdEntity (class)") inherits from
-[idClass](IdClass_%28class%29 "IdClass (class)") .
+The base [spawn class](Spawn_class "Spawn class") [idEntity](IdEntity_%28class%29 "IdEntity (class)") inherits from [idClass](IdClass_%28class%29 "IdClass (class)") .
 
-Events from an instance of a game class can be exposed to the
-[scripting](Scripting "Scripting") system using a [script
-event](Script_event "Script event") declaration in the global scripting
-namespace.
+Events from an instance of a game class can be exposed to the [scripting](Scripting "Scripting") system using a [script event](Script_event "Script event") declaration in the global scripting namespace.
 

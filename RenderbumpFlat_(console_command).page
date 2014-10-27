@@ -1,9 +1,7 @@
 Description
 -----------
 
-This command renders a normal map from a high polygon model. The
-resulting normal map is intended for use on map geometry (walls,
-ceilings, floors, ect...).
+This command renders a normal map from a high polygon model. The resulting normal map is intended for use on map geometry (walls, ceilings, floors, ect...).
 
 Usage
 -----
@@ -24,24 +22,13 @@ Notes
 
 If the image size is not specified, the default of 256 x 256 is used.
 
-If the target resolution is larger than your current resolution, you
-will need to adjust the [r\_mode](R_mode_%28cvar%29 "R mode (cvar)")
-CVar and issue a
-[vid\_restart](Vid_restart_%28console_command%29 "Vid restart (console command)")
-command to accommodate a larger image. Since this command renders in
-windowed mode it's important that the desktop resolution provides enough
-screen real estate to display the entire window.
+If the target resolution is larger than your current resolution, you will need to adjust the [r\_mode](R_mode_%28cvar%29 "R mode (cvar)") CVar and issue a [vid\_restart](Vid_restart_%28console_command%29 "Vid restart (console command)") command to accommodate a larger image. Since this command renders in windowed mode it's important that the desktop resolution provides enough screen real estate to display the entire window.
 
-Models must be oriented towards a specific axis in order to be captured
-during the render process. Details are as follows...
+Models must be oriented towards a specific axis in order to be captured during the render process. Details are as follows...
 
 -   .LWO - Negative Z Axis
 -   .ASE - ???
 
-A color map is also exported. The colors are determined by the base
-color of each polygon. For clarification, base color does not refer to
-vertex colors, procedural textures or texture maps but rather the color
-of a polygon when no texture is applied.
+A color map is also exported. The colors are determined by the base color of each polygon. For clarification, base color does not refer to vertex colors, procedural textures or texture maps but rather the color of a polygon when no texture is applied.
 
-\
 

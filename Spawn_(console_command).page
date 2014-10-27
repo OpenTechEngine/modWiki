@@ -14,18 +14,15 @@ Parameters
 ----------
 
 -   [entity] - the name of the entity type to spawn.
--   [kvpairs] - the key/value pairs or spawn arguments you'd like to
-    assign to the specified entity type.
+-   [kvpairs] - the key/value pairs or spawn arguments you'd like to assign to the specified entity type.
 
 Notes
 -----
 
-Key/value pairs are assigned using quotation marks around each
-individual key and value. They are separated by spaces. For example...
+Key/value pairs are assigned using quotation marks around each individual key and value. They are separated by spaces. For example...
 
     spawn monster_demon_imp "name" "turdburgler"
 
 ... would spawn an imp with the name turdburgler.
 
-\
 

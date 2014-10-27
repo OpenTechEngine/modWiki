@@ -1,50 +1,37 @@
 Vertex Painted ASE Models with DarkRadiant and Blender 2.53
 ===========================================================
 
-For the level designer who is not comfortable in a modeling package I've
-written a series of ASE import and export plugins so that you might
-benefit from vertex blending or coloring in your maps.
+For the level designer who is not comfortable in a modeling package I've written a series of ASE import and export plugins so that you might benefit from vertex blending or coloring in your maps.
 
-These plugins will not absolve you of a modeling application completely
-however they will spare you from modeling and uv mapping. Essentially
-the entire process has been reduced to four steps.
+These plugins will not absolve you of a modeling application completely however they will spare you from modeling and uv mapping. Essentially the entire process has been reduced to four steps.
 
 1.  Export map geometry from DarkRadiant
 2.  Import resulting .ASE into Blender
 3.  Switch to vertex paint mode and paint
 4.  Export object(s) from Blender
 
-It is assumed you already have DarkRadiant 1.4 and Blender 2.53
-installed.
+It is assumed you already have DarkRadiant 1.4 and Blender 2.53 installed.
 
 ### Required Plugins
 
 -   DarkRadiant ASE Export
--   [Blender 2.53 ASE
-    Import](https://docs.google.com/leaf?id=0B3KUZe06PPyDM2FhMGQ1YjYtNDVhYy00Y2I4LWI5OWEtMWE1Njg3ZTYzZmVh&hl=en "https://docs.google.com/leaf?id=0B3KUZe06PPyDM2FhMGQ1YjYtNDVhYy00Y2I4LWI5OWEtMWE1Njg3ZTYzZmVh&hl=en")
--   [Blender 2.53 ASE
-    Export](https://docs.google.com/leaf?id=0B3KUZe06PPyDYjI2ZDAxYmYtN2I3NS00MjFkLTkyNTAtOGFjYTI4MzQ3MzQ5&hl=en "https://docs.google.com/leaf?id=0B3KUZe06PPyDYjI2ZDAxYmYtN2I3NS00MjFkLTkyNTAtOGFjYTI4MzQ3MzQ5&hl=en")
+-   [Blender 2.53 ASE Import](https://docs.google.com/leaf?id=0B3KUZe06PPyDM2FhMGQ1YjYtNDVhYy00Y2I4LWI5OWEtMWE1Njg3ZTYzZmVh&hl=en "https://docs.google.com/leaf?id=0B3KUZe06PPyDM2FhMGQ1YjYtNDVhYy00Y2I4LWI5OWEtMWE1Njg3ZTYzZmVh&hl=en")
+-   [Blender 2.53 ASE Export](https://docs.google.com/leaf?id=0B3KUZe06PPyDYjI2ZDAxYmYtN2I3NS00MjFkLTkyNTAtOGFjYTI4MzQ3MzQ5&hl=en "https://docs.google.com/leaf?id=0B3KUZe06PPyDYjI2ZDAxYmYtN2I3NS00MjFkLTkyNTAtOGFjYTI4MzQ3MzQ5&hl=en")
 
-The DarkRadiant ASE Export plugin is bundled with DarkRadiant and will
-not need to be installed.
+The DarkRadiant ASE Export plugin is bundled with DarkRadiant and will not need to be installed.
 
 Plugin Installation
 -------------------
 
-Due to discrepancies that arise depending on what operating system you
-are using, whether you are using the 32-bit or 64-bit versions of
-Blender, and installation options, the full path for installation may
-vary.
+Due to discrepancies that arise depending on what operating system you are using, whether you are using the 32-bit or 64-bit versions of Blender, and installation options, the full path for installation may vary.
 
 ### Blender 2.53
 
-The Blender 2.53 ASE Import and Export plugins (import\_ase.py and
-export\_ase.py) should be placed in the relative path below.
+The Blender 2.53 ASE Import and Export plugins (import\_ase.py and export\_ase.py) should be placed in the relative path below.
 
     ...\scripts\io
 
-If you have difficulty finding this location on your system you can
-perform a search for any of the following files.
+If you have difficulty finding this location on your system you can perform a search for any of the following files.
 
     engine_render_pov.py
     export_3ds.py
@@ -58,154 +45,102 @@ perform a search for any of the following files.
     import_scene_obj.py
     import_shape_mdd.py
 
-Once you have placed **import\_ase.py** and **export\_ase.py** in the
-location described above you can verify installation by starting Blender
-2.53. If **Ascii Scene Export (.ASE)** is available in the **File \>
-Import** and **File \> Export** menus, installation was successful.
+Once you have placed **import\_ase.py** and **export\_ase.py** in the location described above you can verify installation by starting Blender 2.53. If **Ascii Scene Export (.ASE)** is available in the **File \> Import** and **File \> Export** menus, installation was successful.
 
 Exporting Geometry From DarkRadiant
 -----------------------------------
 
-Only brushes and patches may be exported using **Export ASE...** from
-DarkRadiant. This excludes entities comprised of brushes and patches. If
-you intend to export such an entity please revert it to worldspawn
-first.
+Only brushes and patches may be exported using **Export ASE...** from DarkRadiant. This excludes entities comprised of brushes and patches. If you intend to export such an entity please revert it to worldspawn first.
 
-Also it should be mentioned that at the time of this writing, The Dark
-Mod does not appear to come with many if any vertex blended or vertex
-colored material shaders. If you intend to use such a material, you'll
-need to use one from Doom 3 or create a new one before you reach this
-step.
+Also it should be mentioned that at the time of this writing, The Dark Mod does not appear to come with many if any vertex blended or vertex colored material shaders. If you intend to use such a material, you'll need to use one from Doom 3 or create a new one before you reach this step.
 
-If you don't know how to create such a material you'll find a brief
-description of the process in Appendix B at the end of this document.
+If you don't know how to create such a material you'll find a brief description of the process in Appendix B at the end of this document.
 
-Assuming you have DarkRadiant open, you have created or loaded the map
-geometry you intend to export, and vertex blended or colored material
-shaders are applied to your satisfaction, perform the following steps.
+Assuming you have DarkRadiant open, you have created or loaded the map geometry you intend to export, and vertex blended or colored material shaders are applied to your satisfaction, perform the following steps.
 
-1.  Select the brushes and patches for export.\
+1.  Select the brushes and patches for export.
 
     **Missing image: */w/images/a/aa/Step2.1.PNG***
 
-2.  Select Scripts \> Export ASE...\
+2.  Select Scripts \> Export ASE...
 
     **Missing image: */w/images/4/43/Step2.2.PNG***
 
-3.  In the filename textbox enter a filename.\
+3.  In the filename textbox enter a filename.
 
     **Missing image: */w/images/7/7b/Step2.3.PNG***
 
-4.  In the path textbox enter the path or use the elipsis button on the
-    right side of the text box to browse for a folder.\
+4.  In the path textbox enter the path or use the elipsis button on the right side of the text box to browse for a folder.
 
     **Missing image: */w/images/6/63/Step2.4.PNG***
 
-5.  Click the OK button.\
+5.  Click the OK button.
 
-If export was successful you will find a file with the name you've
-specified at the location specified. If you attempt to overwrite the
-file you will be prompted to confirm or cancel the operation.
+If export was successful you will find a file with the name you've specified at the location specified. If you attempt to overwrite the file you will be prompted to confirm or cancel the operation.
 
-If for some reason there was a problem no file will be exported and an
-error message will be present in the console.
+If for some reason there was a problem no file will be exported and an error message will be present in the console.
 
 Importing the .ASE into Blender 2.53
 ------------------------------------
 
-When starting Blender you will be presented with the default layout
-which includes a scene with a camera, light, and cube primative in the
-main viewport.
+When starting Blender you will be presented with the default layout which includes a scene with a camera, light, and cube primative in the main viewport.
 
-**Missing image:
-*/w/images/thumb/f/fd/Step3general1.PNG/800px-Step3general1.PNG***
+**Missing image: */w/images/thumb/f/fd/Step3general1.PNG/800px-Step3general1.PNG***
 
-The cube should be highlighted in orange to identify it as being
-selected. If not right click it. Press x to delete it from the scene.
+The cube should be highlighted in orange to identify it as being selected. If not right click it. Press x to delete it from the scene.
 
 **Missing image: */w/images/f/f9/Step3general2.PNG***
 
 With the cube removed, perform the following steps.
 
-1.  Click File \> Import \> Ascii Scene Export (.ASE) to open the file
-    browser.\
+1.  Click File \> Import \> Ascii Scene Export (.ASE) to open the file browser.
 
     **Missing image: */w/images/e/e0/Step3.1.PNG***
 
-2.  Navigate to the location of the .ASE exported in the previous
-    section and select the file.\
+2.  Navigate to the location of the .ASE exported in the previous section and select the file.
 
     **Missing image: */w/images/e/ea/Step3.2.PNG***
 
-3.  Click the Import ASE button in the top right corner.\
+3.  Click the Import ASE button in the top right corner.
 
     **Missing image: */w/images/1/1a/Step3.3.PNG***
 
-If import was successful familiar geometry should appear in the main
-viewport and be reflected in the outliner. Take care that if you were to
-switch to textured mode, no texture would appear on the model. But rest
-assured that the material shaders applied in DarkRadiant have been
-preserved.
+If import was successful familiar geometry should appear in the main viewport and be reflected in the outliner. Take care that if you were to switch to textured mode, no texture would appear on the model. But rest assured that the material shaders applied in DarkRadiant have been preserved.
 
 **Missing image: */w/images/b/bb/Step3general3.PNG***
 
-The reason for this is because a material shader as used in the idTech 4
-engine is not an image as Blender expects all textures to be. Instead,
-it is a declaration which references several images along side other
-game assets. Take note that in the image below, the texture panel is
-making reference to a non-existant image texture. This reference
-"textures/rock/newdarkrockblend" does not represent a file named
-newdarkrockblend in a folder called textures/rock. This is in fact the
-full name of a material shader.
+The reason for this is because a material shader as used in the idTech 4 engine is not an image as Blender expects all textures to be. Instead, it is a declaration which references several images along side other game assets. Take note that in the image below, the texture panel is making reference to a non-existant image texture. This reference "textures/rock/newdarkrockblend" does not represent a file named newdarkrockblend in a folder called textures/rock. This is in fact the full name of a material shader.
 
 **Missing image: */w/images/b/b4/Step3general4.PNG***
 
-While it is theoretically possible to give the script the ability to
-read the contents of .pk4 files, load the contents of .mtr files,
-identify the specified material shader, and extract/convert the required
-image files so that they may be loaded into Blender, it is not required
-for vertex painting.
+While it is theoretically possible to give the script the ability to read the contents of .pk4 files, load the contents of .mtr files, identify the specified material shader, and extract/convert the required image files so that they may be loaded into Blender, it is not required for vertex painting.
 
-In the future such functionality may be incoorporated into the script
-but as it stands, it is not too much to ask that you refrain from
-playing with texture settings within Blender unless you know what you
-are doing.
+In the future such functionality may be incoorporated into the script but as it stands, it is not too much to ask that you refrain from playing with texture settings within Blender unless you know what you are doing.
 
-It is important to note that brushes with multiple textures are exported
-as separate objects within a single .ASE file. Although the .ASE format
-supports unique textures per-face, idTech 4 does not so spliting faces
-into separate objects is required.
+It is important to note that brushes with multiple textures are exported as separate objects within a single .ASE file. Although the .ASE format supports unique textures per-face, idTech 4 does not so spliting faces into separate objects is required.
 
-If there were any problems during import or it appears parts of the
-model are missing, check the console which would be the DOS or BASH
-terminal running in the background for error messages. If you encounter
-a problem please share the full contents of the console and the .ASE so
-that I can fix it.
+If there were any problems during import or it appears parts of the model are missing, check the console which would be the DOS or BASH terminal running in the background for error messages. If you encounter a problem please share the full contents of the console and the .ASE so that I can fix it.
 
 **Missing image: */w/images/c/c3/Step3general5.PNG***
 
 Vertex Painting Each Object
 ---------------------------
 
-For each mesh object in your scene you plan to vertex paint, perform the
-following steps.
+For each mesh object in your scene you plan to vertex paint, perform the following steps.
 
-1.  Right click the object to select it.\
+1.  Right click the object to select it.
 
     **Missing image: */w/images/1/1e/Step4.1.PNG***
 
-2.  Press the period key on your numpad to focus the viewport on the
-    selection.\
+2.  Press the period key on your numpad to focus the viewport on the selection.
 
     **Missing image: */w/images/7/7d/Step4.2.PNG***
 
-3.  Select Vertex Paint mode from the mode selection box at the bottom
-    of the main viewport.\
+3.  Select Vertex Paint mode from the mode selection box at the bottom of the main viewport.
 
     **Missing image: */w/images/3/38/Step4.3.PNG***
 
-4.  Using the following controls, paint the vertices of the selected
-    object.
+4.  Using the following controls, paint the vertices of the selected object.
     -   the middle mouse button to rotate
     -   the shift key and middle mouse button to pan
     -   the mouse wheel to zoom
@@ -214,261 +149,195 @@ following steps.
 
 **Missing image: */w/images/c/cc/Step4general2.PNG***
 
-**Missing image:
-*/w/images/thumb/8/8a/Step4general1.PNG/400px-Step4general1.PNG***
+**Missing image: */w/images/thumb/8/8a/Step4general1.PNG/400px-Step4general1.PNG***
 
-Vertex blending is when two textures are blended based on the color of
-the underlying vertices. idTech 4 dictates that you use white to
-represent one texture and black to represent the other. Gray values are
-used to gradually blend between the two.
+Vertex blending is when two textures are blended based on the color of the underlying vertices. idTech 4 dictates that you use white to represent one texture and black to represent the other. Gray values are used to gradually blend between the two.
 
-Vertex coloring is when one texture is tinted based on the color of the
-underlying vertices. You are not restricted in color usage although I am
-hard pressed to find a use for this. Technically you could paint shadows
-and the like on a mesh provided the geometry was dense enough.
+Vertex coloring is when one texture is tinted based on the color of the underlying vertices. You are not restricted in color usage although I am hard pressed to find a use for this. Technically you could paint shadows and the like on a mesh provided the geometry was dense enough.
 
 Exporting Objects from Blender 2.53
 -----------------------------------
 
-If you've created any new geometry within Blender it must be uv mapped
-and assigned a material before you can export. A brief explanation will
-be covered in Appendix A at the end of this document.
+If you've created any new geometry within Blender it must be uv mapped and assigned a material before you can export. A brief explanation will be covered in Appendix A at the end of this document.
 
-That said, if you've been following the tutorial and the objects in the
-scene are vertex painted to your satisfaction you are ready to export.
+That said, if you've been following the tutorial and the objects in the scene are vertex painted to your satisfaction you are ready to export.
 
-To make your selection visible it's best to change the mode from vertex
-paint to object mode. Right click each mesh object in your scene and
-choose object mode from the mode selection box.
+To make your selection visible it's best to change the mode from vertex paint to object mode. Right click each mesh object in your scene and choose object mode from the mode selection box.
 
 **Missing image: */w/images/a/a0/Step5general1.PNG***
 
 Now you are prepared to export a group selection of objects.
 
-1.  Right click to select a mesh object.\
+1.  Right click to select a mesh object.
 
     **Missing image: */w/images/f/ff/Step5.1.PNG***
 
-2.  Hold shift and right click each mesh object to add it to the
-    selection.
-3.  With everything you intend to export selected, click File \>
-    Export \> Ascii Scene Export (.ASE)\
+2.  Hold shift and right click each mesh object to add it to the selection.
+3.  With everything you intend to export selected, click File \> Export \> Ascii Scene Export (.ASE)
 
     **Missing image: */w/images/9/90/Step5.3.PNG***
 
-4.  Navigate to the location you wish to export and type a unique
-    filename in the filename text box.\
+4.  Navigate to the location you wish to export and type a unique filename in the filename text box.
 
     **Missing image: */w/images/8/8b/Step5.4.PNG***
 
-5.  Click the Export ASE button in the top right corner.\
+5.  Click the Export ASE button in the top right corner.
 
     **Missing image: */w/images/d/d2/Step5.5.PNG***
 
-If export was successful a file with the name specified will appear in
-the location specified. If you attempt to overwrite an existing file the
-plugin will abort.
+If export was successful a file with the name specified will appear in the location specified. If you attempt to overwrite an existing file the plugin will abort.
 
-If no file exists check the console to ensure no problems were
-encountered during export. Now you should be able to copy the resulting
-.ASE file into the appropriate location along with your mod assets and
-use it in your map(s).
+If no file exists check the console to ensure no problems were encountered during export. Now you should be able to copy the resulting .ASE file into the appropriate location along with your mod assets and use it in your map(s).
 
 **Missing image: */w/images/4/47/Step5general2.PNG***
 
 Appendix A. Preparing a Native Object for Export
 ================================================
 
-If you've created objects within Blender, it is not enough to simply
-export them as you would with something you've imported from
-DarkRadiant.
+If you've created objects within Blender, it is not enough to simply export them as you would with something you've imported from DarkRadiant.
 
-The distinction is in the fact that brushes and patches exported to .ase
-from DarkRadiant are already UV mapped and have a material applied while
-objects created within Blender do not.
+The distinction is in the fact that brushes and patches exported to .ase from DarkRadiant are already UV mapped and have a material applied while objects created within Blender do not.
 
 ### UV Mapping
 
-**Missing image:
-*/w/images/a/a5/800px-Cube\_Representative\_UV\_Unwrapping.png***
+**Missing image: */w/images/a/a5/800px-Cube\_Representative\_UV\_Unwrapping.png***
 
-UV mapping is best explained through an analogy. Imagine you have a box
-and you want to lay it flat and run it through your printer to apply a
-texture to it. Obviously the box isn't going to lay flat unless you pull
-it apart at the seams.
+UV mapping is best explained through an analogy. Imagine you have a box and you want to lay it flat and run it through your printer to apply a texture to it. Obviously the box isn't going to lay flat unless you pull it apart at the seams.
 
-UV mapping is the process of marking the seams on your object and
-commanding Blender to unwrap it. Once an object has been UV mapped,
-you've essentially given Blender and more importantly idTech 4
-instructions on where parts of a 2D texture should appear on the 3D
-model.
+UV mapping is the process of marking the seams on your object and commanding Blender to unwrap it. Once an object has been UV mapped, you've essentially given Blender and more importantly idTech 4 instructions on where parts of a 2D texture should appear on the 3D model.
 
 For the purposes of this section the example object will be a cube.
 
-1.  On the menu bar immediately to the right of the help menu is the
-    layout dropdown box. Change the layout to UV editing.\
+1.  On the menu bar immediately to the right of the help menu is the layout dropdown box. Change the layout to UV editing.
 
     **Missing image: */w/images/5/57/Astep1.PNG***
 
-2.  Right click your object in the 3D viewport to select it and toggle
-    edit mode.\
+2.  Right click your object in the 3D viewport to select it and toggle edit mode.
 
     **Missing image: */w/images/0/0a/Astep2.PNG***
 
-3.  Change the selection mode to edge and press the a key to deselect
-    everything.\
+3.  Change the selection mode to edge and press the a key to deselect everything.
 
     **Missing image: */w/images/e/e1/Astep3.PNG***
 
-4.  Use right click followed by shift and right click to select a few
-    edges to designate as seams.\
+4.  Use right click followed by shift and right click to select a few edges to designate as seams.
 
     **Missing image: */w/images/6/68/Astep4.PNG***
 
-5.  On the tool shelf to the left of the 3D viewport under UV mapping
-    select Mark Seams.\
+5.  On the tool shelf to the left of the 3D viewport under UV mapping select Mark Seams.
 
     **Missing image: */w/images/c/cf/Astep5.PNG***
 
-6.  Repeat this process until you are satisfied. It may help to turn
-    wireframe mode on so you can see the seams on all sides of the
-    model.\
+6.  Repeat this process until you are satisfied. It may help to turn wireframe mode on so you can see the seams on all sides of the model.
 
     **Missing image: */w/images/7/7b/Astep6.PNG***
 
-7.  In the 3D viewport press the a key to select all.\
+7.  In the 3D viewport press the a key to select all.
 
     **Missing image: */w/images/9/93/Astep7.PNG***
 
-8.  On the tool shelf to the left of the 3D viewport under UV mapping
-    select Unwrap \> Unwrap. The unfolded version of your cube should
-    appear in the UV editor on the left.\
+8.  On the tool shelf to the left of the 3D viewport under UV mapping select Unwrap \> Unwrap. The unfolded version of your cube should appear in the UV editor on the left.
 
     **Missing image: */w/images/d/d8/Astep8a.PNG***
 
     **Missing image: */w/images/d/d6/Astep8b.PNG***
 
-9.  On the menu bar immediately to the right of the help menu is the
-    layout dropdown box. Change the layout to Default.\
+9.  On the menu bar immediately to the right of the help menu is the layout dropdown box. Change the layout to Default.
 
     **Missing image: */w/images/e/ec/Astep9.PNG***
 
-10. The seams are no longer needed. You may clear them by selecting all
-    with the a key followed by clicking the clear seams button on the
-    toolbar to the left of the 3D viewport under UV mapping.\
+10. The seams are no longer needed. You may clear them by selecting all with the a key followed by clicking the clear seams button on the toolbar to the left of the 3D viewport under UV mapping.
 
     **Missing image: */w/images/4/49/Astep10.PNG***
 
 ### Applying a Material
 
-Applying a material is important as well as it's where the export script
-learns what material shader to apply to each object.
+Applying a material is important as well as it's where the export script learns what material shader to apply to each object.
 
-1.  Change back to object mode using the mode selection box.\
+1.  Change back to object mode using the mode selection box.
 
     **Missing image: */w/images/e/e3/Aastep1.PNG***
 
-2.  Ensure the cube is selected and open the material properties on the
-    right.\
+2.  Ensure the cube is selected and open the material properties on the right.
 
     **Missing image: */w/images/d/dd/Aastep2.PNG***
 
-3.  Add a new material to the object.\
+3.  Add a new material to the object.
 
     **Missing image: */w/images/3/38/Aastep3.PNG***
 
-4.  Open the texture properties and select the first texture channel.\
+4.  Open the texture properties and select the first texture channel.
 
     **Missing image: */w/images/9/9f/Aastep4.PNG***
 
-5.  Change the type to image.\
+5.  Change the type to image.
 
     **Missing image: */w/images/4/40/Aastep5.PNG***
 
-6.  Scroll down to the image properties and add a new image.\
+6.  Scroll down to the image properties and add a new image.
 
     **Missing image: */w/images/8/88/Aastep6.PNG***
 
-7.  Change the source to file.\
+7.  Change the source to file.
 
     **Missing image: */w/images/7/74/Aastep7.PNG***
 
-8.  In the file name text box type the full material shader name.\
+8.  In the file name text box type the full material shader name.
 
     **Missing image: */w/images/d/d5/Aastep8.PNG***
 
-At this point the object should be ready for export. If you have
-multiple objects you'd like to export as an .ASE you'll need to uv map
-and apply a material to them separately.
+At this point the object should be ready for export. If you have multiple objects you'd like to export as an .ASE you'll need to uv map and apply a material to them separately.
 
 Appendix B. Preparing Vertex Blended or Colored Material Shaders
 ================================================================
 
-Generally this is a matter of opening up one or multiple material
-shader(s), mixing and matching portions of them, making a few
-modifications, and saving the newly created material shader with a
-unique name.
+Generally this is a matter of opening up one or multiple material shader(s), mixing and matching portions of them, making a few modifications, and saving the newly created material shader with a unique name.
 
-In section four I outlined the difference between vertex blended and
-vertex colored material shaders. I'm going to assume you've grasped the
-concept and know which of the two you're after.
+In section four I outlined the difference between vertex blended and vertex colored material shaders. I'm going to assume you've grasped the concept and know which of the two you're after.
 
-It would also be of great benefit if you studied the texturing
-documentation available here along with a few existing materials that
-make use of vertex colors like textures/rock/dirt03\_sharprock3.
+It would also be of great benefit if you studied the texturing documentation available here along with a few existing materials that make use of vertex colors like textures/rock/dirt03\_sharprock3.
 
 ### Vertex Blended
 
 1.  Open DarkRadiant along with a plain text editor like notepad.
-2.  In the media browser identify the first material you'd like to use.\
+2.  In the media browser identify the first material you'd like to use.
 
-    **Missing image:
-    */w/images/thumb/c/ca/Bstep2.PNG/800px-Bstep2.PNG***
+    **Missing image: */w/images/thumb/c/ca/Bstep2.PNG/800px-Bstep2.PNG***
 
-3.  Right click it and select show shader definition.\
+3.  Right click it and select show shader definition.
 
     **Missing image: */w/images/0/0f/Bstep3.PNG***
 
-4.  Copy the text that makes up the material shader into your text
-    editor.\
+4.  Copy the text that makes up the material shader into your text editor.
 
-    **Missing image:
-    */w/images/thumb/d/dd/Bstep4.PNG/800px-Bstep4.PNG***
+    **Missing image: */w/images/thumb/d/dd/Bstep4.PNG/800px-Bstep4.PNG***
 
-5.  Repeat this process for a second material adding the additional text
-    to the bottom.
-6.  In your text editor break any diffusemap, bumpmap, or specularmap
-    keywords into stages.\
+5.  Repeat this process for a second material adding the additional text to the bottom.
+6.  In your text editor break any diffusemap, bumpmap, or specularmap keywords into stages.
 
-    **Missing image:
-    */w/images/thumb/8/85/Bstep6a.PNG/400px-Bstep6a.PNG***
+    **Missing image: */w/images/thumb/8/85/Bstep6a.PNG/400px-Bstep6a.PNG***
 
-    **Missing image:
-    */w/images/thumb/2/26/Bstep6b.PNG/400px-Bstep6b.PNG***
+    **Missing image: */w/images/thumb/2/26/Bstep6b.PNG/400px-Bstep6b.PNG***
 
-7.  Remove any image processing keywords like addheightmap if present so
-    only the most logical image reference remains.
-8.  In the first material shader, add the keyword vertexColor to each
-    stage.\
+7.  Remove any image processing keywords like addheightmap if present so only the most logical image reference remains.
+8.  In the first material shader, add the keyword vertexColor to each stage.
 
     **Missing image: */w/images/f/fa/Bstep8.PNG***
 
-9.  In the second material shader, add the keyword inverseVertexColor to
-    each stage.\
+9.  In the second material shader, add the keyword inverseVertexColor to each stage.
 
     **Missing image: */w/images/e/e2/Bstep9.PNG***
 
-10. Cut and paste the stages from the second material shader into the
-    end of the first.\
+10. Cut and paste the stages from the second material shader into the end of the first.
 
     **Missing image: */w/images/a/a4/Bstep10.PNG***
 
 11. Delete the remnants of the second material shader.
-12. Rename the remaining material shader so that it has a unique name.\
+12. Rename the remaining material shader so that it has a unique name.
 
     **Missing image: */w/images/2/28/Bstep12.PNG***
 
-13. Save it as an .mtr file.\
+13. Save it as an .mtr file.
 
     **Missing image: */w/images/d/da/Bstep13.PNG***
 
@@ -477,38 +346,33 @@ make use of vertex colors like textures/rock/dirt03\_sharprock3.
 ### Vertex Colored
 
 1.  Open DarkRadiant along with a text editor.
-2.  In the media browser identify the material you'd like to use.\
+2.  In the media browser identify the material you'd like to use.
 
-    **Missing image:
-    */w/images/thumb/a/aa/Bbstep2.PNG/800px-Bbstep2.PNG***
+    **Missing image: */w/images/thumb/a/aa/Bbstep2.PNG/800px-Bbstep2.PNG***
 
-3.  Right click it and select show shader definition.\
+3.  Right click it and select show shader definition.
 
     **Missing image: */w/images/1/19/Bbstep3.PNG***
 
-4.  Copy the material shader into your text editor.\
+4.  Copy the material shader into your text editor.
 
-    **Missing image:
-    */w/images/thumb/a/a3/Bbstep4.PNG/800px-Bbstep4.PNG***
+    **Missing image: */w/images/thumb/a/a3/Bbstep4.PNG/800px-Bbstep4.PNG***
 
-5.  In your text editor break the diffusemap keyword if present, into a
-    stage.\
+5.  In your text editor break the diffusemap keyword if present, into a stage.
 
-    **Missing image:
-    */w/images/thumb/9/98/Bbstep5a.PNG/400px-Bbstep5a.PNG***
+    **Missing image: */w/images/thumb/9/98/Bbstep5a.PNG/400px-Bbstep5a.PNG***
 
-    **Missing image:
-    */w/images/thumb/7/71/Bbstep5b.PNG/400px-Bbstep5b.PNG***
+    **Missing image: */w/images/thumb/7/71/Bbstep5b.PNG/400px-Bbstep5b.PNG***
 
-6.  Add the keyword vertexColor to the diffuse stage.\
+6.  Add the keyword vertexColor to the diffuse stage.
 
     **Missing image: */w/images/4/47/Bbstep6.PNG***
 
-7.  Rename the modified material shader so that it has a unique name.\
+7.  Rename the modified material shader so that it has a unique name.
 
     **Missing image: */w/images/3/3a/Bbstep7.PNG***
 
-8.  Save it as an .mtr file.\
+8.  Save it as an .mtr file.
 
     **Missing image: */w/images/3/32/Bbstep8.PNG***
 

@@ -1,14 +1,12 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Sets the current position of this entity (regardless of any bind
-parent).
+Sets the current position of this entity (regardless of any bind parent).
 
 Usage
 -----
@@ -31,5 +29,4 @@ Notes
 
 This script event does not return any values.
 
-\
 

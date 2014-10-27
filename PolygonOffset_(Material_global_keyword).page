@@ -18,16 +18,10 @@ Parameters
 Notes
 -----
 
-This keyword is useful for decals that are placed on top of other
-surfaces like walls, floors, and ceilings.
+This keyword is useful for decals that are placed on top of other surfaces like walls, floors, and ceilings.
 
-Under normal circumstances, since both the decal and the surface are
-placed on the same space, the game would not be able to determine which
-surface should be rendered in front of the other. Instead, the game
-tries to render both and this is called z-fighting.
+Under normal circumstances, since both the decal and the surface are placed on the same space, the game would not be able to determine which surface should be rendered in front of the other. Instead, the game tries to render both and this is called z-fighting.
 
-By offsetting the depth of the decal slightly, you give the decal
-precedence and avoid the issue.
+By offsetting the depth of the decal slightly, you give the decal precedence and avoid the issue.
 
-\
 

@@ -1,33 +1,16 @@
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](PROC_%28file_format%29 "http://www.modwiki.net/w/index.php?title=PROC_%28file_format%29&action=edit")
-</span> .*
-
-</div>
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](PROC_%28file_format%29 "http://www.modwiki.net/w/index.php?title=PROC_%28file_format%29&action=edit") </span> .*
 
 General Information
 -------------------
 
-The .proc contains all the pre-processed geometry in the map. It stores
-all the visible triangles, batched up in to surfaces. It also stores all
-the portal information, and any precalculated shadow volumes (if a light
-doesn't move, and a brush doesn't move, the shadow volume can be
-precalculated).
+The .proc contains all the pre-processed geometry in the map. It stores all the visible triangles, batched up in to surfaces. It also stores all the portal information, and any precalculated shadow volumes (if a light doesn't move, and a brush doesn't move, the shadow volume can be precalculated).
 
 File Format
 -----------
 
 ### Models
 
-A model represents a object in the world (level), or a part of the world
-itself. Every model consists of 1-n surfaces, which containing
-information about the geometrical representation of the model. Every
-model section starts with the keyword *model* , directly followed by an
-opening curly brace. The model information itself is located in this
-braced section.
+A model represents a object in the world (level), or a part of the world itself. Every model consists of 1-n surfaces, which containing information about the geometrical representation of the model. Every model section starts with the keyword *model* , directly followed by an opening curly brace. The model information itself is located in this braced section.
 
 `    `
 
@@ -38,15 +21,11 @@ braced section.
     <surface n>
     }
 
-The value of *name* is the name of the model. All *name* attributes are
-stored as quoted string literals.
+The value of *name* is the name of the model. All *name* attributes are stored as quoted string literals.
 
-*Number of surfaces* is an integer which indicates how many surfaces the
-model actually has.
+*Number of surfaces* is an integer which indicates how many surfaces the model actually has.
 
-The *surface* information are located within a (curly) braced section.
-Every surface contains information about the material used by this
-surface, the number of vertices and the number of indices.
+The *surface* information are located within a (curly) braced section. Every surface contains information about the material used by this surface, the number of vertices and the number of indices.
 
 `    `
 
@@ -55,50 +34,29 @@ surface, the number of vertices and the number of indices.
     <index 1> <index 2> ... <index n>
     }
 
-The name of the material the surface uses is stored in the *material*
-value. The value refers to a material script and is stored as a quoted
-string literal.
+The name of the material the surface uses is stored in the *material* value. The value refers to a material script and is stored as a quoted string literal.
 
-The value of *number of vertices' is an integer which indicates the
-actual number of vertices for this surface.*
+The value of *number of vertices' is an integer which indicates the actual number of vertices for this surface.*
 
-The value of *number of indices* is an integer which indicates the
-actual number of indices for this surface.
+The value of *number of indices* is an integer which indicates the actual number of indices for this surface.
 
-A *vertex* contains information about the position, the u/v-coordinates
-and the vertex normal. All this information are written within two
-parentheses.
+A *vertex* contains information about the position, the u/v-coordinates and the vertex normal. All this information are written within two parentheses.
 
 `    `
 
     ( x y z u v nx ny nz )
 
-The values x, y and z defines the translation of the vertex in the world
-coordinate system. The values of u and v are the texture coordinates,
-used for mapping the texturemaps onto this surface. Nx, ny and nz are
-representing the vertex normal. All of this values are stored as double
-precision floating point values.
+The values x, y and z defines the translation of the vertex in the world coordinate system. The values of u and v are the texture coordinates, used for mapping the texturemaps onto this surface. Nx, ny and nz are representing the vertex normal. All of this values are stored as double precision floating point values.
 
-An *index* is simply an unsigned integer. Every index indicates a vertex
-in the surface's vertex list. Since all vertexdata is rendered as a list
-of triangles three indices build a triangle.
+An *index* is simply an unsigned integer. Every index indicates a vertex in the surface's vertex list. Since all vertexdata is rendered as a list of triangles three indices build a triangle.
 
 ### Areas
 
-Areas are special models, indicated by the name (\_areaN; i.e. \_area0
-for the first area in the list). Each level is split into a list of
-convex parts, whereas each part is one area.
+Areas are special models, indicated by the name (\_areaN; i.e. \_area0 for the first area in the list). Each level is split into a list of convex parts, whereas each part is one area.
 
 ### Portals
 
-A portal is the connection between two areas. Portals can be used for
-occlusion culling (which means every part of the level, which is not in
-the field of view, will be rejected, for the sake of rendering speed).
-Another benefit of portals is, that each pair of area can be connected
-through a portal, even if the areas are not spatially next to each
-other. The portal list is indicated through the keyword
-*interAreaPortals* followed by a braced section which includes the
-portal informations.
+A portal is the connection between two areas. Portals can be used for occlusion culling (which means every part of the level, which is not in the field of view, will be rejected, for the sake of rendering speed). Another benefit of portals is, that each pair of area can be connected through a portal, even if the areas are not spatially next to each other. The portal list is indicated through the keyword *interAreaPortals* followed by a braced section which includes the portal informations.
 
 `    `
 
@@ -109,29 +67,21 @@ portal informations.
     <inter area portal n>
     }
 
-The value *number of areas* is an integer which indicates the number of
-areas the level consists of. For each integer 0 to *n* must be a
-according model.
+The value *number of areas* is an integer which indicates the number of areas the level consists of. For each integer 0 to *n* must be a according model.
 
-The value of *number of portals* is an integer which indicates the
-number of portals.
+The value of *number of portals* is an integer which indicates the number of portals.
 
-A *inter area portal* consists of a number of points and the information
-of the linked areas.
+A *inter area portal* consists of a number of points and the information of the linked areas.
 
 `    `
 
     <number of vertices> <positive side area> <negative side area> <point 0> <point 1> ... <point n>
 
-*Number of vertices* is an integer indicating the number of actual
-points for this portal.
+*Number of vertices* is an integer indicating the number of actual points for this portal.
 
-*Positive- and negative side area* are integers indicating the indices
-of the linked areas. The values points to the world's area list.
+*Positive- and negative side area* are integers indicating the indices of the linked areas. The values points to the world's area list.
 
-A *point* consits of three values which represents the point's position
-in world space. The values are double precision floating point values
-and are stored between two parentheses:
+A *point* consits of three values which represents the point's position in world space. The values are double precision floating point values and are stored between two parentheses:
 
 `    `
 
@@ -139,11 +89,7 @@ and are stored between two parentheses:
 
 ### Nodes
 
-Each level stores a list of nodes which are represented in a tree
-structure. Each node contains information about its splitting plane and
-two indices which points to either a child node or an area. The node
-section is lead in by the keyword *nodes* followed by a braced section
-containing the node informations.
+Each level stores a list of nodes which are represented in a tree structure. Each node contains information about its splitting plane and two indices which points to either a child node or an area. The node section is lead in by the keyword *nodes* followed by a braced section containing the node informations.
 
 `    `
 
@@ -154,26 +100,17 @@ containing the node informations.
     <node n>
     }
 
-The value of *number of nodes* is an integer indicating the number of
-nodes in the BSP tree.
+The value of *number of nodes* is an integer indicating the number of nodes in the BSP tree.
 
-A *node* contains information about its splitting plane and two indices
-pointing to either the two child nodes or an area.
+A *node* contains information about its splitting plane and two indices pointing to either the two child nodes or an area.
 
 `    `
 
     ( nx ny nz d ) <positive child> <negativechild>
 
-The values of *nx* , *ny* and *nz* representing the plane normal of the
-splitting plane. The value of *d* is the distance of the plane. Each of
-this values is stored as double precision floating point value.
+The values of *nx* , *ny* and *nz* representing the plane normal of the splitting plane. The value of *d* is the distance of the plane. Each of this values is stored as double precision floating point value.
 
-*Positive-, negative child* are integers indexing the child nodes in the
-tree branch. There are three cases: If an index is positive the index
-points to another node in the node list. If the index is zero it
-indicated a solid, opaque area. Is the index negative the index points
-to an area-model, which means the node is a leaf in the tree. In the
-last case, the actual index is compted as (-1-index).
+*Positive-, negative child* are integers indexing the child nodes in the tree branch. There are three cases: If an index is positive the index points to another node in the node list. If the index is zero it indicated a solid, opaque area. Is the index negative the index points to an area-model, which means the node is a leaf in the tree. In the last case, the actual index is compted as (-1-index).
 
 ### Shadow Volumes
 

@@ -1,40 +1,27 @@
 Overview
 --------
 
-A data type specifies what type of data a variable can hold and must
-always be present at a variable's declaration.
+A data type specifies what type of data a variable can hold and must always be present at a variable's declaration.
 
-The script parser uses this to speed up certain operations or complain
-about impossible operations.
+The script parser uses this to speed up certain operations or complain about impossible operations.
 
-For an introduction on declaring and using variables, see
-[Variables](Scripting_basics#Variables "Scripting basics") .
+For an introduction on declaring and using variables, see [Variables](Scripting_basics#Variables "Scripting basics") .
 
 Common types
 ------------
 
 ### float
 
-A float type variable can contain any number whether it's an
-[integer](http://en.wikipedia.org/wiki/Integer "http://en.wikipedia.org/wiki/Integer")
-or a [real
-number](http://en.wikipedia.org/wiki/Real_number "http://en.wikipedia.org/wiki/Real_number")
-.
+A float type variable can contain any number whether it's an [integer](http://en.wikipedia.org/wiki/Integer "http://en.wikipedia.org/wiki/Integer") or a [real number](http://en.wikipedia.org/wiki/Real_number "http://en.wikipedia.org/wiki/Real_number") .
 
     float my_var = 23;
     float my_second_var = 0.5;
 
 ### vector
 
-A vector type contains three float values, representing a vector. The
-engine uses this type to store map locations (vector from world origin
-to position), directions or angles.
+A vector type contains three float values, representing a vector. The engine uses this type to store map locations (vector from world origin to position), directions or angles.
 
-When used in a normal assignment, the floats are in the order of 'X Y Z'
-indicating 3D space coordinates. To access one vector's axis component,
-append \_x, \_y, or \_z to the variable's name. It should also be
-possible to use a vector's projection on 1 axis by using the same
-syntax.
+When used in a normal assignment, the floats are in the order of 'X Y Z' indicating 3D space coordinates. To access one vector's axis component, append \_x, \_y, or \_z to the variable's name. It should also be possible to use a vector's projection on 1 axis by using the same syntax.
 
     vector tempvector = '-128 -128 0';
      
@@ -45,17 +32,11 @@ syntax.
     vector xcomp = tempvector_x;    // xcomp = '10 0 0' 
      
 
-**Note** : Vectors do not automatically convert to strings, and can't be
-set to equal floats. In these cases, the separate axis components need
-to be used.
-[[1]](http://www.iddevnet.com/quake4/ScriptVariable#vector "http://www.iddevnet.com/quake4/ScriptVariable#vector")
+**Note** : Vectors do not automatically convert to strings, and can't be set to equal floats. In these cases, the separate axis components need to be used. [[1]](http://www.iddevnet.com/quake4/ScriptVariable#vector "http://www.iddevnet.com/quake4/ScriptVariable#vector")
 
 ### entity
 
-An [entity](Entity "Entity") reference. Everything in the world is an
-entity, so this type is used extensively. (See the info on
-[entities](Scripting_basics#Entities "Scripting basics") in scripting
-basics)
+An [entity](Entity "Entity") reference. Everything in the world is an entity, so this type is used extensively. (See the info on [entities](Scripting_basics#Entities "Scripting basics") in scripting basics)
 
     entity funcmover;
     funcmover = sys.getEntity("func_mover_1");
@@ -70,9 +51,7 @@ A string type contains nothing more then text.
 
 ### boolean
 
-A boolean type contains a state, true or false. It can't be initialized
-at declaration, but the un-initialized variable will return zero and be
-interpreted as false.
+A boolean type contains a state, true or false. It can't be initialized at declaration, but the un-initialized variable will return zero and be interpreted as false.
 
     boolean flag;
     flag = 1;
@@ -89,16 +68,11 @@ Special types
 
 ### object
 
-Named base type of [script object](Script_object "Script object") . Used
-for more advanced scripting techniques.
+Named base type of [script object](Script_object "Script object") . Used for more advanced scripting techniques.
 
 ### [object type]
 
-Combined entity reference and [script
-object](Script_object "Script object") type reference. Will be set to
-[null](%24null_entity_%28scripting%29 "$null entity (scripting)") if the
-entity you are trying to set the reference to does not have a object of
-that type.
+Combined entity reference and [script object](Script_object "Script object") type reference. Will be set to [null](%24null_entity_%28scripting%29 "$null entity (scripting)") if the entity you are trying to set the reference to does not have a object of that type.
 
     monster_base myMonster;
     myMonster = sys.getEntity("monster_sam");

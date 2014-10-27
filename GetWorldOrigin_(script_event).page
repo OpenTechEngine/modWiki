@@ -1,14 +1,12 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Returns the current worldspace position of this entity (regardless of
-any bind parent).
+Returns the current worldspace position of this entity (regardless of any bind parent).
 
 Usage
 -----
@@ -29,8 +27,6 @@ Examples
 Notes
 -----
 
-This script event returns the worldspace postition of this entity as a
-vector.
+This script event returns the worldspace postition of this entity as a vector.
 
-\
 

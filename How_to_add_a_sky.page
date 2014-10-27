@@ -1,100 +1,42 @@
-This article shows the various options to include a sky in a map. A sky
-is essentially a collection of six [textures](Texturing "Texturing")
-called a [cube map](Cube_maps "Cube maps") stored in the /
-[env](Env_%28folder%29 "Env (folder)") folder. These cube maps are then
-referenced by a [material
-declaration](Material_%28decl%29 "Material (decl)") using the
-[TexGen](TexGen_%28Material_stage_keyword%29 "TexGen (Material stage keyword)")
-instruction; it is this material that is important for mappers.
+This article shows the various options to include a sky in a map. A sky is essentially a collection of six [textures](Texturing "Texturing") called a [cube map](Cube_maps "Cube maps") stored in the / [env](Env_%28folder%29 "Env (folder)") folder. These cube maps are then referenced by a [material declaration](Material_%28decl%29 "Material (decl)") using the [TexGen](TexGen_%28Material_stage_keyword%29 "TexGen (Material stage keyword)") instruction; it is this material that is important for mappers.
 
-If you have further questions about this tutorial please put them in
-this article's [Talk](Talk:How_to_add_a_sky "Talk:How to add a sky")
-page.
+If you have further questions about this tutorial please put them in this article's [Talk](Talk:How_to_add_a_sky "Talk:How to add a sky") page.
 
 Skybox
 ------
 
-The most basic of skies is the skybox. This option has no extra niceties
-and is based squarely on Doom 3's cube maps:
+The most basic of skies is the skybox. This option has no extra niceties and is based squarely on Doom 3's cube maps:
 
-1.  Create the appropriate [brushes](Brush "Brush") that will make up
-    the sky. For performance reasons these brushes should not be a big
-    hallow box around the map; instead, these brushes should help seal
-    the existing geometry from the **void** .
-2.  With these brushes selected, find the sky material you want to use
-    in the [texture inspector](DoomEdit "DoomEdit") .
+1.  Create the appropriate [brushes](Brush "Brush") that will make up the sky. For performance reasons these brushes should not be a big hallow box around the map; instead, these brushes should help seal the existing geometry from the **void** .
+2.  With these brushes selected, find the sky material you want to use in the [texture inspector](DoomEdit "DoomEdit") .
 
-These kinds of skies, while simple to implement, have one big problem:
-the sky can sometimes look detached from the rest of the map; this is
-especially true when the sky uses a lot of screen estate. They work just
-fine for small openings in ceilings or on tall windows but they are
-particularly bad for entire vistas and when the player can see the sky
-in the bottom half of the screen.
+These kinds of skies, while simple to implement, have one big problem: the sky can sometimes look detached from the rest of the map; this is especially true when the sky uses a lot of screen estate. They work just fine for small openings in ceilings or on tall windows but they are particularly bad for entire vistas and when the player can see the sky in the bottom half of the screen.
 
 Skyportals
 ----------
 
-A skyportal is an illusion created through a portal. Put simply, a
-skyportal is like a camera and when looking at a skyportal you are
-looking at what the skyportal "sees", in this case a sky. Skyportals
-were introduced with Doom 3: Resurrection of Evil but they are also
-available for Doom 3 with a simple mod:
-[WaterPhysics](http://homepages.nildram.co.uk/~danteuk/DanteUK.zip "http://homepages.nildram.co.uk/~danteuk/DanteUK.zip")
-.
+A skyportal is an illusion created through a portal. Put simply, a skyportal is like a camera and when looking at a skyportal you are looking at what the skyportal "sees", in this case a sky. Skyportals were introduced with Doom 3: Resurrection of Evil but they are also available for Doom 3 with a simple mod: [WaterPhysics](http://homepages.nildram.co.uk/~danteuk/DanteUK.zip "http://homepages.nildram.co.uk/~danteuk/DanteUK.zip") .
 
-1.  As above, create the [brushes](Brush "Brush") that will become the
-    sky.
-2.  Now instead of assigning them a sky material, give them the
-    "portal\_sky" material.
-3.  Create a small hallow box somewhere on your map and give those
-    brushes the appropriate sky material.
-4.  In the centre of this box put a "info\_portalsky"
-    [entity](Entity "Entity") ; the "origin" key/value pair of the
-    entity determines the centre of the sky in relation to the rest of
-    the map. The "angle" key/value pair of the entity determines which
-    part of the sky will be North, etc.
-
-<div>
+1.  As above, create the [brushes](Brush "Brush") that will become the sky.
+2.  Now instead of assigning them a sky material, give them the "portal\_sky" material.
+3.  Create a small hallow box somewhere on your map and give those brushes the appropriate sky material.
+4.  In the centre of this box put a "info\_portalsky" [entity](Entity "Entity") ; the "origin" key/value pair of the entity determines the centre of the sky in relation to the rest of the map. The "angle" key/value pair of the entity determines which part of the sky will be North, etc.
 
 ![](/images/e/e8/Q4square_25.png) **Note:** Quake 4 only:
 *The material should be "sky\_caulk" instead of "portal\_sky".*
 
-</div>
+The big advantage skyportals have over regular skyboxes is that you can put geometry inside your small hallow box and those will, through the illusion of skyportals, appear big in the real map. The skyportal scale is 1:16 which means objects inside the small hallow box will appear sixteen times bigger when playing the map. If you add geometry to the hallow box don't forget to add lights too: skies are always fullbright but not standard geometry.
 
-The big advantage skyportals have over regular skyboxes is that you can
-put geometry inside your small hallow box and those will, through the
-illusion of skyportals, appear big in the real map. The skyportal scale
-is 1:16 which means objects inside the small hallow box will appear
-sixteen times bigger when playing the map. If you add geometry to the
-hallow box don't forget to add lights too: skies are always fullbright
-but not standard geometry.
+You can also have several "info\_portalsky" entities in a single map but only one can be active. By alternating between two "info\_portalsky" in two different small hallow boxes, each with their own sky material you can have a map where the sky changes depending on the player's actions.
 
-You can also have several "info\_portalsky" entities in a single map but
-only one can be active. By alternating between two "info\_portalsky" in
-two different small hallow boxes, each with their own sky material you
-can have a map where the sky changes depending on the player's actions.
+Skyportals help keep the map grounded in the map but they also shouldn't be allowed to show in the bottom half the screen. They particularly excell in showing dynamic vistas (like spaceships doing fly-bys, etc.) without actually having to build a huge outdoor area.
 
-Skyportals help keep the map grounded in the map but they also shouldn't
-be allowed to show in the bottom half the screen. They particularly
-excell in showing dynamic vistas (like spaceships doing fly-bys, etc.)
-without actually having to build a huge outdoor area.
-
-They do however, have one big disadvantage: the "info\_portalsky" that
-acts as the eye to the sky is grounded and immobile while the player is
-always moving. This means any geometry in the small hallow box may look
-correct when the player is in one position but completely wrong if the
-player moves x units back: there is no change in perspective.
+They do however, have one big disadvantage: the "info\_portalsky" that acts as the eye to the sky is grounded and immobile while the player is always moving. This means any geometry in the small hallow box may look correct when the player is in one position but completely wrong if the player moves x units back: there is no change in perspective.
 
 3D Skybox
 ---------
 
-This is an advanced version of the skyportal whose sole purpose is to
-fix the skyportal's lack of correct perspective. At the moment the id
-Tech 4 engine doesn't have native support for these but you can
-implement them through a [level
-script](Level_scripting "Level scripting") . The following was created
-by Lloyd; substitute "info\_portalsky\_1" with the actual name of the
-portal sky in your map:
+This is an advanced version of the skyportal whose sole purpose is to fix the skyportal's lack of correct perspective. At the moment the id Tech 4 engine doesn't have native support for these but you can implement them through a [level script](Level_scripting "Level scripting") . The following was created by Lloyd; substitute "info\_portalsky\_1" with the actual name of the portal sky in your map:
 
     void main()
     {
@@ -121,9 +63,5 @@ portal sky in your map:
         }
     }
 
-As you can see above, the script is always updating the "origin" of the
-info\_portalsky depending on the position of the player therefor
-maintaining a correct perspective. This script requires extra CPU cycles
-so you should only use a 3D skybox when skyportals or even regular
-skyboxes don't do the job adequately on your map.
+As you can see above, the script is always updating the "origin" of the info\_portalsky depending on the position of the player therefor maintaining a correct perspective. This script requires extra CPU cycles so you should only use a 3D skybox when skyportals or even regular skyboxes don't do the job adequately on your map.
 

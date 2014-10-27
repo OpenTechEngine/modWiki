@@ -1,14 +1,12 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Returns a reference to the entity which was hit during the last call to
-trace or tracePoint
+Returns a reference to the entity which was hit during the last call to trace or tracePoint
 
 Usage
 -----
@@ -30,5 +28,4 @@ Notes
 
 tba
 
-\
 

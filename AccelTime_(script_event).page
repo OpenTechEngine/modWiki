@@ -1,14 +1,12 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-accelTime specifies the duration an object takes to accelerate up to its
-specified speed.
+accelTime specifies the duration an object takes to accelerate up to its specified speed.
 
 Usage
 -----
@@ -28,11 +26,6 @@ Examples
 Notes
 -----
 
-This script event does not return any values. In the example above it
-will cause the entity to take 3 seconds to accelerate up to its maximum
-speed for its particular movement. An entity's accelTime should not be
-higher than the entity's time. Logically, you can't take 4 seconds to
-accelerate, when the time for an object is only 2 seconds long.
+This script event does not return any values. In the example above it will cause the entity to take 3 seconds to accelerate up to its maximum speed for its particular movement. An entity's accelTime should not be higher than the entity's time. Logically, you can't take 4 seconds to accelerate, when the time for an object is only 2 seconds long.
 
-\
 

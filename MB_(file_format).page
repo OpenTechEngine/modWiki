@@ -1,21 +1,13 @@
 Maya binary model format.
 
-This filetype is not directly useable by idTech4 games. However, it can
-be interpreted by the engine when converting models and animations into
-[MD5](MD5_%28file_format%29 "MD5 (file format)") formats using the
-[exportmodels](Exportmodels_%28console_command%29 "Exportmodels (console command)")
-console command.
+This filetype is not directly useable by idTech4 games. However, it can be interpreted by the engine when converting models and animations into [MD5](MD5_%28file_format%29 "MD5 (file format)") formats using the [exportmodels](Exportmodels_%28console_command%29 "Exportmodels (console command)") console command.
 
-Sources where more detailed information on this format can be gathered
-are listed below.
+Sources where more detailed information on this format can be gathered are listed below.
 
 Links
 -----
 
--   [The Maya Exporter Fact
-    File](http://www.robthebloke.org/research/index.htm "http://www.robthebloke.org/research/index.htm")
--   [gpExport - A Maya
-    Exporter](https://web.archive.org/web/20091216055943/http://florian.loitsch.com/gpExport/ "http://florian.loitsch.com/gpExport/")
--   [How to Write a Simple Maya Model
-    Exporter](http://www.gamedev.net/reference/articles/article1906.asp "http://www.gamedev.net/reference/articles/article1906.asp")
+-   [The Maya Exporter Fact File](http://www.robthebloke.org/research/index.htm "http://www.robthebloke.org/research/index.htm")
+-   [gpExport - A Maya Exporter](https://web.archive.org/web/20091216055943/http://florian.loitsch.com/gpExport/ "http://florian.loitsch.com/gpExport/")
+-   [How to Write a Simple Maya Model Exporter](http://www.gamedev.net/reference/articles/article1906.asp "http://www.gamedev.net/reference/articles/article1906.asp")
 

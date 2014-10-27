@@ -1,41 +1,21 @@
-<div align="left"
-style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-
-![](/images/f/f9/Etqwsquare_bg.png) The information on this page is
-specific to [Enemy Territory: Quake
-Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
-
-</div>
+![](/images/f/f9/Etqwsquare_bg.png) The information on this page is specific to [Enemy Territory: Quake Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
 
 ------------------------------------------------------------------------
 
-Any text you may want to show up in-game has to be available for
-translation. The exception thus far is the "Pretty Name" in your
-pakmeta.conf; probably because this should be viewed as a proper noun
-that shouldn't be translated. Anyway, in our
-\<savepath\>/base/mapinfo/\<yourmap\>.md we had these three lines:
+Any text you may want to show up in-game has to be available for translation. The exception thus far is the "Pretty Name" in your pakmeta.conf; probably because this should be viewed as a proper noun that shouldn't be translated. Anyway, in our \<savepath\>/base/mapinfo/\<yourmap\>.md we had these three lines:
 
     "mapLocation"    "maps/<yourmap>/location"
     "mapBriefing"   "maps/<yourmap>/briefing"
     "campaignDescription"   "maps/<yourmap>/campaign"
 
-These are text strings used in the loading screen (and lobby menu) for
-your map. The first describes the physical location like "New Jersey,
-United States of America" or whatever. The second is an overview of the
-objectives and the last is a name for your campaign.
+These are text strings used in the loading screen (and lobby menu) for your map. The first describes the physical location like "New Jersey, United States of America" or whatever. The second is an overview of the objectives and the last is a name for your campaign.
 
-Like in all text that we may want to show the user, to add these pieces
-of text we need two things: a) A name for the string reference. b) The
-contents of the string to be referenced. String references are stored in
-\<savepath\>/base/localization/locstr/ while the strings themselves are
-stored in \<savepath\>/base/localization/english/. These two files have
-to be created with an editor that can output UTF-8 encoded files.
+Like in all text that we may want to show the user, to add these pieces of text we need two things: a) A name for the string reference. b) The contents of the string to be referenced. String references are stored in \<savepath\>/base/localization/locstr/ while the strings themselves are stored in \<savepath\>/base/localization/english/. These two files have to be created with an editor that can output UTF-8 encoded files.
 
 String references
 -----------------
 
-1.  Create a file in
-    \<savepath\>/base/localization/locstr/maps/\<yourmap\>.locstr
+1.  Create a file in \<savepath\>/base/localization/locstr/maps/\<yourmap\>.locstr
 2.  Paste the following into this file:
 
 <!-- -->
@@ -44,20 +24,12 @@ String references
     locString maps/<yourmap>/briefing { text "#str_<yourmap>_001" }
     locString maps/<yourmap>/campaign { text "#str_<yourmap>_002" }
 
-On each of those lines we first tell the game we're defining a
-localization string, then we give the name of the localized string, then
-inside the curly brackets we reference the string proper. All strings
-are required to start with \#str\_ but anything beyond that is fair
-game. We'll use \<yourmap\> and then a number which should give you a
-fairly unique alphanumeric reference that shouldn't clash with any
-existing string. Also, 1000 string references should be more than enough
-for one map.
+On each of those lines we first tell the game we're defining a localization string, then we give the name of the localized string, then inside the curly brackets we reference the string proper. All strings are required to start with \#str\_ but anything beyond that is fair game. We'll use \<yourmap\> and then a number which should give you a fairly unique alphanumeric reference that shouldn't clash with any existing string. Also, 1000 string references should be more than enough for one map.
 
 Strings
 -------
 
-1.  Create a file in
-    \<savepath\>/base/localization/english/strings/\<yourmap\>.lang
+1.  Create a file in \<savepath\>/base/localization/english/strings/\<yourmap\>.lang
 2.  Paste the following into this file:
 
 <!-- -->
@@ -68,7 +40,5 @@ Strings
     "#str_<yourmap>_002" "Oceania"
     }
 
-This is fairly simple. First we give the same string reference we had
-definined and then we put the text proper. Now load \<yourmap\> and you
-should be able to see this text in the loading screen.
+This is fairly simple. First we give the same string reference we had definined and then we put the text proper. Now load \<yourmap\> and you should be able to see this text in the loading screen.
 

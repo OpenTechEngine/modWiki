@@ -1,8 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -12,8 +11,7 @@ Sets the RGB color of this entity (shader parms Parm0, Parm1, Parm2).
 Usage
 -----
 
-*void* setColor( *float* **red** , *float* **green** , *float* **blue**
-)
+*void* setColor( *float* **red** , *float* **green** , *float* **blue** )
 
 Parameters
 ----------
@@ -33,5 +31,4 @@ Notes
 
 This script event does not return any values.
 
-\
 

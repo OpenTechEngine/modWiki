@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Monster_boss_guardian_seeker_%28entity%29 "http://www.modwiki.net/w/index.php?title=Monster_boss_guardian_seeker_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Monster_boss_guardian_seeker_%28entity%29 "http://www.modwiki.net/w/index.php?title=Monster_boss_guardian_seeker_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Monster_boss_guardian_seeker_%28entity%29 "http://www.modwiki.net/w/index.php?title=Monster_boss_guardian_seeker_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Monster_boss_guardian_seeker_%28entity%29 "http://www.modwiki.net/w/index.php?title=Monster_boss_guardian_seeker_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -28,98 +10,97 @@ Description not available.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                                       DESCRIPTION
-  ----------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  ambush                                    if set, monster only wakes up if it sees the player.
-  angle                                     Description not available.
-  anim                                      Animation to cycle when spawned in.
-  attack\_accuracy                          Maximum angular offset to randomly offset the monster's aim when firing missiles
-  attack\_cone                              Monster can only throw projectile within this cone relative to his direction.
-  bind                                      Description not available.
-  bindOrientated                            Description not available.
-  bindToBody                                Description not available.
-  bindToJoint                               Description not available.
-  bindanim                                  Description not available.
-  bleed                                     Description not available.
-  blink\_max                                Maximum time to wait between eye blinks.
-  blink\_min                                Minimum time to wait between eye blinks.
-  blockedAttackTime                         \# of milliseconds since last attack before monster marked blocked
-  blockedMoveTime                           \# of milliseconds since last move before monster marked blocked
-  blockedRadius                             if monsters doesn't move this distance within blockedMoveTime, then mark monster blocked.
-  bone\_flytilt                             Description not available.
-  burnaway                                  Description not available.
-  cameraTarget                              Description not available.
-  chatter\_combat\_max                      maximum amount of time to wait till playing chat sounds when in combat
-  chatter\_combat\_min                      minimum amount of time to wait till playing chat sounds when in combat
-  chatter\_max                              maximum amount of time to wait till playing chat sounds when idle
-  chatter\_min                              minimum amount of time to wait till playing chat sounds when idle
-  cinematic                                 Description not available.
-  classname                                 Description not available.
-  clipmodel                                 Description not available.
-  cone                                      Description not available.
-  cylinder                                  Description not available.
-  def\_light1                               Description not available.
-  def\_light2                               Description not available.
-  def\_projectile                           name of entityDef to launch as projectile
-  editor\_color                             Description not available.
-  editor\_copy                              Description not available.
-  editor\_maxs                              Description not available.
-  editor\_mins                              Description not available.
-  editor\_showangle                         Description not available.
-  editor\_var XXXX                          Description not available.
-  eye\_focus\_rate                          how quickly the eyes focus on a target
-  eye\_horizontal\_offset                   horizontal offset from the player's view that the character's eyes should focus on. negative values bring eyes closer together.
-  eye\_verticle\_offset                     verticle offset from the player's view that the character's eyes should focus on.
-  fly\_offset                               Prefered fly height relative to the player's view
-  fly\_speed                                Speed to fly at
-  fov                                       Character's field of view. Characters initially become aware of the player when he enters this cone. Also controls when the character sees the player as shootable. Character's will not use fov for sight checks after their initial wake up.
-  fx\_teleport                              Description not available.
-  fx\_teleport1                             Description not available.
-  fx\_teleport2                             Description not available.
-  fx\_teleport3                             Description not available.
-  guiTarget                                 Description not available.
-  head\_focus\_rate                         how quickly the head focuses on a target
-  health                                    Description not available.
-  hide                                      Causes monster to be hidden and nonsolid until triggered. Set to 2 for single trigger (entity wakes up when unhidden).
-  inherit                                   Description not available.
-  kick\_force                               how much force to apply to blocking obstacles to get them out of the way.
-  look\_max                                 maximum angles for head looks
-  look\_min                                 minimum angles for head looks
-  mass                                      character's mass.
-  maxs                                      Description not available.
-  melee\_range                              do melee attack when within this range
-  mins                                      Description not available.
-  model                                     Description not available.
-  model\_lightbeam                          Description not available.
-  name                                      Description not available.
-  networkSync                               Description not available.
-  neverDormant                              Description not available.
-  noGrab                                    Description not available.
-  noclipmodel                               Description not available.
-  on\_activate                              Animation to play when monster sees player or is triggered. Set to blank to make monster immediately start attacking the player without playing an animation.
-  origin                                    Description not available.
-  pain\_threshold                           How much damage monster has to recieve in one blow for it to play a pain animation.
-  projectile\_height\_to\_distance\_ratio   calculates the maximum height a projectile can be thrown. for example, a projectile thrown 100 units with a projectile\_height\_to\_distance\_ratio of 0.5 will only ever be up to 50 units above the target.
-  rank                                      Monsters only fight back when attacked by members of it's own team when its rank is greater than or equal to the attacker's rank. A rank of 0 will never fight back.
-  rotation                                  Description not available.
-  scriptobject                              Description not available.
-  size                                      Description not available.
-  skin\_xray                                Description not available.
-  slowmo                                    Description not available.
-  snd\_death                                Description not available.
-  snd\_sight                                Description not available.
-  solidForTeam                              Description not available.
-  spawnclass                                Description not available.
-  talks                                     whether character can be engaged in conversation
-  target                                    set of path\_\* entities to visit.
-  team                                      Monsters do not actively attack players or monsters with the same team \#.
-  turn\_rate                                Maximum \# of degrees monster can turn per second
-  use\_aas                                  extension of the aas file to use for navigation.
-  wait                                      How long to wait before following path. Monster will be unresponsive until this time has passed.
-  walk\_on\_sight                           Allows the monster to begin walking towards the player before his sight animation finishes.
+| KEY                                     | DESCRIPTION                                                                                                                                                                                                                                    |
+|-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ambush                                  | if set, monster only wakes up if it sees the player.                                                                                                                                                                                           |
+| angle                                   | Description not available.                                                                                                                                                                                                                     |
+| anim                                    | Animation to cycle when spawned in.                                                                                                                                                                                                            |
+| attack\_accuracy                        | Maximum angular offset to randomly offset the monster's aim when firing missiles                                                                                                                                                               |
+| attack\_cone                            | Monster can only throw projectile within this cone relative to his direction.                                                                                                                                                                  |
+| bind                                    | Description not available.                                                                                                                                                                                                                     |
+| bindOrientated                          | Description not available.                                                                                                                                                                                                                     |
+| bindToBody                              | Description not available.                                                                                                                                                                                                                     |
+| bindToJoint                             | Description not available.                                                                                                                                                                                                                     |
+| bindanim                                | Description not available.                                                                                                                                                                                                                     |
+| bleed                                   | Description not available.                                                                                                                                                                                                                     |
+| blink\_max                              | Maximum time to wait between eye blinks.                                                                                                                                                                                                       |
+| blink\_min                              | Minimum time to wait between eye blinks.                                                                                                                                                                                                       |
+| blockedAttackTime                       | \# of milliseconds since last attack before monster marked blocked                                                                                                                                                                             |
+| blockedMoveTime                         | \# of milliseconds since last move before monster marked blocked                                                                                                                                                                               |
+| blockedRadius                           | if monsters doesn't move this distance within blockedMoveTime, then mark monster blocked.                                                                                                                                                      |
+| bone\_flytilt                           | Description not available.                                                                                                                                                                                                                     |
+| burnaway                                | Description not available.                                                                                                                                                                                                                     |
+| cameraTarget                            | Description not available.                                                                                                                                                                                                                     |
+| chatter\_combat\_max                    | maximum amount of time to wait till playing chat sounds when in combat                                                                                                                                                                         |
+| chatter\_combat\_min                    | minimum amount of time to wait till playing chat sounds when in combat                                                                                                                                                                         |
+| chatter\_max                            | maximum amount of time to wait till playing chat sounds when idle                                                                                                                                                                              |
+| chatter\_min                            | minimum amount of time to wait till playing chat sounds when idle                                                                                                                                                                              |
+| cinematic                               | Description not available.                                                                                                                                                                                                                     |
+| classname                               | Description not available.                                                                                                                                                                                                                     |
+| clipmodel                               | Description not available.                                                                                                                                                                                                                     |
+| cone                                    | Description not available.                                                                                                                                                                                                                     |
+| cylinder                                | Description not available.                                                                                                                                                                                                                     |
+| def\_light1                             | Description not available.                                                                                                                                                                                                                     |
+| def\_light2                             | Description not available.                                                                                                                                                                                                                     |
+| def\_projectile                         | name of entityDef to launch as projectile                                                                                                                                                                                                      |
+| editor\_color                           | Description not available.                                                                                                                                                                                                                     |
+| editor\_copy                            | Description not available.                                                                                                                                                                                                                     |
+| editor\_maxs                            | Description not available.                                                                                                                                                                                                                     |
+| editor\_mins                            | Description not available.                                                                                                                                                                                                                     |
+| editor\_showangle                       | Description not available.                                                                                                                                                                                                                     |
+| editor\_var XXXX                        | Description not available.                                                                                                                                                                                                                     |
+| eye\_focus\_rate                        | how quickly the eyes focus on a target                                                                                                                                                                                                         |
+| eye\_horizontal\_offset                 | horizontal offset from the player's view that the character's eyes should focus on. negative values bring eyes closer together.                                                                                                                |
+| eye\_verticle\_offset                   | verticle offset from the player's view that the character's eyes should focus on.                                                                                                                                                              |
+| fly\_offset                             | Prefered fly height relative to the player's view                                                                                                                                                                                              |
+| fly\_speed                              | Speed to fly at                                                                                                                                                                                                                                |
+| fov                                     | Character's field of view. Characters initially become aware of the player when he enters this cone. Also controls when the character sees the player as shootable. Character's will not use fov for sight checks after their initial wake up. |
+| fx\_teleport                            | Description not available.                                                                                                                                                                                                                     |
+| fx\_teleport1                           | Description not available.                                                                                                                                                                                                                     |
+| fx\_teleport2                           | Description not available.                                                                                                                                                                                                                     |
+| fx\_teleport3                           | Description not available.                                                                                                                                                                                                                     |
+| guiTarget                               | Description not available.                                                                                                                                                                                                                     |
+| head\_focus\_rate                       | how quickly the head focuses on a target                                                                                                                                                                                                       |
+| health                                  | Description not available.                                                                                                                                                                                                                     |
+| hide                                    | Causes monster to be hidden and nonsolid until triggered. Set to 2 for single trigger (entity wakes up when unhidden).                                                                                                                         |
+| inherit                                 | Description not available.                                                                                                                                                                                                                     |
+| kick\_force                             | how much force to apply to blocking obstacles to get them out of the way.                                                                                                                                                                      |
+| look\_max                               | maximum angles for head looks                                                                                                                                                                                                                  |
+| look\_min                               | minimum angles for head looks                                                                                                                                                                                                                  |
+| mass                                    | character's mass.                                                                                                                                                                                                                              |
+| maxs                                    | Description not available.                                                                                                                                                                                                                     |
+| melee\_range                            | do melee attack when within this range                                                                                                                                                                                                         |
+| mins                                    | Description not available.                                                                                                                                                                                                                     |
+| model                                   | Description not available.                                                                                                                                                                                                                     |
+| model\_lightbeam                        | Description not available.                                                                                                                                                                                                                     |
+| name                                    | Description not available.                                                                                                                                                                                                                     |
+| networkSync                             | Description not available.                                                                                                                                                                                                                     |
+| neverDormant                            | Description not available.                                                                                                                                                                                                                     |
+| noGrab                                  | Description not available.                                                                                                                                                                                                                     |
+| noclipmodel                             | Description not available.                                                                                                                                                                                                                     |
+| on\_activate                            | Animation to play when monster sees player or is triggered. Set to blank to make monster immediately start attacking the player without playing an animation.                                                                                  |
+| origin                                  | Description not available.                                                                                                                                                                                                                     |
+| pain\_threshold                         | How much damage monster has to recieve in one blow for it to play a pain animation.                                                                                                                                                            |
+| projectile\_height\_to\_distance\_ratio | calculates the maximum height a projectile can be thrown. for example, a projectile thrown 100 units with a projectile\_height\_to\_distance\_ratio of 0.5 will only ever be up to 50 units above the target.                                  |
+| rank                                    | Monsters only fight back when attacked by members of it's own team when its rank is greater than or equal to the attacker's rank. A rank of 0 will never fight back.                                                                           |
+| rotation                                | Description not available.                                                                                                                                                                                                                     |
+| scriptobject                            | Description not available.                                                                                                                                                                                                                     |
+| size                                    | Description not available.                                                                                                                                                                                                                     |
+| skin\_xray                              | Description not available.                                                                                                                                                                                                                     |
+| slowmo                                  | Description not available.                                                                                                                                                                                                                     |
+| snd\_death                              | Description not available.                                                                                                                                                                                                                     |
+| snd\_sight                              | Description not available.                                                                                                                                                                                                                     |
+| solidForTeam                            | Description not available.                                                                                                                                                                                                                     |
+| spawnclass                              | Description not available.                                                                                                                                                                                                                     |
+| talks                                   | whether character can be engaged in conversation                                                                                                                                                                                               |
+| target                                  | set of path\_\* entities to visit.                                                                                                                                                                                                             |
+| team                                    | Monsters do not actively attack players or monsters with the same team \#.                                                                                                                                                                     |
+| turn\_rate                              | Maximum \# of degrees monster can turn per second                                                                                                                                                                                              |
+| use\_aas                                | extension of the aas file to use for navigation.                                                                                                                                                                                               |
+| wait                                    | How long to wait before following path. Monster will be unresponsive until this time has passed.                                                                                                                                               |
+| walk\_on\_sight                         | Allows the monster to begin walking towards the player before his sight animation finishes.                                                                                                                                                    |
 
 Inheritance
 -----------

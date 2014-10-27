@@ -1,10 +1,7 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type
-[idThread](Thread_%28scripting%29 "Thread (scripting)") , accessible via
-[sys](Scripting_basics#sys "Scripting basics") identifier.
+This event operates on an instance of the [game class](Game_class "Game class") type [idThread](Thread_%28scripting%29 "Thread (scripting)") , accessible via [sys](Scripting_basics#sys "Scripting basics") identifier.
 
 Description
 -----------
@@ -14,8 +11,7 @@ Returns a reference to the entity with the specified name.
 Usage
 -----
 
-*[entity](Data_types#entity "Data types")* getEntity(
-*[string](Data_types#string "Data types")* **name** )
+*[entity](Data_types#entity "Data types")* getEntity( *[string](Data_types#string "Data types")* **name** )
 
 Parameters
 ----------
@@ -31,9 +27,6 @@ Examples
 Notes
 -----
 
-This script event returns the entity that matches the given name or
-[null](%24null_entity_%28scripting%29 "$null entity (scripting)") if not
-found.
+This script event returns the entity that matches the given name or [null](%24null_entity_%28scripting%29 "$null entity (scripting)") if not found.
 
-\
 

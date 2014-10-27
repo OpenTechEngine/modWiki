@@ -1,79 +1,59 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Target_entity_fadeout_%28entity%29 "http://www.modwiki.net/w/index.php?title=Target_entity_fadeout_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Target_entity_fadeout_%28entity%29 "http://www.modwiki.net/w/index.php?title=Target_entity_fadeout_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Target_entity_fadeout_%28entity%29 "http://www.modwiki.net/w/index.php?title=Target_entity_fadeout_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Target_entity_fadeout_%28entity%29 "http://www.modwiki.net/w/index.php?title=Target_entity_fadeout_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
 
-Target an entity to fade out its color. Transition starts when the
-target\_entity\_fadeout is triggered..
+Target an entity to fade out its color. Transition starts when the target\_entity\_fadeout is triggered..
 
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                  DESCRIPTION
-  -------------------- -------------------------------------------------------------
-  \_color              Color to fade to. Default: 0 0 0
-  angle                Description not available.
-  anim                 Description not available.
-  bind                 Description not available.
-  bindOrientated       Description not available.
-  bindToBody           Description not available.
-  bindToJoint          Description not available.
-  bindanim             Description not available.
-  cameraTarget         Description not available.
-  cinematic            Set to 1 to make the entity to work while camera is active.
-  classname            target\_entity\_fadeout.
-  clipmodel            Description not available.
-  cone                 Description not available.
-  cylinder             Description not available.
-  editor\_color XXXX   Description not available.
-  editor\_maxs         Description not available.
-  editor\_mins         Description not available.
-  editor\_usage        Target an entity to fade out.
-  editor\_var XXXX     Description not available.
-  fadeTime             How long fade should take(Seconds). Default: 1
-  guiTarget            Description not available.
-  health               Description not available.
-  hide                 Description not available.
-  maxs                 Description not available.
-  mins                 Description not available.
-  model                Description not available.
-  name                 Entity name.
-  networkSync          Description not available.
-  neverDormant         Description not available.
-  noGrab               Description not available.
-  noclipmodel          Description not available.
-  origin               Entity origin.
-  rotation             Description not available.
-  scriptobject         Description not available.
-  size                 Description not available.
-  skin\_xray           Description not available.
-  slowmo               Description not available.
-  solidForTeam         Description not available.
-  spawnclass           idTarget\_FadeEntity.
-  target               Entity to fade out.
+| KEY                | DESCRIPTION                                                 |
+|--------------------|-------------------------------------------------------------|
+| \_color            | Color to fade to. Default: 0 0 0                            |
+| angle              | Description not available.                                  |
+| anim               | Description not available.                                  |
+| bind               | Description not available.                                  |
+| bindOrientated     | Description not available.                                  |
+| bindToBody         | Description not available.                                  |
+| bindToJoint        | Description not available.                                  |
+| bindanim           | Description not available.                                  |
+| cameraTarget       | Description not available.                                  |
+| cinematic          | Set to 1 to make the entity to work while camera is active. |
+| classname          | target\_entity\_fadeout.                                    |
+| clipmodel          | Description not available.                                  |
+| cone               | Description not available.                                  |
+| cylinder           | Description not available.                                  |
+| editor\_color XXXX | Description not available.                                  |
+| editor\_maxs       | Description not available.                                  |
+| editor\_mins       | Description not available.                                  |
+| editor\_usage      | Target an entity to fade out.                               |
+| editor\_var XXXX   | Description not available.                                  |
+| fadeTime           | How long fade should take(Seconds). Default: 1              |
+| guiTarget          | Description not available.                                  |
+| health             | Description not available.                                  |
+| hide               | Description not available.                                  |
+| maxs               | Description not available.                                  |
+| mins               | Description not available.                                  |
+| model              | Description not available.                                  |
+| name               | Entity name.                                                |
+| networkSync        | Description not available.                                  |
+| neverDormant       | Description not available.                                  |
+| noGrab             | Description not available.                                  |
+| noclipmodel        | Description not available.                                  |
+| origin             | Entity origin.                                              |
+| rotation           | Description not available.                                  |
+| scriptobject       | Description not available.                                  |
+| size               | Description not available.                                  |
+| skin\_xray         | Description not available.                                  |
+| slowmo             | Description not available.                                  |
+| solidForTeam       | Description not available.                                  |
+| spawnclass         | idTarget\_FadeEntity.                                       |
+| target             | Entity to fade out.                                         |
 
 Inheritance
 -----------

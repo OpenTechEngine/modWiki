@@ -1,9 +1,6 @@
-The model to the 3D object to be rendered. This must be an object using
-the [LWO file format](LWO_%28file_format%29 "LWO (file format)") .
+The model to the 3D object to be rendered. This must be an object using the [LWO file format](LWO_%28file_format%29 "LWO (file format)") .
 
-This property is restricted to the
-[renderDef](RenderDef_%28GUI_item_type%29 "RenderDef (GUI item type)")
-item type.
+This property is restricted to the [renderDef](RenderDef_%28GUI_item_type%29 "RenderDef (GUI item type)") item type.
 
 Syntax
 ------
@@ -20,5 +17,4 @@ Example(s)
 
     model "models/wipes/planet2.lwo"
 
-\
 

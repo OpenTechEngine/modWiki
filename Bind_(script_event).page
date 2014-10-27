@@ -1,15 +1,12 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Binds one entity to another in a parent-child hierarchy, so that when
-the parent (master) entity translates or rotates the child entity will
-move/rotate along with it.
+Binds one entity to another in a parent-child hierarchy, so that when the parent (master) entity translates or rotates the child entity will move/rotate along with it.
 
 Usage
 -----
@@ -32,8 +29,6 @@ Notes
 
 This script event does not return any values.
 
-When rotated, the child entity will pivot around it's origin as defined
-by its "origin" key/value spawn argument pair.
+When rotated, the child entity will pivot around it's origin as defined by its "origin" key/value spawn argument pair.
 
-\
 

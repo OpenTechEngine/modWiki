@@ -1,26 +1,20 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type {{{gameclass}}}
+This event operates on an instance of the [game class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
 Returns the current state of a projectile.
 
-<div>
-
 ![](/images/2/23/D3square_25.png) **Note:** Doom 3 only:
-*These values can be found in* doom\_defs.script *. It returns one of
-the following:*
+*These values can be found in* doom\_defs.script *. It returns one of the following:*
 -   PROJECTILE\_SPAWNED
 -   PROJECTILE\_CREATED
 -   PROJECTILE\_LAUNCHED
 -   PROJECTILE\_FIZZLED
 -   PROJECTILE\_EXPLODED **
-
-</div>
 
 Usage
 -----
@@ -42,5 +36,4 @@ Notes
 
 None.
 
-\
 

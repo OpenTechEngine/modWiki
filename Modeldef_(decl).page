@@ -1,5 +1,4 @@
-Model declarations define parameters for the engine to take into account
-when dealing with a specific animated model.
+Model declarations define parameters for the engine to take into account when dealing with a specific animated model.
 
 Syntax
 ------
@@ -9,52 +8,40 @@ Syntax
      [animation declarations]
     }
 
-Model declarations begin with a header which consists of model followed
-by the *name* of the model declaration.
+Model declarations begin with a header which consists of model followed by the *name* of the model declaration.
 
-The header is followed by the body of the declaration which is enclosed
-in curly brackets.
+The header is followed by the body of the declaration which is enclosed in curly brackets.
 
-The body is composed of several *keywords* and is followed by one or
-more *animation declarations* .
+The body is composed of several *keywords* and is followed by one or more *animation declarations* .
 
 ### Keywords
 
-  Keyword & Usage                Description
-  ------------------------------ ------------------------------------------------------------------------------------------------------------------------------------------
-  **anim** *name file [{...}]*   A declarations that assigns a name to the specified md5anim and allows for the declaration of frame events enclosed in curly brackets.
-  **channel** *name (joints)*    Defines an animation channel or isolated region of the skeleton. Channels allow a character's legs to move independently of their torso.
-  **inherit** *name*             Inherits properties from specified model declaration.
-  **mesh** *file*                The md5model to use.
-  **offset** *x, y, z*           Offsets the model from it's origin.
-  **skin** *name*                Default skin to apply. Can be overridden by entity declarations.
-  **remove** *name*              Removes an unwanted animation inherited via the inherit keyword.
+| Keyword & Usage              | Description                                                                                                                              |
+|------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| **anim** *name file [{...}]* | A declarations that assigns a name to the specified md5anim and allows for the declaration of frame events enclosed in curly brackets.   |
+| **channel** *name (joints)*  | Defines an animation channel or isolated region of the skeleton. Channels allow a character's legs to move independently of their torso. |
+| **inherit** *name*           | Inherits properties from specified model declaration.                                                                                    |
+| **mesh** *file*              | The md5model to use.                                                                                                                     |
+| **offset** *x, y, z*         | Offsets the model from it's origin.                                                                                                      |
+| **skin** *name*              | Default skin to apply. Can be overridden by entity declarations.                                                                         |
+| **remove** *name*            | Removes an unwanted animation inherited via the inherit keyword.                                                                         |
 
 #### Channel Syntax
 
-Channels are defined by a list comprised of all the bones to be included
-in the group. Each bone can be listed individually or through the use of
-special characters like the astrix or minus signs, one can use the
-skeletal higharchy to include or exclude child bones.
+Channels are defined by a list comprised of all the bones to be included in the group. Each bone can be listed individually or through the use of special characters like the astrix or minus signs, one can use the skeletal higharchy to include or exclude child bones.
 
     channel torso ( *Waist )
     channel legs  ( *Hips Body origin ROT -*Waist)
 
-The asterix is believed to be inclusive of child bones. In other words,
-all bones parented to the waist bone are included in the group through
-the statment "\*Waist".
+The asterix is believed to be inclusive of child bones. In other words, all bones parented to the waist bone are included in the group through the statment "\*Waist".
 
-The minus sign is believed to negate a single bone or group when used in
-conjunction with the asterix.
+The minus sign is believed to negate a single bone or group when used in conjunction with the asterix.
 
-**NOTE** : No formal documentation exists to confirm the syntax
-described here is correct.
+**NOTE** : No formal documentation exists to confirm the syntax described here is correct.
 
 #### Anim Syntax
 
-The animation keyword can be used to define a name for an animation
-file, or as a full blown declaration, in which case one can define frame
-events.
+The animation keyword can be used to define a name for an animation file, or as a full blown declaration, in which case one can define frame events.
 
     anim af_pose  models/md5/monsters/cyberdemon/af_pose.md5anim
     anim ik_pose  models/md5/monsters/cyberdemon/ik_pose.md5anim
@@ -79,60 +66,56 @@ events.
 
 ##### Frame Events
 
-Frame events are used to syncronize special effects, sounds, or events
-with animation. Frame events consist of the keyword **frame** followed
-by the frame number (which does not have to be a whole number), and then
-the frame event to call.
+Frame events are used to syncronize special effects, sounds, or events with animation. Frame events consist of the keyword **frame** followed by the frame number (which does not have to be a whole number), and then the frame event to call.
 
-  Event & Usage                 Description
-  ----------------------------- --------------------------------------------------------------------------------------------------------------------------------------
-  **call** *function*           Calls the specified script function.
-  **object\_call** *function*   Calls the specified script function on the entity
-  **event** *event [args...]*   Sends the specified event to the entity
-  **sound** *snd*               Plays the specified sound on any available channel
-  **sound\_voice** *snd*        Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
-  **sound\_voice2** *snd*       Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
-  **sound\_body** *snd*         Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
-  **sound\_body2** *snd*        Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
-  **sound\_body3** *snd*        Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
-  **sound\_weapon** *snd*       Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
-  **sound\_global** *snd*       Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
-  **sound\_item** *snd*         Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
-  **sound\_chatter** *snd*      Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
-  **skin** *skin*               Changes the model's skin to the specified skin. This setting acts as a default for when no skin is specified in entity declarations.
-  **fx** *fx*                   Triggers the specified fx declaration.
-  **trigger** *name*            Triggers the specified level trigger.
-  **recordDemo** *name*         Starts recording a demo under the specified name. Stops recording if no name is specified.
-  **aviGame** *name*            Starts recording an avi under the specified name. Useful for making animations to be used on video screens.
+| Event & Usage               | Description                                                                                                                          |
+|-----------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| **call** *function*         | Calls the specified script function.                                                                                                 |
+| **object\_call** *function* | Calls the specified script function on the entity                                                                                    |
+| **event** *event [args...]* | Sends the specified event to the entity                                                                                              |
+| **sound** *snd*             | Plays the specified sound on any available channel                                                                                   |
+| **sound\_voice** *snd*      | Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.                   |
+| **sound\_voice2** *snd*     | Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.                   |
+| **sound\_body** *snd*       | Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.                   |
+| **sound\_body2** *snd*      | Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.                   |
+| **sound\_body3** *snd*      | Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.                   |
+| **sound\_weapon** *snd*     | Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.                   |
+| **sound\_global** *snd*     | Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.                   |
+| **sound\_item** *snd*       | Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.                   |
+| **sound\_chatter** *snd*    | Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.                   |
+| **skin** *skin*             | Changes the model's skin to the specified skin. This setting acts as a default for when no skin is specified in entity declarations. |
+| **fx** *fx*                 | Triggers the specified fx declaration.                                                                                               |
+| **trigger** *name*          | Triggers the specified level trigger.                                                                                                |
+| **recordDemo** *name*       | Starts recording a demo under the specified name. Stops recording if no name is specified.                                           |
+| **aviGame** *name*          | Starts recording an avi under the specified name. Useful for making animations to be used on video screens.                          |
 
-The following events are aliases for hardcoded events that do not accept
-parameters
+The following events are aliases for hardcoded events that do not accept parameters
 
-  Event                       Alias
-  --------------------------- ---------------------
-  triggerSmokeParticle        triggerParticles
-  melee                       attackMelee
-  direct\_damage              directDamage
-  attack\_begin               attackBegin
-  attack\_end                 attackEnd
-  muzzle\_flash               muzzleFlash
-  create\_missile             createMissile
-  launch\_missile             launchMissile
-  fire\_missile\_at\_target   fireMissileAtTarget
-  footstep                    footstep
-  leftfoot                    leftfoot
-  rightfoot                   rightfoot
-  jump                        jump
-  enableEyeFocus              enableEyeFocus
-  disableEyeFocus             disableEyeFocus
-  disableGravity              disableGravity
-  enableGravity               enableGravity
-  enableClip                  enableClip
-  disableClip                 disableClip
-  enableWalkIK                enableWalkIK
-  disableWalkIK               disableWalkIK
-  enableLegIK                 enableLegIK
-  disableLegIK                disableLegIK
-  prevent\_idle\_override     ???
+| Event                     | Alias               |
+|---------------------------|---------------------|
+| triggerSmokeParticle      | triggerParticles    |
+| melee                     | attackMelee         |
+| direct\_damage            | directDamage        |
+| attack\_begin             | attackBegin         |
+| attack\_end               | attackEnd           |
+| muzzle\_flash             | muzzleFlash         |
+| create\_missile           | createMissile       |
+| launch\_missile           | launchMissile       |
+| fire\_missile\_at\_target | fireMissileAtTarget |
+| footstep                  | footstep            |
+| leftfoot                  | leftfoot            |
+| rightfoot                 | rightfoot           |
+| jump                      | jump                |
+| enableEyeFocus            | enableEyeFocus      |
+| disableEyeFocus           | disableEyeFocus     |
+| disableGravity            | disableGravity      |
+| enableGravity             | enableGravity       |
+| enableClip                | enableClip          |
+| disableClip               | disableClip         |
+| enableWalkIK              | enableWalkIK        |
+| disableWalkIK             | disableWalkIK       |
+| enableLegIK               | enableLegIK         |
+| disableLegIK              | disableLegIK        |
+| prevent\_idle\_override   | ???                 |
 
 

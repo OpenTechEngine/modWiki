@@ -1,173 +1,78 @@
-<div align="left"
-style="float:right; font-size: 17px;background: #FFFFEE; padding: 5px; border: 1px solid #000000; padding-left: 15px; padding-right: 15px; margin-left: 15px; margin-right: 15px; padding-bottom: 15px; width: 400px;">
-
-<div align="right" style="font-size: 10px; text-align=right;">
-
 [What's this?](Help:Reference_box "Help:Reference box")
 
-</div>
-
-<div>
-
 **Mapping quick reference**
-
-</div>
 
 ------------------------------------------------------------------------
 
 <span style="font-size: 14px"> </span>
--   [Common Mapping
-    Issues](Common_Mapping_Issues "Common Mapping Issues")
+-   [Common Mapping Issues](Common_Mapping_Issues "Common Mapping Issues")
 -   [Optimising maps](Optimising_maps "Optimising maps")
 -   [Keyboard Shortcuts](DoomEdit_hotkeys "DoomEdit hotkeys")
 
 **Entity Listings**
 
-![](/images/2/23/D3square_25.png) [Entity Listing (Doom
-3)](Entity_Listing_%28Doom_3%29 "Entity Listing (Doom 3)")
-![](/images/e/e8/Q4square_25.png) [Entity Listing (Quake
-4)](Entity_Listing_%28Quake_4%29 "Entity Listing (Quake 4)")
-![](/images/b/ba/Preysquare_25.png) [Entity Listing
-(Prey)](Entity_Listing_%28Prey%29 "Entity Listing (Prey)")
-![](/images/7/7e/Etqwsquare_25.png) [Entity Listing
-(ETQW)](Entity_Listing_%28ETQW%29 "Entity Listing (ETQW)")
+![](/images/2/23/D3square_25.png) [Entity Listing (Doom 3)](Entity_Listing_%28Doom_3%29 "Entity Listing (Doom 3)")
+![](/images/e/e8/Q4square_25.png) [Entity Listing (Quake 4)](Entity_Listing_%28Quake_4%29 "Entity Listing (Quake 4)")
+![](/images/b/ba/Preysquare_25.png) [Entity Listing (Prey)](Entity_Listing_%28Prey%29 "Entity Listing (Prey)")
+![](/images/7/7e/Etqwsquare_25.png) [Entity Listing (ETQW)](Entity_Listing_%28ETQW%29 "Entity Listing (ETQW)")
 
-</div>
+Mapping for [id Tech 4](Id_Tech_4 "Id Tech 4") games is based on 'additive' editing, whereby the level designer adds solid geometry to an empty "world", know as the **void** in Doom 3. This is contrasted with "subtractive" editing which is used in Unreal and its derivatives - in these games the world starts out solid and rooms are subtracted from it, with extra details such as pillars being added back.
 
-Mapping for [id Tech 4](Id_Tech_4 "Id Tech 4") games is based on
-'additive' editing, whereby the level designer adds solid geometry to an
-empty "world", know as the **void** in Doom 3. This is contrasted with
-"subtractive" editing which is used in Unreal and its derivatives - in
-these games the world starts out solid and rooms are subtracted from it,
-with extra details such as pillars being added back.
-
-Users of Unreal-based engines may initially find Doom 3 editing overly
-complex: instead of subtracting a simple room, it is necessary to create
-solid brushes for floor, ceiling and walls and make sure they do not
-leave any gaps. However, pure-additive geometry is simpler from the
-engine's perspective (since the order of brush creation is no longer
-critical), and completely eliminates the "BSP holes" that plague Unreal
-levels.
+Users of Unreal-based engines may initially find Doom 3 editing overly complex: instead of subtracting a simple room, it is necessary to create solid brushes for floor, ceiling and walls and make sure they do not leave any gaps. However, pure-additive geometry is simpler from the engine's perspective (since the order of brush creation is no longer critical), and completely eliminates the "BSP holes" that plague Unreal levels.
 
 Map Editing Tools
 -----------------
 
-Here are the known editing tools that can be used for creating maps for
-id Tech 4 engine games.
+Here are the known editing tools that can be used for creating maps for id Tech 4 engine games.
 
--   [Map editor](Map_editor "Map editor") - Built-in Windows-only level
-    editor.
-    -   [DoomEdit](DoomEdit "DoomEdit") - Doom 3 map editor specific
-        information.
-    -   [QuakeEdit](QuakeEdit "QuakeEdit") - Quake 4 map editor specific
-        information.
-    -   [PreyEdit](PreyEdit "PreyEdit") - Prey map editor specific
-        information.
-    -   [EditWorld](EditWorld "EditWorld") - ET:QW map editor specific
-        information.
--   [GTKRadiant](http://www.qeradiant.com/ "http://www.qeradiant.com/") -
-    Open source, multi-platform editor.
-    -   [DarkRadiant](http://darkradiant.sourceforge.net/ "http://darkradiant.sourceforge.net/") -
-        GTKRadiant modification made for The Dark Mod (also works with
-        vanilla Doom 3) with many fixes, usability improvements and new
-        features.
+-   [Map editor](Map_editor "Map editor") - Built-in Windows-only level editor.
+    -   [DoomEdit](DoomEdit "DoomEdit") - Doom 3 map editor specific information.
+    -   [QuakeEdit](QuakeEdit "QuakeEdit") - Quake 4 map editor specific information.
+    -   [PreyEdit](PreyEdit "PreyEdit") - Prey map editor specific information.
+    -   [EditWorld](EditWorld "EditWorld") - ET:QW map editor specific information.
+-   [GTKRadiant](http://www.qeradiant.com/ "http://www.qeradiant.com/") - Open source, multi-platform editor.
+    -   [DarkRadiant](http://darkradiant.sourceforge.net/ "http://darkradiant.sourceforge.net/") - GTKRadiant modification made for The Dark Mod (also works with vanilla Doom 3) with many fixes, usability improvements and new features.
 
 Components of a map
 -------------------
 
-Any map will contain a number of standard elements, which are discussed
-below.
+Any map will contain a number of standard elements, which are discussed below.
 
 ### Brushes
 
-[Brushes](Brush "Brush") are convex solids that form the basic geometry
-of a map - floors, ceilings, walls, and basic internal solids (such as
-steps or beams) that do not require a model are produced with brushes.
-At the very least, the outer hull of a map must be made from brushes
-since by default, they belong to the only [entity](Entity "Entity")
-class (the worldspawn) capable of sealing the map from the void.
+[Brushes](Brush "Brush") are convex solids that form the basic geometry of a map - floors, ceilings, walls, and basic internal solids (such as steps or beams) that do not require a model are produced with brushes. At the very least, the outer hull of a map must be made from brushes since by default, they belong to the only [entity](Entity "Entity") class (the worldspawn) capable of sealing the map from the void.
 
-Aside from visual geometry, brushes can also be used to define volumes
-within a map with unique properties. This is done by applying [special
-volume materials](Special_Volume_Materials "Special Volume Materials")
-(a.k.a. "common" materials) to their surface. An example would be the
-material *player\_clip* which prevents the player from entering the
-designated volume.
+Aside from visual geometry, brushes can also be used to define volumes within a map with unique properties. This is done by applying [special volume materials](Special_Volume_Materials "Special Volume Materials") (a.k.a. "common" materials) to their surface. An example would be the material *player\_clip* which prevents the player from entering the designated volume.
 
-If a user attempts to create a concave brush through a [CSG](CSG "CSG")
-operation, the editor automatically fragments it to create a number of
-smaller convex brushes that combine to create the desired concave
-structure.
+If a user attempts to create a concave brush through a [CSG](CSG "CSG") operation, the editor automatically fragments it to create a number of smaller convex brushes that combine to create the desired concave structure.
 
 ### Entities
 
-[Entities](Entity "Entity") are functional objects placed in a map
-("actors" to the Unreal mappers). [Lights](Light "Light") , monsters,
-items, doors - anything which must do something as opposed to just
-constituting map geometry - are all examples of entities. Entities can
-be created in-editor from patches or brushes, while pre-defined entities
-can be added from the right-click context menu in the main editor
-window. Entities are inherently dynamic and can be controlled either by
-the [game logic](Coding "Coding") or level
-[scripts](Scripting "Scripting") .
+[Entities](Entity "Entity") are functional objects placed in a map ("actors" to the Unreal mappers). [Lights](Light "Light") , monsters, items, doors - anything which must do something as opposed to just constituting map geometry - are all examples of entities. Entities can be created in-editor from patches or brushes, while pre-defined entities can be added from the right-click context menu in the main editor window. Entities are inherently dynamic and can be controlled either by the [game logic](Coding "Coding") or level [scripts](Scripting "Scripting") .
 
 #### Models
 
-Objects that are too complex to create with brushes or patches can be
-[modelled](Modelling "Modelling") in an external application and
-imported into Doom 3, in either .
-[ASE](ASE_%28file_format%29 "ASE (file format)") or .
-[LWO](LWO_%28file_format%29 "LWO (file format)") file formats as an
-entity. A static model can be used to represent anything from a key to a
-table to a large stone buttress, while an animated model is required for
-enemies, monsters or NPCs.
+Objects that are too complex to create with brushes or patches can be [modelled](Modelling "Modelling") in an external application and imported into Doom 3, in either . [ASE](ASE_%28file_format%29 "ASE (file format)") or . [LWO](LWO_%28file_format%29 "LWO (file format)") file formats as an entity. A static model can be used to represent anything from a key to a table to a large stone buttress, while an animated model is required for enemies, monsters or NPCs.
 
-And despite the debate, models cannot be scaled by the engine. It is
-possible to scale them by carefully tweaking the rotation key/value
-pair, however the effect is only visual. The collision model does not
-scale with it.
+And despite the debate, models cannot be scaled by the engine. It is possible to scale them by carefully tweaking the rotation key/value pair, however the effect is only visual. The collision model does not scale with it.
 
-Unreal users will be accustomed to creating almost all architectural
-detail with static models, due to problems caused by excessively-complex
-BSP geometry. This is not an issue for Doom 3, which uses a unified
-rendering model that makes no distinction between BSP and model-based
-polygons. See the [modelling](Modelling "Modelling") section for more
-discussion of the model vs brush distinction. Although entities by
-default, with the inline flag a model entity that is not supposed to be
-dynamic can be turned into map geometry when the map is compiled.
+Unreal users will be accustomed to creating almost all architectural detail with static models, due to problems caused by excessively-complex BSP geometry. This is not an issue for Doom 3, which uses a unified rendering model that makes no distinction between BSP and model-based polygons. See the [modelling](Modelling "Modelling") section for more discussion of the model vs brush distinction. Although entities by default, with the inline flag a model entity that is not supposed to be dynamic can be turned into map geometry when the map is compiled.
 
 ### Patches
 
-[Patches](Patch "Patch") are used to add rounded, curved or undulating
-surfaces to a map, which are not possible using brushes alone. They are
-defined using *Bezier curves* , and are smooth-shaded by the renderer.
+[Patches](Patch "Patch") are used to add rounded, curved or undulating surfaces to a map, which are not possible using brushes alone. They are defined using *Bezier curves* , and are smooth-shaded by the renderer.
 
 Compiling the map
 -----------------
 
-Before you can play a map you have to compile it. The easiest way is to
-select BSP \> BSP in the map editor, but you can also type "
-[dmap](Dmap_%28console_command%29 "Dmap (console command)") \<mymap\>"
-in the console. Doom 3 is different from previous id engines because it
-reads direct from . [MAP](MAP_%28file_format%29 "MAP (file format)")
-files without making computations for VIS and LIGHT, which are performed
-on-the-fly by the engine. However, you still need to 'compile' your maps
-to create a . [CM](CM_%28file_format%29 "CM (file format)") and a .
-[PROC](PROC_%28file_format%29 "PROC (file format)") which essentially
-makes solid geometry solid. Despite this, map compilation is very fast
-(measured in seconds).
+Before you can play a map you have to compile it. The easiest way is to select BSP \> BSP in the map editor, but you can also type " [dmap](Dmap_%28console_command%29 "Dmap (console command)") \<mymap\>" in the console. Doom 3 is different from previous id engines because it reads direct from . [MAP](MAP_%28file_format%29 "MAP (file format)") files without making computations for VIS and LIGHT, which are performed on-the-fly by the engine. However, you still need to 'compile' your maps to create a . [CM](CM_%28file_format%29 "CM (file format)") and a . [PROC](PROC_%28file_format%29 "PROC (file format)") which essentially makes solid geometry solid. Despite this, map compilation is very fast (measured in seconds).
 
 Writing a declaration
 ---------------------
 
-Before packaging a map for distribution you should create a [map
-declaration](Mapdef_%28decl%29 "Mapdef (decl)") , which will provide the
-engine with information like the working map name, supported game modes,
-and general memory consumption.
+Before packaging a map for distribution you should create a [map declaration](Mapdef_%28decl%29 "Mapdef (decl)") , which will provide the engine with information like the working map name, supported game modes, and general memory consumption.
 
-For more information about [declarations](Declarations "Declarations") ,
-like what they are, how they are created, or where they are stored,
-visit the corresponding article.
+For more information about [declarations](Declarations "Declarations") , like what they are, how they are created, or where they are stored, visit the corresponding article.
 
 Advanced Tutorials
 ------------------
@@ -181,36 +86,26 @@ Advanced Tutorials
 
 *The information in this section is specific to [Prey](Prey "Prey") .*
 
--   [How to add gravity
-    volumes](https://web.archive.org/web/20121205052906/http://www.3drealms.com/prey/wiki/index.php/Gravity_Volumes_Tutorial "http://www.3drealms.com/prey/wiki/index.php/Gravity_Volumes_Tutorial")
--   [How to add portals -
-    freestanding](https://web.archive.org/web/20121205052906/http://www.3drealms.com/prey/wiki/index.php/Portals_Tutorial "http://www.3drealms.com/prey/wiki/index.php/Portals_Tutorial")
--   [How to add portals -
-    surface](https://web.archive.org/web/20121205052906/http://www.3drealms.com/prey/wiki/index.php/Crouch_Portals_Tutorial "http://www.3drealms.com/prey/wiki/index.php/Crouch_Portals_Tutorial")
--   [How to add wall
-    walking](https://web.archive.org/web/20121205052906/http://www.3drealms.com/prey/wiki/index.php/Wall_Walk_Tutorial "http://www.3drealms.com/prey/wiki/index.php/Wall_Walk_Tutorial")
+-   [How to add gravity volumes](https://web.archive.org/web/20121205052906/http://www.3drealms.com/prey/wiki/index.php/Gravity_Volumes_Tutorial "http://www.3drealms.com/prey/wiki/index.php/Gravity_Volumes_Tutorial")
+-   [How to add portals - freestanding](https://web.archive.org/web/20121205052906/http://www.3drealms.com/prey/wiki/index.php/Portals_Tutorial "http://www.3drealms.com/prey/wiki/index.php/Portals_Tutorial")
+-   [How to add portals - surface](https://web.archive.org/web/20121205052906/http://www.3drealms.com/prey/wiki/index.php/Crouch_Portals_Tutorial "http://www.3drealms.com/prey/wiki/index.php/Crouch_Portals_Tutorial")
+-   [How to add wall walking](https://web.archive.org/web/20121205052906/http://www.3drealms.com/prey/wiki/index.php/Wall_Walk_Tutorial "http://www.3drealms.com/prey/wiki/index.php/Wall_Walk_Tutorial")
 
 <span align="absbottom"> ![](/images/7/7e/Etqwsquare_25.png) ETQW Advanced Tutorials </span>
 --------------------------------------------------------------------------------------------
 
-*The information in this section is specific to [Enemy Territory: Quake
-Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .*
+*The information in this section is specific to [Enemy Territory: Quake Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .*
 
--   [How to add localization to a
-    map](How_to_add_localization_to_a_map "How to add localization to a map")
--   [How to add a construction
-    objective](How_to_add_a_construction_objective "How to add a construction objective")
--   [How to add bot support to a
-    map](How_to_add_bot_support_to_a_map "How to add bot support to a map")
+-   [How to add localization to a map](How_to_add_localization_to_a_map "How to add localization to a map")
+-   [How to add a construction objective](How_to_add_a_construction_objective "How to add a construction objective")
+-   [How to add bot support to a map](How_to_add_bot_support_to_a_map "How to add bot support to a map")
 
 See also
 --------
 
--   [Common Mapping
-    Issues](Common_Mapping_Issues "Common Mapping Issues")
+-   [Common Mapping Issues](Common_Mapping_Issues "Common Mapping Issues")
 -   [Mapping filetypes](Maps_%28folder%29 "Maps (folder)")
 -   [Models vs brushes](Models_vs_brushes "Models vs brushes")
 -   [Optimising maps](Optimising_maps "Optimising maps")
--   [DoomEDIT Categorised Key Bindings and Mouse
-    Controls](DoomEDIT_Categorised_Key_Bindings_and_Mouse_Controls "DoomEDIT Categorised Key Bindings and Mouse Controls")
+-   [DoomEDIT Categorised Key Bindings and Mouse Controls](DoomEDIT_Categorised_Key_Bindings_and_Mouse_Controls "DoomEDIT Categorised Key Bindings and Mouse Controls")
 

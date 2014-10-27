@@ -1,10 +1,4 @@
-The **caulk** texture is applied to surfaces which must necessarily
-exist, but should not be rendered. The use of this texture on unseen
-surfaces such as brushes behind [patches](Patch "Patch") (sealing
-leaks), or the tops of columns and beams, provides a reduction in
-rendered polygons and an increase in performance. It is *not* necessary
-to apply caulk to surfaces outside the level (in contact with the void),
-as these surfaces will be automatically culled by dmap's "flood" phase.
+The **caulk** texture is applied to surfaces which must necessarily exist, but should not be rendered. The use of this texture on unseen surfaces such as brushes behind [patches](Patch "Patch") (sealing leaks), or the tops of columns and beams, provides a reduction in rendered polygons and an increase in performance. It is *not* necessary to apply caulk to surfaces outside the level (in contact with the void), as these surfaces will be automatically culled by dmap's "flood" phase.
 
 How caulk works
 ---------------
@@ -17,67 +11,28 @@ Caulk is defined as follows.
        forceOpaque
     }
 
-Since the texture contains no **map** stage, there will be no polygons
-created with this texture. The nonsolid directive also ensures that the
-material does not affect the AAS generation. The forceOpaque statement
-allows caulk to seal the void, rather than creating a leak as most
-invisible materials would (nodraw, for instance).
+Since the texture contains no **map** stage, there will be no polygons created with this texture. The nonsolid directive also ensures that the material does not affect the AAS generation. The forceOpaque statement allows caulk to seal the void, rather than creating a leak as most invisible materials would (nodraw, for instance).
 
 How to use caulk to seal a leak
 -------------------------------
 
-<div class="floatright">
+<span> ![An example of how to use caulk.](/images/1/13/Patch_caulk.png) </span>
 
-<span> ![An example of how to use caulk.](/images/1/13/Patch_caulk.png)
-</span>
+Since the underlying goal is to seal the map and prevent leaks, caulk is essential when dealing with patch meshes or [brushes](Brush "Brush") textured with materials that are either nonsolid, translucent, or partially transparent.
 
-</div>
+It's also important to note that the engine renders polygons from the furthest out towards the player which can result in polygons being rendered that aren't in view. An example would be a curved hallway constructed with patch meshes like in the illustration to the right.
 
-Since the underlying goal is to seal the map and prevent leaks, caulk is
-essential when dealing with patch meshes or [brushes](Brush "Brush")
-textured with materials that are either nonsolid, translucent, or
-partially transparent.
+Without caulk, the engine would render any map geometry behind it and then render the patch mesh in front. And while the patch will occlude the player's vision, if the map geometry being rendered doesn't need to be rendered (it would never be visible to the player from that location), it's an unnecessary drain on performance.
 
-It's also important to note that the engine renders polygons from the
-furthest out towards the player which can result in polygons being
-rendered that aren't in view. An example would be a curved hallway
-constructed with patch meshes like in the illustration to the right.
-
-Without caulk, the engine would render any map geometry behind it and
-then render the patch mesh in front. And while the patch will occlude
-the player's vision, if the map geometry being rendered doesn't need to
-be rendered (it would never be visible to the player from that
-location), it's an unnecessary drain on performance.
-
-The ideal placement of caulk should be directly behind the offending
-area. Form fitting brushes to the shape of a patch mesh is unnecessary.
-Rather, try to seal the gap between brushes with the simplest geometry
-possible.
+The ideal placement of caulk should be directly behind the offending area. Form fitting brushes to the shape of a patch mesh is unnecessary. Rather, try to seal the gap between brushes with the simplest geometry possible.
 
 ### Don't use caulk hulls
 
-It's common practice amongst new mappers to run into a leak and resolve
-the problem by enclosing their entire map within a huge caulk hull. And
-for all intensive purposes, it solves the immediate problem and for that
-reason, many inexperienced mappers will suggest this to their peers.
+It's common practice amongst new mappers to run into a leak and resolve the problem by enclosing their entire map within a huge caulk hull. And for all intensive purposes, it solves the immediate problem and for that reason, many inexperienced mappers will suggest this to their peers.
 
-However, while the problem with leaks will be resolved you're sure to
-run into issues when optimising your map. The problem is that while the
-leaks don't technically exist because the entire map is sealed from the
-void, these poorly sealed rooms spill out into the caulk hull and are
-considered adjoined [areas](Area "Area") .
+However, while the problem with leaks will be resolved you're sure to run into issues when optimising your map. The problem is that while the leaks don't technically exist because the entire map is sealed from the void, these poorly sealed rooms spill out into the caulk hull and are considered adjoined [areas](Area "Area") .
 
-And in a situation where you need to create divisions between areas
-using doors and [visportals](Visportal "Visportal") to improve
-performance, these "pseudo-leaks" cause different areas to be considered
-accessible when they shouldn't be. By passing through a hole in your map
-geometry out into the caulk hull and then back in through another hole,
-the engine doesn't see a difference between these unintentional holes
-and the doorways or windows you create. This leads to visportals that
-remain open when you need them to close.
+And in a situation where you need to create divisions between areas using doors and [visportals](Visportal "Visportal") to improve performance, these "pseudo-leaks" cause different areas to be considered accessible when they shouldn't be. By passing through a hole in your map geometry out into the caulk hull and then back in through another hole, the engine doesn't see a difference between these unintentional holes and the doorways or windows you create. This leads to visportals that remain open when you need them to close.
 
-A related issue is that [AAS](AAS "AAS") , used for enemy AI, can fail
-during compile with a
-[MAX\_REACH\_PER\_AREA](Common_Mapping_Issues#Error:_i_.3E.3D_MAX_REACH_PER_AREA "Common Mapping Issues")
-error.
+A related issue is that [AAS](AAS "AAS") , used for enemy AI, can fail during compile with a [MAX\_REACH\_PER\_AREA](Common_Mapping_Issues#Error:_i_.3E.3D_MAX_REACH_PER_AREA "Common Mapping Issues") error.
 

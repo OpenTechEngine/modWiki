@@ -1,30 +1,11 @@
-![An example of a simple in-game
-GUI](/images/thumb/5/5c/Gui_ingame.jpg/180px-Gui_ingame.jpg)\
+![An example of a simple in-game GUI](/images/thumb/5/5c/Gui_ingame.jpg/180px-Gui_ingame.jpg)
  *An example of a simple in-game GUI*
 
-GUIs are short for [Graphical User
-Interface](http://en.wikipedia.org/wiki/Graphical_user_interface "http://en.wikipedia.org/wiki/Graphical_user_interface")
-. In the id Tech 4 engine, it's the system used to create windows,
-buttons, menus, overlays and all other interfaces you can find when
-playing - both game interfaces (for example: the main game menu, its
-HUD, or the multiplayer scoreboard) and in-game interfaces (for example:
-a button to activate an elevator, or open a door).
+GUIs are short for [Graphical User Interface](http://en.wikipedia.org/wiki/Graphical_user_interface "http://en.wikipedia.org/wiki/Graphical_user_interface") . In the id Tech 4 engine, it's the system used to create windows, buttons, menus, overlays and all other interfaces you can find when playing - both game interfaces (for example: the main game menu, its HUD, or the multiplayer scoreboard) and in-game interfaces (for example: a button to activate an elevator, or open a door).
 
-In previous game engines, a developer would be restricted to simple
-level interfaces - for example, a button to activate some feature, to
-open a door, and so on. Also, for most engines, the graphical user
-interface (game menus, HUD overlays) would be controlled by complex code
-which needed compiling and reloading the game to be tested.
+In previous game engines, a developer would be restricted to simple level interfaces - for example, a button to activate some feature, to open a door, and so on. Also, for most engines, the graphical user interface (game menus, HUD overlays) would be controlled by complex code which needed compiling and reloading the game to be tested.
 
-However, the GUI system in the id Tech 4 engine unifies both the level
-and game interactive interface paradigms under one system, and also adds
-the ability to work on GUI scripts independently from the rest of the
-game code; GUI scripts can also be reloaded on real time, which makes
-for easy debugging and testing.
+However, the GUI system in the id Tech 4 engine unifies both the level and game interactive interface paradigms under one system, and also adds the ability to work on GUI scripts independently from the rest of the game code; GUI scripts can also be reloaded on real time, which makes for easy debugging and testing.
 
-GUI themselves are created from a mix of [GUI
-scripting](GUI_scripting "GUI scripting") based on the [.GUI file
-format](GUI_%28file_format%29 "GUI (file format)") and a mix of
-different [image materials](Material_%28decl%29 "Material (decl)") (to
-create graphics) and [fonts](GUI_fonts "GUI fonts") (to create text).
+GUI themselves are created from a mix of [GUI scripting](GUI_scripting "GUI scripting") based on the [.GUI file format](GUI_%28file_format%29 "GUI (file format)") and a mix of different [image materials](Material_%28decl%29 "Material (decl)") (to create graphics) and [fonts](GUI_fonts "GUI fonts") (to create text).
 

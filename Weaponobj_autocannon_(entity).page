@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Weaponobj_autocannon_%28entity%29 "http://www.modwiki.net/w/index.php?title=Weaponobj_autocannon_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Weaponobj_autocannon_%28entity%29 "http://www.modwiki.net/w/index.php?title=Weaponobj_autocannon_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Weaponobj_autocannon_%28entity%29 "http://www.modwiki.net/w/index.php?title=Weaponobj_autocannon_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Weaponobj_autocannon_%28entity%29 "http://www.modwiki.net/w/index.php?title=Weaponobj_autocannon_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -28,92 +10,91 @@ Description not available.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                         DESCRIPTION
-  --------------------------- ----------------------------
-  accepts\_wounds             Description not available.
-  accurateguitrace            Description not available.
-  alignToJoint                Description not available.
-  angle                       Description not available.
-  anim                        Description not available.
-  applyDamageEffects          Description not available.
-  attach                      Description not available.
-  beam\_spark                 Description not available.
-  bind                        Description not available.
-  bindOrientated              Description not available.
-  bindToBody                  Description not available.
-  bindToJoint                 Description not available.
-  bindanim                    Description not available.
-  cameraTarget                Description not available.
-  cinematic                   Description not available.
-  classname                   Description not available.
-  clipmodel                   Description not available.
-  cone                        Description not available.
-  crosshair                   Description not available.
-  cylinder                    Description not available.
-  ddaname                     Description not available.
-  def\_altFireInfo            Description not available.
-  def\_dropItem               Description not available.
-  def\_fireInfo               Description not available.
-  dispose\_delay              Description not available.
-  fx\_rearGas                 Description not available.
-  fx\_rearGas2                Description not available.
-  gravity                     Description not available.
-  gui                         Description not available.
-  guiTarget                   Description not available.
-  health                      Description not available.
-  heatThreshold               Description not available.
-  hide                        Description not available.
-  ignoreGravityZones          Description not available.
-  inherit                     Description not available.
-  joint\_attach               Description not available.
-  joint\_rearGasFxL           Description not available.
-  joint\_rearGasFxR           Description not available.
-  joint\_sparkL               Description not available.
-  joint\_sparkR               Description not available.
-  maxs                        Description not available.
-  mins                        Description not available.
-  model                       Description not available.
-  model\_world                Description not available.
-  moveToJoint                 Description not available.
-  name                        Description not available.
-  networkSync                 Description not available.
-  neverDormant                Description not available.
-  noJawFlap                   Description not available.
-  noPortal                    Description not available.
-  noclipmodel                 Description not available.
-  offset\_aim                 Description not available.
-  origin                      Description not available.
-  push\_cosine                Description not available.
-  pushes                      Description not available.
-  rotation                    Description not available.
-  scriptobject                Description not available.
-  size                        Description not available.
-  snd\_altfire                Description not available.
-  snd\_barrelspin             Description not available.
-  snd\_fire                   Description not available.
-  snd\_idle                   Description not available.
-  snd\_initialPickup          Description not available.
-  snd\_lowammo                Description not available.
-  snd\_outofammo              Description not available.
-  snd\_overheat               Description not available.
-  snd\_putaway                Description not available.
-  snd\_raise                  Description not available.
-  snd\_spark                  Description not available.
-  snd\_steam\_vent            Description not available.
-  snd\_viewfinder             Description not available.
-  solidForTeam                Description not available.
-  sparkGapSize                Description not available.
-  spawnclass                  Description not available.
-  target                      Description not available.
-  weaponAngleOffsetAverages   Description not available.
-  weaponAngleOffsetMax        Description not available.
-  weaponAngleOffsetScale      Description not available.
-  weaponOffsetScale           Description not available.
-  weaponOffsetTime            Description not available.
-  weaponname                  Description not available.
+| KEY                       | DESCRIPTION                |
+|---------------------------|----------------------------|
+| accepts\_wounds           | Description not available. |
+| accurateguitrace          | Description not available. |
+| alignToJoint              | Description not available. |
+| angle                     | Description not available. |
+| anim                      | Description not available. |
+| applyDamageEffects        | Description not available. |
+| attach                    | Description not available. |
+| beam\_spark               | Description not available. |
+| bind                      | Description not available. |
+| bindOrientated            | Description not available. |
+| bindToBody                | Description not available. |
+| bindToJoint               | Description not available. |
+| bindanim                  | Description not available. |
+| cameraTarget              | Description not available. |
+| cinematic                 | Description not available. |
+| classname                 | Description not available. |
+| clipmodel                 | Description not available. |
+| cone                      | Description not available. |
+| crosshair                 | Description not available. |
+| cylinder                  | Description not available. |
+| ddaname                   | Description not available. |
+| def\_altFireInfo          | Description not available. |
+| def\_dropItem             | Description not available. |
+| def\_fireInfo             | Description not available. |
+| dispose\_delay            | Description not available. |
+| fx\_rearGas               | Description not available. |
+| fx\_rearGas2              | Description not available. |
+| gravity                   | Description not available. |
+| gui                       | Description not available. |
+| guiTarget                 | Description not available. |
+| health                    | Description not available. |
+| heatThreshold             | Description not available. |
+| hide                      | Description not available. |
+| ignoreGravityZones        | Description not available. |
+| inherit                   | Description not available. |
+| joint\_attach             | Description not available. |
+| joint\_rearGasFxL         | Description not available. |
+| joint\_rearGasFxR         | Description not available. |
+| joint\_sparkL             | Description not available. |
+| joint\_sparkR             | Description not available. |
+| maxs                      | Description not available. |
+| mins                      | Description not available. |
+| model                     | Description not available. |
+| model\_world              | Description not available. |
+| moveToJoint               | Description not available. |
+| name                      | Description not available. |
+| networkSync               | Description not available. |
+| neverDormant              | Description not available. |
+| noJawFlap                 | Description not available. |
+| noPortal                  | Description not available. |
+| noclipmodel               | Description not available. |
+| offset\_aim               | Description not available. |
+| origin                    | Description not available. |
+| push\_cosine              | Description not available. |
+| pushes                    | Description not available. |
+| rotation                  | Description not available. |
+| scriptobject              | Description not available. |
+| size                      | Description not available. |
+| snd\_altfire              | Description not available. |
+| snd\_barrelspin           | Description not available. |
+| snd\_fire                 | Description not available. |
+| snd\_idle                 | Description not available. |
+| snd\_initialPickup        | Description not available. |
+| snd\_lowammo              | Description not available. |
+| snd\_outofammo            | Description not available. |
+| snd\_overheat             | Description not available. |
+| snd\_putaway              | Description not available. |
+| snd\_raise                | Description not available. |
+| snd\_spark                | Description not available. |
+| snd\_steam\_vent          | Description not available. |
+| snd\_viewfinder           | Description not available. |
+| solidForTeam              | Description not available. |
+| sparkGapSize              | Description not available. |
+| spawnclass                | Description not available. |
+| target                    | Description not available. |
+| weaponAngleOffsetAverages | Description not available. |
+| weaponAngleOffsetMax      | Description not available. |
+| weaponAngleOffsetScale    | Description not available. |
+| weaponOffsetScale         | Description not available. |
+| weaponOffsetTime          | Description not available. |
+| weaponname                | Description not available. |
 
 Inheritance
 -----------

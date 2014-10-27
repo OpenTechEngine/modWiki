@@ -1,22 +1,17 @@
 Game class
 ----------
 
-This event operates on an instance of the [game
-class](Game_class "Game class") type
-[idEntity](IdEntity_%28class%29 "IdEntity (class)") . All [spawn
-classes](Spawn_class "Spawn class") inherit this event.
+This event operates on an instance of the [game class](Game_class "Game class") type [idEntity](IdEntity_%28class%29 "IdEntity (class)") . All [spawn classes](Spawn_class "Spawn class") inherit this event.
 
 Description
 -----------
 
-Retrieves the entity specified by the [spawn arg](SpawnArgs "SpawnArgs")
-.
+Retrieves the entity specified by the [spawn arg](SpawnArgs "SpawnArgs") .
 
 Usage
 -----
 
-*[entity](Data_types#entity "Data types")* getEntityKey(
-*[string](Data_types#string "Data types")* **key** )
+*[entity](Data_types#entity "Data types")* getEntityKey( *[string](Data_types#string "Data types")* **key** )
 
 Parameters
 ----------
@@ -31,10 +26,6 @@ Examples
 Notes
 -----
 
-This script event returns the entity specified as an entity. See
-[getEntity (script
-event)](GetEntity_%28script_event%29 "GetEntity (script event)") for
-getting a reference directly by name.
+This script event returns the entity specified as an entity. See [getEntity (script event)](GetEntity_%28script_event%29 "GetEntity (script event)") for getting a reference directly by name.
 
-\
 

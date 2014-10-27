@@ -1,16 +1,6 @@
-Every graphical element in an id tech 4 based game makes use of images.
-From the geometry in a [map](Mapping "Mapping") , to
-[models](Modelling "Modelling") , to the elements of
-[GUI](GUI_scripting "GUI scripting") .
+Every graphical element in an id tech 4 based game makes use of images. From the geometry in a [map](Mapping "Mapping") , to [models](Modelling "Modelling") , to the elements of [GUI](GUI_scripting "GUI scripting") .
 
-In most cases these elements reference images indirectly through the use
-of [material declarations](Material_%28decl%29 "Material (decl)") but a
-few stock assets reference images directly using their relative path.
-It's advised that you don't follow suit as referencing images directly
-comes with it's own set of consequences (no illumination or blend modes
-can be applied) so it's best that you become familiar with writing
-material declarations as in most cases that's what will be required to
-achive the desired effect.
+In most cases these elements reference images indirectly through the use of [material declarations](Material_%28decl%29 "Material (decl)") but a few stock assets reference images directly using their relative path. It's advised that you don't follow suit as referencing images directly comes with it's own set of consequences (no illumination or blend modes can be applied) so it's best that you become familiar with writing material declarations as in most cases that's what will be required to achive the desired effect.
 
 Supported image formats are ...
 
@@ -18,21 +8,7 @@ Supported image formats are ...
 -   . [TGA](TGA_%28file_format%29 "TGA (file format)")
 -   . [DDS](DDS_%28file_format%29 "DDS (file format)")
 
-It's imporant to review each format before commiting your artwork to any
-one in particular. If the image format uses compression, and you intend
-to use it as a normal map, you'll see artifacts in game. If the image
-format doesn't support 32 bit color depth, you won't be able to make use
-of transparency. These details are covered in each format's respective
-article.
+It's imporant to review each format before commiting your artwork to any one in particular. If the image format uses compression, and you intend to use it as a normal map, you'll see artifacts in game. If the image format doesn't support 32 bit color depth, you won't be able to make use of transparency. These details are covered in each format's respective article.
 
-The dimensions of your image (width and height) should be in powers of
-two. In other words, your width and height should be 2, 4, 8, 16, 32,
-64, 128, ... etc. Your images *do not* have to be square, but each
-dimension must be a power of two. For example, 32px by 128px. If you do
-supply the engine with images that do not comply with this rule they
-will be automatically scaled to a compliant size which will result in
-stretching or squishing. How the scaling is performed (downwards or
-upwards) is controlled by the
-[image\_roundDown](Image_roundDown_%28cvar%29 "Image roundDown (cvar)")
-CVar.
+The dimensions of your image (width and height) should be in powers of two. In other words, your width and height should be 2, 4, 8, 16, 32, 64, 128, ... etc. Your images *do not* have to be square, but each dimension must be a power of two. For example, 32px by 128px. If you do supply the engine with images that do not comply with this rule they will be automatically scaled to a compliant size which will result in stretching or squishing. How the scaling is performed (downwards or upwards) is controlled by the [image\_roundDown](Image_roundDown_%28cvar%29 "Image roundDown (cvar)") CVar.
 

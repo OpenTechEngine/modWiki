@@ -1,24 +1,6 @@
-<div class="plainlinks"
-style="border: 1px grey solid; padding: 0.25em;">
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can help by verifying and [completing](Console_crane_%28entity%29 "http://modwiki.net/w/index.php?title=Console_crane_%28entity%29&action=edit") the info on this page.*
 
-*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
-help by verifying and
-[completing](Console_crane_%28entity%29 "http://modwiki.net/w/index.php?title=Console_crane_%28entity%29&action=edit")
-the info on this page.*
-
-</div>
-
-<div id="stub" class="boilerplate metadata">
-
-*This article is a
-[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
-. You can help us by <span class="plainlinks"> [expanding
-it](Console_crane_%28entity%29 "http://modwiki.net/w/index.php?title=Console_crane_%28entity%29&action=edit")
-</span> .*
-
-</div>
-
-\
+*This article is a [stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article") . You can help us by <span class="plainlinks"> [expanding it](Console_crane_%28entity%29 "http://modwiki.net/w/index.php?title=Console_crane_%28entity%29&action=edit") </span> .*
 
 Description
 -----------
@@ -28,44 +10,43 @@ Crane console
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn
-arguments, that function with this entity.\
+The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
 
-  KEY                      DESCRIPTION
-  ------------------------ -------------------------------------------------------------------------------------------------------------------
-  ai\_can\_use             Description not available.
-  ai\_max\_uses            Description not available.
-  ai\_reuse\_wait          How many secs to wait before AI can use this console again (5)
-  ai\_use\_anim            The anim mood to set on the AI user of this console. Ex: 'console' would play the anim 'console\_use' ('console')
-  ai\_use\_once            Description not available.
-  ai\_use\_time            Once the AI starts using this console, it will spend this many secs. at this console(3.0)
-  ai\_use\_trigger\_wait   How many secs to wait before firing this consoles triggers. (2)
-  def\_perch               Description not available.
-  def\_perchSquawk         Description not available.
-  editor\_bool XXXX        Description not available.
-  editor\_color            Description not available.
-  editor\_def XXXX         Description not available.
-  editor\_gui XXXX         Description not available.
-  editor\_maxs             Description not available.
-  editor\_mins             Description not available.
-  editor\_rotatable        Description not available.
-  editor\_showangle        Description not available.
-  editor\_usage            Crane console
-  editor\_usage9           Description not available.
-  editor\_var XXXX         Description not available.
-  gui                      Description not available.
-  health                   the amount of damage the console can take before becoming damaged (1)
-  hide                     Description not available.
-  inherit                  Description not available.
-  matter                   Description not available.
-  noTalonSquawk            Description not available.
-  noTalonTarget            Description not available.
-  offset\_perch            Offset from origin of where talon perches (0 0 32)
-  snd\_idle                Description not available.
-  snd\_translate           Description not available.
-  solid                    Description not available.
-  spawnclass               Description not available.
-  translate                Description not available.
+| KEY                    | DESCRIPTION                                                                                                       |
+|------------------------|-------------------------------------------------------------------------------------------------------------------|
+| ai\_can\_use           | Description not available.                                                                                        |
+| ai\_max\_uses          | Description not available.                                                                                        |
+| ai\_reuse\_wait        | How many secs to wait before AI can use this console again (5)                                                    |
+| ai\_use\_anim          | The anim mood to set on the AI user of this console. Ex: 'console' would play the anim 'console\_use' ('console') |
+| ai\_use\_once          | Description not available.                                                                                        |
+| ai\_use\_time          | Once the AI starts using this console, it will spend this many secs. at this console(3.0)                         |
+| ai\_use\_trigger\_wait | How many secs to wait before firing this consoles triggers. (2)                                                   |
+| def\_perch             | Description not available.                                                                                        |
+| def\_perchSquawk       | Description not available.                                                                                        |
+| editor\_bool XXXX      | Description not available.                                                                                        |
+| editor\_color          | Description not available.                                                                                        |
+| editor\_def XXXX       | Description not available.                                                                                        |
+| editor\_gui XXXX       | Description not available.                                                                                        |
+| editor\_maxs           | Description not available.                                                                                        |
+| editor\_mins           | Description not available.                                                                                        |
+| editor\_rotatable      | Description not available.                                                                                        |
+| editor\_showangle      | Description not available.                                                                                        |
+| editor\_usage          | Crane console                                                                                                     |
+| editor\_usage9         | Description not available.                                                                                        |
+| editor\_var XXXX       | Description not available.                                                                                        |
+| gui                    | Description not available.                                                                                        |
+| health                 | the amount of damage the console can take before becoming damaged (1)                                             |
+| hide                   | Description not available.                                                                                        |
+| inherit                | Description not available.                                                                                        |
+| matter                 | Description not available.                                                                                        |
+| noTalonSquawk          | Description not available.                                                                                        |
+| noTalonTarget          | Description not available.                                                                                        |
+| offset\_perch          | Offset from origin of where talon perches (0 0 32)                                                                |
+| snd\_idle              | Description not available.                                                                                        |
+| snd\_translate         | Description not available.                                                                                        |
+| solid                  | Description not available.                                                                                        |
+| spawnclass             | Description not available.                                                                                        |
+| translate              | Description not available.                                                                                        |
 
 Inheritance
 -----------
