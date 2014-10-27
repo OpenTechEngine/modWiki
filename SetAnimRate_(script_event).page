@@ -1,21 +1,14 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: SetAnimRate
-...
-SetAnimRate (script event)
-==========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-adjust the animation rate for an actor, it will be multiplied by the passed in parameter.
+adjust the animation rate for an actor, it will be multiplied by the
+passed in parameter.
 
 Usage
 -----
@@ -30,11 +23,12 @@ Parameters
 Examples
 --------
 
-` none`
+     none
 
 Notes
 -----
 
 tba
 
+\
 

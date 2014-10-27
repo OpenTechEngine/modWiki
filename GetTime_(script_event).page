@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: GetTime
-...
-GetTime (script event)
-======================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -30,15 +22,16 @@ This script event does not accept parameters.
 Examples
 --------
 
-` `
-<font color="#0000ff">`void`</font>` weapon_pistol::Fire`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`        `<font color="#0000ff">`float`</font>` ammoClip;`
-` `
-`        next_attack = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`getTime`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` + PISTOL_FIRERATE;`
+     
+    void weapon_pistol::Fire() {
+            float ammoClip;
+     
+            next_attack = sys.getTime() + PISTOL_FIRERATE;
 
 Notes
 -----
 
 This is a system event and must be invoked using the sys object.
 
+\
 

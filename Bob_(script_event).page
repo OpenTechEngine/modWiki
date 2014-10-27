@@ -1,21 +1,14 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: Bob
-...
-Bob (script event)
-==================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Initiates a translation back and forth along the given vector with the given speed and sphase.
+Initiates a translation back and forth along the given vector with the
+given speed and sphase.
 
 Usage
 -----
@@ -30,11 +23,12 @@ Parameters
 Examples
 --------
 
-` none`
+     none
 
 Notes
 -----
 
 tba
 
+\
 

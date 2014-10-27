@@ -1,21 +1,13 @@
----
-format: Markdown
-categories: Material_stage_keyword
-toc: yes
-title: MaskColor
-...
-MaskColor (Material stage keyword)
-==================================
-
 Description
 -----------
 
-The **maskColor** keyword causes the color channels of this stage to be ignored and only use the alpha channel.
+The **maskColor** keyword causes the color channels of this stage to be
+ignored and only use the alpha channel.
 
 Usage
 -----
 
-`maskColor`
+    maskColor
 
 Parameters
 ----------
@@ -27,14 +19,18 @@ Example
 
 Masking the color channels.
 
-`{`
-`   maskColor`
-`   map path/to/image.tga`
-`}`
+    {
+       maskColor
+       map path/to/image.tga
+    }
 
 Notes
 -----
 
-This keyword is usefull in combination with [maskAlpha](MaskAlpha\_(Material\_stage\_keyword)) in case you want to use the alpha channel from some different image file.
+This keyword is usefull in combination with
+[maskAlpha](MaskAlpha_%28Material_stage_keyword%29 "MaskAlpha (Material stage keyword)")
+in case you want to use the alpha channel from some different image
+file.
 
+\
 

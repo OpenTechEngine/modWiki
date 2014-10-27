@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: DotProduct
-...
-DotProduct (script event)
-=========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -20,7 +12,7 @@ Returns the dot product of the two vectors.
 Usage
 -----
 
-*float* DotProduct( *vector* **vec1**, *vector* **vec2** )
+*float* DotProduct( *vector* **vec1** , *vector* **vec2** )
 
 Parameters
 ----------
@@ -31,12 +23,13 @@ Parameters
 Examples
 --------
 
-` `
-`dotVec = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`dotProduct`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`25`</font>` `<font color="#0000dd">`46`</font>` `<font color="#0000dd">`98`</font>`', '`<font color="#0000dd">`45`</font>` `<font color="#0000dd">`12`</font>` `<font color="#0000dd">`34`</font>`'`<font color="#000000">`)`</font>`;`
+     
+    dotVec = sys.dotProduct('25 46 98', '45 12 34');
 
 Notes
 -----
 
 This script event returns a float.
 
+\
 

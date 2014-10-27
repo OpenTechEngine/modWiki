@@ -1,26 +1,20 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: StartSoundShader
-...
-StartSoundShader (script event)
-===============================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Plays a specific sound shader on the channel and returns the length of the sound in seconds.
+Plays a specific sound shader on the channel and returns the length of
+the sound in seconds.
 
 Usage
 -----
 
-*float* startSoundShader( *string* **shaderName**, *float* **channel** )
+*float* startSoundShader( *string* **shaderName** , *float* **channel**
+)
 
 Parameters
 ----------
@@ -31,50 +25,71 @@ Parameters
 Examples
 --------
 
-<font color="#339900">`// This plays some long speech from the game which eminates from speaker1`</font>
-` `
-<font color="#000055">`$speaker1`</font>`.`<font color="#ff0000">`startSoundShader`</font>` `<font color="#000000">`(`</font><font color="#666666">`"admin_betruger_its_not_out_of_control"`</font>`, SND_CHANNEL_ANY`<font color="#000000">`)`</font>`;`
+    // This plays some long speech from the game which eminates from speaker1
+     
+    $speaker1.startSoundShader ("admin_betruger_its_not_out_of_control", SND_CHANNEL_ANY);
 
-*<font color="#339900">`/*` `Some` `of` `the` `shadersounds` `will` `automatically` `loop` `(they` `typically` `mention` `this` `fact` `in` `the` `name).` `This` `will` `play` `a` `looping` `crane` `sound` `from` `a` `mover,` `without` `needing` `a` `speaker` `binded` `to` `it.` `All` `the` `Doom` `3` `single` `player` `machinery` `scripts` `I` `have` `looked` `at` `use` `startSoundShader` `upon` `non-speaker` `entities` `like` `cranes` `and` `movers.` `*/`</font>*
-` `
-<font color="#000055">`$mover1`</font>`.`<font color="#ff0000">`startSoundShader`</font>` `<font color="#000000">`(`</font><font color="#666666">`"al3_crane_updown_loop"`</font>`, SND_CHANNEL_ANY`<font color="#000000">`)`</font>`;`
+    /* Some of the shadersounds will automatically loop (they typically mention this fact in the name).
+    This will play a looping crane sound from a mover, without needing a speaker binded to it. All
+    the Doom 3 single player machinery scripts I have looked at use startSoundShader upon non-speaker
+    entities like cranes and movers. */
+     
+    $mover1.startSoundShader ("al3_crane_updown_loop", SND_CHANNEL_ANY);
 
-*<font color="#339900">`/*` `This` `will` `play` `the` `speech` `as` `coming` `from` `the` `player,` `no` `matter` `where` `they` `move` `to.` `You` `can` `no` `doubt` `do` `this` `with` `monsters` `too,` `voiding` `the` `need` `to` `bind` `speakers` `to` `them` `in` `many` `cases.` `*/`</font>*
-` `
-<font color="#000055">`$player1`</font>`.`<font color="#ff0000">`startSoundShader`</font>` `<font color="#000000">`(`</font><font color="#666666">`"alphalabs1_labcoat_primary"`</font>`, SND_CHANNEL_ANY`<font color="#000000">`)`</font>`;`
+    /* This will play the speech as coming from the player, no matter where they move to. You can no
+    doubt do this with monsters too, voiding the need to bind speakers to them in many cases. */
+     
+    $player1.startSoundShader ("alphalabs1_labcoat_primary", SND_CHANNEL_ANY);
 
 Notes
 -----
 
 This script event does not return any values.
 
-This is not the prefered method of playing a sound since you must ensure that the sound is loaded.
+This is not the prefered method of playing a sound since you must ensure
+that the sound is loaded.
 
 -1st param (string shaderName)
 
-The shadernames are defined within sound shader files (typically .sndshd files) which are placed within base/sound/ (the doom3 game ones are found in pak003.pk3/sound). No path is necessary for the shadernames located directly in the sound directory.
+The shadernames are defined within sound shader files (typically .sndshd
+files) which are placed within base/sound/ (the doom3 game ones are
+found in pak003.pk3/sound). No path is necessary for the shadernames
+located directly in the sound directory.
 
--2nd param (float channel) Choose one of the possible channels as defined by doom\_defs.script:
+-2nd param (float channel) Choose one of the possible channels as
+defined by doom\_defs.script:
 
-`#define SND_CHANNEL_ANY     0`
-` #define SND_CHANNEL_VOICE   1`
-` #define SND_CHANNEL_VOICE2  2`
-` #define SND_CHANNEL_BODY    3`
-` #define SND_CHANNEL_BODY2   4`
-` #define SND_CHANNEL_BODY3   5`
-` #define SND_CHANNEL_WEAPON  6`
-` #define SND_CHANNEL_ITEM    7`
-` #define SND_CHANNEL_HEART   8`
-` #define SND_CHANNEL_PDA     9`
-` #define SND_CHANNEL_DEMONIC 10`
-` `
+    #define SND_CHANNEL_ANY     0
+    #define SND_CHANNEL_VOICE   1
+    #define SND_CHANNEL_VOICE2  2
+    #define SND_CHANNEL_BODY    3
+    #define SND_CHANNEL_BODY2   4
+    #define SND_CHANNEL_BODY3   5
+    #define SND_CHANNEL_WEAPON  6
+    #define SND_CHANNEL_ITEM    7
+    #define SND_CHANNEL_HEART   8
+    #define SND_CHANNEL_PDA     9
+    #define SND_CHANNEL_DEMONIC 10
 
-If there is already a sound clip playing from the entity on the channel you choose, it will be cut off and replaced by the new one you specified in the 1st parameter. A special case is with SND\_CHANNEL\_ANY. Use of this channel seems to cause the sound to be played on any free channel.
+If there is already a sound clip playing from the entity on the channel
+you choose, it will be cut off and replaced by the new one you specified
+in the 1st parameter. A special case is with SND\_CHANNEL\_ANY. Use of
+this channel seems to cause the sound to be played on any free channel.
 
-You should use the function cacheSoundShader (script command)sys.cacheSoundShader() to cache each sound shader you wish to use. It seems to play the sound regardless, but unless you precache it when the map loads, you could get some glitches.
+You should use the function [cacheSoundShader (script
+command)sys.cacheSoundShader()](CacheSoundShader_%28script_command%29sys.cacheSoundShader%28%29 "CacheSoundShader (script command)sys.cacheSoundShader()")
+to cache each sound shader you wish to use. It seems to play the sound
+regardless, but unless you precache it when the map loads, you could get
+some glitches.
 
-It seems that this can be called from any entity - including moving ones. Of course with a speaker entity you can set options such as volume, looping and occlusion. I cannot find a way of scripting these things.
+It seems that this can be called from any entity - including moving
+ones. Of course with a speaker entity you can set options such as
+volume, looping and occlusion. I cannot find a way of scripting these
+things.
 
-You can use entity.stopSound() to stop a sound.
+You can use
+[entity.stopSound()](StopSound_%28script_command%29 "StopSound (script command)")
+to stop a sound.
 
+\
 

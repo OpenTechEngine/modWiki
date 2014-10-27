@@ -1,28 +1,23 @@
----
-format: Markdown
-categories: GUI_item_property
-toc: yes
-title: MultipleSel
-...
-MultipleSel (GUI item property)
-===============================
-
 ??
 
-This property is restricted to the [listDef](ListDef\_(GUI\_item\_type)) item type.
+This property is restricted to the
+[listDef](ListDef_%28GUI_item_type%29 "ListDef (GUI item type)") item
+type.
 
 Syntax
 ------
 
-`multipleSel `*`flag`*
+    multipleSel flag
 
 Default value
 -------------
 
-`Unknown`
+    Unknown
 
 Example(s)
 ----------
 
-`multipleSel 1`
+    multipleSel 1
+
+\
 

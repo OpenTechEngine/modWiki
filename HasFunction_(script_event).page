@@ -1,21 +1,14 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: HasFunction
-...
-HasFunction (script event)
-==========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Checks if an entity has a specific function in it's associated script object.
+Checks if an entity has a specific function in it's associated script
+object.
 
 Usage
 -----
@@ -30,11 +23,14 @@ Parameters
 Examples
 --------
 
-<font color="#0000ff">`boolean`</font>` doesFire = `<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`hasFunction`</font><font color="#000000">`(`</font><font color="#666666">`"fire"`</font><font color="#000000">`)`</font>`;`
+    boolean doesFire = $my_entity.hasFunction("fire");
 
 Notes
 -----
 
-Also see [callFunction](CallFunction\_(script\_event)).
+Also see
+[callFunction](CallFunction_%28script_event%29 "CallFunction (script event)")
+.
 
+\
 

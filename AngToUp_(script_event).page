@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: AngToUp
-...
-AngToUp (script event)
-======================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -25,17 +17,19 @@ Usage
 Parameters
 ----------
 
--   [angles] - A vector who's components correspond with heading, pitch, and bank.
+-   [angles] - A vector who's components correspond with heading, pitch,
+    and bank.
 
 Examples
 --------
 
-` `
-`upVec = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`angToUp`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`12`</font>` `<font color="#0000dd">`56`</font>` `<font color="#0000dd">`78`</font>`'`<font color="#000000">`)`</font>`;`
+     
+    upVec = sys.angToUp('12 56 78');
 
 Notes
 -----
 
 This script event returns an up vector.
 
+\
 

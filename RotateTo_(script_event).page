@@ -1,21 +1,14 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: RotateTo
-...
-RotateTo (script event)
-=======================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Causes an [entity](Entity) to perform a rotation along a specified vector.
+Causes an [entity](Entity "Entity") to perform a rotation along a
+specified vector.
 
 Usage
 -----
@@ -30,22 +23,37 @@ Parameters
 Examples
 --------
 
-<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`rotateTo`</font><font color="#000000">`(`</font>` '`<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>` `<font color="#0000dd">`90`</font>`' `<font color="#000000">`)`</font>`;`
+    $my_entity.rotateTo( '0 0 90' );
 
 Notes
 -----
 
-This script event does not return any values. This event differs from [rotateOnce](RotateOnce\_(script\_event)) in that this rotates an entity to a specific degree on the axis as opposed to adding to the current degree. The above example will cause the entity to rotate to 90 degrees on the z-axis from the entity's 0 angle for the duration that entity's [time](Time\_(script\_event)) is set to. If no time is set, the default is 1 second.
+This script event does not return any values. This event differs from
+[rotateOnce](RotateOnce_%28script_event%29 "RotateOnce (script event)")
+in that this rotates an entity to a specific degree on the axis as
+opposed to adding to the current degree. The above example will cause
+the entity to rotate to 90 degrees on the z-axis from the entity's 0
+angle for the duration that entity's
+[time](Time_%28script_event%29 "Time (script event)") is set to. If no
+time is set, the default is 1 second.
 
- An example of using .time, [accelTime](AccelTime\_(script\_event)), [decelTime](DecelTime\_(script\_event)), and rotateOnce in a short script:
+\
+ An example of using .time,
+[accelTime](AccelTime_%28script_event%29 "AccelTime (script event)") ,
+[decelTime](DecelTime_%28script_event%29 "DecelTime (script event)") ,
+and rotateOnce in a short script:
 
-<font color="#0000ff">`void`</font>` rotateCube `<font color="#000000">`(`</font><font color="#000000">`)`</font>
-` `<font color="#000000">`{`</font>
-`    `<font color="#000055">`$cube`</font>`.`<font color="#ff0000">`time`</font>` `<font color="#000000">`(`</font><font color="#0000dd">`5`</font><font color="#000000">`)`</font>`;`
-`    `<font color="#000055">`$cube`</font>`.`<font color="#ff0000">`accelTime`</font>` `<font color="#000000">`(`</font><font color="#0000dd">`1`</font><font color="#000000">`)`</font>`;`
-`    `<font color="#000055">`$cube`</font>`.`<font color="#ff0000">`decelTime`</font>` `<font color="#000000">`(`</font><font color="#0000dd">`2`</font><font color="#000000">`)`</font>`;`
-`    `<font color="#000055">`$cube`</font>`.`<font color="#ff0000">`rotateTo`</font>` `<font color="#000000">`(`</font>`'`<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>` `<font color="#0000dd">`180`</font>`'`<font color="#000000">`)`</font>`;`
-` `<font color="#000000">`}`</font>
+    void rotateCube ()
+     {
+        $cube.time (5);
+        $cube.accelTime (1);
+        $cube.decelTime (2);
+        $cube.rotateTo ('0 0 180');
+     }
 
-This script function will cause an entity named "cube" to rotate to 180 degrees on the Z-axis, within a time period of 5 seconds. The entity will take 1 second to accelerate to its top speed, it will rotate for 2 seconds at its top speed and finally it will spend 2 seconds to decelerate from its top speed to the stopped position.
+This script function will cause an entity named "cube" to rotate to 180
+degrees on the Z-axis, within a time period of 5 seconds. The entity
+will take 1 second to accelerate to its top speed, it will rotate for 2
+seconds at its top speed and finally it will spend 2 seconds to
+decelerate from its top speed to the stopped position.
 

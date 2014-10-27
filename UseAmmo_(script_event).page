@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: UseAmmo
-...
-UseAmmo (script event)
-======================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -20,7 +12,7 @@ Removes the specified amount of ammo from the player's inventory.
 Usage
 -----
 
-*void* useAmmo( *value*' )
+*void* useAmmo( *value'* )
 
 Parameters
 ----------
@@ -30,12 +22,13 @@ Parameters
 Examples
 --------
 
-` `
-<font color="#0000ff">`useAmmo`</font><font color="#000000">`(`</font>` `<font color="#0000dd">`1`</font>` `<font color="#000000">`)`</font>`;`
+     
+    useAmmo( 1 );
 
 Notes
 -----
 
 This script event does not return any values.
 
+\
 

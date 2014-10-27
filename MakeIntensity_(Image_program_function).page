@@ -1,21 +1,13 @@
----
-format: Markdown
-categories: Image_program_function
-toc: yes
-title: MakeIntensity
-...
-MakeIntensity (Image program function)
-======================================
-
 Description
 -----------
 
-This function will copy the red channel to the green, blue, and alpha channels. This will result in a greyscale image.
+This function will copy the red channel to the green, blue, and alpha
+channels. This will result in a greyscale image.
 
 Usage
 -----
 
-`makeIntensity ([map])`
+    makeIntensity ([map])
 
 Parameters
 ----------
@@ -27,15 +19,16 @@ Example
 
 Convert the rgb image into an alpha channel...
 
-`textures/converted_grey`
-`{       `
-`   blend diffusemap`
-`   map   makeIntensity(textures/decals/plasma_burn.tga)`
-`{`
+    textures/converted_grey
+    {       
+       blend diffusemap
+       map   makeIntensity(textures/decals/plasma_burn.tga)
+    {
 
 Notes
 -----
 
 None.
 
+\
 

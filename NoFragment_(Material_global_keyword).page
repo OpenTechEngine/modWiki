@@ -1,23 +1,15 @@
----
-format: Markdown
-categories: Material_global_keyword
-toc: yes
-title: NoFragment
-...
-NoFragment (Material global keyword)
-====================================
-
 Description
 -----------
 
-Brushes with materials which have this keyword are not affected by polygon segmentation at the map compilation stage.
+Brushes with materials which have this keyword are not affected by
+polygon segmentation at the map compilation stage.
 
 Usage
 -----
 
 In the global section of your material shader type...
 
-`NoFragment`
+    NoFragment
 
 Parameters
 ----------
@@ -27,6 +19,8 @@ Not Available.
 Notes
 -----
 
-Excessive use of materials with this keyword will be performant counter-producive as they aren't optimised for visibility.
+Excessive use of materials with this keyword will be performant
+counter-producive as they aren't optimised for visibility.
 
+\
 

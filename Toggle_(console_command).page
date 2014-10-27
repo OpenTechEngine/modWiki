@@ -1,23 +1,15 @@
----
-format: Markdown
-categories: console_command
-toc: yes
-title: Toggle
-...
-Toggle (console command)
-========================
-
 Description
 -----------
 
-This command toggles between all the possible values for the specified CVar.
+This command toggles between all the possible values for the specified
+CVar.
 
 Usage
 -----
 
 At the console type...
 
-`toggle [CVar]`
+    toggle [CVar]
 
 Parameters
 ----------
@@ -27,6 +19,10 @@ Parameters
 Notes
 -----
 
-This console command is useful in conjunction with the [bind](Bind\_(console\_command)) console command. It makes it possible to toggle a CVar on and off with a single key press.
+This console command is useful in conjunction with the
+[bind](Bind_%28console_command%29 "Bind (console command)") console
+command. It makes it possible to toggle a CVar on and off with a single
+key press.
 
+\
 

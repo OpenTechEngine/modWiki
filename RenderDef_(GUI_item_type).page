@@ -1,44 +1,37 @@
----
-format: Markdown
-categories: GUI_item_type
-toc: yes
-title: RenderDef
-...
-RenderDef (GUI item type)
-=========================
-
-Much like windowDef, but it can contain a 3D model (in the [LWO](LWO\_(file\_format)) format).
+Much like windowDef, but it can contain a 3D model (in the
+[LWO](LWO_%28file_format%29 "LWO (file format)") format).
 
 Additional properties
 ---------------------
 
--   [model](Model\_(GUI\_item\_property))
--   animClass
--   anim
--   [model](Model\_(GUI\_item\_property))
--   [modelRotate](ModelRotate\_(GUI\_item\_property))
--   [modelOrigin](ModelOrigin\_(GUI\_item\_property))
--   [needsRender](NeedsRender\_(GUI\_item\_property))
--   [viewOffset](ViewOffset\_(GUI\_item\_property))
--   [lightOrigin](LightOrigin\_(GUI\_item\_property))
--   [lightColor](LightColor\_(GUI\_item\_property))
+-   [animClass](AnimClass_%28GUI_item_property%29 "AnimClass (GUI item property)")
+-   [anim](Anim_%28GUI_item_property%29 "Anim (GUI item property)")
+-   [model](Model_%28GUI_item_property%29 "Model (GUI item property)")
+-   [modelRotate](ModelRotate_%28GUI_item_property%29 "ModelRotate (GUI item property)")
+-   [modelOrigin](ModelOrigin_%28GUI_item_property%29 "ModelOrigin (GUI item property)")
+-   [needsRender](NeedsRender_%28GUI_item_property%29 "NeedsRender (GUI item property)")
+-   [viewOffset](ViewOffset_%28GUI_item_property%29 "ViewOffset (GUI item property)")
+-   [lightOrigin](LightOrigin_%28GUI_item_property%29 "LightOrigin (GUI item property)")
+-   [lightColor](LightColor_%28GUI_item_property%29 "LightColor (GUI item property)")
 
 Example(s)
 ----------
 
-`renderDef MarsRender {`
-`   rect        0, 20, 640, 430`
-`   visible     1`
-`   backcolor   0, 0, 0, 0.4`
-`   model       "models/wipes/planet2.lwo"`
-`   needsRender     1`
-`   modelRotate     0, time * 0.001, 0, 0`
-`   modelOrigin     -80, 0, -25, 0`
-`   viewOffset  -300, -28, 0, 0`
-`   lightOrigin     0, 0, 0, 0`
-`   lightColor  1, 1, 1, 1`
-`   notime      1`
-`   definevec4  "$marsRotate"   0, time * 0.001, 0, 0`
-`   float starmove  0`
-`}`
+    renderDef MarsRender {
+        rect        0, 20, 640, 430
+        visible     1
+        backcolor   0, 0, 0, 0.4
+        model       "models/wipes/planet2.lwo"
+        needsRender     1
+        modelRotate     0, time * 0.001, 0, 0
+        modelOrigin     -80, 0, -25, 0
+        viewOffset  -300, -28, 0, 0
+        lightOrigin     0, 0, 0, 0
+        lightColor  1, 1, 1, 1
+        notime      1
+        definevec4  "$marsRotate"   0, time * 0.001, 0, 0
+        float starmove  0
+    }
+
+\
 

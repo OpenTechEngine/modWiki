@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: Assert
-...
-Assert (script event)
-=====================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -25,17 +17,19 @@ Usage
 Parameters
 ----------
 
--   [condition] - value to evaluate to determine if a break is nessecary.
+-   [condition] - value to evaluate to determine if a break is
+    nessecary.
 
 Examples
 --------
 
-` `
-<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`assert`</font><font color="#000000">`(`</font>`count`<font color="#000000">`)`</font>`;`
+     
+    sys.assert(count);
 
 Notes
 -----
 
 This script event does not return any values.
 
+\
 

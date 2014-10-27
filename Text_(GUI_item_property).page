@@ -1,27 +1,22 @@
----
-format: Markdown
-categories: GUI_item_property
-toc: yes
-title: Text
-...
-Text (GUI item property)
-========================
-
-Text to be displayed inside the item. This can be a simple text string or a reference to a string from a lang file (in the "\#str\_nnnnn" format).
+Text to be displayed inside the item. This can be a simple text string
+or a reference to a string from a lang file (in the "\#str\_nnnnn"
+format).
 
 Syntax
 ------
 
-`text `*`text`*
+    text text
 
 Default value
 -------------
 
-`""`
+    ""
 
 Example(s)
 ----------
 
-`text "Hello world."`
-`text "#str_01942"`
+    text "Hello world."
+    text "#str_01942"
+
+\
 

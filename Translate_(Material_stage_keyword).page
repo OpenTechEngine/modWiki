@@ -1,12 +1,3 @@
----
-format: Markdown
-categories: Material_stage_keyword
-toc: yes
-title: Translate
-...
-Translate (Material stage keyword)
-==================================
-
 Description
 -----------
 
@@ -15,7 +6,7 @@ The **translate** keyword translates a stage by the given offset.
 Usage
 -----
 
-`translate [x], [y]`
+    translate [x], [y]
 
 Parameters
 ----------
@@ -28,14 +19,17 @@ Example
 
 Scroll a stage at a constant rate
 
-`{`
-`   translate  time, time`
-`   map     textures/custom/foo.tga`
-`}`
+    {
+       translate  time, time
+       map     textures/custom/foo.tga
+    }
 
 Notes
 -----
 
-The [scroll](Scroll\_(Material\_stage\_keyword)) keyword is an alias for this keyword.
+The
+[scroll](Scroll_%28Material_stage_keyword%29 "Scroll (Material stage keyword)")
+keyword is an alias for this keyword.
 
+\
 

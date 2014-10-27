@@ -1,15 +1,24 @@
----
-format: Markdown
-categories: Entity
-toc: yes
-title: Gibbable_pottery
-...
-Gibbable pottery (entity)
-=========================
+<div class="plainlinks"
+style="border: 1px grey solid; padding: 0.25em;">
 
-> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
+help by verifying and
+[completing](Gibbable_pottery_%28entity%29 "http://modwiki.net/w/index.php?title=Gibbable_pottery_%28entity%29&action=edit")
+the info on this page.*
 
-> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+</div>
+
+<div id="stub" class="boilerplate metadata">
+
+*This article is a
+[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
+. You can help us by <span class="plainlinks"> [expanding
+it](Gibbable_pottery_%28entity%29 "http://modwiki.net/w/index.php?title=Gibbable_pottery_%28entity%29&action=edit")
+</span> .*
+
+</div>
+
+\
 
 Description
 -----------
@@ -19,31 +28,32 @@ Description not available.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+The following is a list of key/value pairs, also known as spawn
+arguments, that function with this entity.\
 
-| KEY                | DESCRIPTION                |
-|--------------------|----------------------------|
-| def\_debrisspawner | Description not available. |
-| editor\_color      | Description not available. |
-| editor\_maxs       | Description not available. |
-| editor\_mins       | Description not available. |
-| editor\_usage1     | Description not available. |
-| editor\_usage2     | Description not available. |
-| editor\_usage3     | Description not available. |
-| health             | Description not available. |
-| inherit            | Description not available. |
-| matter             | Description not available. |
-| snd\_gib           | Description not available. |
+  KEY                  DESCRIPTION
+  -------------------- ----------------------------
+  def\_debrisspawner   Description not available.
+  editor\_color        Description not available.
+  editor\_maxs         Description not available.
+  editor\_mins         Description not available.
+  editor\_usage1       Description not available.
+  editor\_usage2       Description not available.
+  editor\_usage3       Description not available.
+  health               Description not available.
+  inherit              Description not available.
+  matter               Description not available.
+  snd\_gib             Description not available.
 
 Inheritance
 -----------
 
 This entity is derived from the following:
 
--   [gibbable\_default](Gibbable\_default\_(entity))
-    -   *' gibbable\_pottery*'
+-   [gibbable\_default](Gibbable_default_%28entity%29 "Gibbable default (entity)")
+    -   **gibbable\_pottery**
 
-**Note**: Entries marked in italics are classes defined in the SDK.
+**Note** : Entries marked in italics are classes defined in the SDK.
 
 Notes
 -----

@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: StrToFloat
-...
-StrToFloat (script event)
-=========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -30,14 +22,16 @@ Parameters
 Examples
 --------
 
-<font color="#0000ff">`string`</font>` test1=`<font color="#666666">`"33.333"`</font>`;`
-<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font>` `<font color="#000000">`(`</font>` `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`strToFloat`</font><font color="#000000">`(`</font>`test1`<font color="#000000">`)`</font><font color="#000000">`)`</font>`;`
+    string test1="33.333";
+    sys.println ( sys.strToFloat(test1));
 
-This would output "33.333" to the console. This allows key value's in entities to be used in scripts as float (normally they are all strings).
+This would output "33.333" to the console. This allows key value's in
+entities to be used in scripts as float (normally they are all strings).
 
 Notes
 -----
 
 If the string contains non-numerals the result will always be zero.
 
+\
 

@@ -1,40 +1,34 @@
----
-format: Markdown
-categories: Material_stage_keyword
-toc: yes
-title: Red
-...
-Red (Material stage keyword)
-============================
-
 Description
 -----------
 
-The **red** keyword multiples the red channel of the associated map by the given value.
+The **red** keyword multiples the red channel of the associated map by
+the given value.
 
 Usage
 -----
 
-`red <redval>`
+    red <redval>
 
 Parameters
 ----------
 
--   *redval* - the value by which the red channel of the image map should be multiplied
+-   *redval* - the value by which the red channel of the image map
+    should be multiplied
 
 Example
 -------
 
 The following stage reduces the intensity of the red channel by half.
 
-`{`
-`   map path/to/image.tga`
-`   red 0.5`
-`}`
+    {
+       map path/to/image.tga
+       red 0.5
+    }
 
 Notes
 -----
 
 Not Available.
 
+\
 

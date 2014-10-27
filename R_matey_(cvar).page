@@ -1,14 +1,9 @@
----
-format: Markdown
-categories: cvar
-toc: yes
-title: R_matey
-...
-R matey (cvar)
-==============
+<div align="left"
+style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
 
-<div style="padding: 1px; border: 0px solid #000000" align="left">
-<font size="18px"><font color="black">![](/images/images_f_f9_Etqwsquare_bg.png) The information on this page is specific to [Enemy Territory: Quake Wars](http://web.archive.org/web/20121206024939/http://www.modwiki.net:80/wiki/Enemy_Territory:_Quake_Wars).</font></font>
+![](/images/f/f9/Etqwsquare_bg.png) The information on this page is
+specific to [Enemy Territory: Quake
+Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
 
 </div>
 
@@ -24,7 +19,7 @@ Usage
 
 At the console type...
 
-`r_mateys`
+    r_mateys
 
 Parameters
 ----------
@@ -34,32 +29,64 @@ Parameters
 Flags
 -----
 
-| Flag              | Enabled | Description                                  |
-|-------------------|---------|----------------------------------------------|
-| CVAR\_ALL         |         | all flags                                    |
-| CVAR\_BOOL        |         | variable is a boolean                        |
-| CVAR\_INTEGER     |         | variable is an integer                       |
-| CVAR\_FLOAT       |         | variable is a float                          |
-| CVAR\_SYSTEM      | X       | system variable                              |
-| CVAR\_RENDERER    | X       | renderer variable                            |
-| CVAR\_SOUND       |         | sound variable                               |
-| CVAR\_GUI         |         | gui variable                                 |
-| CVAR\_GAME        |         | game variable                                |
-| CVAR\_TOOL        |         | tool variable                                |
-| CVAR\_USERINFO    |         | sent to servers, available to menu           |
-| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
-| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
-| CVAR\_STATIC      | X       | statically declared, not user created        |
-| CVAR\_CHEAT       | X       | variable is considered a cheat               |
-| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
-| CVAR\_INIT        |         | can only be set from the command-line        |
-| CVAR\_ROM         |         | display only, cannot be set by user at all   |
-| CVAR\_ARCHIVE     |         | set to cause it to be saved to a config file |
-| CVAR\_MODIFIED    | X       | set when the variable is modified            |
+  --------------------------------------------------------------------------
+  Flag                     Enabled                  Description
+  ------------------------ ------------------------ ------------------------
+  CVAR\_ALL                                         all flags
+
+  CVAR\_BOOL                                        variable is a boolean
+
+  CVAR\_INTEGER                                     variable is an integer
+
+  CVAR\_FLOAT                                       variable is a float
+
+  CVAR\_SYSTEM             X                        system variable
+
+  CVAR\_RENDERER           X                        renderer variable
+
+  CVAR\_SOUND                                       sound variable
+
+  CVAR\_GUI                                         gui variable
+
+  CVAR\_GAME                                        game variable
+
+  CVAR\_TOOL                                        tool variable
+
+  CVAR\_USERINFO                                    sent to servers,
+                                                    available to menu
+
+  CVAR\_SERVERINFO                                  sent from servers,
+                                                    available to menu
+
+  CVAR\_NETWORKSYNC                                 cvar is synced from the
+                                                    server to clients
+
+  CVAR\_STATIC             X                        statically declared, not
+                                                    user created
+
+  CVAR\_CHEAT              X                        variable is considered a
+                                                    cheat
+
+  CVAR\_NOCHEAT                                     variable is not
+                                                    considered a cheat
+
+  CVAR\_INIT                                        can only be set from the
+                                                    command-line
+
+  CVAR\_ROM                                         display only, cannot be
+                                                    set by user at all
+
+  CVAR\_ARCHIVE                                     set to cause it to be
+                                                    saved to a config file
+
+  CVAR\_MODIFIED           X                        set when the variable is
+                                                    modified
+  --------------------------------------------------------------------------
 
 Notes
 -----
 
 This CVar has probably nothing to do with tapirs.
 
+\
 

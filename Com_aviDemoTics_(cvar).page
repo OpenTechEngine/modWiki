@@ -1,23 +1,17 @@
----
-format: Markdown
-categories: cvar
-toc: yes
-title: Com_aviDemoTics
-...
-Com aviDemoTics (cvar)
-======================
-
 Description
 -----------
 
-This determines the framerate to capture .[TGA](TGA\_(file\_format)) frames generated with the [aviDemo](AviDemo\_(console\_command)) command.
+This determines the framerate to capture .
+[TGA](TGA_%28file_format%29 "TGA (file format)") frames generated with
+the [aviDemo](AviDemo_%28console_command%29 "AviDemo (console command)")
+command.
 
 Usage
 -----
 
 At the console type...
 
-`com_aviDemoTics [int]`
+    com_aviDemoTics [int]
 
 Parameters
 ----------
@@ -31,36 +25,74 @@ Parameters
 Flags
 -----
 
-| Flag              | Enabled | Description                                  |
-|-------------------|---------|----------------------------------------------|
-| CVAR\_ALL         |         | all flags                                    |
-| CVAR\_BOOL        |         | variable is a boolean                        |
-| CVAR\_INTEGER     | X       | variable is an integer                       |
-| CVAR\_FLOAT       |         | variable is a float                          |
-| CVAR\_SYSTEM      | X       | system variable                              |
-| CVAR\_RENDERER    |         | renderer variable                            |
-| CVAR\_SOUND       |         | sound variable                               |
-| CVAR\_GUI         |         | gui variable                                 |
-| CVAR\_GAME        |         | game variable                                |
-| CVAR\_TOOL        |         | tool variable                                |
-| CVAR\_USERINFO    |         | sent to servers, available to menu           |
-| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
-| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
-| CVAR\_STATIC      | X       | statically declared, not user created        |
-| CVAR\_CHEAT       | X       | variable is considered a cheat               |
-| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
-| CVAR\_INIT        |         | can only be set from the command-line        |
-| CVAR\_ROM         |         | display only, cannot be set by user at all   |
-| CVAR\_ARCHIVE     |         | set to cause it to be saved to a config file |
-| CVAR\_MODIFIED    | X       | set when the variable is modified            |
+  --------------------------------------------------------------------------
+  Flag                     Enabled                  Description
+  ------------------------ ------------------------ ------------------------
+  CVAR\_ALL                                         all flags
+
+  CVAR\_BOOL                                        variable is a boolean
+
+  CVAR\_INTEGER            X                        variable is an integer
+
+  CVAR\_FLOAT                                       variable is a float
+
+  CVAR\_SYSTEM             X                        system variable
+
+  CVAR\_RENDERER                                    renderer variable
+
+  CVAR\_SOUND                                       sound variable
+
+  CVAR\_GUI                                         gui variable
+
+  CVAR\_GAME                                        game variable
+
+  CVAR\_TOOL                                        tool variable
+
+  CVAR\_USERINFO                                    sent to servers,
+                                                    available to menu
+
+  CVAR\_SERVERINFO                                  sent from servers,
+                                                    available to menu
+
+  CVAR\_NETWORKSYNC                                 cvar is synced from the
+                                                    server to clients
+
+  CVAR\_STATIC             X                        statically declared, not
+                                                    user created
+
+  CVAR\_CHEAT              X                        variable is considered a
+                                                    cheat
+
+  CVAR\_NOCHEAT                                     variable is not
+                                                    considered a cheat
+
+  CVAR\_INIT                                        can only be set from the
+                                                    command-line
+
+  CVAR\_ROM                                         display only, cannot be
+                                                    set by user at all
+
+  CVAR\_ARCHIVE                                     set to cause it to be
+                                                    saved to a config file
+
+  CVAR\_MODIFIED           X                        set when the variable is
+                                                    modified
+  --------------------------------------------------------------------------
 
 Notes
 -----
 
-Any number above four seems to have no effect. It's not 100% clear if this it based on the engine's in-game clock of 60fps or if it's based on the refresh rate. Related CVars:
+Any number above four seems to have no effect. It's not 100% clear if
+this it based on the engine's in-game clock of 60fps or if it's based on
+the refresh rate. Related CVars:
 
--   [com\_aviDemoHeight](Com\_aviDemoHeight\_(cvar)) - You can select the height of each frame.
--   [com\_aviDemoSamples](Com\_aviDemoSamples\_(cvar)) - You can select the [antialiasing](Antialiasing) factor of each frame.
--   [com\_aviDemoWidth](Com\_aviDemoWidth\_(cvar)) - You can select the width of each frame.
+-   [com\_aviDemoHeight](Com_aviDemoHeight_%28cvar%29 "Com aviDemoHeight (cvar)") -
+    You can select the height of each frame.
+-   [com\_aviDemoSamples](Com_aviDemoSamples_%28cvar%29 "Com aviDemoSamples (cvar)") -
+    You can select the [antialiasing](Antialiasing "Antialiasing")
+    factor of each frame.
+-   [com\_aviDemoWidth](Com_aviDemoWidth_%28cvar%29 "Com aviDemoWidth (cvar)") -
+    You can select the width of each frame.
 
+\
 

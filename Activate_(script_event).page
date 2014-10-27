@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: Activate
-...
-Activate (script event)
-=======================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -25,17 +17,19 @@ Usage
 Parameters
 ----------
 
--   [activator] - The entity that caused the action (usually the player).
+-   [activator] - The entity that caused the action (usually the
+    player).
 
 Examples
 --------
 
-` `
-<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`activate`</font><font color="#000000">`(`</font><font color="#000055">`$player1`</font><font color="#000000">`)`</font>`;`
+     
+    $my_entity.activate($player1);
 
 Notes
 -----
 
 This script event does not return any values.
 
+\
 

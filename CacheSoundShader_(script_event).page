@@ -1,21 +1,14 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: CacheSoundShader
-...
-CacheSoundShader (script event)
-===============================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Ensure the specified sound shader is loaded by the system. Prevents cache hits when playing sound shaders.
+Ensure the specified sound shader is loaded by the system. Prevents
+cache hits when playing sound shaders.
 
 Usage
 -----
@@ -30,12 +23,13 @@ Parameters
 Examples
 --------
 
-` `
-<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`cacheSoundShader`</font>` `<font color="#000000">`(`</font><font color="#666666">`"broken_plat_2_5s"`</font><font color="#000000">`)`</font>`;`
+     
+    sys.cacheSoundShader ("broken_plat_2_5s");
 
 Notes
 -----
 
 This script event does not return any values.
 
+\
 

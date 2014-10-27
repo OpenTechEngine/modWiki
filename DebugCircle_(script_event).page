@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: DebugCircle
-...
-DebugCircle (script event)
-==========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -20,7 +12,9 @@ Line drawing for debug visualization.
 Usage
 -----
 
-*void* debugCircle( *vector* **color**, *vector* **origin**, *vector* **dir**, *float* **radius**, *float* **numSteps**, *float* **lifetime** )
+*void* debugCircle( *vector* **color** , *vector* **origin** , *vector*
+**dir** , *float* **radius** , *float* **numSteps** , *float*
+**lifetime** )
 
 Parameters
 ----------
@@ -35,8 +29,8 @@ Parameters
 Examples
 --------
 
-` `
-<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`debugCircle`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`1`</font>` `<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>` ', '`<font color="#0000dd">`45`</font>` `<font color="#0000dd">`84`</font>` `<font color="#0000dd">`21`</font>`', '`<font color="#0000dd">`45`</font>` `<font color="#0000dd">`21`</font>` `<font color="#0000dd">`78`</font>`', `<font color="#0000dd">`10`</font>`, `<font color="#0000dd">`2`</font>`, `<font color="#0000dd">`1`</font><font color="#000000">`)`</font>`;`
+     
+    sys.debugCircle('1 0 0 ', '45 84 21', '45 21 78', 10, 2, 1);
 
 Notes
 -----
@@ -45,4 +39,5 @@ This script event does not return any values.
 
 Lifetime of 0 == 1 frame.
 
+\
 

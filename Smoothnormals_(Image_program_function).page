@@ -1,21 +1,13 @@
----
-format: Markdown
-categories: Image_program_function
-toc: yes
-title: Smoothnormals
-...
-Smoothnormals (Image program function)
-======================================
-
 Description
 -----------
 
-This function will perform a box filter on the specified normal map and then normalize the result.
+This function will perform a box filter on the specified normal map and
+then normalize the result.
 
 Usage
 -----
 
-`smoothnormals ([map])`
+    smoothnormals ([map])
 
 Parameters
 ----------
@@ -27,17 +19,18 @@ Example
 
 Smooth normal map...
 
-`textures/smoothed`
-`{`
-`   {`
-`      blend bumpmap`
-`      map   smoothnormals(textures/custom/image_1.tga)`
-`   }`
-`}`
+    textures/smoothed
+    {
+       {
+          blend bumpmap
+          map   smoothnormals(textures/custom/image_1.tga)
+       }
+    }
 
 Notes
 -----
 
 None.
 
+\
 

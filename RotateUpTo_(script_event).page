@@ -1,44 +1,40 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: RotateUpTo
-...
-RotateUpTo (script event)
-=========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Initiates a rotation about the given axis by increasing the current angle towards the given angle.
+Initiates a rotation about the given axis by increasing the current
+angle towards the given angle.
 
 Usage
 -----
 
-void rotateUpTo( *float* **axis**, *float* **angle** )
+void rotateUpTo( *float* **axis** , *float* **angle** )
 
 Parameters
 ----------
 
-[axis] - The Axis to rotate around in float format. 0 (zero) = X, 1 = Y & 2 = Z
+[axis] - The Axis to rotate around in float format. 0 (zero) = X, 1 = Y
+& 2 = Z
 
 [angle] - angle in degrees to rotate to
 
 Examples
 --------
 
-This example shows a mover (light\_02\_rot) rotated on the X (0) axis increasing it's degrees to -70 degrees from it's current position.
+This example shows a mover (light\_02\_rot) rotated on the X (0) axis
+increasing it's degrees to -70 degrees from it's current position.
 
-<font color="#000055">`$light_`<font color="#0000dd">`02`</font>`_rot`</font>`.`<font color="#ff0000">`rotateUpTo`</font><font color="#000000">`(`</font><font color="#0000dd">`0`</font>`, -`<font color="#0000dd">`70`</font><font color="#000000">`)`</font>`;`
+    $light_02_rot.rotateUpTo(0, -70);
 
 Notes
 -----
 
 Uses the current speed/time and acceleration and deceleration settings.
 
+\
 

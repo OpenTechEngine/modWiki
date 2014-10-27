@@ -1,125 +1,138 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: GUI_item_properties.page
-...
-GUI item properties
-===================
+Properties say how the item will be drawn or work. They are defined on
+the script source, but can have their values changed at runtime.
 
-Properties say how the item will be drawn or work. They are defined on the script source, but can have their values changed at runtime.
+Properties are featured somewhere inside each of a GUI's
+[items](GUI_items "GUI items") , and use the following syntax:
 
-Properties are featured somewhere inside each of a GUI's [items](GUI\_items), and use the following syntax:
+    property_name property_values
 
-*`property_name`*` `*`property_values`*
+There are different value types used - as a whole, though, they're
+either numeric (used for integers, floats and booleans) or string (used
+for filenames, always between quotes). For example,
 
-There are different value types used - as a whole, though, they're either numeric (used for integers, floats and booleans) or string (used for filenames, always between quotes). For example,
+    needsRender  1
+    background  "gui/mainmenu/star"
 
-`needsRender    1`
-`background "gui/mainmenu/star"`
+Some of the properties can also have several different values (or
+parameters) on the same line - they're usually separated by commands.
+For example,
 
-Some of the properties can also have several different values (or parameters) on the same line - they're usually separated by commands. For example,
+    shear        0, 1
+    rect        0, 0, 640, 480
+    matcolor    0.7, 0.7, 0.7, 0
 
-`shear      0, 1`
-`rect       0, 0, 640, 480`
-`matcolor   0.7, 0.7, 0.7, 0`
-
-Also, notice that the property values aren't simply set when the GUI is shown. Instead, their initial values are updated on each frame, acting as a *live* property. This makes no difference when a property has a constant value like *10* or *"Lorem Ipsum"*, but when you are using GUI variables or parameters, the properties themselves will have their values changed when their variable or parameters change.
+Also, notice that the property values aren't simply set when the GUI is
+shown. Instead, their initial values are updated on each frame, acting
+as a *live* property. This makes no difference when a property has a
+constant value like *10* or *"Lorem Ipsum"* , but when you are using GUI
+variables or parameters, the properties themselves will have their
+values changed when their variable or parameters change.
 
 For example, using the *gui::name* format for GUI parameters:
 
-`text   "gui::chat2"`
+    text "gui::chat2"
 
 Or using internal calculations:
 
-`matcolor   0.25, 0.45, 0.4, pdflick2 [ time * .0025 ] / 2.5`
+    matcolor 0.25, 0.45, 0.4, pdflick2 [ time * .0025 ] / 2.5
 
-On both cases, properties will change to reflect the change on their variables or parameters over time. The list of available parameters depends on how each different GUI works, though, as most of them come from hard-coded interaction with other [scripting](Scripting) systems. Check the [Guis (folder)](Guis\_(folder)) list to see how most of Doom 3's built-in GUIs work on that aspect.
+On both cases, properties will change to reflect the change on their
+variables or parameters over time. The list of available parameters
+depends on how each different GUI works, though, as most of them come
+from hard-coded interaction with other
+[scripting](Scripting "Scripting") systems. Check the [Guis
+(folder)](Guis_%28folder%29 "Guis (folder)") list to see how most of
+Doom 3's built-in GUIs work on that aspect.
 
 Available item properties
 -------------------------
 
-The following item properties are known. Most of them apply to all kinds of [GUI items](GUI\_items), although a few of them are reserved for specific types and are noted as so. Also, due to their names, the task each of them perform is pretty much obvious.
+The following item properties are known. Most of them apply to all kinds
+of [GUI items](GUI_items "GUI items") , although a few of them are
+reserved for specific types and are noted as so. Also, due to their
+names, the task each of them perform is pretty much obvious.
 
-Apparently, the GUI system makes no differentiation for uppercase and lowercase property names.
+Apparently, the GUI system makes no differentiation for uppercase and
+lowercase property names.
 
-Most of the examples featured on the following documentation come straight from Doom 3.
+Most of the examples featured on the following documentation come
+straight from Doom 3.
 
--   anim
--   animClass
--   [backcolor](Backcolor\_(GUI\_item\_property))
--   [background](Background\_(GUI\_item\_property))
--   [bind](Bind\_(GUI\_item\_property))
--   [bordercolor](Bordercolor\_(GUI\_item\_property))
--   [bordersize](Bordersize\_(GUI\_item\_property))
--   [choiceType](ChoiceType\_(GUI\_item\_property))
--   [choices](Choices\_(GUI\_item\_property))
--   [comment](Comment\_(GUI\_item\_property))
--   [currentChoice](CurrentChoice\_(GUI\_item\_property))
--   [cursor](Cursor\_(GUI\_item\_property))
--   [cursorvar](Cursorvar\_(GUI\_item\_property))
--   [cvar](Cvar\_(GUI\_item\_property))
--   cvarGroup
--   [font](Font\_(GUI\_item\_property))
--   forceScroll
--   [forceaspectheight](Forceaspectheight\_(GUI\_item\_property))
--   [forceaspectwidth](Forceaspectwidth\_(GUI\_item\_property))
--   [forecolor](Forecolor\_(GUI\_item\_property))
--   [gui](Gui\_(GUI\_item\_property))
--   [high](High\_(GUI\_item\_property))
--   horizontal
--   [invertrect](Invertrect\_(GUI\_item\_property))
--   [lightColor](LightColor\_(GUI\_item\_property))
--   [lightOrigin](LightOrigin\_(GUI\_item\_property))
--   [listName](ListName\_(GUI\_item\_property))
--   [liveUpdate](LiveUpdate\_(GUI\_item\_property))
--   [low](Low\_(GUI\_item\_property))
--   [matcolor](Matcolor\_(GUI\_item\_property))
--   [matscalex](Matscalex\_(GUI\_item\_property))
--   [matscaley](Matscaley\_(GUI\_item\_property))
--   [maxchars](Maxchars\_(GUI\_item\_property))
--   [menugui](Menugui\_(GUI\_item\_property))
--   [modal](Modal\_(GUI\_item\_property))
--   [model](Model\_(GUI\_item\_property))
--   [modelOrigin](ModelOrigin\_(GUI\_item\_property))
--   [modelRotate](ModelRotate\_(GUI\_item\_property))
--   [multipleSel](MultipleSel\_(GUI\_item\_property))
--   name
--   naturalmatscale
--   [needsRender](NeedsRender\_(GUI\_item\_property))
--   [noclip](Noclip\_(GUI\_item\_property))
--   [nocursor](Nocursor\_(GUI\_item\_property))
--   [noevents](Noevents\_(GUI\_item\_property))
--   [notime](Notime\_(GUI\_item\_property))
--   [nowrap](Nowrap\_(GUI\_item\_property))
--   numeric
--   password
--   play
--   [readonly](Readonly\_(GUI\_item\_property))
--   [rect](Rect\_(GUI\_item\_property))
--   <span class="deadlink">rotate</span>
--   scrollbar
--   [shadow](Shadow\_(GUI\_item\_property))
--   [shear](Shear\_(GUI\_item\_property))
--   showcoords
--   showtime
--   source
--   [step](Step\_(GUI\_item\_property))
--   [stepsize](Stepsize\_(GUI\_item\_property))
--   [tabAligns](TabAligns\_(GUI\_item\_property))
--   [tabStops](TabStops\_(GUI\_item\_property))
--   [text](Text\_(GUI\_item\_property))
--   [textalign](Textalign\_(GUI\_item\_property))
--   [textalignx](Textalignx\_(GUI\_item\_property))
--   [textaligny](Textaligny\_(GUI\_item\_property))
--   [textscale](Textscale\_(GUI\_item\_property))
--   [thumbShader](ThumbShader\_(GUI\_item\_property))
--   [updateGroup](UpdateGroup\_(GUI\_item\_property))
--   [values](Values\_(GUI\_item\_property))
--   [variablebackground](Variablebackground\_(GUI\_item\_property))
--   vertical
--   [viewOffset](ViewOffset\_(GUI\_item\_property))
--   [visible](Visible\_(GUI\_item\_property))
--   [wantenter](Wantenter\_(GUI\_item\_property))
--   [wrap](Wrap\_(GUI\_item\_property))
+-   [anim](Anim_%28GUI_item_property%29 "Anim (GUI item property)")
+-   [animClass](AnimClass_%28GUI_item_property%29 "AnimClass (GUI item property)")
+-   [backcolor](Backcolor_%28GUI_item_property%29 "Backcolor (GUI item property)")
+-   [background](Background_%28GUI_item_property%29 "Background (GUI item property)")
+-   [bind](Bind_%28GUI_item_property%29 "Bind (GUI item property)")
+-   [bordercolor](Bordercolor_%28GUI_item_property%29 "Bordercolor (GUI item property)")
+-   [bordersize](Bordersize_%28GUI_item_property%29 "Bordersize (GUI item property)")
+-   [choiceType](ChoiceType_%28GUI_item_property%29 "ChoiceType (GUI item property)")
+-   [choices](Choices_%28GUI_item_property%29 "Choices (GUI item property)")
+-   [comment](Comment_%28GUI_item_property%29 "Comment (GUI item property)")
+-   [currentChoice](CurrentChoice_%28GUI_item_property%29 "CurrentChoice (GUI item property)")
+-   [cursor](Cursor_%28GUI_item_property%29 "Cursor (GUI item property)")
+-   [cursorvar](Cursorvar_%28GUI_item_property%29 "Cursorvar (GUI item property)")
+-   [cvar](Cvar_%28GUI_item_property%29 "Cvar (GUI item property)")
+-   [cvarGroup](CvarGroup_%28GUI_item_property%29 "CvarGroup (GUI item property)")
+-   [font](Font_%28GUI_item_property%29 "Font (GUI item property)")
+-   [forceScroll](ForceScroll_%28GUI_item_property%29 "ForceScroll (GUI item property)")
+-   [forceaspectheight](Forceaspectheight_%28GUI_item_property%29 "Forceaspectheight (GUI item property)")
+-   [forceaspectwidth](Forceaspectwidth_%28GUI_item_property%29 "Forceaspectwidth (GUI item property)")
+-   [forecolor](Forecolor_%28GUI_item_property%29 "Forecolor (GUI item property)")
+-   [gui](Gui_%28GUI_item_property%29 "Gui (GUI item property)")
+-   [high](High_%28GUI_item_property%29 "High (GUI item property)")
+-   [horizontal](Horizontal_%28GUI_item_property%29 "Horizontal (GUI item property)")
+-   [invertrect](Invertrect_%28GUI_item_property%29 "Invertrect (GUI item property)")
+-   [lightColor](LightColor_%28GUI_item_property%29 "LightColor (GUI item property)")
+-   [lightOrigin](LightOrigin_%28GUI_item_property%29 "LightOrigin (GUI item property)")
+-   [listName](ListName_%28GUI_item_property%29 "ListName (GUI item property)")
+-   [liveUpdate](LiveUpdate_%28GUI_item_property%29 "LiveUpdate (GUI item property)")
+-   [low](Low_%28GUI_item_property%29 "Low (GUI item property)")
+-   [matcolor](Matcolor_%28GUI_item_property%29 "Matcolor (GUI item property)")
+-   [matscalex](Matscalex_%28GUI_item_property%29 "Matscalex (GUI item property)")
+-   [matscaley](Matscaley_%28GUI_item_property%29 "Matscaley (GUI item property)")
+-   [maxchars](Maxchars_%28GUI_item_property%29 "Maxchars (GUI item property)")
+-   [menugui](Menugui_%28GUI_item_property%29 "Menugui (GUI item property)")
+-   [modal](Modal_%28GUI_item_property%29 "Modal (GUI item property)")
+-   [model](Model_%28GUI_item_property%29 "Model (GUI item property)")
+-   [modelOrigin](ModelOrigin_%28GUI_item_property%29 "ModelOrigin (GUI item property)")
+-   [modelRotate](ModelRotate_%28GUI_item_property%29 "ModelRotate (GUI item property)")
+-   [multipleSel](MultipleSel_%28GUI_item_property%29 "MultipleSel (GUI item property)")
+-   [name](Name_%28GUI_item_property%29 "Name (GUI item property)")
+-   [naturalmatscale](Naturalmatscale_%28GUI_item_property%29 "Naturalmatscale (GUI item property)")
+-   [needsRender](NeedsRender_%28GUI_item_property%29 "NeedsRender (GUI item property)")
+-   [noclip](Noclip_%28GUI_item_property%29 "Noclip (GUI item property)")
+-   [nocursor](Nocursor_%28GUI_item_property%29 "Nocursor (GUI item property)")
+-   [noevents](Noevents_%28GUI_item_property%29 "Noevents (GUI item property)")
+-   [notime](Notime_%28GUI_item_property%29 "Notime (GUI item property)")
+-   [nowrap](Nowrap_%28GUI_item_property%29 "Nowrap (GUI item property)")
+-   [numeric](Numeric_%28GUI_item_property%29 "Numeric (GUI item property)")
+-   [password](Password_%28GUI_item_property%29 "Password (GUI item property)")
+-   [play](Play_%28GUI_item_property%29 "Play (GUI item property)")
+-   [readonly](Readonly_%28GUI_item_property%29 "Readonly (GUI item property)")
+-   [rect](Rect_%28GUI_item_property%29 "Rect (GUI item property)")
+-   [rotate](Rotate_%28GUI_item_property%29 "Rotate (GUI item property)")
+-   [scrollbar](Scrollbar_%28GUI_item_property%29 "Scrollbar (GUI item property)")
+-   [shadow](Shadow_%28GUI_item_property%29 "Shadow (GUI item property)")
+-   [shear](Shear_%28GUI_item_property%29 "Shear (GUI item property)")
+-   [showcoords](Showcoords_%28GUI_item_property%29 "Showcoords (GUI item property)")
+-   [showtime](Showtime_%28GUI_item_property%29 "Showtime (GUI item property)")
+-   [source](Source_%28GUI_item_property%29 "Source (GUI item property)")
+-   [step](Step_%28GUI_item_property%29 "Step (GUI item property)")
+-   [stepsize](Stepsize_%28GUI_item_property%29 "Stepsize (GUI item property)")
+-   [tabAligns](TabAligns_%28GUI_item_property%29 "TabAligns (GUI item property)")
+-   [tabStops](TabStops_%28GUI_item_property%29 "TabStops (GUI item property)")
+-   [text](Text_%28GUI_item_property%29 "Text (GUI item property)")
+-   [textalign](Textalign_%28GUI_item_property%29 "Textalign (GUI item property)")
+-   [textalignx](Textalignx_%28GUI_item_property%29 "Textalignx (GUI item property)")
+-   [textaligny](Textaligny_%28GUI_item_property%29 "Textaligny (GUI item property)")
+-   [textscale](Textscale_%28GUI_item_property%29 "Textscale (GUI item property)")
+-   [thumbShader](ThumbShader_%28GUI_item_property%29 "ThumbShader (GUI item property)")
+-   [updateGroup](UpdateGroup_%28GUI_item_property%29 "UpdateGroup (GUI item property)")
+-   [values](Values_%28GUI_item_property%29 "Values (GUI item property)")
+-   [variablebackground](Variablebackground_%28GUI_item_property%29 "Variablebackground (GUI item property)")
+-   [vertical](Vertical_%28GUI_item_property%29 "Vertical (GUI item property)")
+-   [viewOffset](ViewOffset_%28GUI_item_property%29 "ViewOffset (GUI item property)")
+-   [visible](Visible_%28GUI_item_property%29 "Visible (GUI item property)")
+-   [wantenter](Wantenter_%28GUI_item_property%29 "Wantenter (GUI item property)")
+-   [wrap](Wrap_%28GUI_item_property%29 "Wrap (GUI item property)")
 

@@ -1,23 +1,18 @@
----
-format: Markdown
-categories: GUI_command
-toc: yes
-title: ShowCursor
-...
-ShowCursor (GUI command)
-========================
-
-Hides or shows the mouse cursor. This is useful if you have some intro animations and you want to keep the user from clicking or moving the move over the interface it until the animation has ended.
+Hides or shows the mouse cursor. This is useful if you have some intro
+animations and you want to keep the user from clicking or moving the
+move over the interface it until the animation has ended.
 
 Syntax
 ------
 
-`showcursor `*`flag`*
+    showcursor flag
 
 *flag* is either 0 (hide) or 1 (show).
 
 Example(s)
 ----------
 
-`showcursor "0";`
+    showcursor "0";
+
+\
 

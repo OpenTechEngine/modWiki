@@ -1,89 +1,113 @@
----
-format: Markdown
-categories: file_format
-toc: yes
-title: DAT
-...
-DAT (file format)
-=================
-
-|----------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                    
- Contents                                                                                                                                
- --------                                                                                                                                
-                                                                                                                                         
- </div>                                                                                                                                  
- -   [<span class="tocnumber">1</span> <span class="toctext">General Information</span>](DAT\_(file\_format)#General\_Information)  
- -   [<span class="tocnumber">2</span> <span class="toctext">File Format</span>](DAT\_(file\_format)#File\_Format)                  
-     -   [<span class="tocnumber">2.1</span> <span class="toctext">Glyphs</span>](DAT\_(file\_format)#Glyphs)                       
-     -   [<span class="tocnumber">2.2</span> <span class="toctext">Tail End</span>](DAT\_(file\_format)#Tail\_End)                  
- -   [<span class="tocnumber">3</span> <span class="toctext">Tools</span>](DAT\_(file\_format)#Tools)                               |
-
 General Information
 -------------------
 
-DAT files store glyph and image lookup data for use with a set of corresponding [TGA](TGA\_(file\_format)) files. Together these files make up the bitmap fonts used in the game. But unlike most filetypes used with idTech 4, these files are binary and as such should not be edited in a text editor. They can can be found in the [fonts](Folder\_structure\_(Doom\_3)#.2Fbase.2Ffonts) directory and it's subfolders.
+DAT files store glyph and image lookup data for use with a set of
+corresponding [TGA](TGA_%28file_format%29 "TGA (file format)") files.
+Together these files make up the bitmap fonts used in the game. But
+unlike most filetypes used with idTech 4, these files are binary and as
+such should not be edited in a text editor. They can can be found in the
+[fonts](Folder_structure_%28Doom_3%29#.2Fbase.2Ffonts "Folder structure (Doom 3)")
+directory and it's subfolders.
 
-The fonts consist of 256 glyphs and are rendered at three sizes, 12pt, 24pt, and 48pt with a respective DAT file for each. The TGA files are 256 by 256 with a 32 bit color depth. Traditionally the images are white in color (allowing for the color to be adjusted in post) while the glyphs are visible only in the alpha channel. Because each TGA is rendered at a fixed resolution the entire set of glyphs may span several image files.
+The fonts consist of 256 glyphs and are rendered at three sizes, 12pt,
+24pt, and 48pt with a respective DAT file for each. The TGA files are
+256 by 256 with a 32 bit color depth. Traditionally the images are white
+in color (allowing for the color to be adjusted in post) while the
+glyphs are visible only in the alpha channel. Because each TGA is
+rendered at a fixed resolution the entire set of glyphs may span several
+image files.
 
-This bitmap font implementation was also present in Quake 3 and other idTech 3 based games. As such, third party utilities to create bitmap fonts for idTech 3 based games can be used with idTech 4 based games as well. A few such utilities are listed below in the tools section.
+This bitmap font implementation was also present in Quake 3 and other
+idTech 3 based games. As such, third party utilities to create bitmap
+fonts for idTech 3 based games can be used with idTech 4 based games as
+well. A few such utilities are listed below in the tools section.
 
 File Format
 -----------
 
-The overall format of the file is best described as a memory dump of the fontInfo\_t structure as defined in the Quake 3 source code. From q\_shared.h ...
+The overall format of the file is best described as a memory dump of the
+fontInfo\_t structure as defined in the Quake 3 source code. From
+q\_shared.h ...
 
-`00346 #define MAX_QPATH           64`
-`...`
-`01681 #define GLYPH_START 0`
-`01682 #define GLYPH_END 255`
-`01683 #define GLYPH_CHARSTART 32`
-`01684 #define GLYPH_CHAREND 127`
-`01685 #define GLYPHS_PER_FONT GLYPH_END - GLYPH_START + 1`
-`...`
-`01705 typedef struct {`
-`01706   glyphInfo_t glyphs [GLYPHS_PER_FONT];`
-`01707     float glyphScale;`
-`01708     char name[MAX_QPATH];`
-`01709 } fontInfo_t;`
+    00346 #define MAX_QPATH           64
 
-You have an array consisting of 256 elements of type glyphInfo\_t, followed by a float, followed by a character array 64 characters in length.
+    ...
+
+    01681 #define GLYPH_START 0
+    01682 #define GLYPH_END 255
+    01683 #define GLYPH_CHARSTART 32
+    01684 #define GLYPH_CHAREND 127
+    01685 #define GLYPHS_PER_FONT GLYPH_END - GLYPH_START + 1
+
+    ...
+
+    01705 typedef struct {
+    01706   glyphInfo_t glyphs [GLYPHS_PER_FONT];
+    01707     float glyphScale;
+    01708     char name[MAX_QPATH];
+    01709 } fontInfo_t;
+
+You have an array consisting of 256 elements of type glyphInfo\_t,
+followed by a float, followed by a character array 64 characters in
+length.
 
 ### Glyphs
 
 The glyphInfo\_t structure is defined ...
 
-`00312 typedef int     qhandle_t;`
-`...`
-`01688 typedef struct {`
-`01689   int height;       `
-`01690   int top;          `
-`01691   int bottom;       `
-`01692   int pitch;        `
-`01693   int xSkip;        `
-`01694   int imageWidth;   `
-`01695   int imageHeight;  `
-`01696   float s;          `
-`01697   float t;          `
-`01698   float s2;`
-`01699   float t2;`
-`01700   qhandle_t glyph;  // handle to the shader with the glyph`
-`01701     char shaderName[32];`
-`01702 } glyphInfo_t;`
+    00312 typedef int     qhandle_t;
 
- Integers are 4 bytes. Floats are 4 bytes. The character array is 32 bytes. This makes each of the 256 blocks 80 bytes for a total of 20480 bytes.
+    ...
 
-The image name is stored in the character array shaderName. The image lookup data for each glyph consists of the four variables, s, t, s2, and t2. These are floats which when multiplied by 256 can be translated into x and y image coordinates.
+    01688 typedef struct {
+    01689   int height;       
+    01690   int top;          
+    01691   int bottom;       
+    01692   int pitch;        
+    01693   int xSkip;        
+    01694   int imageWidth;   
+    01695   int imageHeight;  
+    01696   float s;          
+    01697   float t;          
+    01698   float s2;
+    01699   float t2;
+    01700   qhandle_t glyph;  // handle to the shader with the glyph
+    01701     char shaderName[32];
+    01702 } glyphInfo_t;
 
-The function of the remaining variables has yet to be determined. It's assumed that they pertain to rendering.
+\
+ Integers are 4 bytes. Floats are 4 bytes. The character array is 32
+bytes. This makes each of the 256 blocks 80 bytes for a total of 20480
+bytes.
+
+The image name is stored in the character array shaderName. The image
+lookup data for each glyph consists of the four variables, s, t, s2, and
+t2. These are floats which when multiplied by 256 can be translated into
+x and y image coordinates.
+
+The function of the remaining variables has yet to be determined. It's
+assumed that they pertain to rendering.
 
 ### Tail End
 
-The tail end of the file consists of the float glyphScale, and the 64 character array name for a total of 68 bytes. This plus the 20480 bytes of glyph data makes for 20548 bytes which checks out with the filesize of each DAT file. The function of these variables also has yet to be determined.
+The tail end of the file consists of the float glyphScale, and the 64
+character array name for a total of 68 bytes. This plus the 20480 bytes
+of glyph data makes for 20548 bytes which checks out with the filesize
+of each DAT file. The function of these variables also has yet to be
+determined.
 
 Tools
 -----
 
--   [Q3Font](http://web.archive.org/web/20091209010324/http://www.q3f.com/q3font.html) ([Last Version](http://web.archive.org/web/20091209010324/http://www.splashdamage.com/files/q3font_1.52.zip)) - The premiere tool used to convert .TTF files into Quake 3/Doom 3-ready fonts. Created by Arnout 'RR2DO2' van Meer of Splash Damage.
--   [ExportFontToDoom3](http://web.archive.org/web/20091209010324/http://members.optusnet.com.au/~g.davies/ExportFontToDoom3) - A new font conversion tool, specially designed for Doom 3 and with new features and fixes. Source code is also available online. Created by Grant Davies.
+-   [Q3Font](https://web.archive.org/web/20091209010324/http://www.q3f.com/q3font.html "http://www.q3f.com/q3font.html")
+    ( [Last
+    Version](https://web.archive.org/web/20091209010324/http://www.splashdamage.com/files/q3font_1.52.zip "http://www.splashdamage.com/files/q3font_1.52.zip")
+    ) - The premiere tool used to convert
+    [.TTF](TTF_%28file_format%29 "TTF (file format)") files into Quake
+    3/Doom 3-ready fonts. Created by Arnout 'RR2DO2' van Meer of Splash
+    Damage.
+-   [ExportFontToDoom3](https://web.archive.org/web/20091209010324/http://members.optusnet.com.au/~g.davies/ExportFontToDoom3 "http://members.optusnet.com.au/~g.davies/ExportFontToDoom3") -
+    A new font conversion tool, specially designed for Doom 3 and with
+    new features and fixes. Source code is also available online.
+    Created by Grant Davies.
 

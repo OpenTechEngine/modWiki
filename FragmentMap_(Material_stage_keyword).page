@@ -1,44 +1,42 @@
----
-format: Markdown
-categories: Material_stage_keyword
-toc: yes
-title: FragmentMap
-...
-FragmentMap (Material stage keyword)
-====================================
-
 Description
 -----------
 
-The **fragmentMap** keyword instructs Doom 3 to pass the instructed image to a fragment program which must also be referenced in this stage via the [fragmentProgram](FragmentProgram\_(Material\_stage\_keyword)) keyword.
+The **fragmentMap** keyword instructs Doom 3 to pass the instructed
+image to a fragment program which must also be referenced in this stage
+via the
+[fragmentProgram](FragmentProgram_%28Material_stage_keyword%29 "FragmentProgram (Material stage keyword)")
+keyword.
 
 Usage
 -----
 
-`fragmentMap [input], [image]`
+    fragmentMap [input], [image]
 
 Parameters
 ----------
 
--   [input] - The input or "slot" in which to pass the image to the fragment program.
+-   [input] - The input or "slot" in which to pass the image to the
+    fragment program.
 -   [image] - The image map to pass to the fragment program.
 
 Example
 -------
 
-distort the current frame using the normal map helmet\_local.tga and heatHazeWithMaskAndVertex.vfp
+distort the current frame using the normal map helmet\_local.tga and
+heatHazeWithMaskAndVertex.vfp
 
-`{`
-`   program                 heatHazeWithMaskAndVertex.vfp`
-`   vertexParm              0               0                                          // texture scrolling`
-`   vertexParm              1               10                                         // magnitude of the distortion`
-`   fragmentMap             0               _currentRender`
-`   fragmentMap             1               models/characters/sarge2/helmet_local.tga  // the normal map for distortion`
-`}`
+    {
+       program                 heatHazeWithMaskAndVertex.vfp
+       vertexParm              0               0                                          // texture scrolling
+       vertexParm              1               10                                         // magnitude of the distortion
+       fragmentMap             0               _currentRender
+       fragmentMap             1               models/characters/sarge2/helmet_local.tga  // the normal map for distortion
+    }
 
 Notes
 -----
 
 None.
 
+\
 

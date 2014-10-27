@@ -1,0 +1,65 @@
+To get a multiplayer game working, the computers from the players have
+to 'talk' to each other. In Doom3 this is done using the TCP/IP
+protocol. Basically we can differ between Client to Server communication
+and more importantly Server to Client communication. There is some
+traffic between the master server and the clients as well to scan the
+network for games going on. But that is not relevant to modding and will
+only be briefly touched in this article.
+
+Server to Client
+----------------
+
+For modding, server to client communication is the most important part.
+Typically you will be modifying some entities first. After that it's up
+to you how to get the stuff transmitted to the client. One example would
+be a coop mod where one wants to get the monsters synchronised over the
+network. There are two ways to get data transmitted, which are called:
+
+-   Snapshots
+-   Serverside messages (events)
+
+First of all are snapshots. Snapshots can be consired as a photo of the
+current scene (or just called the state of the game, known as the
+*gamestate* ). Just think about freezing a scene and transmitting all
+relevant stuff over the network so that the client can replicate the
+scene from the data. However, what is relevant? Everything? Just the
+area around the player? All that nasty scripting stuff? It should be
+clear that sending all would be too much. Several mechanisms exist to
+reduce the traffic load. Some of them have to be implemented by the
+modder, some of them are already built into the engine. The topics here
+are delta synchronisation and PVS-based synchronisation of entities.
+However, these will be covered later on when the focus shifts to code.
+
+Another way to get data over the network is by sending events. Events
+are mostly used for stuff that does not modify the gamestate, like e.g.
+a chat message or things which are singular, e.g. an explosion effect or
+switching a monsters animation.
+
+Furthermore the engine itself does transmit some data, e.g. to get the
+timing right for example. Once again will this be left out as it is not
+relevant for modding.
+
+Client to Server
+----------------
+
+On the client side are no snapshots like on the server side. There are
+just events to communicate with the server. Those events work similar to
+the server ones. Another way to send data to the server is the *userinfo
+dictionary* .
+
+The engine itself generates some traffic as well, mostly for sending the
+keyboard input.
+
+Master Server to Client
+-----------------------
+
+The client receives the serverlist from the master server. This list
+allows a client to query a server or connect to it.
+
+Server to Master Server
+-----------------------
+
+The server sends all 'server info' [CVars](Console#Cvars "Console") to
+the master server. This way, a client can retrieve some more info when
+it gets the serverlist from the master server.
+

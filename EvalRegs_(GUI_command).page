@@ -1,22 +1,16 @@
----
-format: Markdown
-categories: GUI_command
-toc: yes
-title: EvalRegs
-...
-EvalRegs (GUI command)
-======================
-
-According to [iddevnet](http://web.archive.org/web/20120918181038/http://www.iddevnet.com/doom3/guis.php), this re-evaluates item variables and "should not be needed anymore".
+According to
+[iddevnet](http://www.iddevnet.com/doom3/guis.php "http://www.iddevnet.com/doom3/guis.php")
+, this re-evaluates item variables and "should not be needed anymore".
 
 Syntax
 ------
 
-`EvalRegs`
+    EvalRegs
 
 Example(s)
 ----------
 
-`EvalRegs;`
+    EvalRegs;
 
+\
 

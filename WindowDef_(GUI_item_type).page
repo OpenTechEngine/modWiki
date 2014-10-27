@@ -1,29 +1,18 @@
----
-format: Markdown
-categories: GUI_item_type
-toc: yes
-title: WindowDef
-...
-WindowDef (GUI item type)
-=========================
+![windowDef example
+preview](/images/thumb/9/93/Gui_example_windowdef.png/120px-Gui_example_windowdef.png)\
+ *windowDef example preview*
 
-<div class="thumb tright">
-<div style="width: 122px">
-![windowDef example preview](/images/images_thumb_9_93_Gui_example_windowdef.png_120px-Gui_example_windowdef.png "windowDef example preview")
+Pretty much the standard visual [item](GUI_items "GUI items") type. When
+creating [GUIs](GUIs "GUIs") , around 98% of the items you use in your
+script will be windowDefs. Also, all other item types work as extended
+windowDefs; from an OOP perspective, think of windowDef as a class and
+all other item types as being its subclasses.
 
-<div class="thumbcaption">
-<div class="magnify" style="float: right">
-![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
-
-</div>
-windowDef example preview
-
-</div>
-</div>
-</div>
-Pretty much the standard visual [item](GUI\_items) type. When creating [GUIs](GUIs), around 98% of the items you use in your script will be windowDefs. Also, all other item types work as extended windowDefs; from an OOP perspective, think of windowDef as a class and all other item types as being its subclasses.
-
-All in all, a windowDef can contain text strings; it can act as a button; it can work as an static decoration graphic; it can work as an invisible element that serve other scripting purposes, such as containing a code execution timeline; it can also hold specific, separated data.
+All in all, a windowDef can contain text strings; it can act as a
+button; it can work as an static decoration graphic; it can work as an
+invisible element that serve other scripting purposes, such as
+containing a code execution timeline; it can also hold specific,
+separated data.
 
 Additional properties
 ---------------------
@@ -33,19 +22,21 @@ None
 Example(s)
 ----------
 
-`windowDef myItem {`
-`   rect        18,12,236,226`
-`   visible     1`
-`   background  "textures/stripes"`
-`   matcolor    1, 1, 1, 1`
-`   backcolor   0.5, 0.5, 0.5, 1`
-`   bordersize  2`
-`   bordercolor 0.75, 0.75, 0.75, 1`
-`   matscalex   2`
-`   matscaley   2`
-`   forecolor   1, 0.5, 0.5, 0.9`
-`   text        "It was a dark and stormy night..."`
-`   textscale   1`
-`   font        "fonts/english"`
-`}`
+    windowDef myItem {
+        rect        18,12,236,226
+        visible     1
+        background  "textures/stripes"
+        matcolor    1, 1, 1, 1
+        backcolor   0.5, 0.5, 0.5, 1
+        bordersize  2
+        bordercolor 0.75, 0.75, 0.75, 1
+        matscalex   2
+        matscaley   2
+        forecolor   1, 0.5, 0.5, 0.9
+        text        "It was a dark and stormy night..."
+        textscale   1
+        font        "fonts/english"
+    }
+
+\
 

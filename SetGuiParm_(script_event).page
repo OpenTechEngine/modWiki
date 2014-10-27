@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: SetGuiParm
-...
-SetGuiParm (script event)
-=========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -20,7 +12,7 @@ Sets a parameter on this entity's GUI.
 Usage
 -----
 
-*void* setGuiParm( *string* **key**, *string* **value** )
+*void* setGuiParm( *string* **key** , *string* **value** )
 
 Parameters
 ----------
@@ -31,12 +23,13 @@ Parameters
 Examples
 --------
 
-` `
-<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`setGuiParm`</font><font color="#000000">`(`</font><font color="#666666">`"floor"`</font>`, `<font color="#666666">`"District Admin"`</font><font color="#000000">`)`</font>`;`
+     
+    $my_entity.setGuiParm("floor", "District Admin");
 
 Notes
 -----
 
 This script event does not return any values.
 
+\
 

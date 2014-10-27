@@ -1,21 +1,14 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: Time
-...
-Time (script event)
-===================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Specifies the amount of time an object will take to perform its movement.
+Specifies the amount of time an object will take to perform its
+movement.
 
 Usage
 -----
@@ -30,11 +23,14 @@ Parameters
 Examples
 --------
 
-<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`time`</font><font color="#000000">`(`</font><font color="#0000dd">`3`</font><font color="#000000">`)`</font>`;`
+    $my_entity.time(3);
 
 Notes
 -----
 
-This script event does not return any values. The example above will cause the entity to take 3 seconds to perform whichever movement command comes after its time is set.
+This script event does not return any values. The example above will
+cause the entity to take 3 seconds to perform whichever movement command
+comes after its time is set.
 
+\
 

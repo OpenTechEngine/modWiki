@@ -1,28 +1,25 @@
----
-format: Markdown
-categories: GUI_item_property
-toc: yes
-title: ViewOffset
-...
-ViewOffset (GUI item property)
-==============================
-
 ??
 
-This property is restricted to the [renderDef](RenderDef\_(GUI\_item\_type)) item type.
+This property is restricted to the
+[renderDef](RenderDef_%28GUI_item_type%29 "RenderDef (GUI item type)")
+item type.
 
 Syntax
 ------
 
-`viewOffset `*`z`*`, `*`x`*`, `*`y`*`, `*`?`*
+    viewOffset z, x, y, ?
 
 Default value
 -------------
 
-`Unknown`
+    Unknown
 
 Example(s)
 ----------
 
-`viewOffset     -300, -28, 0, 0`
+    viewOffset   -300, -28, 0, 0
+
+\
+
+\
 

@@ -1,27 +1,23 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: GUI_commands.page
-...
-GUI commands
-============
-
-Commands are what actually make the [GUI script](GUI\_scripting) come alive; they're pretty limited and execute simple tasks. They are used inside [event blocks](GUI\_item\_events) and can work with [item variables](GUI\_variable\_types) as well as some [item properties](GUI\_item\_properties).
+Commands are what actually make the [GUI
+script](GUI_scripting "GUI scripting") come alive; they're pretty
+limited and execute simple tasks. They are used inside [event
+blocks](GUI_item_events "GUI item events") and can work with [item
+variables](GUI_variable_types "GUI variable types") as well as some
+[item properties](GUI_item_properties "GUI item properties") .
 
 Available commands
 ------------------
 
--   [endGame](EndGame\_(GUI\_command))
--   [evalRegs](EvalRegs\_(GUI\_command))
--   [if_else](If_else\_(GUI\_command))
--   [localSound](LocalSound\_(GUI\_command))
--   [namedEvent](NamedEvent\_(GUI\_command))
--   [resetCinematics](ResetCinematics\_(GUI\_command))
--   [resetTime](ResetTime\_(GUI\_command))
--   [runScript](RunScript\_(GUI\_command))
--   [set](Set\_(GUI\_command))
--   [setFocus](SetFocus\_(GUI\_command))
--   [showCursor](ShowCursor\_(GUI\_command))
--   [transition](Transition\_(GUI\_command))
+-   [endGame](EndGame_%28GUI_command%29 "EndGame (GUI command)")
+-   [evalRegs](EvalRegs_%28GUI_command%29 "EvalRegs (GUI command)")
+-   [if...else](If...else_%28GUI_command%29 "If...else (GUI command)")
+-   [localSound](LocalSound_%28GUI_command%29 "LocalSound (GUI command)")
+-   [namedEvent](NamedEvent_%28GUI_command%29 "NamedEvent (GUI command)")
+-   [resetCinematics](ResetCinematics_%28GUI_command%29 "ResetCinematics (GUI command)")
+-   [resetTime](ResetTime_%28GUI_command%29 "ResetTime (GUI command)")
+-   [runScript](RunScript_%28GUI_command%29 "RunScript (GUI command)")
+-   [set](Set_%28GUI_command%29 "Set (GUI command)")
+-   [setFocus](SetFocus_%28GUI_command%29 "SetFocus (GUI command)")
+-   [showCursor](ShowCursor_%28GUI_command%29 "ShowCursor (GUI command)")
+-   [transition](Transition_%28GUI_command%29 "Transition (GUI command)")
 

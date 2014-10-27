@@ -1,296 +1,261 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: DoomEdit_hotkeys.page
-...
-DoomEdit hotkeys
-================
+<div align="left"
+style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
 
-<div style="padding: 1px; border: 0px solid #000000" align="left">
-<font size="18px"><font color="black">![](/images/images_c_cb_D3square_bg.png) The information on this page is specific to [Doom 3](Doom\_3).</font></font>
+![](/images/c/cb/D3square_bg.png) The information on this page is
+specific to [Doom 3](Doom_3 "Doom 3") .
 
 </div>
 
 ------------------------------------------------------------------------
 
-|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                           
- Contents                                                                                                                                       
- --------                                                                                                                                       
-                                                                                                                                                
- </div>                                                                                                                                         
- -   [<span class="tocnumber">1</span> <span class="toctext">DoomEdit Hotkeys</span>](DoomEdit\_hotkeys#DoomEdit\_Hotkeys)                 
-     -   [<span class="tocnumber">1.1</span> <span class="toctext">A</span>](DoomEdit\_hotkeys#A)                                          
-     -   [<span class="tocnumber">1.2</span> <span class="toctext">B</span>](DoomEdit\_hotkeys#B)                                          
-     -   [<span class="tocnumber">1.3</span> <span class="toctext">C</span>](DoomEdit\_hotkeys#C)                                          
-     -   [<span class="tocnumber">1.4</span> <span class="toctext">D</span>](DoomEdit\_hotkeys#D)                                          
-     -   [<span class="tocnumber">1.5</span> <span class="toctext">E</span>](DoomEdit\_hotkeys#E)                                          
-     -   [<span class="tocnumber">1.6</span> <span class="toctext">F</span>](DoomEdit\_hotkeys#F)                                          
-     -   [<span class="tocnumber">1.7</span> <span class="toctext">G</span>](DoomEdit\_hotkeys#G)                                          
-     -   [<span class="tocnumber">1.8</span> <span class="toctext">H</span>](DoomEdit\_hotkeys#H)                                          
-     -   [<span class="tocnumber">1.9</span> <span class="toctext">I</span>](DoomEdit\_hotkeys#I)                                          
-     -   [<span class="tocnumber">1.10</span> <span class="toctext">L</span>](DoomEdit\_hotkeys#L)                                         
-     -   [<span class="tocnumber">1.11</span> <span class="toctext">M</span>](DoomEdit\_hotkeys#M)                                         
-     -   [<span class="tocnumber">1.12</span> <span class="toctext">N</span>](DoomEdit\_hotkeys#N)                                         
-     -   [<span class="tocnumber">1.13</span> <span class="toctext">P</span>](DoomEdit\_hotkeys#P)                                         
-     -   [<span class="tocnumber">1.14</span> <span class="toctext">R</span>](DoomEdit\_hotkeys#R)                                         
-     -   [<span class="tocnumber">1.15</span> <span class="toctext">S</span>](DoomEdit\_hotkeys#S)                                         
-     -   [<span class="tocnumber">1.16</span> <span class="toctext">T</span>](DoomEdit\_hotkeys#T)                                         
-     -   [<span class="tocnumber">1.17</span> <span class="toctext">U</span>](DoomEdit\_hotkeys#U)                                         
-     -   [<span class="tocnumber">1.18</span> <span class="toctext">V</span>](DoomEdit\_hotkeys#V)                                         
-     -   [<span class="tocnumber">1.19</span> <span class="toctext">Z</span>](DoomEdit\_hotkeys#Z)                                         
- -   [<span class="tocnumber">2</span> <span class="toctext">DoomEdit Mouse Bindings</span>](DoomEdit\_hotkeys#DoomEdit\_Mouse\_Bindings)  
-     -   [<span class="tocnumber">2.1</span> <span class="toctext">2D Viewport</span>](DoomEdit\_hotkeys#2D\_Viewport)                     
-     -   [<span class="tocnumber">2.2</span> <span class="toctext">3D Viewport</span>](DoomEdit\_hotkeys#3D\_Viewport)                     |
-
 DoomEdit Hotkeys
 ----------------
 
-You can get this listing by selecting Help \> Command List in [DoomEdit](DoomEdit).
+You can get this listing by selecting Help \> Command List in
+[DoomEdit](DoomEdit "DoomEdit") .
 
 **Alphabetical List**
 
 ### A
 
-`AutoCaulk          Shift + Control + A`
-`AxialTextureArbitrary      Shift + U`
-`AxialTextureByHeight       U`
-`AxialTextureByWidth        Control + U`
+    AutoCaulk            Shift + Control + A
+    AxialTextureArbitrary       Shift + U
+    AxialTextureByHeight        U
+    AxialTextureByWidth         Control + U
 
 ### B
 
-`BendMode           B`
-`Brush3Sided            Control + 3`
-`Brush4Sided            Control + 4`
-`Brush5Sided            Control + 5`
-`Brush6Sided            Control + 6`
-`Brush7Sided            Control + 7`
-`Brush8Sided            Control + 8`
-`Brush9Sided            Control + 9`
+    BendMode         B
+    Brush3Sided             Control + 3
+    Brush4Sided             Control + 4
+    Brush5Sided             Control + 5
+    Brush6Sided             Control + 6
+    Brush7Sided             Control + 7
+    Brush8Sided             Control + 8
+    Brush9Sided             Control + 9
 
 ### C
 
-`CameraAngleUp          A`
-`CameraAngleDown        Z`
-`CameraBack             Down`
-`CameraDown             C`
-`CameraForward          Up`
-`CameraLeft             Left`
-`CameraRight            Right`
-`CameraStrafeLeft       Comma`
-`CameraStrafeRight      Period`
-`CameraUp           D`
-`CapCurrentCurve        Shift + C`
-`CenterOrigin           Shift + O`
-`CenterView             End`
-`ClearPatchOverlays         Shift + Y`
-`ClipSelected           Return`
-`CloneSelection             Space`
-`CombineSelection       Shift + K`
-`ConnectSelection       Control + K`
-`Copy               Control + C`
-`CSGMerge           Shift + M`
-`CubicClipZoomIn        Control + ]`
-`CubicClipZoomOut       Control + [`
-`CycleCapTexturingAlt       Shift + P`
-`CycleCapTexturingAlt       Shift + Control + P`
-`CycleRotationAxis      Shift + R`
+    CameraAngleUp            A
+    CameraAngleDown         Z
+    CameraBack          Down
+    CameraDown          C
+    CameraForward           Up
+    CameraLeft          Left
+    CameraRight             Right
+    CameraStrafeLeft        Comma
+    CameraStrafeRight       Period
+    CameraUp            D
+    CapCurrentCurve         Shift + C
+    CenterOrigin            Shift + O
+    CenterView          End
+    ClearPatchOverlays      Shift + Y
+    ClipSelected            Return
+    CloneSelection          Space
+    CombineSelection        Shift + K
+    ConnectSelection        Control + K
+    Copy                Control + C
+    CSGMerge            Shift + M
+    CubicClipZoomIn         Control + ]
+    CubicClipZoomOut        Control + [
+    CycleCapTexturingAlt        Shift + P
+    CycleCapTexturingAlt        Shift + Control + P
+    CycleRotationAxis       Shift + R
 
 ### D
 
-`DecPatchColumn             Shift + Control + Subtract`
-`DecPatchRow            Control + Subtract`
-`DeleteSelection        Backspace`
-`DownFloor          PageDown`
-`DragEdges          E`
-`DragVertices           V`
-`DumpSelectedBrush      Shift + D`
+    DecPatchColumn           Shift + Control + Subtract
+    DecPatchRow             Control + Subtract
+    DeleteSelection         Backspace
+    DownFloor           PageDown
+    DragEdges           E
+    DragVertices            V
+    DumpSelectedBrush       Shift + D
 
 ### E
 
-`EntityColor            K`
-`EntityList             I`
+    EntityColor          K
+    EntityList          I
 
 ### F
 
-`FileOpen           Control + O`
-`FileSave           Control + S`
-`FilterLights           Alt + 0`
-`FindOrReplaceEnt       Control + F3`
-`FindOrReplaceNextEnt       Shift + F3`
-`FindReplaceTextures        Shift + F`
-`FitFace            Control + B`
-`FitBrush           Shift + B`
-`FlipClip           Control + Return`
-`FreezePatchVertices        F`
+    FileOpen             Control + O
+    FileSave            Control + S
+    FilterLights            Alt + 0
+    FindOrReplaceEnt        Control + F3
+    FindOrReplaceNextEnt        Shift + F3
+    FindReplaceTextures         Shift + F
+    FitFace             Control + B
+    FitBrush            Shift + B
+    FlipClip            Control + Return
+    FreezePatchVertices         F
 
 ### G
 
-`GridDown           [`
-`GridUp                 ]`
+    GridDown             [
+    GridUp              ]
 
 ### H
 
-`HideNotSelected        Shift + Control + H`
-`HideSelected           H`
+    HideNotSelected      Shift + Control + H
+    HideSelected            H
 
 ### I
 
-`IncPatchColumn             Shift + Control + Plus`
-`IncPatchRow            Control + Plus`
-`InvertCurve            Control + I`
-`InvertSelection        I`
-`InvertTextureX             Shift + Control + I`
-`InvertTextureY             Shift + I`
+    IncPatchColumn           Shift + Control + Plus
+    IncPatchRow             Control + Plus
+    InvertCurve             Control + I
+    InvertSelection         I
+    InvertTextureX          Shift + Control + I
+    InvertTextureY          Shift + I
 
 ### L
 
-`Layers                 L`
+    Layers               L
 
 ### M
 
-`MakeDetail             Shift + Control + M`
-`MakeDetail             Control + M`
-`MakeOverlayPatch       Y`
-`MakeProjectedLight         J`
-`MakeStructural             Shift + Control + S`
-`MediaBrowser           M`
-`MouseRotate            R`
-`MoveSelectionDOWN      Subtract`
-`MoveSelectionUP        Plus`
+    MakeDetail           Shift + Control + M
+    MakeDetail          Control + M
+    MakeOverlayPatch        Y
+    MakeProjectedLight      J
+    MakeStructural          Shift + Control + S
+    MediaBrowser            M
+    MouseRotate             R
+    MoveSelectionDOWN       Subtract
+    MoveSelectionUP         Plus
 
 ### N
 
-`NaturalizePatch        Control + N`
-`NaturalizePatchAlt         Shift + N`
-`NextLeakSpot           Shift + Control + K`
-`NextView           Control + Tab`
+    NaturalizePatch      Control + N
+    NaturalizePatchAlt      Shift + N
+    NextLeakSpot            Shift + Control + K
+    NextView            Control + Tab
 
 ### P
 
-`Paste              Control + V`
-`PatchInspector             Shift + S`
-`Patch TAB          Tab`
-`Patch TAB          Shift + Tab`
-`PrecisionCursorMode        F11`
-`Preferences            P`
-`PrevLeakSpot           Shift + Control + L`
+    Paste                Control + V
+    PatchInspector          Shift + S
+    Patch TAB           Tab
+    Patch TAB           Shift + Tab
+    PrecisionCursorMode         F11
+    Preferences             P
+    PrevLeakSpot            Shift + Control + L
 
 ### R
 
-`RebuildRenderData      F7`
-`RedisperseRows             Control + E`
-`RedisperseCols             Shift + Control + E`
-`Redo               Control + Y`
+    RebuildRenderData        F7
+    RedisperseRows          Control + E
+    RedisperseCols          Shift + Control + E
+    Redo                Control + Y
 
 ### S
 
-`SelectAllOfType        Shift + A`
-`SelectCompleteEntity       Shift + Alt + Control + E`
-`SelectNudgeDown        Alt + Down`
-`SelectNudgeLeft        Alt + Left`
-`SelectNudgeRight       Alt + Right`
-`SelectNudgeUp          Alt + Up`
-`SetGrid1           1`
-`SetGrid2           2`
-`SetGrid4           3`
-`SetGrid8           4`
-`SetGrid16          5`
-`SetGrid32          6`
-`SetGrid64          7`
-`SetGridPoint5          Shift + 4`
-`SetGridPoint25             Shift + 3`
-`SetGridPoint125        Shift + 2`
-`ShowAllTextures        Control + A`
-`ShowClip           Control + L`
-`ShowDetail             Control + D`
-`ShowDOOM           F2`
-`ShowHidden             Shift + H`
-`SnapPatchToGrid        Control + G`
-`SplitSelected          Shift + Return`
-`SurfaceInspector       S`
+    SelectAllOfType      Shift + A
+    SelectCompleteEntity        Shift + Alt + Control + E
+    SelectNudgeDown         Alt + Down
+    SelectNudgeLeft         Alt + Left
+    SelectNudgeRight        Alt + Right
+    SelectNudgeUp           Alt + Up
+    SetGrid1            1
+    SetGrid2            2
+    SetGrid4            3
+    SetGrid8            4
+    SetGrid16           5
+    SetGrid32           6
+    SetGrid64           7
+    SetGridPoint5           Shift + 4
+    SetGridPoint25          Shift + 3
+    SetGridPoint125         Shift + 2
+    ShowAllTextures         Control + A
+    ShowClip            Control + L
+    ShowDetail          Control + D
+    ShowDOOM            F2
+    ShowHidden          Shift + H
+    SnapPatchToGrid         Control + G
+    SplitSelected           Shift + Return
+    SurfaceInspector        S
 
 ### T
 
-`TexDecrement           Shift + Subtract`
-`TexIncrement           Shift + Plus`
-`TexRotateClock             Shift + PageDown`
-`TexRotateCounter       Shift + PageUp`
-`TexScaleDown           Control + Down`
-`TexScaleLeft           Control + Left`
-`TexScaleRight          Control + Right`
-`TexScaleUp             Control + Up`
-`TexShiftDown           Shift + Down`
-`TexShiftLeft           Shift + Left`
-`TexShiftRight          Shift + Right`
-`TexShiftUp             Shift + Up`
-`TextureFit             Shift + 5`
-`ThickenPatch           Control + T`
-`ToggleCamera           Shift + Control + C`
-`ToggleClipper          X`
-`ToggleCrosshairs       Shift + X`
-`ToggleCubicClip        Control + \`
-`ToggleEntityOutlines       F5`
-`ToggleFlatRotation         Control + R`
-`ToggleGrid             0`
-`ToggleMoveOnly             W`
-`ToggleRealtimeRenderBuild  F4`
-`ToggleRenderAnimation      F6`
-`ToggleRenderMode       F3`
-`ToggleRenderSound      F9`
-`ToggleSelections       F8`
-`ToggleShowPatches      Control + P`
-`ToggleSizePaint        Q`
-`ToggleView             Shift + Control + V`
-`ToggleZ            Shift + Control + Z`
-`TogTexLock             Shift + T`
+    TexDecrement             Shift + Subtract
+    TexIncrement            Shift + Plus
+    TexRotateClock          Shift + PageDown
+    TexRotateCounter        Shift + PageUp
+    TexScaleDown            Control + Down
+    TexScaleLeft            Control + Left
+    TexScaleRight           Control + Right
+    TexScaleUp          Control + Up
+    TexShiftDown            Shift + Down
+    TexShiftLeft            Shift + Left
+    TexShiftRight           Shift + Right
+    TexShiftUp          Shift + Up
+    TextureFit          Shift + 5
+    ThickenPatch            Control + T
+    ToggleCamera            Shift + Control + C
+    ToggleClipper           X
+    ToggleCrosshairs        Shift + X
+    ToggleCubicClip         Control + \
+    ToggleEntityOutlines        F5
+    ToggleFlatRotation      Control + R
+    ToggleGrid          0
+    ToggleMoveOnly          W
+    ToggleRealtimeRenderBuild   F4
+    ToggleRenderAnimation       F6
+    ToggleRenderMode        F3
+    ToggleRenderSound       F9
+    ToggleSelections        F8
+    ToggleShowPatches       Control + P
+    ToggleSizePaint         Q
+    ToggleView          Shift + Control + V
+    ToggleZ             Shift + Control + Z
+    TogTexLock          Shift + T
 
 ### U
 
-`Undo               Control + Z`
-`UnFreezePatchVertices      Control + F`
-`UnFreezeAllPatchVertices   Shift + Control + F`
-`Ungroup            Shift + G`
-`UnSelectSelection      Escape`
-`UpFloor            PageUp`
+    Undo                 Control + Z
+    UnFreezePatchVertices       Control + F
+    UnFreezeAllPatchVertices    Shift + Control + F
+    Ungroup             Shift + G
+    UnSelectSelection       Escape
+    UpFloor             PageUp
 
 ### V
 
-`ViewConsole            O`
-`ViewEntityInfo             N`
-`ViewGame           G`
-`ViewTextures           T`
+    ViewConsole          O
+    ViewEntityInfo          N
+    ViewGame            G
+    ViewTextures            T
 
 ### Z
 
-`ZoomIn                 Delete`
-`ZoomOut            Insert`
-`ZoomOut2           $`
-`ZZoomIn            Control + Delete`
-`ZZoomOut           Control + Insert`
+    ZoomIn               Delete
+    ZoomOut             Insert
+    ZoomOut2            $
+    ZZoomIn             Control + Delete
+    ZZoomOut            Control + Insert
 
 DoomEdit Mouse Bindings
 -----------------------
 
-Mouse bindings are not listed in the command list. Known bindings are listed below.
+Mouse bindings are not listed in the command list. Known bindings are
+listed below.
 
 ### 2D Viewport
 
-`Entity Menu            Right Mouse`
-`Rotate Camera          Middle Mouse`
-`Select Brush/Entity        Shift + Right Mouse`
-`Move Camera            Control + Middle Mouse`
-`Create Brush           Left Mouse (Drag)`
-`Move Grid          Right Mouse (Drag)`
-`Zoom In/Out            Mouse Wheel (Up/Down)`
-`Shear Drag Face            Control + Left Mouse (Drag)`
-`Zoom In/Out            Alt + Right Mouse (Drag)`
+    Entity Menu          Right Mouse
+    Rotate Camera           Middle Mouse
+    Select Brush/Entity     Shift + Right Mouse
+    Move Camera         Control + Middle Mouse
+    Create Brush            Left Mouse (Drag)
+    Move Grid           Right Mouse (Drag)
+    Zoom In/Out         Mouse Wheel (Up/Down)
+    Shear Drag Face         Control + Left Mouse (Drag)
+    Zoom In/Out         Alt + Right Mouse (Drag)
 
 ### 3D Viewport
 
-`Copy Material          Middle Mouse`
-`Move Camera Forward/Backwards  Right Mouse (Drag Vertically)`
-`Turn Camera Left/Right     Right Mouse (Drag Horizontally)`
-`Move Camera Up/Down        Control + Right Mouse (Drag)`
-
+    Copy Material            Middle Mouse
+    Move Camera Forward/Backwards   Right Mouse (Drag Vertically)
+    Turn Camera Left/Right      Right Mouse (Drag Horizontally)
+    Move Camera Up/Down     Control + Right Mouse (Drag)

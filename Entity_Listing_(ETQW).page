@@ -1,50 +1,20 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: Entity_Listing_(ETQW).page
-...
-Entity Listing (ETQW)
-=====================
+<div align="left"
+style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
 
-<div style="padding: 1px; border: 0px solid #000000" align="left">
-<font size="18px"><font color="black">![](/images/images_f_f9_Etqwsquare_bg.png) The information on this page is specific to [Enemy Territory: Quake Wars](http://web.archive.org/web/20121206024939/http://www.modwiki.net:80/wiki/Enemy_Territory:_Quake_Wars).</font></font>
+![](/images/f/f9/Etqwsquare_bg.png) The information on this page is
+specific to [Enemy Territory: Quake
+Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
 
 </div>
 
 ------------------------------------------------------------------------
 
-|----------------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                          
- Contents                                                                                                                                      
- --------                                                                                                                                      
-                                                                                                                                               
- </div>                                                                                                                                        
- -   [<span class="tocnumber">1</span> <span class="toctext">Inheritance Overview</span>](Entity\_Listing\_(ETQW)#Inheritance\_Overview)  
- -   [<span class="tocnumber">2</span> <span class="toctext">Entities</span>](Entity\_Listing\_(ETQW)#Entities)                           
-     -   [<span class="tocnumber">2.1</span> <span class="toctext">A</span>](Entity\_Listing\_(ETQW)#A)                                   
-     -   [<span class="tocnumber">2.2</span> <span class="toctext">B</span>](Entity\_Listing\_(ETQW)#B)                                   
-     -   [<span class="tocnumber">2.3</span> <span class="toctext">C</span>](Entity\_Listing\_(ETQW)#C)                                   
-     -   [<span class="tocnumber">2.4</span> <span class="toctext">D</span>](Entity\_Listing\_(ETQW)#D)                                   
-     -   [<span class="tocnumber">2.5</span> <span class="toctext">E</span>](Entity\_Listing\_(ETQW)#E)                                   
-     -   [<span class="tocnumber">2.6</span> <span class="toctext">F</span>](Entity\_Listing\_(ETQW)#F)                                   
-     -   [<span class="tocnumber">2.7</span> <span class="toctext">G</span>](Entity\_Listing\_(ETQW)#G)                                   
-     -   [<span class="tocnumber">2.8</span> <span class="toctext">H</span>](Entity\_Listing\_(ETQW)#H)                                   
-     -   [<span class="tocnumber">2.9</span> <span class="toctext">I</span>](Entity\_Listing\_(ETQW)#I)                                   
-     -   [<span class="tocnumber">2.10</span> <span class="toctext">J</span>](Entity\_Listing\_(ETQW)#J)                                  
-     -   [<span class="tocnumber">2.11</span> <span class="toctext">L</span>](Entity\_Listing\_(ETQW)#L)                                  
-     -   [<span class="tocnumber">2.12</span> <span class="toctext">M</span>](Entity\_Listing\_(ETQW)#M)                                  
-     -   [<span class="tocnumber">2.13</span> <span class="toctext">P</span>](Entity\_Listing\_(ETQW)#P)                                  
-     -   [<span class="tocnumber">2.14</span> <span class="toctext">R</span>](Entity\_Listing\_(ETQW)#R)                                  
-     -   [<span class="tocnumber">2.15</span> <span class="toctext">S</span>](Entity\_Listing\_(ETQW)#S)                                  
-     -   [<span class="tocnumber">2.16</span> <span class="toctext">T</span>](Entity\_Listing\_(ETQW)#T)                                  
-     -   [<span class="tocnumber">2.17</span> <span class="toctext">V</span>](Entity\_Listing\_(ETQW)#V)                                  
-     -   [<span class="tocnumber">2.18</span> <span class="toctext">W</span>](Entity\_Listing\_(ETQW)#W)                                  |
-
 Inheritance Overview
 --------------------
 
-The following diagram depicts the inheritance of [entities](Entitydef\_(decl)) all the way down to their root classes in the [game code](Coding).
+The following diagram depicts the inheritance of
+[entities](Entitydef_%28decl%29 "Entitydef (decl)") all the way down to
+their root classes in the [game code](Coding "Coding") .
 
 -   **HASHINDEX\_TEMPLATE\_TAG**
 -   **HASHMAP\_TEMPLATE\_TAG**
@@ -1384,607 +1354,609 @@ The following diagram depicts the inheritance of [entities](Entitydef\_(decl)) a
 Entities
 --------
 
-For more detailed information on specific entities, including available key/value pairs, usage, and notes see the corresponding article listed below.
+For more detailed information on specific entities, including available
+key/value pairs, usage, and notes see the corresponding article listed
+below.
 
 Existing Entities as of version 1.2
 
 ### A
 
--   atmosphere
--   atmosphere\_landfall
--   atmosphere\_low
+-   [atmosphere](Atmosphere_%28entity%29 "Atmosphere (entity)")
+-   [atmosphere\_landfall](Atmosphere_landfall_%28entity%29 "Atmosphere landfall (entity)")
+-   [atmosphere\_low](Atmosphere_low_%28entity%29 "Atmosphere low (entity)")
 
 ### B
 
--   bot\_action
--   bot\_action\_bbox
--   bot\_action\_target
--   bot\_dynamic\_obstacle
--   bot\_edf
--   bot\_locationremap
--   bot\_locationremap\_target
--   bot\_reachability
--   bot\_reachability\_target
--   bot\_route\_link
--   bot\_route\_start
--   bot\_vehicle\_pathnode
+-   [bot\_action](Bot_action_%28entity%29 "Bot action (entity)")
+-   [bot\_action\_bbox](Bot_action_bbox_%28entity%29 "Bot action bbox (entity)")
+-   [bot\_action\_target](Bot_action_target_%28entity%29 "Bot action target (entity)")
+-   [bot\_dynamic\_obstacle](Bot_dynamic_obstacle_%28entity%29 "Bot dynamic obstacle (entity)")
+-   [bot\_edf](Bot_edf_%28entity%29 "Bot edf (entity)")
+-   [bot\_locationremap](Bot_locationremap_%28entity%29 "Bot locationremap (entity)")
+-   [bot\_locationremap\_target](Bot_locationremap_target_%28entity%29 "Bot locationremap target (entity)")
+-   [bot\_reachability](Bot_reachability_%28entity%29 "Bot reachability (entity)")
+-   [bot\_reachability\_target](Bot_reachability_target_%28entity%29 "Bot reachability target (entity)")
+-   [bot\_route\_link](Bot_route_link_%28entity%29 "Bot route link (entity)")
+-   [bot\_route\_start](Bot_route_start_%28entity%29 "Bot route start (entity)")
+-   [bot\_vehicle\_pathnode](Bot_vehicle_pathnode_%28entity%29 "Bot vehicle pathnode (entity)")
 
 ### C
 
--   cameraman
--   carryable\_item\_base
--   carryable\_item\_caller
--   carryable\_item\_dropped
--   carryable\_item\_enercell
--   carryable\_item\_quarry\_1
--   carryable\_item\_quarry\_2
--   carryable\_item\_quarry\_3
--   constructible\_base
--   constructible\_base\_etqwmap
--   constructible\_door\_relay
--   constructible\_emp\_disruptor\_gdf
--   constructible\_materials\_gdf
--   constructible\_materials\_gun\_gdf
--   constructible\_materials\_neutral
--   constructible\_materials\_secondary\_gdf
--   constructible\_materials\_strogg
--   constructible\_materials\_tower\_gdf
--   constructible\_tower\_gdf
--   constructible\_tower\_gdf\_all
--   constructible\_tower\_gdf\_base
--   constructible\_tower\_gdf\_top
--   constructible\_tower\_strogg
+-   [cameraman](Cameraman_%28entity%29 "Cameraman (entity)")
+-   [carryable\_item\_base](Carryable_item_base_%28entity%29 "Carryable item base (entity)")
+-   [carryable\_item\_caller](Carryable_item_caller_%28entity%29 "Carryable item caller (entity)")
+-   [carryable\_item\_dropped](Carryable_item_dropped_%28entity%29 "Carryable item dropped (entity)")
+-   [carryable\_item\_enercell](Carryable_item_enercell_%28entity%29 "Carryable item enercell (entity)")
+-   [carryable\_item\_quarry\_1](Carryable_item_quarry_1_%28entity%29 "Carryable item quarry 1 (entity)")
+-   [carryable\_item\_quarry\_2](Carryable_item_quarry_2_%28entity%29 "Carryable item quarry 2 (entity)")
+-   [carryable\_item\_quarry\_3](Carryable_item_quarry_3_%28entity%29 "Carryable item quarry 3 (entity)")
+-   [constructible\_base](Constructible_base_%28entity%29 "Constructible base (entity)")
+-   [constructible\_base\_etqwmap](Constructible_base_etqwmap_%28entity%29 "Constructible base etqwmap (entity)")
+-   [constructible\_door\_relay](Constructible_door_relay_%28entity%29 "Constructible door relay (entity)")
+-   [constructible\_emp\_disruptor\_gdf](Constructible_emp_disruptor_gdf_%28entity%29 "Constructible emp disruptor gdf (entity)")
+-   [constructible\_materials\_gdf](Constructible_materials_gdf_%28entity%29 "Constructible materials gdf (entity)")
+-   [constructible\_materials\_gun\_gdf](Constructible_materials_gun_gdf_%28entity%29 "Constructible materials gun gdf (entity)")
+-   [constructible\_materials\_neutral](Constructible_materials_neutral_%28entity%29 "Constructible materials neutral (entity)")
+-   [constructible\_materials\_secondary\_gdf](Constructible_materials_secondary_gdf_%28entity%29 "Constructible materials secondary gdf (entity)")
+-   [constructible\_materials\_strogg](Constructible_materials_strogg_%28entity%29 "Constructible materials strogg (entity)")
+-   [constructible\_materials\_tower\_gdf](Constructible_materials_tower_gdf_%28entity%29 "Constructible materials tower gdf (entity)")
+-   [constructible\_tower\_gdf](Constructible_tower_gdf_%28entity%29 "Constructible tower gdf (entity)")
+-   [constructible\_tower\_gdf\_all](Constructible_tower_gdf_all_%28entity%29 "Constructible tower gdf all (entity)")
+-   [constructible\_tower\_gdf\_base](Constructible_tower_gdf_base_%28entity%29 "Constructible tower gdf base (entity)")
+-   [constructible\_tower\_gdf\_top](Constructible_tower_gdf_top_%28entity%29 "Constructible tower gdf top (entity)")
+-   [constructible\_tower\_strogg](Constructible_tower_strogg_%28entity%29 "Constructible tower strogg (entity)")
 
 ### D
 
--   dead\_body\_gdf
--   dead\_body\_strogg
--   deploy\_mission\_hint
--   deploy\_mission\_hint\_mines\_gdf
--   deploy\_mission\_hint\_mines\_strogg
--   deployable\_amt\_gdf
--   deployable\_amt\_gdf\_cc
--   deployable\_amt\_gdf\_cc\_arctic
--   deployable\_antiarmour\_gdf
--   deployable\_antiarmour\_strogg
--   deployable\_antipersonnel\_gdf
--   deployable\_antipersonnel\_strogg
--   deployable\_artillery
--   deployable\_autodeployer
--   deployable\_awacs\_gdf\_awacs
--   deployable\_base
--   deployable\_basedefence
--   deployable\_basedefence\_gdf
--   deployable\_basedefence\_strogg
--   deployable\_gdf
--   deployable\_osr\_strogg\_arm
--   deployable\_osr\_strogg\_base
--   deployable\_osr\_strogg\_top
--   deployable\_plasmamortar
--   deployable\_psi
--   deployable\_radar
--   deployable\_railhowitzer
--   deployable\_rockets
--   deployable\_shield\_generator
--   deployable\_shield\_generator\_domihub
--   deployable\_spawn\_anansi
--   deployable\_spawn\_badger
--   deployable\_spawn\_bumblebee
--   deployable\_spawn\_desecrator
--   deployable\_spawn\_goliath
--   deployable\_spawn\_hog
--   deployable\_spawn\_hornet
--   deployable\_spawn\_husky
--   deployable\_spawn\_icarus
--   deployable\_spawn\_mcp
--   deployable\_spawn\_platypus
--   deployable\_spawn\_titan
--   deployable\_spawn\_trojan
--   deployable\_ssg
--   deployable\_ssm
--   deployable\_strogg
--   deployzone
+-   [dead\_body\_gdf](Dead_body_gdf_%28entity%29 "Dead body gdf (entity)")
+-   [dead\_body\_strogg](Dead_body_strogg_%28entity%29 "Dead body strogg (entity)")
+-   [deploy\_mission\_hint](Deploy_mission_hint_%28entity%29 "Deploy mission hint (entity)")
+-   [deploy\_mission\_hint\_mines\_gdf](Deploy_mission_hint_mines_gdf_%28entity%29 "Deploy mission hint mines gdf (entity)")
+-   [deploy\_mission\_hint\_mines\_strogg](Deploy_mission_hint_mines_strogg_%28entity%29 "Deploy mission hint mines strogg (entity)")
+-   [deployable\_amt\_gdf](Deployable_amt_gdf_%28entity%29 "Deployable amt gdf (entity)")
+-   [deployable\_amt\_gdf\_cc](Deployable_amt_gdf_cc_%28entity%29 "Deployable amt gdf cc (entity)")
+-   [deployable\_amt\_gdf\_cc\_arctic](Deployable_amt_gdf_cc_arctic_%28entity%29 "Deployable amt gdf cc arctic (entity)")
+-   [deployable\_antiarmour\_gdf](Deployable_antiarmour_gdf_%28entity%29 "Deployable antiarmour gdf (entity)")
+-   [deployable\_antiarmour\_strogg](Deployable_antiarmour_strogg_%28entity%29 "Deployable antiarmour strogg (entity)")
+-   [deployable\_antipersonnel\_gdf](Deployable_antipersonnel_gdf_%28entity%29 "Deployable antipersonnel gdf (entity)")
+-   [deployable\_antipersonnel\_strogg](Deployable_antipersonnel_strogg_%28entity%29 "Deployable antipersonnel strogg (entity)")
+-   [deployable\_artillery](Deployable_artillery_%28entity%29 "Deployable artillery (entity)")
+-   [deployable\_autodeployer](Deployable_autodeployer_%28entity%29 "Deployable autodeployer (entity)")
+-   [deployable\_awacs\_gdf\_awacs](Deployable_awacs_gdf_awacs_%28entity%29 "Deployable awacs gdf awacs (entity)")
+-   [deployable\_base](Deployable_base_%28entity%29 "Deployable base (entity)")
+-   [deployable\_basedefence](Deployable_basedefence_%28entity%29 "Deployable basedefence (entity)")
+-   [deployable\_basedefence\_gdf](Deployable_basedefence_gdf_%28entity%29 "Deployable basedefence gdf (entity)")
+-   [deployable\_basedefence\_strogg](Deployable_basedefence_strogg_%28entity%29 "Deployable basedefence strogg (entity)")
+-   [deployable\_gdf](Deployable_gdf_%28entity%29 "Deployable gdf (entity)")
+-   [deployable\_osr\_strogg\_arm](Deployable_osr_strogg_arm_%28entity%29 "Deployable osr strogg arm (entity)")
+-   [deployable\_osr\_strogg\_base](Deployable_osr_strogg_base_%28entity%29 "Deployable osr strogg base (entity)")
+-   [deployable\_osr\_strogg\_top](Deployable_osr_strogg_top_%28entity%29 "Deployable osr strogg top (entity)")
+-   [deployable\_plasmamortar](Deployable_plasmamortar_%28entity%29 "Deployable plasmamortar (entity)")
+-   [deployable\_psi](Deployable_psi_%28entity%29 "Deployable psi (entity)")
+-   [deployable\_radar](Deployable_radar_%28entity%29 "Deployable radar (entity)")
+-   [deployable\_railhowitzer](Deployable_railhowitzer_%28entity%29 "Deployable railhowitzer (entity)")
+-   [deployable\_rockets](Deployable_rockets_%28entity%29 "Deployable rockets (entity)")
+-   [deployable\_shield\_generator](Deployable_shield_generator_%28entity%29 "Deployable shield generator (entity)")
+-   [deployable\_shield\_generator\_domihub](Deployable_shield_generator_domihub_%28entity%29 "Deployable shield generator domihub (entity)")
+-   [deployable\_spawn\_anansi](Deployable_spawn_anansi_%28entity%29 "Deployable spawn anansi (entity)")
+-   [deployable\_spawn\_badger](Deployable_spawn_badger_%28entity%29 "Deployable spawn badger (entity)")
+-   [deployable\_spawn\_bumblebee](Deployable_spawn_bumblebee_%28entity%29 "Deployable spawn bumblebee (entity)")
+-   [deployable\_spawn\_desecrator](Deployable_spawn_desecrator_%28entity%29 "Deployable spawn desecrator (entity)")
+-   [deployable\_spawn\_goliath](Deployable_spawn_goliath_%28entity%29 "Deployable spawn goliath (entity)")
+-   [deployable\_spawn\_hog](Deployable_spawn_hog_%28entity%29 "Deployable spawn hog (entity)")
+-   [deployable\_spawn\_hornet](Deployable_spawn_hornet_%28entity%29 "Deployable spawn hornet (entity)")
+-   [deployable\_spawn\_husky](Deployable_spawn_husky_%28entity%29 "Deployable spawn husky (entity)")
+-   [deployable\_spawn\_icarus](Deployable_spawn_icarus_%28entity%29 "Deployable spawn icarus (entity)")
+-   [deployable\_spawn\_mcp](Deployable_spawn_mcp_%28entity%29 "Deployable spawn mcp (entity)")
+-   [deployable\_spawn\_platypus](Deployable_spawn_platypus_%28entity%29 "Deployable spawn platypus (entity)")
+-   [deployable\_spawn\_titan](Deployable_spawn_titan_%28entity%29 "Deployable spawn titan (entity)")
+-   [deployable\_spawn\_trojan](Deployable_spawn_trojan_%28entity%29 "Deployable spawn trojan (entity)")
+-   [deployable\_ssg](Deployable_ssg_%28entity%29 "Deployable ssg (entity)")
+-   [deployable\_ssm](Deployable_ssm_%28entity%29 "Deployable ssm (entity)")
+-   [deployable\_strogg](Deployable_strogg_%28entity%29 "Deployable strogg (entity)")
+-   [deployzone](Deployzone_%28entity%29 "Deployzone (entity)")
 
 ### E
 
--   e3\_temp\_temp\_0
--   e3\_temp\_temp\_1
--   e3\_temp\_temp\_10
--   e3\_temp\_temp\_11
--   e3\_temp\_temp\_12
--   e3\_temp\_temp\_13
--   e3\_temp\_temp\_14
--   e3\_temp\_temp\_15
--   e3\_temp\_temp\_16
--   e3\_temp\_temp\_17
--   e3\_temp\_temp\_18
--   e3\_temp\_temp\_19
--   e3\_temp\_temp\_2
--   e3\_temp\_temp\_20
--   e3\_temp\_temp\_21
--   e3\_temp\_temp\_22
--   e3\_temp\_temp\_23
--   e3\_temp\_temp\_24
--   e3\_temp\_temp\_25
--   e3\_temp\_temp\_26
--   e3\_temp\_temp\_27
--   e3\_temp\_temp\_28
--   e3\_temp\_temp\_29
--   e3\_temp\_temp\_3
--   e3\_temp\_temp\_30
--   e3\_temp\_temp\_31
--   e3\_temp\_temp\_32
--   e3\_temp\_temp\_4
--   e3\_temp\_temp\_5
--   e3\_temp\_temp\_6
--   e3\_temp\_temp\_7
--   e3\_temp\_temp\_8
--   e3\_temp\_temp\_9
--   env\_oil\_pump
--   env\_oil\_pump\_b
--   env\_oil\_pump\_c
--   env\_oil\_pump\_old
--   env\_refinery\_final\_objective\_b
--   env\_strogg\_test\_subject
--   env\_strogg\_test\_subject\_a
+-   [e3\_temp\_temp\_0](E3_temp_temp_0_%28entity%29 "E3 temp temp 0 (entity)")
+-   [e3\_temp\_temp\_1](E3_temp_temp_1_%28entity%29 "E3 temp temp 1 (entity)")
+-   [e3\_temp\_temp\_10](E3_temp_temp_10_%28entity%29 "E3 temp temp 10 (entity)")
+-   [e3\_temp\_temp\_11](E3_temp_temp_11_%28entity%29 "E3 temp temp 11 (entity)")
+-   [e3\_temp\_temp\_12](E3_temp_temp_12_%28entity%29 "E3 temp temp 12 (entity)")
+-   [e3\_temp\_temp\_13](E3_temp_temp_13_%28entity%29 "E3 temp temp 13 (entity)")
+-   [e3\_temp\_temp\_14](E3_temp_temp_14_%28entity%29 "E3 temp temp 14 (entity)")
+-   [e3\_temp\_temp\_15](E3_temp_temp_15_%28entity%29 "E3 temp temp 15 (entity)")
+-   [e3\_temp\_temp\_16](E3_temp_temp_16_%28entity%29 "E3 temp temp 16 (entity)")
+-   [e3\_temp\_temp\_17](E3_temp_temp_17_%28entity%29 "E3 temp temp 17 (entity)")
+-   [e3\_temp\_temp\_18](E3_temp_temp_18_%28entity%29 "E3 temp temp 18 (entity)")
+-   [e3\_temp\_temp\_19](E3_temp_temp_19_%28entity%29 "E3 temp temp 19 (entity)")
+-   [e3\_temp\_temp\_2](E3_temp_temp_2_%28entity%29 "E3 temp temp 2 (entity)")
+-   [e3\_temp\_temp\_20](E3_temp_temp_20_%28entity%29 "E3 temp temp 20 (entity)")
+-   [e3\_temp\_temp\_21](E3_temp_temp_21_%28entity%29 "E3 temp temp 21 (entity)")
+-   [e3\_temp\_temp\_22](E3_temp_temp_22_%28entity%29 "E3 temp temp 22 (entity)")
+-   [e3\_temp\_temp\_23](E3_temp_temp_23_%28entity%29 "E3 temp temp 23 (entity)")
+-   [e3\_temp\_temp\_24](E3_temp_temp_24_%28entity%29 "E3 temp temp 24 (entity)")
+-   [e3\_temp\_temp\_25](E3_temp_temp_25_%28entity%29 "E3 temp temp 25 (entity)")
+-   [e3\_temp\_temp\_26](E3_temp_temp_26_%28entity%29 "E3 temp temp 26 (entity)")
+-   [e3\_temp\_temp\_27](E3_temp_temp_27_%28entity%29 "E3 temp temp 27 (entity)")
+-   [e3\_temp\_temp\_28](E3_temp_temp_28_%28entity%29 "E3 temp temp 28 (entity)")
+-   [e3\_temp\_temp\_29](E3_temp_temp_29_%28entity%29 "E3 temp temp 29 (entity)")
+-   [e3\_temp\_temp\_3](E3_temp_temp_3_%28entity%29 "E3 temp temp 3 (entity)")
+-   [e3\_temp\_temp\_30](E3_temp_temp_30_%28entity%29 "E3 temp temp 30 (entity)")
+-   [e3\_temp\_temp\_31](E3_temp_temp_31_%28entity%29 "E3 temp temp 31 (entity)")
+-   [e3\_temp\_temp\_32](E3_temp_temp_32_%28entity%29 "E3 temp temp 32 (entity)")
+-   [e3\_temp\_temp\_4](E3_temp_temp_4_%28entity%29 "E3 temp temp 4 (entity)")
+-   [e3\_temp\_temp\_5](E3_temp_temp_5_%28entity%29 "E3 temp temp 5 (entity)")
+-   [e3\_temp\_temp\_6](E3_temp_temp_6_%28entity%29 "E3 temp temp 6 (entity)")
+-   [e3\_temp\_temp\_7](E3_temp_temp_7_%28entity%29 "E3 temp temp 7 (entity)")
+-   [e3\_temp\_temp\_8](E3_temp_temp_8_%28entity%29 "E3 temp temp 8 (entity)")
+-   [e3\_temp\_temp\_9](E3_temp_temp_9_%28entity%29 "E3 temp temp 9 (entity)")
+-   [env\_oil\_pump](Env_oil_pump_%28entity%29 "Env oil pump (entity)")
+-   [env\_oil\_pump\_b](Env_oil_pump_b_%28entity%29 "Env oil pump b (entity)")
+-   [env\_oil\_pump\_c](Env_oil_pump_c_%28entity%29 "Env oil pump c (entity)")
+-   [env\_oil\_pump\_old](Env_oil_pump_old_%28entity%29 "Env oil pump old (entity)")
+-   [env\_refinery\_final\_objective\_b](Env_refinery_final_objective_b_%28entity%29 "Env refinery final objective b (entity)")
+-   [env\_strogg\_test\_subject](Env_strogg_test_subject_%28entity%29 "Env strogg test subject (entity)")
+-   [env\_strogg\_test\_subject\_a](Env_strogg_test_subject_a_%28entity%29 "Env strogg test subject a (entity)")
 
 ### F
 
--   firesupport\_marker\_artillery
--   firesupport\_marker\_railhowitzer
--   firesupport\_marker\_ssg
--   firesupport\_marker\_ssm
--   firesupport\_marker\_vampire
--   firesupport\_marker\_violator
--   flyer\_hive
--   func\_aasobstacle
--   [func\_activator](Func\_activator\_(entity))
--   [func\_animate](Func\_animate\_(entity))
--   [func\_bobbing](Func\_bobbing\_(entity))
--   [func\_cameraview](Func\_cameraview\_(entity))
--   [func\_door](Func\_door\_(entity))
--   func\_door\_gdf
--   func\_door\_gdf\_breakable
--   func\_door\_gdf\_slave
--   func\_door\_slave
--   func\_door\_strogg
--   func\_door\_strogg\_breakable
--   func\_door\_strogg\_slave
--   func\_door\_switch
--   [func\_elevator](Func\_elevator\_(entity))
--   func\_flare
--   [func\_forcefield](Func\_forcefield\_(entity))
--   [func\_fx](Func\_fx\_(entity))
--   [func\_group](Func\_group\_(entity))
--   [func\_ladder](Func\_ladder\_(entity))
--   [func\_pendulum](Func\_pendulum\_(entity))
--   [func\_plat](Func\_plat\_(entity))
--   [func\_riser](Func\_riser\_(entity))
--   [func\_rotating](Func\_rotating\_(entity))
--   [func\_splinemover](Func\_splinemover\_(entity))
--   [func\_static](Func\_static\_(entity))
--   func\_synced\_fx
+-   [firesupport\_marker\_artillery](Firesupport_marker_artillery_%28entity%29 "Firesupport marker artillery (entity)")
+-   [firesupport\_marker\_railhowitzer](Firesupport_marker_railhowitzer_%28entity%29 "Firesupport marker railhowitzer (entity)")
+-   [firesupport\_marker\_ssg](Firesupport_marker_ssg_%28entity%29 "Firesupport marker ssg (entity)")
+-   [firesupport\_marker\_ssm](Firesupport_marker_ssm_%28entity%29 "Firesupport marker ssm (entity)")
+-   [firesupport\_marker\_vampire](Firesupport_marker_vampire_%28entity%29 "Firesupport marker vampire (entity)")
+-   [firesupport\_marker\_violator](Firesupport_marker_violator_%28entity%29 "Firesupport marker violator (entity)")
+-   [flyer\_hive](Flyer_hive_%28entity%29 "Flyer hive (entity)")
+-   [func\_aasobstacle](Func_aasobstacle_%28entity%29 "Func aasobstacle (entity)")
+-   [func\_activator](Func_activator_%28entity%29 "Func activator (entity)")
+-   [func\_animate](Func_animate_%28entity%29 "Func animate (entity)")
+-   [func\_bobbing](Func_bobbing_%28entity%29 "Func bobbing (entity)")
+-   [func\_cameraview](Func_cameraview_%28entity%29 "Func cameraview (entity)")
+-   [func\_door](Func_door_%28entity%29 "Func door (entity)")
+-   [func\_door\_gdf](Func_door_gdf_%28entity%29 "Func door gdf (entity)")
+-   [func\_door\_gdf\_breakable](Func_door_gdf_breakable_%28entity%29 "Func door gdf breakable (entity)")
+-   [func\_door\_gdf\_slave](Func_door_gdf_slave_%28entity%29 "Func door gdf slave (entity)")
+-   [func\_door\_slave](Func_door_slave_%28entity%29 "Func door slave (entity)")
+-   [func\_door\_strogg](Func_door_strogg_%28entity%29 "Func door strogg (entity)")
+-   [func\_door\_strogg\_breakable](Func_door_strogg_breakable_%28entity%29 "Func door strogg breakable (entity)")
+-   [func\_door\_strogg\_slave](Func_door_strogg_slave_%28entity%29 "Func door strogg slave (entity)")
+-   [func\_door\_switch](Func_door_switch_%28entity%29 "Func door switch (entity)")
+-   [func\_elevator](Func_elevator_%28entity%29 "Func elevator (entity)")
+-   [func\_flare](Func_flare_%28entity%29 "Func flare (entity)")
+-   [func\_forcefield](Func_forcefield_%28entity%29 "Func forcefield (entity)")
+-   [func\_fx](Func_fx_%28entity%29 "Func fx (entity)")
+-   [func\_group](Func_group_%28entity%29 "Func group (entity)")
+-   [func\_ladder](Func_ladder_%28entity%29 "Func ladder (entity)")
+-   [func\_pendulum](Func_pendulum_%28entity%29 "Func pendulum (entity)")
+-   [func\_plat](Func_plat_%28entity%29 "Func plat (entity)")
+-   [func\_riser](Func_riser_%28entity%29 "Func riser (entity)")
+-   [func\_rotating](Func_rotating_%28entity%29 "Func rotating (entity)")
+-   [func\_splinemover](Func_splinemover_%28entity%29 "Func splinemover (entity)")
+-   [func\_static](Func_static_%28entity%29 "Func static (entity)")
+-   [func\_synced\_fx](Func_synced_fx_%28entity%29 "Func synced fx (entity)")
 
 ### G
 
--   gameplay\_ark\_bridge\_stage1
--   gameplay\_ark\_bridge\_stage2
--   gameplay\_bottest\_generator
--   gameplay\_bottest\_generator\_materials
--   gameplay\_bottest\_storage\_room\_door
--   gameplay\_canyon\_bioreactor
--   gameplay\_canyon\_bridge\_constructed
--   gameplay\_canyon\_bridge\_fixer
--   gameplay\_canyon\_bridge\_frame
--   gameplay\_canyon\_bridge\_platform
--   gameplay\_canyon\_bridge\_stage1
--   gameplay\_canyon\_bridge\_stage2
--   gameplay\_destructible\_trigger
--   gameplay\_generic\_destructible\_objective
--   gameplay\_hackable\_objective
--   gameplay\_island\_generator
--   gameplay\_island\_generator\_materials
--   gameplay\_island\_storage\_room\_door
--   gameplay\_jumppad
--   gameplay\_jumppad\_gdf
--   gameplay\_jumppad\_strogg
--   gameplay\_slipgate\_effects
--   gameplay\_strogg\_shield\_generator
--   gameplay\_strogg\_shield\_generator\_caller
--   gameplay\_strogg\_shield\_generator\_trigger
--   gameplay\_valley\_bridge\_constructed
--   gameplay\_valley\_bridge\_destroyed
--   gameplay\_valley\_bridge\_fixer
--   gameplay\_valley\_bridge\_frame
--   gameplay\_valley\_bridge\_platform
--   gameplay\_valley\_bridge\_stage1
--   gameplay\_valley\_bridge\_stage2
--   globalConstants
--   gun\_emplacement\_bracket\_gdf
+-   [gameplay\_ark\_bridge\_stage1](Gameplay_ark_bridge_stage1_%28entity%29 "Gameplay ark bridge stage1 (entity)")
+-   [gameplay\_ark\_bridge\_stage2](Gameplay_ark_bridge_stage2_%28entity%29 "Gameplay ark bridge stage2 (entity)")
+-   [gameplay\_bottest\_generator](Gameplay_bottest_generator_%28entity%29 "Gameplay bottest generator (entity)")
+-   [gameplay\_bottest\_generator\_materials](Gameplay_bottest_generator_materials_%28entity%29 "Gameplay bottest generator materials (entity)")
+-   [gameplay\_bottest\_storage\_room\_door](Gameplay_bottest_storage_room_door_%28entity%29 "Gameplay bottest storage room door (entity)")
+-   [gameplay\_canyon\_bioreactor](Gameplay_canyon_bioreactor_%28entity%29 "Gameplay canyon bioreactor (entity)")
+-   [gameplay\_canyon\_bridge\_constructed](Gameplay_canyon_bridge_constructed_%28entity%29 "Gameplay canyon bridge constructed (entity)")
+-   [gameplay\_canyon\_bridge\_fixer](Gameplay_canyon_bridge_fixer_%28entity%29 "Gameplay canyon bridge fixer (entity)")
+-   [gameplay\_canyon\_bridge\_frame](Gameplay_canyon_bridge_frame_%28entity%29 "Gameplay canyon bridge frame (entity)")
+-   [gameplay\_canyon\_bridge\_platform](Gameplay_canyon_bridge_platform_%28entity%29 "Gameplay canyon bridge platform (entity)")
+-   [gameplay\_canyon\_bridge\_stage1](Gameplay_canyon_bridge_stage1_%28entity%29 "Gameplay canyon bridge stage1 (entity)")
+-   [gameplay\_canyon\_bridge\_stage2](Gameplay_canyon_bridge_stage2_%28entity%29 "Gameplay canyon bridge stage2 (entity)")
+-   [gameplay\_destructible\_trigger](Gameplay_destructible_trigger_%28entity%29 "Gameplay destructible trigger (entity)")
+-   [gameplay\_generic\_destructible\_objective](Gameplay_generic_destructible_objective_%28entity%29 "Gameplay generic destructible objective (entity)")
+-   [gameplay\_hackable\_objective](Gameplay_hackable_objective_%28entity%29 "Gameplay hackable objective (entity)")
+-   [gameplay\_island\_generator](Gameplay_island_generator_%28entity%29 "Gameplay island generator (entity)")
+-   [gameplay\_island\_generator\_materials](Gameplay_island_generator_materials_%28entity%29 "Gameplay island generator materials (entity)")
+-   [gameplay\_island\_storage\_room\_door](Gameplay_island_storage_room_door_%28entity%29 "Gameplay island storage room door (entity)")
+-   [gameplay\_jumppad](Gameplay_jumppad_%28entity%29 "Gameplay jumppad (entity)")
+-   [gameplay\_jumppad\_gdf](Gameplay_jumppad_gdf_%28entity%29 "Gameplay jumppad gdf (entity)")
+-   [gameplay\_jumppad\_strogg](Gameplay_jumppad_strogg_%28entity%29 "Gameplay jumppad strogg (entity)")
+-   [gameplay\_slipgate\_effects](Gameplay_slipgate_effects_%28entity%29 "Gameplay slipgate effects (entity)")
+-   [gameplay\_strogg\_shield\_generator](Gameplay_strogg_shield_generator_%28entity%29 "Gameplay strogg shield generator (entity)")
+-   [gameplay\_strogg\_shield\_generator\_caller](Gameplay_strogg_shield_generator_caller_%28entity%29 "Gameplay strogg shield generator caller (entity)")
+-   [gameplay\_strogg\_shield\_generator\_trigger](Gameplay_strogg_shield_generator_trigger_%28entity%29 "Gameplay strogg shield generator trigger (entity)")
+-   [gameplay\_valley\_bridge\_constructed](Gameplay_valley_bridge_constructed_%28entity%29 "Gameplay valley bridge constructed (entity)")
+-   [gameplay\_valley\_bridge\_destroyed](Gameplay_valley_bridge_destroyed_%28entity%29 "Gameplay valley bridge destroyed (entity)")
+-   [gameplay\_valley\_bridge\_fixer](Gameplay_valley_bridge_fixer_%28entity%29 "Gameplay valley bridge fixer (entity)")
+-   [gameplay\_valley\_bridge\_frame](Gameplay_valley_bridge_frame_%28entity%29 "Gameplay valley bridge frame (entity)")
+-   [gameplay\_valley\_bridge\_platform](Gameplay_valley_bridge_platform_%28entity%29 "Gameplay valley bridge platform (entity)")
+-   [gameplay\_valley\_bridge\_stage1](Gameplay_valley_bridge_stage1_%28entity%29 "Gameplay valley bridge stage1 (entity)")
+-   [gameplay\_valley\_bridge\_stage2](Gameplay_valley_bridge_stage2_%28entity%29 "Gameplay valley bridge stage2 (entity)")
+-   [globalConstants](GlobalConstants_%28entity%29 "GlobalConstants (entity)")
+-   [gun\_emplacement\_bracket\_gdf](Gun_emplacement_bracket_gdf_%28entity%29 "Gun emplacement bracket gdf (entity)")
 
 ### H
 
--   hint\_flyerdrone
+-   [hint\_flyerdrone](Hint_flyerdrone_%28entity%29 "Hint flyerdrone (entity)")
 
 ### I
 
--   info\_capturable\_spawn
--   info\_capturable\_spawn\_gdf
--   info\_capturable\_spawn\_strogg
--   info\_envbound
--   info\_envmap
--   info\_generic\_spawn
--   [info\_location](Info\_location\_(entity))
--   info\_objective
--   [info\_player\_deathmatch](Info\_player\_deathmatch\_(entity))
--   [info\_player\_start](Info\_player\_start\_(entity))
--   info\_spawn\_master
--   info\_spectator\_spawn
--   info\_team\_gdf\_spawn
--   info\_team\_strogg\_spawn
--   island\_beacon
--   island\_buoy
--   item\_capturepoint
--   item\_capturepoint\_use
--   item\_drop\_pod
--   item\_drop\_pod\_quarry\_1
--   item\_drop\_pod\_quarry\_2
--   item\_drop\_pod\_quarry\_3
+-   [info\_capturable\_spawn](Info_capturable_spawn_%28entity%29 "Info capturable spawn (entity)")
+-   [info\_capturable\_spawn\_gdf](Info_capturable_spawn_gdf_%28entity%29 "Info capturable spawn gdf (entity)")
+-   [info\_capturable\_spawn\_strogg](Info_capturable_spawn_strogg_%28entity%29 "Info capturable spawn strogg (entity)")
+-   [info\_envbound](Info_envbound_%28entity%29 "Info envbound (entity)")
+-   [info\_envmap](Info_envmap_%28entity%29 "Info envmap (entity)")
+-   [info\_generic\_spawn](Info_generic_spawn_%28entity%29 "Info generic spawn (entity)")
+-   [info\_location](Info_location_%28entity%29 "Info location (entity)")
+-   [info\_objective](Info_objective_%28entity%29 "Info objective (entity)")
+-   [info\_player\_deathmatch](Info_player_deathmatch_%28entity%29 "Info player deathmatch (entity)")
+-   [info\_player\_start](Info_player_start_%28entity%29 "Info player start (entity)")
+-   [info\_spawn\_master](Info_spawn_master_%28entity%29 "Info spawn master (entity)")
+-   [info\_spectator\_spawn](Info_spectator_spawn_%28entity%29 "Info spectator spawn (entity)")
+-   [info\_team\_gdf\_spawn](Info_team_gdf_spawn_%28entity%29 "Info team gdf spawn (entity)")
+-   [info\_team\_strogg\_spawn](Info_team_strogg_spawn_%28entity%29 "Info team strogg spawn (entity)")
+-   [island\_beacon](Island_beacon_%28entity%29 "Island beacon (entity)")
+-   [island\_buoy](Island_buoy_%28entity%29 "Island buoy (entity)")
+-   [item\_capturepoint](Item_capturepoint_%28entity%29 "Item capturepoint (entity)")
+-   [item\_capturepoint\_use](Item_capturepoint_use_%28entity%29 "Item capturepoint use (entity)")
+-   [item\_drop\_pod](Item_drop_pod_%28entity%29 "Item drop pod (entity)")
+-   [item\_drop\_pod\_quarry\_1](Item_drop_pod_quarry_1_%28entity%29 "Item drop pod quarry 1 (entity)")
+-   [item\_drop\_pod\_quarry\_2](Item_drop_pod_quarry_2_%28entity%29 "Item drop pod quarry 2 (entity)")
+-   [item\_drop\_pod\_quarry\_3](Item_drop_pod_quarry_3_%28entity%29 "Item drop pod quarry 3 (entity)")
 
 ### J
 
--   jammer\_tower\_effects\_idle
--   jammer\_tower\_effects\_shutdown
+-   [jammer\_tower\_effects\_idle](Jammer_tower_effects_idle_%28entity%29 "Jammer tower effects idle (entity)")
+-   [jammer\_tower\_effects\_shutdown](Jammer_tower_effects_shutdown_%28entity%29 "Jammer tower effects shutdown (entity)")
 
 ### L
 
--   [light](Light\_(entity))
--   light\_ambient
--   light\_inside
--   light\_interior
--   light\_night
--   light\_vis\_dummy
--   lightning
--   liquid\_water
--   lodentity
+-   [light](Light_%28entity%29 "Light (entity)")
+-   [light\_ambient](Light_ambient_%28entity%29 "Light ambient (entity)")
+-   [light\_inside](Light_inside_%28entity%29 "Light inside (entity)")
+-   [light\_interior](Light_interior_%28entity%29 "Light interior (entity)")
+-   [light\_night](Light_night_%28entity%29 "Light night (entity)")
+-   [light\_vis\_dummy](Light_vis_dummy_%28entity%29 "Light vis dummy (entity)")
+-   [lightning](Lightning_%28entity%29 "Lightning (entity)")
+-   [liquid\_water](Liquid_water_%28entity%29 "Liquid water (entity)")
+-   [lodentity](Lodentity_%28entity%29 "Lodentity (entity)")
 
 ### M
 
--   mapobjects\_flag
--   mapobjects\_windsock
--   misc\_advert
--   misc\_imposter
--   misc\_imposter\_spawner
--   misc\_instance\_spawner
--   misc\_mcp\_marker
--   misc\_particle\_trigger
--   misc\_reverb
--   misc\_scripted
--   misc\_supplycrate\_base
--   misc\_supplycrate\_health
--   misc\_teleporter
--   misc\_teleporter\_angles
--   model\_static
--   mountable\_gdf\_gpmg
--   mountable\_gdf\_weapon\_cockpit
--   mountable\_strogg\_hyperblaster
--   mountable\_weapon\_base
--   mountable\_weapon\_gdf
--   mountable\_weapon\_strogg
--   [moveable\_base](Moveable\_base\_(entity))
--   moveable\_item\_ball
--   moveable\_item\_ballbouncy
--   moveable\_item\_barrel01
--   moveable\_item\_barrel02
--   moveable\_item\_beerbottle
--   moveable\_item\_beercan
--   moveable\_item\_cone
--   moveable\_item\_foldupchair\_a
--   moveable\_item\_foldupchair\_b
--   moveable\_item\_jerrycan
--   moveable\_item\_metalbox01
--   moveable\_item\_plasticcrate
--   moveable\_item\_refinerybarrel01
--   moveable\_item\_refinerybarrel02
--   moveable\_item\_refinerybarrier01
--   moveable\_item\_roadsign\_rock
--   moveable\_item\_stone1
--   moveable\_item\_stone2
--   moveable\_item\_stone3
+-   [mapobjects\_flag](Mapobjects_flag_%28entity%29 "Mapobjects flag (entity)")
+-   [mapobjects\_windsock](Mapobjects_windsock_%28entity%29 "Mapobjects windsock (entity)")
+-   [misc\_advert](Misc_advert_%28entity%29 "Misc advert (entity)")
+-   [misc\_imposter](Misc_imposter_%28entity%29 "Misc imposter (entity)")
+-   [misc\_imposter\_spawner](Misc_imposter_spawner_%28entity%29 "Misc imposter spawner (entity)")
+-   [misc\_instance\_spawner](Misc_instance_spawner_%28entity%29 "Misc instance spawner (entity)")
+-   [misc\_mcp\_marker](Misc_mcp_marker_%28entity%29 "Misc mcp marker (entity)")
+-   [misc\_particle\_trigger](Misc_particle_trigger_%28entity%29 "Misc particle trigger (entity)")
+-   [misc\_reverb](Misc_reverb_%28entity%29 "Misc reverb (entity)")
+-   [misc\_scripted](Misc_scripted_%28entity%29 "Misc scripted (entity)")
+-   [misc\_supplycrate\_base](Misc_supplycrate_base_%28entity%29 "Misc supplycrate base (entity)")
+-   [misc\_supplycrate\_health](Misc_supplycrate_health_%28entity%29 "Misc supplycrate health (entity)")
+-   [misc\_teleporter](Misc_teleporter_%28entity%29 "Misc teleporter (entity)")
+-   [misc\_teleporter\_angles](Misc_teleporter_angles_%28entity%29 "Misc teleporter angles (entity)")
+-   [model\_static](Model_static_%28entity%29 "Model static (entity)")
+-   [mountable\_gdf\_gpmg](Mountable_gdf_gpmg_%28entity%29 "Mountable gdf gpmg (entity)")
+-   [mountable\_gdf\_weapon\_cockpit](Mountable_gdf_weapon_cockpit_%28entity%29 "Mountable gdf weapon cockpit (entity)")
+-   [mountable\_strogg\_hyperblaster](Mountable_strogg_hyperblaster_%28entity%29 "Mountable strogg hyperblaster (entity)")
+-   [mountable\_weapon\_base](Mountable_weapon_base_%28entity%29 "Mountable weapon base (entity)")
+-   [mountable\_weapon\_gdf](Mountable_weapon_gdf_%28entity%29 "Mountable weapon gdf (entity)")
+-   [mountable\_weapon\_strogg](Mountable_weapon_strogg_%28entity%29 "Mountable weapon strogg (entity)")
+-   [moveable\_base](Moveable_base_%28entity%29 "Moveable base (entity)")
+-   [moveable\_item\_ball](Moveable_item_ball_%28entity%29 "Moveable item ball (entity)")
+-   [moveable\_item\_ballbouncy](Moveable_item_ballbouncy_%28entity%29 "Moveable item ballbouncy (entity)")
+-   [moveable\_item\_barrel01](Moveable_item_barrel01_%28entity%29 "Moveable item barrel01 (entity)")
+-   [moveable\_item\_barrel02](Moveable_item_barrel02_%28entity%29 "Moveable item barrel02 (entity)")
+-   [moveable\_item\_beerbottle](Moveable_item_beerbottle_%28entity%29 "Moveable item beerbottle (entity)")
+-   [moveable\_item\_beercan](Moveable_item_beercan_%28entity%29 "Moveable item beercan (entity)")
+-   [moveable\_item\_cone](Moveable_item_cone_%28entity%29 "Moveable item cone (entity)")
+-   [moveable\_item\_foldupchair\_a](Moveable_item_foldupchair_a_%28entity%29 "Moveable item foldupchair a (entity)")
+-   [moveable\_item\_foldupchair\_b](Moveable_item_foldupchair_b_%28entity%29 "Moveable item foldupchair b (entity)")
+-   [moveable\_item\_jerrycan](Moveable_item_jerrycan_%28entity%29 "Moveable item jerrycan (entity)")
+-   [moveable\_item\_metalbox01](Moveable_item_metalbox01_%28entity%29 "Moveable item metalbox01 (entity)")
+-   [moveable\_item\_plasticcrate](Moveable_item_plasticcrate_%28entity%29 "Moveable item plasticcrate (entity)")
+-   [moveable\_item\_refinerybarrel01](Moveable_item_refinerybarrel01_%28entity%29 "Moveable item refinerybarrel01 (entity)")
+-   [moveable\_item\_refinerybarrel02](Moveable_item_refinerybarrel02_%28entity%29 "Moveable item refinerybarrel02 (entity)")
+-   [moveable\_item\_refinerybarrier01](Moveable_item_refinerybarrier01_%28entity%29 "Moveable item refinerybarrier01 (entity)")
+-   [moveable\_item\_roadsign\_rock](Moveable_item_roadsign_rock_%28entity%29 "Moveable item roadsign rock (entity)")
+-   [moveable\_item\_stone1](Moveable_item_stone1_%28entity%29 "Moveable item stone1 (entity)")
+-   [moveable\_item\_stone2](Moveable_item_stone2_%28entity%29 "Moveable item stone2 (entity)")
+-   [moveable\_item\_stone3](Moveable_item_stone3_%28entity%29 "Moveable item stone3 (entity)")
 
 ### P
 
--   parachute
--   [path\_corner](Path\_corner\_(entity))
--   placement\_anansi
--   placement\_badger
--   placement\_bumblebee
--   placement\_camera
--   placement\_d\_antimiss\_gdf
--   placement\_d\_antiper\_gdf
--   placement\_d\_antiper\_strogg
--   placement\_d\_antiveh\_gdf
--   placement\_d\_antiveh\_strogg
--   placement\_d\_artillery\_gdf
--   placement\_d\_plasmamortar\_strogg
--   placement\_d\_psiradar\_strogg
--   placement\_d\_radar\_gdf
--   placement\_d\_railhowitzer\_strogg
--   placement\_d\_rockets\_gdf
--   placement\_d\_shield\_generator\_strogg
--   placement\_d\_ssg\_strogg
--   placement\_d\_ssm\_gdf
--   placement\_d\_vampire\_gdf
--   placement\_desecrator
--   placement\_goliath
--   placement\_hog
--   placement\_hornet
--   placement\_husky
--   placement\_icarus
--   placement\_jotun
--   placement\_magog
--   placement\_mcp
--   placement\_platypus
--   placement\_player
--   placement\_player\_gdf
--   placement\_player\_strogg
--   placement\_rotator
--   placement\_titan
--   placement\_trojan
--   placement\_vehicle
--   placement\_weapon
--   [player\_base](Player\_base\_(entity))
--   player\_edf
--   player\_gdf\_covertops
--   player\_gdf\_engineer
--   player\_gdf\_fieldops
--   player\_gdf\_medic
--   player\_gdf\_soldier
--   player\_strogg\_aggressor
--   player\_strogg\_constructor
--   player\_strogg\_infiltrator
--   player\_strogg\_oppressor
--   player\_strogg\_technician
--   playzone\_all
--   playzone\_commandmap
--   playzone\_deploy
--   playzone\_marker
--   playzone\_path\_and\_heightmap
--   playzone\_play
--   projectile\_ammopack
--   projectile\_ammopack\_mega
--   projectile\_anansi\_law
--   projectile\_assaultrifle
--   projectile\_assaultrifle\_gren
--   projectile\_assaultrifle\_gren\_bullet
--   projectile\_assaultrifle\_scoped
--   [projectile\_blaster](Projectile\_blaster\_(entity))
--   [projectile\_bullet\_base](Projectile\_bullet\_base\_(entity))
--   projectile\_bullet\_base\_big
--   projectile\_decoy
--   projectile\_decoy\_anansi
--   projectile\_decoy\_badger
--   projectile\_decoy\_bumblebee
--   projectile\_decoy\_desecrator
--   projectile\_decoy\_goliath
--   projectile\_decoy\_hog
--   projectile\_decoy\_hornet
--   projectile\_decoy\_husky
--   projectile\_decoy\_icarus
--   projectile\_decoy\_magog
--   projectile\_decoy\_mcp
--   projectile\_decoy\_platypus
--   projectile\_decoy\_titan
--   projectile\_decoy\_trojan
--   projectile\_deployable\_antiarmour
--   projectile\_deployable\_antiarmour\_dumb
--   projectile\_deployable\_antiarmour\_strogg
--   projectile\_deployable\_antipersonnel
--   projectile\_deployable\_antipersonnel\_strogg
--   projectile\_deployable\_artillery
--   projectile\_deployable\_artillery\_foreffect
--   projectile\_deployable\_basedefence
--   projectile\_deployable\_basedefence\_strogg
--   projectile\_deployable\_plasmamortar
--   projectile\_deployable\_railhowitzer
--   projectile\_deployable\_rockets
--   projectile\_deployable\_ssg
--   projectile\_deployable\_ssm
--   projectile\_fafff
--   projectile\_gatling
--   projectile\_gatling\_anansi
--   projectile\_gatling\_bumblebee
--   projectile\_gatling\_titan
--   projectile\_gpmg
--   projectile\_gpmg\_aircraft
--   projectile\_gpmg\_anansi
--   projectile\_gpmg\_badger
--   projectile\_gpmg\_bumblebee
--   projectile\_gpmg\_mcp
--   projectile\_gpmg\_mount
--   projectile\_gpmg\_platypus
--   projectile\_gpmg\_titan
--   projectile\_gpmg\_trojan
--   projectile\_gpmg\_vehicle
--   [projectile\_grenade](Projectile\_grenade\_(entity))
--   projectile\_grenade\_airstrike\_marker\_base
--   projectile\_grenade\_airstrike\_marker\_gdf
--   projectile\_grenade\_airstrike\_marker\_strogg
--   projectile\_grenade\_emp
--   projectile\_grenade\_emp\_roll
--   projectile\_grenade\_frag
--   projectile\_grenade\_frag\_roll
--   projectile\_grenade\_scrambler
--   projectile\_grenade\_scrambler\_sticky
--   projectile\_grenade\_shrap
--   projectile\_grenade\_shrap\_sticky
--   projectile\_grenade\_smoke
--   projectile\_grenade\_supply\_marker\_base
--   projectile\_grenade\_supply\_marker\_medic
--   projectile\_haw
--   projectile\_haw\_anansi
--   projectile\_healthpack
--   [projectile\_hyperblaster](Projectile\_hyperblaster\_(entity))
--   projectile\_hyperblaster\_desecrator
--   projectile\_hyperblaster\_hog
--   projectile\_hyperblaster\_hornet
--   projectile\_hyperblaster\_twin
--   projectile\_lacerator
--   projectile\_lacerator\_gren
--   projectile\_lacerator\_gren\_bullet
--   projectile\_lacerator\_scoped
--   projectile\_landmine
--   projectile\_landmine\_strogg
--   projectile\_law
--   projectile\_law\_arcing
--   projectile\_machinepistol
--   projectile\_machinepistol\_silenced
--   projectile\_nailgun
--   projectile\_obliterator
--   projectile\_obliterator\_arcing
--   projectile\_obliterator\_arcing\_firesound
--   projectile\_pistol
--   projectile\_pistol\_akimbo
--   projectile\_pistol\_akimbo\_silenced
--   projectile\_pistol\_silenced
--   projectile\_plasmacannon
--   projectile\_plasmacannon\_desecrator
--   projectile\_plasmacannon\_goliath
--   projectile\_plasmacannon\_small
--   [projectile\_railgun](Projectile\_railgun\_(entity))
--   projectile\_railgun\_scoped
--   [projectile\_rocket\_base](Projectile\_rocket\_base\_(entity))
--   projectile\_sbc
--   projectile\_scud
--   projectile\_shotgun
--   projectile\_sniperrifle
--   projectile\_sniperrifle\_scoped
--   projectile\_strocket
--   projectile\_stroybomb
--   projectile\_stroyentcells
--   projectile\_teleporter
--   projectile\_third\_eye
--   projectile\_trojan\_law
--   projectile\_vampire
--   projectile\_vampire\_client
+-   [parachute](Parachute_%28entity%29 "Parachute (entity)")
+-   [path\_corner](Path_corner_%28entity%29 "Path corner (entity)")
+-   [placement\_anansi](Placement_anansi_%28entity%29 "Placement anansi (entity)")
+-   [placement\_badger](Placement_badger_%28entity%29 "Placement badger (entity)")
+-   [placement\_bumblebee](Placement_bumblebee_%28entity%29 "Placement bumblebee (entity)")
+-   [placement\_camera](Placement_camera_%28entity%29 "Placement camera (entity)")
+-   [placement\_d\_antimiss\_gdf](Placement_d_antimiss_gdf_%28entity%29 "Placement d antimiss gdf (entity)")
+-   [placement\_d\_antiper\_gdf](Placement_d_antiper_gdf_%28entity%29 "Placement d antiper gdf (entity)")
+-   [placement\_d\_antiper\_strogg](Placement_d_antiper_strogg_%28entity%29 "Placement d antiper strogg (entity)")
+-   [placement\_d\_antiveh\_gdf](Placement_d_antiveh_gdf_%28entity%29 "Placement d antiveh gdf (entity)")
+-   [placement\_d\_antiveh\_strogg](Placement_d_antiveh_strogg_%28entity%29 "Placement d antiveh strogg (entity)")
+-   [placement\_d\_artillery\_gdf](Placement_d_artillery_gdf_%28entity%29 "Placement d artillery gdf (entity)")
+-   [placement\_d\_plasmamortar\_strogg](Placement_d_plasmamortar_strogg_%28entity%29 "Placement d plasmamortar strogg (entity)")
+-   [placement\_d\_psiradar\_strogg](Placement_d_psiradar_strogg_%28entity%29 "Placement d psiradar strogg (entity)")
+-   [placement\_d\_radar\_gdf](Placement_d_radar_gdf_%28entity%29 "Placement d radar gdf (entity)")
+-   [placement\_d\_railhowitzer\_strogg](Placement_d_railhowitzer_strogg_%28entity%29 "Placement d railhowitzer strogg (entity)")
+-   [placement\_d\_rockets\_gdf](Placement_d_rockets_gdf_%28entity%29 "Placement d rockets gdf (entity)")
+-   [placement\_d\_shield\_generator\_strogg](Placement_d_shield_generator_strogg_%28entity%29 "Placement d shield generator strogg (entity)")
+-   [placement\_d\_ssg\_strogg](Placement_d_ssg_strogg_%28entity%29 "Placement d ssg strogg (entity)")
+-   [placement\_d\_ssm\_gdf](Placement_d_ssm_gdf_%28entity%29 "Placement d ssm gdf (entity)")
+-   [placement\_d\_vampire\_gdf](Placement_d_vampire_gdf_%28entity%29 "Placement d vampire gdf (entity)")
+-   [placement\_desecrator](Placement_desecrator_%28entity%29 "Placement desecrator (entity)")
+-   [placement\_goliath](Placement_goliath_%28entity%29 "Placement goliath (entity)")
+-   [placement\_hog](Placement_hog_%28entity%29 "Placement hog (entity)")
+-   [placement\_hornet](Placement_hornet_%28entity%29 "Placement hornet (entity)")
+-   [placement\_husky](Placement_husky_%28entity%29 "Placement husky (entity)")
+-   [placement\_icarus](Placement_icarus_%28entity%29 "Placement icarus (entity)")
+-   [placement\_jotun](Placement_jotun_%28entity%29 "Placement jotun (entity)")
+-   [placement\_magog](Placement_magog_%28entity%29 "Placement magog (entity)")
+-   [placement\_mcp](Placement_mcp_%28entity%29 "Placement mcp (entity)")
+-   [placement\_platypus](Placement_platypus_%28entity%29 "Placement platypus (entity)")
+-   [placement\_player](Placement_player_%28entity%29 "Placement player (entity)")
+-   [placement\_player\_gdf](Placement_player_gdf_%28entity%29 "Placement player gdf (entity)")
+-   [placement\_player\_strogg](Placement_player_strogg_%28entity%29 "Placement player strogg (entity)")
+-   [placement\_rotator](Placement_rotator_%28entity%29 "Placement rotator (entity)")
+-   [placement\_titan](Placement_titan_%28entity%29 "Placement titan (entity)")
+-   [placement\_trojan](Placement_trojan_%28entity%29 "Placement trojan (entity)")
+-   [placement\_vehicle](Placement_vehicle_%28entity%29 "Placement vehicle (entity)")
+-   [placement\_weapon](Placement_weapon_%28entity%29 "Placement weapon (entity)")
+-   [player\_base](Player_base_%28entity%29 "Player base (entity)")
+-   [player\_edf](Player_edf_%28entity%29 "Player edf (entity)")
+-   [player\_gdf\_covertops](Player_gdf_covertops_%28entity%29 "Player gdf covertops (entity)")
+-   [player\_gdf\_engineer](Player_gdf_engineer_%28entity%29 "Player gdf engineer (entity)")
+-   [player\_gdf\_fieldops](Player_gdf_fieldops_%28entity%29 "Player gdf fieldops (entity)")
+-   [player\_gdf\_medic](Player_gdf_medic_%28entity%29 "Player gdf medic (entity)")
+-   [player\_gdf\_soldier](Player_gdf_soldier_%28entity%29 "Player gdf soldier (entity)")
+-   [player\_strogg\_aggressor](Player_strogg_aggressor_%28entity%29 "Player strogg aggressor (entity)")
+-   [player\_strogg\_constructor](Player_strogg_constructor_%28entity%29 "Player strogg constructor (entity)")
+-   [player\_strogg\_infiltrator](Player_strogg_infiltrator_%28entity%29 "Player strogg infiltrator (entity)")
+-   [player\_strogg\_oppressor](Player_strogg_oppressor_%28entity%29 "Player strogg oppressor (entity)")
+-   [player\_strogg\_technician](Player_strogg_technician_%28entity%29 "Player strogg technician (entity)")
+-   [playzone\_all](Playzone_all_%28entity%29 "Playzone all (entity)")
+-   [playzone\_commandmap](Playzone_commandmap_%28entity%29 "Playzone commandmap (entity)")
+-   [playzone\_deploy](Playzone_deploy_%28entity%29 "Playzone deploy (entity)")
+-   [playzone\_marker](Playzone_marker_%28entity%29 "Playzone marker (entity)")
+-   [playzone\_path\_and\_heightmap](Playzone_path_and_heightmap_%28entity%29 "Playzone path and heightmap (entity)")
+-   [playzone\_play](Playzone_play_%28entity%29 "Playzone play (entity)")
+-   [projectile\_ammopack](Projectile_ammopack_%28entity%29 "Projectile ammopack (entity)")
+-   [projectile\_ammopack\_mega](Projectile_ammopack_mega_%28entity%29 "Projectile ammopack mega (entity)")
+-   [projectile\_anansi\_law](Projectile_anansi_law_%28entity%29 "Projectile anansi law (entity)")
+-   [projectile\_assaultrifle](Projectile_assaultrifle_%28entity%29 "Projectile assaultrifle (entity)")
+-   [projectile\_assaultrifle\_gren](Projectile_assaultrifle_gren_%28entity%29 "Projectile assaultrifle gren (entity)")
+-   [projectile\_assaultrifle\_gren\_bullet](Projectile_assaultrifle_gren_bullet_%28entity%29 "Projectile assaultrifle gren bullet (entity)")
+-   [projectile\_assaultrifle\_scoped](Projectile_assaultrifle_scoped_%28entity%29 "Projectile assaultrifle scoped (entity)")
+-   [projectile\_blaster](Projectile_blaster_%28entity%29 "Projectile blaster (entity)")
+-   [projectile\_bullet\_base](Projectile_bullet_base_%28entity%29 "Projectile bullet base (entity)")
+-   [projectile\_bullet\_base\_big](Projectile_bullet_base_big_%28entity%29 "Projectile bullet base big (entity)")
+-   [projectile\_decoy](Projectile_decoy_%28entity%29 "Projectile decoy (entity)")
+-   [projectile\_decoy\_anansi](Projectile_decoy_anansi_%28entity%29 "Projectile decoy anansi (entity)")
+-   [projectile\_decoy\_badger](Projectile_decoy_badger_%28entity%29 "Projectile decoy badger (entity)")
+-   [projectile\_decoy\_bumblebee](Projectile_decoy_bumblebee_%28entity%29 "Projectile decoy bumblebee (entity)")
+-   [projectile\_decoy\_desecrator](Projectile_decoy_desecrator_%28entity%29 "Projectile decoy desecrator (entity)")
+-   [projectile\_decoy\_goliath](Projectile_decoy_goliath_%28entity%29 "Projectile decoy goliath (entity)")
+-   [projectile\_decoy\_hog](Projectile_decoy_hog_%28entity%29 "Projectile decoy hog (entity)")
+-   [projectile\_decoy\_hornet](Projectile_decoy_hornet_%28entity%29 "Projectile decoy hornet (entity)")
+-   [projectile\_decoy\_husky](Projectile_decoy_husky_%28entity%29 "Projectile decoy husky (entity)")
+-   [projectile\_decoy\_icarus](Projectile_decoy_icarus_%28entity%29 "Projectile decoy icarus (entity)")
+-   [projectile\_decoy\_magog](Projectile_decoy_magog_%28entity%29 "Projectile decoy magog (entity)")
+-   [projectile\_decoy\_mcp](Projectile_decoy_mcp_%28entity%29 "Projectile decoy mcp (entity)")
+-   [projectile\_decoy\_platypus](Projectile_decoy_platypus_%28entity%29 "Projectile decoy platypus (entity)")
+-   [projectile\_decoy\_titan](Projectile_decoy_titan_%28entity%29 "Projectile decoy titan (entity)")
+-   [projectile\_decoy\_trojan](Projectile_decoy_trojan_%28entity%29 "Projectile decoy trojan (entity)")
+-   [projectile\_deployable\_antiarmour](Projectile_deployable_antiarmour_%28entity%29 "Projectile deployable antiarmour (entity)")
+-   [projectile\_deployable\_antiarmour\_dumb](Projectile_deployable_antiarmour_dumb_%28entity%29 "Projectile deployable antiarmour dumb (entity)")
+-   [projectile\_deployable\_antiarmour\_strogg](Projectile_deployable_antiarmour_strogg_%28entity%29 "Projectile deployable antiarmour strogg (entity)")
+-   [projectile\_deployable\_antipersonnel](Projectile_deployable_antipersonnel_%28entity%29 "Projectile deployable antipersonnel (entity)")
+-   [projectile\_deployable\_antipersonnel\_strogg](Projectile_deployable_antipersonnel_strogg_%28entity%29 "Projectile deployable antipersonnel strogg (entity)")
+-   [projectile\_deployable\_artillery](Projectile_deployable_artillery_%28entity%29 "Projectile deployable artillery (entity)")
+-   [projectile\_deployable\_artillery\_foreffect](Projectile_deployable_artillery_foreffect_%28entity%29 "Projectile deployable artillery foreffect (entity)")
+-   [projectile\_deployable\_basedefence](Projectile_deployable_basedefence_%28entity%29 "Projectile deployable basedefence (entity)")
+-   [projectile\_deployable\_basedefence\_strogg](Projectile_deployable_basedefence_strogg_%28entity%29 "Projectile deployable basedefence strogg (entity)")
+-   [projectile\_deployable\_plasmamortar](Projectile_deployable_plasmamortar_%28entity%29 "Projectile deployable plasmamortar (entity)")
+-   [projectile\_deployable\_railhowitzer](Projectile_deployable_railhowitzer_%28entity%29 "Projectile deployable railhowitzer (entity)")
+-   [projectile\_deployable\_rockets](Projectile_deployable_rockets_%28entity%29 "Projectile deployable rockets (entity)")
+-   [projectile\_deployable\_ssg](Projectile_deployable_ssg_%28entity%29 "Projectile deployable ssg (entity)")
+-   [projectile\_deployable\_ssm](Projectile_deployable_ssm_%28entity%29 "Projectile deployable ssm (entity)")
+-   [projectile\_fafff](Projectile_fafff_%28entity%29 "Projectile fafff (entity)")
+-   [projectile\_gatling](Projectile_gatling_%28entity%29 "Projectile gatling (entity)")
+-   [projectile\_gatling\_anansi](Projectile_gatling_anansi_%28entity%29 "Projectile gatling anansi (entity)")
+-   [projectile\_gatling\_bumblebee](Projectile_gatling_bumblebee_%28entity%29 "Projectile gatling bumblebee (entity)")
+-   [projectile\_gatling\_titan](Projectile_gatling_titan_%28entity%29 "Projectile gatling titan (entity)")
+-   [projectile\_gpmg](Projectile_gpmg_%28entity%29 "Projectile gpmg (entity)")
+-   [projectile\_gpmg\_aircraft](Projectile_gpmg_aircraft_%28entity%29 "Projectile gpmg aircraft (entity)")
+-   [projectile\_gpmg\_anansi](Projectile_gpmg_anansi_%28entity%29 "Projectile gpmg anansi (entity)")
+-   [projectile\_gpmg\_badger](Projectile_gpmg_badger_%28entity%29 "Projectile gpmg badger (entity)")
+-   [projectile\_gpmg\_bumblebee](Projectile_gpmg_bumblebee_%28entity%29 "Projectile gpmg bumblebee (entity)")
+-   [projectile\_gpmg\_mcp](Projectile_gpmg_mcp_%28entity%29 "Projectile gpmg mcp (entity)")
+-   [projectile\_gpmg\_mount](Projectile_gpmg_mount_%28entity%29 "Projectile gpmg mount (entity)")
+-   [projectile\_gpmg\_platypus](Projectile_gpmg_platypus_%28entity%29 "Projectile gpmg platypus (entity)")
+-   [projectile\_gpmg\_titan](Projectile_gpmg_titan_%28entity%29 "Projectile gpmg titan (entity)")
+-   [projectile\_gpmg\_trojan](Projectile_gpmg_trojan_%28entity%29 "Projectile gpmg trojan (entity)")
+-   [projectile\_gpmg\_vehicle](Projectile_gpmg_vehicle_%28entity%29 "Projectile gpmg vehicle (entity)")
+-   [projectile\_grenade](Projectile_grenade_%28entity%29 "Projectile grenade (entity)")
+-   [projectile\_grenade\_airstrike\_marker\_base](Projectile_grenade_airstrike_marker_base_%28entity%29 "Projectile grenade airstrike marker base (entity)")
+-   [projectile\_grenade\_airstrike\_marker\_gdf](Projectile_grenade_airstrike_marker_gdf_%28entity%29 "Projectile grenade airstrike marker gdf (entity)")
+-   [projectile\_grenade\_airstrike\_marker\_strogg](Projectile_grenade_airstrike_marker_strogg_%28entity%29 "Projectile grenade airstrike marker strogg (entity)")
+-   [projectile\_grenade\_emp](Projectile_grenade_emp_%28entity%29 "Projectile grenade emp (entity)")
+-   [projectile\_grenade\_emp\_roll](Projectile_grenade_emp_roll_%28entity%29 "Projectile grenade emp roll (entity)")
+-   [projectile\_grenade\_frag](Projectile_grenade_frag_%28entity%29 "Projectile grenade frag (entity)")
+-   [projectile\_grenade\_frag\_roll](Projectile_grenade_frag_roll_%28entity%29 "Projectile grenade frag roll (entity)")
+-   [projectile\_grenade\_scrambler](Projectile_grenade_scrambler_%28entity%29 "Projectile grenade scrambler (entity)")
+-   [projectile\_grenade\_scrambler\_sticky](Projectile_grenade_scrambler_sticky_%28entity%29 "Projectile grenade scrambler sticky (entity)")
+-   [projectile\_grenade\_shrap](Projectile_grenade_shrap_%28entity%29 "Projectile grenade shrap (entity)")
+-   [projectile\_grenade\_shrap\_sticky](Projectile_grenade_shrap_sticky_%28entity%29 "Projectile grenade shrap sticky (entity)")
+-   [projectile\_grenade\_smoke](Projectile_grenade_smoke_%28entity%29 "Projectile grenade smoke (entity)")
+-   [projectile\_grenade\_supply\_marker\_base](Projectile_grenade_supply_marker_base_%28entity%29 "Projectile grenade supply marker base (entity)")
+-   [projectile\_grenade\_supply\_marker\_medic](Projectile_grenade_supply_marker_medic_%28entity%29 "Projectile grenade supply marker medic (entity)")
+-   [projectile\_haw](Projectile_haw_%28entity%29 "Projectile haw (entity)")
+-   [projectile\_haw\_anansi](Projectile_haw_anansi_%28entity%29 "Projectile haw anansi (entity)")
+-   [projectile\_healthpack](Projectile_healthpack_%28entity%29 "Projectile healthpack (entity)")
+-   [projectile\_hyperblaster](Projectile_hyperblaster_%28entity%29 "Projectile hyperblaster (entity)")
+-   [projectile\_hyperblaster\_desecrator](Projectile_hyperblaster_desecrator_%28entity%29 "Projectile hyperblaster desecrator (entity)")
+-   [projectile\_hyperblaster\_hog](Projectile_hyperblaster_hog_%28entity%29 "Projectile hyperblaster hog (entity)")
+-   [projectile\_hyperblaster\_hornet](Projectile_hyperblaster_hornet_%28entity%29 "Projectile hyperblaster hornet (entity)")
+-   [projectile\_hyperblaster\_twin](Projectile_hyperblaster_twin_%28entity%29 "Projectile hyperblaster twin (entity)")
+-   [projectile\_lacerator](Projectile_lacerator_%28entity%29 "Projectile lacerator (entity)")
+-   [projectile\_lacerator\_gren](Projectile_lacerator_gren_%28entity%29 "Projectile lacerator gren (entity)")
+-   [projectile\_lacerator\_gren\_bullet](Projectile_lacerator_gren_bullet_%28entity%29 "Projectile lacerator gren bullet (entity)")
+-   [projectile\_lacerator\_scoped](Projectile_lacerator_scoped_%28entity%29 "Projectile lacerator scoped (entity)")
+-   [projectile\_landmine](Projectile_landmine_%28entity%29 "Projectile landmine (entity)")
+-   [projectile\_landmine\_strogg](Projectile_landmine_strogg_%28entity%29 "Projectile landmine strogg (entity)")
+-   [projectile\_law](Projectile_law_%28entity%29 "Projectile law (entity)")
+-   [projectile\_law\_arcing](Projectile_law_arcing_%28entity%29 "Projectile law arcing (entity)")
+-   [projectile\_machinepistol](Projectile_machinepistol_%28entity%29 "Projectile machinepistol (entity)")
+-   [projectile\_machinepistol\_silenced](Projectile_machinepistol_silenced_%28entity%29 "Projectile machinepistol silenced (entity)")
+-   [projectile\_nailgun](Projectile_nailgun_%28entity%29 "Projectile nailgun (entity)")
+-   [projectile\_obliterator](Projectile_obliterator_%28entity%29 "Projectile obliterator (entity)")
+-   [projectile\_obliterator\_arcing](Projectile_obliterator_arcing_%28entity%29 "Projectile obliterator arcing (entity)")
+-   [projectile\_obliterator\_arcing\_firesound](Projectile_obliterator_arcing_firesound_%28entity%29 "Projectile obliterator arcing firesound (entity)")
+-   [projectile\_pistol](Projectile_pistol_%28entity%29 "Projectile pistol (entity)")
+-   [projectile\_pistol\_akimbo](Projectile_pistol_akimbo_%28entity%29 "Projectile pistol akimbo (entity)")
+-   [projectile\_pistol\_akimbo\_silenced](Projectile_pistol_akimbo_silenced_%28entity%29 "Projectile pistol akimbo silenced (entity)")
+-   [projectile\_pistol\_silenced](Projectile_pistol_silenced_%28entity%29 "Projectile pistol silenced (entity)")
+-   [projectile\_plasmacannon](Projectile_plasmacannon_%28entity%29 "Projectile plasmacannon (entity)")
+-   [projectile\_plasmacannon\_desecrator](Projectile_plasmacannon_desecrator_%28entity%29 "Projectile plasmacannon desecrator (entity)")
+-   [projectile\_plasmacannon\_goliath](Projectile_plasmacannon_goliath_%28entity%29 "Projectile plasmacannon goliath (entity)")
+-   [projectile\_plasmacannon\_small](Projectile_plasmacannon_small_%28entity%29 "Projectile plasmacannon small (entity)")
+-   [projectile\_railgun](Projectile_railgun_%28entity%29 "Projectile railgun (entity)")
+-   [projectile\_railgun\_scoped](Projectile_railgun_scoped_%28entity%29 "Projectile railgun scoped (entity)")
+-   [projectile\_rocket\_base](Projectile_rocket_base_%28entity%29 "Projectile rocket base (entity)")
+-   [projectile\_sbc](Projectile_sbc_%28entity%29 "Projectile sbc (entity)")
+-   [projectile\_scud](Projectile_scud_%28entity%29 "Projectile scud (entity)")
+-   [projectile\_shotgun](Projectile_shotgun_%28entity%29 "Projectile shotgun (entity)")
+-   [projectile\_sniperrifle](Projectile_sniperrifle_%28entity%29 "Projectile sniperrifle (entity)")
+-   [projectile\_sniperrifle\_scoped](Projectile_sniperrifle_scoped_%28entity%29 "Projectile sniperrifle scoped (entity)")
+-   [projectile\_strocket](Projectile_strocket_%28entity%29 "Projectile strocket (entity)")
+-   [projectile\_stroybomb](Projectile_stroybomb_%28entity%29 "Projectile stroybomb (entity)")
+-   [projectile\_stroyentcells](Projectile_stroyentcells_%28entity%29 "Projectile stroyentcells (entity)")
+-   [projectile\_teleporter](Projectile_teleporter_%28entity%29 "Projectile teleporter (entity)")
+-   [projectile\_third\_eye](Projectile_third_eye_%28entity%29 "Projectile third eye (entity)")
+-   [projectile\_trojan\_law](Projectile_trojan_law_%28entity%29 "Projectile trojan law (entity)")
+-   [projectile\_vampire](Projectile_vampire_%28entity%29 "Projectile vampire (entity)")
+-   [projectile\_vampire\_client](Projectile_vampire_client_%28entity%29 "Projectile vampire client (entity)")
 
 ### R
 
--   radiant\_camera
--   radiant\_group
--   rainEffect
--   ram\_hog
--   round\_parachute
+-   [radiant\_camera](Radiant_camera_%28entity%29 "Radiant camera (entity)")
+-   [radiant\_group](Radiant_group_%28entity%29 "Radiant group (entity)")
+-   [rainEffect](RainEffect_%28entity%29 "RainEffect (entity)")
+-   [ram\_hog](Ram_hog_%28entity%29 "Ram hog (entity)")
+-   [round\_parachute](Round_parachute_%28entity%29 "Round parachute (entity)")
 
 ### S
 
--   scope\_binoculars
--   scope\_law
--   scope\_sniperrifle
--   snowEffect
--   spawn\_host
--   [speaker](Speaker\_(entity))
--   speaker\_assaultrifle\_test
--   speaker\_distance\_loop\_test
--   speaker\_distance\_loop\_test2
--   speaker\_distance\_test
--   speaker\_distance\_test2
--   speaker\_gpmg\_test
--   speaker\_machinepistol\_test
--   speaker\_pistol\_test
--   speaker\_shotgun\_test
--   speaker\_sniperrifle\_test
--   ssm\_barrel\_clip\_entity
--   strogg\_mining\_laser\_repaired
--   strogg\_parachute
--   strogg\_repair\_drone
--   strogg\_scarab
--   structure\_base
--   structure\_cc
--   structure\_domihub
--   structure\_gdf
--   structure\_module\_construction
--   structure\_module\_construction\_anansi
--   structure\_module\_construction\_badger
--   structure\_module\_construction\_bumblebee
--   structure\_module\_construction\_desecrator
--   structure\_module\_construction\_goliath
--   structure\_module\_construction\_hog
--   structure\_module\_construction\_hornet
--   structure\_module\_construction\_husky
--   structure\_module\_construction\_icarus
--   structure\_module\_construction\_mcp
--   structure\_module\_construction\_platypus
--   structure\_module\_construction\_titan
--   structure\_module\_construction\_trojan
--   structure\_replicator
--   structure\_replicator\_test
--   structure\_strogg
--   stuffsystem
+-   [scope\_binoculars](Scope_binoculars_%28entity%29 "Scope binoculars (entity)")
+-   [scope\_law](Scope_law_%28entity%29 "Scope law (entity)")
+-   [scope\_sniperrifle](Scope_sniperrifle_%28entity%29 "Scope sniperrifle (entity)")
+-   [snowEffect](SnowEffect_%28entity%29 "SnowEffect (entity)")
+-   [spawn\_host](Spawn_host_%28entity%29 "Spawn host (entity)")
+-   [speaker](Speaker_%28entity%29 "Speaker (entity)")
+-   [speaker\_assaultrifle\_test](Speaker_assaultrifle_test_%28entity%29 "Speaker assaultrifle test (entity)")
+-   [speaker\_distance\_loop\_test](Speaker_distance_loop_test_%28entity%29 "Speaker distance loop test (entity)")
+-   [speaker\_distance\_loop\_test2](Speaker_distance_loop_test2_%28entity%29 "Speaker distance loop test2 (entity)")
+-   [speaker\_distance\_test](Speaker_distance_test_%28entity%29 "Speaker distance test (entity)")
+-   [speaker\_distance\_test2](Speaker_distance_test2_%28entity%29 "Speaker distance test2 (entity)")
+-   [speaker\_gpmg\_test](Speaker_gpmg_test_%28entity%29 "Speaker gpmg test (entity)")
+-   [speaker\_machinepistol\_test](Speaker_machinepistol_test_%28entity%29 "Speaker machinepistol test (entity)")
+-   [speaker\_pistol\_test](Speaker_pistol_test_%28entity%29 "Speaker pistol test (entity)")
+-   [speaker\_shotgun\_test](Speaker_shotgun_test_%28entity%29 "Speaker shotgun test (entity)")
+-   [speaker\_sniperrifle\_test](Speaker_sniperrifle_test_%28entity%29 "Speaker sniperrifle test (entity)")
+-   [ssm\_barrel\_clip\_entity](Ssm_barrel_clip_entity_%28entity%29 "Ssm barrel clip entity (entity)")
+-   [strogg\_mining\_laser\_repaired](Strogg_mining_laser_repaired_%28entity%29 "Strogg mining laser repaired (entity)")
+-   [strogg\_parachute](Strogg_parachute_%28entity%29 "Strogg parachute (entity)")
+-   [strogg\_repair\_drone](Strogg_repair_drone_%28entity%29 "Strogg repair drone (entity)")
+-   [strogg\_scarab](Strogg_scarab_%28entity%29 "Strogg scarab (entity)")
+-   [structure\_base](Structure_base_%28entity%29 "Structure base (entity)")
+-   [structure\_cc](Structure_cc_%28entity%29 "Structure cc (entity)")
+-   [structure\_domihub](Structure_domihub_%28entity%29 "Structure domihub (entity)")
+-   [structure\_gdf](Structure_gdf_%28entity%29 "Structure gdf (entity)")
+-   [structure\_module\_construction](Structure_module_construction_%28entity%29 "Structure module construction (entity)")
+-   [structure\_module\_construction\_anansi](Structure_module_construction_anansi_%28entity%29 "Structure module construction anansi (entity)")
+-   [structure\_module\_construction\_badger](Structure_module_construction_badger_%28entity%29 "Structure module construction badger (entity)")
+-   [structure\_module\_construction\_bumblebee](Structure_module_construction_bumblebee_%28entity%29 "Structure module construction bumblebee (entity)")
+-   [structure\_module\_construction\_desecrator](Structure_module_construction_desecrator_%28entity%29 "Structure module construction desecrator (entity)")
+-   [structure\_module\_construction\_goliath](Structure_module_construction_goliath_%28entity%29 "Structure module construction goliath (entity)")
+-   [structure\_module\_construction\_hog](Structure_module_construction_hog_%28entity%29 "Structure module construction hog (entity)")
+-   [structure\_module\_construction\_hornet](Structure_module_construction_hornet_%28entity%29 "Structure module construction hornet (entity)")
+-   [structure\_module\_construction\_husky](Structure_module_construction_husky_%28entity%29 "Structure module construction husky (entity)")
+-   [structure\_module\_construction\_icarus](Structure_module_construction_icarus_%28entity%29 "Structure module construction icarus (entity)")
+-   [structure\_module\_construction\_mcp](Structure_module_construction_mcp_%28entity%29 "Structure module construction mcp (entity)")
+-   [structure\_module\_construction\_platypus](Structure_module_construction_platypus_%28entity%29 "Structure module construction platypus (entity)")
+-   [structure\_module\_construction\_titan](Structure_module_construction_titan_%28entity%29 "Structure module construction titan (entity)")
+-   [structure\_module\_construction\_trojan](Structure_module_construction_trojan_%28entity%29 "Structure module construction trojan (entity)")
+-   [structure\_replicator](Structure_replicator_%28entity%29 "Structure replicator (entity)")
+-   [structure\_replicator\_test](Structure_replicator_test_%28entity%29 "Structure replicator test (entity)")
+-   [structure\_strogg](Structure_strogg_%28entity%29 "Structure strogg (entity)")
+-   [stuffsystem](Stuffsystem_%28entity%29 "Stuffsystem (entity)")
 
 ### T
 
--   target\_marker
--   [target\_null](Target\_null\_(entity))
--   targetdirection\_marker
--   teh\_zappor\_beacon
--   trigger\_barbedwire
--   [trigger\_hurt](Trigger\_hurt\_(entity))
--   trigger\_hurt\_strogg\_shield
--   trigger\_hurt\_strogg\_wall
--   trigger\_mcp
--   trigger\_mcp\_bot
--   [trigger\_multiple](Trigger\_multiple\_(entity))
--   trigger\_noplant
--   trigger\_scripted
--   trigger\_tooltip
+-   [target\_marker](Target_marker_%28entity%29 "Target marker (entity)")
+-   [target\_null](Target_null_%28entity%29 "Target null (entity)")
+-   [targetdirection\_marker](Targetdirection_marker_%28entity%29 "Targetdirection marker (entity)")
+-   [teh\_zappor\_beacon](Teh_zappor_beacon_%28entity%29 "Teh zappor beacon (entity)")
+-   [trigger\_barbedwire](Trigger_barbedwire_%28entity%29 "Trigger barbedwire (entity)")
+-   [trigger\_hurt](Trigger_hurt_%28entity%29 "Trigger hurt (entity)")
+-   [trigger\_hurt\_strogg\_shield](Trigger_hurt_strogg_shield_%28entity%29 "Trigger hurt strogg shield (entity)")
+-   [trigger\_hurt\_strogg\_wall](Trigger_hurt_strogg_wall_%28entity%29 "Trigger hurt strogg wall (entity)")
+-   [trigger\_mcp](Trigger_mcp_%28entity%29 "Trigger mcp (entity)")
+-   [trigger\_mcp\_bot](Trigger_mcp_bot_%28entity%29 "Trigger mcp bot (entity)")
+-   [trigger\_multiple](Trigger_multiple_%28entity%29 "Trigger multiple (entity)")
+-   [trigger\_noplant](Trigger_noplant_%28entity%29 "Trigger noplant (entity)")
+-   [trigger\_scripted](Trigger_scripted_%28entity%29 "Trigger scripted (entity)")
+-   [trigger\_tooltip](Trigger_tooltip_%28entity%29 "Trigger tooltip (entity)")
 
 ### V
 
--   vehicle\_anansi
--   vehicle\_anansi\_cockpit
--   vehicle\_anansi\_cockpit\_gunner
--   vehicle\_badger
--   vehicle\_badger\_cockpit
--   vehicle\_badger\_cockpit\_noarms
--   vehicle\_badger\_gpmg\_cockpit
--   vehicle\_base
--   vehicle\_base\_gdf
--   vehicle\_base\_strogg
--   vehicle\_bumblebee
--   vehicle\_cargoplane
--   vehicle\_desecrator
--   vehicle\_desecrator\_cockpit\_driver
--   vehicle\_desecrator\_cockpit\_gunner
--   vehicle\_goliath
--   vehicle\_hog
--   vehicle\_hornet
--   vehicle\_hornet\_cockpit
--   vehicle\_hornet\_cockpit\_gunner
--   vehicle\_husky
--   vehicle\_icarus
--   vehicle\_icarus\_visuals
--   vehicle\_magog\_npc
--   vehicle\_mcp
--   vehicle\_mcp\_caller
--   vehicle\_platypus
--   vehicle\_route\_constraint\_controller
--   vehicle\_route\_constraint\_marker
--   vehicle\_strogg\_drop
--   vehicle\_titan
--   vehicle\_trojan
--   vehicle\_vampire
--   vehicle\_violator
--   vis\_dummy
--   vo\_manager\_base
--   volcano\_console
--   volcano\_transformer
+-   [vehicle\_anansi](Vehicle_anansi_%28entity%29 "Vehicle anansi (entity)")
+-   [vehicle\_anansi\_cockpit](Vehicle_anansi_cockpit_%28entity%29 "Vehicle anansi cockpit (entity)")
+-   [vehicle\_anansi\_cockpit\_gunner](Vehicle_anansi_cockpit_gunner_%28entity%29 "Vehicle anansi cockpit gunner (entity)")
+-   [vehicle\_badger](Vehicle_badger_%28entity%29 "Vehicle badger (entity)")
+-   [vehicle\_badger\_cockpit](Vehicle_badger_cockpit_%28entity%29 "Vehicle badger cockpit (entity)")
+-   [vehicle\_badger\_cockpit\_noarms](Vehicle_badger_cockpit_noarms_%28entity%29 "Vehicle badger cockpit noarms (entity)")
+-   [vehicle\_badger\_gpmg\_cockpit](Vehicle_badger_gpmg_cockpit_%28entity%29 "Vehicle badger gpmg cockpit (entity)")
+-   [vehicle\_base](Vehicle_base_%28entity%29 "Vehicle base (entity)")
+-   [vehicle\_base\_gdf](Vehicle_base_gdf_%28entity%29 "Vehicle base gdf (entity)")
+-   [vehicle\_base\_strogg](Vehicle_base_strogg_%28entity%29 "Vehicle base strogg (entity)")
+-   [vehicle\_bumblebee](Vehicle_bumblebee_%28entity%29 "Vehicle bumblebee (entity)")
+-   [vehicle\_cargoplane](Vehicle_cargoplane_%28entity%29 "Vehicle cargoplane (entity)")
+-   [vehicle\_desecrator](Vehicle_desecrator_%28entity%29 "Vehicle desecrator (entity)")
+-   [vehicle\_desecrator\_cockpit\_driver](Vehicle_desecrator_cockpit_driver_%28entity%29 "Vehicle desecrator cockpit driver (entity)")
+-   [vehicle\_desecrator\_cockpit\_gunner](Vehicle_desecrator_cockpit_gunner_%28entity%29 "Vehicle desecrator cockpit gunner (entity)")
+-   [vehicle\_goliath](Vehicle_goliath_%28entity%29 "Vehicle goliath (entity)")
+-   [vehicle\_hog](Vehicle_hog_%28entity%29 "Vehicle hog (entity)")
+-   [vehicle\_hornet](Vehicle_hornet_%28entity%29 "Vehicle hornet (entity)")
+-   [vehicle\_hornet\_cockpit](Vehicle_hornet_cockpit_%28entity%29 "Vehicle hornet cockpit (entity)")
+-   [vehicle\_hornet\_cockpit\_gunner](Vehicle_hornet_cockpit_gunner_%28entity%29 "Vehicle hornet cockpit gunner (entity)")
+-   [vehicle\_husky](Vehicle_husky_%28entity%29 "Vehicle husky (entity)")
+-   [vehicle\_icarus](Vehicle_icarus_%28entity%29 "Vehicle icarus (entity)")
+-   [vehicle\_icarus\_visuals](Vehicle_icarus_visuals_%28entity%29 "Vehicle icarus visuals (entity)")
+-   [vehicle\_magog\_npc](Vehicle_magog_npc_%28entity%29 "Vehicle magog npc (entity)")
+-   [vehicle\_mcp](Vehicle_mcp_%28entity%29 "Vehicle mcp (entity)")
+-   [vehicle\_mcp\_caller](Vehicle_mcp_caller_%28entity%29 "Vehicle mcp caller (entity)")
+-   [vehicle\_platypus](Vehicle_platypus_%28entity%29 "Vehicle platypus (entity)")
+-   [vehicle\_route\_constraint\_controller](Vehicle_route_constraint_controller_%28entity%29 "Vehicle route constraint controller (entity)")
+-   [vehicle\_route\_constraint\_marker](Vehicle_route_constraint_marker_%28entity%29 "Vehicle route constraint marker (entity)")
+-   [vehicle\_strogg\_drop](Vehicle_strogg_drop_%28entity%29 "Vehicle strogg drop (entity)")
+-   [vehicle\_titan](Vehicle_titan_%28entity%29 "Vehicle titan (entity)")
+-   [vehicle\_trojan](Vehicle_trojan_%28entity%29 "Vehicle trojan (entity)")
+-   [vehicle\_vampire](Vehicle_vampire_%28entity%29 "Vehicle vampire (entity)")
+-   [vehicle\_violator](Vehicle_violator_%28entity%29 "Vehicle violator (entity)")
+-   [vis\_dummy](Vis_dummy_%28entity%29 "Vis dummy (entity)")
+-   [vo\_manager\_base](Vo_manager_base_%28entity%29 "Vo manager base (entity)")
+-   [volcano\_console](Volcano_console_%28entity%29 "Volcano console (entity)")
+-   [volcano\_transformer](Volcano_transformer_%28entity%29 "Volcano transformer (entity)")
 
 ### W
 
--   waypoint\_base
--   waypoint\_info\_base
--   waypoint\_info\_gdf
--   waypoint\_info\_strogg
--   [worldspawn](Worldspawn\_(entity))
+-   [waypoint\_base](Waypoint_base_%28entity%29 "Waypoint base (entity)")
+-   [waypoint\_info\_base](Waypoint_info_base_%28entity%29 "Waypoint info base (entity)")
+-   [waypoint\_info\_gdf](Waypoint_info_gdf_%28entity%29 "Waypoint info gdf (entity)")
+-   [waypoint\_info\_strogg](Waypoint_info_strogg_%28entity%29 "Waypoint info strogg (entity)")
+-   [worldspawn](Worldspawn_%28entity%29 "Worldspawn (entity)")
 

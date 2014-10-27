@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: SetKey
-...
-SetKey (script event)
-=====================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -20,7 +12,7 @@ Sets a key on this entity's spawn args.
 Usage
 -----
 
-*void* setKey( *string* **key**, *string* **value** )
+*void* setKey( *string* **key** , *string* **value** )
 
 Parameters
 ----------
@@ -31,14 +23,18 @@ Parameters
 Examples
 --------
 
-` `
-<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`setKey`</font><font color="#000000">`(`</font><font color="#666666">`"kung"`</font>`, `<font color="#666666">`"fu"`</font><font color="#000000">`)`</font>`;`
+     
+    $my_entity.setKey("kung", "fu");
 
 Notes
 -----
 
 This script event does not return any values.
 
-Note that most spawn args are evaluated when this entity spawns in, so this will not change the entity's behavior in most cases. This is chiefly for saving data the script needs in an entity for later retrieval.
+Note that most spawn args are evaluated when this entity spawns in, so
+this will not change the entity's behavior in most cases. This is
+chiefly for saving data the script needs in an entity for later
+retrieval.
 
+\
 

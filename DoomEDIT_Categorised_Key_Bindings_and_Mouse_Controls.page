@@ -1,114 +1,582 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: DoomEDIT_Categorised_Key_Bindings_and_Mouse_Controls.page
-...
-DoomEDIT Categorised Key Bindings and Mouse Controls
-====================================================
-
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                                                                                                
- Contents                                                                                                                                                                                                            
- --------                                                                                                                                                                                                            
-                                                                                                                                                                                                                     
- </div>                                                                                                                                                                                                              
- -   [<span class="tocnumber">1</span> <span class="toctext">DoomEDIT Keyboard and Mouse Bindings</span>](DoomEDIT\_Categorised\_Key\_Bindings\_and\_Mouse\_Controls#DoomEDIT\_Keyboard\_and\_Mouse\_Bindings)  
-     -   [<span class="tocnumber">1.1</span> <span class="toctext">General Usage</span>](DoomEDIT\_Categorised\_Key\_Bindings\_and\_Mouse\_Controls#General\_Usage)                                             
-     -   [<span class="tocnumber">1.2</span> <span class="toctext">Inspector Box</span>](DoomEDIT\_Categorised\_Key\_Bindings\_and\_Mouse\_Controls#Inspector\_Box)                                             
-     -   [<span class="tocnumber">1.3</span> <span class="toctext">3D Viewport Controls</span>](DoomEDIT\_Categorised\_Key\_Bindings\_and\_Mouse\_Controls#3D\_Viewport\_Controls)                              
-         -   [<span class="tocnumber">1.3.1</span> <span class="toctext">Mouse Control (Inside 3D)</span>](DoomEDIT\_Categorised\_Key\_Bindings\_and\_Mouse\_Controls#Mouse\_Control\_.28Inside\_3D.29)         
-     -   [<span class="tocnumber">1.4</span> <span class="toctext">2D Viewport Controls</span>](DoomEDIT\_Categorised\_Key\_Bindings\_and\_Mouse\_Controls#2D\_Viewport\_Controls)                              
-         -   [<span class="tocnumber">1.4.1</span> <span class="toctext">Mouse Control (Inside 2D)</span>](DoomEDIT\_Categorised\_Key\_Bindings\_and\_Mouse\_Controls#Mouse\_Control\_.28Inside\_2D.29)         
-     -   [<span class="tocnumber">1.5</span> <span class="toctext">Texture Manipulation</span>](DoomEDIT\_Categorised\_Key\_Bindings\_and\_Mouse\_Controls#Texture\_Manipulation)                               
-     -   [<span class="tocnumber">1.6</span> <span class="toctext">Patch Manipulation</span>](DoomEDIT\_Categorised\_Key\_Bindings\_and\_Mouse\_Controls#Patch\_Manipulation)                                   
-     -   [<span class="tocnumber">1.7</span> <span class="toctext">Brush Manipulation</span>](DoomEDIT\_Categorised\_Key\_Bindings\_and\_Mouse\_Controls#Brush\_Manipulation)                                   
-     -   [<span class="tocnumber">1.8</span> <span class="toctext">Entity Manipulation</span>](DoomEDIT\_Categorised\_Key\_Bindings\_and\_Mouse\_Controls#Entity\_Manipulation)                                 
-     -   [<span class="tocnumber">1.9</span> <span class="toctext">General Brush & Entity Controls</span>](DoomEDIT\_Categorised\_Key\_Bindings\_and\_Mouse\_Controls#General\_Brush\_.26\_Entity\_Controls)    
- -   [<span class="tocnumber">2</span> <span class="toctext">Offline Downloadable Version</span>](DoomEDIT\_Categorised\_Key\_Bindings\_and\_Mouse\_Controls#Offline\_Downloadable\_Version)                    |
-
 DoomEDIT Keyboard and Mouse Bindings
 ------------------------------------
 
 ### General Usage
 
-: {| style="width: 75%" | style="width: 30%" | | style="width: 20%" | | style="width: 50%" | |- | Show Game | **F2** | Switches to Game <sup>\*</sup> |- | Preferences | **P** | Opens the Preferences Window |- | Light Properties | **J** | Open light editor window |- | File Open | **Ctrl+O** | Opens the File Open box |- | File Save | **Ctrl+S** | Saves the map |- | Next Leak Spot | **Ctrl+Shift+K** | Go to the next point in the leak trace |- | Leak Spot | **Ctrl+Shift+L** | Go to the previous point in the leak trace |}
+  ------------------------ ------------------------ ------------------------
+                                                    
 
-<sup>\*\\ Use\\ Alt+Tab\\ to\\ switch\\ back\\ to\\ the\\ editor.</sup>
+  Show Game                **F2**                   Switches to Game ^\*^
+
+  Preferences              **P**                    Opens the Preferences
+                                                    Window
+
+  Light Properties         **J**                    Open light editor window
+
+  File Open                **Ctrl+O**               Opens the File Open box
+
+  File Save                **Ctrl+S**               Saves the map
+
+  Next Leak Spot           **Ctrl+Shift+K**         Go to the next point in
+                                                    the leak trace
+
+  Leak Spot                **Ctrl+Shift+L**         Go to the previous point
+                                                    in the leak trace
+  ------------------------ ------------------------ ------------------------
+
+^\*\\ Use\\ Alt+Tab\\ to\\ switch\\ back\\ to\\ the\\ editor.^
 
 ### Inspector Box
 
-: {| style="width: 75%" | style="width: 30%" | | style="width: 20%" | | style="width: 50%" | |- | View Entity Info | **N** | Selects the Entity tab |- | View Console | **O** | Selects the Console tab |- | View Textures | **T** | Selects the Textures tab |- | Media Browser | **M** | Selects the Media tab |- | Layers | **L** | Selects the Group |- | Show All Textures | **Ctrl+A** | Show all textures in the texture window<sup>\*</sup> |}
+  ------------------------ ------------------------ ------------------------
+                                                    
 
-<sup>\*\\ Shows\\ all\\ textures\\ as\\ opposed\\ to\\ just\\ those\\ textures\\ in\\ use.</sup>
+  View Entity Info         **N**                    Selects the Entity tab
+
+  View Console             **O**                    Selects the Console tab
+
+  View Textures            **T**                    Selects the Textures tab
+
+  Media Browser            **M**                    Selects the Media tab
+
+  Layers                   **L**                    Selects the Group
+
+  Show All Textures        **Ctrl+A**               Show all textures in the
+                                                    texture window ^\*^
+  ------------------------ ------------------------ ------------------------
+
+^\*\\ Shows\\ all\\ textures\\ as\\ opposed\\ to\\ just\\ those\\ textures\\ in\\ use.^
 
 ### 3D Viewport Controls
 
-: {| style="width: 75%" | style="width: 30%" | | style="width: 20%" | | style="width: 50%" | |- | Camera Forward | **Up** | Moves the camera forward |- | Camera Back | **Down** | Moves the camera backwards |- | Camera Left | **Left** | Rotates the camera left |- | Camera Right | **Right** | Rotates the camera right |- | Camera Up | **D** | Moves the camera up |- | Camera Down | **C** | Moves the camera down |- | Camera Angle Up | **A** | Pitches the camera up |- | Camera Angle Down | **Z** | Pitches the camera down |- | Camera Strafe Right | **Period** | Moves the camera right |- | Camera Strafe Left | **Comma** | Moves the camera left |- | Centre View | '''End ''' | Centre the view horizontally |- | Up Floor | **PgUp** | Move the camera up to the brush above |- | Down Floor | **PgDn** | Move the camera down to the brush below |- | | | |- | Toggle Selections | **F8** | Toggles Select Mode <sup>\*</sup> |- | Rebuild Render Data | **F7** | Rebuilds Render Data <sup>\*\*</sup> |- | Toggle Render Animation | **F6** | Toggles material animations <sup>\*\*</sup> |- | Toggle Entity Outlines | **F5** | Toggles entity bounding boxes <sup>\*\*</sup> |- | Toggle Realtime Render Build | **F4** | Rebuilds Render Data automatically |- | Toggle Render Mode | **F3** | Toggles Render Mode |- | | | |- | Show Clip | **Ctrl+L** | Toggle showing clip brushes |- | Toggle Show Patches | **Ctrl+P** | Toggle showing patches |- | Toggle Cubic Clip | **Ctrl+\\** | Toggle cubic clipping on and off <sup>\*\*\*</sup> |- | Cubic Clip Zoom Out | **Ctrl+[** | Extend the cubic clipping draw distance |- | Cubic Clip Zoom In | **Ctrl+]** | Bring in the draw distance |- | Toggle Camera | **Ctrl+Shift+C** | Show or hide the camera window |}
+  ------------------------ ------------------------ ------------------------
+                                                    
 
-<sup>\*\\ Does\\ not\\ work.</sup>
-<sup>\*\*\\ Render\\ mode\\ must\\ be\\ enabled.</sup>
-<sup>\*\*\*\\ Restricts\\ draw\\ distance\\ in\\ improve\\ performance.</sup>
+  Camera Forward           **Up**                   Moves the camera forward
+
+  Camera Back              **Down**                 Moves the camera
+                                                    backwards
+
+  Camera Left              **Left**                 Rotates the camera left
+
+  Camera Right             **Right**                Rotates the camera right
+
+  Camera Up                **D**                    Moves the camera up
+
+  Camera Down              **C**                    Moves the camera down
+
+  Camera Angle Up          **A**                    Pitches the camera up
+
+  Camera Angle Down        **Z**                    Pitches the camera down
+
+  Camera Strafe Right      **Period**               Moves the camera right
+
+  Camera Strafe Left       **Comma**                Moves the camera left
+
+  Centre View              **End**                  Centre the view
+                                                    horizontally
+
+  Up Floor                 **PgUp**                 Move the camera up to
+                                                    the brush above
+
+  Down Floor               **PgDn**                 Move the camera down to
+                                                    the brush below
+
+                                                    
+
+  Toggle Selections        **F8**                   Toggles Select Mode ^\*^
+
+  Rebuild Render Data      **F7**                   Rebuilds Render Data
+                                                    ^\*\*^
+
+  Toggle Render Animation  **F6**                   Toggles material
+                                                    animations ^\*\*^
+
+  Toggle Entity Outlines   **F5**                   Toggles entity bounding
+                                                    boxes ^\*\*^
+
+  Toggle Realtime Render   **F4**                   Rebuilds Render Data
+  Build                                             automatically
+
+  Toggle Render Mode       **F3**                   Toggles Render Mode
+
+                                                    
+
+  Show Clip                **Ctrl+L**               Toggle showing clip
+                                                    brushes
+
+  Toggle Show Patches      **Ctrl+P**               Toggle showing patches
+
+  Toggle Cubic Clip        **Ctrl+\\**              Toggle cubic clipping on
+                                                    and off ^\*\*\*^
+
+  Cubic Clip Zoom Out      **Ctrl+[**               Extend the cubic
+                                                    clipping draw distance
+
+  Cubic Clip Zoom In       **Ctrl+]**               Bring in the draw
+                                                    distance
+
+  Toggle Camera            **Ctrl+Shift+C**         Show or hide the camera
+                                                    window
+  ------------------------ ------------------------ ------------------------
+
+^\*\\ Does\\ not\\ work.^\
+ ^\*\*\\ Render\\ mode\\ must\\ be\\ enabled.^\
+ ^\*\*\*\\ Restricts\\ draw\\ distance\\ in\\ improve\\ performance.^\
 
 #### Mouse Control (Inside 3D)
 
-: {| style="width: 75%" | style="width: 30%" | | style="width: 20%" | | style="width: 50%" | |- | Camera Dolly/Rotation | **RMB Drag** | Controls the camera position and orientation <sup>\*</sup> |- | Camera Elevation/Pan | **Ctrl+RMB Drag** | Controls the camera position <sup>\*\*</sup> |- | Copy Texture | **MMB** | Copies a texture to the selected brush |- | Tile Texture | **Ctrl+MMB** | Copies a texture FROM the selected brush <sup>\*\*\*</sup> |}
+  ------------------------ ------------------------ ------------------------
+                                                    
 
-<sup>\*\\ Movement\\ and/or\\ rotation\\ is\\ relative\\ to\\ the\\ position\\ of\\ the\\ cursor\\ in\\ relation\\ to\\ the\\ center\\ of\\ the\\ 3D\\ viewport.</sup>
-<sup>\*\*\\ Movement\\ is\\ relative\\ to\\ the\\ position\\ of\\ the\\ cursor\\ in\\ relation\\ to\\ the\\ center\\ of\\ the\\ of\\ the\\ 3D\\ viewport.\</sub\>
-<sup>\*\*\*\\\\ Texture\\\\ is\\\\ aligned\\\\ and\\\\ scaled\\\\ in\\\\ relation\\\\ to\\\\ the\\\\ sampled\\\\ brush.</sup>
-</sup>
+  Camera Dolly/Rotation    **RMB Drag**             Controls the camera
+                                                    position and orientation
+                                                    ^\*^
+
+  Camera Elevation/Pan     **Ctrl+RMB Drag**        Controls the camera
+                                                    position ^\*\*^
+
+  Copy Texture             **MMB**                  Copies a texture to the
+                                                    selected brush
+
+  Tile Texture             **Ctrl+MMB**             Copies a texture FROM
+                                                    the selected brush
+                                                    ^\*\*\*^
+  ------------------------ ------------------------ ------------------------
+
+^\*\\ Movement\\ and/or\\ rotation\\ is\\ relative\\ to\\ the\\ position\\ of\\ the\\ cursor\\ in\\ relation\\ to\\ the\\ center\\ of\\ the\\ 3D\\ viewport.^\
+
+^\*\*\\ Movement\\ is\\ relative\\ to\\ the\\ position\\ of\\ the\\ cursor\\ in\\ relation\\ to\\ the\\ center\\ of\\ the\\ of\\ the\\ 3D\\ viewport.\</sub\>\
+\\ ^\*\*\*\\\\ Texture\\\\ is\\\\ aligned\\\\ and\\\\ scaled\\\\ in\\\\ relation\\\\ to\\\\ the\\\\ sampled\\\\ brush.^\
+^
 
 ### 2D Viewport Controls
 
-: {| style="width: 75%" | style="width: 30%" | | style="width: 20%" | | style="width: 50%" | |- | Next View | **Ctrl+Tab** | Cycle between Top, Side, and Front 2D views |- | | | |- | Copy | **Ctrl+C** | Copy the selected brush to the clipboard |- | Paste | **Ctrl+V** | Paste the brush from the clipboard |- | Undo | **Ctrl+Z** | Undo the last edit (doesn't always work) |- | Redo | **Ctrl+Y** | Redo the last undo |- | | | |- | Toggle Grid | **0** | Turn on and off the grid |- | Set Grid 0.125 | **2** | Set the grid size to 1/8 |- | Set Grid 0.25 | **3** | Set the grid size to 1/4 |- | Set Grid 0.5 | **4** | Set the grid size to 1/2 |- | Set Grid 1 | **1** | Set the grid size to 1 |- | Set Grid 2 | **2** | Set the grid size to 2 |- | Set Grid 4 | **3** | Set the grid size to 4 |- | Set Grid 8 | **4** | Set the grid size to 8 |- | Set Grid 16 | **5** | Set the grid size to 16 |- | Set Grid 32 | **6** | Set the grid size to 32 |- | Set Grid 64 | **7** | Set the grid size to 64 |- | Grid Down | **-** | Grid size down |- | Grid Up | **+** | Grid size up |- | | | |- | Zoom Out | **Insert** | Zoom Out on the grid |- | Zoom Out2 | **Home** | |- | Zoom In | **Delete** | Zoom In on the grid |- | Z Axis Zoom Out | **Ctrl+Insert** | Zoom Out on the Z grid |- | Z Axis Zoom In | **Ctrl+Delete** | Zoom In on the Z grid |- | | | |- | Toggle Crosshairs | **Shift+X** | Toggles the lime green grid crosshair |- | Toggle Size Paint | **Q** | Turn on the brush size information <sup>\*</sup> |- | Toggle Z | **Ctrl+Shift+Z** | Show or hide the Z window |}
+  ------------------------ ------------------------ ------------------------
+                                                    
 
-<sup>\*\\ Only\\ while\\ held\\ down.</sup>
+  Next View                **Ctrl+Tab**             Cycle between Top, Side,
+                                                    and Front 2D views
+
+                                                    
+
+  Copy                     **Ctrl+C**               Copy the selected brush
+                                                    to the clipboard
+
+  Paste                    **Ctrl+V**               Paste the brush from the
+                                                    clipboard
+
+  Undo                     **Ctrl+Z**               Undo the last edit
+                                                    (doesn't always work)
+
+  Redo                     **Ctrl+Y**               Redo the last undo
+
+                                                    
+
+  Toggle Grid              **0**                    Turn on and off the grid
+
+  Set Grid 0.125           **2**                    Set the grid size to 1/8
+
+  Set Grid 0.25            **3**                    Set the grid size to 1/4
+
+  Set Grid 0.5             **4**                    Set the grid size to 1/2
+
+  Set Grid 1               **1**                    Set the grid size to 1
+
+  Set Grid 2               **2**                    Set the grid size to 2
+
+  Set Grid 4               **3**                    Set the grid size to 4
+
+  Set Grid 8               **4**                    Set the grid size to 8
+
+  Set Grid 16              **5**                    Set the grid size to 16
+
+  Set Grid 32              **6**                    Set the grid size to 32
+
+  Set Grid 64              **7**                    Set the grid size to 64
+
+  Grid Down                **-**                    Grid size down
+
+  Grid Up                  **+**                    Grid size up
+
+                                                    
+
+  Zoom Out                 **Insert**               Zoom Out on the grid
+
+  Zoom Out2                **Home**                 
+
+  Zoom In                  **Delete**               Zoom In on the grid
+
+  Z Axis Zoom Out          **Ctrl+Insert**          Zoom Out on the Z grid
+
+  Z Axis Zoom In           **Ctrl+Delete**          Zoom In on the Z grid
+
+                                                    
+
+  Toggle Crosshairs        **Shift+X**              Toggles the lime green
+                                                    grid crosshair
+
+  Toggle Size Paint        **Q**                    Turn on the brush size
+                                                    information ^\*^
+
+  Toggle Z                 **Ctrl+Shift+Z**         Show or hide the Z
+                                                    window
+  ------------------------ ------------------------ ------------------------
+
+^\*\\ Only\\ while\\ held\\ down.^
 
 #### Mouse Control (Inside 2D)
 
-: {| style="width: 75%" | style="width: 30%" | | style="width: 20%" | | style="width: 50%" | |- | Entity Menu | **RMB** | Opens the entity roll-out in the 2D viewport |- | Rotate Camera | **MMB** | Points the camera at the cursors location |- | Move Camera | **Ctrl+MMB Click/Drag** | Snaps/moves the camera with the cursor |- | Move Z Axis Marker | **Shift+MMB** | Snaps/moves the Z axis marker<sup>\*</sup> |- | Select Brush/Entity | **Shift+LMB** | Selects brushes and entities in both viewports |- | Create Brush | **LMB Drag** | Drags out a basic brush in the 2D viewport |- | Pan Viewport | **RMB Drag** | Pans the 2D viewport around |- | Zoom Viewport | **Scroll Wheel or Alt+Right Mouse Drag** | Zooms in and out of the viewport |- | Shear Brush | **Ctrl+Left Mouse Drag** | Shear/skews the selected brush |}
+  ------------------------ ------------------------ ------------------------
+                                                    
 
-<sup>\*</sup> This controls where in the map is displayed in the Z-axis viewport
+  Entity Menu              **RMB**                  Opens the entity
+                                                    roll-out in the 2D
+                                                    viewport
+
+  Rotate Camera            **MMB**                  Points the camera at the
+                                                    cursors location
+
+  Move Camera              **Ctrl+MMB Click/Drag**  Snaps/moves the camera
+                                                    with the cursor
+
+  Move Z Axis Marker       **Shift+MMB**            Snaps/moves the Z axis
+                                                    marker ^\*^
+
+  Select Brush/Entity      **Shift+LMB**            Selects brushes and
+                                                    entities in both
+                                                    viewports
+
+  Create Brush             **LMB Drag**             Drags out a basic brush
+                                                    in the 2D viewport
+
+  Pan Viewport             **RMB Drag**             Pans the 2D viewport
+                                                    around
+
+  Zoom Viewport            **Scroll Wheel or        Zooms in and out of the
+                           Alt+Right Mouse Drag**   viewport
+
+  Shear Brush              **Ctrl+Left Mouse Drag** Shear/skews the selected
+                                                    brush
+  ------------------------ ------------------------ ------------------------
+
+^\*^ This controls where in the map is displayed in the Z-axis viewport
 
 ### Texture Manipulation
 
-: {| style="width: 75%" | style="width: 30%" | | style="width: 20%" | | style="width: 50%" | |- | Find Replace Textures | **Shift+F** | Open the Find Replace Textures window |- | | | |- | Axial Texture By Height | **U** | Sets the vertical texture scale to width/height of the face |- | Axial Texture By Width | **Ctrl+U** | Sets the horizontal texture scale to height/width of the face |- | Axial Texture Arbitrary | **Shift+U** | Switches to Axial Texture mode <sup>\*</sup> |- | | | |- | Invert Texture Y | **Shift+I** | Invert the texture T coordinate |- | Texture Fit | **Shift+5** | Scales the texture so it fits exactly the size of the face |- | Tex Rotate Clock | **Shift+PgDn** | Rotate the texture clockwise 45 degrees |- | Tex Rotate Counter | **Shift+PgUp** | Rotate the texture counter-clockwise 45 degrees |- | Tex Shift Left | **Shift+Left** | Shift the texture to the left 1 unit |- | Tex Shift Right | **Shift+Right** | Shift the texture to the right 1 unit |- | Tex Shift Up | **Shift+Up** | Shift the texture up 1 unit |- | Tex Shift Down | **Shift+Down** | Shift the texture down 1 unit |- | | | |- | Tog Tex Lock | **Shift+T** | Toggles texture lock <sup>\*\*</sup> |- | Auto Caulk | **Ctrl+Shift+A** | Caulks a lot of unseen automagically |- | Surface Inspector | **S** | Open the Surface Inspector Window |}
+  ------------------------ ------------------------ ------------------------
+                                                    
 
-<sup>\*\\ Tab\\ cycles\\ through\\ the\\ points.\\ U\\ sets\\ the\\ vertical\\ texture\\ scale\\ to\\ the\\ axis/height.</sup>
-<sup>\*\*\\ When\\ textures\\ are\\ locked,\\ they\\ don't\\ move\\ when\\ the\\ brush\\ moves.\\ This\\ is\\ sometimes\\ called\\ Naturally\\ Aligned\\ Textures.</sup>
+  Find Replace Textures    **Shift+F**              Open the Find Replace
+                                                    Textures window
+
+                                                    
+
+  Axial Texture By Height  **U**                    Sets the vertical
+                                                    texture scale to
+                                                    width/height of the face
+
+  Axial Texture By Width   **Ctrl+U**               Sets the horizontal
+                                                    texture scale to
+                                                    height/width of the face
+
+  Axial Texture Arbitrary  **Shift+U**              Switches to Axial
+                                                    Texture mode ^\*^
+
+                                                    
+
+  Invert Texture Y         **Shift+I**              Invert the texture T
+                                                    coordinate
+
+  Texture Fit              **Shift+5**              Scales the texture so it
+                                                    fits exactly the size of
+                                                    the face
+
+  Tex Rotate Clock         **Shift+PgDn**           Rotate the texture
+                                                    clockwise 45 degrees
+
+  Tex Rotate Counter       **Shift+PgUp**           Rotate the texture
+                                                    counter-clockwise 45
+                                                    degrees
+
+  Tex Shift Left           **Shift+Left**           Shift the texture to the
+                                                    left 1 unit
+
+  Tex Shift Right          **Shift+Right**          Shift the texture to the
+                                                    right 1 unit
+
+  Tex Shift Up             **Shift+Up**             Shift the texture up 1
+                                                    unit
+
+  Tex Shift Down           **Shift+Down**           Shift the texture down 1
+                                                    unit
+
+                                                    
+
+  Tog Tex Lock             **Shift+T**              Toggles texture lock
+                                                    ^\*\*^
+
+  Auto Caulk               **Ctrl+Shift+A**         Caulks a lot of unseen
+                                                    automagically
+
+  Surface Inspector        **S**                    Open the Surface
+                                                    Inspector Window
+  ------------------------ ------------------------ ------------------------
+
+^\*\\ Tab\\ cycles\\ through\\ the\\ points.\\ U\\ sets\\ the\\ vertical\\ texture\\ scale\\ to\\ the\\ axis/height.^\
+
+^\*\*\\ When\\ textures\\ are\\ locked,\\ they\\ don't\\ move\\ when\\ the\\ brush\\ moves.\\ This\\ is\\ sometimes\\ called\\ Naturally\\ Aligned\\ Textures.^\
 
 ### Patch Manipulation
 
-: {| style="width: 75%" | style="width: 30%" | | style="width: 20%" | | style="width: 50%" | |- | Bend Mode | **B** | Toggles patch bend mode |- | Thicken Patch | **Ctrl+T** | Adds a back (and optionally sides) to the patch <sup>\*</sup> |- | Make Overlay Patch | **Y** | Always draw control points for the selected patches |- | Clear Patch Overlays | **Shift+Y** | Turn off overlays for all patches |- | Patch Inspector | **Shift+S** | Open the patch inspector window |- | Cap Current Curve | **Shift+C** | Puts an end cap on the selected patch mesh |- | Cycle Cap Texturing Alt | **Shift+P** | Cycle through the different methods of texturing the cap |- | Cycle Cap Texturing Alt | **Ctrl+Shift+P** | |- | Redisperse Rows | **Ctrl+E** | Evenly spread the rows across the mesh |- | Redisperse Cols | **Ctrl+Shift+E** | Evenly spread the columns across the mesh |- | Make Detail | **Ctrl+Shift+M** | Curve Matrix |- | Invert Curve | **Ctrl+I** | Flip the normals for the mesh <sup>\*\*</sup> |- | Insert Patch Column | **Ctrl+Shift++** | Inserts a column into the patch |- | Insert Patch Row | **Ctrl++** | Inserts a row into the patch |- | Delete Patch Column | **Ctrl+Shift+-** | Removes a column from the patch |- | Delete Patch Row | **Ctrl+-** | Removes a row from the patch |- | Patch TAB | **Tab** | Cycles through various component selections <sup>\*\*\*</sup> |- | Patch TAB | **Shift+Tab** | |- | Naturalize Patch | **Ctrl+N** | Texture the patch using the "natural" method |- | Naturalize Patch Alt | **Shift+N** | Texture the patch using an alternate "natural" method |- | Snap Patch To Grid | **Ctrl+G** | Snap control points for the mesh to the current grid |}
+  ------------------------ ------------------------ ------------------------
+                                                    
 
-<sup>\*\\ A\\ thickness\\ greater\\ than\\ zero\\ will\\ produce\\ sides.</sup>
-<sup>\*\*\\ The\\ front\\ becomes\\ the\\ back.</sup>
-<sup>\*\*\*\\ In\\ patch\\ bend\\ mode,\\ cycle\\ through\\ the\\ various\\ bend\\ axis.\\ In\\ patch\\ insert\\ mode,\\ cycle\\ through\\ the\\ different\\ insert\\ locations.\\ In\\ axial\\ mode,\\ cycle\\ through\\ the\\ different\\ axis.\\ Otherwise,\\ cycle\\ through\\ the\\ different\\ objects\\ in\\ a\\ func\_group</sup>
+  Bend Mode                **B**                    Toggles patch bend mode
+
+  Thicken Patch            **Ctrl+T**               Adds a back (and
+                                                    optionally sides) to the
+                                                    patch ^\*^
+
+  Make Overlay Patch       **Y**                    Always draw control
+                                                    points for the selected
+                                                    patches
+
+  Clear Patch Overlays     **Shift+Y**              Turn off overlays for
+                                                    all patches
+
+  Patch Inspector          **Shift+S**              Open the patch inspector
+                                                    window
+
+  Cap Current Curve        **Shift+C**              Puts an end cap on the
+                                                    selected patch mesh
+
+  Cycle Cap Texturing Alt  **Shift+P**              Cycle through the
+                                                    different methods of
+                                                    texturing the cap
+
+  Cycle Cap Texturing Alt  **Ctrl+Shift+P**         
+
+  Redisperse Rows          **Ctrl+E**               Evenly spread the rows
+                                                    across the mesh
+
+  Redisperse Cols          **Ctrl+Shift+E**         Evenly spread the
+                                                    columns across the mesh
+
+  Make Detail              **Ctrl+Shift+M**         Curve Matrix
+
+  Invert Curve             **Ctrl+I**               Flip the normals for the
+                                                    mesh ^\*\*^
+
+  Insert Patch Column      **Ctrl+Shift++**         Inserts a column into
+                                                    the patch
+
+  Insert Patch Row         **Ctrl++**               Inserts a row into the
+                                                    patch
+
+  Delete Patch Column      **Ctrl+Shift+-**         Removes a column from
+                                                    the patch
+
+  Delete Patch Row         **Ctrl+-**               Removes a row from the
+                                                    patch
+
+  Patch TAB                **Tab**                  Cycles through various
+                                                    component selections
+                                                    ^\*\*\*^
+
+  Patch TAB                **Shift+Tab**            
+
+  Naturalize Patch         **Ctrl+N**               Texture the patch using
+                                                    the "natural" method
+
+  Naturalize Patch Alt     **Shift+N**              Texture the patch using
+                                                    an alternate "natural"
+                                                    method
+
+  Snap Patch To Grid       **Ctrl+G**               Snap control points for
+                                                    the mesh to the current
+                                                    grid
+  ------------------------ ------------------------ ------------------------
+
+^\*\\ A\\ thickness\\ greater\\ than\\ zero\\ will\\ produce\\ sides.^\
+ ^\*\*\\ The\\ front\\ becomes\\ the\\ back.^\
+
+^\*\*\*\\ In\\ patch\\ bend\\ mode,\\ cycle\\ through\\ the\\ various\\ bend\\ axis.\\ In\\ patch\\ insert\\ mode,\\ cycle\\ through\\ the\\ different\\ insert\\ locations.\\ In\\ axial\\ mode,\\ cycle\\ through\\ the\\ different\\ axis.\\ Otherwise,\\ cycle\\ through\\ the\\ different\\ objects\\ in\\ a\\ func\_group^\
 
 ### Brush Manipulation
 
-: {| style="width: 75%" | style="width: 30%" | | style="width: 20%" | | style="width: 50%" | |- | Toggle Move Only | **W** | Disable brush resizing <sup>\*</sup> |- | | | |- | Brush 3 Sided | **Ctrl+3** | Turn the selected brush into a triangle |- | Brush 4 Sided | **Ctrl+4** | Turn the selected brush into a cube |- | Brush 5 Sided | **Ctrl+5** | Turn the selected brush into a pentagon |- | Brush 6 Sided | **Ctrl+6** | Turn the selected brush into a hexagon |- | Brush 7 Sided | **Ctrl+7** | Turn the selected brush into a heptagon |- | Brush 8 Sided | **Ctrl+8** | Turn the selected brush into an octagon |- | Brush 9 Sided | **Ctrl+9** | Turn the selected brush into a nonagon |- | | | |- | Toggle Clipper | **X** | Toggle the clipper |- | Clip Selected | **Enter** | Clip the selected brush <sup>\*\*</sup> |- | Flip Clip | **Ctrl+Enter** | Clip the selected brush <sup>\*\*\*</sup> |- | Split Selected | **Shift+Enter** | Split the selected brush <sup>\*\*\*\*</sup> |- | Move Selection DOWN | **-** | Move the selected brush down 1 grid unit on the Z |- | Move Selection UP | **+** | Move the selected brush up 1 grid unit on the Z |- | Selection Nudge Left | **Alt+Left** | Move the selected brush left 1 unit <sup>\*\*\*\*\*</sup> |- | Selection Nudge Right | **Alt+Right** | Move the selected brush right 1 unit <sup>\*\*\*\*\*</sup> |- | Selection Nudge Up | **Alt+Up** | Move the selected brush up 1 unit <sup>\*\*\*\*\*</sup> |- | Selection Nudge Down | **Alt+Down** | Move the selected brush down 1 unit <sup>\*\*\*\*\*</sup> |- | | | |- | CSG Merge | **Shift+M** | Merges multiple brushes into one brush <sup>\*\*\*\*\*\*</sup> |- | | | |- | Drag Edges | **E** | Toggle edge drag mode for dragging brush edges |- | Drag Vertices | **V** | Toggle vertex drag mode for dragging brush vertices |- | Dump Selected Brush | **Shift+D** | Print the faces for the selected brush to the console |}
+  ------------------------ ------------------------ ------------------------
+                                                    
 
-<sup>\*\\ Dragging\\ will\\ move\\ as\\ opposed\\ to\\ resize.</sup>
-<sup>\*\*\\ Disguards\\ the\\ clipped\\ portion.</sup>
-<sup>\*\*\*\\ Disguards\\ the\\ unclipped\\ portion.</sup>
-<sup>\*\*\*\*\\ Disguards\\ neither\\ portion.</sup>
-<sup>\*\*\*\*\*\\ Not\\ 1\\ grid\\ unit.</sup>
-<sup>\*\*\*\*\*\*\\ Both\\ brushes\\ must\\ share\\ a\\ matching\\ face.</sup>
+  Toggle Move Only         **W**                    Disable brush resizing
+                                                    ^\*^
+
+                                                    
+
+  Brush 3 Sided            **Ctrl+3**               Turn the selected brush
+                                                    into a triangle
+
+  Brush 4 Sided            **Ctrl+4**               Turn the selected brush
+                                                    into a cube
+
+  Brush 5 Sided            **Ctrl+5**               Turn the selected brush
+                                                    into a pentagon
+
+  Brush 6 Sided            **Ctrl+6**               Turn the selected brush
+                                                    into a hexagon
+
+  Brush 7 Sided            **Ctrl+7**               Turn the selected brush
+                                                    into a heptagon
+
+  Brush 8 Sided            **Ctrl+8**               Turn the selected brush
+                                                    into an octagon
+
+  Brush 9 Sided            **Ctrl+9**               Turn the selected brush
+                                                    into a nonagon
+
+                                                    
+
+  Toggle Clipper           **X**                    Toggle the clipper
+
+  Clip Selected            **Enter**                Clip the selected brush
+                                                    ^\*\*^
+
+  Flip Clip                **Ctrl+Enter**           Clip the selected brush
+                                                    ^\*\*\*^
+
+  Split Selected           **Shift+Enter**          Split the selected brush
+                                                    ^\*\*\*\*^
+
+  Move Selection DOWN      **-**                    Move the selected brush
+                                                    down 1 grid unit on the
+                                                    Z
+
+  Move Selection UP        **+**                    Move the selected brush
+                                                    up 1 grid unit on the Z
+
+  Selection Nudge Left     **Alt+Left**             Move the selected brush
+                                                    left 1 unit ^\*\*\*\*\*^
+
+  Selection Nudge Right    **Alt+Right**            Move the selected brush
+                                                    right 1 unit
+                                                    ^\*\*\*\*\*^
+
+  Selection Nudge Up       **Alt+Up**               Move the selected brush
+                                                    up 1 unit ^\*\*\*\*\*^
+
+  Selection Nudge Down     **Alt+Down**             Move the selected brush
+                                                    down 1 unit ^\*\*\*\*\*^
+
+                                                    
+
+  CSG Merge                **Shift+M**              Merges multiple brushes
+                                                    into one brush
+                                                    ^\*\*\*\*\*\*^
+
+                                                    
+
+  Drag Edges               **E**                    Toggle edge drag mode
+                                                    for dragging brush edges
+
+  Drag Vertices            **V**                    Toggle vertex drag mode
+                                                    for dragging brush
+                                                    vertices
+
+  Dump Selected Brush      **Shift+D**              Print the faces for the
+                                                    selected brush to the
+                                                    console
+  ------------------------ ------------------------ ------------------------
+
+^\*\\ Dragging\\ will\\ move\\ as\\ opposed\\ to\\ resize.^\
+ ^\*\*\\ Disguards\\ the\\ clipped\\ portion.^\
+ ^\*\*\*\\ Disguards\\ the\\ unclipped\\ portion.^\
+ ^\*\*\*\*\\ Disguards\\ neither\\ portion.^\
+ ^\*\*\*\*\*\\ Not\\ 1\\ grid\\ unit.^\
+ ^\*\*\*\*\*\*\\ Both\\ brushes\\ must\\ share\\ a\\ matching\\ face.^\
 
 ### Entity Manipulation
 
-: {| style="width: 75%" | style="width: 30%" | | style="width: 20%" | | style="width: 50%" | |- | Entity Color | **K** | Open the color picker window |- | Ungroup | **Shift+G** | Turn the selected brushes back into world geometry |- | Center Origin | **Shift+O** | Set the origin of the brush entity to the actual center |- | Combine Selection | **Shift+K** | Combine a selection of brushes into a group |- | Connect Selection | **Ctrl+K** | Makes the first selected entity target the second selected entity |- | Select All Of Type | **Shift+A** | Select all entities that are the same type as the selected entity |- | Entity List | **I** | Opens the Entity List Window |- | Find Or Replace Entity | **Ctrl+F3** | Open the Find/Replace Entity Window |}
+  ------------------------ ------------------------ ------------------------
+                                                    
+
+  Entity Color             **K**                    Open the color picker
+                                                    window
+
+  Ungroup                  **Shift+G**              Turn the selected
+                                                    brushes back into world
+                                                    geometry
+
+  Center Origin            **Shift+O**              Set the origin of the
+                                                    brush entity to the
+                                                    actual center
+
+  Combine Selection        **Shift+K**              Combine a selection of
+                                                    brushes into a group
+
+  Connect Selection        **Ctrl+K**               Makes the first selected
+                                                    entity target the second
+                                                    selected entity
+
+  Select All Of Type       **Shift+A**              Select all entities that
+                                                    are the same type as the
+                                                    selected entity
+
+  Entity List              **I**                    Opens the Entity List
+                                                    Window
+
+  Find Or Replace Entity   **Ctrl+F3**              Open the Find/Replace
+                                                    Entity Window
+  ------------------------ ------------------------ ------------------------
 
 ### General Brush & Entity Controls
 
-: {| style="width: 75%" | style="width: 30%" | | style="width: 20%" | | style="width: 50%" | |- | Hide Selected | **H** | Hide the selected brushes and entities |- | Show Hidden | **Shift+H** | Show all hidden items |- | Hide Not Selected | **Ctrl+Shift+H** | Hide all brushes and entities that are not selected |- | | | |- | Clone Selection | **Space** | Duplicate the selected brushes and entities |- | Delete Selection | **Backspace** | Delete the selected brushes and entities |- | | | |- | Un Select Selection | **Escape** | Unselect anything that is selected |- | | | |- | Mouse Rotate | **R** | Toggles mouse rotate mode, which allows the arbitrary rotation of entities |- | Toggle Flat Rotation | **Ctrl+R** | Cycles through the different types of mouse rotation |- | Cycle Rotation Axis | **Shift+R** | Cycles through rotating around X, Y, and Z |}
+  ------------------------ ------------------------ ------------------------
+                                                    
+
+  Hide Selected            **H**                    Hide the selected
+                                                    brushes and entities
+
+  Show Hidden              **Shift+H**              Show all hidden items
+
+  Hide Not Selected        **Ctrl+Shift+H**         Hide all brushes and
+                                                    entities that are not
+                                                    selected
+
+                                                    
+
+  Clone Selection          **Space**                Duplicate the selected
+                                                    brushes and entities
+
+  Delete Selection         **Backspace**            Delete the selected
+                                                    brushes and entities
+
+                                                    
+
+  Un Select Selection      **Escape**               Unselect anything that
+                                                    is selected
+
+                                                    
+
+  Mouse Rotate             **R**                    Toggles mouse rotate
+                                                    mode, which allows the
+                                                    arbitrary rotation of
+                                                    entities
+
+  Toggle Flat Rotation     **Ctrl+R**               Cycles through the
+                                                    different types of mouse
+                                                    rotation
+
+  Cycle Rotation Axis      **Shift+R**              Cycles through rotating
+                                                    around X, Y, and Z
+  ------------------------ ------------------------ ------------------------
 
 Offline Downloadable Version
 ----------------------------
 
-Below you can find a PDF version of this list designed for off-line reference. The PDF is is fully bookmarked for ease of use. Right click and select 'Save As' to download.
+Below you can find a PDF version of this list designed for off-line
+reference. The PDF is is fully bookmarked for ease of use. Right click
+and select 'Save As' to download.
 
-[DoomEDIT Key Bindings and Mouse Controls V1.0.pdf](http://web.archive.org/web/20111217182243/http://www.graham-russell.co.uk/junk/DoomEDIT_Command_List.pdf)
+[DoomEDIT Key Bindings and Mouse Controls
+V1.0.pdf](https://web.archive.org/web/20111217182243/http://www.graham-russell.co.uk/junk/DoomEDIT_Command_List.pdf "http://www.graham-russell.co.uk/junk/DoomEDIT_Command_List.pdf")
 

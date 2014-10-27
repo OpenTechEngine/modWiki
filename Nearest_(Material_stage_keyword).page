@@ -1,21 +1,13 @@
----
-format: Markdown
-categories: Material_stage_keyword
-toc: yes
-title: Nearest
-...
-Nearest (Material stage keyword)
-================================
-
 Description
 -----------
 
-The **nearest** keyword defines that a nearest type of texture filtering is to be used on this stage.
+The **nearest** keyword defines that a nearest type of texture filtering
+is to be used on this stage.
 
 Usage
 -----
 
-`nearest`
+    nearest
 
 Parameters
 ----------
@@ -27,9 +19,9 @@ Example
 
 {
 
-`   nearest`
-`   map     textures/custom/foo.tga`
-`}`
+       nearest
+       map     textures/custom/foo.tga
+    }
 
 Notes
 -----

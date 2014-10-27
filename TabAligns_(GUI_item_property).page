@@ -1,28 +1,23 @@
----
-format: Markdown
-categories: GUI_item_property
-toc: yes
-title: TabAligns
-...
-TabAligns (GUI item property)
-=============================
-
 ??
 
-This property is restricted to the [listDef](ListDef\_(GUI\_item\_type)) item type.
+This property is restricted to the
+[listDef](ListDef_%28GUI_item_type%29 "ListDef (GUI item type)") item
+type.
 
 Syntax
 ------
 
-`tabAligns `*`tabs`*
+    tabAligns tabs
 
 Default value
 -------------
 
-`Unknown`
+    Unknown
 
 Example(s)
 ----------
 
-`tabAligns "0, 1, 1, 0, 0"`
+    tabAligns "0, 1, 1, 0, 0"
+
+\
 

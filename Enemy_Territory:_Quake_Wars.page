@@ -1,7 +1,127 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: Enemy_Territory:_Quake_Wars.page
-...
-TODO: import https://web.archive.org/web/20120826160314/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars
+<div style="margin-top: -3em; margin-bottom: 1em; padding-top: 1px">
+
+Welcome to ![](/images/f/f9/Etqwsquare_bg.png) modwiki.net
+
+We currently have [9,357](Special:Statistics "Special:Statistics")
+articles.
+
+</div>
+
++--------------------------------------+--------------------------------------+
+| <div                                 | <div                                 |
+| style="padding: .4em .9em .9em">     | style="padding: .4em .9em .9em;">    |
+|                                      |                                      |
+| ### Editing Categories:              | ### Featured Articles:               |
+|                                      |                                      |
+|  [Modding](Modding "Modding")        |  [How to get help](How_to_get_help " |
+| :   General information about        | How to get help")                    |
+|     producing and distributing mods  | :   A good introduction to the use   |
+|                                      |     of this wiki                     |
+|  [Coding](Coding "Coding")           |                                      |
+| :   Modification of the engine's     |  [Console](Console "Console")        |
+|     source code                      | :   Everything you need to know      |
+|                                      |     about the ET:QW engine console   |
+|  [Mapping](Mapping "Mapping")        |     -   [CVars](CVars_%28ETQW%29 "CV |
+| :   Information about level design   | ars (ETQW)")                         |
+|     and the tools                    |     -   [Commands](Commands_%28ETQW% |
+|                                      | 29 "Commands (ETQW)")                |
+|  [Modelling](Modelling "Modelling")  |                                      |
+| :   Modelling and file format        | <!-- -->                             |
+|     information                      |                                      |
+|                                      |  [Script events](Script_events_%28ET |
+|  [Texturing](Texturing "Texturing")  | QW%29 "Script events (ETQW)")        |
+| :   Explanation of material shaders  | :   ET:QW relevant script events     |
+|     and image files                  |                                      |
+|                                      |  [Startup parameters](Startup_parame |
+|  [Scripting](Scripting "Scripting")  | ters "Startup parameters")           |
+| :   Information about Scripting for  | :   Parameters you can add when      |
+|     GUIs and Levels                  |     starting ET:QW                   |
+|                                      |                                      |
+|  [Declarations](Declarations "Declar |  [Folder structure](Folder_structure |
+| ations")                             | _%28ETQW%29 "Folder structure (ETQW) |
+| :   Declarations define the          | ")                                   |
+|     properties and behavior of game  | :   An overview over the folders     |
+|     content                          |     used by ET:QW                    |
+|                                      |                                      |
+|  [Audio design](Audio_design "Audio  |  [File formats](File_formats "File f |
+| design")                             | ormats")                             |
+| :   The creation of musical tracks   | :   All the different file formats   |
+|     and sound effects                |     used by the ET:QW engine         |
+|                                      |                                      |
+| </div>                               |  [Tutorial list](Tutorial_list "Tuto |
+|                                      | rial list")                          |
+|                                      | :   An extensive list to tutorials   |
+|                                      |     on a wide range of topics        |
+|                                      |                                      |
+|                                      | </div>                               |
++--------------------------------------+--------------------------------------+
+
++--------------------------------------+--------------------------------------+
+| <div                                 | <div                                 |
+| style="padding: .4em .9em .9em">     | style="padding: .4em .9em .9em;">    |
+|                                      |                                      |
+| ### New to the site?                 | ### ET:QW game and engine:           |
+|                                      |                                      |
+| This wiki is focused on documenting  | The ET:QW engine is a modified id    |
+| the various aspects involved with    | Tech 4 engine with official support  |
+| developing assets, levels and        | for terrain MegaTextures. It also    |
+| modifications based on the [id       | features improved networking code,   |
+| Tech](Id_Tech "Id Tech") engines. If | parallax mapping, light bloom,       |
+| you're new to the site or a wiki in  | texture atlases, world instancing    |
+| general, please visit the            | and other improvements.              |
+| [about](modwiki:About "modwiki:About |                                      |
+| ")                                   | Enemy Territory: Quake Wars was      |
+| page to learn more about this        | created by [Splash                   |
+| project.                             | Damage](http://www.splashdamage.com/ |
+|                                      |  "http://www.splashdamage.com")      |
+| ### Want to help?                    | and [id                              |
+|                                      | Software](http://www.idsoftware.com/ |
+| As modwiki is a community project,   |  "http://www.idsoftware.com")        |
+| feel free to                         | and published by                     |
+| [register](Special:Userlogin "Specia | [Activision](http://www.activision.c |
+| l:Userlogin")                        | om/ "http://www.activision.com")     |
+| and join us on this great endeavor!  | . Release date for the PC version    |
+| Please check out the [style          | was September 28, 2007 in Europe and |
+| guide](modwiki:Style_guide "modwiki: | Australia and October 02, 2007 for   |
+| Style guide")                        | the US.                              |
+| for some general editing guidelines. |                                      |
+| Visit [open                          | ### System Requirements:             |
+| tasks](modwiki:Open_tasks "modwiki:O |                                      |
+| pen tasks")                          | -   Operating System: Windows        |
+| to find out which pages need help.   |     XP/Vista (Mac OSX, Linux to      |
+| You can also visit the               |     come)                            |
+| [sandbox](modwiki:Sandbox "modwiki:S | -   CPU: Pentium 4 2.8 or Athlon XP  |
+| andbox")                             |     2800+ (3.0/3000+ for Vista)      |
+| to experiment with the wiki markup   | -   Memory: 512MB (768MB for Vista)  |
+| language. To learn how to edit or    | -   Video: 128MB NVIDIA Geforce 5700 |
+| create pages, please take a look     |     or ATI Radeon 9700               |
+| [here](Help:Editing "Help:Editing")  | -   Sound: 100% DirectX 9.0c         |
+| .                                    |     compatible sound card            |
+|                                      | -   Storage: 5GB (+700MB swap)       |
+| But most importantly, if you gain    |                                      |
+| something from this resource, please | </div>                               |
+| give back.                           |                                      |
+|                                      |                                      |
+| ### High quality links:              |                                      |
+|                                      |                                      |
+| Other interesting id Tech engine     |                                      |
+| editing sites:                       |                                      |
+|                                      |                                      |
+|  [www.doom3world.org](https://web.ar |                                      |
+| chive.org/web/20121206024939/http:// |                                      |
+| www.doom3world.org/ "http://www.doom |                                      |
+| 3world.org")                         |                                      |
+| :   The premier discussion forum for |                                      |
+|     all Doom 3 engine games          |                                      |
+|                                      |                                      |
+|  [wiki.splashdamage.com](http://wiki |                                      |
+| .splashdamage.com/ "http://wiki.spla |                                      |
+| shdamage.com/")                      |                                      |
+| :   Official Splash Damage wiki for  |                                      |
+|     editing Enemy Territory: Quake   |                                      |
+|     Wars                             |                                      |
+|                                      |                                      |
+| </div>                               |                                      |
++--------------------------------------+--------------------------------------+
+
+

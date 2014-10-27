@@ -1,23 +1,15 @@
----
-format: Markdown
-categories: Material_global_keyword
-toc: yes
-title: Surfacetype14
-...
-Surfacetype14 (Material global keyword)
-=======================================
-
 Description
 -----------
 
-Flags the surface as made of *surfacetype14* to define the type of hit sound and debris.
+Flags the surface as made of *surfacetype14* to define the type of hit
+sound and debris.
 
 Usage
 -----
 
 In the global section of your material shader type...
 
-`surfacetype14`
+    surfacetype14
 
 Parameters
 ----------
@@ -27,6 +19,8 @@ None.
 Notes
 -----
 
-The material will play the snd\_surfacetype14 soundshader when shot and show mtr\_wound\_surfacetype14 as a decal.
+The material will play the snd\_surfacetype14 soundshader when shot and
+show mtr\_wound\_surfacetype14 as a decal.
 
+\
 

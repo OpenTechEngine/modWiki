@@ -1,23 +1,14 @@
----
-format: Markdown
-categories: console_command
-toc: yes
-title: ReloadDecls
-...
-ReloadDecls (console command)
-=============================
-
 Description
 -----------
 
-Reloads all [declarations](Declarations).
+Reloads all [declarations](Declarations "Declarations") .
 
 Usage
 -----
 
 At the console type...
 
-`reloadDecls`
+    reloadDecls
 
 Parameters
 ----------
@@ -27,6 +18,8 @@ Not Available.
 Notes
 -----
 
-This console command is useful when working with declaration files as it allows you to reload them to view the changes.
+This console command is useful when working with declaration files as it
+allows you to reload them to view the changes.
 
+\
 

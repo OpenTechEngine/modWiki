@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: SetName
-...
-SetName (script event)
-======================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -30,12 +22,13 @@ Parameters
 Examples
 --------
 
-` `
-<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`setName`</font><font color="#000000">`(`</font><font color="#666666">`"foo"`</font><font color="#000000">`)`</font>`;`
+     
+    $my_entity.setName("foo");
 
 Notes
 -----
 
 This script event does not return any values.
 
+\
 

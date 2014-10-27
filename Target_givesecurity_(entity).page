@@ -1,15 +1,24 @@
----
-format: Markdown
-categories: Entity
-toc: yes
-title: Target_givesecurity
-...
-Target givesecurity (entity)
-============================
+<div class="plainlinks"
+style="border: 1px grey solid; padding: 0.25em;">
 
-> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
+help by verifying and
+[completing](Target_givesecurity_%28entity%29 "http://www.modwiki.net/w/index.php?title=Target_givesecurity_%28entity%29&action=edit")
+the info on this page.*
 
-> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+</div>
+
+<div id="stub" class="boilerplate metadata">
+
+*This article is a
+[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
+. You can help us by <span class="plainlinks"> [expanding
+it](Target_givesecurity_%28entity%29 "http://www.modwiki.net/w/index.php?title=Target_givesecurity_%28entity%29&action=edit")
+</span> .*
+
+</div>
+
+\
 
 Description
 -----------
@@ -19,61 +28,62 @@ Trigger this to give a new security clearance to the player.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+The following is a list of key/value pairs, also known as spawn
+arguments, that function with this entity.\
 
-| KEY              | DESCRIPTION                                                  |
-|------------------|--------------------------------------------------------------|
-| angle            | Description not available.                                   |
-| anim             | Description not available.                                   |
-| bind             | Description not available.                                   |
-| bindOrientated   | Description not available.                                   |
-| bindToBody       | Description not available.                                   |
-| bindToJoint      | Description not available.                                   |
-| bindanim         | Description not available.                                   |
-| cameraTarget     | Description not available.                                   |
-| cinematic        | Description not available.                                   |
-| classname        | Description not available.                                   |
-| clipmodel        | Description not available.                                   |
-| cone             | Description not available.                                   |
-| cylinder         | Description not available.                                   |
-| editor\_color    | Description not available.                                   |
-| editor\_maxs     | Description not available.                                   |
-| editor\_mins     | Description not available.                                   |
-| editor\_usage    | Trigger this to give a new security clearance to the player. |
-| editor\_var XXXX | Description not available.                                   |
-| guiTarget        | Description not available.                                   |
-| health           | Description not available.                                   |
-| hide             | Description not available.                                   |
-| maxs             | Description not available.                                   |
-| mins             | Description not available.                                   |
-| model            | Description not available.                                   |
-| name             | Description not available.                                   |
-| networkSync      | Description not available.                                   |
-| neverDormant     | Description not available.                                   |
-| noGrab           | Description not available.                                   |
-| noclipmodel      | Description not available.                                   |
-| origin           | Description not available.                                   |
-| rotation         | Description not available.                                   |
-| scriptobject     | Description not available.                                   |
-| size             | Description not available.                                   |
-| skin\_xray       | Description not available.                                   |
-| slowmo           | Description not available.                                   |
-| solidForTeam     | Description not available.                                   |
-| spawnclass       | Description not available.                                   |
-| target           | Description not available.                                   |
-| text\_security   | The security clearance                                       |
+  KEY                DESCRIPTION
+  ------------------ --------------------------------------------------------------
+  angle              Description not available.
+  anim               Description not available.
+  bind               Description not available.
+  bindOrientated     Description not available.
+  bindToBody         Description not available.
+  bindToJoint        Description not available.
+  bindanim           Description not available.
+  cameraTarget       Description not available.
+  cinematic          Description not available.
+  classname          Description not available.
+  clipmodel          Description not available.
+  cone               Description not available.
+  cylinder           Description not available.
+  editor\_color      Description not available.
+  editor\_maxs       Description not available.
+  editor\_mins       Description not available.
+  editor\_usage      Trigger this to give a new security clearance to the player.
+  editor\_var XXXX   Description not available.
+  guiTarget          Description not available.
+  health             Description not available.
+  hide               Description not available.
+  maxs               Description not available.
+  mins               Description not available.
+  model              Description not available.
+  name               Description not available.
+  networkSync        Description not available.
+  neverDormant       Description not available.
+  noGrab             Description not available.
+  noclipmodel        Description not available.
+  origin             Description not available.
+  rotation           Description not available.
+  scriptobject       Description not available.
+  size               Description not available.
+  skin\_xray         Description not available.
+  slowmo             Description not available.
+  solidForTeam       Description not available.
+  spawnclass         Description not available.
+  target             Description not available.
+  text\_security     The security clearance
 
 Inheritance
 -----------
 
 This entity is derived from the following:
 
--   *[idEntity](IdEntity\_(class))*
-    -   '' idTarget''
-        -   '' idTarget\_GiveSecurity''
-            -   *' target\_givesecurity*'
+-   *[idEntity](IdEntity_%28class%29 "IdEntity (class)")*
+    -   *[idTarget](IdTarget_%28class%29 "IdTarget (class)")*
+        -   *[idTarget\_GiveSecurity](IdTarget_GiveSecurity_%28class%29 "IdTarget GiveSecurity (class)")*
+            -   **target\_givesecurity**
 
-**Note**: Entries marked in italics are classes defined in the SDK.
+**Note** : Entries marked in italics are classes defined in the SDK.
 
 Notes
 -----

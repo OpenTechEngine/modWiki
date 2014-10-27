@@ -1,21 +1,13 @@
----
-format: Markdown
-categories: Material_stage_keyword
-toc: yes
-title: Zeroclamp
-...
-Zeroclamp (Material stage keyword)
-==================================
-
 Description
 -----------
 
-The **zeroclamp** keyword prevents tiling by forcing texel values to black with 100% transparency outside normalized UV coordinates.
+The **zeroclamp** keyword prevents tiling by forcing texel values to
+black with 100% transparency outside normalized UV coordinates.
 
 Usage
 -----
 
-`zeroclamp`
+    zeroclamp
 
 Parameters
 ----------
@@ -30,10 +22,12 @@ Not available.
 Notes
 -----
 
-The stage specific version of this keyword is used to override the effects of the global keywords...
+The stage specific version of this keyword is used to override the
+effects of the global keywords...
 
--   [alphazeroclamp](Alphazeroclamp\_(Material\_global\_keyword))
--   [clamp](Clamp\_(Material\_global\_keyword))
--   [zeroclamp](Zeroclamp\_(Material\_global\_keyword))
+-   [alphazeroclamp](Alphazeroclamp_%28Material_global_keyword%29 "Alphazeroclamp (Material global keyword)")
+-   [clamp](Clamp_%28Material_global_keyword%29 "Clamp (Material global keyword)")
+-   [zeroclamp](Zeroclamp_%28Material_global_keyword%29 "Zeroclamp (Material global keyword)")
 
+\
 

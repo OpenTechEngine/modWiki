@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: CopySpawnArgs
-...
-CopySpawnArgs (script event)
-============================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -30,19 +22,22 @@ Parameters
 Examples
 --------
 
-` `
-<font color="#0000ff">`void`</font>` reverse_monster_gravity `<font color="#000000">`(`</font><font color="#0000ff">`entity`</font>` ent_mon_this`<font color="#000000">`)`</font><font color="#000000">`{`</font>
-` `
-`    `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`copySpawnArgs`</font><font color="#000000">`(`</font>`ent_mon_this`<font color="#000000">`)`</font>`; `<font color="#339900">`//copy the entity's spawn arguments`</font>
-`    `<font color="#339900">`//more code here`</font>
-` `
-<font color="#000000">`}`</font>
+     
+    void reverse_monster_gravity (entity ent_mon_this){
+     
+        sys.copySpawnArgs(ent_mon_this); //copy the entity's spawn arguments
+        //more code here
+     
+    }
 
 Notes
 -----
 
 This script event does not return any values.
 
-After using copySpawnArgs, you may need to use [setSpawnArg](SetSpawnArg\_(script\_event)) to set explicitly those spawn args which need to be changed.
+After using copySpawnArgs, you may need to use
+[setSpawnArg](SetSpawnArg_%28script_event%29 "SetSpawnArg (script event)")
+to set explicitly those spawn args which need to be changed.
 
+\
 

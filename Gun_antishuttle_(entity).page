@@ -1,15 +1,24 @@
----
-format: Markdown
-categories: Entity
-toc: yes
-title: Gun_antishuttle
-...
-Gun antishuttle (entity)
-========================
+<div class="plainlinks"
+style="border: 1px grey solid; padding: 0.25em;">
 
-> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
+help by verifying and
+[completing](Gun_antishuttle_%28entity%29 "http://modwiki.net/w/index.php?title=Gun_antishuttle_%28entity%29&action=edit")
+the info on this page.*
 
-> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+</div>
+
+<div id="stub" class="boilerplate metadata">
+
+*This article is a
+[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
+. You can help us by <span class="plainlinks"> [expanding
+it](Gun_antishuttle_%28entity%29 "http://modwiki.net/w/index.php?title=Gun_antishuttle_%28entity%29&action=edit")
+</span> .*
+
+</div>
+
+\
 
 Description
 -----------
@@ -19,54 +28,55 @@ Generic gun - trigger to enable.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+The following is a list of key/value pairs, also known as spawn
+arguments, that function with this entity.\
 
-| KEY                | DESCRIPTION                                           |
-|--------------------|-------------------------------------------------------|
-| burstRate          | Description not available.                            |
-| burstrate          | Time between bursts (in seconds)                      |
-| bursts             | Number of bursts in each fire                         |
-| coneAngle          | angle (in degrees) relative to forward to fire within |
-| def\_debrisspawner | Description not available.                            |
-| def\_projectile    | Description not available.                            |
-| editor\_bool XXXX  | Description not available.                            |
-| editor\_color      | Description not available.                            |
-| editor\_maxs       | Description not available.                            |
-| editor\_mins       | Description not available.                            |
-| editor\_usage      | Generic gun - trigger to enable.                      |
-| editor\_usage2     | Description not available.                            |
-| editor\_usage3     | Description not available.                            |
-| editor\_var XXXX   | Description not available.                            |
-| enabled            | Description not available.                            |
-| fireDeviation      | Description not available.                            |
-| fireRate           | Description not available.                            |
-| firedeviation      | Random deviation from firerate                        |
-| firerate           | Time between firings (in seconds)                     |
-| health             | health amount                                         |
-| immunity           | Description not available.                            |
-| inherit            | Description not available.                            |
-| matter             | Description not available.                            |
-| maxs               | Description not available.                            |
-| mins               | Description not available.                            |
-| model              | Description not available.                            |
-| model\_killed      | Description not available.                            |
-| showCone           | Description not available.                            |
-| snd\_explode       | Description not available.                            |
-| snd\_fire          | Description not available.                            |
-| spawnclass         | Description not available.                            |
-| targetOffset       | offset from origin of target to aim for (0 0 32)      |
-| targetRadius       | radius from gun that targets are valid within         |
+  KEY                  DESCRIPTION
+  -------------------- -------------------------------------------------------
+  burstRate            Description not available.
+  burstrate            Time between bursts (in seconds)
+  bursts               Number of bursts in each fire
+  coneAngle            angle (in degrees) relative to forward to fire within
+  def\_debrisspawner   Description not available.
+  def\_projectile      Description not available.
+  editor\_bool XXXX    Description not available.
+  editor\_color        Description not available.
+  editor\_maxs         Description not available.
+  editor\_mins         Description not available.
+  editor\_usage        Generic gun - trigger to enable.
+  editor\_usage2       Description not available.
+  editor\_usage3       Description not available.
+  editor\_var XXXX     Description not available.
+  enabled              Description not available.
+  fireDeviation        Description not available.
+  fireRate             Description not available.
+  firedeviation        Random deviation from firerate
+  firerate             Time between firings (in seconds)
+  health               health amount
+  immunity             Description not available.
+  inherit              Description not available.
+  matter               Description not available.
+  maxs                 Description not available.
+  mins                 Description not available.
+  model                Description not available.
+  model\_killed        Description not available.
+  showCone             Description not available.
+  snd\_explode         Description not available.
+  snd\_fire            Description not available.
+  spawnclass           Description not available.
+  targetOffset         offset from origin of target to aim for (0 0 32)
+  targetRadius         radius from gun that targets are valid within
 
 Inheritance
 -----------
 
 This entity is derived from the following:
 
--   '' hhGun''
-    -   [gun\_default](Gun\_default\_(entity))
-        -   *' gun\_antishuttle*'
+-   *[hhGun](HhGun_%28class%29 "HhGun (class)")*
+    -   [gun\_default](Gun_default_%28entity%29 "Gun default (entity)")
+        -   **gun\_antishuttle**
 
-**Note**: Entries marked in italics are classes defined in the SDK.
+**Note** : Entries marked in italics are classes defined in the SDK.
 
 Notes
 -----

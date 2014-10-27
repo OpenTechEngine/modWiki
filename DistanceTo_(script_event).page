@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: DistanceTo
-...
-DistanceTo (script event)
-=========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -30,12 +22,14 @@ Parameters
 Examples
 --------
 
-` `
-`distance = `<font color="#000055">`$startObject`</font>`.`<font color="#ff0000">`distanceTo`</font><font color="#000000">`(`</font><font color="#000055">`$goalObject`</font><font color="#000000">`)`</font>`;`
+     
+    distance = $startObject.distanceTo($goalObject);
 
 Notes
 -----
 
-This script event returns the distance between the start and goal object as a float.
+This script event returns the distance between the start and goal object
+as a float.
 
+\
 

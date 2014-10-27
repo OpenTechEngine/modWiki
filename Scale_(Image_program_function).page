@@ -1,12 +1,3 @@
----
-format: Markdown
-categories: Image_program_function
-toc: yes
-title: Scale
-...
-Scale (Image program function)
-==============================
-
 Description
 -----------
 
@@ -15,7 +6,7 @@ This function will scale the specified image by a defined amount.
 Usage
 -----
 
-`scale ([map], [scalar])`
+    scale ([map], [scalar])
 
 Parameters
 ----------
@@ -28,17 +19,18 @@ Example
 
 Reduce the size by half...
 
-`textures/half_size`
-`{`
-`  {      `
-`    blend diffusemap`
-`    map   scale(textures/decals/plasma_burn.tga, 0.5)`
-`  }`
-`}`
+    textures/half_size
+    {
+      {      
+        blend diffusemap
+        map   scale(textures/decals/plasma_burn.tga, 0.5)
+      }
+    }
 
 Notes
 -----
 
 None.
 
+\
 

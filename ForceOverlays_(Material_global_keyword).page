@@ -1,12 +1,3 @@
----
-format: Markdown
-categories: Material_global_keyword
-toc: yes
-title: ForceOverlays
-...
-ForceOverlays (Material global keyword)
-=======================================
-
 Description
 -----------
 
@@ -17,7 +8,7 @@ Usage
 
 In the global section of your material shader type...
 
-`forceOverlays`
+    forceOverlays
 
 Parameters
 ----------
@@ -27,6 +18,9 @@ None.
 Notes
 -----
 
-Opaque textures enable decals by default. This only useful for transparent textures because these have decals disabled. (Blood and gun decals don't look that good on most transparent textures, eg. grates.)
+Opaque textures enable decals by default. This only useful for
+transparent textures because these have decals disabled. (Blood and gun
+decals don't look that good on most transparent textures, eg. grates.)
 
+\
 

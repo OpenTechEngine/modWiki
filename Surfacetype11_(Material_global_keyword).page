@@ -1,23 +1,15 @@
----
-format: Markdown
-categories: Material_global_keyword
-toc: yes
-title: Surfacetype11
-...
-Surfacetype11 (Material global keyword)
-=======================================
-
 Description
 -----------
 
-Flags the surface as made of *surfacetype11* to define the type of hit sound and debris.
+Flags the surface as made of *surfacetype11* to define the type of hit
+sound and debris.
 
 Usage
 -----
 
 In the global section of your material shader type...
 
-`surfacetype11`
+    surfacetype11
 
 Parameters
 ----------
@@ -27,6 +19,8 @@ None.
 Notes
 -----
 
-The material will play the snd\_surfacetype11 soundshader when shot and show mtr\_wound\_surfacetype11 as a decal.
+The material will play the snd\_surfacetype11 soundshader when shot and
+show mtr\_wound\_surfacetype11 as a decal.
 
+\
 

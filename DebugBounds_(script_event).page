@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: DebugBounds
-...
-DebugBounds (script event)
-==========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -20,7 +12,8 @@ Line drawing for debug visualization.
 Usage
 -----
 
-*void* debugBounds( *vector* **color**, *vector* **mins**, *vector* **maxs**, *float* **lifetime** )
+*void* debugBounds( *vector* **color** , *vector* **mins** , *vector*
+**maxs** , *float* **lifetime** )
 
 Parameters
 ----------
@@ -33,8 +26,8 @@ Parameters
 Examples
 --------
 
-` `
-<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`debugBounds`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`1`</font>` `<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>`', '`<font color="#0000dd">`25`</font>` `<font color="#0000dd">`49`</font>` `<font color="#0000dd">`56`</font>`', '`<font color="#0000dd">`54`</font>` `<font color="#0000dd">`88`</font>` `<font color="#0000dd">`79`</font>`', `<font color="#0000dd">`1`</font><font color="#000000">`)`</font>`;`
+     
+    sys.debugBounds('1 0 0', '25 49 56', '54 88 79', 1);
 
 Notes
 -----
@@ -43,4 +36,5 @@ This script event does not return any values.
 
 Lifetime of 0 == 1 frame.
 
+\
 

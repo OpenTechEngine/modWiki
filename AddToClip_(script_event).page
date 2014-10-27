@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: AddToClip
-...
-AddToClip (script event)
-========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -30,17 +22,18 @@ Parameters
 Examples
 --------
 
-` `
-`  `<font color="#0000ff">`void`</font>`  weapon_bfg::Reload`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`        `<font color="#0000ff">`weaponReloading`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`        `<font color="#0000ff">`playAnim`</font><font color="#000000">`(`</font>` ANIMCHANNEL_ALL, `<font color="#666666">`"reload"`</font>` `<font color="#000000">`)`</font>`;`
-`        waitUntil`<font color="#000000">`(`</font>` `<font color="#0000ff">`animDone`</font><font color="#000000">`(`</font>` ANIMCHANNEL_ALL, BFG_RELOAD_TO_IDLE `<font color="#000000">`)`</font>` `<font color="#000000">`)`</font>`;`
-`        `<font color="#0000ff">`addToClip`</font><font color="#000000">`(`</font>` `<font color="#0000ff">`clipSize`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>`;`
-`        `<font color="#0000ff">`weaponState`</font><font color="#000000">`(`</font>` `<font color="#666666">`"Idle"`</font>`, BFG_RELOAD_TO_IDLE `<font color="#000000">`)`</font>`;`
+     
+      void  weapon_bfg::Reload() {
+            weaponReloading();
+            playAnim( ANIMCHANNEL_ALL, "reload" );
+            waitUntil( animDone( ANIMCHANNEL_ALL, BFG_RELOAD_TO_IDLE ) );
+            addToClip( clipSize() );
+            weaponState( "Idle", BFG_RELOAD_TO_IDLE );
 
 Notes
 -----
 
 This script event does not return any values.
 
+\
 

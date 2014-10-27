@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: DrawText
-...
-DrawText (script event)
-=======================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -20,7 +12,9 @@ Text drawing for debugging. align can be 0-left, 1-center, 2-right.
 Usage
 -----
 
-*void* drawText( *string* **text**, *vector* **origin**, *float* **scale**, *vector* **color**, *float* **align**, *float* **lifetime** )
+*void* drawText( *string* **text** , *vector* **origin** , *float*
+**scale** , *vector* **color** , *float* **align** , *float*
+**lifetime** )
 
 Parameters
 ----------
@@ -38,12 +32,13 @@ Parameters
 Examples
 --------
 
-` `
-<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`drawText`</font><font color="#000000">`(`</font><font color="#666666">`"Yeah. I can see you right behind me making corrections."`</font>`, '`<font color="#0000dd">`0`</font>` `<font color="#0000dd">`5`</font>` `<font color="#0000dd">`45`</font>`', `<font color="#0000dd">`5`</font>`, '`<font color="#0000dd">`1`</font>` `<font color="#0000dd">`1`</font>` `<font color="#0000dd">`1`</font>`', `<font color="#0000dd">`1`</font>`, `<font color="#0000dd">`1`</font><font color="#000000">`)`</font>`;`
+     
+    sys.drawText("Yeah. I can see you right behind me making corrections.", '0 5 45', 5, '1 1 1', 1, 1);
 
 Notes
 -----
 
 This script event does not return any values.
 
+\
 

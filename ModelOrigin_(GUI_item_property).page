@@ -1,28 +1,23 @@
----
-format: Markdown
-categories: GUI_item_property
-toc: yes
-title: ModelOrigin
-...
-ModelOrigin (GUI item property)
-===============================
-
 ??
 
-This property is restricted to the [renderDef](RenderDef\_(GUI\_item\_type)) item type.
+This property is restricted to the
+[renderDef](RenderDef_%28GUI_item_type%29 "RenderDef (GUI item type)")
+item type.
 
 Syntax
 ------
 
-`modelOrigin `*`z`*`, `*`x`*`, `*`y`*`, `*`?`*
+    modelOrigin z, x, y, ?
 
 Default value
 -------------
 
-`Unknown`
+    Unknown
 
 Example(s)
 ----------
 
-`modelOrigin    -80, 0, -25, 0`
+    modelOrigin  -80, 0, -25, 0
+
+\
 

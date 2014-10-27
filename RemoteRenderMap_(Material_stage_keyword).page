@@ -1,21 +1,14 @@
----
-format: Markdown
-categories: Material_stage_keyword
-toc: yes
-title: RemoteRenderMap
-...
-RemoteRenderMap (Material stage keyword)
-========================================
-
 Description
 -----------
 
-The **remoteRenderMap** keyword defines a buffer to render a remote image in to (for cameras). The entity this material is applied to has to support remote render views.
+The **remoteRenderMap** keyword defines a buffer to render a remote
+image in to (for cameras). The entity this material is applied to has to
+support remote render views.
 
 Usage
 -----
 
-`remoteRenderMap [width] [height]`
+    remoteRenderMap [width] [height]
 
 Parameters
 ----------
@@ -28,13 +21,19 @@ Example
 
 Render the view of a camera into a 128 by 128 buffer...
 
-`{`
-`   remoteRenderMap 128 128`
-`}`
+    {
+       remoteRenderMap  128 128
+    }
 
 Notes
 -----
 
-The results produced by this keyword often times require manipulation via the [translate](Translate\_(Material\_stage\_keyword)) and [scale](Scale\_(Material\_stage\_keyword)) keywords to be useable.
+The results produced by this keyword often times require manipulation
+via the
+[translate](Translate_%28Material_stage_keyword%29 "Translate (Material stage keyword)")
+and
+[scale](Scale_%28Material_stage_keyword%29 "Scale (Material stage keyword)")
+keywords to be useable.
 
+\
 

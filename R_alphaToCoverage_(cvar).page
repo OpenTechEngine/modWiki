@@ -1,60 +1,89 @@
----
-format: Markdown
-categories: cvar
-toc: yes
-title: R_alphaToCoverage
-...
-R alphaToCoverage (cvar)
-========================
-
 Description
 -----------
 
-Allow [multisample antialiasing](Antialiasing) to function on [alphatested](AlphaTest\_(Material\_stage\_keyword)) surfaces without modifying the depth sort.
+Allow [multisample antialiasing](Antialiasing "Antialiasing") to
+function on
+[alphatested](AlphaTest_%28Material_stage_keyword%29 "AlphaTest (Material stage keyword)")
+surfaces without modifying the depth sort.
 
 Usage
 -----
 
 At the console type...
 
-`r_alphaToCoverage [boolean]`
+    r_alphaToCoverage [boolean]
 
 Parameters
 ----------
 
 -   [boolean]
     -   0 - Don't use Alpha-to-Coverage.
-    -   1 - Enable Alpha-to-Coverage when [r\_multisamples](R\_multiSamples\_(cvar)) is used.
+    -   1 - Enable Alpha-to-Coverage when
+        [r\_multisamples](R_multiSamples_%28cvar%29 "R multiSamples (cvar)")
+        is used.
 
 Flags
 -----
 
-| Flag              | Enabled | Description                                  |
-|-------------------|---------|----------------------------------------------|
-| CVAR\_ALL         |         | all flags                                    |
-| CVAR\_BOOL        | X       | variable is a boolean                        |
-| CVAR\_INTEGER     |         | variable is an integer                       |
-| CVAR\_FLOAT       |         | variable is a float                          |
-| CVAR\_SYSTEM      |         | system variable                              |
-| CVAR\_RENDERER    | X       | renderer variable                            |
-| CVAR\_SOUND       |         | sound variable                               |
-| CVAR\_GUI         |         | gui variable                                 |
-| CVAR\_GAME        |         | game variable                                |
-| CVAR\_TOOL        |         | tool variable                                |
-| CVAR\_USERINFO    |         | sent to servers, available to menu           |
-| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
-| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
-| CVAR\_STATIC      | X       | statically declared, not user created        |
-| CVAR\_CHEAT       | X       | variable is considered a cheat               |
-| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
-| CVAR\_INIT        |         | can only be set from the command-line        |
-| CVAR\_ROM         |         | display only, cannot be set by user at all   |
-| CVAR\_ARCHIVE     |         | set to cause it to be saved to a config file |
-| CVAR\_MODIFIED    | X       | set when the variable is modified            |
+  --------------------------------------------------------------------------
+  Flag                     Enabled                  Description
+  ------------------------ ------------------------ ------------------------
+  CVAR\_ALL                                         all flags
+
+  CVAR\_BOOL               X                        variable is a boolean
+
+  CVAR\_INTEGER                                     variable is an integer
+
+  CVAR\_FLOAT                                       variable is a float
+
+  CVAR\_SYSTEM                                      system variable
+
+  CVAR\_RENDERER           X                        renderer variable
+
+  CVAR\_SOUND                                       sound variable
+
+  CVAR\_GUI                                         gui variable
+
+  CVAR\_GAME                                        game variable
+
+  CVAR\_TOOL                                        tool variable
+
+  CVAR\_USERINFO                                    sent to servers,
+                                                    available to menu
+
+  CVAR\_SERVERINFO                                  sent from servers,
+                                                    available to menu
+
+  CVAR\_NETWORKSYNC                                 cvar is synced from the
+                                                    server to clients
+
+  CVAR\_STATIC             X                        statically declared, not
+                                                    user created
+
+  CVAR\_CHEAT              X                        variable is considered a
+                                                    cheat
+
+  CVAR\_NOCHEAT                                     variable is not
+                                                    considered a cheat
+
+  CVAR\_INIT                                        can only be set from the
+                                                    command-line
+
+  CVAR\_ROM                                         display only, cannot be
+                                                    set by user at all
+
+  CVAR\_ARCHIVE                                     set to cause it to be
+                                                    saved to a config file
+
+  CVAR\_MODIFIED           X                        set when the variable is
+                                                    modified
+  --------------------------------------------------------------------------
 
 Notes
 -----
 
-This CVar resolves an issue where partially transparent textures like grates do not render properly with anti-aliasing enabled.
+This CVar resolves an issue where partially transparent textures like
+grates do not render properly with anti-aliasing enabled.
 
+\
 

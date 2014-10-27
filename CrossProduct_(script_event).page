@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: CrossProduct
-...
-CrossProduct (script event)
-===========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -20,7 +12,7 @@ Returns the cross product of the two vectors.
 Usage
 -----
 
-*vector* CrossProduct( *vector* **vec1**, *vector* **vec2** )
+*vector* CrossProduct( *vector* **vec1** , *vector* **vec2** )
 
 Parameters
 ----------
@@ -31,12 +23,13 @@ Parameters
 Examples
 --------
 
-` `
-`crsVec = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`CrossProduct`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`120`</font>` `<font color="#0000dd">`54`</font>` `<font color="#0000dd">`21`</font>`', '`<font color="#0000dd">`66`</font>` `<font color="#0000dd">`54`</font>` `<font color="#0000dd">`87`</font>`'`<font color="#000000">`)`</font>`;`
+     
+    crsVec = sys.CrossProduct('120 54 21', '66 54 87');
 
 Notes
 -----
 
 None.
 
+\
 

@@ -1,44 +1,47 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: WeaponState
-...
-WeaponState (script event)
-==========================
+<div id="attention" class="boilerplate metadata"
+style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
 
-<div id="attention" class="boilerplate metadata" style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa">
-**This page is in urgent need of attention because: '' The information presented in this article is incomplete.**''
+**This page is in urgent need of attention because: *The information
+presented in this article is incomplete.***
 
-If you disagree with this, please explain why on [its talk page](http://web.archive.org/web/20081120152438/http://www.modwiki.net/wiki/Talk:WeaponState_%28script_event%29).
+If you disagree with this, please explain why on [its talk
+page](Talk:WeaponState_%28script_event%29 "Talk:WeaponState (script event)")
+.
 
 </div>
+
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type idWeapon
+This event operates on an instance of the [game
+class](Game_class "Game class") type idWeapon
 
 Description
 -----------
 
-Set the state of the [script objects](Script\_object) [Finite State Machine](Finite\_State\_Machine\_(scripting)).
+Set the state of the [script objects](Script_object "Script object")
+[Finite State
+Machine](Finite_State_Machine_%28scripting%29 "Finite State Machine (scripting)")
+.
 
 Usage
 -----
 
-*void* weaponState( *string* **stateFunction**, *float* **blendFrames** )
+*void* weaponState( *string* **stateFunction** , *float* **blendFrames**
+)
 
 Parameters
 ----------
 
--   [stateFunction] - Name of the state to set. This is simply the name of a function in the script object.
+-   [stateFunction] - Name of the state to set. This is simply the name
+    of a function in the script object.
 -   [blendFrames] - Frames of animation to blend over state change.
 
 Examples
 --------
 
-<font color="#0000ff">`weaponState`</font><font color="#000000">`(`</font>` `<font color="#666666">`"Idle"`</font>`, PLASMAGUN_FIRE_TO_IDLE `<font color="#000000">`)`</font>
-<font color="#0000ff">`weaponState`</font><font color="#000000">`(`</font>` `<font color="#666666">`"Raise"`</font>`, `<font color="#0000dd">`0`</font>` `<font color="#000000">`)`</font>
+    weaponState( "Idle", PLASMAGUN_FIRE_TO_IDLE )
+    weaponState( "Raise", 0 )
 
 Notes
 -----

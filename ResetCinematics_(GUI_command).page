@@ -1,22 +1,16 @@
----
-format: Markdown
-categories: GUI_command
-toc: yes
-title: ResetCinematics
-...
-ResetCinematics (GUI command)
-=============================
-
-"Resets the cinematics playing in the window to frame 0" (from [iddevnet](http://web.archive.org/web/20120920015651/http://www.iddevnet.com/doom3/guis.php)).
+"Resets the cinematics playing in the window to frame 0" (from
+[iddevnet](http://www.iddevnet.com/doom3/guis.php "http://www.iddevnet.com/doom3/guis.php")
+).
 
 Syntax
 ------
 
-`resetCinematics`
+    resetCinematics
 
 Example(s)
 ----------
 
-`resetCinematics;`
+    resetCinematics;
 
+\
 

@@ -1,1109 +1,1066 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: Script_events_(ETQW).page
-...
-Script events (ETQW)
-====================
-
-Script events are the commands used in ET:QW's native scripting language.
+Script events are the commands used in ET:QW's native scripting
+language.
 
 Existing script events as of version 1.1.
-
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                                                        
- Contents                                                                                                                                                                    
- --------                                                                                                                                                                    
-                                                                                                                                                                             
- </div>                                                                                                                                                                      
- -   [<span class="tocnumber">1</span> <span class="toctext">System Events</span>](Script\_events\_(ETQW)#System\_Events)                                               
- -   [<span class="tocnumber">2</span> <span class="toctext">Entity Events</span>](Script\_events\_(ETQW)#Entity\_Events)                                               
-     -   [<span class="tocnumber">2.1</span> <span class="toctext">idLight Events</span>](Script\_events\_(ETQW)#idLight\_Events)                                       
-     -   [<span class="tocnumber">2.2</span> <span class="toctext">idForcefield Events</span>](Script\_events\_(ETQW)#idForcefield\_Events)                             
-     -   [<span class="tocnumber">2.3</span> <span class="toctext">Animate Events</span>](Script\_events\_(ETQW)#Animate\_Events)                                       
-     -   [<span class="tocnumber">2.4</span> <span class="toctext">idDoor Events</span>](Script\_events\_(ETQW)#idDoor\_Events)                                         
-     -   [<span class="tocnumber">2.5</span> <span class="toctext">idMoveable Events</span>](Script\_events\_(ETQW)#idMoveable\_Events)                                 
-     -   [<span class="tocnumber">2.6</span> <span class="toctext">sdGeneralMover Events</span>](Script\_events\_(ETQW)#sdGeneralMover\_Events)                         
-     -   [<span class="tocnumber">2.7</span> <span class="toctext">idAnimatedEntity Events</span>](Script\_events\_(ETQW)#idAnimatedEntity\_Events)                     
-     -   [<span class="tocnumber">2.8</span> <span class="toctext">idWeapon Events</span>](Script\_events\_(ETQW)#idWeapon\_Events)                                     
-     -   [<span class="tocnumber">2.9</span> <span class="toctext">idProjectile Events</span>](Script\_events\_(ETQW)#idProjectile\_Events)                             
-     -   [<span class="tocnumber">2.10</span> <span class="toctext">idActor Events</span>](Script\_events\_(ETQW)#idActor\_Events)                                      
-     -   [<span class="tocnumber">2.11</span> <span class="toctext">idPlayer Events</span>](Script\_events\_(ETQW)#idPlayer\_Events)                                    
-         -   [<span class="tocnumber">2.11.1</span> <span class="toctext">Bots Player Interface Events</span>](Script\_events\_(ETQW)#Bots\_Player\_Interface\_Events)  
-     -   [<span class="tocnumber">2.12</span> <span class="toctext">sdAtmosphere Events</span>](Script\_events\_(ETQW)#sdAtmosphere\_Events)                            
-     -   [<span class="tocnumber">2.13</span> <span class="toctext">sdWalker Events</span>](Script\_events\_(ETQW)#sdWalker\_Events)                                    
-     -   [<span class="tocnumber">2.14</span> <span class="toctext">sdTransport Events</span>](Script\_events\_(ETQW)#sdTransport\_Events)                              
-     -   [<span class="tocnumber">2.15</span> <span class="toctext">sdVehicle\_Rigidbody Events</span>](Script\_events\_(ETQW)#sdVehicle\_Rigidbody\_Events)            
-     -   [<span class="tocnumber">2.16</span> <span class="toctext">sdVehicleWeapon Events</span>](Script\_events\_(ETQW)#sdVehicleWeapon\_Events)                      
-     -   [<span class="tocnumber">2.17</span> <span class="toctext">sdJetPack Events</span>](Script\_events\_(ETQW)#sdJetPack\_Events)                                  
-     -   [<span class="tocnumber">2.18</span> <span class="toctext">sdScriptEntity Events</span>](Script\_events\_(ETQW)#sdScriptEntity\_Events)                        
-     -   [<span class="tocnumber">2.19</span> <span class="toctext">sdDeployZone Events</span>](Script\_events\_(ETQW)#sdDeployZone\_Events)                            
-     -   [<span class="tocnumber">2.20</span> <span class="toctext">Animated Client Entity Events</span>](Script\_events\_(ETQW)#Animated\_Client\_Entity\_Events)      
-     -   [<span class="tocnumber">2.21</span> <span class="toctext">sdTeleporter Events</span>](Script\_events\_(ETQW)#sdTeleporter\_Events)                            
-     -   [<span class="tocnumber">2.22</span> <span class="toctext">sdRepairDrone Events</span>](Script\_events\_(ETQW)#sdRepairDrone\_Events)                          
-     -   [<span class="tocnumber">2.23</span> <span class="toctext">sdParachute Events</span>](Script\_events\_(ETQW)#sdParachute\_Events)                              
-     -   [<span class="tocnumber">2.24</span> <span class="toctext">sdDefenceTurret Events</span>](Script\_events\_(ETQW)#sdDefenceTurret\_Events)                      
-     -   [<span class="tocnumber">2.25</span> <span class="toctext">sdDeliveryVehicle Events</span>](Script\_events\_(ETQW)#sdDeliveryVehicle\_Events)                  
- -   [<span class="tocnumber">3</span> <span class="toctext">Game Class Events</span>](Script\_events\_(ETQW)#Game\_Class\_Events)                                      
-     -   [<span class="tocnumber">3.1</span> <span class="toctext">Objective Manager Events</span>](Script\_events\_(ETQW)#Objective\_Manager\_Events)                  
-         -   [<span class="tocnumber">3.1.1</span> <span class="toctext">Bot Objective Manager Events</span>](Script\_events\_(ETQW)#Bot\_Objective\_Manager\_Events)   
-     -   [<span class="tocnumber">3.2</span> <span class="toctext">Team Events</span>](Script\_events\_(ETQW)#Team\_Events)                                             
-         -   [<span class="tocnumber">3.2.1</span> <span class="toctext">Bot Team Events</span>](Script\_events\_(ETQW)#Bot\_Team\_Events)                              
-     -   [<span class="tocnumber">3.3</span> <span class="toctext">Task Events</span>](Script\_events\_(ETQW)#Task\_Events)                                             
- -   [<span class="tocnumber">4</span> <span class="toctext">CVar Events</span>](Script\_events\_(ETQW)#CVar\_Events)                                                   
- -   [<span class="tocnumber">5</span> <span class="toctext">Mask Edit-session Events</span>](Script\_events\_(ETQW)#Mask\_Edit-session\_Events)                        |
 
 System Events
 -------------
 
-Events declared in idThread, accessible via [sys](Scripting\_basics#sys) identifier.
+Events declared in [idThread](IdThread_%28class%29 "IdThread (class)") ,
+accessible via [sys](Scripting_basics#sys "Scripting basics")
+identifier.
 
--   addCheapDecal
--   createMaskEditSession
--   handleToString
--   stringToHandle
--   toWStr
--   pushLocString
--   pushLocStringIndex
--   localizeStringIndexArgs
--   localizeStringArgs
--   localizeString
--   getNetworkKey
--   fromNetworkKey
--   [terminate](Terminate\_(script\_event))
--   [wait](Wait\_(script\_event))
--   [waitFrame](WaitFrame\_(script\_event))
--   [print](Print\_(script\_event))
--   [println](Println\_(script\_event))
--   debugln
--   [say](Say\_(script\_event))
--   [assert](Assert\_(script\_event))
--   <span class="deadlink"> getCVar</span>
--   [random](Random\_(script\_event))
--   [getTime](GetTime\_(script\_event))
--   killThread
--   threadName
--   getEntityByID
--   [getEntity](GetEntity\_(script\_event))
--   [spawn](Spawn\_(script\_event))
--   spawnClient
--   spawnType
--   [angToForward](AngToForward\_(script\_event))
--   [angToRight](AngToRight\_(script\_event))
--   [angToUp](AngToUp\_(script\_event))
--   [sin](Sin\_(script\_event))
--   asin
--   [cos](Cos\_(script\_event))
--   acos
--   atan
--   atan2
--   getRoot
--   solveRoots
--   angleNormalize180
--   fabs
--   [floor](Floor\_(script\_event))
--   [ceil](Ceil\_(script\_event))
--   mod
--   fmod
--   [sqrt](Sqrt\_(script\_event))
--   [vecNormalize](VecNormalize\_(script\_event))
--   [vecLength](VecLength\_(script\_event))
--   vecLengthSquared
--   [crossProduct](CrossProduct\_(script\_event))
--   [vecToAngles](VecToAngles\_(script\_event))
--   rotateVecByAngles
--   rotateAngles
--   rotateVec
--   toLocalSpace
--   toWorldSpace
--   checkContents
--   [trace](Trace\_(script\_event))
--   [tracePoint](TracePoint\_(script\_event))
--   traceOriented
--   saveTrace
--   freeTrace
--   [getTraceFraction](GetTraceFraction\_(script\_event))
--   [getTraceEndPos](GetTraceEndPos\_(script\_event))
--   getTracePoint
--   [getTraceNormal](GetTraceNormal\_(script\_event))
--   [getTraceEntity](GetTraceEntity\_(script\_event))
--   getTraceSurfaceFlags
--   getTraceSurfaceType
--   getTraceSurfaceColor
--   [getTraceJoint](GetTraceJoint\_(script\_event))
--   [getTraceBody](GetTraceBody\_(script\_event))
--   [fadeIn](FadeIn\_(script\_event))
--   [fadeOut](FadeOut\_(script\_event))
--   [fadeTo](FadeTo\_(script\_event))
--   [music](Music\_(script\_event))
--   startSoundDirect
--   [error](Error\_(script\_event))
--   [warning](Warning\_(script\_event))
--   [strLength](StrLength\_(script\_event))
--   [strLeft](StrLeft\_(script\_event))
--   [strRight](StrRight\_(script\_event))
--   [strSkip](StrSkip\_(script\_event))
--   [strMid](StrMid\_(script\_event))
--   [strToFloat](StrToFloat\_(script\_event))
--   [isClient](IsClient\_(script\_event))
--   isServer
--   doClientSideStuff
--   [getFrameTime](GetFrameTime\_(script\_event))
--   [getTicsPerSecond](GetTicsPerSecond\_(script\_event))
--   [debugLine](DebugLine\_(script\_event))
--   [debugArrow](DebugArrow\_(script\_event))
--   [debugCircle](DebugCircle\_(script\_event))
--   [debugBounds](DebugBounds\_(script\_event))
--   allocCMIcon
--   freeCMIcon
--   setCMIconSize
--   setCMIconUnknownSize
--   setCMIconSize2d
--   setCMIconUnknownSize2d
--   setCMIconSizeMode
--   setCMIconSort
--   setCMIconPositionMode
--   setCMIconOrigin
--   setCMIconColor
--   setCMIconColorMode
--   setCMIconDrawMode
--   setCMIconAngle
--   setCMIconSides
--   showCMIcon
--   hideCMIcon
--   addCMIconRequirement
--   setCMIconMaterial
--   setCMIconUnknownMaterial
--   setCMIconFireteamMaterial
--   setCMIconGuiMessage
--   setCMIconFlag
--   clearCMIconFlag
--   setCMIconArcAngle
--   setCMIconShaderParm
--   getCMIconFlags
--   flashCMIcon
--   [drawText](DrawText\_(script\_event))
--   broadcastToolTip
--   getDeclType
--   getDeclCount
--   getDeclIndex
--   getDeclName
--   applyRadiusDamage
--   filterEntity
--   getTableCount
--   getTableValue
--   getTableValueExact
--   getObjectTitle
--   allocDecal
--   projectDecal
--   freeDecal
--   resetDecal
--   getTypeHandle
--   argc
--   argv
--   argvf
--   setActionCommand
--   getTeam
--   setWinningTeam
--   endGame
--   setEndGameCamera
--   [playWorldEffect ](PlayWorldEffect\_(script\_event))
--   playWorldEffectRotate
--   playWorldEffectRotateAlign
--   playWorldBeamEffect
--   setGUIFloat
--   setGUIHandle
--   setGUIVec2
--   setGUIVec3
--   setGUIVec4
--   setGUIString
--   setGUIWString
--   getGUIFloat
--   clearDeployRequest
--   getDeployMask
--   checkDeployMask
--   getWorldPlayZoneIndex
--   consoleCommand
--   allocTargetTimer
--   getTargetTimerValue
--   setTargetTimerValue
--   getEntityDefKey
--   getEntityDefIntKey
--   getEntityDefFloatKey
--   getEntityDefVectorKey
--   getMaxClients
--   getClient
--   getTerritoryForPoint
--   getMatchTimeRemaining
--   getMatchState
--   allocStatInt
--   allocStatFloat
--   increaseStatInt
--   increaseStatFloat
--   getStatValue
--   getClimateSkin
--   sendQuickChat
--   getContextEntity
--   pushEndGameStat
--   sendEndGameStats
--   heightMapTrace
--   enableBotReachability
--   getNextBotActionIndex
--   getBotActionOrigin
--   getBotActionDeployableType
--   getBotActionBaseGoalType
+-   [addCheapDecal](AddCheapDecal_%28script_event%29 "AddCheapDecal (script event)")
+-   [createMaskEditSession](CreateMaskEditSession_%28script_event%29 "CreateMaskEditSession (script event)")
+-   [handleToString](HandleToString_%28script_event%29 "HandleToString (script event)")
+-   [stringToHandle](StringToHandle_%28script_event%29 "StringToHandle (script event)")
+-   [toWStr](ToWStr_%28script_event%29 "ToWStr (script event)")
+-   [pushLocString](PushLocString_%28script_event%29 "PushLocString (script event)")
+-   [pushLocStringIndex](PushLocStringIndex_%28script_event%29 "PushLocStringIndex (script event)")
+-   [localizeStringIndexArgs](LocalizeStringIndexArgs_%28script_event%29 "LocalizeStringIndexArgs (script event)")
+-   [localizeStringArgs](LocalizeStringArgs_%28script_event%29 "LocalizeStringArgs (script event)")
+-   [localizeString](LocalizeString_%28script_event%29 "LocalizeString (script event)")
+-   [getNetworkKey](GetNetworkKey_%28script_event%29 "GetNetworkKey (script event)")
+-   [fromNetworkKey](FromNetworkKey_%28script_event%29 "FromNetworkKey (script event)")
+-   [terminate](Terminate_%28script_event%29 "Terminate (script event)")
+-   [wait](Wait_%28script_event%29 "Wait (script event)")
+-   [waitFrame](WaitFrame_%28script_event%29 "WaitFrame (script event)")
+-   [print](Print_%28script_event%29 "Print (script event)")
+-   [println](Println_%28script_event%29 "Println (script event)")
+-   [debugln](Debugln_%28script_event%29 "Debugln (script event)")
+-   [say](Say_%28script_event%29 "Say (script event)")
+-   [assert](Assert_%28script_event%29 "Assert (script event)")
+-   [getCVar](GetCVar_%28script_event%29 "GetCVar (script event)")
+-   [random](Random_%28script_event%29 "Random (script event)")
+-   [getTime](GetTime_%28script_event%29 "GetTime (script event)")
+-   [killThread](KillThread_%28script_event%29 "KillThread (script event)")
+-   [threadName](ThreadName_%28script_event%29 "ThreadName (script event)")
+-   [getEntityByID](GetEntityByID_%28script_event%29 "GetEntityByID (script event)")
+-   [getEntity](GetEntity_%28script_event%29 "GetEntity (script event)")
+-   [spawn](Spawn_%28script_event%29 "Spawn (script event)")
+-   [spawnClient](SpawnClient_%28script_event%29 "SpawnClient (script event)")
+-   [spawnType](SpawnType_%28script_event%29 "SpawnType (script event)")
+-   [angToForward](AngToForward_%28script_event%29 "AngToForward (script event)")
+-   [angToRight](AngToRight_%28script_event%29 "AngToRight (script event)")
+-   [angToUp](AngToUp_%28script_event%29 "AngToUp (script event)")
+-   [sin](Sin_%28script_event%29 "Sin (script event)")
+-   [asin](Asin_%28script_event%29 "Asin (script event)")
+-   [cos](Cos_%28script_event%29 "Cos (script event)")
+-   [acos](Acos_%28script_event%29 "Acos (script event)")
+-   [atan](Atan_%28script_event%29 "Atan (script event)")
+-   [atan2](Atan2_%28script_event%29 "Atan2 (script event)")
+-   [getRoot](GetRoot_%28script_event%29 "GetRoot (script event)")
+-   [solveRoots](SolveRoots_%28script_event%29 "SolveRoots (script event)")
+-   [angleNormalize180](AngleNormalize180_%28script_event%29 "AngleNormalize180 (script event)")
+-   [fabs](Fabs_%28script_event%29 "Fabs (script event)")
+-   [floor](Floor_%28script_event%29 "Floor (script event)")
+-   [ceil](Ceil_%28script_event%29 "Ceil (script event)")
+-   [mod](Mod_%28script_event%29 "Mod (script event)")
+-   [fmod](Fmod_%28script_event%29 "Fmod (script event)")
+-   [sqrt](Sqrt_%28script_event%29 "Sqrt (script event)")
+-   [vecNormalize](VecNormalize_%28script_event%29 "VecNormalize (script event)")
+-   [vecLength](VecLength_%28script_event%29 "VecLength (script event)")
+-   [vecLengthSquared](VecLengthSquared_%28script_event%29 "VecLengthSquared (script event)")
+-   [crossProduct](CrossProduct_%28script_event%29 "CrossProduct (script event)")
+-   [vecToAngles](VecToAngles_%28script_event%29 "VecToAngles (script event)")
+-   [rotateVecByAngles](RotateVecByAngles_%28script_event%29 "RotateVecByAngles (script event)")
+-   [rotateAngles](RotateAngles_%28script_event%29 "RotateAngles (script event)")
+-   [rotateVec](RotateVec_%28script_event%29 "RotateVec (script event)")
+-   [toLocalSpace](ToLocalSpace_%28script_event%29 "ToLocalSpace (script event)")
+-   [toWorldSpace](ToWorldSpace_%28script_event%29 "ToWorldSpace (script event)")
+-   [checkContents](CheckContents_%28script_event%29 "CheckContents (script event)")
+-   [trace](Trace_%28script_event%29 "Trace (script event)")
+-   [tracePoint](TracePoint_%28script_event%29 "TracePoint (script event)")
+-   [traceOriented](TraceOriented_%28script_event%29 "TraceOriented (script event)")
+-   [saveTrace](SaveTrace_%28script_event%29 "SaveTrace (script event)")
+-   [freeTrace](FreeTrace_%28script_event%29 "FreeTrace (script event)")
+-   [getTraceFraction](GetTraceFraction_%28script_event%29 "GetTraceFraction (script event)")
+-   [getTraceEndPos](GetTraceEndPos_%28script_event%29 "GetTraceEndPos (script event)")
+-   [getTracePoint](GetTracePoint_%28script_event%29 "GetTracePoint (script event)")
+-   [getTraceNormal](GetTraceNormal_%28script_event%29 "GetTraceNormal (script event)")
+-   [getTraceEntity](GetTraceEntity_%28script_event%29 "GetTraceEntity (script event)")
+-   [getTraceSurfaceFlags](GetTraceSurfaceFlags_%28script_event%29 "GetTraceSurfaceFlags (script event)")
+-   [getTraceSurfaceType](GetTraceSurfaceType_%28script_event%29 "GetTraceSurfaceType (script event)")
+-   [getTraceSurfaceColor](GetTraceSurfaceColor_%28script_event%29 "GetTraceSurfaceColor (script event)")
+-   [getTraceJoint](GetTraceJoint_%28script_event%29 "GetTraceJoint (script event)")
+-   [getTraceBody](GetTraceBody_%28script_event%29 "GetTraceBody (script event)")
+-   [fadeIn](FadeIn_%28script_event%29 "FadeIn (script event)")
+-   [fadeOut](FadeOut_%28script_event%29 "FadeOut (script event)")
+-   [fadeTo](FadeTo_%28script_event%29 "FadeTo (script event)")
+-   [music](Music_%28script_event%29 "Music (script event)")
+-   [startSoundDirect](StartSoundDirect_%28script_event%29 "StartSoundDirect (script event)")
+-   [error](Error_%28script_event%29 "Error (script event)")
+-   [warning](Warning_%28script_event%29 "Warning (script event)")
+-   [strLength](StrLength_%28script_event%29 "StrLength (script event)")
+-   [strLeft](StrLeft_%28script_event%29 "StrLeft (script event)")
+-   [strRight](StrRight_%28script_event%29 "StrRight (script event)")
+-   [strSkip](StrSkip_%28script_event%29 "StrSkip (script event)")
+-   [strMid](StrMid_%28script_event%29 "StrMid (script event)")
+-   [strToFloat](StrToFloat_%28script_event%29 "StrToFloat (script event)")
+-   [isClient](IsClient_%28script_event%29 "IsClient (script event)")
+-   [isServer](IsServer_%28script_event%29 "IsServer (script event)")
+-   [doClientSideStuff](DoClientSideStuff_%28script_event%29 "DoClientSideStuff (script event)")
+-   [getFrameTime](GetFrameTime_%28script_event%29 "GetFrameTime (script event)")
+-   [getTicsPerSecond](GetTicsPerSecond_%28script_event%29 "GetTicsPerSecond (script event)")
+-   [debugLine](DebugLine_%28script_event%29 "DebugLine (script event)")
+-   [debugArrow](DebugArrow_%28script_event%29 "DebugArrow (script event)")
+-   [debugCircle](DebugCircle_%28script_event%29 "DebugCircle (script event)")
+-   [debugBounds](DebugBounds_%28script_event%29 "DebugBounds (script event)")
+-   [allocCMIcon](AllocCMIcon_%28script_event%29 "AllocCMIcon (script event)")
+-   [freeCMIcon](FreeCMIcon_%28script_event%29 "FreeCMIcon (script event)")
+-   [setCMIconSize](SetCMIconSize_%28script_event%29 "SetCMIconSize (script event)")
+-   [setCMIconUnknownSize](SetCMIconUnknownSize_%28script_event%29 "SetCMIconUnknownSize (script event)")
+-   [setCMIconSize2d](SetCMIconSize2d_%28script_event%29 "SetCMIconSize2d (script event)")
+-   [setCMIconUnknownSize2d](SetCMIconUnknownSize2d_%28script_event%29 "SetCMIconUnknownSize2d (script event)")
+-   [setCMIconSizeMode](SetCMIconSizeMode_%28script_event%29 "SetCMIconSizeMode (script event)")
+-   [setCMIconSort](SetCMIconSort_%28script_event%29 "SetCMIconSort (script event)")
+-   [setCMIconPositionMode](SetCMIconPositionMode_%28script_event%29 "SetCMIconPositionMode (script event)")
+-   [setCMIconOrigin](SetCMIconOrigin_%28script_event%29 "SetCMIconOrigin (script event)")
+-   [setCMIconColor](SetCMIconColor_%28script_event%29 "SetCMIconColor (script event)")
+-   [setCMIconColorMode](SetCMIconColorMode_%28script_event%29 "SetCMIconColorMode (script event)")
+-   [setCMIconDrawMode](SetCMIconDrawMode_%28script_event%29 "SetCMIconDrawMode (script event)")
+-   [setCMIconAngle](SetCMIconAngle_%28script_event%29 "SetCMIconAngle (script event)")
+-   [setCMIconSides](SetCMIconSides_%28script_event%29 "SetCMIconSides (script event)")
+-   [showCMIcon](ShowCMIcon_%28script_event%29 "ShowCMIcon (script event)")
+-   [hideCMIcon](HideCMIcon_%28script_event%29 "HideCMIcon (script event)")
+-   [addCMIconRequirement](AddCMIconRequirement_%28script_event%29 "AddCMIconRequirement (script event)")
+-   [setCMIconMaterial](SetCMIconMaterial_%28script_event%29 "SetCMIconMaterial (script event)")
+-   [setCMIconUnknownMaterial](SetCMIconUnknownMaterial_%28script_event%29 "SetCMIconUnknownMaterial (script event)")
+-   [setCMIconFireteamMaterial](SetCMIconFireteamMaterial_%28script_event%29 "SetCMIconFireteamMaterial (script event)")
+-   [setCMIconGuiMessage](SetCMIconGuiMessage_%28script_event%29 "SetCMIconGuiMessage (script event)")
+-   [setCMIconFlag](SetCMIconFlag_%28script_event%29 "SetCMIconFlag (script event)")
+-   [clearCMIconFlag](ClearCMIconFlag_%28script_event%29 "ClearCMIconFlag (script event)")
+-   [setCMIconArcAngle](SetCMIconArcAngle_%28script_event%29 "SetCMIconArcAngle (script event)")
+-   [setCMIconShaderParm](SetCMIconShaderParm_%28script_event%29 "SetCMIconShaderParm (script event)")
+-   [getCMIconFlags](GetCMIconFlags_%28script_event%29 "GetCMIconFlags (script event)")
+-   [flashCMIcon](FlashCMIcon_%28script_event%29 "FlashCMIcon (script event)")
+-   [drawText](DrawText_%28script_event%29 "DrawText (script event)")
+-   [broadcastToolTip](BroadcastToolTip_%28script_event%29 "BroadcastToolTip (script event)")
+-   [getDeclType](GetDeclType_%28script_event%29 "GetDeclType (script event)")
+-   [getDeclCount](GetDeclCount_%28script_event%29 "GetDeclCount (script event)")
+-   [getDeclIndex](GetDeclIndex_%28script_event%29 "GetDeclIndex (script event)")
+-   [getDeclName](GetDeclName_%28script_event%29 "GetDeclName (script event)")
+-   [applyRadiusDamage](ApplyRadiusDamage_%28script_event%29 "ApplyRadiusDamage (script event)")
+-   [filterEntity](FilterEntity_%28script_event%29 "FilterEntity (script event)")
+-   [getTableCount](GetTableCount_%28script_event%29 "GetTableCount (script event)")
+-   [getTableValue](GetTableValue_%28script_event%29 "GetTableValue (script event)")
+-   [getTableValueExact](GetTableValueExact_%28script_event%29 "GetTableValueExact (script event)")
+-   [getObjectTitle](GetObjectTitle_%28script_event%29 "GetObjectTitle (script event)")
+-   [allocDecal](AllocDecal_%28script_event%29 "AllocDecal (script event)")
+-   [projectDecal](ProjectDecal_%28script_event%29 "ProjectDecal (script event)")
+-   [freeDecal](FreeDecal_%28script_event%29 "FreeDecal (script event)")
+-   [resetDecal](ResetDecal_%28script_event%29 "ResetDecal (script event)")
+-   [getTypeHandle](GetTypeHandle_%28script_event%29 "GetTypeHandle (script event)")
+-   [argc](Argc_%28script_event%29 "Argc (script event)")
+-   [argv](Argv_%28script_event%29 "Argv (script event)")
+-   [argvf](Argvf_%28script_event%29 "Argvf (script event)")
+-   [setActionCommand](SetActionCommand_%28script_event%29 "SetActionCommand (script event)")
+-   [getTeam](GetTeam_%28script_event%29 "GetTeam (script event)")
+-   [setWinningTeam](SetWinningTeam_%28script_event%29 "SetWinningTeam (script event)")
+-   [endGame](EndGame_%28script_event%29 "EndGame (script event)")
+-   [setEndGameCamera](SetEndGameCamera_%28script_event%29 "SetEndGameCamera (script event)")
+-   [playWorldEffect](PlayWorldEffect_%28script_event%29 "PlayWorldEffect (script event)")
+-   [playWorldEffectRotate](PlayWorldEffectRotate_%28script_event%29 "PlayWorldEffectRotate (script event)")
+-   [playWorldEffectRotateAlign](PlayWorldEffectRotateAlign_%28script_event%29 "PlayWorldEffectRotateAlign (script event)")
+-   [playWorldBeamEffect](PlayWorldBeamEffect_%28script_event%29 "PlayWorldBeamEffect (script event)")
+-   [setGUIFloat](SetGUIFloat_%28script_event%29 "SetGUIFloat (script event)")
+-   [setGUIHandle](SetGUIHandle_%28script_event%29 "SetGUIHandle (script event)")
+-   [setGUIVec2](SetGUIVec2_%28script_event%29 "SetGUIVec2 (script event)")
+-   [setGUIVec3](SetGUIVec3_%28script_event%29 "SetGUIVec3 (script event)")
+-   [setGUIVec4](SetGUIVec4_%28script_event%29 "SetGUIVec4 (script event)")
+-   [setGUIString](SetGUIString_%28script_event%29 "SetGUIString (script event)")
+-   [setGUIWString](SetGUIWString_%28script_event%29 "SetGUIWString (script event)")
+-   [getGUIFloat](GetGUIFloat_%28script_event%29 "GetGUIFloat (script event)")
+-   [clearDeployRequest](ClearDeployRequest_%28script_event%29 "ClearDeployRequest (script event)")
+-   [getDeployMask](GetDeployMask_%28script_event%29 "GetDeployMask (script event)")
+-   [checkDeployMask](CheckDeployMask_%28script_event%29 "CheckDeployMask (script event)")
+-   [getWorldPlayZoneIndex](GetWorldPlayZoneIndex_%28script_event%29 "GetWorldPlayZoneIndex (script event)")
+-   [consoleCommand](ConsoleCommand_%28script_event%29 "ConsoleCommand (script event)")
+-   [allocTargetTimer](AllocTargetTimer_%28script_event%29 "AllocTargetTimer (script event)")
+-   [getTargetTimerValue](GetTargetTimerValue_%28script_event%29 "GetTargetTimerValue (script event)")
+-   [setTargetTimerValue](SetTargetTimerValue_%28script_event%29 "SetTargetTimerValue (script event)")
+-   [getEntityDefKey](GetEntityDefKey_%28script_event%29 "GetEntityDefKey (script event)")
+-   [getEntityDefIntKey](GetEntityDefIntKey_%28script_event%29 "GetEntityDefIntKey (script event)")
+-   [getEntityDefFloatKey](GetEntityDefFloatKey_%28script_event%29 "GetEntityDefFloatKey (script event)")
+-   [getEntityDefVectorKey](GetEntityDefVectorKey_%28script_event%29 "GetEntityDefVectorKey (script event)")
+-   [getMaxClients](GetMaxClients_%28script_event%29 "GetMaxClients (script event)")
+-   [getClient](GetClient_%28script_event%29 "GetClient (script event)")
+-   [getTerritoryForPoint](GetTerritoryForPoint_%28script_event%29 "GetTerritoryForPoint (script event)")
+-   [getMatchTimeRemaining](GetMatchTimeRemaining_%28script_event%29 "GetMatchTimeRemaining (script event)")
+-   [getMatchState](GetMatchState_%28script_event%29 "GetMatchState (script event)")
+-   [allocStatInt](AllocStatInt_%28script_event%29 "AllocStatInt (script event)")
+-   [allocStatFloat](AllocStatFloat_%28script_event%29 "AllocStatFloat (script event)")
+-   [increaseStatInt](IncreaseStatInt_%28script_event%29 "IncreaseStatInt (script event)")
+-   [increaseStatFloat](IncreaseStatFloat_%28script_event%29 "IncreaseStatFloat (script event)")
+-   [getStatValue](GetStatValue_%28script_event%29 "GetStatValue (script event)")
+-   [getClimateSkin](GetClimateSkin_%28script_event%29 "GetClimateSkin (script event)")
+-   [sendQuickChat](SendQuickChat_%28script_event%29 "SendQuickChat (script event)")
+-   [getContextEntity](GetContextEntity_%28script_event%29 "GetContextEntity (script event)")
+-   [pushEndGameStat](PushEndGameStat_%28script_event%29 "PushEndGameStat (script event)")
+-   [sendEndGameStats](SendEndGameStats_%28script_event%29 "SendEndGameStats (script event)")
+-   [heightMapTrace](HeightMapTrace_%28script_event%29 "HeightMapTrace (script event)")
+-   [enableBotReachability](EnableBotReachability_%28script_event%29 "EnableBotReachability (script event)")
+-   [getNextBotActionIndex](GetNextBotActionIndex_%28script_event%29 "GetNextBotActionIndex (script event)")
+-   [getBotActionOrigin](GetBotActionOrigin_%28script_event%29 "GetBotActionOrigin (script event)")
+-   [getBotActionDeployableType](GetBotActionDeployableType_%28script_event%29 "GetBotActionDeployableType (script event)")
+-   [getBotActionBaseGoalType](GetBotActionBaseGoalType_%28script_event%29 "GetBotActionBaseGoalType (script event)")
 
 Entity Events
 -------------
 
-Events declared in the base [spawn class](Spawn\_class) [idEntity](IdEntity\_(class)).
+Events declared in the base [spawn class](Spawn_class "Spawn class")
+[idEntity](IdEntity_%28class%29 "IdEntity (class)") .
 
-All entities inherit these events, though some may be overridden to produce different behaviour.
+All entities inherit these events, though some may be overridden to
+produce different behaviour.
 
--   [remove](Remove\_(script\_event))
--   isClass
--   [getName](GetName\_(script\_event))
--   [setName](SetName\_(script\_event))
--   getMaster
--   [activate](Activate\_(script\_event))
--   [activateTargets](ActivateTargets\_(script\_event))
--   [numTargets](NumTargets\_(script\_event))
--   [getTarget](GetTarget\_(script\_event))
--   [randomTarget](RandomTarget\_(script\_event))
--   [bind](Bind\_(script\_event))
--   enableAxisBind
--   [bindPosition](BindPosition\_(script\_event))
--   [bindToJoint](BindToJoint\_(script\_event))
--   [unbind](Unbind\_(script\_event))
--   [removeBinds](RemoveBinds\_(script\_event))
--   [setModel](SetModel\_(script\_event))
--   [setSkin](SetSkin\_(script\_event))
--   setCoverage
--   getWorldAxis
--   setWorldAxis
--   getGravityNormal
--   [getWorldOrigin](GetWorldOrigin\_(script\_event))
--   [setWorldOrigin](SetWorldOrigin\_(script\_event))
--   [getOrigin](GetOrigin\_(script\_event))
--   [setOrigin](SetOrigin\_(script\_event))
--   [getAngles](GetAngles\_(script\_event))
--   getLocalAngles
--   [setAngles](SetAngles\_(script\_event))
--   setGravity
--   alignToAxis
--   [getLinearVelocity](GetLinearVelocity\_(script\_event))
--   [setLinearVelocity](SetLinearVelocity\_(script\_event))
--   [getAngularVelocity](GetAngularVelocity\_(script\_event))
--   [setAngularVelocity](SetAngularVelocity\_(script\_event))
--   getMass
--   getCenterOfMass
--   setFriction
--   [getSize](GetSize\_(script\_event))
--   [setSize](SetSize\_(script\_event))
--   [getMins](GetMins\_(script\_event))
--   [getMaxs](GetMaxs\_(script\_event))
--   getAbsMins
--   getAbsMaxs
--   getRenderMins
--   getRenderMaxs
--   setRenderBounds
--   [isHidden](IsHidden\_(script\_event))
--   [hide](Hide\_(script\_event))
--   [show](Show\_(script\_event))
--   [touches](Touches\_(script\_event))
--   touchesBounds
--   [getShaderParm](GetShaderParm\_(script\_event))
--   [setShaderParm](SetShaderParm\_(script\_event))
--   [setShaderParms](SetShaderParms\_(script\_event))
--   [setColor](SetColor\_(script\_event))
--   [getColor](GetColor\_(script\_event))
--   [stopSound](StopSound\_(script\_event))
--   [startSound](StartSound\_(script\_event))
--   [fadeSound](FadeSound\_(script\_event))
--   setChannelPitchShift
--   setChannelFlags
--   clearChannelFlags
--   [getNextKey](GetNextKey\_(script\_event))
--   [setKey](SetKey\_(script\_event))
--   [getKey](GetKey\_(script\_event))
--   [getIntKey](GetIntKey\_(script\_event))
--   [getFloatKey](GetFloatKey\_(script\_event))
--   [getVectorKey](GetVectorKey\_(script\_event))
--   [getEntityKey](GetEntityKey\_(script\_event))
--   getKeyWithDefault
--   getIntKeyWithDefault
--   getFloatKeyWithDefault
--   getVectorKeyWithDefault
--   getClassKey
--   [restorePosition](RestorePosition\_(script\_event))
--   [distanceTo](DistanceTo\_(script\_event))
--   [distanceToPoint](DistanceToPoint\_(script\_event))
--   [wait](Wait\_(script\_event))
--   disablePhysics
--   enablePhysics
--   entitiesInTranslation
--   entitiesInBounds
--   entitiesInLocalBounds
--   entitiesInRadius
--   entitiesOfType
--   entitiesOfClass
--   entitiesOfCollection
--   filterEntitiesByRadius
--   filterEntitiesByClass
--   filterEntitiesByAllegiance
--   filterEntitiesByDisguiseAllegiance
--   filterEntitiesByFilter
--   filterEntitiesByTouching
--   getBoundsCacheCount
--   getBoundsCacheEntity
--   getSavedCacheCount
--   getSavedCacheEntity
--   saveCachedEntities
--   freeSavedCache
--   getEntityAllegiance
--   inCollection
--   getEntityContents
--   getMaskedEntityContents
--   <span class="deadlink"> takesDamage</span>
--   <span class="deadlink"> setTakesDamage</span>
--   applyDamage
--   setNetworkSynced
--   hasAbility
--   sync
--   syncBroadcast
--   syncCallback
--   playMaterialEffect
--   playJointEffect
--   playJointEffectViewSuppress
--   [playEffect](PlayEffect\_(script\_event))
--   playEffectViewSuppress
--   playOriginEffect
--   playEffectMaxVisDist
--   playOriginEffectMaxVisDist
--   playBeamEffect
--   lookupEffect
--   [stopEffect](StopEffect\_(script\_event))
--   killEffect
--   stopEffectHandle
--   unBindEffectHandle
--   setEffectAttenuation
--   setEffectRenderBounds
--   setEffectColor
--   setEffectOrigin
--   setEffectAngles
--   stopAllEffects
--   detachRotationBind
--   clearContacts
--   [setContents](SetContents\_(script\_event))
--   setClipmask
--   putToRest
--   hasForceDisableClip
--   forceDisableClip
--   forceEnableClip
--   hasGroundContacts
--   [disableGravity](DisableGravity\_(script\_event))
--   setComeToRest
--   [applyImpulse](ApplyImpulse\_(script\_event))
--   addForce
--   addForceAt
--   addTorque
--   activatePhysics
--   [isAtRest](IsAtRest\_(script\_event))
--   isBound
--   turnTowards
--   [getGameTeam](GetGameTeam\_(script\_event))
--   [setGameTeam](SetGameTeam\_(script\_event))
--   launchMissileSimple
--   launchBullet
--   getLocalPlayer
--   getLocalViewPlayer
--   getGUI
--   setGUITheme
--   guiPostNamedEvent
--   pointInRadar
--   disableImpact
--   enableImpact
--   disableKnockback
--   enableKnockback
--   sendNetworkCommand
--   sendNetworkEvent
--   preventDeployment
--   allocBeam
--   updateBeam
--   freeBeam
--   freeAllBeams
--   getNextTeamEntity
--   allocHudModule
--   freeHudModule
--   requestDeployment
--   requestCheckedDeployment
--   getWorldMins
--   getWorldMaxs
--   setDeploymentObject
--   setDeploymentState
--   setDeploymentMode
--   getDeploymentMode
--   getDeploymentRotation
--   allowDeploymentRotation
--   getDefaultFov
--   [setHealth](SetHealth\_(script\_event))
--   [getHealth](GetHealth\_(script\_event))
--   <span class="deadlink"> setMaxHealth</span>
--   getMaxHealth
--   [getEnemy](GetEnemy\_(script\_event))
--   setCanCollideWithTeam
--   spawnClientEffect
--   spawnClientCrawlEffect
--   setEffectEndOrigin
--   setEffectLooping
--   endEffect
--   getSpawnID
--   getDeployableObject
--   isSpotted
--   setSpotted
--   forceNetworkUpdate
--   getEntityNumber
--   disableCrosshairTrace
--   isInWater
--   getDamageScale
--   getDefaultSurfaceType
+-   [remove](Remove_%28script_event%29 "Remove (script event)")
+-   [isClass](IsClass_%28script_event%29 "IsClass (script event)")
+-   [getName](GetName_%28script_event%29 "GetName (script event)")
+-   [setName](SetName_%28script_event%29 "SetName (script event)")
+-   [getMaster](GetMaster_%28script_event%29 "GetMaster (script event)")
+-   [activate](Activate_%28script_event%29 "Activate (script event)")
+-   [activateTargets](ActivateTargets_%28script_event%29 "ActivateTargets (script event)")
+-   [numTargets](NumTargets_%28script_event%29 "NumTargets (script event)")
+-   [getTarget](GetTarget_%28script_event%29 "GetTarget (script event)")
+-   [randomTarget](RandomTarget_%28script_event%29 "RandomTarget (script event)")
+-   [bind](Bind_%28script_event%29 "Bind (script event)")
+-   [enableAxisBind](EnableAxisBind_%28script_event%29 "EnableAxisBind (script event)")
+-   [bindPosition](BindPosition_%28script_event%29 "BindPosition (script event)")
+-   [bindToJoint](BindToJoint_%28script_event%29 "BindToJoint (script event)")
+-   [unbind](Unbind_%28script_event%29 "Unbind (script event)")
+-   [removeBinds](RemoveBinds_%28script_event%29 "RemoveBinds (script event)")
+-   [setModel](SetModel_%28script_event%29 "SetModel (script event)")
+-   [setSkin](SetSkin_%28script_event%29 "SetSkin (script event)")
+-   [setCoverage](SetCoverage_%28script_event%29 "SetCoverage (script event)")
+-   [getWorldAxis](GetWorldAxis_%28script_event%29 "GetWorldAxis (script event)")
+-   [setWorldAxis](SetWorldAxis_%28script_event%29 "SetWorldAxis (script event)")
+-   [getGravityNormal](GetGravityNormal_%28script_event%29 "GetGravityNormal (script event)")
+-   [getWorldOrigin](GetWorldOrigin_%28script_event%29 "GetWorldOrigin (script event)")
+-   [setWorldOrigin](SetWorldOrigin_%28script_event%29 "SetWorldOrigin (script event)")
+-   [getOrigin](GetOrigin_%28script_event%29 "GetOrigin (script event)")
+-   [setOrigin](SetOrigin_%28script_event%29 "SetOrigin (script event)")
+-   [getAngles](GetAngles_%28script_event%29 "GetAngles (script event)")
+-   [getLocalAngles](GetLocalAngles_%28script_event%29 "GetLocalAngles (script event)")
+-   [setAngles](SetAngles_%28script_event%29 "SetAngles (script event)")
+-   [setGravity](SetGravity_%28script_event%29 "SetGravity (script event)")
+-   [alignToAxis](AlignToAxis_%28script_event%29 "AlignToAxis (script event)")
+-   [getLinearVelocity](GetLinearVelocity_%28script_event%29 "GetLinearVelocity (script event)")
+-   [setLinearVelocity](SetLinearVelocity_%28script_event%29 "SetLinearVelocity (script event)")
+-   [getAngularVelocity](GetAngularVelocity_%28script_event%29 "GetAngularVelocity (script event)")
+-   [setAngularVelocity](SetAngularVelocity_%28script_event%29 "SetAngularVelocity (script event)")
+-   [getMass](GetMass_%28script_event%29 "GetMass (script event)")
+-   [getCenterOfMass](GetCenterOfMass_%28script_event%29 "GetCenterOfMass (script event)")
+-   [setFriction](SetFriction_%28script_event%29 "SetFriction (script event)")
+-   [getSize](GetSize_%28script_event%29 "GetSize (script event)")
+-   [setSize](SetSize_%28script_event%29 "SetSize (script event)")
+-   [getMins](GetMins_%28script_event%29 "GetMins (script event)")
+-   [getMaxs](GetMaxs_%28script_event%29 "GetMaxs (script event)")
+-   [getAbsMins](GetAbsMins_%28script_event%29 "GetAbsMins (script event)")
+-   [getAbsMaxs](GetAbsMaxs_%28script_event%29 "GetAbsMaxs (script event)")
+-   [getRenderMins](GetRenderMins_%28script_event%29 "GetRenderMins (script event)")
+-   [getRenderMaxs](GetRenderMaxs_%28script_event%29 "GetRenderMaxs (script event)")
+-   [setRenderBounds](SetRenderBounds_%28script_event%29 "SetRenderBounds (script event)")
+-   [isHidden](IsHidden_%28script_event%29 "IsHidden (script event)")
+-   [hide](Hide_%28script_event%29 "Hide (script event)")
+-   [show](Show_%28script_event%29 "Show (script event)")
+-   [touches](Touches_%28script_event%29 "Touches (script event)")
+-   [touchesBounds](TouchesBounds_%28script_event%29 "TouchesBounds (script event)")
+-   [getShaderParm](GetShaderParm_%28script_event%29 "GetShaderParm (script event)")
+-   [setShaderParm](SetShaderParm_%28script_event%29 "SetShaderParm (script event)")
+-   [setShaderParms](SetShaderParms_%28script_event%29 "SetShaderParms (script event)")
+-   [setColor](SetColor_%28script_event%29 "SetColor (script event)")
+-   [getColor](GetColor_%28script_event%29 "GetColor (script event)")
+-   [stopSound](StopSound_%28script_event%29 "StopSound (script event)")
+-   [startSound](StartSound_%28script_event%29 "StartSound (script event)")
+-   [fadeSound](FadeSound_%28script_event%29 "FadeSound (script event)")
+-   [setChannelPitchShift](SetChannelPitchShift_%28script_event%29 "SetChannelPitchShift (script event)")
+-   [setChannelFlags](SetChannelFlags_%28script_event%29 "SetChannelFlags (script event)")
+-   [clearChannelFlags](ClearChannelFlags_%28script_event%29 "ClearChannelFlags (script event)")
+-   [getNextKey](GetNextKey_%28script_event%29 "GetNextKey (script event)")
+-   [setKey](SetKey_%28script_event%29 "SetKey (script event)")
+-   [getKey](GetKey_%28script_event%29 "GetKey (script event)")
+-   [getIntKey](GetIntKey_%28script_event%29 "GetIntKey (script event)")
+-   [getFloatKey](GetFloatKey_%28script_event%29 "GetFloatKey (script event)")
+-   [getVectorKey](GetVectorKey_%28script_event%29 "GetVectorKey (script event)")
+-   [getEntityKey](GetEntityKey_%28script_event%29 "GetEntityKey (script event)")
+-   [getKeyWithDefault](GetKeyWithDefault_%28script_event%29 "GetKeyWithDefault (script event)")
+-   [getIntKeyWithDefault](GetIntKeyWithDefault_%28script_event%29 "GetIntKeyWithDefault (script event)")
+-   [getFloatKeyWithDefault](GetFloatKeyWithDefault_%28script_event%29 "GetFloatKeyWithDefault (script event)")
+-   [getVectorKeyWithDefault](GetVectorKeyWithDefault_%28script_event%29 "GetVectorKeyWithDefault (script event)")
+-   [getClassKey](GetClassKey_%28script_event%29 "GetClassKey (script event)")
+-   [restorePosition](RestorePosition_%28script_event%29 "RestorePosition (script event)")
+-   [distanceTo](DistanceTo_%28script_event%29 "DistanceTo (script event)")
+-   [distanceToPoint](DistanceToPoint_%28script_event%29 "DistanceToPoint (script event)")
+-   [wait](Wait_%28script_event%29 "Wait (script event)")
+-   [disablePhysics](DisablePhysics_%28script_event%29 "DisablePhysics (script event)")
+-   [enablePhysics](EnablePhysics_%28script_event%29 "EnablePhysics (script event)")
+-   [entitiesInTranslation](EntitiesInTranslation_%28script_event%29 "EntitiesInTranslation (script event)")
+-   [entitiesInBounds](EntitiesInBounds_%28script_event%29 "EntitiesInBounds (script event)")
+-   [entitiesInLocalBounds](EntitiesInLocalBounds_%28script_event%29 "EntitiesInLocalBounds (script event)")
+-   [entitiesInRadius](EntitiesInRadius_%28script_event%29 "EntitiesInRadius (script event)")
+-   [entitiesOfType](EntitiesOfType_%28script_event%29 "EntitiesOfType (script event)")
+-   [entitiesOfClass](EntitiesOfClass_%28script_event%29 "EntitiesOfClass (script event)")
+-   [entitiesOfCollection](EntitiesOfCollection_%28script_event%29 "EntitiesOfCollection (script event)")
+-   [filterEntitiesByRadius](FilterEntitiesByRadius_%28script_event%29 "FilterEntitiesByRadius (script event)")
+-   [filterEntitiesByClass](FilterEntitiesByClass_%28script_event%29 "FilterEntitiesByClass (script event)")
+-   [filterEntitiesByAllegiance](FilterEntitiesByAllegiance_%28script_event%29 "FilterEntitiesByAllegiance (script event)")
+-   [filterEntitiesByDisguiseAllegiance](FilterEntitiesByDisguiseAllegiance_%28script_event%29 "FilterEntitiesByDisguiseAllegiance (script event)")
+-   [filterEntitiesByFilter](FilterEntitiesByFilter_%28script_event%29 "FilterEntitiesByFilter (script event)")
+-   [filterEntitiesByTouching](FilterEntitiesByTouching_%28script_event%29 "FilterEntitiesByTouching (script event)")
+-   [getBoundsCacheCount](GetBoundsCacheCount_%28script_event%29 "GetBoundsCacheCount (script event)")
+-   [getBoundsCacheEntity](GetBoundsCacheEntity_%28script_event%29 "GetBoundsCacheEntity (script event)")
+-   [getSavedCacheCount](GetSavedCacheCount_%28script_event%29 "GetSavedCacheCount (script event)")
+-   [getSavedCacheEntity](GetSavedCacheEntity_%28script_event%29 "GetSavedCacheEntity (script event)")
+-   [saveCachedEntities](SaveCachedEntities_%28script_event%29 "SaveCachedEntities (script event)")
+-   [freeSavedCache](FreeSavedCache_%28script_event%29 "FreeSavedCache (script event)")
+-   [getEntityAllegiance](GetEntityAllegiance_%28script_event%29 "GetEntityAllegiance (script event)")
+-   [inCollection](InCollection_%28script_event%29 "InCollection (script event)")
+-   [getEntityContents](GetEntityContents_%28script_event%29 "GetEntityContents (script event)")
+-   [getMaskedEntityContents](GetMaskedEntityContents_%28script_event%29 "GetMaskedEntityContents (script event)")
+-   [takesDamage](TakesDamage_%28script_event%29 "TakesDamage (script event)")
+-   [setTakesDamage](SetTakesDamage_%28script_event%29 "SetTakesDamage (script event)")
+-   [applyDamage](ApplyDamage_%28script_event%29 "ApplyDamage (script event)")
+-   [setNetworkSynced](SetNetworkSynced_%28script_event%29 "SetNetworkSynced (script event)")
+-   [hasAbility](HasAbility_%28script_event%29 "HasAbility (script event)")
+-   [sync](Sync_%28script_event%29 "Sync (script event)")
+-   [syncBroadcast](SyncBroadcast_%28script_event%29 "SyncBroadcast (script event)")
+-   [syncCallback](SyncCallback_%28script_event%29 "SyncCallback (script event)")
+-   [playMaterialEffect](PlayMaterialEffect_%28script_event%29 "PlayMaterialEffect (script event)")
+-   [playJointEffect](PlayJointEffect_%28script_event%29 "PlayJointEffect (script event)")
+-   [playJointEffectViewSuppress](PlayJointEffectViewSuppress_%28script_event%29 "PlayJointEffectViewSuppress (script event)")
+-   [playEffect](PlayEffect_%28script_event%29 "PlayEffect (script event)")
+-   [playEffectViewSuppress](PlayEffectViewSuppress_%28script_event%29 "PlayEffectViewSuppress (script event)")
+-   [playOriginEffect](PlayOriginEffect_%28script_event%29 "PlayOriginEffect (script event)")
+-   [playEffectMaxVisDist](PlayEffectMaxVisDist_%28script_event%29 "PlayEffectMaxVisDist (script event)")
+-   [playOriginEffectMaxVisDist](PlayOriginEffectMaxVisDist_%28script_event%29 "PlayOriginEffectMaxVisDist (script event)")
+-   [playBeamEffect](PlayBeamEffect_%28script_event%29 "PlayBeamEffect (script event)")
+-   [lookupEffect](LookupEffect_%28script_event%29 "LookupEffect (script event)")
+-   [stopEffect](StopEffect_%28script_event%29 "StopEffect (script event)")
+-   [killEffect](KillEffect_%28script_event%29 "KillEffect (script event)")
+-   [stopEffectHandle](StopEffectHandle_%28script_event%29 "StopEffectHandle (script event)")
+-   [unBindEffectHandle](UnBindEffectHandle_%28script_event%29 "UnBindEffectHandle (script event)")
+-   [setEffectAttenuation](SetEffectAttenuation_%28script_event%29 "SetEffectAttenuation (script event)")
+-   [setEffectRenderBounds](SetEffectRenderBounds_%28script_event%29 "SetEffectRenderBounds (script event)")
+-   [setEffectColor](SetEffectColor_%28script_event%29 "SetEffectColor (script event)")
+-   [setEffectOrigin](SetEffectOrigin_%28script_event%29 "SetEffectOrigin (script event)")
+-   [setEffectAngles](SetEffectAngles_%28script_event%29 "SetEffectAngles (script event)")
+-   [stopAllEffects](StopAllEffects_%28script_event%29 "StopAllEffects (script event)")
+-   [detachRotationBind](DetachRotationBind_%28script_event%29 "DetachRotationBind (script event)")
+-   [clearContacts](ClearContacts_%28script_event%29 "ClearContacts (script event)")
+-   [setContents](SetContents_%28script_event%29 "SetContents (script event)")
+-   [setClipmask](SetClipmask_%28script_event%29 "SetClipmask (script event)")
+-   [putToRest](PutToRest_%28script_event%29 "PutToRest (script event)")
+-   [hasForceDisableClip](HasForceDisableClip_%28script_event%29 "HasForceDisableClip (script event)")
+-   [forceDisableClip](ForceDisableClip_%28script_event%29 "ForceDisableClip (script event)")
+-   [forceEnableClip](ForceEnableClip_%28script_event%29 "ForceEnableClip (script event)")
+-   [hasGroundContacts](HasGroundContacts_%28script_event%29 "HasGroundContacts (script event)")
+-   [disableGravity](DisableGravity_%28script_event%29 "DisableGravity (script event)")
+-   [setComeToRest](SetComeToRest_%28script_event%29 "SetComeToRest (script event)")
+-   [applyImpulse](ApplyImpulse_%28script_event%29 "ApplyImpulse (script event)")
+-   [addForce](AddForce_%28script_event%29 "AddForce (script event)")
+-   [addForceAt](AddForceAt_%28script_event%29 "AddForceAt (script event)")
+-   [addTorque](AddTorque_%28script_event%29 "AddTorque (script event)")
+-   [activatePhysics](ActivatePhysics_%28script_event%29 "ActivatePhysics (script event)")
+-   [isAtRest](IsAtRest_%28script_event%29 "IsAtRest (script event)")
+-   [isBound](IsBound_%28script_event%29 "IsBound (script event)")
+-   [turnTowards](TurnTowards_%28script_event%29 "TurnTowards (script event)")
+-   [getGameTeam](GetGameTeam_%28script_event%29 "GetGameTeam (script event)")
+-   [setGameTeam](SetGameTeam_%28script_event%29 "SetGameTeam (script event)")
+-   [launchMissileSimple](LaunchMissileSimple_%28script_event%29 "LaunchMissileSimple (script event)")
+-   [launchBullet](LaunchBullet_%28script_event%29 "LaunchBullet (script event)")
+-   [getLocalPlayer](GetLocalPlayer_%28script_event%29 "GetLocalPlayer (script event)")
+-   [getLocalViewPlayer](GetLocalViewPlayer_%28script_event%29 "GetLocalViewPlayer (script event)")
+-   [getGUI](GetGUI_%28script_event%29 "GetGUI (script event)")
+-   [setGUITheme](SetGUITheme_%28script_event%29 "SetGUITheme (script event)")
+-   [guiPostNamedEvent](GuiPostNamedEvent_%28script_event%29 "GuiPostNamedEvent (script event)")
+-   [pointInRadar](PointInRadar_%28script_event%29 "PointInRadar (script event)")
+-   [disableImpact](DisableImpact_%28script_event%29 "DisableImpact (script event)")
+-   [enableImpact](EnableImpact_%28script_event%29 "EnableImpact (script event)")
+-   [disableKnockback](DisableKnockback_%28script_event%29 "DisableKnockback (script event)")
+-   [enableKnockback](EnableKnockback_%28script_event%29 "EnableKnockback (script event)")
+-   [sendNetworkCommand](SendNetworkCommand_%28script_event%29 "SendNetworkCommand (script event)")
+-   [sendNetworkEvent](SendNetworkEvent_%28script_event%29 "SendNetworkEvent (script event)")
+-   [preventDeployment](PreventDeployment_%28script_event%29 "PreventDeployment (script event)")
+-   [allocBeam](AllocBeam_%28script_event%29 "AllocBeam (script event)")
+-   [updateBeam](UpdateBeam_%28script_event%29 "UpdateBeam (script event)")
+-   [freeBeam](FreeBeam_%28script_event%29 "FreeBeam (script event)")
+-   [freeAllBeams](FreeAllBeams_%28script_event%29 "FreeAllBeams (script event)")
+-   [getNextTeamEntity](GetNextTeamEntity_%28script_event%29 "GetNextTeamEntity (script event)")
+-   [allocHudModule](AllocHudModule_%28script_event%29 "AllocHudModule (script event)")
+-   [freeHudModule](FreeHudModule_%28script_event%29 "FreeHudModule (script event)")
+-   [requestDeployment](RequestDeployment_%28script_event%29 "RequestDeployment (script event)")
+-   [requestCheckedDeployment](RequestCheckedDeployment_%28script_event%29 "RequestCheckedDeployment (script event)")
+-   [getWorldMins](GetWorldMins_%28script_event%29 "GetWorldMins (script event)")
+-   [getWorldMaxs](GetWorldMaxs_%28script_event%29 "GetWorldMaxs (script event)")
+-   [setDeploymentObject](SetDeploymentObject_%28script_event%29 "SetDeploymentObject (script event)")
+-   [setDeploymentState](SetDeploymentState_%28script_event%29 "SetDeploymentState (script event)")
+-   [setDeploymentMode](SetDeploymentMode_%28script_event%29 "SetDeploymentMode (script event)")
+-   [getDeploymentMode](GetDeploymentMode_%28script_event%29 "GetDeploymentMode (script event)")
+-   [getDeploymentRotation](GetDeploymentRotation_%28script_event%29 "GetDeploymentRotation (script event)")
+-   [allowDeploymentRotation](AllowDeploymentRotation_%28script_event%29 "AllowDeploymentRotation (script event)")
+-   [getDefaultFov](GetDefaultFov_%28script_event%29 "GetDefaultFov (script event)")
+-   [setHealth](SetHealth_%28script_event%29 "SetHealth (script event)")
+-   [getHealth](GetHealth_%28script_event%29 "GetHealth (script event)")
+-   [setMaxHealth](SetMaxHealth_%28script_event%29 "SetMaxHealth (script event)")
+-   [getMaxHealth](GetMaxHealth_%28script_event%29 "GetMaxHealth (script event)")
+-   [getEnemy](GetEnemy_%28script_event%29 "GetEnemy (script event)")
+-   [setCanCollideWithTeam](SetCanCollideWithTeam_%28script_event%29 "SetCanCollideWithTeam (script event)")
+-   [spawnClientEffect](SpawnClientEffect_%28script_event%29 "SpawnClientEffect (script event)")
+-   [spawnClientCrawlEffect](SpawnClientCrawlEffect_%28script_event%29 "SpawnClientCrawlEffect (script event)")
+-   [setEffectEndOrigin](SetEffectEndOrigin_%28script_event%29 "SetEffectEndOrigin (script event)")
+-   [setEffectLooping](SetEffectLooping_%28script_event%29 "SetEffectLooping (script event)")
+-   [endEffect](EndEffect_%28script_event%29 "EndEffect (script event)")
+-   [getSpawnID](GetSpawnID_%28script_event%29 "GetSpawnID (script event)")
+-   [getDeployableObject](GetDeployableObject_%28script_event%29 "GetDeployableObject (script event)")
+-   [isSpotted](IsSpotted_%28script_event%29 "IsSpotted (script event)")
+-   [setSpotted](SetSpotted_%28script_event%29 "SetSpotted (script event)")
+-   [forceNetworkUpdate](ForceNetworkUpdate_%28script_event%29 "ForceNetworkUpdate (script event)")
+-   [getEntityNumber](GetEntityNumber_%28script_event%29 "GetEntityNumber (script event)")
+-   [disableCrosshairTrace](DisableCrosshairTrace_%28script_event%29 "DisableCrosshairTrace (script event)")
+-   [isInWater](IsInWater_%28script_event%29 "IsInWater (script event)")
+-   [getDamageScale](GetDamageScale_%28script_event%29 "GetDamageScale (script event)")
+-   [getDefaultSurfaceType](GetDefaultSurfaceType_%28script_event%29 "GetDefaultSurfaceType (script event)")
 
 ### idLight Events
 
--   turnOn
--   turnOff
+-   [turnOn](TurnOn_%28script_event%29 "TurnOn (script event)")
+-   [turnOff](TurnOff_%28script_event%29 "TurnOff (script event)")
 
 ### idForcefield Events
 
--   [Toggle](Toggle\_(script\_event))
+-   [Toggle](Toggle_%28script_event%29 "Toggle (script event)")
 
 ### Animate Events
 
--   [launchMissiles](LaunchMissiles\_(script\_event))
--   [startRagdoll](StartRagdoll\_(script\_event))
+-   [launchMissiles](LaunchMissiles_%28script_event%29 "LaunchMissiles (script event)")
+-   [startRagdoll](StartRagdoll_%28script_event%29 "StartRagdoll (script event)")
 
 ### idDoor Events
 
--   [enable](Enable\_(script\_event))
--   [disable](Disable\_(script\_event))
--   [open](Open\_(script\_event))
--   [close](Close\_(script\_event))
--   [isOpen](IsOpen\_(script\_event))
--   isClosed
--   isOpening
--   isClosing
--   getMoveMaster
--   getNextSlave
+-   [enable](Enable_%28script_event%29 "Enable (script event)")
+-   [disable](Disable_%28script_event%29 "Disable (script event)")
+-   [open](Open_%28script_event%29 "Open (script event)")
+-   [close](Close_%28script_event%29 "Close (script event)")
+-   [isOpen](IsOpen_%28script_event%29 "IsOpen (script event)")
+-   [isClosed](IsClosed_%28script_event%29 "IsClosed (script event)")
+-   [isOpening](IsOpening_%28script_event%29 "IsOpening (script event)")
+-   [isClosing](IsClosing_%28script_event%29 "IsClosing (script event)")
+-   [getMoveMaster](GetMoveMaster_%28script_event%29 "GetMoveMaster (script event)")
+-   [getNextSlave](GetNextSlave_%28script_event%29 "GetNextSlave (script event)")
 
 ### idMoveable Events
 
--   [becomeNonSolid](BecomeNonSolid\_(script\_event))
--   [enableDamage](EnableDamage\_(script\_event))
+-   [becomeNonSolid](BecomeNonSolid_%28script_event%29 "BecomeNonSolid (script event)")
+-   [enableDamage](EnableDamage_%28script_event%29 "EnableDamage (script event)")
 
 ### sdGeneralMover Events
 
-**Note:** This spawn class does not have any entityDef referencing it and wasn't used in the retail maps.
+**Note:** This spawn class does not have any entityDef referencing it
+and wasn't used in the retail maps.
 
--   startTimedMove
--   stopCurrentMove
--   setPosition
--   getNumPositions
--   addPosition
--   getMoverState
--   killBlockingEntity
+-   [startTimedMove](StartTimedMove_%28script_event%29 "StartTimedMove (script event)")
+-   [stopCurrentMove](StopCurrentMove_%28script_event%29 "StopCurrentMove (script event)")
+-   [setPosition](SetPosition_%28script_event%29 "SetPosition (script event)")
+-   [getNumPositions](GetNumPositions_%28script_event%29 "GetNumPositions (script event)")
+-   [addPosition](AddPosition_%28script_event%29 "AddPosition (script event)")
+-   [getMoverState](GetMoverState_%28script_event%29 "GetMoverState (script event)")
+-   [killBlockingEntity](KillBlockingEntity_%28script_event%29 "KillBlockingEntity (script event)")
 
 ### idAnimatedEntity Events
 
 Skeletal Animation Events
 
--   [getJointHandle](GetJointHandle\_(script\_event))
--   [clearAllJoints](ClearAllJoints\_(script\_event))
--   [clearJoint](ClearJoint\_(script\_event))
--   [setJointPos](SetJointPos\_(script\_event))
--   [setJointAngle](SetJointAngle\_(script\_event))
--   [getJointPos](GetJointPos\_(script\_event))
--   getLocalJointPos
--   getJointAxis
--   [getJointAngle](GetJointAngle\_(script\_event))
--   [playAnim](PlayAnim\_(script\_event))
--   isAnimating
--   getAnimatingOnChannel
--   animationName
--   isAnimatingOnChannel
--   jointToWorldSpace
--   worldToModelSpace
--   [hideSurface](HideSurface\_(script\_event))
--   [showSurface](ShowSurface\_(script\_event))
--   getSurfaceId
--   isSurfaceHidden
+-   [getJointHandle](GetJointHandle_%28script_event%29 "GetJointHandle (script event)")
+-   [clearAllJoints](ClearAllJoints_%28script_event%29 "ClearAllJoints (script event)")
+-   [clearJoint](ClearJoint_%28script_event%29 "ClearJoint (script event)")
+-   [setJointPos](SetJointPos_%28script_event%29 "SetJointPos (script event)")
+-   [setJointAngle](SetJointAngle_%28script_event%29 "SetJointAngle (script event)")
+-   [getJointPos](GetJointPos_%28script_event%29 "GetJointPos (script event)")
+-   [getLocalJointPos](GetLocalJointPos_%28script_event%29 "GetLocalJointPos (script event)")
+-   [getJointAxis](GetJointAxis_%28script_event%29 "GetJointAxis (script event)")
+-   [getJointAngle](GetJointAngle_%28script_event%29 "GetJointAngle (script event)")
+-   [playAnim](PlayAnim_%28script_event%29 "PlayAnim (script event)")
+-   [isAnimating](IsAnimating_%28script_event%29 "IsAnimating (script event)")
+-   [getAnimatingOnChannel](GetAnimatingOnChannel_%28script_event%29 "GetAnimatingOnChannel (script event)")
+-   [animationName](AnimationName_%28script_event%29 "AnimationName (script event)")
+-   [isAnimatingOnChannel](IsAnimatingOnChannel_%28script_event%29 "IsAnimatingOnChannel (script event)")
+-   [jointToWorldSpace](JointToWorldSpace_%28script_event%29 "JointToWorldSpace (script event)")
+-   [worldToModelSpace](WorldToModelSpace_%28script_event%29 "WorldToModelSpace (script event)")
+-   [hideSurface](HideSurface_%28script_event%29 "HideSurface (script event)")
+-   [showSurface](ShowSurface_%28script_event%29 "ShowSurface (script event)")
+-   [getSurfaceId](GetSurfaceId_%28script_event%29 "GetSurfaceId (script event)")
+-   [isSurfaceHidden](IsSurfaceHidden_%28script_event%29 "IsSurfaceHidden (script event)")
 
 ### idWeapon Events
 
--   getOwner
--   nextWeapon
--   [weaponState](WeaponState\_(script\_event))
--   getWeaponState
--   [addToClip](AddToClip\_(script\_event))
--   ammoInClip
--   ammoAvailable
--   [clipSize](ClipSize\_(script\_event))
--   ammoRequired
--   ammoType
--   [useAmmo](UseAmmo\_(script\_event))
--   fired
--   [playAnim](PlayAnim\_(script\_event))
--   [playCycle](PlayCycle\_(script\_event))
--   [animDone](AnimDone\_(script\_event))
--   [setBlendFrames](SetBlendFrames\_(script\_event))
--   [getBlendFrames](GetBlendFrames\_(script\_event))
--   [weaponReady](WeaponReady\_(script\_event))
--   [weaponOutOfAmmo](WeaponOutOfAmmo\_(script\_event))
--   weaponReloading
--   weaponHolstered
--   weaponRising
--   weaponLowering
--   <span class="deadlink"> launchProjectiles</span>
--   createProjectile
--   melee
--   meleeAttack
--   [setLightParm](SetLightParm\_(script\_event))
--   [setLightParms](SetLightParms\_(script\_event))
--   saveMeleeTrace
--   getMeleeFraction
--   getMeleeEndPos
--   getMeleePoint
--   getMeleeNormal
--   getMeleeEntity
--   getMeleeSurfaceFlags
--   getMeleeSurfaceType
--   getMeleeSurfaceColor
--   getMeleeJoint
--   getMeleeBody
--   enableTargetLock
--   setFovStart
--   setFov
--   clearFov
--   getFov
--   enableClamp
--   disableClamp
--   disableModel
--   getCurrentSpread
--   increaseSpread
--   setSpreadModifier
--   getWorldModel
--   setDriftScale
--   resetTracerCounter
--   getLastTracer
--   setupAnimClass
--   enableSway
--   enableSpreadEvals
--   setStatName
+-   [getOwner](GetOwner_%28script_event%29 "GetOwner (script event)")
+-   [nextWeapon](NextWeapon_%28script_event%29 "NextWeapon (script event)")
+-   [weaponState](WeaponState_%28script_event%29 "WeaponState (script event)")
+-   [getWeaponState](GetWeaponState_%28script_event%29 "GetWeaponState (script event)")
+-   [addToClip](AddToClip_%28script_event%29 "AddToClip (script event)")
+-   [ammoInClip](AmmoInClip_%28script_event%29 "AmmoInClip (script event)")
+-   [ammoAvailable](AmmoAvailable_%28script_event%29 "AmmoAvailable (script event)")
+-   [clipSize](ClipSize_%28script_event%29 "ClipSize (script event)")
+-   [ammoRequired](AmmoRequired_%28script_event%29 "AmmoRequired (script event)")
+-   [ammoType](AmmoType_%28script_event%29 "AmmoType (script event)")
+-   [useAmmo](UseAmmo_%28script_event%29 "UseAmmo (script event)")
+-   [fired](Fired_%28script_event%29 "Fired (script event)")
+-   [playAnim](PlayAnim_%28script_event%29 "PlayAnim (script event)")
+-   [playCycle](PlayCycle_%28script_event%29 "PlayCycle (script event)")
+-   [animDone](AnimDone_%28script_event%29 "AnimDone (script event)")
+-   [setBlendFrames](SetBlendFrames_%28script_event%29 "SetBlendFrames (script event)")
+-   [getBlendFrames](GetBlendFrames_%28script_event%29 "GetBlendFrames (script event)")
+-   [weaponReady](WeaponReady_%28script_event%29 "WeaponReady (script event)")
+-   [weaponOutOfAmmo](WeaponOutOfAmmo_%28script_event%29 "WeaponOutOfAmmo (script event)")
+-   [weaponReloading](WeaponReloading_%28script_event%29 "WeaponReloading (script event)")
+-   [weaponHolstered](WeaponHolstered_%28script_event%29 "WeaponHolstered (script event)")
+-   [weaponRising](WeaponRising_%28script_event%29 "WeaponRising (script event)")
+-   [weaponLowering](WeaponLowering_%28script_event%29 "WeaponLowering (script event)")
+-   [launchProjectiles](LaunchProjectiles_%28script_event%29 "LaunchProjectiles (script event)")
+-   [createProjectile](CreateProjectile_%28script_event%29 "CreateProjectile (script event)")
+-   [melee](Melee_%28script_event%29 "Melee (script event)")
+-   [meleeAttack](MeleeAttack_%28script_event%29 "MeleeAttack (script event)")
+-   [setLightParm](SetLightParm_%28script_event%29 "SetLightParm (script event)")
+-   [setLightParms](SetLightParms_%28script_event%29 "SetLightParms (script event)")
+-   [saveMeleeTrace](SaveMeleeTrace_%28script_event%29 "SaveMeleeTrace (script event)")
+-   [getMeleeFraction](GetMeleeFraction_%28script_event%29 "GetMeleeFraction (script event)")
+-   [getMeleeEndPos](GetMeleeEndPos_%28script_event%29 "GetMeleeEndPos (script event)")
+-   [getMeleePoint](GetMeleePoint_%28script_event%29 "GetMeleePoint (script event)")
+-   [getMeleeNormal](GetMeleeNormal_%28script_event%29 "GetMeleeNormal (script event)")
+-   [getMeleeEntity](GetMeleeEntity_%28script_event%29 "GetMeleeEntity (script event)")
+-   [getMeleeSurfaceFlags](GetMeleeSurfaceFlags_%28script_event%29 "GetMeleeSurfaceFlags (script event)")
+-   [getMeleeSurfaceType](GetMeleeSurfaceType_%28script_event%29 "GetMeleeSurfaceType (script event)")
+-   [getMeleeSurfaceColor](GetMeleeSurfaceColor_%28script_event%29 "GetMeleeSurfaceColor (script event)")
+-   [getMeleeJoint](GetMeleeJoint_%28script_event%29 "GetMeleeJoint (script event)")
+-   [getMeleeBody](GetMeleeBody_%28script_event%29 "GetMeleeBody (script event)")
+-   [enableTargetLock](EnableTargetLock_%28script_event%29 "EnableTargetLock (script event)")
+-   [setFovStart](SetFovStart_%28script_event%29 "SetFovStart (script event)")
+-   [setFov](SetFov_%28script_event%29 "SetFov (script event)")
+-   [clearFov](ClearFov_%28script_event%29 "ClearFov (script event)")
+-   [getFov](GetFov_%28script_event%29 "GetFov (script event)")
+-   [enableClamp](EnableClamp_%28script_event%29 "EnableClamp (script event)")
+-   [disableClamp](DisableClamp_%28script_event%29 "DisableClamp (script event)")
+-   [disableModel](DisableModel_%28script_event%29 "DisableModel (script event)")
+-   [getCurrentSpread](GetCurrentSpread_%28script_event%29 "GetCurrentSpread (script event)")
+-   [increaseSpread](IncreaseSpread_%28script_event%29 "IncreaseSpread (script event)")
+-   [setSpreadModifier](SetSpreadModifier_%28script_event%29 "SetSpreadModifier (script event)")
+-   [getWorldModel](GetWorldModel_%28script_event%29 "GetWorldModel (script event)")
+-   [setDriftScale](SetDriftScale_%28script_event%29 "SetDriftScale (script event)")
+-   [resetTracerCounter](ResetTracerCounter_%28script_event%29 "ResetTracerCounter (script event)")
+-   [getLastTracer](GetLastTracer_%28script_event%29 "GetLastTracer (script event)")
+-   [setupAnimClass](SetupAnimClass_%28script_event%29 "SetupAnimClass (script event)")
+-   [enableSway](EnableSway_%28script_event%29 "EnableSway (script event)")
+-   [enableSpreadEvals](EnableSpreadEvals_%28script_event%29 "EnableSpreadEvals (script event)")
+-   [setStatName](SetStatName_%28script_event%29 "SetStatName (script event)")
 
 ### idProjectile Events
 
--   getDamagePower
--   getOwner
--   [setOwner](SetOwner\_(script\_event))
--   getLaunchTime
--   launch
--   addOwner
--   [setEnemy](SetEnemy\_(script\_event))
--   isOwner
+-   [getDamagePower](GetDamagePower_%28script_event%29 "GetDamagePower (script event)")
+-   [getOwner](GetOwner_%28script_event%29 "GetOwner (script event)")
+-   [setOwner](SetOwner_%28script_event%29 "SetOwner (script event)")
+-   [getLaunchTime](GetLaunchTime_%28script_event%29 "GetLaunchTime (script event)")
+-   [launch](Launch_%28script_event%29 "Launch (script event)")
+-   [addOwner](AddOwner_%28script_event%29 "AddOwner (script event)")
+-   [setEnemy](SetEnemy_%28script_event%29 "SetEnemy (script event)")
+-   [isOwner](IsOwner_%28script_event%29 "IsOwner (script event)")
 
 ### idActor Events
 
--   [setConstraintPosition](SetConstraintPosition\_(script\_event))
--   [stopAnim](StopAnim\_(script\_event))
--   [playAnim](PlayAnim\_(script\_event))
--   playAnimBlended
--   getAnimLength
--   [playCycle](PlayCycle\_(script\_event))
--   [idleAnim](IdleAnim\_(script\_event))
--   [setSyncedAnimWeight](SetSyncedAnimWeight\_(script\_event))
--   [setBlendFrames](SetBlendFrames\_(script\_event))
--   [getBlendFrames](GetBlendFrames\_(script\_event))
--   animState
--   getAnimState
--   inAnimState
--   [animDone](AnimDone\_(script\_event))
--   [overrideAnim](OverrideAnim\_(script\_event))
--   [preventPain](PreventPain\_(script\_event))
--   [enableAnim](EnableAnim\_(script\_event))
--   [disablePain](DisablePain\_(script\_event))
--   [enablePain](EnablePain\_(script\_event))
--   getPainAnim
--   setPrefix
--   hasAnim
--   hasWeaponAnim
--   checkAnim
--   chooseAnim
--   animLength
--   animDistance
--   setNextState
--   setState
--   getState
--   syncAnim
--   getDeployResult
+-   [setConstraintPosition](SetConstraintPosition_%28script_event%29 "SetConstraintPosition (script event)")
+-   [stopAnim](StopAnim_%28script_event%29 "StopAnim (script event)")
+-   [playAnim](PlayAnim_%28script_event%29 "PlayAnim (script event)")
+-   [playAnimBlended](PlayAnimBlended_%28script_event%29 "PlayAnimBlended (script event)")
+-   [getAnimLength](GetAnimLength_%28script_event%29 "GetAnimLength (script event)")
+-   [playCycle](PlayCycle_%28script_event%29 "PlayCycle (script event)")
+-   [idleAnim](IdleAnim_%28script_event%29 "IdleAnim (script event)")
+-   [setSyncedAnimWeight](SetSyncedAnimWeight_%28script_event%29 "SetSyncedAnimWeight (script event)")
+-   [setBlendFrames](SetBlendFrames_%28script_event%29 "SetBlendFrames (script event)")
+-   [getBlendFrames](GetBlendFrames_%28script_event%29 "GetBlendFrames (script event)")
+-   [animState](AnimState_%28script_event%29 "AnimState (script event)")
+-   [getAnimState](GetAnimState_%28script_event%29 "GetAnimState (script event)")
+-   [inAnimState](InAnimState_%28script_event%29 "InAnimState (script event)")
+-   [animDone](AnimDone_%28script_event%29 "AnimDone (script event)")
+-   [overrideAnim](OverrideAnim_%28script_event%29 "OverrideAnim (script event)")
+-   [preventPain](PreventPain_%28script_event%29 "PreventPain (script event)")
+-   [enableAnim](EnableAnim_%28script_event%29 "EnableAnim (script event)")
+-   [disablePain](DisablePain_%28script_event%29 "DisablePain (script event)")
+-   [enablePain](EnablePain_%28script_event%29 "EnablePain (script event)")
+-   [getPainAnim](GetPainAnim_%28script_event%29 "GetPainAnim (script event)")
+-   [setPrefix](SetPrefix_%28script_event%29 "SetPrefix (script event)")
+-   [hasAnim](HasAnim_%28script_event%29 "HasAnim (script event)")
+-   [hasWeaponAnim](HasWeaponAnim_%28script_event%29 "HasWeaponAnim (script event)")
+-   [checkAnim](CheckAnim_%28script_event%29 "CheckAnim (script event)")
+-   [chooseAnim](ChooseAnim_%28script_event%29 "ChooseAnim (script event)")
+-   [animLength](AnimLength_%28script_event%29 "AnimLength (script event)")
+-   [animDistance](AnimDistance_%28script_event%29 "AnimDistance (script event)")
+-   [setNextState](SetNextState_%28script_event%29 "SetNextState (script event)")
+-   [setState](SetState_%28script_event%29 "SetState (script event)")
+-   [getState](GetState_%28script_event%29 "GetState (script event)")
+-   [syncAnim](SyncAnim_%28script_event%29 "SyncAnim (script event)")
+-   [getDeployResult](GetDeployResult_%28script_event%29 "GetDeployResult (script event)")
 
 ### idPlayer Events
 
--   getButton
--   [getMove](GetMove\_(script\_event))
--   getUserCmdAngles
--   [getViewAngles](GetViewAngles\_(script\_event))
--   [setViewAngles](SetViewAngles\_(script\_event))
--   getCameraViewAngles
--   getRenderViewAngles
--   getViewOrigin
--   [getWeaponEntity](GetWeaponEntity\_(script\_event))
--   freeze
--   freezeTurning
--   setRemoteCamera
--   getRemoteCamera
--   setRemoteCameraViewOffset
--   getViewingEntity
--   isGunHidden
--   giveProficiency
--   giveClassProficiency
--   getProficiency
--   getXP
--   clearAmmo
--   resetWeapon
--   heal
--   unheal
--   repair
--   makeInvulnerable
--   giveClass
--   givePackage
--   setClassOption
--   sendToolTip
--   cancelToolTips
--   selectBestWeapon
--   setWeapon
--   [getCurrentWeapon](GetCurrentWeapon\_(script\_event))
--   hasWeapon
--   getVehicle
--   getAmmoFraction
--   getUserName
--   getClassName
--   getCachedClassName
--   getPlayerClass
--   getRankName
--   getShortRankName
--   getActiveWeapon
--   getMaxHealth
--   getCrosshairEntity
--   getCrosshairDistance
--   getCrosshairEndPos
--   getCrosshairStartTime
--   enterDeploymentMode
--   exitDeploymentMode
--   getDeploymentActive
--   setSpawnPoint
--   getSpawnPoint
--   setSpeedModifier
--   setSprintScale
--   setSwayScale
--   needsRevive
--   canRevive
--   isDead
--   isInvulnerable
--   revive
--   setProxyEntity
--   getProxyEntity
--   getProxyAllowWeapon
--   setSniperAOR
--   getKilledTime
--   forceRespawn
--   enter
--   createIcon
--   freeIcon
--   getAmmo
--   getMaxAmmo
--   setAmmo
--   setMaxAmmo
--   setTargetTimeScale
--   disableSprint
--   disableRun
--   disableFootsteps
--   disableFallingDamage
--   disguise
--   setSpectateClient
--   getDisguiseClient
--   isDisguised
--   setViewSkin
--   getViewSkin
--   setGUIClipIndex
--   getDeploymentRequest
--   getDeploymentPosition
--   getActiveTask
--   getItemIndexByName
--   getItemNameByIndex
--   binAdd
--   binGet
--   binGetSize
--   binRemove
--   disableShadows
--   inhibitGuis
--   getPostArmFindBestWeapon
--   sameFireTeam
--   isFireTeamLeader
--   isLocalPlayer
--   isToolTipPlaying
--   resetTargetLock
--   isLocking
--   enableClientModelSights
--   disableClientModelSights
--   getCrosshairTitle
--   adjustDeathYaw
--   setCarryingObjective
+-   [getButton](GetButton_%28script_event%29 "GetButton (script event)")
+-   [getMove](GetMove_%28script_event%29 "GetMove (script event)")
+-   [getUserCmdAngles](GetUserCmdAngles_%28script_event%29 "GetUserCmdAngles (script event)")
+-   [getViewAngles](GetViewAngles_%28script_event%29 "GetViewAngles (script event)")
+-   [setViewAngles](SetViewAngles_%28script_event%29 "SetViewAngles (script event)")
+-   [getCameraViewAngles](GetCameraViewAngles_%28script_event%29 "GetCameraViewAngles (script event)")
+-   [getRenderViewAngles](GetRenderViewAngles_%28script_event%29 "GetRenderViewAngles (script event)")
+-   [getViewOrigin](GetViewOrigin_%28script_event%29 "GetViewOrigin (script event)")
+-   [getWeaponEntity](GetWeaponEntity_%28script_event%29 "GetWeaponEntity (script event)")
+-   [freeze](Freeze_%28script_event%29 "Freeze (script event)")
+-   [freezeTurning](FreezeTurning_%28script_event%29 "FreezeTurning (script event)")
+-   [setRemoteCamera](SetRemoteCamera_%28script_event%29 "SetRemoteCamera (script event)")
+-   [getRemoteCamera](GetRemoteCamera_%28script_event%29 "GetRemoteCamera (script event)")
+-   [setRemoteCameraViewOffset](SetRemoteCameraViewOffset_%28script_event%29 "SetRemoteCameraViewOffset (script event)")
+-   [getViewingEntity](GetViewingEntity_%28script_event%29 "GetViewingEntity (script event)")
+-   [isGunHidden](IsGunHidden_%28script_event%29 "IsGunHidden (script event)")
+-   [giveProficiency](GiveProficiency_%28script_event%29 "GiveProficiency (script event)")
+-   [giveClassProficiency](GiveClassProficiency_%28script_event%29 "GiveClassProficiency (script event)")
+-   [getProficiency](GetProficiency_%28script_event%29 "GetProficiency (script event)")
+-   [getXP](GetXP_%28script_event%29 "GetXP (script event)")
+-   [clearAmmo](ClearAmmo_%28script_event%29 "ClearAmmo (script event)")
+-   [resetWeapon](ResetWeapon_%28script_event%29 "ResetWeapon (script event)")
+-   [heal](Heal_%28script_event%29 "Heal (script event)")
+-   [unheal](Unheal_%28script_event%29 "Unheal (script event)")
+-   [repair](Repair_%28script_event%29 "Repair (script event)")
+-   [makeInvulnerable](MakeInvulnerable_%28script_event%29 "MakeInvulnerable (script event)")
+-   [giveClass](GiveClass_%28script_event%29 "GiveClass (script event)")
+-   [givePackage](GivePackage_%28script_event%29 "GivePackage (script event)")
+-   [setClassOption](SetClassOption_%28script_event%29 "SetClassOption (script event)")
+-   [sendToolTip](SendToolTip_%28script_event%29 "SendToolTip (script event)")
+-   [cancelToolTips](CancelToolTips_%28script_event%29 "CancelToolTips (script event)")
+-   [selectBestWeapon](SelectBestWeapon_%28script_event%29 "SelectBestWeapon (script event)")
+-   [setWeapon](SetWeapon_%28script_event%29 "SetWeapon (script event)")
+-   [getCurrentWeapon](GetCurrentWeapon_%28script_event%29 "GetCurrentWeapon (script event)")
+-   [hasWeapon](HasWeapon_%28script_event%29 "HasWeapon (script event)")
+-   [getVehicle](GetVehicle_%28script_event%29 "GetVehicle (script event)")
+-   [getAmmoFraction](GetAmmoFraction_%28script_event%29 "GetAmmoFraction (script event)")
+-   [getUserName](GetUserName_%28script_event%29 "GetUserName (script event)")
+-   [getClassName](GetClassName_%28script_event%29 "GetClassName (script event)")
+-   [getCachedClassName](GetCachedClassName_%28script_event%29 "GetCachedClassName (script event)")
+-   [getPlayerClass](GetPlayerClass_%28script_event%29 "GetPlayerClass (script event)")
+-   [getRankName](GetRankName_%28script_event%29 "GetRankName (script event)")
+-   [getShortRankName](GetShortRankName_%28script_event%29 "GetShortRankName (script event)")
+-   [getActiveWeapon](GetActiveWeapon_%28script_event%29 "GetActiveWeapon (script event)")
+-   [getMaxHealth](GetMaxHealth_%28script_event%29 "GetMaxHealth (script event)")
+-   [getCrosshairEntity](GetCrosshairEntity_%28script_event%29 "GetCrosshairEntity (script event)")
+-   [getCrosshairDistance](GetCrosshairDistance_%28script_event%29 "GetCrosshairDistance (script event)")
+-   [getCrosshairEndPos](GetCrosshairEndPos_%28script_event%29 "GetCrosshairEndPos (script event)")
+-   [getCrosshairStartTime](GetCrosshairStartTime_%28script_event%29 "GetCrosshairStartTime (script event)")
+-   [enterDeploymentMode](EnterDeploymentMode_%28script_event%29 "EnterDeploymentMode (script event)")
+-   [exitDeploymentMode](ExitDeploymentMode_%28script_event%29 "ExitDeploymentMode (script event)")
+-   [getDeploymentActive](GetDeploymentActive_%28script_event%29 "GetDeploymentActive (script event)")
+-   [setSpawnPoint](SetSpawnPoint_%28script_event%29 "SetSpawnPoint (script event)")
+-   [getSpawnPoint](GetSpawnPoint_%28script_event%29 "GetSpawnPoint (script event)")
+-   [setSpeedModifier](SetSpeedModifier_%28script_event%29 "SetSpeedModifier (script event)")
+-   [setSprintScale](SetSprintScale_%28script_event%29 "SetSprintScale (script event)")
+-   [setSwayScale](SetSwayScale_%28script_event%29 "SetSwayScale (script event)")
+-   [needsRevive](NeedsRevive_%28script_event%29 "NeedsRevive (script event)")
+-   [canRevive](CanRevive_%28script_event%29 "CanRevive (script event)")
+-   [isDead](IsDead_%28script_event%29 "IsDead (script event)")
+-   [isInvulnerable](IsInvulnerable_%28script_event%29 "IsInvulnerable (script event)")
+-   [revive](Revive_%28script_event%29 "Revive (script event)")
+-   [setProxyEntity](SetProxyEntity_%28script_event%29 "SetProxyEntity (script event)")
+-   [getProxyEntity](GetProxyEntity_%28script_event%29 "GetProxyEntity (script event)")
+-   [getProxyAllowWeapon](GetProxyAllowWeapon_%28script_event%29 "GetProxyAllowWeapon (script event)")
+-   [setSniperAOR](SetSniperAOR_%28script_event%29 "SetSniperAOR (script event)")
+-   [getKilledTime](GetKilledTime_%28script_event%29 "GetKilledTime (script event)")
+-   [forceRespawn](ForceRespawn_%28script_event%29 "ForceRespawn (script event)")
+-   [enter](Enter_%28script_event%29 "Enter (script event)")
+-   [createIcon](CreateIcon_%28script_event%29 "CreateIcon (script event)")
+-   [freeIcon](FreeIcon_%28script_event%29 "FreeIcon (script event)")
+-   [getAmmo](GetAmmo_%28script_event%29 "GetAmmo (script event)")
+-   [getMaxAmmo](GetMaxAmmo_%28script_event%29 "GetMaxAmmo (script event)")
+-   [setAmmo](SetAmmo_%28script_event%29 "SetAmmo (script event)")
+-   [setMaxAmmo](SetMaxAmmo_%28script_event%29 "SetMaxAmmo (script event)")
+-   [setTargetTimeScale](SetTargetTimeScale_%28script_event%29 "SetTargetTimeScale (script event)")
+-   [disableSprint](DisableSprint_%28script_event%29 "DisableSprint (script event)")
+-   [disableRun](DisableRun_%28script_event%29 "DisableRun (script event)")
+-   [disableFootsteps](DisableFootsteps_%28script_event%29 "DisableFootsteps (script event)")
+-   [disableFallingDamage](DisableFallingDamage_%28script_event%29 "DisableFallingDamage (script event)")
+-   [disguise](Disguise_%28script_event%29 "Disguise (script event)")
+-   [setSpectateClient](SetSpectateClient_%28script_event%29 "SetSpectateClient (script event)")
+-   [getDisguiseClient](GetDisguiseClient_%28script_event%29 "GetDisguiseClient (script event)")
+-   [isDisguised](IsDisguised_%28script_event%29 "IsDisguised (script event)")
+-   [setViewSkin](SetViewSkin_%28script_event%29 "SetViewSkin (script event)")
+-   [getViewSkin](GetViewSkin_%28script_event%29 "GetViewSkin (script event)")
+-   [setGUIClipIndex](SetGUIClipIndex_%28script_event%29 "SetGUIClipIndex (script event)")
+-   [getDeploymentRequest](GetDeploymentRequest_%28script_event%29 "GetDeploymentRequest (script event)")
+-   [getDeploymentPosition](GetDeploymentPosition_%28script_event%29 "GetDeploymentPosition (script event)")
+-   [getActiveTask](GetActiveTask_%28script_event%29 "GetActiveTask (script event)")
+-   [getItemIndexByName](GetItemIndexByName_%28script_event%29 "GetItemIndexByName (script event)")
+-   [getItemNameByIndex](GetItemNameByIndex_%28script_event%29 "GetItemNameByIndex (script event)")
+-   [binAdd](BinAdd_%28script_event%29 "BinAdd (script event)")
+-   [binGet](BinGet_%28script_event%29 "BinGet (script event)")
+-   [binGetSize](BinGetSize_%28script_event%29 "BinGetSize (script event)")
+-   [binRemove](BinRemove_%28script_event%29 "BinRemove (script event)")
+-   [disableShadows](DisableShadows_%28script_event%29 "DisableShadows (script event)")
+-   [inhibitGuis](InhibitGuis_%28script_event%29 "InhibitGuis (script event)")
+-   [getPostArmFindBestWeapon](GetPostArmFindBestWeapon_%28script_event%29 "GetPostArmFindBestWeapon (script event)")
+-   [sameFireTeam](SameFireTeam_%28script_event%29 "SameFireTeam (script event)")
+-   [isFireTeamLeader](IsFireTeamLeader_%28script_event%29 "IsFireTeamLeader (script event)")
+-   [isLocalPlayer](IsLocalPlayer_%28script_event%29 "IsLocalPlayer (script event)")
+-   [isToolTipPlaying](IsToolTipPlaying_%28script_event%29 "IsToolTipPlaying (script event)")
+-   [resetTargetLock](ResetTargetLock_%28script_event%29 "ResetTargetLock (script event)")
+-   [isLocking](IsLocking_%28script_event%29 "IsLocking (script event)")
+-   [enableClientModelSights](EnableClientModelSights_%28script_event%29 "EnableClientModelSights (script event)")
+-   [disableClientModelSights](DisableClientModelSights_%28script_event%29 "DisableClientModelSights (script event)")
+-   [getCrosshairTitle](GetCrosshairTitle_%28script_event%29 "GetCrosshairTitle (script event)")
+-   [adjustDeathYaw](AdjustDeathYaw_%28script_event%29 "AdjustDeathYaw (script event)")
+-   [setCarryingObjective](SetCarryingObjective_%28script_event%29 "SetCarryingObjective (script event)")
 
 #### Bots Player Interface Events
 
--   setPlayerChargeOrigin
--   setPlayerChargeArmed
--   setPlayerItemState
--   setPlayerGrenadeState
--   setPlayerMineState
--   setPlayerMineArmed
--   setPlayerSupplyCrateState
--   setPlayerAirstrikeState
--   setPlayerCovertToolState
--   setPlayerSpawnHostState
--   setSmokeNadeState
--   setArtyAttackLocation
--   setPlayerRepairTarget
--   setPlayerKillTarget
--   setPlayerPickupRequestTime
--   setPlayerCommandRequestTime
--   setTeleporterState
+-   [setPlayerChargeOrigin](SetPlayerChargeOrigin_%28script_event%29 "SetPlayerChargeOrigin (script event)")
+-   [setPlayerChargeArmed](SetPlayerChargeArmed_%28script_event%29 "SetPlayerChargeArmed (script event)")
+-   [setPlayerItemState](SetPlayerItemState_%28script_event%29 "SetPlayerItemState (script event)")
+-   [setPlayerGrenadeState](SetPlayerGrenadeState_%28script_event%29 "SetPlayerGrenadeState (script event)")
+-   [setPlayerMineState](SetPlayerMineState_%28script_event%29 "SetPlayerMineState (script event)")
+-   [setPlayerMineArmed](SetPlayerMineArmed_%28script_event%29 "SetPlayerMineArmed (script event)")
+-   [setPlayerSupplyCrateState](SetPlayerSupplyCrateState_%28script_event%29 "SetPlayerSupplyCrateState (script event)")
+-   [setPlayerAirstrikeState](SetPlayerAirstrikeState_%28script_event%29 "SetPlayerAirstrikeState (script event)")
+-   [setPlayerCovertToolState](SetPlayerCovertToolState_%28script_event%29 "SetPlayerCovertToolState (script event)")
+-   [setPlayerSpawnHostState](SetPlayerSpawnHostState_%28script_event%29 "SetPlayerSpawnHostState (script event)")
+-   [setSmokeNadeState](SetSmokeNadeState_%28script_event%29 "SetSmokeNadeState (script event)")
+-   [setArtyAttackLocation](SetArtyAttackLocation_%28script_event%29 "SetArtyAttackLocation (script event)")
+-   [setPlayerRepairTarget](SetPlayerRepairTarget_%28script_event%29 "SetPlayerRepairTarget (script event)")
+-   [setPlayerKillTarget](SetPlayerKillTarget_%28script_event%29 "SetPlayerKillTarget (script event)")
+-   [setPlayerPickupRequestTime](SetPlayerPickupRequestTime_%28script_event%29 "SetPlayerPickupRequestTime (script event)")
+-   [setPlayerCommandRequestTime](SetPlayerCommandRequestTime_%28script_event%29 "SetPlayerCommandRequestTime (script event)")
+-   [setTeleporterState](SetTeleporterState_%28script_event%29 "SetTeleporterState (script event)")
 
 ### sdAtmosphere Events
 
--   resetPostProcess
--   getDefaultPostProcessSaturation
--   getDefaultPostProcessGlareSourceBrightness
--   getDefaultPostProcessGlareBlurBrightness
--   getDefaultPostProcessGlareBrightnessThreshold
--   getDefaultPostProcessGlareThresholdDependency
--   setPostProcessTint
--   setPostProcessSaturation
--   setPostProcessContrast
--   setPostProcessGlareParms
--   isNight
+-   [resetPostProcess](ResetPostProcess_%28script_event%29 "ResetPostProcess (script event)")
+-   [getDefaultPostProcessSaturation](GetDefaultPostProcessSaturation_%28script_event%29 "GetDefaultPostProcessSaturation (script event)")
+-   [getDefaultPostProcessGlareSourceBrightness](GetDefaultPostProcessGlareSourceBrightness_%28script_event%29 "GetDefaultPostProcessGlareSourceBrightness (script event)")
+-   [getDefaultPostProcessGlareBlurBrightness](GetDefaultPostProcessGlareBlurBrightness_%28script_event%29 "GetDefaultPostProcessGlareBlurBrightness (script event)")
+-   [getDefaultPostProcessGlareBrightnessThreshold](GetDefaultPostProcessGlareBrightnessThreshold_%28script_event%29 "GetDefaultPostProcessGlareBrightnessThreshold (script event)")
+-   [getDefaultPostProcessGlareThresholdDependency](GetDefaultPostProcessGlareThresholdDependency_%28script_event%29 "GetDefaultPostProcessGlareThresholdDependency (script event)")
+-   [setPostProcessTint](SetPostProcessTint_%28script_event%29 "SetPostProcessTint (script event)")
+-   [setPostProcessSaturation](SetPostProcessSaturation_%28script_event%29 "SetPostProcessSaturation (script event)")
+-   [setPostProcessContrast](SetPostProcessContrast_%28script_event%29 "SetPostProcessContrast (script event)")
+-   [setPostProcessGlareParms](SetPostProcessGlareParms_%28script_event%29 "SetPostProcessGlareParms (script event)")
+-   [isNight](IsNight_%28script_event%29 "IsNight (script event)")
 
 ### sdWalker Events
 
--   getMoveDelta
--   setDelta
--   setViewAxis
--   setCompressionScale
--   groundPound
+-   [getMoveDelta](GetMoveDelta_%28script_event%29 "GetMoveDelta (script event)")
+-   [setDelta](SetDelta_%28script_event%29 "SetDelta (script event)")
+-   [setViewAxis](SetViewAxis_%28script_event%29 "SetViewAxis (script event)")
+-   [setCompressionScale](SetCompressionScale_%28script_event%29 "SetCompressionScale (script event)")
+-   [groundPound](GroundPound_%28script_event%29 "GroundPound (script event)")
 
 ### sdTransport Events
 
 Events used in regular vehicles
 
--   repair
--   getLastRepairOrigin
--   resupply
--   inputSetPlayer
--   inputGetCollective
--   [getDriver](GetDriver\_(script\_event))
--   isEmpty
--   updateEngine
--   setLightsEnabled
--   disableSuspension
--   getPassengerNames
--   [lock](Lock\_(script\_event))
--   kickPlayer
--   disableTimeout
--   getSteerAngle
--   destroyParts
--   decayParts
--   decayLeftWheels
--   decayRightWheels
--   decayNonWheels
--   resetDecayTime
--   hasHiddenParts
--   disableModel
--   swapPosition
--   getNumPositions
--   getNumOccupiedPositions
--   getPositionPlayer
--   getSurfaceType
--   selectVehicleWeapon
--   getObject
--   setThrust
--   getJoint
--   getParent
--   setDeathThroeHealth
--   getMinDisplayHealth
--   updateThrusters
--   isEMPed
--   isWeaponEMPed
--   applyEMPDamage
--   getRemainingEMP
--   setLockAlarmActive
--   setImmobilized
--   setActive
--   getLandingGearDown
--   inSiegeMode
--   getArmor
--   [setArmor](SetArmor\_(script\_event))
--   getNumVehicleWeapons
--   getVehicleWeapon
--   setOverDriveScale
--   setTrackerEntity
--   isPlayerBanned
--   banPlayer
--   clearLastAttacker
--   enablePart
--   disablePart
--   destructionTime
--   directionWarning
--   isTeleporting
+-   [repair](Repair_%28script_event%29 "Repair (script event)")
+-   [getLastRepairOrigin](GetLastRepairOrigin_%28script_event%29 "GetLastRepairOrigin (script event)")
+-   [resupply](Resupply_%28script_event%29 "Resupply (script event)")
+-   [inputSetPlayer](InputSetPlayer_%28script_event%29 "InputSetPlayer (script event)")
+-   [inputGetCollective](InputGetCollective_%28script_event%29 "InputGetCollective (script event)")
+-   [getDriver](GetDriver_%28script_event%29 "GetDriver (script event)")
+-   [isEmpty](IsEmpty_%28script_event%29 "IsEmpty (script event)")
+-   [updateEngine](UpdateEngine_%28script_event%29 "UpdateEngine (script event)")
+-   [setLightsEnabled](SetLightsEnabled_%28script_event%29 "SetLightsEnabled (script event)")
+-   [disableSuspension](DisableSuspension_%28script_event%29 "DisableSuspension (script event)")
+-   [getPassengerNames](GetPassengerNames_%28script_event%29 "GetPassengerNames (script event)")
+-   [lock](Lock_%28script_event%29 "Lock (script event)")
+-   [kickPlayer](KickPlayer_%28script_event%29 "KickPlayer (script event)")
+-   [disableTimeout](DisableTimeout_%28script_event%29 "DisableTimeout (script event)")
+-   [getSteerAngle](GetSteerAngle_%28script_event%29 "GetSteerAngle (script event)")
+-   [destroyParts](DestroyParts_%28script_event%29 "DestroyParts (script event)")
+-   [decayParts](DecayParts_%28script_event%29 "DecayParts (script event)")
+-   [decayLeftWheels](DecayLeftWheels_%28script_event%29 "DecayLeftWheels (script event)")
+-   [decayRightWheels](DecayRightWheels_%28script_event%29 "DecayRightWheels (script event)")
+-   [decayNonWheels](DecayNonWheels_%28script_event%29 "DecayNonWheels (script event)")
+-   [resetDecayTime](ResetDecayTime_%28script_event%29 "ResetDecayTime (script event)")
+-   [hasHiddenParts](HasHiddenParts_%28script_event%29 "HasHiddenParts (script event)")
+-   [disableModel](DisableModel_%28script_event%29 "DisableModel (script event)")
+-   [swapPosition](SwapPosition_%28script_event%29 "SwapPosition (script event)")
+-   [getNumPositions](GetNumPositions_%28script_event%29 "GetNumPositions (script event)")
+-   [getNumOccupiedPositions](GetNumOccupiedPositions_%28script_event%29 "GetNumOccupiedPositions (script event)")
+-   [getPositionPlayer](GetPositionPlayer_%28script_event%29 "GetPositionPlayer (script event)")
+-   [getSurfaceType](GetSurfaceType_%28script_event%29 "GetSurfaceType (script event)")
+-   [selectVehicleWeapon](SelectVehicleWeapon_%28script_event%29 "SelectVehicleWeapon (script event)")
+-   [getObject](GetObject_%28script_event%29 "GetObject (script event)")
+-   [setThrust](SetThrust_%28script_event%29 "SetThrust (script event)")
+-   [getJoint](GetJoint_%28script_event%29 "GetJoint (script event)")
+-   [getParent](GetParent_%28script_event%29 "GetParent (script event)")
+-   [setDeathThroeHealth](SetDeathThroeHealth_%28script_event%29 "SetDeathThroeHealth (script event)")
+-   [getMinDisplayHealth](GetMinDisplayHealth_%28script_event%29 "GetMinDisplayHealth (script event)")
+-   [updateThrusters](UpdateThrusters_%28script_event%29 "UpdateThrusters (script event)")
+-   [isEMPed](IsEMPed_%28script_event%29 "IsEMPed (script event)")
+-   [isWeaponEMPed](IsWeaponEMPed_%28script_event%29 "IsWeaponEMPed (script event)")
+-   [applyEMPDamage](ApplyEMPDamage_%28script_event%29 "ApplyEMPDamage (script event)")
+-   [getRemainingEMP](GetRemainingEMP_%28script_event%29 "GetRemainingEMP (script event)")
+-   [setLockAlarmActive](SetLockAlarmActive_%28script_event%29 "SetLockAlarmActive (script event)")
+-   [setImmobilized](SetImmobilized_%28script_event%29 "SetImmobilized (script event)")
+-   [setActive](SetActive_%28script_event%29 "SetActive (script event)")
+-   [getLandingGearDown](GetLandingGearDown_%28script_event%29 "GetLandingGearDown (script event)")
+-   [inSiegeMode](InSiegeMode_%28script_event%29 "InSiegeMode (script event)")
+-   [getArmor](GetArmor_%28script_event%29 "GetArmor (script event)")
+-   [setArmor](SetArmor_%28script_event%29 "SetArmor (script event)")
+-   [getNumVehicleWeapons](GetNumVehicleWeapons_%28script_event%29 "GetNumVehicleWeapons (script event)")
+-   [getVehicleWeapon](GetVehicleWeapon_%28script_event%29 "GetVehicleWeapon (script event)")
+-   [setOverDriveScale](SetOverDriveScale_%28script_event%29 "SetOverDriveScale (script event)")
+-   [setTrackerEntity](SetTrackerEntity_%28script_event%29 "SetTrackerEntity (script event)")
+-   [isPlayerBanned](IsPlayerBanned_%28script_event%29 "IsPlayerBanned (script event)")
+-   [banPlayer](BanPlayer_%28script_event%29 "BanPlayer (script event)")
+-   [clearLastAttacker](ClearLastAttacker_%28script_event%29 "ClearLastAttacker (script event)")
+-   [enablePart](EnablePart_%28script_event%29 "EnablePart (script event)")
+-   [disablePart](DisablePart_%28script_event%29 "DisablePart (script event)")
+-   [destructionTime](DestructionTime_%28script_event%29 "DestructionTime (script event)")
+-   [directionWarning](DirectionWarning_%28script_event%29 "DirectionWarning (script event)")
+-   [isTeleporting](IsTeleporting_%28script_event%29 "IsTeleporting (script event)")
 
 ### sdVehicle\_Rigidbody Events
 
--   setDamageDealtScale
+-   [setDamageDealtScale](SetDamageDealtScale_%28script_event%29 "SetDamageDealtScale (script event)")
 
 ### sdVehicleWeapon Events
 
--   getPlayer
--   setTarget
+-   [getPlayer](GetPlayer_%28script_event%29 "GetPlayer (script event)")
+-   [setTarget](SetTarget_%28script_event%29 "SetTarget (script event)")
 
 ### sdJetPack Events
 
--   getChargeFraction
+-   [getChargeFraction](GetChargeFraction_%28script_event%29 "GetChargeFraction (script event)")
 
 ### sdScriptEntity Events
 
--   addHelper
--   getBoundPlayer
--   removeBoundPlayer
--   chSetNumLines
--   chAddLine
--   chSetOrigin
--   chGetDistance
--   chSetLineText
--   chSetLineTextIndex
--   chSetLineMaterial
--   chSetLineColor
--   chSetLineBackColor
--   chSetLineSize
--   chSetLineFraction
--   chSetLineType
--   freeLayers
--   allocRadarLayer
--   allocJammerLayer
--   radarSetLayerRange
--   radarSetLayerMaxAngle
--   radarSetLayerJammer
--   radarSetLayerMask
--   setRemoteViewAngles
--   getRemoteViewAngles
--   pathFind
--   pathFindVampire
--   pathLevel
--   pathStraighten
--   pathGetNumPoints
--   pathGetPoint
--   pathGetLength
--   pathGetPosition
--   pathGetDirection
--   pathGetAngles
--   getVampireBombPosition
--   getVampireBombAcceleration
--   getVampireBombFallTime
--   forceRunPhysics
--   setGroundPosition
--   setXPShareInfo
--   setBoxClipModel
--   getTeamDamageDone
--   setTeamDamageDone
--   forceAnimUpdate
--   setIKTarget
--   hideInLocalView
--   showInLocalView
--   setClipOriented
+-   [addHelper](AddHelper_%28script_event%29 "AddHelper (script event)")
+-   [getBoundPlayer](GetBoundPlayer_%28script_event%29 "GetBoundPlayer (script event)")
+-   [removeBoundPlayer](RemoveBoundPlayer_%28script_event%29 "RemoveBoundPlayer (script event)")
+-   [chSetNumLines](ChSetNumLines_%28script_event%29 "ChSetNumLines (script event)")
+-   [chAddLine](ChAddLine_%28script_event%29 "ChAddLine (script event)")
+-   [chSetOrigin](ChSetOrigin_%28script_event%29 "ChSetOrigin (script event)")
+-   [chGetDistance](ChGetDistance_%28script_event%29 "ChGetDistance (script event)")
+-   [chSetLineText](ChSetLineText_%28script_event%29 "ChSetLineText (script event)")
+-   [chSetLineTextIndex](ChSetLineTextIndex_%28script_event%29 "ChSetLineTextIndex (script event)")
+-   [chSetLineMaterial](ChSetLineMaterial_%28script_event%29 "ChSetLineMaterial (script event)")
+-   [chSetLineColor](ChSetLineColor_%28script_event%29 "ChSetLineColor (script event)")
+-   [chSetLineBackColor](ChSetLineBackColor_%28script_event%29 "ChSetLineBackColor (script event)")
+-   [chSetLineSize](ChSetLineSize_%28script_event%29 "ChSetLineSize (script event)")
+-   [chSetLineFraction](ChSetLineFraction_%28script_event%29 "ChSetLineFraction (script event)")
+-   [chSetLineType](ChSetLineType_%28script_event%29 "ChSetLineType (script event)")
+-   [freeLayers](FreeLayers_%28script_event%29 "FreeLayers (script event)")
+-   [allocRadarLayer](AllocRadarLayer_%28script_event%29 "AllocRadarLayer (script event)")
+-   [allocJammerLayer](AllocJammerLayer_%28script_event%29 "AllocJammerLayer (script event)")
+-   [radarSetLayerRange](RadarSetLayerRange_%28script_event%29 "RadarSetLayerRange (script event)")
+-   [radarSetLayerMaxAngle](RadarSetLayerMaxAngle_%28script_event%29 "RadarSetLayerMaxAngle (script event)")
+-   [radarSetLayerJammer](RadarSetLayerJammer_%28script_event%29 "RadarSetLayerJammer (script event)")
+-   [radarSetLayerMask](RadarSetLayerMask_%28script_event%29 "RadarSetLayerMask (script event)")
+-   [setRemoteViewAngles](SetRemoteViewAngles_%28script_event%29 "SetRemoteViewAngles (script event)")
+-   [getRemoteViewAngles](GetRemoteViewAngles_%28script_event%29 "GetRemoteViewAngles (script event)")
+-   [pathFind](PathFind_%28script_event%29 "PathFind (script event)")
+-   [pathFindVampire](PathFindVampire_%28script_event%29 "PathFindVampire (script event)")
+-   [pathLevel](PathLevel_%28script_event%29 "PathLevel (script event)")
+-   [pathStraighten](PathStraighten_%28script_event%29 "PathStraighten (script event)")
+-   [pathGetNumPoints](PathGetNumPoints_%28script_event%29 "PathGetNumPoints (script event)")
+-   [pathGetPoint](PathGetPoint_%28script_event%29 "PathGetPoint (script event)")
+-   [pathGetLength](PathGetLength_%28script_event%29 "PathGetLength (script event)")
+-   [pathGetPosition](PathGetPosition_%28script_event%29 "PathGetPosition (script event)")
+-   [pathGetDirection](PathGetDirection_%28script_event%29 "PathGetDirection (script event)")
+-   [pathGetAngles](PathGetAngles_%28script_event%29 "PathGetAngles (script event)")
+-   [getVampireBombPosition](GetVampireBombPosition_%28script_event%29 "GetVampireBombPosition (script event)")
+-   [getVampireBombAcceleration](GetVampireBombAcceleration_%28script_event%29 "GetVampireBombAcceleration (script event)")
+-   [getVampireBombFallTime](GetVampireBombFallTime_%28script_event%29 "GetVampireBombFallTime (script event)")
+-   [forceRunPhysics](ForceRunPhysics_%28script_event%29 "ForceRunPhysics (script event)")
+-   [setGroundPosition](SetGroundPosition_%28script_event%29 "SetGroundPosition (script event)")
+-   [setXPShareInfo](SetXPShareInfo_%28script_event%29 "SetXPShareInfo (script event)")
+-   [setBoxClipModel](SetBoxClipModel_%28script_event%29 "SetBoxClipModel (script event)")
+-   [getTeamDamageDone](GetTeamDamageDone_%28script_event%29 "GetTeamDamageDone (script event)")
+-   [setTeamDamageDone](SetTeamDamageDone_%28script_event%29 "SetTeamDamageDone (script event)")
+-   [forceAnimUpdate](ForceAnimUpdate_%28script_event%29 "ForceAnimUpdate (script event)")
+-   [setIKTarget](SetIKTarget_%28script_event%29 "SetIKTarget (script event)")
+-   [hideInLocalView](HideInLocalView_%28script_event%29 "HideInLocalView (script event)")
+-   [showInLocalView](ShowInLocalView_%28script_event%29 "ShowInLocalView (script event)")
+-   [setClipOriented](SetClipOriented_%28script_event%29 "SetClipOriented (script event)")
 
 ### sdDeployZone Events
 
 Territory Events
 
--   setActive
+-   [setActive](SetActive_%28script_event%29 "SetActive (script event)")
 
 ### Animated Client Entity Events
 
--   setAnimFrame
--   getNumFrames
--   dispose
+-   [setAnimFrame](SetAnimFrame_%28script_event%29 "SetAnimFrame (script event)")
+-   [getNumFrames](GetNumFrames_%28script_event%29 "GetNumFrames (script event)")
+-   [dispose](Dispose_%28script_event%29 "Dispose (script event)")
 
 ### sdTeleporter Events
 
--   enableTeam
--   disableTeam
+-   [enableTeam](EnableTeam_%28script_event%29 "EnableTeam (script event)")
+-   [disableTeam](DisableTeam_%28script_event%29 "DisableTeam (script event)")
 
 ### sdRepairDrone Events
 
--   setTargetPosition
--   setEffectOrigins
--   setEntities
--   getRepairTarget
--   getOwnerEntity
--   hideThrusters
+-   [setTargetPosition](SetTargetPosition_%28script_event%29 "SetTargetPosition (script event)")
+-   [setEffectOrigins](SetEffectOrigins_%28script_event%29 "SetEffectOrigins (script event)")
+-   [setEntities](SetEntities_%28script_event%29 "SetEntities (script event)")
+-   [getRepairTarget](GetRepairTarget_%28script_event%29 "GetRepairTarget (script event)")
+-   [getOwnerEntity](GetOwnerEntity_%28script_event%29 "GetOwnerEntity (script event)")
+-   [hideThrusters](HideThrusters_%28script_event%29 "HideThrusters (script event)")
 
 ### sdParachute Events
 
--   applyParachute
--   [setOwner](SetOwner\_(script\_event))
--   setDeployStart
--   isMovingTooSlow
+-   [applyParachute](ApplyParachute_%28script_event%29 "ApplyParachute (script event)")
+-   [setOwner](SetOwner_%28script_event%29 "SetOwner (script event)")
+-   [setDeployStart](SetDeployStart_%28script_event%29 "SetDeployStart (script event)")
+-   [isMovingTooSlow](IsMovingTooSlow_%28script_event%29 "IsMovingTooSlow (script event)")
 
 ### sdDefenceTurret Events
 
--   setDisabled
--   isDisabled
--   getTargetPosition
--   [getEnemy](GetEnemy\_(script\_event))
--   [setEnemy](SetEnemy\_(script\_event))
+-   [setDisabled](SetDisabled_%28script_event%29 "SetDisabled (script event)")
+-   [isDisabled](IsDisabled_%28script_event%29 "IsDisabled (script event)")
+-   [getTargetPosition](GetTargetPosition_%28script_event%29 "GetTargetPosition (script event)")
+-   [getEnemy](GetEnemy_%28script_event%29 "GetEnemy (script event)")
+-   [setEnemy](SetEnemy_%28script_event%29 "SetEnemy (script event)")
 
 ### sdDeliveryVehicle Events
 
--   startJotunDelivery
--   startJotunReturn
--   startMagogDelivery
--   startMagogReturn
+-   [startJotunDelivery](StartJotunDelivery_%28script_event%29 "StartJotunDelivery (script event)")
+-   [startJotunReturn](StartJotunReturn_%28script_event%29 "StartJotunReturn (script event)")
+-   [startMagogDelivery](StartMagogDelivery_%28script_event%29 "StartMagogDelivery (script event)")
+-   [startMagogReturn](StartMagogReturn_%28script_event%29 "StartMagogReturn (script event)")
 
 Game Class Events
 -----------------
 
-The game sets up several [game classes](Game\_class) to manage different things.
+The game sets up several [game classes](Game_class "Game class") to
+manage different things.
 
 ### Objective Manager Events
 
--   setObjectiveState
--   setObjectiveIcon
--   setObjectiveWorldIcon
--   getObjectiveState
--   setNextObjective
--   getNextObjective
--   setShortDescription
--   getShortDescription
--   createMapScript
--   logObjectiveCompletion
+-   [setObjectiveState](SetObjectiveState_%28script_event%29 "SetObjectiveState (script event)")
+-   [setObjectiveIcon](SetObjectiveIcon_%28script_event%29 "SetObjectiveIcon (script event)")
+-   [setObjectiveWorldIcon](SetObjectiveWorldIcon_%28script_event%29 "SetObjectiveWorldIcon (script event)")
+-   [getObjectiveState](GetObjectiveState_%28script_event%29 "GetObjectiveState (script event)")
+-   [setNextObjective](SetNextObjective_%28script_event%29 "SetNextObjective (script event)")
+-   [getNextObjective](GetNextObjective_%28script_event%29 "GetNextObjective (script event)")
+-   [setShortDescription](SetShortDescription_%28script_event%29 "SetShortDescription (script event)")
+-   [getShortDescription](GetShortDescription_%28script_event%29 "GetShortDescription (script event)")
+-   [createMapScript](CreateMapScript_%28script_event%29 "CreateMapScript (script event)")
+-   [logObjectiveCompletion](LogObjectiveCompletion_%28script_event%29 "LogObjectiveCompletion (script event)")
 
 #### Bot Objective Manager Events
 
--   deactivateBotActionGroup
--   activateBotActionGroup
--   setBotActionStateForEvent
--   deactivateBotAction
--   activateBotAction
--   setBotCriticalClass
--   botUpdateForEvent
--   setAttackingTeam
--   setPrimaryTeamAction
--   setSecondaryTeamAction
--   setTeamNeededClass
--   setBotSightDist
--   disableRouteGroup
--   enableRouteGroup
--   enableRoute
--   disableRoute
--   setMapHasMCPGoal
--   setSpawnActionOwner
--   setActionObjState
--   enableNode
--   disableNode
--   setNodeTeam
--   teamSuicideIfNotNearAction
--   isActionGroupActive
--   isActionActive
--   switchTeamWeapons
--   killBotActionGroup
--   killBotAction
--   setTeamUseRearSpawn
--   setTeamUseRearSpawnPercentage
--   getNumBotsOnTeam
--   setActionPriority
--   setTeamAttacksDeployables
--   setActionHumanGoal
--   setActionStroggGoal
--   clearTeamBotBoundEntities
--   setBotTeamRetreatTime
--   setTeamMinePlantIsPriority
--   setBotActionVehicleType
--   setBotActionGroupVehicleType
--   disableAASAreaInLocation
+-   [deactivateBotActionGroup](DeactivateBotActionGroup_%28script_event%29 "DeactivateBotActionGroup (script event)")
+-   [activateBotActionGroup](ActivateBotActionGroup_%28script_event%29 "ActivateBotActionGroup (script event)")
+-   [setBotActionStateForEvent](SetBotActionStateForEvent_%28script_event%29 "SetBotActionStateForEvent (script event)")
+-   [deactivateBotAction](DeactivateBotAction_%28script_event%29 "DeactivateBotAction (script event)")
+-   [activateBotAction](ActivateBotAction_%28script_event%29 "ActivateBotAction (script event)")
+-   [setBotCriticalClass](SetBotCriticalClass_%28script_event%29 "SetBotCriticalClass (script event)")
+-   [botUpdateForEvent](BotUpdateForEvent_%28script_event%29 "BotUpdateForEvent (script event)")
+-   [setAttackingTeam](SetAttackingTeam_%28script_event%29 "SetAttackingTeam (script event)")
+-   [setPrimaryTeamAction](SetPrimaryTeamAction_%28script_event%29 "SetPrimaryTeamAction (script event)")
+-   [setSecondaryTeamAction](SetSecondaryTeamAction_%28script_event%29 "SetSecondaryTeamAction (script event)")
+-   [setTeamNeededClass](SetTeamNeededClass_%28script_event%29 "SetTeamNeededClass (script event)")
+-   [setBotSightDist](SetBotSightDist_%28script_event%29 "SetBotSightDist (script event)")
+-   [disableRouteGroup](DisableRouteGroup_%28script_event%29 "DisableRouteGroup (script event)")
+-   [enableRouteGroup](EnableRouteGroup_%28script_event%29 "EnableRouteGroup (script event)")
+-   [enableRoute](EnableRoute_%28script_event%29 "EnableRoute (script event)")
+-   [disableRoute](DisableRoute_%28script_event%29 "DisableRoute (script event)")
+-   [setMapHasMCPGoal](SetMapHasMCPGoal_%28script_event%29 "SetMapHasMCPGoal (script event)")
+-   [setSpawnActionOwner](SetSpawnActionOwner_%28script_event%29 "SetSpawnActionOwner (script event)")
+-   [setActionObjState](SetActionObjState_%28script_event%29 "SetActionObjState (script event)")
+-   [enableNode](EnableNode_%28script_event%29 "EnableNode (script event)")
+-   [disableNode](DisableNode_%28script_event%29 "DisableNode (script event)")
+-   [setNodeTeam](SetNodeTeam_%28script_event%29 "SetNodeTeam (script event)")
+-   [teamSuicideIfNotNearAction](TeamSuicideIfNotNearAction_%28script_event%29 "TeamSuicideIfNotNearAction (script event)")
+-   [isActionGroupActive](IsActionGroupActive_%28script_event%29 "IsActionGroupActive (script event)")
+-   [isActionActive](IsActionActive_%28script_event%29 "IsActionActive (script event)")
+-   [switchTeamWeapons](SwitchTeamWeapons_%28script_event%29 "SwitchTeamWeapons (script event)")
+-   [killBotActionGroup](KillBotActionGroup_%28script_event%29 "KillBotActionGroup (script event)")
+-   [killBotAction](KillBotAction_%28script_event%29 "KillBotAction (script event)")
+-   [setTeamUseRearSpawn](SetTeamUseRearSpawn_%28script_event%29 "SetTeamUseRearSpawn (script event)")
+-   [setTeamUseRearSpawnPercentage](SetTeamUseRearSpawnPercentage_%28script_event%29 "SetTeamUseRearSpawnPercentage (script event)")
+-   [getNumBotsOnTeam](GetNumBotsOnTeam_%28script_event%29 "GetNumBotsOnTeam (script event)")
+-   [setActionPriority](SetActionPriority_%28script_event%29 "SetActionPriority (script event)")
+-   [setTeamAttacksDeployables](SetTeamAttacksDeployables_%28script_event%29 "SetTeamAttacksDeployables (script event)")
+-   [setActionHumanGoal](SetActionHumanGoal_%28script_event%29 "SetActionHumanGoal (script event)")
+-   [setActionStroggGoal](SetActionStroggGoal_%28script_event%29 "SetActionStroggGoal (script event)")
+-   [clearTeamBotBoundEntities](ClearTeamBotBoundEntities_%28script_event%29 "ClearTeamBotBoundEntities (script event)")
+-   [setBotTeamRetreatTime](SetBotTeamRetreatTime_%28script_event%29 "SetBotTeamRetreatTime (script event)")
+-   [setTeamMinePlantIsPriority](SetTeamMinePlantIsPriority_%28script_event%29 "SetTeamMinePlantIsPriority (script event)")
+-   [setBotActionVehicleType](SetBotActionVehicleType_%28script_event%29 "SetBotActionVehicleType (script event)")
+-   [setBotActionGroupVehicleType](SetBotActionGroupVehicleType_%28script_event%29 "SetBotActionGroupVehicleType (script event)")
+-   [disableAASAreaInLocation](DisableAASAreaInLocation_%28script_event%29 "DisableAASAreaInLocation (script event)")
 
 ### Team Events
 
--   [getName](GetName\_(script\_event))
--   getTitle
--   registerDeployable
--   unRegisterDeployable
--   registerSpawnPoint
--   unRegisterSpawnPoint
--   getMaxDeployables
--   getNumDeployables
--   getDeployable
+-   [getName](GetName_%28script_event%29 "GetName (script event)")
+-   [getTitle](GetTitle_%28script_event%29 "GetTitle (script event)")
+-   [registerDeployable](RegisterDeployable_%28script_event%29 "RegisterDeployable (script event)")
+-   [unRegisterDeployable](UnRegisterDeployable_%28script_event%29 "UnRegisterDeployable (script event)")
+-   [registerSpawnPoint](RegisterSpawnPoint_%28script_event%29 "RegisterSpawnPoint (script event)")
+-   [unRegisterSpawnPoint](UnRegisterSpawnPoint_%28script_event%29 "UnRegisterSpawnPoint (script event)")
+-   [getMaxDeployables](GetMaxDeployables_%28script_event%29 "GetMaxDeployables (script event)")
+-   [getNumDeployables](GetNumDeployables_%28script_event%29 "GetNumDeployables (script event)")
+-   [getDeployable](GetDeployable_%28script_event%29 "GetDeployable (script event)")
 
 #### Bot Team Events
 
--   setTeamRearSpawn
+-   [setTeamRearSpawn](SetTeamRearSpawn_%28script_event%29 "SetTeamRearSpawn (script event)")
 
 ### Task Events
 
--   allocEntityTask
--   complete
--   uncomplete
--   setTimeout
--   free
--   getTaskEntity
--   getPriority
--   setPriority
--   setUserCreated
--   isUserCreated
--   setLocation
--   setWayPointState
--   [getKey](GetKey\_(script\_event))
--   [getIntKey](GetIntKey\_(script\_event))
--   [getFloatKey](GetFloatKey\_(script\_event))
--   [getVectorKey](GetVectorKey\_(script\_event))
--   [getEntityKey](GetEntityKey\_(script\_event))
--   getKeyWithDefault
--   getIntKeyWithDefault
--   getFloatKeyWithDefault
--   getVectorKeyWithDefault
--   giveObjectiveProficiency
+-   [allocEntityTask](AllocEntityTask_%28script_event%29 "AllocEntityTask (script event)")
+-   [complete](Complete_%28script_event%29 "Complete (script event)")
+-   [uncomplete](Uncomplete_%28script_event%29 "Uncomplete (script event)")
+-   [setTimeout](SetTimeout_%28script_event%29 "SetTimeout (script event)")
+-   [free](Free_%28script_event%29 "Free (script event)")
+-   [getTaskEntity](GetTaskEntity_%28script_event%29 "GetTaskEntity (script event)")
+-   [getPriority](GetPriority_%28script_event%29 "GetPriority (script event)")
+-   [setPriority](SetPriority_%28script_event%29 "SetPriority (script event)")
+-   [setUserCreated](SetUserCreated_%28script_event%29 "SetUserCreated (script event)")
+-   [isUserCreated](IsUserCreated_%28script_event%29 "IsUserCreated (script event)")
+-   [setLocation](SetLocation_%28script_event%29 "SetLocation (script event)")
+-   [setWayPointState](SetWayPointState_%28script_event%29 "SetWayPointState (script event)")
+-   [getKey](GetKey_%28script_event%29 "GetKey (script event)")
+-   [getIntKey](GetIntKey_%28script_event%29 "GetIntKey (script event)")
+-   [getFloatKey](GetFloatKey_%28script_event%29 "GetFloatKey (script event)")
+-   [getVectorKey](GetVectorKey_%28script_event%29 "GetVectorKey (script event)")
+-   [getEntityKey](GetEntityKey_%28script_event%29 "GetEntityKey (script event)")
+-   [getKeyWithDefault](GetKeyWithDefault_%28script_event%29 "GetKeyWithDefault (script event)")
+-   [getIntKeyWithDefault](GetIntKeyWithDefault_%28script_event%29 "GetIntKeyWithDefault (script event)")
+-   [getFloatKeyWithDefault](GetFloatKeyWithDefault_%28script_event%29 "GetFloatKeyWithDefault (script event)")
+-   [getVectorKeyWithDefault](GetVectorKeyWithDefault_%28script_event%29 "GetVectorKeyWithDefault (script event)")
+-   [giveObjectiveProficiency](GiveObjectiveProficiency_%28script_event%29 "GiveObjectiveProficiency (script event)")
 
 CVar Events
 -----------
 
-The game creates a cvar wrapper to support the following events on a cvar object returned by sys.<span class="deadlink"> getCVar</span>
+The game creates a cvar wrapper to support the following events on a
+cvar object returned by sys.
+[getCVar](GetCVar_%28script_event%29 "GetCVar (script event)")
 
--   getFloatValue
--   getStringValue
--   getIntValue
--   getBoolValue
--   getVectorValue
--   setFloatValue
--   setStringValue
--   setIntValue
--   setBoolValue
--   setVectorValue
--   setCallback
+-   [getFloatValue](GetFloatValue_%28script_event%29 "GetFloatValue (script event)")
+-   [getStringValue](GetStringValue_%28script_event%29 "GetStringValue (script event)")
+-   [getIntValue](GetIntValue_%28script_event%29 "GetIntValue (script event)")
+-   [getBoolValue](GetBoolValue_%28script_event%29 "GetBoolValue (script event)")
+-   [getVectorValue](GetVectorValue_%28script_event%29 "GetVectorValue (script event)")
+-   [setFloatValue](SetFloatValue_%28script_event%29 "SetFloatValue (script event)")
+-   [setStringValue](SetStringValue_%28script_event%29 "SetStringValue (script event)")
+-   [setIntValue](SetIntValue_%28script_event%29 "SetIntValue (script event)")
+-   [setBoolValue](SetBoolValue_%28script_event%29 "SetBoolValue (script event)")
+-   [setVectorValue](SetVectorValue_%28script_event%29 "SetVectorValue (script event)")
+-   [setCallback](SetCallback_%28script_event%29 "SetCallback (script event)")
 
 Mask Edit-session Events
 ------------------------
 
--   openMask
--   updateProjection
--   setDecalMaterial
--   setStampSize
--   stamp
--   saveAll
+-   [openMask](OpenMask_%28script_event%29 "OpenMask (script event)")
+-   [updateProjection](UpdateProjection_%28script_event%29 "UpdateProjection (script event)")
+-   [setDecalMaterial](SetDecalMaterial_%28script_event%29 "SetDecalMaterial (script event)")
+-   [setStampSize](SetStampSize_%28script_event%29 "SetStampSize (script event)")
+-   [stamp](Stamp_%28script_event%29 "Stamp (script event)")
+-   [saveAll](SaveAll_%28script_event%29 "SaveAll (script event)")
 

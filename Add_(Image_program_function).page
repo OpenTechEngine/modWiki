@@ -1,21 +1,13 @@
----
-format: Markdown
-categories: Image_program_function
-toc: yes
-title: Add
-...
-Add (Image program function)
-============================
-
 Description
 -----------
 
-This function will composite two images using an additive blend without normalizing the result.
+This function will composite two images using an additive blend without
+normalizing the result.
 
 Usage
 -----
 
-`add ([map_1], [map_2])`
+    add ([map_1], [map_2])
 
 Parameters
 ----------
@@ -28,28 +20,29 @@ Example
 
 Composite two images...
 
-`textures/add_two`
-`{`
-`   {`
-`      blend diffusemap`
-`      map   add(textures/custom/image_1.tga, textures/custom/image_2.tga)`
-`   }`
-`}`
+    textures/add_two
+    {
+       {
+          blend diffusemap
+          map   add(textures/custom/image_1.tga, textures/custom/image_2.tga)
+       }
+    }
 
 Composite three or more images by nesting...
 
-`textures/add_three`
-`{`
-`   {`
-`      blend diffusemap`
-`      map   add(textures/custom/image_1.tga, add(textures/custom/image_2.tga,`
-`                textures/custom/image_3.tga))`
-`   }`
-`}`
+    textures/add_three
+    {
+       {
+          blend diffusemap
+          map   add(textures/custom/image_1.tga, add(textures/custom/image_2.tga,
+                    textures/custom/image_3.tga))
+       }
+    }
 
 Notes
 -----
 
 None.
 
+\
 

@@ -1,37 +1,32 @@
----
-format: Markdown
-categories: Material_global_keyword
-toc: yes
-title: Bumpmap
-...
-Bumpmap (Material global keyword)
-=================================
-
 Description
 -----------
 
-Creates a [bump map](Texturing#Bump\_maps) stage in a material shader.
+Creates a [bump map](Texturing#Bump_maps "Texturing") stage in a
+material shader.
 
 Usage
 -----
 
 In the global section of your material shader type...
 
-`bumpmap [map]`
+    bumpmap [map]
 
 Parameters
 ----------
 
--   [base](map] - the relative path and file name from /[Base\_(folder)) to the specified bump map image.
+-   [map] - the relative path and file name from /
+    [base](Base_%28folder%29 "Base (folder)") to the specified bump map
+    image.
 
 Notes
 -----
 
 This keyword is shorthand for...
 
-`{`
-` blend bumpmap`
-` map [map]`
-`}`
+    {
+     blend bumpmap
+     map [map]
+    }
 
+\
 

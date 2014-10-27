@@ -1,59 +1,46 @@
----
-format: Markdown
-categories: GUI_item_type
-toc: yes
-title: ListDef
-...
-ListDef (GUI item type)
-=======================
+![A listDef from
+Doom3](/images/thumb/4/40/Gui_example_listdef.png/180px-Gui_example_listdef.png)\
+ *A listDef from Doom3*
 
-<div class="thumb tright">
-<div style="width: 182px">
-![A listDef from Doom3](/images/images_thumb_4_40_Gui_example_listdef.png_180px-Gui_example_listdef.png "A listDef from Doom3")
-
-<div class="thumbcaption">
-<div class="magnify" style="float: right">
-![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
-
-</div>
-A listDef from Doom3
-
-</div>
-</div>
-</div>
-A list of textual items for selection. Most lists in generated in the engine, including the list of saved games, the multiplayer server list, the list of maps, the mods list, and several others. In Doom 3, the lists used in the PDA (PDAs, emails, audio logs, videos) are generated dynamically in the game code, allowing dynamic addition of new assets.
+A list of textual items for selection. Most lists in generated in the
+engine, including the list of saved games, the multiplayer server list,
+the list of maps, the mods list, and several others. In Doom 3, the
+lists used in the PDA (PDAs, emails, audio logs, videos) are generated
+dynamically in the game code, allowing dynamic addition of new assets.
 
 Additional properties
 ---------------------
 
--   [listName](ListName\_(GUI\_item\_property))
--   horizontal
--   [multipleSel](MultipleSel\_(GUI\_item\_property))
--   [tabStops](TabStops\_(GUI\_item\_property))
--   [tabAligns](TabAligns\_(GUI\_item\_property))
--   tabTextScales
--   tabValigns
--   itemheight
+-   [listName](ListName_%28GUI_item_property%29 "ListName (GUI item property)")
+-   [horizontal](Horizontal_%28GUI_item_property%29 "Horizontal (GUI item property)")
+-   [multipleSel](MultipleSel_%28GUI_item_property%29 "MultipleSel (GUI item property)")
+-   [tabStops](TabStops_%28GUI_item_property%29 "TabStops (GUI item property)")
+-   [tabAligns](TabAligns_%28GUI_item_property%29 "TabAligns (GUI item property)")
+-   [tabTextScales](TabTextScales_%28GUI_item_property%29 "TabTextScales (GUI item property)")
+-   [tabValigns](TabValigns_%28GUI_item_property%29 "TabValigns (GUI item property)")
+-   [itemheight](Itemheight_%28GUI_item_property%29 "Itemheight (GUI item property)")
 
 Example(s)
 ----------
 
-`listDef MMCLoadList {`
-`   rect    0, 0, 306, 212`
-`   foreColor   1, 1, 1, 1`
-`   bordercolor 0.3 ,0.52 ,0.5 ,0.5`
-`   textscale   0.25`
-`   listName    "modsList"`
-`   font    "fonts/an"`
-`   `
-`   onAction {`
-`       set "cmd" "play guisounds_click3" ;`
-`       resetTime "MMCBtn1" "0" ;`
-`   }`
-`   onEnter {`
-`       set "cmd" "play guisounds_menuclickup" ; `
-`       set "cmd" "loadMod" ;`
-`   }`
-`}`
+    listDef MMCLoadList {
+        rect    0, 0, 306, 212
+        foreColor   1, 1, 1, 1
+        bordercolor 0.3 ,0.52 ,0.5 ,0.5
+        textscale   0.25
+        listName    "modsList"
+        font    "fonts/an"
+        
+        onAction {
+            set "cmd" "play guisounds_click3" ;
+            resetTime "MMCBtn1" "0" ;
+        }
 
+        onEnter {
+            set "cmd" "play guisounds_menuclickup" ; 
+            set "cmd" "loadMod" ;
+        }
+    }
+
+\
 

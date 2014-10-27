@@ -1,59 +1,308 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: Quality_settings.page
-...
-Quality settings
-================
+These are the [CVars](Console "Console") and other game features that
+change depending on which quality level you select in the system options
+menu.
 
-These are the [CVars](Console) and other game features that change depending on which quality level you select in the system options menu.
+<span align="absbottom"> ![](/images/2/23/D3square_25.png) Doom 3 </span>
+-------------------------------------------------------------------------
 
-<span align="absbottom">![](/images/images_2_23_D3square_25.png) Doom 3</span>
-------------------------------------------------------------------------------------------------------------------------
+*The information in this section is specific to [Doom
+3](Doom_3 "Doom 3") .*
 
-  
-*The information in this section is specific to [Doom 3](Doom\_3).*
+Doom 3
 
-| Doom 3                                                                         | Low  | Medium | High  | Ultra |
-|--------------------------------------------------------------------------------|------|--------|-------|-------|
-| [com\_machineSpec](Com\_machineSpec\_(cvar))                               | 0    | 1      | 2     | 3     |
-| [image\_anisotropy](Image\_anisotropy\_(cvar))                             | 0    | 1      | 8     | 8     |
-| [image\_downSize](Image\_downSize\_(cvar))                                 | 1    | 0      | 0     | 0     |
-| [image\_downSizeBump](Image\_downSizeBump\_(cvar))                         | 1    | 0      | 0     | 0     |
-| [image\_downSizeSpecular](Image\_downSizeSpecular\_(cvar))                 | 1    | 0      | 0     | 0     |
-| [image\_ignoreHighQuality](Image\_ignoreHighQuality\_(cvar))               | 1    | 1      | 0     | 0     |
-| [image\_useCompression](Image\_useCompression\_(cvar))                     | 1    | 1      | 1     | 0     |
-| [image\_useNormalCompression](Image\_useNormalCompression\_(cvar)) \*      | 2    | 2      | 0     | 0     |
-| [image\_usePrecompressedTextures](Image\_usePrecompressedTextures\_(cvar)) | 1    | 1      | 1     | 0     |
-| [r\_mode](R\_mode\_(cvar))                                                 | 3    | 3      | 4     | 5     |
-| [s\_maxSoundsPerShader](S\_maxSoundsPerShader\_(cvar))                     | 1    | 1      | 0     | 0     |
-| Texture Budget                                                                 | 64mb | 128mb  | 256mb | 512mb |
+Low
 
-<span align="absbottom">![Q4](/images/images_e_e8_Q4square_25.png) Quake 4</span>
-----------------------------------------------------------------------------------
+Medium
 
-  
-*The information in this section is specific to [Quake 4](Quake\_4).*
+High
 
-| Quake 4                                                                        | Low  | Medium | High  | Ultra |
-|--------------------------------------------------------------------------------|------|--------|-------|-------|
-| [com\_machineSpec](Com\_machineSpec\_(cvar))                               | 0    | 1      | 2     | 3     |
-| [g\_brassTime](G\_brassTime\_(cvar))                                       | 0    | 0      | 1     | 2     |
-| [image\_anisotropy](Image\_anisotropy\_(cvar))                             | 1    | 1      | 4     | 8     |
-| [image\_downSize](Image\_downSize\_(cvar))                                 | 1    | 0      | 0     | 0     |
-| [image\_downSizeBump](Image\_downSizeBump\_(cvar))                         | 1    | 0      | 0     | 0     |
-| [image\_downSizeSpecular](Image\_downSizeSpecular\_(cvar))                 | 1    | 0      | 0     | 0     |
-| [image\_ignoreHighQuality](Image\_ignoreHighQuality\_(cvar))               | 1    | 1      | 0     | 0     |
-| [image\_useCompression](Image\_useCompression\_(cvar))                     | 1    | 1      | 1     | 0     |
-| [image\_useNormalCompression](Image\_useNormalCompression\_(cvar)) \*      | 2    | 2      | 0     | 0     |
-| [image\_usePrecompressedTextures](Image\_usePrecompressedTextures\_(cvar)) | 1    | 1      | 1     | 0     |
-| [r\_mode](R\_mode\_(cvar))                                                 | 3    | 3      | 4     | 5     |
-| [r\_skipNewAmbient](R\_skipNewAmbient\_(cvar))                             | 1    | 1      | 0     | 0     |
-| [s\_maxSoundsPerShader](S\_maxSoundsPerShader\_(cvar))                     | 1    | 1      | 0     | 0     |
-| Texture Budget                                                                 | 64mb | 128mb  | 256mb | 512mb |
+Ultra
 
-\* nVidia GeForce 3 and 4MX cards use palettized normal maps in Medium and Low quality settings so this CVar is set to "1" on these cards. All other supported cards use [DXT5](DDS\_(file\_format)) compression.
+[com\_machineSpec](Com_machineSpec_%28cvar%29 "Com machineSpec (cvar)")
 
-You can use the [listImages](ListImages\_(console\_command)) console command to keep tabs on the texture memory usage of each setting.
+0
+
+1
+
+2
+
+3
+
+[image\_anisotropy](Image_anisotropy_%28cvar%29 "Image anisotropy (cvar)")
+
+0
+
+1
+
+8
+
+8
+
+[image\_downSize](Image_downSize_%28cvar%29 "Image downSize (cvar)")
+
+1
+
+0
+
+0
+
+0
+
+[image\_downSizeBump](Image_downSizeBump_%28cvar%29 "Image downSizeBump (cvar)")
+
+1
+
+0
+
+0
+
+0
+
+[image\_downSizeSpecular](Image_downSizeSpecular_%28cvar%29 "Image downSizeSpecular (cvar)")
+
+1
+
+0
+
+0
+
+0
+
+[image\_ignoreHighQuality](Image_ignoreHighQuality_%28cvar%29 "Image ignoreHighQuality (cvar)")
+
+1
+
+1
+
+0
+
+0
+
+[image\_useCompression](Image_useCompression_%28cvar%29 "Image useCompression (cvar)")
+
+1
+
+1
+
+1
+
+0
+
+[image\_useNormalCompression](Image_useNormalCompression_%28cvar%29 "Image useNormalCompression (cvar)") \*
+
+2
+
+2
+
+0
+
+0
+
+[image\_usePrecompressedTextures](Image_usePrecompressedTextures_%28cvar%29 "Image usePrecompressedTextures (cvar)")
+
+1
+
+1
+
+1
+
+0
+
+[r\_mode](R_mode_%28cvar%29 "R mode (cvar)")
+
+3
+
+3
+
+4
+
+5
+
+[s\_maxSoundsPerShader](S_maxSoundsPerShader_%28cvar%29 "S maxSoundsPerShader (cvar)")
+
+1
+
+1
+
+0
+
+0
+
+Texture Budget
+
+64mb
+
+128mb
+
+256mb
+
+512mb
+
+\
+
+<span align="absbottom"> ![Q4](/images/e/e8/Q4square_25.png) Quake 4 </span>
+----------------------------------------------------------------------------
+
+*The information in this section is specific to [Quake
+4](Quake_4 "Quake 4") .*
+
+Quake 4
+
+Low
+
+Medium
+
+High
+
+Ultra
+
+[com\_machineSpec](Com_machineSpec_%28cvar%29 "Com machineSpec (cvar)")
+
+0
+
+1
+
+2
+
+3
+
+[g\_brassTime](G_brassTime_%28cvar%29 "G brassTime (cvar)")
+
+0
+
+0
+
+1
+
+2
+
+[image\_anisotropy](Image_anisotropy_%28cvar%29 "Image anisotropy (cvar)")
+
+1
+
+1
+
+4
+
+8
+
+[image\_downSize](Image_downSize_%28cvar%29 "Image downSize (cvar)")
+
+1
+
+0
+
+0
+
+0
+
+[image\_downSizeBump](Image_downSizeBump_%28cvar%29 "Image downSizeBump (cvar)")
+
+1
+
+0
+
+0
+
+0
+
+[image\_downSizeSpecular](Image_downSizeSpecular_%28cvar%29 "Image downSizeSpecular (cvar)")
+
+1
+
+0
+
+0
+
+0
+
+[image\_ignoreHighQuality](Image_ignoreHighQuality_%28cvar%29 "Image ignoreHighQuality (cvar)")
+
+1
+
+1
+
+0
+
+0
+
+[image\_useCompression](Image_useCompression_%28cvar%29 "Image useCompression (cvar)")
+
+1
+
+1
+
+1
+
+0
+
+[image\_useNormalCompression](Image_useNormalCompression_%28cvar%29 "Image useNormalCompression (cvar)") \*
+
+2
+
+2
+
+0
+
+0
+
+[image\_usePrecompressedTextures](Image_usePrecompressedTextures_%28cvar%29 "Image usePrecompressedTextures (cvar)")
+
+1
+
+1
+
+1
+
+0
+
+[r\_mode](R_mode_%28cvar%29 "R mode (cvar)")
+
+3
+
+3
+
+4
+
+5
+
+[r\_skipNewAmbient](R_skipNewAmbient_%28cvar%29 "R skipNewAmbient (cvar)")
+
+1
+
+1
+
+0
+
+0
+
+[s\_maxSoundsPerShader](S_maxSoundsPerShader_%28cvar%29 "S maxSoundsPerShader (cvar)")
+
+1
+
+1
+
+0
+
+0
+
+Texture Budget
+
+64mb
+
+128mb
+
+256mb
+
+512mb
+
+\* nVidia GeForce 3 and 4MX cards use palettized normal maps in Medium
+and Low quality settings so this CVar is set to "1" on these cards. All
+other supported cards use
+[DXT5](DDS_%28file_format%29 "DDS (file format)") compression.
+
+You can use the
+[listImages](ListImages_%28console_command%29 "ListImages (console command)")
+console command to keep tabs on the texture memory usage of each
+setting.
 

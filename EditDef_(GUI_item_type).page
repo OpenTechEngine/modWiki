@@ -1,53 +1,40 @@
----
-format: Markdown
-categories: GUI_item_type
-toc: yes
-title: EditDef
-...
-EditDef (GUI item type)
-=======================
+![An editDef from
+Doom3](/images/thumb/9/98/Gui_example_editdef.png/180px-Gui_example_editdef.png)\
+ *An editDef from Doom3*
 
-<div class="thumb tright">
-<div style="width: 182px">
-![An editDef from Doom3](/images/images_thumb_9_98_Gui_example_editdef.png_180px-Gui_example_editdef.png "An editDef from Doom3")
-
-<div class="thumbcaption">
-<div class="magnify" style="float: right">
-![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
-
-</div>
-An editDef from Doom3
-
-</div>
-</div>
-</div>
-Just like a [windowDef](WindowDef\_(GUI\_item\_type)), but accepts a text input by the user. An editable text field. Can't be used as in-game GUI.
+Just like a
+[windowDef](WindowDef_%28GUI_item_type%29 "WindowDef (GUI item type)") ,
+but accepts a text input by the user. An editable text field. Can't be
+used as in-game GUI.
 
 Additional properties
 ---------------------
 
--   [cursorvar](Cursorvar\_(GUI\_item\_property))
--   [cvar](Cvar\_(GUI\_item\_property))
--   cvarGroup
--   forceScroll
--   [liveUpdate](LiveUpdate\_(GUI\_item\_property))
--   [maxchars](Maxchars\_(GUI\_item\_property))
--   numeric
--   password
--   [readonly](Readonly\_(GUI\_item\_property))
--   source
--   [wrap](Wrap\_(GUI\_item\_property))
+-   [cursorvar](Cursorvar_%28GUI_item_property%29 "Cursorvar (GUI item property)")
+-   [cvar](Cvar_%28GUI_item_property%29 "Cvar (GUI item property)")
+-   [cvarGroup](CvarGroup_%28GUI_item_property%29 "CvarGroup (GUI item property)")
+-   [forceScroll](ForceScroll_%28GUI_item_property%29 "ForceScroll (GUI item property)")
+-   [liveUpdate](LiveUpdate_%28GUI_item_property%29 "LiveUpdate (GUI item property)")
+-   [maxchars](Maxchars_%28GUI_item_property%29 "Maxchars (GUI item property)")
+-   [numeric](Numeric_%28GUI_item_property%29 "Numeric (GUI item property)")
+-   [password](Password_%28GUI_item_property%29 "Password (GUI item property)")
+-   [readonly](Readonly_%28GUI_item_property%29 "Readonly (GUI item property)")
+-   [source](Source_%28GUI_item_property%29 "Source (GUI item property)")
+-   [wrap](Wrap_%28GUI_item_property%29 "Wrap (GUI item property)")
 
 Example(s)
 ----------
 
-`editDef OG2Primary {`
-`   rect        110, 1, 160, 14`
-`   cvar        "ui_name"`
-`   maxchars    40 `
-`   font        "fonts/bank"`
-`   textscale   0.25`
-`   textaligny  -6`
-`   forecolor   0.6, 0.8, 0.8, 1`
-`}`
+    editDef OG2Primary {
+        rect        110, 1, 160, 14
+        cvar        "ui_name"
+        maxchars    40 
+        font        "fonts/bank"
+        textscale   0.25
+        textaligny  -6
+        forecolor   0.6, 0.8, 0.8, 1
+    }
+
+\
+
 

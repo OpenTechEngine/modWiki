@@ -1,15 +1,24 @@
----
-format: Markdown
-categories: Entity
-toc: yes
-title: SfxDoor_biolab_paneltop
-...
-SfxDoor biolab paneltop (entity)
-================================
+<div class="plainlinks"
+style="border: 1px grey solid; padding: 0.25em;">
 
-> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
+help by verifying and
+[completing](SfxDoor_biolab_paneltop_%28entity%29 "http://www.modwiki.net/w/index.php?title=SfxDoor_biolab_paneltop_%28entity%29&action=edit")
+the info on this page.*
 
-> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+</div>
+
+<div id="stub" class="boilerplate metadata">
+
+*This article is a
+[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
+. You can help us by <span class="plainlinks"> [expanding
+it](SfxDoor_biolab_paneltop_%28entity%29 "http://www.modwiki.net/w/index.php?title=SfxDoor_biolab_paneltop_%28entity%29&action=edit")
+</span> .*
+
+</div>
+
+\
 
 Description
 -----------
@@ -19,26 +28,27 @@ Description not available.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+The following is a list of key/value pairs, also known as spawn
+arguments, that function with this entity.\
 
-| KEY             | DESCRIPTION                |
-|-----------------|----------------------------|
-| inherit         | Description not available. |
-| model           | Description not available. |
-| section\_offset | Description not available. |
-| spawnclass      | Description not available. |
+  KEY               DESCRIPTION
+  ----------------- ----------------------------
+  inherit           Description not available.
+  model             Description not available.
+  section\_offset   Description not available.
+  spawnclass        Description not available.
 
 Inheritance
 -----------
 
 This entity is derived from the following:
 
--   '' hhProxDoorSection''
-    -   '' hhProxDoorTranslator''
-        -   [proxdoor\_translator](Proxdoor\_translator\_(entity))
-            -   *' sfxDoor\_biolab\_paneltop*'
+-   *[hhProxDoorSection](HhProxDoorSection_%28class%29 "HhProxDoorSection (class)")*
+    -   *[hhProxDoorTranslator](HhProxDoorTranslator_%28class%29 "HhProxDoorTranslator (class)")*
+        -   [proxdoor\_translator](Proxdoor_translator_%28entity%29 "Proxdoor translator (entity)")
+            -   **sfxDoor\_biolab\_paneltop**
 
-**Note**: Entries marked in italics are classes defined in the SDK.
+**Note** : Entries marked in italics are classes defined in the SDK.
 
 Notes
 -----

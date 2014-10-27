@@ -1,23 +1,15 @@
----
-format: Markdown
-categories: cvar
-toc: yes
-title: Com_speeds
-...
-Com speeds (cvar)
-=================
-
 Description
 -----------
 
-This CVar toggles the display of how much time is spent and by what on rendering a frame.
+This CVar toggles the display of how much time is spent and by what on
+rendering a frame.
 
 Usage
 -----
 
 At the console type...
 
-`com_speeds [Boolean]`
+    com_speeds [Boolean]
 
 Parameters
 ----------
@@ -29,28 +21,59 @@ Parameters
 Flags
 -----
 
-| Flag              | Enabled | Description                                  |
-|-------------------|---------|----------------------------------------------|
-| CVAR\_ALL         |         | all flags                                    |
-| CVAR\_BOOL        | X       | variable is a boolean                        |
-| CVAR\_INTEGER     |         | variable is an integer                       |
-| CVAR\_FLOAT       |         | variable is a float                          |
-| CVAR\_SYSTEM      | X       | system variable                              |
-| CVAR\_RENDERER    |         | renderer variable                            |
-| CVAR\_SOUND       |         | sound variable                               |
-| CVAR\_GUI         |         | gui variable                                 |
-| CVAR\_GAME        |         | game variable                                |
-| CVAR\_TOOL        |         | tool variable                                |
-| CVAR\_USERINFO    |         | sent to servers, available to menu           |
-| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
-| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
-| CVAR\_STATIC      | X       | statically declared, not user created        |
-| CVAR\_CHEAT       |         | variable is considered a cheat               |
-| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
-| CVAR\_INIT        |         | can only be set from the command-line        |
-| CVAR\_ROM         |         | display only, cannot be set by user at all   |
-| CVAR\_ARCHIVE     |         | set to cause it to be saved to a config file |
-| CVAR\_MODIFIED    | X       | set when the variable is modified            |
+  --------------------------------------------------------------------------
+  Flag                     Enabled                  Description
+  ------------------------ ------------------------ ------------------------
+  CVAR\_ALL                                         all flags
+
+  CVAR\_BOOL               X                        variable is a boolean
+
+  CVAR\_INTEGER                                     variable is an integer
+
+  CVAR\_FLOAT                                       variable is a float
+
+  CVAR\_SYSTEM             X                        system variable
+
+  CVAR\_RENDERER                                    renderer variable
+
+  CVAR\_SOUND                                       sound variable
+
+  CVAR\_GUI                                         gui variable
+
+  CVAR\_GAME                                        game variable
+
+  CVAR\_TOOL                                        tool variable
+
+  CVAR\_USERINFO                                    sent to servers,
+                                                    available to menu
+
+  CVAR\_SERVERINFO                                  sent from servers,
+                                                    available to menu
+
+  CVAR\_NETWORKSYNC                                 cvar is synced from the
+                                                    server to clients
+
+  CVAR\_STATIC             X                        statically declared, not
+                                                    user created
+
+  CVAR\_CHEAT                                       variable is considered a
+                                                    cheat
+
+  CVAR\_NOCHEAT                                     variable is not
+                                                    considered a cheat
+
+  CVAR\_INIT                                        can only be set from the
+                                                    command-line
+
+  CVAR\_ROM                                         display only, cannot be
+                                                    set by user at all
+
+  CVAR\_ARCHIVE                                     set to cause it to be
+                                                    saved to a config file
+
+  CVAR\_MODIFIED           X                        set when the variable is
+                                                    modified
+  --------------------------------------------------------------------------
 
 Notes
 -----
@@ -58,10 +81,16 @@ Notes
 The information displayed:
 
 -   frame - Individual numbered frame.
--   all - How long it took to render the current frame (in milliseconds).
+-   all - How long it took to render the current frame (in
+    milliseconds).
 -   gfr - How long the game code part needed (in milliseconds).
 -   rf - How long the renderer front end needed (in milliseconds).
 -   bk - How long the renderer back end needed (in milliseconds).
 
- The render front end is responsible for traversing the scene, portal and view frustum culling, shadow generation, dynamic model generation, and sorting. The back end is responsible for issuing the actual draw calls (the back end is what changes when r\_renderer changes).
+\
+
+The render front end is responsible for traversing the scene, portal and
+view frustum culling, shadow generation, dynamic model generation, and
+sorting. The back end is responsible for issuing the actual draw calls
+(the back end is what changes when r\_renderer changes).
 

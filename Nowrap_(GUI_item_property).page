@@ -1,28 +1,24 @@
----
-format: Markdown
-categories: GUI_item_property
-toc: yes
-title: Nowrap
-...
-Nowrap (GUI item property)
-==========================
-
-If set to 1, it doesn't wrap [text](Text\_(GUI\_item\_property)) around this item's bounding box.
+If set to 1, it doesn't wrap
+[text](Text_%28GUI_item_property%29 "Text (GUI item property)") around
+this item's bounding box.
 
 The value of this property cannot be changed at runtime.
 
 Syntax
 ------
 
-`nowrap `*`flag`*
+    nowrap flag
 
 Default value
 -------------
 
-`0`
+    0
 
 Example(s)
 ----------
 
-`nowrap 1`
+    nowrap   1
+
+\
+
 

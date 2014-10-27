@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: SetGuiFloat
-...
-SetGuiFloat (script event)
-==========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -20,7 +12,7 @@ Sets a parameter on this entity's GUI.
 Usage
 -----
 
-*void* setGuiFloat( *string* **key**, *float* **value** )
+*void* setGuiFloat( *string* **key** , *float* **value** )
 
 Parameters
 ----------
@@ -31,12 +23,13 @@ Parameters
 Examples
 --------
 
-` `
-<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`setGuiFloat`</font><font color="#000000">`(`</font><font color="#666666">`"health"`</font>`, `<font color="#0000dd">`100`</font><font color="#000000">`)`</font>`;`
+     
+    $my_entity.setGuiFloat("health", 100);
 
 Notes
 -----
 
 This script event does not return any values.
 
+\
 

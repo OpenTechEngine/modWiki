@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: GetMaxs
-...
-GetMaxs (script event)
-======================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -30,12 +22,14 @@ This script event does not accept parameters.
 Examples
 --------
 
-` `
-`maxBB = `<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`getMaxs`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+     
+    maxBB = $my_entity.getMaxs();
 
 Notes
 -----
 
-This script event returns the maximum corner of this entity's bounding box as a vector.
+This script event returns the maximum corner of this entity's bounding
+box as a vector.
 
+\
 

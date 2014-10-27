@@ -1,23 +1,14 @@
----
-format: Markdown
-categories: cvar
-toc: yes
-title: R_showPortals
-...
-R showPortals (cvar)
-====================
-
 Description
 -----------
 
-Enables drawing [visportal](Visportal) outlines.
+Enables drawing [visportal](Visportal "Visportal") outlines.
 
 Usage
 -----
 
 At the console type...
 
-`r_showPortals [bool]`
+    r_showPortals [bool]
 
 Parameters
 ----------
@@ -29,32 +20,71 @@ Parameters
 Flags
 -----
 
-| Flag              | Enabled | Description                                  |
-|-------------------|---------|----------------------------------------------|
-| CVAR\_ALL         |         | all flags                                    |
-| CVAR\_BOOL        | X       | variable is a boolean                        |
-| CVAR\_INTEGER     |         | variable is an integer                       |
-| CVAR\_FLOAT       |         | variable is a float                          |
-| CVAR\_SYSTEM      |         | system variable                              |
-| CVAR\_RENDERER    | X       | renderer variable                            |
-| CVAR\_SOUND       |         | sound variable                               |
-| CVAR\_GUI         |         | gui variable                                 |
-| CVAR\_GAME        |         | game variable                                |
-| CVAR\_TOOL        |         | tool variable                                |
-| CVAR\_USERINFO    |         | sent to servers, available to menu           |
-| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
-| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
-| CVAR\_STATIC      | X       | statically declared, not user created        |
-| CVAR\_CHEAT       | X       | variable is considered a cheat               |
-| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
-| CVAR\_INIT        |         | can only be set from the command-line        |
-| CVAR\_ROM         |         | display only, cannot be set by user at all   |
-| CVAR\_ARCHIVE     |         | set to cause it to be saved to a config file |
-| CVAR\_MODIFIED    | X       | set when the variable is modified            |
+  --------------------------------------------------------------------------
+  Flag                     Enabled                  Description
+  ------------------------ ------------------------ ------------------------
+  CVAR\_ALL                                         all flags
+
+  CVAR\_BOOL               X                        variable is a boolean
+
+  CVAR\_INTEGER                                     variable is an integer
+
+  CVAR\_FLOAT                                       variable is a float
+
+  CVAR\_SYSTEM                                      system variable
+
+  CVAR\_RENDERER           X                        renderer variable
+
+  CVAR\_SOUND                                       sound variable
+
+  CVAR\_GUI                                         gui variable
+
+  CVAR\_GAME                                        game variable
+
+  CVAR\_TOOL                                        tool variable
+
+  CVAR\_USERINFO                                    sent to servers,
+                                                    available to menu
+
+  CVAR\_SERVERINFO                                  sent from servers,
+                                                    available to menu
+
+  CVAR\_NETWORKSYNC                                 cvar is synced from the
+                                                    server to clients
+
+  CVAR\_STATIC             X                        statically declared, not
+                                                    user created
+
+  CVAR\_CHEAT              X                        variable is considered a
+                                                    cheat
+
+  CVAR\_NOCHEAT                                     variable is not
+                                                    considered a cheat
+
+  CVAR\_INIT                                        can only be set from the
+                                                    command-line
+
+  CVAR\_ROM                                         display only, cannot be
+                                                    set by user at all
+
+  CVAR\_ARCHIVE                                     set to cause it to be
+                                                    saved to a config file
+
+  CVAR\_MODIFIED           X                        set when the variable is
+                                                    modified
+  --------------------------------------------------------------------------
 
 Notes
 -----
 
-This CVar is used primarily to test whether a visportal is working and how efficient the optimisation is. Portals outlined in green mean they are open and that all geometry in that area is being processed. When a portal is red it means the area behind it is being ignored by the renderer. When they are used, there will always be at least one green portal. See also the [r\_useScissor](R\_useScissor\_(cvar)) and [r\_showTris](R\_showTris\_(cvar)) CVars.
+This CVar is used primarily to test whether a visportal is working and
+how efficient the optimisation is. Portals outlined in green mean they
+are open and that all geometry in that area is being processed. When a
+portal is red it means the area behind it is being ignored by the
+renderer. When they are used, there will always be at least one green
+portal. See also the
+[r\_useScissor](R_useScissor_%28cvar%29 "R useScissor (cvar)") and
+[r\_showTris](R_showTris_%28cvar%29 "R showTris (cvar)") CVars.
 
+\
 

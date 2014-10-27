@@ -1,0 +1,68 @@
+Doom3 Network Architecture
+--------------------------
+
+Doom3's network architecture is a client/server architecture, which
+means you have one server to which multiple clients are allowed to
+connect. The engine supports up to 32 players, however for performance
+reasons, the original Doom3 deathmatch allows only 4. (RoE increased
+this to 8 players.)
+
+### Dedicated and listening Server
+
+When setting up a server, one has the choice to make it a dedicated or a
+listening server.
+
+A dedicated server is just a computer where the game is running in the
+background. A listening server on the other hand, is a server which has
+a local player running the game. The local player is mostly referred to
+as the *local client* .
+
+### Client, server and the lag
+
+When coding multiplayer, it is important to note that only the server
+knows the *gamestate* and maintains the 'simulation' time. The client
+just receives the gamestate from the server. However, the client game
+does not receive every frame from the server (This would result in too
+much traffic) - rather it receives a frame every 50 milliseconds. To get
+a somewhat continuous looking feel, the client predicts what happens in
+between those frames coming from the server. This is called 'client side
+prediction'. However, the frames sent by the server may take different
+times to arrive, so the client needs to cope with that as well.
+
+To illustrate the mechanism, look at this little example. Let's say the
+player wants to shoot at another player. On the networking side, the
+following things will happen:
+
+1.  The client presses the appropriate key, which is encoded in a
+    structure called *usercmd* .
+2.  This structure (with all important key states) is sent to the server
+    which calculates the actual hit, based on the position and
+    orientation of the player and changes the *gamestate* .
+3.  The gamestate is retransmitted over the network to all clients.
+    Transmitting stuff over the Internet may take some time due to the
+    data taking different/slower routes. So if your connection is slow,
+    it will take some time before your shot will change the gamestate
+    and the result of your shot shows on your screen.
+
+Assuming the above mentioned 50 ms server-sided wait and an average
+client ping of 50, we can show the events in a table. Here we extended
+the previous example to 2 clients:
+
+  ----------------------------------------------------------------
+  Servertime   Client 1         Client 2          Server
+  ------------ ---------------- ----------------- ----------------
+  1            shoot            -                 -
+
+  2            move\            -                 process shot\
+                                                   post shot
+
+  3            -\               get shot\         process move\
+                                 jump              post movement
+
+  4            get moved\       client 1 moved\   process jump\
+                                                   post jump
+
+  5            client2 jumped   jump up           -
+  ----------------------------------------------------------------
+
+

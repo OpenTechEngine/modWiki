@@ -1,28 +1,25 @@
----
-format: Markdown
-categories: GUI_item_property
-toc: yes
-title: Wantenter
-...
-Wantenter (GUI item property)
-=============================
-
-When set to 1, the onAction event gets fired when the user presses enter.
+When set to 1, the [onAction
+event](OnAction_%28GUI_event%29 "OnAction (GUI event)") gets fired when
+the user presses enter.
 
 The value of this property cannot be changed at runtime.
 
 Syntax
 ------
 
-`wantenter `*`flag`*
+    wantenter flag
 
 Default value
 -------------
 
-`0`
+    0
 
 Example(s)
 ----------
 
-`wantenter 1`
+    wantenter 1
+
+\
+
+\
 

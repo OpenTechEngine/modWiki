@@ -1,14 +1,9 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: GetGameTeam
-...
-GetGameTeam (script event)
-==========================
+<div align="left"
+style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
 
-<div style="padding: 1px; border: 0px solid #000000" align="left">
-<font size="18px"><font color="black">![](/images/images_f_f9_Etqwsquare_bg.png) The information on this page is specific to [Enemy Territory: Quake Wars](http://web.archive.org/web/20121206024939/http://www.modwiki.net:80/wiki/Enemy_Territory:_Quake_Wars).</font></font>
+![](/images/f/f9/Etqwsquare_bg.png) The information on this page is
+specific to [Enemy Territory: Quake
+Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
 
 </div>
 
@@ -17,12 +12,17 @@ GetGameTeam (script event)
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type [idEntity](IdEntity\_(class)). Has spawn class specific implementation.
+This event operates on an instance of the [game
+class](Game_class "Game class") type
+[idEntity](IdEntity_%28class%29 "IdEntity (class)") . Has spawn class
+specific implementation.
 
 Description
 -----------
 
-Returns the script object of the entity's team, or [null]($null\_entity\_(scripting)) if none.
+Returns the script object of the entity's team, or
+[null](%24null_entity_%28scripting%29 "$null entity (scripting)") if
+none.
 
 Usage
 -----
@@ -37,17 +37,23 @@ This event does not accept parameters.
 Examples
 --------
 
-<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` someEntity.`<font color="#ff0000">`getGameTeam`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` == teamStrogg `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`   `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font>` `<font color="#666666">`"Makron is feeling peckish, harvest more humans!"`</font>` `<font color="#000000">`)`</font>`;`
-<font color="#000000">`}`</font>
+    if ( someEntity.getGameTeam() == teamStrogg ) {
+        sys.println( "Makron is feeling peckish, harvest more humans!" );
+    }
 
 Notes
 -----
 
-Returns object pointer of team. Named object pointers for teams are **gdfTeam** and **stroggTeam** for comparison.
+Returns object pointer of team. Named object pointers for teams are
+**gdfTeam** and **stroggTeam** for comparison.
 
-The following [spawn classes](Spawn\_class) can have their team set: **idActor**, **idItem**, **idProjectile**, **idPlayer**, **sdScriptEntity**.
+The following [spawn classes](Spawn_class "Spawn class") can have their
+team set: **idActor** , **idItem** , **idProjectile** , **idPlayer** ,
+**sdScriptEntity** .
 
-Has counterpart [setGameTeam](SetGameTeam\_(script\_event)).
+Has counterpart
+[setGameTeam](SetGameTeam_%28script_event%29 "SetGameTeam (script event)")
+.
 
+\
 

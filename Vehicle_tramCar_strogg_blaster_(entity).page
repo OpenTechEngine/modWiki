@@ -1,15 +1,24 @@
----
-format: Markdown
-categories: Entity
-toc: yes
-title: Vehicle_tramCar_strogg_blaster
-...
-Vehicle tramCar strogg blaster (entity)
-=======================================
+<div class="plainlinks"
+style="border: 1px grey solid; padding: 0.25em;">
 
-> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
+help by verifying and
+[completing](Vehicle_tramCar_strogg_blaster_%28entity%29 "http://modwiki.net/w/index.php?title=Vehicle_tramCar_strogg_blaster_%28entity%29&action=edit")
+the info on this page.*
 
-> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+</div>
+
+<div id="stub" class="boilerplate metadata">
+
+*This article is a
+[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
+. You can help us by <span class="plainlinks"> [expanding
+it](Vehicle_tramCar_strogg_blaster_%28entity%29 "http://modwiki.net/w/index.php?title=Vehicle_tramCar_strogg_blaster_%28entity%29&action=edit")
+</span> .*
+
+</div>
+
+\
 
 Description
 -----------
@@ -17,97 +26,173 @@ Description
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+The following is a list of key/value pairs, also known as spawn
+arguments, that function with this entity.\
 
-| KEY                          | DESCRIPTION                                      |
-|------------------------------|--------------------------------------------------|
-| accel                        | acceleration                                     |
-| angle                        | Description not available.                       |
-| anim                         | Description not available.                       |
-| bind                         | Description not available.                       |
-| bindOrientated               | Description not available.                       |
-| bindToBody                   | Description not available.                       |
-| bindToJoint                  | Description not available.                       |
-| bindanim                     | Description not available.                       |
-| cameraTarget                 | Description not available.                       |
-| cinematic                    | Description not available.                       |
-| classname                    | Description not available.                       |
-| clipModel\_doorLeft          | Description not available.                       |
-| clipModel\_doorRight         | Description not available.                       |
-| clipmodel                    | Description not available.                       |
-| collisionFov                 | Description not available.                       |
-| cone                         | Description not available.                       |
-| cylinder                     | Description not available.                       |
-| decel                        | deceleration                                     |
-| def\_damage\_explode         | Description not available.                       |
-| def\_driver                  | Description not available.                       |
-| def\_occupant                | Description not available.                       |
-| def\_persona                 | Description not available.                       |
-| dodecahedron                 | Description not available.                       |
-| editor\_color                | Description not available.                       |
-| editor\_ignore               | Description not available.                       |
-| editor\_maxs                 | Description not available.                       |
-| editor\_mins                 | Description not available.                       |
-| editor\_rotatable            | Description not available.                       |
-| editor\_usage                |                                                  |
-| editor\_var XXXX             | Description not available.                       |
-| enemy                        | Name of tram car that is supposed to be followed |
-| fx\_damage\_external         | Description not available.                       |
-| fx\_damage\_internal         | Description not available.                       |
-| fx\_explode                  | Description not available.                       |
-| guiTarget                    | Description not available.                       |
-| health                       |                                                  |
-| hide                         | Description not available.                       |
-| hidesurface                  | Description not available.                       |
-| inherit                      | Description not available.                       |
-| instance                     | Description not available.                       |
-| maxs                         | Description not available.                       |
-| mins                         | Description not available.                       |
-| model                        | Description not available.                       |
-| name                         | Description not available.                       |
-| networkSync                  | Description not available.                       |
-| neverDormant                 | Description not available.                       |
-| noclipmodel                  | Description not available.                       |
-| noisePeriodRange             | Description not available.                       |
-| normalSpeed                  | Description not available.                       |
-| origin                       | Description not available.                       |
-| rotation                     | Description not available.                       |
-| scriptobject                 | Description not available.                       |
-| shadow\_lod\_distance        | Description not available.                       |
-| size                         | Description not available.                       |
-| snd\_accel                   | Description not available.                       |
-| snd\_close                   | Description not available.                       |
-| snd\_closed                  | Description not available.                       |
-| snd\_decel                   | Description not available.                       |
-| snd\_horn                    | Description not available.                       |
-| snd\_noise                   | Description not available.                       |
-| snd\_open                    | Description not available.                       |
-| snd\_opened                  | Description not available.                       |
-| snd\_speed\_excessive\_track | Description not available.                       |
-| snd\_speed\_excessive\_tram  | Description not available.                       |
-| snd\_speed\_normal\_track    | Description not available.                       |
-| snd\_speed\_normal\_tram     | Description not available.                       |
-| solidForTeam                 | Description not available.                       |
-| spawnclass                   | Description not available.                       |
-| speed                        | max speed                                        |
-| target                       | Description not available.                       |
-| trigger\_anim                | Description not available.                       |
-| usable                       | Description not available.                       |
-| useSimpleTriggerClip         | Description not available.                       |
+  -------------------------------------------------------------------------
+  KEY                                  DESCRIPTION
+  ------------------------------------ ------------------------------------
+  accel                                acceleration
+
+  angle                                Description not available.
+
+  anim                                 Description not available.
+
+  bind                                 Description not available.
+
+  bindOrientated                       Description not available.
+
+  bindToBody                           Description not available.
+
+  bindToJoint                          Description not available.
+
+  bindanim                             Description not available.
+
+  cameraTarget                         Description not available.
+
+  cinematic                            Description not available.
+
+  classname                            Description not available.
+
+  clipModel\_doorLeft                  Description not available.
+
+  clipModel\_doorRight                 Description not available.
+
+  clipmodel                            Description not available.
+
+  collisionFov                         Description not available.
+
+  cone                                 Description not available.
+
+  cylinder                             Description not available.
+
+  decel                                deceleration
+
+  def\_damage\_explode                 Description not available.
+
+  def\_driver                          Description not available.
+
+  def\_occupant                        Description not available.
+
+  def\_persona                         Description not available.
+
+  dodecahedron                         Description not available.
+
+  editor\_color                        Description not available.
+
+  editor\_ignore                       Description not available.
+
+  editor\_maxs                         Description not available.
+
+  editor\_mins                         Description not available.
+
+  editor\_rotatable                    Description not available.
+
+  editor\_usage                        
+
+  editor\_var XXXX                     Description not available.
+
+  enemy                                Name of tram car that is supposed to
+                                       be followed
+
+  fx\_damage\_external                 Description not available.
+
+  fx\_damage\_internal                 Description not available.
+
+  fx\_explode                          Description not available.
+
+  guiTarget                            Description not available.
+
+  health                               
+
+  hide                                 Description not available.
+
+  hidesurface                          Description not available.
+
+  inherit                              Description not available.
+
+  instance                             Description not available.
+
+  maxs                                 Description not available.
+
+  mins                                 Description not available.
+
+  model                                Description not available.
+
+  name                                 Description not available.
+
+  networkSync                          Description not available.
+
+  neverDormant                         Description not available.
+
+  noclipmodel                          Description not available.
+
+  noisePeriodRange                     Description not available.
+
+  normalSpeed                          Description not available.
+
+  origin                               Description not available.
+
+  rotation                             Description not available.
+
+  scriptobject                         Description not available.
+
+  shadow\_lod\_distance                Description not available.
+
+  size                                 Description not available.
+
+  snd\_accel                           Description not available.
+
+  snd\_close                           Description not available.
+
+  snd\_closed                          Description not available.
+
+  snd\_decel                           Description not available.
+
+  snd\_horn                            Description not available.
+
+  snd\_noise                           Description not available.
+
+  snd\_open                            Description not available.
+
+  snd\_opened                          Description not available.
+
+  snd\_speed\_excessive\_track         Description not available.
+
+  snd\_speed\_excessive\_tram          Description not available.
+
+  snd\_speed\_normal\_track            Description not available.
+
+  snd\_speed\_normal\_tram             Description not available.
+
+  solidForTeam                         Description not available.
+
+  spawnclass                           Description not available.
+
+  speed                                max speed
+
+  target                               Description not available.
+
+  trigger\_anim                        Description not available.
+
+  usable                               Description not available.
+
+  useSimpleTriggerClip                 Description not available.
+  -------------------------------------------------------------------------
 
 Inheritance
 -----------
 
 This entity is derived from the following:
 
--   '' idEntity''
-    -   '' idAnimatedEntity''
-        -   '' rvSplineMover''
-            -   [func\_mover\_spline](Func\_mover\_spline\_(entity))
-                -   <span class="deadlink"> vehicle\_tramCar</span>
-                    -   *' vehicle\_tramCar\_strogg\_blaster*'
+-   *[idEntity](IdEntity_%28class%29 "IdEntity (class)")*
+    -   *[idAnimatedEntity](IdAnimatedEntity_%28class%29 "IdAnimatedEntity (class)")*
+        -   *[rvSplineMover](RvSplineMover_%28class%29 "RvSplineMover (class)")*
+            -   [func\_mover\_spline](Func_mover_spline_%28entity%29 "Func mover spline (entity)")
+                -   [vehicle\_tramCar](Vehicle_tramCar_%28entity%29 "Vehicle tramCar (entity)")
+                    -   **vehicle\_tramCar\_strogg\_blaster**
 
-**Note**: Entries marked in italics are classes defined in the SDK.
+**Note** : Entries marked in italics are classes defined in the SDK.
 
 Notes
 -----

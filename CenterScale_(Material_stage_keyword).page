@@ -1,52 +1,54 @@
----
-format: Markdown
-categories: Material_stage_keyword
-toc: yes
-title: CenterScale
-...
-CenterScale (Material stage keyword)
-====================================
-
 Description
 -----------
 
-The **centerScale** keyword instructs Doom 3 to scale the texture in U and V dimensions using the specified factors. This keyword differs from the [scale](Scale\_(Material\_stage\_keyword)) keyword in that it scales from the center as opposed to a corner.
+The **centerScale** keyword instructs Doom 3 to scale the texture in U
+and V dimensions using the specified factors. This keyword differs from
+the
+[scale](Scale_%28Material_stage_keyword%29 "Scale (Material stage keyword)")
+keyword in that it scales from the center as opposed to a corner.
 
-The numbers given are the opposite of what might be expected - scaling by 2 causes the texture to be made *smaller* by a factor of 2, rather than bigger. In this sense the values could be considered "tiling" factors rather than scaling factors.
+The numbers given are the opposite of what might be expected - scaling
+by 2 causes the texture to be made *smaller* by a factor of 2, rather
+than bigger. In this sense the values could be considered "tiling"
+factors rather than scaling factors.
 
 Usage
 -----
 
-`centerScale [U], [V]`
+    centerScale [U], [V]
 
 Parameters
 ----------
 
--   [U] - A floating point value that determines the texture scale on the U axis.
--   [V] - A floating point value that determines the texture scale on the V axis.
+-   [U] - A floating point value that determines the texture scale on
+    the U axis.
+-   [V] - A floating point value that determines the texture scale on
+    the V axis.
 
 Example
 -------
 
 Tile a texture into a 2-by-2 grid relative to its original size.
 
-`{`
-`  blend diffusemap`
-`  map textures/path/to/image.tga`
-`  centerScale 2, 2`
-`}`
+    {
+      blend diffusemap
+      map textures/path/to/image.tga
+      centerScale 2, 2
+    }
 
-Stretch a texture to ten times its original size (probably not a good idea).
+Stretch a texture to ten times its original size (probably not a good
+idea).
 
-`{`
-`  blend diffusemap`
-`  map textures/path/to/image.tga`
-`  centerScale 0.1, 0.1`
-`}`
+    {
+      blend diffusemap
+      map textures/path/to/image.tga
+      centerScale 0.1, 0.1
+    }
 
 Notes
 -----
 
 None.
 
+\
 

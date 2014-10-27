@@ -1,162 +1,191 @@
----
-format: Markdown
-categories: file_format
-toc: yes
-title: MAP
-...
-MAP (file format)
-=================
-
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                                               
- Contents                                                                                                                                                           
- --------                                                                                                                                                           
-                                                                                                                                                                    
- </div>                                                                                                                                                             
- -   [<span class="tocnumber">1</span> <span class="toctext">Overview</span>](MAP\_(file\_format)#Overview)                                                    
- -   [<span class="tocnumber">2</span> <span class="toctext">Map Format Syntax</span>](MAP\_(file\_format)#Map\_Format\_Syntax)                                
-     -   [<span class="tocnumber">2.1</span> <span class="toctext">Comments</span>](MAP\_(file\_format)#Comments)                                              
-     -   [<span class="tocnumber">2.2</span> <span class="toctext">Header</span>](MAP\_(file\_format)#Header)                                                  
-     -   [<span class="tocnumber">2.3</span> <span class="toctext">Entities</span>](MAP\_(file\_format)#Entities)                                              
-         -   [<span class="tocnumber">2.3.1</span> <span class="toctext">Brush definition</span>](MAP\_(file\_format)#Brush\_definition)                       
-             -   [<span class="tocnumber">2.3.1.1</span> <span class="toctext">Brush Volume definition</span>](MAP\_(file\_format)#Brush\_Volume\_definition)  
-             -   [<span class="tocnumber">2.3.1.2</span> <span class="toctext">Patch definition</span>](MAP\_(file\_format)#Patch\_definition)                 
- -   [<span class="tocnumber">3</span> <span class="toctext">Complete Example</span>](MAP\_(file\_format)#Complete\_Example)                                   
- -   [<span class="tocnumber">4</span> <span class="toctext">External Links</span>](MAP\_(file\_format)#External\_Links)                                       |
-
 Overview
 --------
 
-The MAP file is an ASCII text type of files used by [DoomEdit](DoomEdit) to store individual game levels. This file has all the static geometry and entities. Before a level can be played it has to be compiled. See the [mapping](Mapping) section for more information on handling map files.
+The MAP file is an ASCII text type of files used by
+[DoomEdit](DoomEdit "DoomEdit") to store individual game levels. This
+file has all the static geometry and entities. Before a level can be
+played it has to be compiled. See the [mapping](Mapping "Mapping")
+section for more information on handling map files.
 
 Map Format Syntax
 -----------------
 
-Generally, MAPs consist of entities. Some are called 'brushwork entities' for the obvious fact that they contain brush definitions.
+Generally, MAPs consist of entities. Some are called 'brushwork
+entities' for the obvious fact that they contain brush definitions.
 
 ### Comments
 
-The MAP file format supports in-line comments. Comment blocks are not supported.
+The MAP file format supports in-line comments. Comment blocks are not
+supported.
 
-To start a comment, place two forward slashes. ( '//' ) Everything behind these markers is ignored.
+To start a comment, place two forward slashes. ( '//' ) Everything
+behind these markers is ignored.
 
 ### Header
 
-The first non-empty/non-comment line contains the header, which currently consists of nothing more than the version.
+The first non-empty/non-comment line contains the header, which
+currently consists of nothing more than the version.
 
 For Doom 3, the header is:
 
-`Version 2`
+    Version 2
 
 ### Entities
 
-An entity definition starts by a curly open brace, ( '{' ) and runs on till a matching curly closing brace is found. ( '}' )
+An entity definition starts by a curly open brace, ( '{' ) and runs on
+till a matching curly closing brace is found. ( '}' )
 
-The next lines contain the entity's key/value pairs. First comes the name, then the value. Both are enclosed in double quotes, with a space in between.
+The next lines contain the entity's key/value pairs. First comes the
+name, then the value. Both are enclosed in double quotes, with a space
+in between.
 
 After those keys and values, one or more brush definitions may follow.
 
-**Note:** An entity should at least have a "spawnclass" key, otherwise unpredictable behaviour might occur.
+**Note:** An entity should at least have a "spawnclass" key, otherwise
+unpredictable behaviour might occur.
 
-**Note:** The first entity should have a "spawnclass" key with value "worldspawn". Brush definitions which don't need to be in a seperate entity should be placed in this entity. There can only be **one** entity with this spawnclass in a whole MAP file.
+**Note:** The first entity should have a "spawnclass" key with value
+"worldspawn". Brush definitions which don't need to be in a seperate
+entity should be placed in this entity. There can only be **one** entity
+with this spawnclass in a whole MAP file.
 
 #### Brush definition
 
-A brush definition starts and ends with curly braces, just like entities do.
+A brush definition starts and ends with curly braces, just like entities
+do.
 
-`// brush x`
-`{`
-`type`
-`{`
-`... type data, see type-specific section`
-`}`
-`}`
+    // brush x
+    {
+    type
+    {
+    ... type data, see type-specific section
 
- Before each brush definition is mostly a comment line with the brush number, although this is not required as it is used by the editor only.
+    }
+    }
 
-The first line of the brush definition specifies the type of brush. In Doom 3, this is currently **brushDef3** for brush volumes or **patchDef2** for patches.
+\
+ Before each brush definition is mostly a comment line with the brush
+number, although this is not required as it is used by the editor only.
 
- After the type, the actual data follows - once more bounded by curly braces.
+The first line of the brush definition specifies the type of brush. In
+Doom 3, this is currently **brushDef3** for brush volumes or
+**patchDef2** for patches.
+
+\
+ After the type, the actual data follows - once more bounded by curly
+braces.
 
 ##### Brush Volume definition
 
-A brush volume is a convex primitive defined by infinite planes. Because of this, it must have at least four sides although it usually has six.
+A brush volume is a convex primitive defined by infinite planes. Because
+of this, it must have at least four sides although it usually has six.
 
-The data consists of multiple lines, one for each plane defining the volume:
+The data consists of multiple lines, one for each plane defining the
+volume:
 
-`(plane equation) ( ( xxscale xyscale xoffset ) ( yxscale yyscale yoffset ) ) "[Material_(decl).html material]" ?`
+    (plane equation) ( ( xxscale xyscale xoffset ) ( yxscale yyscale yoffset ) ) "material" ?
 
-The 4 numbers forming the plane equation are nothing more than the normal vector of the plane and it's Euclidean (shortest) distance to the origin.
+The 4 numbers forming the plane equation are nothing more than the
+normal vector of the plane and it's Euclidean (shortest) distance to the
+origin.
 
-The next 6 numbers are used to store the texture mapping. Each group of 3 numbers is actually a row in a 3x3 matrix where the bottom row is always '0 0 1'. In the code, it is referred to as a "texture matrix". Such a matrix is commonly used in geometry to transform a 2D coordinate vector (with the Z value set to 1) to another coordinate system.
+The next 6 numbers are used to store the texture mapping. Each group of
+3 numbers is actually a row in a 3x3 matrix where the bottom row is
+always '0 0 1'. In the code, it is referred to as a "texture matrix".
+Such a matrix is commonly used in geometry to transform a 2D coordinate
+vector (with the Z value set to 1) to another coordinate system.
 
-At the place of the question mark, extra numbers may or may not show up. It is unknown what they do, though it could be a mistake of the editor or some obscure feature. (More proof is needed to verify their use.)
+At the place of the question mark, extra numbers may or may not show up.
+It is unknown what they do, though it could be a mistake of the editor
+or some obscure feature. (More proof is needed to verify their use.)
 
 ##### Patch definition
 
-The patches used in the id Tech 4 engine are Bezier surfaces. These surfaces are defined by both *data points* and *control points*. Data points are points which are always part of the surface and thus influence the surface directly. Control points merely "attract" the surface towards them but offers a finer control in this way. The exact theory used for these surfaces is explained on sites dealing with Bezier mathematics, see [External links](MAP\_(file\_format)#External\_links) for more info.
+The patches used in the id Tech 4 engine are Bezier surfaces. These
+surfaces are defined by both *data points* and *control points* . Data
+points are points which are always part of the surface and thus
+influence the surface directly. Control points merely "attract" the
+surface towards them but offers a finer control in this way. The exact
+theory used for these surfaces is explained on sites dealing with Bezier
+mathematics, see [External links](MAP_%28file_format%29#External_links)
+for more info.
 
-The data for a patch definition consists of several things. First are these two lines:
+The data for a patch definition consists of several things. First are
+these two lines:
 
-` "[Material_(decl).html material]"`
-` ( xoffset yoffset rotation xscale yscale )`
+     "material"
+     ( xoffset yoffset rotation xscale yscale )
 
-The first line specifies the material to apply to it, and the second specifies the texture settings with 5 those numbers.
+The first line specifies the material to apply to it, and the second
+specifies the texture settings with 5 those numbers.
 
-After that follows a matrix of points to define the control grid. The first and last line consist of an opening respectively closing brace. The rows are bounded with braces as well.
+After that follows a matrix of points to define the control grid. The
+first and last line consist of an opening respectively closing brace.
+The rows are bounded with braces as well.
 
 For a 3 x 3 patch: (4 data points, 5 control points)
 
-`(`
-`( ( x1 y1 z1 u1 v1 ) ( x2 y2 z2 u2 v2 ) ( x3 y3 z3 u3 v3 ) )`
-`( ( x4 y4 z4 u4 v4 ) ( x5 y5 z5 u5 v5 ) ( x6 y6 z6 u6 v6 ) )`
-`( ( x7 y7 z7 u7 v7 ) ( x8 y8 z8 u8 v8 ) ( x9 y9 z9 u9 v9 ) )`
-`)`
+    (
+    ( ( x1 y1 z1 u1 v1 ) ( x2 y2 z2 u2 v2 ) ( x3 y3 z3 u3 v3 ) )
+    ( ( x4 y4 z4 u4 v4 ) ( x5 y5 z5 u5 v5 ) ( x6 y6 z6 u6 v6 ) )
+    ( ( x7 y7 z7 u7 v7 ) ( x8 y8 z8 u8 v8 ) ( x9 y9 z9 u9 v9 ) )
+    )
 
-Each point has 5 coordinates where the first 3 are the 3D coordinates, the last 2 are the Bezier "blossom" coordinates. (Again, check the theory.)
+Each point has 5 coordinates where the first 3 are the 3D coordinates,
+the last 2 are the Bezier "blossom" coordinates. (Again, check the
+theory.)
 
 Complete Example
 ----------------
 
-`Version 2`
-`// entity 0`
-`{`
-`"classname" "worldspawn"`
-`"spawnflags" "1"`
-`// brush 0`
-`{`
-`patchDef2`
-`{`
-`"textures/common/nodraw"`
-`( 3 3 0 0 0 )`
-`(`
-`( ( -64 -64 -256 0 0 ) ( -64 -64 -192 0 -2 ) ( -64 -64 -128 0 -4 ) )`
-`( ( 64 -64 -256 4 0 ) ( 64 -64 -192 4 -2 ) ( 64 -64 -128 4 -4 ) )`
-`( ( 64 64 -256 8 0 ) ( 64 64 -192 8 -2 ) ( 64 64 -128 8 -4 ) )`
-`)`
-`}`
-`}`
-`// brush 1`
-`{`
-`brushDef3`
-`{`
-`( -0 0 1 -64 ) ( ( 0.03125 -0 -0 ) ( 0 0.03125 0 ) ) "textures/common/nodraw" 0 0 0`
-`( 0 1 0 -64 ) ( ( 0.03125 0 0 ) ( 0 0.03125 0 ) ) "textures/common/nodraw" 0 0 0`
-`( 1 -0 0 -64 ) ( ( 0.03125 -0 -0 ) ( 0 0.03125 0 ) ) "textures/common/nodraw" 0 0 0`
-`( 0 0 -1 -64 ) ( ( 0.03125 -0 -0 ) ( 0 0.03125 0 ) ) "textures/common/nodraw" 0 0 0`
-`( 0 -1 0 -64 ) ( ( 0.03125 -0 -0 ) ( 0 0.03125 0 ) ) "textures/common/nodraw" 0 0 0`
-`( -1 0 0 -64 ) ( ( 0.03125 -0 -0 ) ( 0 0.03125 0 ) ) "textures/common/nodraw" 0 0 0`
-`}`
-`}`
-`}`
+    Version 2
+    // entity 0
+    {
+    "classname" "worldspawn"
+    "spawnflags" "1"
+    // brush 0
+    {
+    patchDef2
+    {
+    "textures/common/nodraw"
+    ( 3 3 0 0 0 )
+    (
+    ( ( -64 -64 -256 0 0 ) ( -64 -64 -192 0 -2 ) ( -64 -64 -128 0 -4 ) )
+    ( ( 64 -64 -256 4 0 ) ( 64 -64 -192 4 -2 ) ( 64 -64 -128 4 -4 ) )
+    ( ( 64 64 -256 8 0 ) ( 64 64 -192 8 -2 ) ( 64 64 -128 8 -4 ) )
+    )
+    }
+    }
+    // brush 1
+    {
+    brushDef3
+    {
+    ( -0 0 1 -64 ) ( ( 0.03125 -0 -0 ) ( 0 0.03125 0 ) ) "textures/common/nodraw" 0 0 0
+    ( 0 1 0 -64 ) ( ( 0.03125 0 0 ) ( 0 0.03125 0 ) ) "textures/common/nodraw" 0 0 0
+    ( 1 -0 0 -64 ) ( ( 0.03125 -0 -0 ) ( 0 0.03125 0 ) ) "textures/common/nodraw" 0 0 0
+    ( 0 0 -1 -64 ) ( ( 0.03125 -0 -0 ) ( 0 0.03125 0 ) ) "textures/common/nodraw" 0 0 0
+    ( 0 -1 0 -64 ) ( ( 0.03125 -0 -0 ) ( 0 0.03125 0 ) ) "textures/common/nodraw" 0 0 0
+    ( -1 0 0 -64 ) ( ( 0.03125 -0 -0 ) ( 0 0.03125 0 ) ) "textures/common/nodraw" 0 0 0
+    }
+    }
+    }
 
 External Links
 --------------
 
--   [Quark Documentation on Brush Face Formats](http://web.archive.org/web/20091212230433/http://quark.planetquake.gamespy.com/infobase/src.topics.face.html#bp)
--   [Quark Documentation on Bezier Patches](http://web.archive.org/web/20091212230433/http://quark.planetquake.gamespy.com/infobase/src.pas.bezier.html#quadmath)
--   [Doom3World: Texture matrix](http://web.archive.org/web/20091212230433/http://www.doom3world.org/phpbb2/viewtopic.php?t=11101)
--   [Doom3World: brush format in the .map file](http://web.archive.org/web/20091212230433/http://www.doom3world.org/phpbb2/viewtopic.php?t=13639) (Experimental research on the plane equations)
--   [.map Doom3World: Format texture specification.](http://web.archive.org/web/20091212230433/http://www.doom3world.org/phpbb2/viewtopic.php?t=16228) (Research on the texture specification)
--   **(Needs more links to some references/introduction on Bezier mathematics.)** Consult [Google](http://web.archive.org/web/20091212230433/http://www.google.com/) for now.
+-   [Quark Documentation on Brush Face
+    Formats](https://web.archive.org/web/20091212230433/http://quark.planetquake.gamespy.com/infobase/src.topics.face.html#bp "http://quark.planetquake.gamespy.com/infobase/src.topics.face.html#bp")
+-   [Quark Documentation on Bezier
+    Patches](https://web.archive.org/web/20091212230433/http://quark.planetquake.gamespy.com/infobase/src.pas.bezier.html#quadmath "http://quark.planetquake.gamespy.com/infobase/src.pas.bezier.html#quadmath")
+-   [Doom3World: Texture
+    matrix](https://web.archive.org/web/20091212230433/http://www.doom3world.org/phpbb2/viewtopic.php?t=11101 "http://www.doom3world.org/phpbb2/viewtopic.php?t=11101")
+-   [Doom3World: brush format in the .map
+    file](https://web.archive.org/web/20091212230433/http://www.doom3world.org/phpbb2/viewtopic.php?t=13639 "http://www.doom3world.org/phpbb2/viewtopic.php?t=13639")
+    (Experimental research on the plane equations)
+-   [.map Doom3World: Format texture
+    specification.](https://web.archive.org/web/20091212230433/http://www.doom3world.org/phpbb2/viewtopic.php?t=16228 "http://www.doom3world.org/phpbb2/viewtopic.php?t=16228")
+    (Research on the texture specification)
+-   **(Needs more links to some references/introduction on Bezier
+    mathematics.)** Consult
+    [Google](http://www.google.com/ "http://www.google.com") for now.
 

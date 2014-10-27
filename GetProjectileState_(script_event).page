@@ -1,29 +1,26 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: GetProjectileState
-...
-GetProjectileState (script event)
-=================================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
 Returns the current state of a projectile.
 
-![](/images/images_2_23_D3square_25.png) Note: _Doom 3 only:_
- ~  These values can be found in *doom\_defs.script*. It returns one of the following:  
-    - PROJECTILE\_SPAWNED  
-    - PROJECTILE\_CREATED  
-    - PROJECTILE\_LAUNCHED  
-    - PROJECTILE\_FIZZLED  
-    - PROJECTILE\_EXPLODED
+<div>
+
+![](/images/2/23/D3square_25.png) **Note:** Doom 3 only:
+*These values can be found in* doom\_defs.script *. It returns one of
+the following:*
+-   PROJECTILE\_SPAWNED
+-   PROJECTILE\_CREATED
+-   PROJECTILE\_LAUNCHED
+-   PROJECTILE\_FIZZLED
+-   PROJECTILE\_EXPLODED **
+
+</div>
 
 Usage
 -----
@@ -38,11 +35,12 @@ None.
 Examples
 --------
 
-<tt>projectile.<font color="#ff0000">getProjectileState</font><font color="#000000">(</font><font color="#000000">)</font> == PROJECTILE_LAUNCHED</tt>
+    projectile.getProjectileState() == PROJECTILE_LAUNCHED
 
 Notes
 -----
 
 None.
 
+\
 

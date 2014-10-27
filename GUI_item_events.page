@@ -1,28 +1,23 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: GUI_item_events.page
-...
-GUI item events
-===============
-
-Events are blocks with [commands](GUI\_commands) that are executed when a certain condition is met. This can be a condition created by the user - for example, moving the mouse over a windowDef element - or a noninteractive event - for example, when a certain time is reached.
+Events are blocks with [commands](GUI_commands "GUI commands") that are
+executed when a certain condition is met. This can be a condition
+created by the user - for example, moving the mouse over a windowDef
+element - or a noninteractive event - for example, when a certain time
+is reached.
 
 Available events
 ----------------
 
--   [onAction](OnAction\_(GUI\_item\_event))
--   [onActionRelease](OnActionRelease\_(GUI\_item\_event))
--   [onActivate](OnActivate\_(GUI\_item\_event))
--   [onDeactivate](OnDeactivate\_(GUI\_item\_event))
--   [onEvent](OnEvent\_(GUI\_item\_event))
--   [onEnter](OnEnter\_(GUI\_item\_event))
--   [onEnterRelease](OnEnterRelease\_(GUI\_item\_event))
--   [onEsc](OnEsc\_(GUI\_item\_event))
--   [onMouseEnter](OnMouseEnter\_(GUI\_item\_event))
--   [onMouseExit](OnMouseExit\_(GUI\_item\_event))
--   [onNamedEvent](OnNamedEvent\_(GUI\_item\_event))
--   [onTime](OnTime\_(GUI\_item\_event))
--   [onTrigger](OnTrigger\_(GUI\_item\_event))
+-   [onAction](OnAction_%28GUI_item_event%29 "OnAction (GUI item event)")
+-   [onActionRelease](OnActionRelease_%28GUI_item_event%29 "OnActionRelease (GUI item event)")
+-   [onActivate](OnActivate_%28GUI_item_event%29 "OnActivate (GUI item event)")
+-   [onDeactivate](OnDeactivate_%28GUI_item_event%29 "OnDeactivate (GUI item event)")
+-   [onEvent](OnEvent_%28GUI_item_event%29 "OnEvent (GUI item event)")
+-   [onEnter](OnEnter_%28GUI_item_event%29 "OnEnter (GUI item event)")
+-   [onEnterRelease](OnEnterRelease_%28GUI_item_event%29 "OnEnterRelease (GUI item event)")
+-   [onEsc](OnEsc_%28GUI_item_event%29 "OnEsc (GUI item event)")
+-   [onMouseEnter](OnMouseEnter_%28GUI_item_event%29 "OnMouseEnter (GUI item event)")
+-   [onMouseExit](OnMouseExit_%28GUI_item_event%29 "OnMouseExit (GUI item event)")
+-   [onNamedEvent](OnNamedEvent_%28GUI_item_event%29 "OnNamedEvent (GUI item event)")
+-   [onTime](OnTime_%28GUI_item_event%29 "OnTime (GUI item event)")
+-   [onTrigger](OnTrigger_%28GUI_item_event%29 "OnTrigger (GUI item event)")
 

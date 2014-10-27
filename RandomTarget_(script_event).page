@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: RandomTarget
-...
-RandomTarget (script event)
-===========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -30,8 +22,8 @@ Parameters
 Examples
 --------
 
-` `
-<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`randomTarget`</font><font color="#000000">`(`</font><font color="#666666">`"player"`</font><font color="#000000">`)`</font>`;`
+     
+    $my_entity.randomTarget("player");
 
 Notes
 -----
@@ -40,4 +32,5 @@ This script event returns a random targeted entity as an entity.
 
 Pass an entity name as ignoreName to skip that entity.
 
+\
 

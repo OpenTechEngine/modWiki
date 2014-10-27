@@ -1,16 +1,10 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: WaitForThread
-...
-WaitForThread (script event)
-============================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type [idThread](Thread\_(scripting)), accessible via [sys](Scripting\_basics#sys) identifier.
+This event operates on an instance of the [game
+class](Game_class "Game class") type
+[idThread](Thread_%28scripting%29 "Thread (scripting)") , accessible via
+[sys](Scripting_basics#sys "Scripting basics") identifier.
 
 Description
 -----------
@@ -20,7 +14,8 @@ Waits for the given thread to terminate.
 Usage
 -----
 
-*[void](Data\_types#void)* waitForThread( *[float](Data\_types#float)* **threadNumber** )
+*[void](Data_types#void "Data types")* waitForThread(
+*[float](Data_types#float "Data types")* **threadNumber** )
 
 Parameters
 ----------
@@ -30,11 +25,13 @@ Parameters
 Examples
 --------
 
-` none`
+     none
 
 Notes
 -----
 
-See [threads](Thread\_(scripting)) for more information.
+See [threads](Thread_%28scripting%29 "Thread (scripting)") for more
+information.
 
+\
 

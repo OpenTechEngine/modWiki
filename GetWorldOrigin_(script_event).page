@@ -1,21 +1,14 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: GetWorldOrigin
-...
-GetWorldOrigin (script event)
-=============================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Returns the current worldspace position of this entity (regardless of any bind parent).
+Returns the current worldspace position of this entity (regardless of
+any bind parent).
 
 Usage
 -----
@@ -30,12 +23,14 @@ This script event does not accept parameters.
 Examples
 --------
 
-` `
-`postition = `<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`getWorldOrigin`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+     
+    postition = $my_entity.getWorldOrigin();
 
 Notes
 -----
 
-This script event returns the worldspace postition of this entity as a vector.
+This script event returns the worldspace postition of this entity as a
+vector.
 
+\
 

@@ -1,12 +1,3 @@
----
-format: Markdown
-categories: console_command
-toc: yes
-title: EditFX
-...
-EditFX (console command)
-========================
-
 Description
 -----------
 
@@ -17,7 +8,7 @@ Usage
 
 At the console type...
 
-`editFX`
+    editFX
 
 Parameters
 ----------
@@ -27,6 +18,10 @@ This console command does not accept parameters.
 Notes
 -----
 
-This editor must be run in [windowed](R\_fullscreen\_(cvar)) mode and you must have a map loaded. See also the [FX declaration](Fx\_(decl)) article.
+This editor must be run in
+[windowed](R_fullscreen_%28cvar%29 "R fullscreen (cvar)") mode and you
+must have a map loaded. See also the [FX
+declaration](Fx_%28decl%29 "Fx (decl)") article.
 
+\
 

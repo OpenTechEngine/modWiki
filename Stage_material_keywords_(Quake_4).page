@@ -1,87 +1,86 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: Stage_material_keywords_(Quake_4).page
-...
-Stage material keywords (Quake 4)
-=================================
-
 Stage specific keywords used in material shaders.
 
 Existing keywords as of Quake 4 version ... :
 
-<div id="attention" class="boilerplate metadata" style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa">
-**This page is in urgent need of attention because: *this page is directly copied from the Doom 3 version, please update this list with keywords present in Quake 4***
+<div id="attention" class="boilerplate metadata"
+style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
 
-If you disagree with this, please explain why on its talk page.
+**This page is in urgent need of attention because: *this page is
+directly copied from the Doom 3 version, please update this list with
+keywords present in Quake 4***
+
+If you disagree with this, please explain why on [its talk
+page](Talk:Stage_material_keywords_%28Quake_4%29 "Talk:Stage material keywords (Quake 4)")
+.
 
 </div>
+
 General Keywords
 ----------------
 
--   [alpha](Alpha\_(Material\_stage\_keyword))
--   [alphaTest](AlphaTest\_(Material\_stage\_keyword))
--   [alphazeroclamp](Alphazeroclamp\_(Material\_stage\_keyword))
--   [blend](Blend\_(Material\_stage\_keyword))
--   [blue](Blue\_(Material\_stage\_keyword))
--   [cameraCubeMap](CameraCubeMap\_(Material\_stage\_keyword))
--   [centerScale](CenterScale\_(Material\_stage\_keyword))
--   [clamp](Clamp\_(Material\_stage\_keyword))
--   [color](Color\_(Material\_stage\_keyword))
--   [colored](Colored\_(Material\_stage\_keyword))
--   [cubeMap](CubeMap\_(Material\_stage\_keyword))
--   [forceHighQuality](ForceHighQuality\_(Material\_stage\_keyword))
--   [fragmentMap](FragmentMap\_(Material\_stage\_keyword))
--   [fragmentProgram](FragmentProgram\_(Material\_stage\_keyword))
--   [green](Green\_(Material\_stage\_keyword))
--   [highquality](Highquality\_(Material\_stage\_keyword))
--   [if](If\_(Material\_stage\_keyword))
--   [ignoreAlphaTest](IgnoreAlphaTest\_(Material\_stage\_keyword))
--   [inverseVertexColor](InverseVertexColor\_(Material\_stage\_keyword))
--   [linear](Linear\_(Material\_stage\_keyword))
--   [map](Map\_(Material\_stage\_keyword))
--   [maskAlpha](MaskAlpha\_(Material\_stage\_keyword))
--   [maskBlue](MaskBlue\_(Material\_stage\_keyword))
--   [maskColor](MaskColor\_(Material\_stage\_keyword))
--   [maskDepth](MaskDepth\_(Material\_stage\_keyword))
--   [maskGreen](MaskGreen\_(Material\_stage\_keyword))
--   [maskRed](MaskRed\_(Material\_stage\_keyword))
--   [megaTexture](MegaTexture\_(Material\_stage\_keyword))
--   [mirrorRenderMap](MirrorRenderMap\_(Material\_stage\_keyword))
--   [nearest](Nearest\_(Material\_stage\_keyword))
--   [noclamp](Noclamp\_(Material\_stage\_keyword))
--   [nopicmip](Nopicmip\_(Material\_stage\_keyword))
--   [privatePolygonOffset](PrivatePolygonOffset\_(Material\_stage\_keyword))
--   [program](Program\_(Material\_stage\_keyword))
--   [red](Red\_(Material\_stage\_keyword))
--   [remoteRenderMap](RemoteRenderMap\_(Material\_stage\_keyword))
--   [rgb](Rgb\_(Material\_stage\_keyword))
--   [rgba](Rgba\_(Material\_stage\_keyword))
--   [rotate](Rotate\_(Material\_stage\_keyword))
--   [scale](Scale\_(Material\_stage\_keyword))
--   [scroll](Scroll\_(Material\_stage\_keyword))
--   [shear](Shear\_(Material\_stage\_keyword))
--   [soundmap](Soundmap\_(Material\_stage\_keyword))
--   [texGen](TexGen\_(Material\_stage\_keyword))
--   [translate](Translate\_(Material\_stage\_keyword))
--   [uncompressed](Uncompressed\_(Material\_stage\_keyword)) (alias for highquality)
--   [vertexColor](VertexColor\_(Material\_stage\_keyword))
--   [vertexParm](VertexParm\_(Material\_stage\_keyword))
--   [vertexProgram](VertexProgram\_(Material\_stage\_keyword))
--   [videomap](Videomap\_(Material\_stage\_keyword))
--   [zeroclamp](Zeroclamp\_(Material\_stage\_keyword))
+-   [alpha](Alpha_%28Material_stage_keyword%29 "Alpha (Material stage keyword)")
+-   [alphaTest](AlphaTest_%28Material_stage_keyword%29 "AlphaTest (Material stage keyword)")
+-   [alphazeroclamp](Alphazeroclamp_%28Material_stage_keyword%29 "Alphazeroclamp (Material stage keyword)")
+-   [blend](Blend_%28Material_stage_keyword%29 "Blend (Material stage keyword)")
+-   [blue](Blue_%28Material_stage_keyword%29 "Blue (Material stage keyword)")
+-   [cameraCubeMap](CameraCubeMap_%28Material_stage_keyword%29 "CameraCubeMap (Material stage keyword)")
+-   [centerScale](CenterScale_%28Material_stage_keyword%29 "CenterScale (Material stage keyword)")
+-   [clamp](Clamp_%28Material_stage_keyword%29 "Clamp (Material stage keyword)")
+-   [color](Color_%28Material_stage_keyword%29 "Color (Material stage keyword)")
+-   [colored](Colored_%28Material_stage_keyword%29 "Colored (Material stage keyword)")
+-   [cubeMap](CubeMap_%28Material_stage_keyword%29 "CubeMap (Material stage keyword)")
+-   [forceHighQuality](ForceHighQuality_%28Material_stage_keyword%29 "ForceHighQuality (Material stage keyword)")
+-   [fragmentMap](FragmentMap_%28Material_stage_keyword%29 "FragmentMap (Material stage keyword)")
+-   [fragmentProgram](FragmentProgram_%28Material_stage_keyword%29 "FragmentProgram (Material stage keyword)")
+-   [green](Green_%28Material_stage_keyword%29 "Green (Material stage keyword)")
+-   [highquality](Highquality_%28Material_stage_keyword%29 "Highquality (Material stage keyword)")
+-   [if](If_%28Material_stage_keyword%29 "If (Material stage keyword)")
+-   [ignoreAlphaTest](IgnoreAlphaTest_%28Material_stage_keyword%29 "IgnoreAlphaTest (Material stage keyword)")
+-   [inverseVertexColor](InverseVertexColor_%28Material_stage_keyword%29 "InverseVertexColor (Material stage keyword)")
+-   [linear](Linear_%28Material_stage_keyword%29 "Linear (Material stage keyword)")
+-   [map](Map_%28Material_stage_keyword%29 "Map (Material stage keyword)")
+-   [maskAlpha](MaskAlpha_%28Material_stage_keyword%29 "MaskAlpha (Material stage keyword)")
+-   [maskBlue](MaskBlue_%28Material_stage_keyword%29 "MaskBlue (Material stage keyword)")
+-   [maskColor](MaskColor_%28Material_stage_keyword%29 "MaskColor (Material stage keyword)")
+-   [maskDepth](MaskDepth_%28Material_stage_keyword%29 "MaskDepth (Material stage keyword)")
+-   [maskGreen](MaskGreen_%28Material_stage_keyword%29 "MaskGreen (Material stage keyword)")
+-   [maskRed](MaskRed_%28Material_stage_keyword%29 "MaskRed (Material stage keyword)")
+-   [megaTexture](MegaTexture_%28Material_stage_keyword%29 "MegaTexture (Material stage keyword)")
+-   [mirrorRenderMap](MirrorRenderMap_%28Material_stage_keyword%29 "MirrorRenderMap (Material stage keyword)")
+-   [nearest](Nearest_%28Material_stage_keyword%29 "Nearest (Material stage keyword)")
+-   [noclamp](Noclamp_%28Material_stage_keyword%29 "Noclamp (Material stage keyword)")
+-   [nopicmip](Nopicmip_%28Material_stage_keyword%29 "Nopicmip (Material stage keyword)")
+-   [privatePolygonOffset](PrivatePolygonOffset_%28Material_stage_keyword%29 "PrivatePolygonOffset (Material stage keyword)")
+-   [program](Program_%28Material_stage_keyword%29 "Program (Material stage keyword)")
+-   [red](Red_%28Material_stage_keyword%29 "Red (Material stage keyword)")
+-   [remoteRenderMap](RemoteRenderMap_%28Material_stage_keyword%29 "RemoteRenderMap (Material stage keyword)")
+-   [rgb](Rgb_%28Material_stage_keyword%29 "Rgb (Material stage keyword)")
+-   [rgba](Rgba_%28Material_stage_keyword%29 "Rgba (Material stage keyword)")
+-   [rotate](Rotate_%28Material_stage_keyword%29 "Rotate (Material stage keyword)")
+-   [scale](Scale_%28Material_stage_keyword%29 "Scale (Material stage keyword)")
+-   [scroll](Scroll_%28Material_stage_keyword%29 "Scroll (Material stage keyword)")
+-   [shear](Shear_%28Material_stage_keyword%29 "Shear (Material stage keyword)")
+-   [soundmap](Soundmap_%28Material_stage_keyword%29 "Soundmap (Material stage keyword)")
+-   [texGen](TexGen_%28Material_stage_keyword%29 "TexGen (Material stage keyword)")
+-   [translate](Translate_%28Material_stage_keyword%29 "Translate (Material stage keyword)")
+-   [uncompressed](Uncompressed_%28Material_stage_keyword%29 "Uncompressed (Material stage keyword)")
+    (alias for highquality)
+-   [vertexColor](VertexColor_%28Material_stage_keyword%29 "VertexColor (Material stage keyword)")
+-   [vertexParm](VertexParm_%28Material_stage_keyword%29 "VertexParm (Material stage keyword)")
+-   [vertexProgram](VertexProgram_%28Material_stage_keyword%29 "VertexProgram (Material stage keyword)")
+-   [videomap](Videomap_%28Material_stage_keyword%29 "Videomap (Material stage keyword)")
+-   [zeroclamp](Zeroclamp_%28Material_stage_keyword%29 "Zeroclamp (Material stage keyword)")
 
 Image program functions
 -----------------------
 
--   [add](Add\_(Image\_program\_function))
--   [addnormals](Addnormals\_(Image\_program\_function))
--   [heightmap](Heightmap\_(Image\_program\_function))
--   [invertAlpha](InvertAlpha\_(Image\_program\_function))
--   [invertColor](InvertColor\_(Image\_program\_function))
--   [makeAlpha](MakeAlpha\_(Image\_program\_function))
--   [makeIntensity](MakeIntensity\_(Image\_program\_function))
--   [scale](Scale\_(Image\_program\_function))
--   [smoothnormals](Smoothnormals\_(Image\_program\_function))
+-   [add](Add_%28Image_program_function%29 "Add (Image program function)")
+-   [addnormals](Addnormals_%28Image_program_function%29 "Addnormals (Image program function)")
+-   [heightmap](Heightmap_%28Image_program_function%29 "Heightmap (Image program function)")
+-   [invertAlpha](InvertAlpha_%28Image_program_function%29 "InvertAlpha (Image program function)")
+-   [invertColor](InvertColor_%28Image_program_function%29 "InvertColor (Image program function)")
+-   [makeAlpha](MakeAlpha_%28Image_program_function%29 "MakeAlpha (Image program function)")
+-   [makeIntensity](MakeIntensity_%28Image_program_function%29 "MakeIntensity (Image program function)")
+-   [scale](Scale_%28Image_program_function%29 "Scale (Image program function)")
+-   [smoothnormals](Smoothnormals_%28Image_program_function%29 "Smoothnormals (Image program function)")
 

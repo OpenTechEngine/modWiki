@@ -1,21 +1,15 @@
----
-format: Markdown
-categories: GUI_command
-toc: yes
-title: EndGame
-...
-EndGame (GUI command)
-=====================
-
-Ends the current game. On Doom 3, this is used only once (on credits.gui).
+Ends the current game. On Doom 3, this is used only once (on
+credits.gui).
 
 Syntax
 ------
 
-`endGame`
+    endGame
 
 Example(s)
 ----------
 
-`endgame;`
+    endgame;
+
+\
 

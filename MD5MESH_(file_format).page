@@ -1,67 +1,70 @@
----
-format: Markdown
-categories: file_format
-toc: yes
-title: MD5MESH
-...
-MD5MESH (file format)
-=====================
+\
 
 Overview
 --------
 
-MD5Mesh files are ascii (plain text) files that contain mesh and skeletal data. They are part of the .[MD5](MD5\_(file\_format)) format system. The other MD5 formats are:
+MD5Mesh files are ascii (plain text) files that contain mesh and
+skeletal data. They are part of the .
+[MD5](MD5_%28file_format%29 "MD5 (file format)") format system. The
+other MD5 formats are:
 
-.[MD5ANIM](MD5ANIM\_(file\_format))   
-Contains animation sequence data, the positions of bones etc. during animation.
+ . [MD5ANIM](MD5ANIM_%28file_format%29 "MD5ANIM (file format)") 
+:   Contains animation sequence data, the positions of bones etc. during
+    animation.
 
-.[MD5CAMERA](MD5CAMERA\_(file\_format))   
-Animated cameras for use in cutscenes.
+ . [MD5CAMERA](MD5CAMERA_%28file_format%29 "MD5CAMERA (file format)") 
+:   Animated cameras for use in cutscenes.
 
 Model Format Syntax
 -------------------
 
 ### MD5 Header
 
-All MD5 format files start with the MD5 header, regardless the specific filetype. The header is the first section in the file and is as such...
+All MD5 format files start with the MD5 header, regardless the specific
+filetype. The header is the first section in the file and is as such...
 
-```
-MD5Version <integer>
-commandline "<string>"
-```
+    MD5Version <integer>
+    commandline "<string>"
 
--   MD5Version - An integer that defines the current MD5 specification version. This should always read 10.
--   commandline - A string that contains the command line parameters passed to the [exportmodels](Exportmodels\_(console\_command)) console command.
+-   MD5Version - An integer that defines the current MD5 specification
+    version. This should always read 10.
+-   commandline - A string that contains the command line parameters
+    passed to the
+    [exportmodels](Exportmodels_%28console_command%29 "Exportmodels (console command)")
+    console command.
 
 ### Filetype Specific Parameters
 
-This section contains filetype specifc parameters. The filetype specific parameters make up the second section in the file.
+This section contains filetype specifc parameters. The filetype specific
+parameters make up the second section in the file.
 
 In the case of MD5Mesh the filetype specific parameters are as such...
-```
-numJoints <integer>
-numMeshes <integer>
-```
 
--   numJoints - An integer that defines the number of bones in the model.
--   numMeshes - An integer that defines the number of meshes in the model.
+    numJoints <integer>
+    numMeshes <integer>
+
+-   numJoints - An integer that defines the number of bones in the
+    model.
+-   numMeshes - An integer that defines the number of meshes in the
+    model.
 
 ### Ordered Lists
 
-The third section in the file contains ordered lists. These lists contain data relevant to the type declared.
+The third section in the file contains ordered lists. These lists
+contain data relevant to the type declared.
 
-```
-<string> {
-        [element 1]
-        [element 2]
-        [element 3]
-        ... ect ...
-}
-```
+    <string> {
+            [element 1]
+            [element 2]
+            [element 3]
+            ... ect ...
+    }
 
-First, the type of list is declared (\<string\>). Then the body of the list is contained within curly brackets.
+First, the type of list is declared (\<string\>). Then the body of the
+list is contained within curly brackets.
 
-The list is constructed of a series of elements each on a new line. The number of elements varies depending on type.
+The list is constructed of a series of elements each on a new line. The
+number of elements varies depending on type.
 
 In the case of MD5Mesh there are two ordered lists.
 
@@ -69,7 +72,7 @@ In the case of MD5Mesh there are two ordered lists.
 
 Each element of the joints ordered list is structured like so ...
 
-`"[boneName]"   [parentIndex] ( [xPos] [yPos] [zPos] ) ( [xOrient] [yOrient] [zOrient] )`
+    "[boneName]"   [parentIndex] ( [xPos] [yPos] [zPos] ) ( [xOrient] [yOrient] [zOrient] )
 
 -   boneName - The name of this bone.
 -   parentIndex - The index of this bone's parent.
@@ -82,64 +85,79 @@ Each element of the joints ordered list is structured like so ...
 
 The number of elements is dependant on the number of joints.
 
-For instance, if there are five joints, there should be five joint descriptors listed.
+For instance, if there are five joints, there should be five joint
+descriptors listed.
 
 #### Mesh
 
-The mesh ordered list contains 3 indexed lists: vertices, triangles, and weights.
-```
-// meshes: [meshName]
-shader "[materialName]"
-```
+The mesh ordered list contains 3 indexed lists: vertices, triangles, and
+weights.
+
+    // meshes: [meshName]
+    shader "[materialName]"
 
 -   meshName - The name of the mesh.
 -   materialName - The material shader to apply to this mesh.
 
-![](/images/images_7_7e_Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
- ~  *After the parameters, an extra ordered list follows for specifying extra flags.*
+<div>
+
+![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake
+Wars only:
+*After the parameters, an extra ordered list follows for specifying
+extra flags.*
+
+</div>
 
 ##### Flags
 
-![](/images/images_7_7e_Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
- ~  *This type of ordered list only exists in ET:QW.*
+<div>
 
-The ordered list should be defined even when empty. Each line may specify one of the following known flags:
-```
-noAnimate
-vertexColor
-```
+![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake
+Wars only:
+*This type of ordered list only exists in ET:QW.*
+
+</div>
+
+The ordered list should be defined even when empty. Each line may
+specify one of the following known flags:
+
+    noAnimate
+    vertexColor
+
 ##### Vert
-```
-numverts <integer>
-vert [vertIndex] ( [texU] [texV] ) [weightIndex] [weightElem]
-```
 
--   numverts - The number of vertices. Coorisponds to the number of elements to follow in the list.
+    numverts <integer>
+    vert [vertIndex] ( [texU] [texV] ) [weightIndex] [weightElem]
+
+-   numverts - The number of vertices. Coorisponds to the number of
+    elements to follow in the list.
 -   vertIndex - The index of this vertex.
 -   texU - The U component of the UV texture coordinates.
 -   texV - The V component of the UV texture coordinates.
--   weightIndex - The index into the weight array where this vertex's first weight is located.
--   weightElem - The number of elements in the weight array that apply to this vertex.
+-   weightIndex - The index into the weight array where this vertex's
+    first weight is located.
+-   weightElem - The number of elements in the weight array that apply
+    to this vertex.
 
 ##### Tri
-```
-numtris <integer>
-tri [triIndex] [vertIndex1] [vertIndex2] [vertIndex3]
-```
 
--   numtris - The number of triangles. Corrisponds to the number of elements to follow in the list.
+    numtris <integer>
+    tri [triIndex] [vertIndex1] [vertIndex2] [vertIndex3]
+
+-   numtris - The number of triangles. Corrisponds to the number of
+    elements to follow in the list.
 -   triIndex - The index of this triangle.
 -   vertIndex1 - The index of the first vertex for this triangle.
 -   vertIndex2 - The index of the second vertex for this triangle.
 -   vertIndex3 - The index of the third vertex for this triangle.
 
 ##### Weight
-```
-numweights <integer>
-weight [weightIndex] [jointIndex] [weightValue] ( [xPos] [yPos] [zPos] )
-```
 
--   numweights - The number of weights. Corrisponds to the number of elements to follow in the list.
+    numweights <integer>
+    weight [weightIndex] [jointIndex] [weightValue] ( [xPos] [yPos] [zPos] )
+
+-   numweights - The number of weights. Corrisponds to the number of
+    elements to follow in the list.
 -   weightIndex - The index of this weight.
 -   jointIndex - The index of the joint to which this weight applies.
 -   weightValue - The value of the weight.
@@ -147,5 +165,6 @@ weight [weightIndex] [jointIndex] [weightValue] ( [xPos] [yPos] [zPos] )
 -   yPos - The Y component of this weight's XYZ position.
 -   zPos - The Z component of this weight's XYZ position.
 
-The number of mesh ordered lists is dependant on the number of meshes. Link title
+The number of mesh ordered lists is dependant on the number of meshes.
+[Link title](Link_title "Link title")
 

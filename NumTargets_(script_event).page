@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: NumTargets
-...
-NumTargets (script event)
-=========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -30,12 +22,14 @@ This script event does not accept parameters.
 Examples
 --------
 
-` `
-`availTargets = `<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`numTargets`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+     
+    availTargets = $my_entity.numTargets();
 
 Notes
 -----
 
-This script event returns the number of entities this entity has targeted as a float.
+This script event returns the number of entities this entity has
+targeted as a float.
 
+\
 

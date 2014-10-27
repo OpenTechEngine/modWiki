@@ -1,34 +1,37 @@
----
-format: Markdown
-categories: console_command
-toc: yes
-title: Testmap
-...
-Testmap (console command)
-=========================
-
 Description
 -----------
 
-This command compiles a level so it can be played and automatically loads it.
+This command compiles a level so it can be played and automatically
+loads it.
 
 Usage
 -----
 
 At the console type...
 
-`testmap [Filename]`
+    testmap [Filename]
 
 Parameters
 ----------
 
--   [Filename] - Name of .[MAP](MAP\_(file\_format)) file (without the extension). If your map is in a subfolder of the /[maps](Maps\_(folder)) directory you will need to include the relative path to it, for instance:
+-   [Filename] - Name of .
+    [MAP](MAP_%28file_format%29 "MAP (file format)") file (without the
+    extension). If your map is in a subfolder of the /
+    [maps](Maps_%28folder%29 "Maps (folder)") directory you will need to
+    include the relative path to it, for instance:
 
-`testmap <subfolder>/<mapname>`
+<!-- -->
+
+    testmap <subfolder>/<mapname>
 
 Notes
 -----
 
-See the [dmap](Dmap\_(console\_command)) console command for more information on map compilation. Testmap automatically tries to load .[AAS](AAS\_(file\_format)) files so you may see the error "WARNING: Couldn't load AAS file".
+See the [dmap](Dmap_%28console_command%29 "Dmap (console command)")
+console command for more information on map compilation. Testmap
+automatically tries to load .
+[AAS](AAS_%28file_format%29 "AAS (file format)") files so you may see
+the error "WARNING: Couldn't load AAS file".
 
+\
 

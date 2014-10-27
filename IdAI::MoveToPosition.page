@@ -1,0 +1,320 @@
+bool [idAI](Src/game/ai/AI.cpp_%28source_file%29 "Src/game/ai/AI.cpp (source file)") ::MoveToPosition( const idVec3 &pos )
+--------------------------------------------------------------------------------------------------------------------------
+
+One would call MoveToPosition if they have decided on a place to go, and
+want to get there.
+
+MoveToPosition will return a Boolean value indicating that it was able
+to set up state that will successfully get us to the position. The end
+result of calling MoveToPosition is that the AI’s move state is updated
+to reflect the type of movement desired and destination to get to.
+
+It starts out like:
+
+     
+    /*
+    =====================
+    idAI::MoveToPosition
+    =====================
+    */
+    // going to understand this if it kills me
+    bool idAI::MoveToPosition( const idVec3 &pos ) {
+        idVec3      org;
+        int            areaNum;
+        aasPath_t   path;
+     
+
+org will be our “original‿ goal position to get to. areaNum will be an
+index to an area.
+
+***If you are not familiar with what an area is, read the q3 bot paper,
+it will be worth it. At least chapter 6.***
+
+path really isn’t used in MoveToPosition, but is a required parameter to
+PathToGoal and so is declared here an passed in to be filled.
+
+     
+    // if i have reached the position mentioned, set status and exit
+        if ( ReachedPos( pos, move.moveCommand ) ) {
+            StopMove( MOVE_STATUS_DONE );
+            return true;
+        }
+
+So first check to see if the AI has reached the postion passed in by the
+caller. ReachedPos uses a few different ways to check if the position
+has been reached, so pass moveCommand in to help it choose the best way
+to check. If the position has been reached, set the status to
+MOVE\_STATUS\_DONE and return true to let the caller know we have
+MovedToPosition ;)
+
+     
+    org = pos;
+    move.toAreaNum = 0;
+    if ( aas ) {
+
+Some quick initialization and a check to see if the Area Awareness
+System is ready and off we go, but to where?
+
+     
+     
+    move.toAreaNum = PointReachableAreaNum( org );
+
+move is an idMoveState, it is used to keep track of what’s up with
+navigation, later in idAI::Think it will be checked to set up an actual
+direction to move to. toAreaNum is the area number we want to go to
+[idAI::PointReachableAreaNum](IdAI::PointReachableAreaNum "IdAI::PointReachableAreaNum")
+will make sure that there is a point that the AI can reach and return
+the area number of that point.
+
+     
+        aas->PushPointIntoAreaNum( move.toAreaNum, org );
+
+Go to
+[idAI::PushPointIntoAreaNum](IdAI::PushPointIntoAreaNum "IdAI::PushPointIntoAreaNum")
+for brian’s input on PushPointIntoAreaNum.
+
+So we have a valid goal area number and position. We need to know
+whether we can get there from where we are, but where are we?
+
+     
+        areaNum = PointReachableAreaNum( physicsObj.GetOrigin() );
+
+Given an origin and a destination vector and their corresponding area
+numbers, PathToGoal will return true if there is a path. Notice if there
+isn’t a valid path the move state is set to
+MOVE\_STATUS\_DEST\_UNREACHABLE and false is returned to indicate the AI
+can not MoveToPosition.
+
+         
+        if ( !PathToGoal( path, areaNum, physicsObj.GetOrigin(), move.toAreaNum, org ) ) {
+            StopMove( MOVE_STATUS_DEST_UNREACHABLE );
+            AI_DEST_UNREACHABLE = true;
+            return false;
+        }
+    }
+
+Next check if move.toAreaNum was set. It could be 0 here if there was no
+aas, or if aas couldn’t find a reachable area and returned 0. if it
+wasn’t set, we check to see if we can find a direction to wander around
+in. NewWanderDir will return true if it found a direction and will set
+up some state to check later.
+
+     
+    if ( !move.toAreaNum && !NewWanderDir( org ) ) {
+        StopMove( MOVE_STATUS_DEST_UNREACHABLE );
+        AI_DEST_UNREACHABLE = true;
+        return false;
+    }
+
+\
+ If the aas system and NewWanderDir fail to find somewhere to go set the
+move state to MOVE\_STATUS\_DEST\_UNREACHABLE and return false.
+
+If one of them worked, set up some success state in move and return
+true. Notice that status is set to MOVE\_STATUS\_MOVING and
+AI\_MOVE\_DONE is false.
+
+     
+        // path is good or NewWanderDir worked - set up state for later
+        move.moveDest      = org;
+        move.goalEntity        = NULL;
+        move.moveCommand   = MOVE_TO_POSITION;
+        move.moveStatus        = MOVE_STATUS_MOVING;
+        move.startTime     = gameLocal.time;
+        move.speed         = fly_speed;
+        AI_MOVE_DONE        = false;
+        AI_DEST_UNREACHABLE = false;
+        AI_FORWARD          = true;
+     
+        return true;
+    }
+
+Lets finish up this with a few details about how these MoveFunctions are
+called. There are a few different methods in idAI that are high level
+movement methods. These include MoveToPosition, MoveToEntity,
+MoveToEnemy, and MoveToCover
+
+MoveToPosition is called a couple of different ways from scripts. While
+looking at the scripts notice how states that are set in MoveToPosition
+are checked here to determine what to do next.
+
+     
+    /*
+    =====================
+    char_sentry::state_GetCloser
+    =====================
+    */
+    void char_sentry::state_GetCloser() {
+        while( 1 ) {
+            moveToPosition( lastValidPlayerPosition );
+            if ( AI_MOVE_DONE ) {
+                if ( !canReachEntity( $player1 ) ) {
+                    setState( "state_CantReachPlayer" );
+                }
+            }
+     
+            if ( checkForEnemy( true ) ) {
+                setState( "state_Combat" );
+            }
+     
+            checkBlocked();
+     
+            float result = checkDestinationDistance();
+            
+            if ( result == PLAYER_LOST ) {
+                setState( "state_FindPlayer" );
+            }
+            if ( result == PLAYER_OK ) {
+                setState( "state_Wait" );
+            }
+            waitFrame();
+        }
+    }
+
+This script calls it each frame, seems expensive, wonder if it is
+necessary? would it still work if it were every N frames? Something to
+test anyway, anything to save cpu cycles…
+
+     
+    /*
+    =====================
+    monster_hunter_berserk::combat_berserk_charge
+    =====================
+    */
+    void monster_hunter_berserk::combat_berserk_charge() {
+        
+        vector chargeBegin;
+        
+        vector dir;
+        float dist;
+        float endtime;
+        
+        float animD;
+        float animT;
+        entity curEnemy;
+        
+        disablePain();
+        moveState = HUNTER_MOVE_CHARGE;
+        avoidObstacles(0);
+        
+        float canMelee;
+        animState( ANIMCHANNEL_TORSO, "Torso_BerserkRage", 4);
+        waitAction("beginrage");
+        while( !animDone( ANIMCHANNEL_TORSO, 4 ) ) {
+            
+            checkDamage();
+            
+            //While raging make sure the player is not to close
+            faceEnemy();
+            canMelee = testMeleeAttack();
+            if ( canMelee ) {
+                combat_melee();
+                return;
+            }
+            waitFrame();
+        }
+        
+        
+        
+        attackBegin( "melee_hunter_berserk_ChargeAttack" );  
+        animState( ANIMCHANNEL_TORSO, "Torso_BerserkCharge", 4);
+        
+        
+        
+        
+        curEnemy = getEnemy();
+        
+        stopMove();
+        
+        while(1) {
+        
+            //sys.print("Beginning Charge...\n");
+                
+            turnToPos( curEnemy.getOrigin() );
+            
+            chargeBegin = getOrigin();        
+            chargeTarget = curEnemy.getOrigin();
+            
+            dir = chargeTarget - chargeBegin;
+                
+            moveToPosition(chargeTarget);
+            
+            animD = animDistance( ANIMCHANNEL_LEGS, "berzerk_charge" );
+            animT = animLength( ANIMCHANNEL_LEGS, "berzerk_charge" );
+            
+            dist  = sys.vecLength(dir) + 256;
+            endtime = sys.getTime() + (dist / animD * animT);
+            while( !AI_HIT_ENEMY && !AI_MOVE_DONE && !AI_BLOCKED && ( sys.getTime() < endtime ) ) {
+            //while( !AI_HIT_ENEMY && !AI_MOVE_DONE && !AI_BLOCKED) {
+            
+                kickObstacles(getObstacle(), 200);
+                
+                checkDamage();
+                waitFrame();
+            }
+                    
+            if(!AI_HIT_ENEMY) {
+            
+                //sys.print("Missed the enemy\n");
+            
+                //Check to see if the enemy is still right in front of me
+                vector newDir;
+                float ang;
+                
+                newDir = curEnemy.getOrigin() - chargeBegin;
+                ang = sys.DotProduct(sys.vecNormalize(dir), sys.vecNormalize(newDir));
+                ang = sys.acos(ang);
+                if(ang > CHARGE_CONTINUE_ANGLE || ang < -CHARGE_CONTINUE_ANGLE) {
+                    
+                    //sys.print("Sliding...\n");
+                    attackEnd();
+                    
+                    //The player got out of the way so lets get pissed and end the charge
+                    playAnim( ANIMCHANNEL_TORSO, "berzerk_miss" );
+                    while( !animDone( ANIMCHANNEL_TORSO, 4 ) ) {
+                        checkDamage();
+                        waitFrame();
+                    }
+                    break;
+                }
+     
+                if ( AI_BLOCKED ) {
+                    faceEnemy();
+                    waitFrame();
+                    break;
+                }
+     
+            } else {
+            
+                //sys.print("Hit the enemy\n");
+                //We hit the player...do a quick melee attack
+                playAnim( ANIMCHANNEL_TORSO, "berzerk_hit" );
+                while( !animDone( ANIMCHANNEL_TORSO, 4 ) ) {
+                    checkDamage();
+                    waitFrame();
+                }
+                stopMove();
+                attackEnd();
+                break;
+            }
+            
+            waitFrame();
+        }
+     
+        avoidObstacles(1);
+        moveState = HUNTER_MOVE_RUN;
+        enablePain();
+        
+        animState( ANIMCHANNEL_TORSO, "Torso_Idle", 4);
+    }
+
+Notice how this script calls it once, then follows it with a while:
+
+     
+    while( !AI_HIT_ENEMY && !AI_MOVE_DONE && !AI_BLOCKED && ( sys.getTime() < endtime ) ) {
+
+This seems more appropriate calling in to get the path once, then using
+the path until you have a reason to change it. Even if you wanted to
+update the goal position very frequently every frame seems like
+overkill?
+

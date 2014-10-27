@@ -1,23 +1,15 @@
----
-format: Markdown
-categories: Material_global_keyword
-toc: yes
-title: Glass
-...
-Glass (Material global keyword)
-===============================
-
 Description
 -----------
 
-Flags the surface as made of glass to define the type of hit sound and debris.
+Flags the surface as made of glass to define the type of hit sound and
+debris.
 
 Usage
 -----
 
 In the global section of your material shader type...
 
-`glass`
+    glass
 
 Parameters
 ----------
@@ -29,4 +21,5 @@ Notes
 
 None.
 
+\
 

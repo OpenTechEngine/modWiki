@@ -1,101 +1,81 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: File_formats.page
-...
-File formats
-============
-
-All the different file formats and extensions recognised by [id Tech 4](Id\_Tech\_4) games.
-
-|---------------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                         
- Contents                                                                                                                                     
- --------                                                                                                                                     
-                                                                                                                                              
- </div>                                                                                                                                       
- -   [<span class="tocnumber">1</span> <span class="toctext">Standard file formats</span>](File\_formats#Standard\_file\_formats)        
- -   [<span class="tocnumber">2</span> <span class="toctext">Declaration containers</span>](File\_formats#Declaration\_containers)       
- -   [<span class="tocnumber">3</span> <span class="toctext">Model formats</span>](File\_formats#Model\_formats)                         
- -   [<span class="tocnumber">4</span> <span class="toctext">Map formats</span>](File\_formats#Map\_formats)                             
- -   [<span class="tocnumber">5</span> <span class="toctext">Misc proprietary formats</span>](File\_formats#Misc\_proprietary\_formats)  
- -   [<span class="tocnumber">6</span> <span class="toctext">Wolfenstein (SP)</span>](File\_formats#Wolfenstein\_.28SP.29)               |
+All the different file formats and extensions recognised by [id Tech
+4](Id_Tech_4 "Id Tech 4") games.
 
 Standard file formats
 ---------------------
 
--   [ASE](ASE\_(file\_format))
--   [DDS](DDS\_(file\_format))
--   [JPG](JPG\_(file\_format))
--   [LWO](LWO\_(file\_format))
--   [MB](MB\_(file\_format))
--   [OGG](OGG\_(file\_format))
--   [PK4](PK4\_(file\_format)) (renamed [ZIP](ZIP\_(file\_format)))
--   [PNG](PNG\_(file\_format))
--   [TGA](TGA\_(file\_format))
--   [WAV](WAV\_(file\_format))
--   [VFP](VFP\_(file\_format))
--   [VP](VP\_(file\_format))
+-   [ASE](ASE_%28file_format%29 "ASE (file format)")
+-   [DDS](DDS_%28file_format%29 "DDS (file format)")
+-   [JPG](JPG_%28file_format%29 "JPG (file format)")
+-   [LWO](LWO_%28file_format%29 "LWO (file format)")
+-   [MB](MB_%28file_format%29 "MB (file format)")
+-   [OGG](OGG_%28file_format%29 "OGG (file format)")
+-   [PK4](PK4_%28file_format%29 "PK4 (file format)") (renamed
+    [ZIP](ZIP_%28file_format%29 "ZIP (file format)") )
+-   [PNG](PNG_%28file_format%29 "PNG (file format)")
+-   [TGA](TGA_%28file_format%29 "TGA (file format)")
+-   [WAV](WAV_%28file_format%29 "WAV (file format)")
+-   [VFP](VFP_%28file_format%29 "VFP (file format)")
+-   [VP](VP_%28file_format%29 "VP (file format)")
 
-[Declaration](Declarations) containers
-------------------------------------------
+[Declaration](Declarations "Declarations") containers
+-----------------------------------------------------
 
--   [AF](AF\_(file\_format))
--   [DEF](DEF\_(file\_format))
--   [FX](FX\_(file\_format))
--   [GUI](GUI\_(file\_format))
--   [GUIDE](GUIDE\_(file\_format))
--   [LANG](LANG\_(file\_format))
--   [LIPSYNC](LIPSYNC\_(file\_format))
--   MTT
--   [MTR](MTR\_(file\_format))
--   [PDA](PDA\_(file\_format))
--   [PLAYBACK](PLAYBACK\_(file\_format))
--   [PRT](PRT\_(file\_format))
--   [SCRIPT](SCRIPT\_(file\_format))
--   [SKIN](SKIN\_(file\_format))
--   [SNDSHD](SNDSHD\_(file\_format))
+-   [AF](AF_%28file_format%29 "AF (file format)")
+-   [DEF](DEF_%28file_format%29 "DEF (file format)")
+-   [FX](FX_%28file_format%29 "FX (file format)")
+-   [GUI](GUI_%28file_format%29 "GUI (file format)")
+-   [GUIDE](GUIDE_%28file_format%29 "GUIDE (file format)")
+-   [LANG](LANG_%28file_format%29 "LANG (file format)")
+-   [LIPSYNC](LIPSYNC_%28file_format%29 "LIPSYNC (file format)")
+-   [MTT](MTT_%28file_format%29 "MTT (file format)")
+-   [MTR](MTR_%28file_format%29 "MTR (file format)")
+-   [PDA](PDA_%28file_format%29 "PDA (file format)")
+-   [PLAYBACK](PLAYBACK_%28file_format%29 "PLAYBACK (file format)")
+-   [PRT](PRT_%28file_format%29 "PRT (file format)")
+-   [SCRIPT](SCRIPT_%28file_format%29 "SCRIPT (file format)")
+-   [SKIN](SKIN_%28file_format%29 "SKIN (file format)")
+-   [SNDSHD](SNDSHD_%28file_format%29 "SNDSHD (file format)")
 
-[Model formats](Models\_(folder))
--------------------------------------
+[Model formats](Models_%28folder%29 "Models (folder)")
+------------------------------------------------------
 
--   [ASE](ASE\_(file\_format))
--   [CM](CM\_(file\_format))
--   [LWO](LWO\_(file\_format))
--   [MD5](MD5\_(file\_format))
-    -   [MD5ANIM](MD5ANIM\_(file\_format))
-    -   [MD5CAMERA](MD5CAMERA\_(file\_format))
-    -   [MD5MESH](MD5MESH\_(file\_format))
--   SURF
+-   [ASE](ASE_%28file_format%29 "ASE (file format)")
+-   [CM](CM_%28file_format%29 "CM (file format)")
+-   [LWO](LWO_%28file_format%29 "LWO (file format)")
+-   [MD5](MD5_%28file_format%29 "MD5 (file format)")
+    -   [MD5ANIM](MD5ANIM_%28file_format%29 "MD5ANIM (file format)")
+    -   [MD5CAMERA](MD5CAMERA_%28file_format%29 "MD5CAMERA (file format)")
+    -   [MD5MESH](MD5MESH_%28file_format%29 "MD5MESH (file format)")
+-   [SURF](SURF_%28file_format%29 "SURF (file format)")
 
-[Map formats](Maps\_(folder))
----------------------------------
+[Map formats](Maps_%28folder%29 "Maps (folder)")
+------------------------------------------------
 
--   [AAS](AAS\_(file\_format))
--   [CM](CM\_(file\_format))
--   [MAP](MAP\_(file\_format))
--   [PROC](PROC\_(file\_format))
--   [LIN](LIN\_(file\_format))
--   [ENTITIES](ENTITIES\_(file\_format))
+-   [AAS](AAS_%28file_format%29 "AAS (file format)")
+-   [CM](CM_%28file_format%29 "CM (file format)")
+-   [MAP](MAP_%28file_format%29 "MAP (file format)")
+-   [PROC](PROC_%28file_format%29 "PROC (file format)")
+-   [LIN](LIN_%28file_format%29 "LIN (file format)")
+-   [ENTITIES](ENTITIES_%28file_format%29 "ENTITIES (file format)")
 
 Misc proprietary formats
 ------------------------
 
--   [BIK](BIK\_(file\_format))
--   [CFG](CFG\_(file\_format))
--   [DAT](DAT\_(file\_format))
--   [DEMO](DEMO\_(file\_format))
--   EFX
--   MEGA
--   [ROQ](ROQ\_(file\_format))
--   <span class="deadlink">ROQPARAM</span>
+-   [BIK](BIK_%28file_format%29 "BIK (file format)")
+-   [CFG](CFG_%28file_format%29 "CFG (file format)")
+-   [DAT](DAT_%28file_format%29 "DAT (file format)")
+-   [DEMO](DEMO_%28file_format%29 "DEMO (file format)")
+-   [EFX](EFX_%28file_format%29 "EFX (file format)")
+-   [MEGA](MEGA_%28file_format%29 "MEGA (file format)")
+-   [ROQ](ROQ_%28file_format%29 "ROQ (file format)")
+-   [ROQPARAM](ROQPARAM_%28file_format%29 "ROQPARAM (file format)")
 
 Wolfenstein (SP)
 ----------------
 
--   BRAIN
--   [DECLS](DECLS\_(file\_format))
--   [MPK](MPK\_(file\_format))
--   [SPK](SPK\_(file\_format))
+-   [BRAIN](BRAIN_%28file_format%29 "BRAIN (file format)")
+-   [DECLS](DECLS_%28file_format%29 "DECLS (file format)")
+-   [MPK](MPK_%28file_format%29 "MPK (file format)")
+-   [SPK](SPK_%28file_format%29 "SPK (file format)")
 

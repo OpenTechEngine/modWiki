@@ -1,70 +1,60 @@
----
-format: Markdown
-categories: decl
-toc: yes
-title: Particle
-...
-Particle (decl)
-===============
+<div id="stub" class="boilerplate metadata">
 
-> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
-Particle declarations reference a material and provide the parameters needed to reproduce a particle stream in game.
+*This article is a
+[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
+. You can help us by <span class="plainlinks"> [expanding
+it](Particle_%28decl%29 "http://www.modwiki.net/w/index.php?title=Particle_%28decl%29&action=edit")
+</span> .*
 
-|----------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                            
- Contents                                                                                                        
- --------                                                                                                        
-                                                                                                                 
- </div>                                                                                                          
- -   [<span class="tocnumber">1</span> <span class="toctext">Syntax</span>](Particle\_(decl)#Syntax)        
- -   [<span class="tocnumber">2</span> <span class="toctext">Keywords</span>](Particle\_(decl)#Keywords)    
-     -   [<span class="tocnumber">2.1</span> <span class="toctext">Global</span>](Particle\_(decl)#Global)  
-     -   [<span class="tocnumber">2.2</span> <span class="toctext">Stage</span>](Particle\_(decl)#Stage)    |
+</div>
+
+Particle declarations reference a material and provide the parameters
+needed to reproduce a particle stream in game.
 
 Syntax
 ------
 
-`particle [name] {`
-`  [global]`
-`    {`
-`      [stage]`
-`    }`
-`    ...`
-`}`
+    particle [name] {
+      [global]
+        {
+          [stage]
+        }
+        ...
+    }
 
 Keywords
 --------
 
 ### Global
 
-| Keywords & Usage   | Description |
-|--------------------|-------------|
-| depthHack \<bool\> | ???         |
+  Keywords & Usage     Description
+  -------------------- -------------
+  depthHack \<bool\>   ???
 
 ### Stage
 
-| Keywords & Usage                               | Description |
-|------------------------------------------------|-------------|
-| count \<number\>                               | ???         |
-| material \<name\>                              | ???         |
-| time \<time\>                                  | ???         |
-| cycles \<number\>                              | ???         |
-| bunching \<number\>                            | ???         |
-| distribution \<shape\> \<x\> \<y\> \<z\>       | ???         |
-| direction \<shape\> \<number\>                 | ???         |
-| orientation \<type\>                           | ???         |
-| speed \<number\>                               | ???         |
-| size \<number\>                                | ???         |
-| aspect \<number\>                              | ???         |
-| fadeIn \<number\>                              | ???         |
-| fadeOut \<number\>                             | ???         |
-| fadeIndex \<number\>                           | ???         |
-| color \<red\> \<green\> \<blue\> \<alpha\>     | ???         |
-| fadeColor \<red\> \<green\> \<blue\> \<alpha\> | ???         |
-| offset \<x\> \<y\> \<z\>                       | ???         |
-| gravity \<type\> \<value\>                     | ???         |
-| rotation \<value\> to \<value\>                | ???         |
-| randomDistribution \<bool\>                    | ???         |
-| boundsExpansion \<value\>                      | ???         |
+  Keywords & Usage                                 Description
+  ------------------------------------------------ -------------
+  count \<number\>                                 ???
+  material \<name\>                                ???
+  time \<time\>                                    ???
+  cycles \<number\>                                ???
+  bunching \<number\>                              ???
+  distribution \<shape\> \<x\> \<y\> \<z\>         ???
+  direction \<shape\> \<number\>                   ???
+  orientation \<type\>                             ???
+  speed \<number\>                                 ???
+  size \<number\>                                  ???
+  aspect \<number\>                                ???
+  fadeIn \<number\>                                ???
+  fadeOut \<number\>                               ???
+  fadeIndex \<number\>                             ???
+  color \<red\> \<green\> \<blue\> \<alpha\>       ???
+  fadeColor \<red\> \<green\> \<blue\> \<alpha\>   ???
+  offset \<x\> \<y\> \<z\>                         ???
+  gravity \<type\> \<value\>                       ???
+  rotation \<value\> to \<value\>                  ???
+  randomDistribution \<bool\>                      ???
+  boundsExpansion \<value\>                        ???
 
 

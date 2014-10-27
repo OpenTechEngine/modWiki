@@ -1,104 +1,55 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: NvidaNormalMapFilter_(tool_overview).page
-...
-NvidaNormalMapFilter (tool overview)
-====================================
-
 Foreword
 --------
 
-[Nvidia's Normal Map plugin](http://web.archive.org/web/20110906153324/http://www.google.com/search?hl=en&q=NVidia%20Texture%20Tools&btnI=I'm+Feeling+Lucky) for [Adobe Photoshop](http://web.archive.org/web/20110906153324/http://www.adobe.com/) is primarily used to create normal maps from height maps.
+[Nvidia's Normal Map
+plugin](https://web.archive.org/web/20110906153324/http://www.google.com/search?hl=en&q=NVidia%20Texture%20Tools&btnI=I'm+Feeling+Lucky "http://www.google.com/search?hl=en&q=NVidia%20Texture%20Tools&btnI=I'm+Feeling+Lucky")
+for [Adobe Photoshop](http://www.adobe.com/ "http://www.adobe.com/") is
+primarily used to create normal maps from height maps.
 
-However, it's also possible to normalize an existing normal map, combine a normal map with a height map, as well as export special maps.
+However, it's also possible to normalize an existing normal map, combine
+a normal map with a height map, as well as export special maps.
 
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
- | <div id="toctitle">                                                                                                                                                                                        
-  Contents                                                                                                                                                                                                    
-  --------                                                                                                                                                                                                    
-                                                                                                                                                                                                              
-  </div>                                                                                                                                                                                                      
-  -   [<span class="tocnumber">1</span> <span class="toctext">Foreword</span>](NvidaNormalMapFilter\_(tool\_overview)#Foreword)                                                                          
-  -   [<span class="tocnumber">2</span> <span class="toctext">A Word About Channels</span>](NvidaNormalMapFilter\_(tool\_overview)#A\_Word\_About\_Channels)                                             
-  -   [<span class="tocnumber">3</span> <span class="toctext">General Interface</span>](NvidaNormalMapFilter\_(tool\_overview)#General\_Interface)                                                       
-      -   [<span class="tocnumber">3.1</span> <span class="toctext">Dynamic Preview</span>](NvidaNormalMapFilter\_(tool\_overview)#Dynamic\_Preview)                                                     
-      -   [<span class="tocnumber">3.2</span> <span class="toctext">"Add Height to Normal Map" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Add\_Height\_to\_Normal\_Map.22\_Checkbox)     
-      -   [<span class="tocnumber">3.3</span> <span class="toctext">"Output 16:16" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Output\_16:16.22\_Checkbox)                                
-      -   [<span class="tocnumber">3.4</span> <span class="toctext">"Output 12:12:8" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Output\_12:12:8.22\_Checkbox)                            
-      -   [<span class="tocnumber">3.5</span> <span class="toctext">"Using Multiple Layers" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Using\_Multiple\_Layers.22\_Checkbox)             
-      -   [<span class="tocnumber">3.6</span> <span class="toctext">"Signed Output" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Signed\_Output.22\_Checkbox)                              
-      -   [<span class="tocnumber">3.7</span> <span class="toctext">"Swap RGB" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Swap\_RGB.22\_Checkbox)                                        
-      -   [<span class="tocnumber">3.8</span> <span class="toctext">3D Preview Button</span>](NvidaNormalMapFilter\_(tool\_overview)#3D\_Preview\_Button)                                                
-  -   [<span class="tocnumber">4</span> <span class="toctext">Height Generation</span>](NvidaNormalMapFilter\_(tool\_overview)#Height\_Generation)                                                       
-      -   [<span class="tocnumber">4.1</span> <span class="toctext">"Wrap" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Wrap.22\_Checkbox)                                                 
-      -   [<span class="tocnumber">4.2</span> <span class="toctext">"Invert X" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Invert\_X.22\_Checkbox)                                        
-      -   [<span class="tocnumber">4.3</span> <span class="toctext">"Invert Y" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Invert\_Y.22\_Checkbox)                                        
-      -   [<span class="tocnumber">4.4</span> <span class="toctext">"Min Z" Textbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Min\_Z.22\_Textbox)                                                
-      -   [<span class="tocnumber">4.5</span> <span class="toctext">"Scale" Textbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Scale.22\_Textbox)                                                 
-      -   [<span class="tocnumber">4.6</span> <span class="toctext">Filter Type</span>](NvidaNormalMapFilter\_(tool\_overview)#Filter\_Type)                                                             
-          -   [<span class="tocnumber">4.6.1</span> <span class="toctext">4 Sample</span>](NvidaNormalMapFilter\_(tool\_overview)#4\_Sample)                                                             
-          -   [<span class="tocnumber">4.6.2</span> <span class="toctext">3 x 3</span>](NvidaNormalMapFilter\_(tool\_overview)#3\_x\_3)                                                                  
-          -   [<span class="tocnumber">4.6.3</span> <span class="toctext">5 x 5</span>](NvidaNormalMapFilter\_(tool\_overview)#5\_x\_5)                                                                  
-          -   [<span class="tocnumber">4.6.4</span> <span class="toctext">7 x 7</span>](NvidaNormalMapFilter\_(tool\_overview)#7\_x\_7)                                                                  
-          -   [<span class="tocnumber">4.6.5</span> <span class="toctext">9 x 9</span>](NvidaNormalMapFilter\_(tool\_overview)#9\_x\_9)                                                                  
-          -   [<span class="tocnumber">4.6.6</span> <span class="toctext">Du/Dv</span>](NvidaNormalMapFilter\_(tool\_overview)#Du.2FDv)                                                                  
-          -   [<span class="tocnumber">4.6.7</span> <span class="toctext">Q8W8V8U8</span>](NvidaNormalMapFilter\_(tool\_overview)#Q8W8V8U8)                                                              
-  -   [<span class="tocnumber">5</span> <span class="toctext">3D Preview Options</span>](NvidaNormalMapFilter\_(tool\_overview)#3D\_Preview\_Options)                                                    
-      -   [<span class="tocnumber">5.1</span> <span class="toctext">Decal Texture</span>](NvidaNormalMapFilter\_(tool\_overview)#Decal\_Texture)                                                         
-      -   [<span class="tocnumber">5.2</span> <span class="toctext">"Use Decal Texture" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Use\_Decal\_Texture.22\_Checkbox)                     
-      -   [<span class="tocnumber">5.3</span> <span class="toctext">"Brigten Decal" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Brigten\_Decal.22\_Checkbox)                              
-      -   [<span class="tocnumber">5.4</span> <span class="toctext">"Animate Light" Checkbox</span>](NvidaNormalMapFilter\_(tool\_overview)#.22Animate\_Light.22\_Checkbox)                              
-  -   [<span class="tocnumber">6</span> <span class="toctext">Height Source</span>](NvidaNormalMapFilter\_(tool\_overview)#Height\_Source)                                                               
-      -   [<span class="tocnumber">6.1</span> <span class="toctext">Alpha Channel</span>](NvidaNormalMapFilter\_(tool\_overview)#Alpha\_Channel)                                                         
-      -   [<span class="tocnumber">6.2</span> <span class="toctext">Average RGB</span>](NvidaNormalMapFilter\_(tool\_overview)#Average\_RGB)                                                             
-  -   [<span class="tocnumber">7</span> <span class="toctext">Alternate Conversions</span>](NvidaNormalMapFilter\_(tool\_overview)#Alternate\_Conversions)                                               
-      -   [<span class="tocnumber">7.1</span> <span class="toctext">Biased RGB</span>](NvidaNormalMapFilter\_(tool\_overview)#Biased\_RGB)                                                               
-      -   [<span class="tocnumber">7.2</span> <span class="toctext">Red</span>](NvidaNormalMapFilter\_(tool\_overview)#Red)                                                                              
-      -   [<span class="tocnumber">7.3</span> <span class="toctext">Green</span>](NvidaNormalMapFilter\_(tool\_overview)#Green)                                                                          
-      -   [<span class="tocnumber">7.4</span> <span class="toctext">Blue</span>](NvidaNormalMapFilter\_(tool\_overview)#Blue)                                                                            
-      -   [<span class="tocnumber">7.5</span> <span class="toctext">Max (R,G,B)</span>](NvidaNormalMapFilter\_(tool\_overview)#Max\_.28R.2CG.2CB.29)                                                     
-      -   [<span class="tocnumber">7.6</span> <span class="toctext">Colorspace</span>](NvidaNormalMapFilter\_(tool\_overview)#Colorspace)                                                                
-      -   [<span class="tocnumber">7.7</span> <span class="toctext">Normalize Only</span>](NvidaNormalMapFilter\_(tool\_overview)#Normalize\_Only)                                                       
-      -   [<span class="tocnumber">7.8</span> <span class="toctext">Convert to Height</span>](NvidaNormalMapFilter\_(tool\_overview)#Convert\_to\_Height)                                                
-  -   [<span class="tocnumber">8</span> <span class="toctext">Alpha Field</span>](NvidaNormalMapFilter\_(tool\_overview)#Alpha\_Field)                                                                   
-      -   [<span class="tocnumber">8.1</span> <span class="toctext">Unchanged</span>](NvidaNormalMapFilter\_(tool\_overview)#Unchanged)                                                                  
-      -   [<span class="tocnumber">8.2</span> <span class="toctext">Set to 0.0</span>](NvidaNormalMapFilter\_(tool\_overview)#Set\_to\_0.0)                                                              
-      -   [<span class="tocnumber">8.3</span> <span class="toctext">Set to 1.1</span>](NvidaNormalMapFilter\_(tool\_overview)#Set\_to\_1.1)                                                           |  |
+  ------------------------------------------------------------------------
+  ------------------------------------------------------------------------
 
 A Word About Channels
 ---------------------
 
-It's important to note that the plugin only uses the channels that are selected so if you need to make use of the alpha channel with the plugin you must select it in the channels pallet prior to starting the plugin.
+It's important to note that the plugin only uses the channels that are
+selected so if you need to make use of the alpha channel with the plugin
+you must select it in the channels pallet prior to starting the plugin.
 
 General Interface
 -----------------
 
-<div class="thumb tright">
-<div style="width: 523px">
-![nVidia normal map plugin interface](/images/images_b_ba_NvidiaNormalMapPlugin.gif "nVidia normal map plugin interface")
+[![nVidia normal map plugin
+interface](/images/b/ba/NvidiaNormalMapPlugin.gif)\
+ *nVidia normal map plugin interface (Click to
+Enlarge)*](/images/b/ba/NvidiaNormalMapPlugin.gif "nVidia normal map plugin interface")
 
-<div class="thumbcaption">
-nVidia normal map plugin interface
-
-</div>
-</div>
-</div>
-This is the plugin interface. The following sections will explain the function of each checkbox, textbox, button, and display.
+This is the plugin interface. The following sections will explain the
+function of each checkbox, textbox, button, and display.
 
 ### Dynamic Preview
 
-The dynamic preview will display a thumbnail of the resulting normal map using the current settings.
+The dynamic preview will display a thumbnail of the resulting normal map
+using the current settings.
 
 ### "Add Height to Normal Map" Checkbox
 
-This checkbox instructs the plugin to add the normals of a height map to an existing normal map.
+This checkbox instructs the plugin to add the normals of a height map to
+an existing normal map.
 
-However, because a normal map must use the RGB channels and you cannot specify an image other than the image in use when the plugin is initiated, you must store the height information in the alpha channel of the normal map.
+However, because a normal map must use the RGB channels and you cannot
+specify an image other than the image in use when the plugin is
+initiated, you must store the height information in the alpha channel of
+the normal map.
 
-So, when using this feature it's important to also select "Alpha Channel" as the height source. Note that the "Alpha Channel" radio button is disabled by default. In order to use it you must select the red, green, blue, and alpha channels in the channels pallet prior to starting the plugin.
+So, when using this feature it's important to also select "Alpha
+Channel" as the height source. Note that the "Alpha Channel" radio
+button is disabled by default. In order to use it you must select the
+red, green, blue, and alpha channels in the channels pallet prior to
+starting the plugin.
 
 ### "Output 16:16" Checkbox
 
@@ -110,7 +61,8 @@ This also has been removed.
 
 ### "Using Multiple Layers" Checkbox
 
-By default the plugin expect you to be working with a flattened image. However, this checkbox allows you to work with multiple layers.
+By default the plugin expect you to be working with a flattened image.
+However, this checkbox allows you to work with multiple layers.
 
 ### "Signed Output" Checkbox
 
@@ -124,7 +76,8 @@ By default the plugin exports normal data as follows...
 -   Green Channel - Y axis
 -   Blue Channel - Z axis
 
-With this checkbox ticked however, the plugin exports normal data as follows...
+With this checkbox ticked however, the plugin exports normal data as
+follows...
 
 -   Red Channel - Z axis
 -   Green Channel - Y axis
@@ -132,16 +85,20 @@ With this checkbox ticked however, the plugin exports normal data as follows...
 
 ### 3D Preview Button
 
-This button brings up the 3D preview pane using the settings defined in the 3D view section.
+This button brings up the 3D preview pane using the settings defined in
+the 3D view section.
 
 Height Generation
 -----------------
 
-This section defines every aspect of how the height map is converted into a normal map.
+This section defines every aspect of how the height map is converted
+into a normal map.
 
 ### "Wrap" Checkbox
 
-This checkbox enables/disables the wraping of the resulting normal map around the edges of the image. This is used for continuity when working with seamless textures.
+This checkbox enables/disables the wraping of the resulting normal map
+around the edges of the image. This is used for continuity when working
+with seamless textures.
 
 ### "Invert X" Checkbox
 
@@ -153,7 +110,8 @@ This checkbox enables/disables the inversion of Y axis normal data.
 
 ### "Min Z" Textbox
 
-This textbox envelopes the Z axis normal data to the specified value and above.
+This textbox envelopes the Z axis normal data to the specified value and
+above.
 
 ### "Scale" Textbox
 
@@ -185,11 +143,13 @@ With this selected, 72 samples are taken from the surrounding pixels.
 
 #### Du/Dv
 
-With this selected, the height map is converted into an environment-mapped bump map.
+With this selected, the height map is converted into an
+environment-mapped bump map.
 
 #### Q8W8V8U8
 
-With this selected, the height map is converted into a Q8W8V8U8 bump map.
+With this selected, the height map is converted into a Q8W8V8U8 bump
+map.
 
 3D Preview Options
 ------------------
@@ -198,11 +158,13 @@ This section defines the settings used in the 3D preview pane.
 
 ### Decal Texture
 
-This button allows you to select the color map to apply the resulting normal map to in the 3D preview pane.
+This button allows you to select the color map to apply the resulting
+normal map to in the 3D preview pane.
 
 ### "Use Decal Texture" Checkbox
 
-This checkbox enables/disables the use of a color map in the 3D preview pane.
+This checkbox enables/disables the use of a color map in the 3D preview
+pane.
 
 ### "Brigten Decal" Checkbox
 
@@ -210,7 +172,8 @@ This checkbox enables/disables the use of a color map in the 3D preview pane.
 
 ### "Animate Light" Checkbox
 
-This checkbox enables/disables the use of an animated light in the 3D preview pane.
+This checkbox enables/disables the use of an animated light in the 3D
+preview pane.
 
 Height Source
 -------------
@@ -219,20 +182,25 @@ This section determines the source of the height map to convert.
 
 ### Alpha Channel
 
-When selceted, the plugin gathers height map data from the alpha channel.
+When selceted, the plugin gathers height map data from the alpha
+channel.
 
-Remember, the plugin only recogizes the channels selected from the channels pallet prior to starting the plugin. If you do not have the alpha channel selected this option will be disabled.
+Remember, the plugin only recogizes the channels selected from the
+channels pallet prior to starting the plugin. If you do not have the
+alpha channel selected this option will be disabled.
 
 ### Average RGB
 
-When selected, the plugin gathers height map data from an average of the red, green, and blue channels.
+When selected, the plugin gathers height map data from an average of the
+red, green, and blue channels.
 
 Alternate Conversions
 ---------------------
 
 ### Biased RGB
 
-When selected, the plugin subtracts the average color of the image from each texel.
+When selected, the plugin subtracts the average color of the image from
+each texel.
 
 ### Red
 
@@ -242,7 +210,8 @@ By default the plugin exports normal data as follows...
 -   Green Channel - Y axis
 -   Blue Channel - Z axis
 
-With this checkbox ticked, the plugin should export Z axis normal data in the red channel. However, it doesn't appear to work.
+With this checkbox ticked, the plugin should export Z axis normal data
+in the red channel. However, it doesn't appear to work.
 
 ### Green
 
@@ -252,7 +221,8 @@ By default the plugin exports normal data as follows...
 -   Green Channel - Y axis
 -   Blue Channel - Z axis
 
-With this checkbox ticked, the plugin should export Z axis normal data in the green channel. However, it doesn't appear to work.
+With this checkbox ticked, the plugin should export Z axis normal data
+in the green channel. However, it doesn't appear to work.
 
 ### Blue
 
@@ -262,30 +232,37 @@ By default the plugin exports normal data as follows...
 -   Green Channel - Y axis
 -   Blue Channel - Z axis
 
-With this checkbox ticked, the plugin should export Z axis normal data in the blue channel. However, it doesn't matter because the result would be the same.
+With this checkbox ticked, the plugin should export Z axis normal data
+in the blue channel. However, it doesn't matter because the result would
+be the same.
 
 ### Max (R,G,B)
 
-When selected, the plugin uses the maximum value from the red, green, and blue, channels as opposed to averaging them.
+When selected, the plugin uses the maximum value from the red, green,
+and blue, channels as opposed to averaging them.
 
 ### Colorspace
 
 Color space - Height = 1.0 - [(1.0 - r) \* (1.0 - g) \* (1.0 - b)]
 
-Invert all the colors, multiply them together and invert the result. This was an artist request.
+Invert all the colors, multiply them together and invert the result.
+This was an artist request.
 
 ### Normalize Only
 
-When selected, the plugin normalizes the color of each texel to make an hand edited normal map compliant.
+When selected, the plugin normalizes the color of each texel to make an
+hand edited normal map compliant.
 
 ### Convert to Height
 
-When selected, the plugin converts a normal map to a height map. This should be working correctly in version 8.0 or later.
+When selected, the plugin converts a normal map to a height map. This
+should be working correctly in version 8.0 or later.
 
 Alpha Field
 -----------
 
-Settings in this section determine what to output to the alpha channel if it exists.
+Settings in this section determine what to output to the alpha channel
+if it exists.
 
 ### Unchanged
 
@@ -299,4 +276,5 @@ When selected, the alpha channel is filled with black.
 
 When selected, the alpha channel is filled with white.
 
+\
 

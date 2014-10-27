@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: DebugLine
-...
-DebugLine (script event)
-========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -20,7 +12,8 @@ Line drawing for debug visualization.
 Usage
 -----
 
-*void* debugLine( *vector* **color**, *vector* **start**, *vector* **end**, *float* **lifetime** )
+*void* debugLine( *vector* **color** , *vector* **start** , *vector*
+**end** , *float* **lifetime** )
 
 Parameters
 ----------
@@ -33,8 +26,8 @@ Parameters
 Examples
 --------
 
-` `
-<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`debugLine`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`0`</font>` `<font color="#0000dd">`1`</font>` `<font color="#0000dd">`0`</font>`', '`<font color="#0000dd">`42`</font>` `<font color="#0000dd">`68`</font>` `<font color="#0000dd">`94`</font>`', '`<font color="#0000dd">`98`</font>` `<font color="#0000dd">`54`</font>` `<font color="#0000dd">`12`</font>`', `<font color="#0000dd">`1`</font><font color="#000000">`)`</font>`;`
+     
+    sys.debugLine('0 1 0', '42 68 94', '98 54 12', 1);
 
 Notes
 -----
@@ -43,4 +36,5 @@ This script event does not return any values.
 
 Lifetime of 0 == 1 frame.
 
+\
 

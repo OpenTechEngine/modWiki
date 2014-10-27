@@ -1,14 +1,9 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: SetGameTeam
-...
-SetGameTeam (script event)
-==========================
+<div align="left"
+style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
 
-<div style="padding: 1px; border: 0px solid #000000" align="left">
-<font size="18px"><font color="black">![](/images/images_f_f9_Etqwsquare_bg.png) The information on this page is specific to [Enemy Territory: Quake Wars](http://web.archive.org/web/20121206024939/http://www.modwiki.net:80/wiki/Enemy_Territory:_Quake_Wars).</font></font>
+![](/images/f/f9/Etqwsquare_bg.png) The information on this page is
+specific to [Enemy Territory: Quake
+Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
 
 </div>
 
@@ -17,12 +12,15 @@ SetGameTeam (script event)
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type [idEntity](IdEntity\_(class)). Has spawn class specific implementation.
+This event operates on an instance of the [game
+class](Game_class "Game class") type
+[idEntity](IdEntity_%28class%29 "IdEntity (class)") . Has spawn class
+specific implementation.
 
 Description
 -----------
 
-Calls SetGameTeam on entity's [spawn class](Spawn\_class).
+Calls SetGameTeam on entity's [spawn class](Spawn_class "Spawn class") .
 
 Usage
 -----
@@ -32,27 +30,36 @@ Usage
 Parameters
 ----------
 
-[team] - team object. Global object pointers for team objects are named **gdfTeam** and **stroggTeam** Can be set to [null]($null\_entity\_(scripting)).
+[team] - team object. Global object pointers for team objects are named
+**gdfTeam** and **stroggTeam** Can be set to
+[null](%24null_entity_%28scripting%29 "$null entity (scripting)") .
 
 Examples
 --------
 
-`someEntity.`<font color="#ff0000">`setGameTeam`</font><font color="#000000">`(`</font>` teamStrogg `<font color="#000000">`)`</font>`;`
-<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`println`</font><font color="#000000">`(`</font>` `<font color="#666666">`"The strogg army grows ever more powerful"`</font>` `<font color="#000000">`)`</font>`;`
+    someEntity.setGameTeam( teamStrogg );
+    sys.println( "The strogg army grows ever more powerful" );
 
 Notes
 -----
 
-Calls SetGameTeam on the entities [spawn class](Spawn\_class). SetGameClass has spawn class specific implementations on the following:
+Calls SetGameTeam on the entities [spawn
+class](Spawn_class "Spawn class") . SetGameClass has spawn class
+specific implementations on the following:
 
-**idEntity**: Does nothing.
+**idEntity** : Does nothing.
 
-**idActor**, **idItem**, **idProjectile**: Sets team.
+**idActor** , **idItem** , **idProjectile** : Sets team.
 
-**idPlayer**: Sets team, calls OnSetTeam function on entities script object. Sets player to spectate if team is NULL.
+**idPlayer** : Sets team, calls OnSetTeam function on entities script
+object. Sets player to spectate if team is NULL.
 
-**sdScriptEntity**: Sets team, calls OnSetTeam function on entities script object. Many entities use this function to manage the change.
+**sdScriptEntity** : Sets team, calls OnSetTeam function on entities
+script object. Many entities use this function to manage the change.
 
-Has counterpart [getGameTeam](GetGameTeam\_(script\_event)).
+Has counterpart
+[getGameTeam](GetGameTeam_%28script_event%29 "GetGameTeam (script event)")
+.
 
+\
 

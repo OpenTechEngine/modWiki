@@ -1,23 +1,15 @@
----
-format: Markdown
-categories: Material_global_keyword
-toc: yes
-title: Stone
-...
-Stone (Material global keyword)
-===============================
-
 Description
 -----------
 
-Flags the surface as made of stone to define the type of hit sound and debris.
+Flags the surface as made of stone to define the type of hit sound and
+debris.
 
 Usage
 -----
 
 In the global section of your material shader type...
 
-`stone`
+    stone
 
 Parameters
 ----------
@@ -29,4 +21,5 @@ Notes
 
 None.
 
+\
 

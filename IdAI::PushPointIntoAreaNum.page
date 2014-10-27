@@ -1,0 +1,11 @@
+[idAI](Src/game/ai/AI.cpp_%28source_file%29 "Src/game/ai/AI.cpp (source file)") ::PushPointIntoAreaNum
+------------------------------------------------------------------------------------------------------
+
+If the point is already in the specified area, it does nothing,
+otherwise it 'pushes' the point into the area by moving it along the
+surface normal of all the planes that make up the area. Imagine if an
+area were a box and the point were outside the bottom right side of the
+box, it would first push the point along the right normal so it would be
+below the box, then it would push the point along the bottom normal so
+it would be inside the box.
+

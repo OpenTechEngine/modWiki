@@ -1,23 +1,15 @@
----
-format: Markdown
-categories: console_command
-toc: yes
-title: Path
-...
-Path (console command)
-======================
-
 Description
 -----------
 
-This command will display the search path currently being used by the game to locate assets.
+This command will display the search path currently being used by the
+game to locate assets.
 
 Usage
 -----
 
 At the console type...
 
-`path`
+    path
 
 Parameters
 ----------
@@ -29,4 +21,5 @@ Notes
 
 None.
 
+\
 

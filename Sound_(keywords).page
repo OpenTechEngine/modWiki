@@ -1,59 +1,50 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: Sound_(keywords).page
-...
-Sound (keywords)
-================
-
 Sound shader keywords:
 
 Non-game Specific
 -----------------
 
--   [altSound](AltSound\_(Sound\_shader\_keyword))
--   [description](Description\_(Sound\_shader\_keyword))
--   [global](Global\_(Sound\_shader\_keyword))
--   [leadinVolume](LeadinVolume\_(Sound\_shader\_keyword))
--   [looping](Looping\_(Sound\_shader\_keyword))
--   [maxDistance](MaxDistance\_(Sound\_shader\_keyword))
--   [minDistance](MinDistance\_(Sound\_shader\_keyword))
--   [minSamples](MinSamples\_(Sound\_shader\_keyword))
--   [no\_dups](No\_dups\_(Sound\_shader\_keyword))
--   [no\_flicker](No\_flicker\_(Sound\_shader\_keyword))
--   [no\_occlusion](No\_occlusion\_(Sound\_shader\_keyword))
--   [omnidirectional](Omnidirectional\_(Sound\_shader\_keyword))
--   [private](Private\_(Sound\_shader\_keyword))
--   [shakes](Shakes\_(Sound\_shader\_keyword))
--   [soundClass](SoundClass\_(Sound\_shader\_keyword))
--   [unclamped](Unclamped\_(Sound\_shader\_keyword))
+-   [altSound](AltSound_%28Sound_shader_keyword%29 "AltSound (Sound shader keyword)")
+-   [description](Description_%28Sound_shader_keyword%29 "Description (Sound shader keyword)")
+-   [global](Global_%28Sound_shader_keyword%29 "Global (Sound shader keyword)")
+-   [leadinVolume](LeadinVolume_%28Sound_shader_keyword%29 "LeadinVolume (Sound shader keyword)")
+-   [looping](Looping_%28Sound_shader_keyword%29 "Looping (Sound shader keyword)")
+-   [maxDistance](MaxDistance_%28Sound_shader_keyword%29 "MaxDistance (Sound shader keyword)")
+-   [minDistance](MinDistance_%28Sound_shader_keyword%29 "MinDistance (Sound shader keyword)")
+-   [minSamples](MinSamples_%28Sound_shader_keyword%29 "MinSamples (Sound shader keyword)")
+-   [no\_dups](No_dups_%28Sound_shader_keyword%29 "No dups (Sound shader keyword)")
+-   [no\_flicker](No_flicker_%28Sound_shader_keyword%29 "No flicker (Sound shader keyword)")
+-   [no\_occlusion](No_occlusion_%28Sound_shader_keyword%29 "No occlusion (Sound shader keyword)")
+-   [omnidirectional](Omnidirectional_%28Sound_shader_keyword%29 "Omnidirectional (Sound shader keyword)")
+-   [private](Private_%28Sound_shader_keyword%29 "Private (Sound shader keyword)")
+-   [shakes](Shakes_%28Sound_shader_keyword%29 "Shakes (Sound shader keyword)")
+-   [soundClass](SoundClass_%28Sound_shader_keyword%29 "SoundClass (Sound shader keyword)")
+-   [unclamped](Unclamped_%28Sound_shader_keyword%29 "Unclamped (Sound shader keyword)")
 
 Doom 3 specific
 ---------------
 
--   [leadin](Leadin\_(Sound\_shader\_keyword))
--   [mask\_backleft](Mask\_backleft\_(Sound\_shader\_keyword))
--   [mask\_backright](Mask\_backright\_(Sound\_shader\_keyword))
--   [mask\_center](Mask\_center\_(Sound\_shader\_keyword))
--   [mask\_left](Mask\_left\_(Sound\_shader\_keyword))
--   [mask\_lfe](Mask\_lfe\_(Sound\_shader\_keyword))
--   [mask\_right](Mask\_right\_(Sound\_shader\_keyword))
--   [volume](Volume\_(Sound\_shader\_keyword))
+-   [leadin](Leadin_%28Sound_shader_keyword%29 "Leadin (Sound shader keyword)")
+-   [mask\_backleft](Mask_backleft_%28Sound_shader_keyword%29 "Mask backleft (Sound shader keyword)")
+-   [mask\_backright](Mask_backright_%28Sound_shader_keyword%29 "Mask backright (Sound shader keyword)")
+-   [mask\_center](Mask_center_%28Sound_shader_keyword%29 "Mask center (Sound shader keyword)")
+-   [mask\_left](Mask_left_%28Sound_shader_keyword%29 "Mask left (Sound shader keyword)")
+-   [mask\_lfe](Mask_lfe_%28Sound_shader_keyword%29 "Mask lfe (Sound shader keyword)")
+-   [mask\_right](Mask_right_%28Sound_shader_keyword%29 "Mask right (Sound shader keyword)")
+-   [volume](Volume_%28Sound_shader_keyword%29 "Volume (Sound shader keyword)")
 
 Quake 4 specific
 ----------------
 
--   antiPrivate
--   causeRumble
--   center
--   frequencyshift
--   frequentlyUsed
--   no\_shakes
--   noRandomStart
--   onDemand
--   playonce
--   [shakeData](ShakeData\_(Sound\_shader\_keyword))
--   voForPlayer
--   volumeDb
+-   [antiPrivate](AntiPrivate_%28Sound_shader_keyword%29 "AntiPrivate (Sound shader keyword)")
+-   [causeRumble](CauseRumble_%28Sound_shader_keyword%29 "CauseRumble (Sound shader keyword)")
+-   [center](Center_%28Sound_shader_keyword%29 "Center (Sound shader keyword)")
+-   [frequencyshift](Frequencyshift_%28Sound_shader_keyword%29 "Frequencyshift (Sound shader keyword)")
+-   [frequentlyUsed](FrequentlyUsed_%28Sound_shader_keyword%29 "FrequentlyUsed (Sound shader keyword)")
+-   [no\_shakes](No_shakes_%28Sound_shader_keyword%29 "No shakes (Sound shader keyword)")
+-   [noRandomStart](NoRandomStart_%28Sound_shader_keyword%29 "NoRandomStart (Sound shader keyword)")
+-   [onDemand](OnDemand_%28Sound_shader_keyword%29 "OnDemand (Sound shader keyword)")
+-   [playonce](Playonce_%28Sound_shader_keyword%29 "Playonce (Sound shader keyword)")
+-   [shakeData](ShakeData_%28Sound_shader_keyword%29 "ShakeData (Sound shader keyword)")
+-   [voForPlayer](VoForPlayer_%28Sound_shader_keyword%29 "VoForPlayer (Sound shader keyword)")
+-   [volumeDb](VolumeDb_%28Sound_shader_keywork%29 "VolumeDb (Sound shader keywork)")
 

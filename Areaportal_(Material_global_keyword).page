@@ -1,23 +1,15 @@
----
-format: Markdown
-categories: Material_global_keyword
-toc: yes
-title: Areaportal
-...
-Areaportal (Material global keyword)
-====================================
-
 Description
 -----------
 
-The areaportal global keyword makes the associated material function as a [visportal](Visportal).
+The areaportal global keyword makes the associated material function as
+a [visportal](Visportal "Visportal") .
 
 Usage
 -----
 
 In the global section of your material shader type...
 
-`areaportal`
+    areaportal
 
 Parameters
 ----------
@@ -27,6 +19,8 @@ None.
 Notes
 -----
 
-As there is already a visportal texture available, level designers should never need to use this option in their own materials.
+As there is already a visportal texture available, level designers
+should never need to use this option in their own materials.
 
+\
 

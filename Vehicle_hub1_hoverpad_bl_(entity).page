@@ -1,15 +1,24 @@
----
-format: Markdown
-categories: Entity
-toc: yes
-title: Vehicle_hub1_hoverpad_bl
-...
-Vehicle hub1 hoverpad bl (entity)
-=================================
+<div class="plainlinks"
+style="border: 1px grey solid; padding: 0.25em;">
 
-> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
+help by verifying and
+[completing](Vehicle_hub1_hoverpad_bl_%28entity%29 "http://modwiki.net/w/index.php?title=Vehicle_hub1_hoverpad_bl_%28entity%29&action=edit")
+the info on this page.*
 
-> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+</div>
+
+<div id="stub" class="boilerplate metadata">
+
+*This article is a
+[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
+. You can help us by <span class="plainlinks"> [expanding
+it](Vehicle_hub1_hoverpad_bl_%28entity%29 "http://modwiki.net/w/index.php?title=Vehicle_hub1_hoverpad_bl_%28entity%29&action=edit")
+</span> .*
+
+</div>
+
+\
 
 Description
 -----------
@@ -19,45 +28,46 @@ Description not available.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+The following is a list of key/value pairs, also known as spawn
+arguments, that function with this entity.\
 
-| KEY                | DESCRIPTION                |
-|--------------------|----------------------------|
-| dampen             | Description not available. |
-| fadetime           | Description not available. |
-| force              | Description not available. |
-| forceDownTime      | Description not available. |
-| forceRandom        | Description not available. |
-| forceTable         | Description not available. |
-| forceUpTime        | Description not available. |
-| freqShift          | Description not available. |
-| fx\_dust           | Description not available. |
-| fx\_dust\_concrete | Description not available. |
-| fx\_dust\_rock     | Description not available. |
-| height             | Description not available. |
-| inherit            | Description not available. |
-| maxRestAngle       | Description not available. |
-| maxs               | Description not available. |
-| mins               | Description not available. |
-| offset             | Description not available. |
-| snd\_loop          | Description not available. |
-| spawnclass         | Description not available. |
-| thrustForward      | Description not available. |
-| thrustLeft         | Description not available. |
-| volume             | Description not available. |
+  KEY                  DESCRIPTION
+  -------------------- ----------------------------
+  dampen               Description not available.
+  fadetime             Description not available.
+  force                Description not available.
+  forceDownTime        Description not available.
+  forceRandom          Description not available.
+  forceTable           Description not available.
+  forceUpTime          Description not available.
+  freqShift            Description not available.
+  fx\_dust             Description not available.
+  fx\_dust\_concrete   Description not available.
+  fx\_dust\_rock       Description not available.
+  height               Description not available.
+  inherit              Description not available.
+  maxRestAngle         Description not available.
+  maxs                 Description not available.
+  mins                 Description not available.
+  offset               Description not available.
+  snd\_loop            Description not available.
+  spawnclass           Description not available.
+  thrustForward        Description not available.
+  thrustLeft           Description not available.
+  volume               Description not available.
 
 Inheritance
 -----------
 
 This entity is derived from the following:
 
--   '' rvVehiclePart''
-    -   '' rvVehicleHoverpad''
-        -   [vehicle\_gev\_hoverpad](Vehicle\_gev\_hoverpad\_(entity))
-            -   [vehicle\_hub1\_hoverpad](Vehicle\_hub1\_hoverpad\_(entity))
-                -   *' vehicle\_hub1\_hoverpad\_bl*'
+-   *[rvVehiclePart](RvVehiclePart_%28class%29 "RvVehiclePart (class)")*
+    -   *[rvVehicleHoverpad](RvVehicleHoverpad_%28class%29 "RvVehicleHoverpad (class)")*
+        -   [vehicle\_gev\_hoverpad](Vehicle_gev_hoverpad_%28entity%29 "Vehicle gev hoverpad (entity)")
+            -   [vehicle\_hub1\_hoverpad](Vehicle_hub1_hoverpad_%28entity%29 "Vehicle hub1 hoverpad (entity)")
+                -   **vehicle\_hub1\_hoverpad\_bl**
 
-**Note**: Entries marked in italics are classes defined in the SDK.
+**Note** : Entries marked in italics are classes defined in the SDK.
 
 Notes
 -----

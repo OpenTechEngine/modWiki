@@ -1,11 +1,129 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: Prey.page
-...
-Prey
-====
+<div style="margin-top: -3em; margin-bottom: 1em; padding-top: 1px">
 
-![\#REDIRECT](skins_common_images_redirectltr.png "fig:#REDIRECT")<span class="redirectText">The Champions League</span>
+Welcome to ![](/images/d/d4/Preysquare_bg.png) modwiki.net
+
+We currently have [4,735](Special:Statistics "Special:Statistics")
+articles.
+
+</div>
+
++--------------------------------------+--------------------------------------+
+| <div                                 | <div                                 |
+| style="padding: .4em .9em .9em">     | style="padding: .4em .9em .9em;">    |
+|                                      |                                      |
+| ### Editing Categories:              | ### Featured Articles:               |
+|                                      |                                      |
+|  [Modding](Modding "Modding")        |  [How to get help](How_to_get_help " |
+| :   General information about        | How to get help")                    |
+|     producing and distributing mods  | :   A good introduction to the use   |
+|                                      |     of this wiki                     |
+|  [Coding](Coding "Coding")           |                                      |
+| :   Modification of the engine's     |  [Console](Console "Console")        |
+|     source code                      | :   Everything you need to know      |
+|                                      |     about the Doom 3 engine console  |
+|  [Mapping](Mapping "Mapping")        |     -   [CVars](CVars_%28Prey%29 "CV |
+| :   Information about level design   | ars (Prey)")                         |
+|     and the tools                    |     -   [Commands](Commands_%28Prey% |
+|                                      | 29 "Commands (Prey)")                |
+|  [Modelling](Modelling "Modelling")  |                                      |
+| :   Modelling and file format        | <!-- -->                             |
+|     information                      |                                      |
+|                                      |  [Script events](Script_events_%28Pr |
+|  [Texturing](Texturing "Texturing")  | ey%29 "Script events (Prey)")        |
+| :   Explanation of material shaders  | :   Prey relevant script events      |
+|     and image files                  |                                      |
+|                                      |  [Startup parameters](Startup_parame |
+|  [Scripting](Scripting "Scripting")  | ters "Startup parameters")           |
+| :   Information about Scripting for  | :   Parameters you can add when      |
+|     GUIs and Levels                  |     starting Prey                    |
+|                                      |                                      |
+|  [Declarations](Declarations "Declar |  [Folder structure](Folder_structure |
+| ations")                             | _%28Prey%29 "Folder structure (Prey) |
+| :   Declarations define the          | ")                                   |
+|     properties and behavior of game  | :   An overview over the folders     |
+|     content                          |     used by Prey                     |
+|                                      |                                      |
+|  [Audio design](Audio_design "Audio  |  [File formats](File_formats "File f |
+| design")                             | ormats")                             |
+| :   The creation of musical tracks   | :   All the different file formats   |
+|     and sound effects                |     used by the Doom 3 engine        |
+|                                      |                                      |
+| </div>                               |  [Tutorial list](Tutorial_list "Tuto |
+|                                      | rial list")                          |
+|                                      | :   An extensive list to tutorials   |
+|                                      |     on a wide range of topics        |
+|                                      |                                      |
+|                                      | </div>                               |
++--------------------------------------+--------------------------------------+
+
++--------------------------------------+--------------------------------------+
+| <div                                 | <div                                 |
+| style="padding: .4em .9em .9em">     | style="padding: .4em .9em .9em;">    |
+|                                      |                                      |
+| ### New to the site?                 | ### Prey game and engine:            |
+|                                      |                                      |
+| This wiki is focused on documenting  | Prey introduces new editors, cvars,  |
+| the various aspects involved with    | events, file formats, directories,   |
+| developing assets, levels and        | and the following functionality:     |
+| modifications based on the [id       |                                      |
+| Tech](Id_Tech "Id Tech") engines. If | -   Gravity manipulation             |
+| you're new to the site or a wiki in  | -   Physical portals                 |
+| general, please visit the            | -   Wall walking                     |
+| [about](modwiki:About "modwiki:About | -   Spirit mode                      |
+| ")                                   | -   Death walking                    |
+| page to learn more about this        | -   Alternate Weapons Fire           |
+| project.                             | -   Pseudo Glossness                 |
+|                                      |                                      |
+| ### Want to help?                    | Prey was developed by [Human         |
+|                                      | Head](http://www.humanhead.com/ "htt |
+| As modwiki is a community project,   | p://www.humanhead.com")              |
+| feel free to                         | , produced by                        |
+| [register](Special:Userlogin "Specia | [3DRealms](https://web.archive.org/w |
+| l:Userlogin")                        | eb/20110902152250/http://www.3drealm |
+| and join us on this great endeavor!  | s.com/ "http://www.3drealms.com")    |
+| Please check out the [style          | , and published by [2K               |
+| guide](modwiki:Style_guide "modwiki: | Games](https://web.archive.org/web/2 |
+| Style guide")                        | 0110902152250/http://www.2kgames.com |
+| for some general editing guidelines. | / "http://www.2kgames.com")          |
+| Visit [open                          | . Release date for the PC version    |
+| tasks](modwiki:Open_tasks "modwiki:O | was July 11, 2006.                   |
+| pen tasks")                          |                                      |
+| to find out which pages need help.   | ### System Requirements:             |
+| You can also visit the               |                                      |
+| [sandbox](modwiki:Sandbox "modwiki:S | -   Operating System: Windows        |
+| andbox")                             |     2000/XP, Mac OSX, Linux          |
+| to experiment with the wiki markup   | -   CPU: Pentium 4 2.0 or Athlon XP  |
+| language. To learn how to edit or    |     2000+                            |
+| create pages, please take a look     | -   Memory: 512MB                    |
+| [here](Help:Editing "Help:Editing")  | -   Storage: 2.2GB                   |
+| .                                    | -   Sound: 100% DirectX 9.0c         |
+|                                      |     Compliant / 16-bit               |
+| But most importantly, if you gain    | -   Video: 100% DirectX 9.0c         |
+| something from this resource, please |     Compliant / 64MB RAM             |
+| give back.                           |                                      |
+|                                      | </div>                               |
+| ### High quality links:              |                                      |
+|                                      |                                      |
+| Other interesting id Tech engine     |                                      |
+| editing sites:                       |                                      |
+|                                      |                                      |
+|  [www.doom3world.org](https://web.ar |                                      |
+| chive.org/web/20110902152250/http:// |                                      |
+| www.doom3world.org/ "http://www.doom |                                      |
+| 3world.org")                         |                                      |
+| :   The premier discussion forum for |                                      |
+|     all Doom 3 engine games          |                                      |
+|                                      |                                      |
+|  [www.3drealms.com/prey/wiki](https: |                                      |
+| //web.archive.org/web/20110902152250 |                                      |
+| /http://www.3drealms.com/prey/wiki/  |                                      |
+| "http://www.3drealms.com/prey/wiki/" |                                      |
+| )                                    |                                      |
+| :   The official wiki for Prey       |                                      |
+|     editing info                     |                                      |
+|                                      |                                      |
+| </div>                               |                                      |
++--------------------------------------+--------------------------------------+
+
+\
 

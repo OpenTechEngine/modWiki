@@ -1,30 +1,29 @@
----
-format: Markdown
-categories: GUI_item_property
-toc: yes
-title: Shear
-...
-Shear (GUI item property)
-=========================
-
-The vertical and horizontal shear value of the item. Shear is similar to skewing, and parameters are defined for vertical and horizontal offsetting. A value of "0, -1" in a [windowDef](WindowDef\_(GUI\_item\_type)) with text, for example, would be similar to oblique (or 'fake italic') text.
+The vertical and horizontal shear value of the item. Shear is similar to
+skewing, and parameters are defined for vertical and horizontal
+offsetting. A value of "0, -1" in a
+[windowDef](WindowDef_%28GUI_item_type%29 "WindowDef (GUI item type)")
+with text, for example, would be similar to oblique (or 'fake italic')
+text.
 
 The value of this property cannot be changed at runtime.
 
 Syntax
 ------
 
-`hear `*`vshear`*`, `*`hshear`*
+    hear vshear, hshear
 
 Default value
 -------------
 
-`0, 0`
+    0, 0
 
 Example(s)
 ----------
 
-`shear 0, 1`
-`shear 0.2, -0.33`
+    shear 0, 1
+    shear 0.2, -0.33
 
+\
+
+\
 

@@ -1,16 +1,10 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: WaitFor
-...
-WaitFor (script event)
-======================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type [idThread](Thread\_(scripting)), accessible via [sys](Scripting\_basics#sys) identifier.
+This event operates on an instance of the [game
+class](Game_class "Game class") type
+[idThread](Thread_%28scripting%29 "Thread (scripting)") , accessible via
+[sys](Scripting_basics#sys "Scripting basics") identifier.
 
 Description
 -----------
@@ -20,34 +14,50 @@ Waits for entity to complete it's move.
 Usage
 -----
 
-*[void](Data\_types#void)* waitFor( *[entity](Data\_types#entity)* **mover** )
+*[void](Data_types#void "Data types")* waitFor(
+*[entity](Data_types#entity "Data types")* **mover** )
 
 Parameters
 ----------
 
 [mover] - entity to wait for.
 
-Parameter only supports entities of following [spawn classes](Spawn\_class):
+Parameter only supports entities of following [spawn
+classes](Spawn_class "Spawn class") :
 
-![](/images/images_2_23_D3square_25.png) Doom 3: idCameraAnim, idMover, idMover\_Binary.
+![](/images/2/23/D3square_25.png) Doom 3:
+[idCameraAnim](IdCameraAnim_%28class%29 "IdCameraAnim (class)") ,
+[idMover](IdMover_%28class%29 "IdMover (class)") ,
+[idMover\_Binary](IdMover_Binary_%28class%29 "IdMover Binary (class)") .
 
-![](/images/images_e_e8_Q4square_25.png) Quake 4: idCameraAnim, idMover, idMover\_Binary, rvSplineMover
+![](/images/e/e8/Q4square_25.png) Quake 4:
+[idCameraAnim](IdCameraAnim_%28class%29 "IdCameraAnim (class)") ,
+[idMover](IdMover_%28class%29 "IdMover (class)") ,
+[idMover\_Binary](IdMover_Binary_%28class%29 "IdMover Binary (class)") ,
+[rvSplineMover](RvSplineMover_%28class%29 "RvSplineMover (class)")
 
 Examples
 --------
 
-<font color="#000055">`$mymover`</font>`.`<font color="#ff0000">`move`</font><font color="#000000">`(`</font>` UP, `<font color="#0000dd">`100`</font><font color="#000000">`)`</font>`;`
-` `
-<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`waitFor`</font><font color="#000000">`(`</font>` `<font color="#000055">`$mymover`</font>` `<font color="#000000">`)`</font>`;`
-` `
-<font color="#000055">`$mymover`</font>`.`<font color="#ff0000">`move`</font><font color="#000000">`(`</font>` DOWN, `<font color="#0000dd">`100`</font><font color="#000000">`)`</font>`;`
+    $mymover.move( UP, 100);
+     
+    sys.waitFor( $mymover );
+     
+    $mymover.move( DOWN, 100);
 
 Notes
 -----
 
-![](/images/images_7_7e_Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
- ~  *(This event does not apply)*
+<div>
 
-See [threads](Thread\_(scripting)) for more information.
+![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake
+Wars only:
+*(This event does not apply)*
 
+</div>
+
+See [threads](Thread_%28scripting%29 "Thread (scripting)") for more
+information.
+
+\
 

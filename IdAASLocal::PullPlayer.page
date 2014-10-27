@@ -1,0 +1,128 @@
+\
+ PullPlayer is located in AAS\_debug with many other aas debugging
+utility methods. It is used to pull the player along a walk path to a
+goal area. Usage: "aas\_pullPlayer 30" I am personally very interested
+in this method because it shows how some low level code can directly
+manipulate the player (like bot code could)
+
+     
+    /*
+    ============
+    idAASLocal::PullPlayer
+    ============
+    */
+    bool idAASLocal::PullPlayer( const idVec3 &origin, int toAreaNum ) const {
+        int areaNum;
+        idVec3 areaCenter, dir, vel;
+        idAngles delta;
+        aasPath_t path;
+        idPlayer *player;
+     
+
+areaNum will represent the area origin is in. areaCenter is the center
+location of the goal area. dir and vel are used to get us there.
+
+delta is the idAngles stuff ;) the idAngles stuff is interesting.
+
+A bunch of guard clauses follow.
+
+     
+     
+    player = gameLocal.GetLocalPlayer();
+    if ( !player ) {
+        return true;
+    }
+     
+    idPhysics *physics = player->GetPhysics();
+    if ( !physics ) {
+        return true;
+    }
+     
+    if ( !toAreaNum ) {
+        return false;
+    }
+     
+    areaNum = PointReachableAreaNum( origin, DefaultSearchBounds(), (AREA_REACHABLE_WALK|AREA_REACHABLE_FLY) );
+    areaCenter = AreaCenter( toAreaNum );
+    if ( player->GetPhysics()->GetAbsBounds().Expand( 8 ).ContainsPoint( areaCenter ) ) {
+        return false;
+    }
+
+We need a player to PullPlayer. The Player needs a physics for us to
+pull him. If the toAreaNum passed in isn’t valid, we can’t pull him
+there. Finally, if we are already to the center of the toAreaNum area we
+can’t be pulled there.
+
+     
+    if ( WalkPathToGoal( path, areaNum, origin, toAreaNum, areaCenter, TFL_WALK|TFL_AIR ) ) {
+
+[WalkPathToGoal](IdAASLocal::WalkPathToGoal "IdAASLocal::WalkPathToGoal")
+creates a walk path towards the goal area. in other words, path is
+passed into WalkPathToGoal by reference and set up inside if there is a
+path.
+
+So, if there is a path to the goal, we start to pull the player along
+that path.
+
+     
+    dir = path.moveGoal - origin;
+    dir[2] *= 0.5f;
+    dir.Normalize();
+
+Set dir to the vector representing the direction and distance to the
+moveGoal. I think the z axis is scaled in half to pull the view towards
+the center. dir would be considered our desired velocity now.
+
+this is where the code kinda forks from my books. In my [Programming
+Game AI by
+Example](Programming_Game_AI_by_Example "Programming Game AI by Example")
+Mat next subtracts the desired velocity calculated above from the
+current velocity to calculate the force required to steer the entity.
+but instead...
+
+     
+    delta = dir.ToAngles() - player->cmdAngles - player->GetDeltaViewAngles();
+    delta.Normalize180();
+    player->SetDeltaViewAngles( player->GetDeltaViewAngles() + delta * 0.1f );
+
+dir.ToAngles returns an idAngles that would be looking toward our
+desired moveGoal. Anyone know of a good link that talks about Euler
+angle and vector conversion? anyway, subtract the cmdAngles, which
+represent the angles the engine is telling us the player wants to look,
+and the deltaViewAngles, which is any outside influencers on our view,
+and you get the total difference between where we are looking and where
+we want to look. this is delta.
+
+delta is than Normalize180'ed. This is to make sure that our delta
+values are kept within the range of -180 to 180.
+
+anyway again, finally the DeltaViewAngles are reset to be the sum of the
+original deltaViewAngles and the delta we have calculated to the desired
+position, scaled to .1 so that the change isn't choppy.
+
+next:
+
+     
+    dir[2] = 0.0f;
+    dir.Normalize();
+    dir *= 100.0f;
+
+we set up the dir vector to have no z angle, in other words, don't look
+up or down, and normalize it, then scale it out 100 units. we are
+setting it up to represent our linear velocity. The normalized dir
+represented our direction, the number we scale it by (in this case 100)
+represents our speed. (i think, lol)
+
+     
+    vel = physics->GetLinearVelocity();
+    dir[2] = vel[2];
+    physics->SetLinearVelocity( dir );
+    return true;
+
+\
+ so in this method to automatically manipulate the player through code
+we do two things, we change the DeltaViewAngles and set the linear
+velocity of the player.
+
+good stuff
+

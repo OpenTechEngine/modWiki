@@ -1,21 +1,14 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: SetConstraintPosition
-...
-SetConstraintPosition (script event)
-====================================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Moves the constraint with the given name that binds this entity to another entity.
+Moves the constraint with the given name that binds this entity to
+another entity.
 
 Usage
 -----
@@ -30,11 +23,12 @@ Parameters
 Examples
 --------
 
-` none`
+     none
 
 Notes
 -----
 
 tba
 
+\
 

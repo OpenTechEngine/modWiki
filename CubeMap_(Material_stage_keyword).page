@@ -1,42 +1,41 @@
----
-format: Markdown
-categories: Material_stage_keyword
-toc: yes
-title: CubeMap
-...
-CubeMap (Material stage keyword)
-================================
-
 Description
 -----------
 
-The **cubeMap** keyword is used instead of a **map** keyword to specify that the associated stage should render a [cube map](Cube\_maps) rather than an ordinary image. Typically a cube map stage would be blended into a material to present the appearance of environmental reflection.
+The **cubeMap** keyword is used instead of a **map** keyword to specify
+that the associated stage should render a [cube
+map](Cube_maps "Cube maps") rather than an ordinary image. Typically a
+cube map stage would be blended into a material to present the
+appearance of environmental reflection.
 
 Usage
 -----
 
-`cubeMap env/name_without_prefix`
+    cubeMap env/name_without_prefix
 
 Parameters
 ----------
 
-The path to the cube map images should be given, including the name up to but not including the directional suffixes (\_py, \_ny, \_nx etc)
+The path to the cube map images should be given, including the name up
+to but not including the directional suffixes (\_py, \_ny, \_nx etc)
 
 Example
 -------
 
-The following stage blends the env/gen2 environment map onto a material with an alpha value of 0.1.
+The following stage blends the env/gen2 environment map onto a material
+with an alpha value of 0.1.
 
-`{`
-`   blend blend`
-`   cubeMap env/gen2`
-`   alpha 0.1`
-`   texgen reflect`
-`}`
+    {
+       blend blend
+       cubeMap env/gen2
+       alpha 0.1
+       texgen reflect
+    }
 
 Notes
 -----
 
-This keyword expects the six environment map images to use the filename suffixes \_px, \_py, \_pz, \_nx, \_ny, and \_nz.
+This keyword expects the six environment map images to use the filename
+suffixes \_px, \_py, \_pz, \_nx, \_ny, and \_nz.
 
+\
 

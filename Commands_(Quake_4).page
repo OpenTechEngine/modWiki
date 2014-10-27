@@ -1,415 +1,1377 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: Commands_(Quake_4).page
-...
-Commands (Quake 4)
-==================
+<div align="left"
+style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
 
-<div style="padding: 1px; border: 0px solid #000000" align="left">
-<font size="18px"><font color="black">![](/images/images_6_69_Q4square_bg.png) The information on this page is specific to [Quake 4](Quake\_4).</font></font>
+![](/images/6/69/Q4square_bg.png) The information on this page is
+specific to [Quake 4](Quake_4 "Quake 4") .
 
 </div>
 
 ------------------------------------------------------------------------
 
-Existing [Commands](Console) as of version 1.0.4.0 Build 2147 (patched version)
-
-|-------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                 
- Contents                                                                                                                             
- --------                                                                                                                             
-                                                                                                                                      
- </div>                                                                                                                               
- -   [<span class="tocnumber">1</span> <span class="toctext">Game commands</span>](Commands\_(Quake\_4)#Game\_commands)          
- -   [<span class="tocnumber">2</span> <span class="toctext">Renderer commands</span>](Commands\_(Quake\_4)#Renderer\_commands)  
- -   [<span class="tocnumber">3</span> <span class="toctext">Sound commands</span>](Commands\_(Quake\_4)#Sound\_commands)        
- -   [<span class="tocnumber">4</span> <span class="toctext">System commands</span>](Commands\_(Quake\_4)#System\_commands)      
- -   [<span class="tocnumber">5</span> <span class="toctext">Tool commands</span>](Commands\_(Quake\_4)#Tool\_commands)          |
+Existing [Commands](Console "Console") as of version 1.0.4.0 Build 2147
+(patched version)
 
 Game commands
 -------------
 
-|------------------------------------------------------------------|---------------------------------------------------------------|
-| [aasStats](AasStats\_(console\_command))                     | ... This command displays AAS file statistics in the console. |
-| [addarrow](Addarrow\_(console\_command))                     | ... adds a debug arrow                                        |
-| addChatLine                                                      | ... internal use (core to game chat lines)                    |
-| addIcon                                                          |                                                               |
-| addline                                                          | ... adds a debug line                                         |
-| ai\_debugFilter                                                  |                                                               |
-| apState                                                          |                                                               |
-| bindRagdoll                                                      | ... binds ragdoll at the current drag position                |
-| blinkline                                                        | ... blinks a debug line                                       |
-| call                                                             |                                                               |
-| centerview                                                       | ... centers the player view                                   |
-| checkSave                                                        |                                                               |
-| clearLights                                                      | ... removes all lights                                        |
-| clientCallVote                                                   |                                                               |
-| clientMessageMode                                                | ... ingame gui message mode                                   |
-| clientVoiceChat                                                  | ... voice chats: clientVoiceChat                              |
-| clientVoiceChatTeam                                              | ... team voice chats: clientVoiceChat                         |
-| clientvoicemute                                                  |                                                               |
-| clientvoiceunmute                                                |                                                               |
-| clientVote                                                       |                                                               |
-| collisionModelInfo                                               | ... shows collision model info                                |
-| [damage](Damage\_(console\_command))                         | ... apply damage to an entity                                 |
-| deleteSelected                                                   | ... deletes selected entity                                   |
-| disasmScript                                                     | ... disassembles script                                       |
-| emote                                                            |                                                               |
-| evaluateMPPerformance                                            |                                                               |
-| [exportmodels](Exportmodels\_(console\_command))             | ... exports models                                            |
-| extract\_tactical                                                |                                                               |
-| fadeSound                                                        |                                                               |
-| flashlight                                                       |                                                               |
-| forceTeamChange                                                  |                                                               |
-| game\_memory                                                     | ... displays game class info                                  |
-| gameError                                                        | ... causes a game error                                       |
-| gameKick                                                         | ... same as kick, but recognizes player names                 |
-| getviewpos                                                       | ... prints the current view position                          |
-| give                                                             | ... gives one or more items                                   |
-| god                                                              | ... enables god mode (makes you invulnerable)                 |
-| jump                                                             |                                                               |
-| keepTestModel                                                    | ... keeps the last test model in the game                     |
-| kill                                                             | ... kills the player                                          |
-| killMessage                                                      |                                                               |
-| killMonsters                                                     | ... removes all monsters                                      |
-| killMoveables                                                    | ... removes all moveables                                     |
-| killRagdolls                                                     | ... removes all ragdolls                                      |
-| killVehicles                                                     |                                                               |
-| [listActiveEntities](ListActiveEntities\_(console\_command)) | ... lists active game entities                                |
-| listAnims                                                        | ... lists all animations                                      |
-| listClasses                                                      | ... lists game classes                                        |
-| listCollisionModels                                              | ... lists collision models                                    |
-| [listEntities](ListEntities\_(console\_command))             | ... lists game entities                                       |
-| listEntityStats                                                  |                                                               |
-| listInstances                                                    |                                                               |
-| listLines                                                        | ... lists all debug lines                                     |
-| listMapEntities                                                  |                                                               |
-| listModelDefs                                                    | ... lists model defs                                          |
-| listMonsters                                                     | ... lists monsters                                            |
-| [listSpawnArgs](ListSpawnArgs\_(console\_command))           | ... list the spawn args of an entity                          |
-| listSpawnIds                                                     |                                                               |
-| listThreads                                                      | ... lists script threads                                      |
-| nextAnim                                                         | ... shows next animation on test model                        |
-| nextFrame                                                        | ... shows next animation frame on test model                  |
-| nextGUI                                                          | ... teleport the player to the next func\_static with a gui   |
-| nextjumppoint                                                    |                                                               |
-| noclip                                                           | ... disables collision detection for the player               |
-| notarget                                                         | ... disables the player as a target                           |
-| playerModel                                                      | ... sets the given model on the player                        |
-| popLight                                                         | ... removes the last created light                            |
-| prevAnim                                                         | ... shows previous animation on test model                    |
-| prevFrame                                                        | ... shows previous animation frame on test model              |
-| prevjumppoint                                                    |                                                               |
-| printModelDefs                                                   | ... prints a model def                                        |
-| reexportmodels                                                   | ... reexports models                                          |
-| reloadanims                                                      | ... reloads animations                                        |
-| reloadScript                                                     | ... reloads scripts                                           |
-| [remove](Remove\_(console\_command))                         | ... removes an entity                                         |
-| removeClientFromBanList                                          |                                                               |
-| removeline                                                       | ... removes a debug line                                      |
-| saveLights                                                       | ... saves all lights to the .map file                         |
-| saveMoveables                                                    | ... save all moveables to the .map file                       |
-| saveParticles                                                    | ... saves all lights to the .map file (???)                   |
-| [saveRagdolls](SaveRagdolls\_(console\_command))             | ... save all ragdoll poses to the .map file                   |
-| saveSelected                                                     | ... saves the selected entity to the .map file                |
-| say                                                              | ... text chat                                                 |
-| sayTeam                                                          | ... team text chat                                            |
-| [script](Script\_(console\_command))                         | ... executes a line of script                                 |
-| serverForceReady                                                 | ... force all players ready                                   |
-| serverMapRestart                                                 | ... restart the current game                                  |
-| serverNextMap                                                    | ... change to the next map                                    |
-| setInstance                                                      |                                                               |
-| setPlayerGravity                                                 |                                                               |
-| setPMconsole commands                                            |                                                               |
-| setviewpos                                                       | ... sets the current view position                            |
-| [spawn](Spawn\_(console\_command))                           | ... spawns a game entity                                      |
-| teleport                                                         | ... teleports the player to an entity location                |
-| testAnim                                                         | ... tests an animation                                        |
-| testBlend                                                        | ... tests animation blending                                  |
-| testDamage                                                       | ... tests a damage def                                        |
-| testDeath                                                        | ... tests death                                               |
-| testid                                                           | ... output the string for the specified id.                   |
-| testLight                                                        | ... tests a light                                             |
-| [testModel](TestModel\_(console\_command))                   | ... tests a model                                             |
-| testParticleStopTime                                             | ... tests particle stop time on a test model                  |
-| testPointLight                                                   | ... tests a point light                                       |
-| testSave                                                         | ... writes out a test savegame                                |
-| testShaderParm                                                   | ... sets a shaderParm on an existing testModel                |
-| testSkin                                                         | ... tests a skin on an existing testModel                     |
-| [trigger](Trigger\_(console\_command))                       | ... triggers an entity                                        |
-| unbindRagdoll                                                    | ... unbinds the selected ragdoll                              |
-| undying                                                          |                                                               |
-| verifyServerSettings                                             |                                                               |
-| weaponSplat                                                      | ... projects a blood splat on the player weapon               |
-| where                                                            | ... prints the current view position                          |
+  ------------------------------------ ------------------------------------
+  [aasStats](AasStats_%28console_comma ... This command displays AAS file
+  nd%29 "AasStats (console command)")  statistics in the console.
+
+  [addarrow](Addarrow_%28console_comma ... adds a debug arrow
+  nd%29 "Addarrow (console command)")  
+
+  [addChatLine](AddChatLine_%28console ... internal use (core to game chat
+  _command%29 "AddChatLine (console co lines)
+  mmand)")                             
+
+  [addIcon](AddIcon_%28console_command 
+  %29 "AddIcon (console command)")     
+
+  [addline](Addline_%28console_command ... adds a debug line
+  %29 "Addline (console command)")     
+
+  [ai\_debugFilter](Ai_debugFilter_%28 
+  console_command%29 "Ai debugFilter ( 
+  console command)")                   
+
+  [apState](ApState_%28console_command 
+  %29 "ApState (console command)")     
+
+  [bindRagdoll](BindRagdoll_%28console ... binds ragdoll at the current
+  _command%29 "BindRagdoll (console co drag position
+  mmand)")                             
+
+  [blinkline](Blinkline_%28console_com ... blinks a debug line
+  mand%29 "Blinkline (console command) 
+  ")                                   
+
+  [call](Call_%28console_command%29 "C 
+  all (console command)")              
+
+  [centerview](Centerview_%28console_c ... centers the player view
+  ommand%29 "Centerview (console comma 
+  nd)")                                
+
+  [checkSave](CheckSave_%28console_com 
+  mand%29 "CheckSave (console command) 
+  ")                                   
+
+  [clearLights](ClearLights_%28console ... removes all lights
+  _command%29 "ClearLights (console co 
+  mmand)")                             
+
+  [clientCallVote](ClientCallVote_%28c 
+  onsole_command%29 "ClientCallVote (c 
+  onsole command)")                    
+
+  [clientMessageMode](ClientMessageMod ... ingame gui message mode
+  e_%28console_command%29 "ClientMessa 
+  geMode (console command)")           
+
+  [clientVoiceChat](ClientVoiceChat_%2 ... voice chats: clientVoiceChat
+  8console_command%29 "ClientVoiceChat 
+   (console command)")                 
+
+  [clientVoiceChatTeam](ClientVoiceCha ... team voice chats:
+  tTeam_%28console_command%29 "ClientV clientVoiceChat
+  oiceChatTeam (console command)")     
+
+  [clientvoicemute](Clientvoicemute_%2 
+  8console_command%29 "Clientvoicemute 
+   (console command)")                 
+
+  [clientvoiceunmute](Clientvoiceunmut 
+  e_%28console_command%29 "Clientvoice 
+  unmute (console command)")           
+
+  [clientVote](ClientVote_%28console_c 
+  ommand%29 "ClientVote (console comma 
+  nd)")                                
+
+  [collisionModelInfo](CollisionModelI ... shows collision model info
+  nfo_%28console_command%29 "Collision 
+  ModelInfo (console command)")        
+
+  [damage](Damage_%28console_command%2 ... apply damage to an entity
+  9 "Damage (console command)")        
+
+  [deleteSelected](DeleteSelected_%28c ... deletes selected entity
+  onsole_command%29 "DeleteSelected (c 
+  onsole command)")                    
+
+  [disasmScript](DisasmScript_%28conso ... disassembles script
+  le_command%29 "DisasmScript (console 
+   command)")                          
+
+  [emote](Emote_%28console_command%29  
+  "Emote (console command)")           
+
+  [evaluateMPPerformance](EvaluateMPPe 
+  rformance_%28console_command%29 "Eva 
+  luateMPPerformance (console command) 
+  ")                                   
+
+  [exportmodels](Exportmodels_%28conso ... exports models
+  le_command%29 "Exportmodels (console 
+   command)")                          
+
+  [extract\_tactical](Extract_tactical 
+  _%28console_command%29 "Extract tact 
+  ical (console command)")             
+
+  [fadeSound](FadeSound_%28console_com 
+  mand%29 "FadeSound (console command) 
+  ")                                   
+
+  [flashlight](Flashlight_%28console_c 
+  ommand%29 "Flashlight (console comma 
+  nd)")                                
+
+  [forceTeamChange](ForceTeamChange_%2 
+  8console_command%29 "ForceTeamChange 
+   (console command)")                 
+
+  [game\_memory](Game_memory_%28consol ... displays game class info
+  e_command%29 "Game memory (console c 
+  ommand)")                            
+
+  [gameError](GameError_%28console_com ... causes a game error
+  mand%29 "GameError (console command) 
+  ")                                   
+
+  [gameKick](GameKick_%28console_comma ... same as kick, but recognizes
+  nd%29 "GameKick (console command)")  player names
+
+  [getviewpos](Getviewpos_%28console_c ... prints the current view position
+  ommand%29 "Getviewpos (console comma 
+  nd)")                                
+
+  [give](Give_%28console_command%29 "G ... gives one or more items
+  ive (console command)")              
+
+  [god](God_%28console_command%29 "God ... enables god mode (makes you
+   (console command)")                 invulnerable)
+
+  [jump](Jump_%28console_command%29 "J 
+  ump (console command)")              
+
+  [keepTestModel](KeepTestModel_%28con ... keeps the last test model in the
+  sole_command%29 "KeepTestModel (cons game
+  ole command)")                       
+
+  [kill](Kill_%28console_command%29 "K ... kills the player
+  ill (console command)")              
+
+  [killMessage](KillMessage_%28console 
+  _command%29 "KillMessage (console co 
+  mmand)")                             
+
+  [killMonsters](KillMonsters_%28conso ... removes all monsters
+  le_command%29 "KillMonsters (console 
+   command)")                          
+
+  [killMoveables](KillMoveables_%28con ... removes all moveables
+  sole_command%29 "KillMoveables (cons 
+  ole command)")                       
+
+  [killRagdolls](KillRagdolls_%28conso ... removes all ragdolls
+  le_command%29 "KillRagdolls (console 
+   command)")                          
+
+  [killVehicles](KillVehicles_%28conso 
+  le_command%29 "KillVehicles (console 
+   command)")                          
+
+  [listActiveEntities](ListActiveEntit ... lists active game entities
+  ies_%28console_command%29 "ListActiv 
+  eEntities (console command)")        
+
+  [listAnims](ListAnims_%28console_com ... lists all animations
+  mand%29 "ListAnims (console command) 
+  ")                                   
+
+  [listClasses](ListClasses_%28console ... lists game classes
+  _command%29 "ListClasses (console co 
+  mmand)")                             
+
+  [listCollisionModels](ListCollisionM ... lists collision models
+  odels_%28console_command%29 "ListCol 
+  lisionModels (console command)")     
+
+  [listEntities](ListEntities_%28conso ... lists game entities
+  le_command%29 "ListEntities (console 
+   command)")                          
+
+  [listEntityStats](ListEntityStats_%2 
+  8console_command%29 "ListEntityStats 
+   (console command)")                 
+
+  [listInstances](ListInstances_%28con 
+  sole_command%29 "ListInstances (cons 
+  ole command)")                       
+
+  [listLines](ListLines_%28console_com ... lists all debug lines
+  mand%29 "ListLines (console command) 
+  ")                                   
+
+  [listMapEntities](ListMapEntities_%2 
+  8console_command%29 "ListMapEntities 
+   (console command)")                 
+
+  [listModelDefs](ListModelDefs_%28con ... lists model defs
+  sole_command%29 "ListModelDefs (cons 
+  ole command)")                       
+
+  [listMonsters](ListMonsters_%28conso ... lists monsters
+  le_command%29 "ListMonsters (console 
+   command)")                          
+
+  [listSpawnArgs](ListSpawnArgs_%28con ... list the spawn args of an entity
+  sole_command%29 "ListSpawnArgs (cons 
+  ole command)")                       
+
+  [listSpawnIds](ListSpawnIds_%28conso 
+  le_command%29 "ListSpawnIds (console 
+   command)")                          
+
+  [listThreads](ListThreads_%28console ... lists script threads
+  _command%29 "ListThreads (console co 
+  mmand)")                             
+
+  [nextAnim](NextAnim_%28console_comma ... shows next animation on test
+  nd%29 "NextAnim (console command)")  model
+
+  [nextFrame](NextFrame_%28console_com ... shows next animation frame on
+  mand%29 "NextFrame (console command) test model
+  ")                                   
+
+  [nextGUI](NextGUI_%28console_command ... teleport the player to the next
+  %29 "NextGUI (console command)")     func\_static with a gui
+
+  [nextjumppoint](Nextjumppoint_%28con 
+  sole_command%29 "Nextjumppoint (cons 
+  ole command)")                       
+
+  [noclip](Noclip_%28console_command%2 ... disables collision detection for
+  9 "Noclip (console command)")        the player
+
+  [notarget](Notarget_%28console_comma ... disables the player as a target
+  nd%29 "Notarget (console command)")  
+
+  [playerModel](PlayerModel_%28console ... sets the given model on the
+  _command%29 "PlayerModel (console co player
+  mmand)")                             
+
+  [popLight](PopLight_%28console_comma ... removes the last created light
+  nd%29 "PopLight (console command)")  
+
+  [prevAnim](PrevAnim_%28console_comma ... shows previous animation on test
+  nd%29 "PrevAnim (console command)")  model
+
+  [prevFrame](PrevFrame_%28console_com ... shows previous animation frame
+  mand%29 "PrevFrame (console command) on test model
+  ")                                   
+
+  [prevjumppoint](Prevjumppoint_%28con 
+  sole_command%29 "Prevjumppoint (cons 
+  ole command)")                       
+
+  [printModelDefs](PrintModelDefs_%28c ... prints a model def
+  onsole_command%29 "PrintModelDefs (c 
+  onsole command)")                    
+
+  [reexportmodels](Reexportmodels_%28c ... reexports models
+  onsole_command%29 "Reexportmodels (c 
+  onsole command)")                    
+
+  [reloadanims](Reloadanims_%28console ... reloads animations
+  _command%29 "Reloadanims (console co 
+  mmand)")                             
+
+  [reloadScript](ReloadScript_%28conso ... reloads scripts
+  le_command%29 "ReloadScript (console 
+   command)")                          
+
+  [remove](Remove_%28console_command%2 ... removes an entity
+  9 "Remove (console command)")        
+
+  [removeClientFromBanList](RemoveClie 
+  ntFromBanList_%28console_command%29  
+  "RemoveClientFromBanList (console co 
+  mmand)")                             
+
+  [removeline](Removeline_%28console_c ... removes a debug line
+  ommand%29 "Removeline (console comma 
+  nd)")                                
+
+  [saveLights](SaveLights_%28console_c ... saves all lights to the .map
+  ommand%29 "SaveLights (console comma file
+  nd)")                                
+
+  [saveMoveables](SaveMoveables_%28con ... save all moveables to the .map
+  sole_command%29 "SaveMoveables (cons file
+  ole command)")                       
+
+  [saveParticles](SaveParticles_%28con ... saves all lights to the .map
+  sole_command%29 "SaveParticles (cons file (???)
+  ole command)")                       
+
+  [saveRagdolls](SaveRagdolls_%28conso ... save all ragdoll poses to the
+  le_command%29 "SaveRagdolls (console .map file
+   command)")                          
+
+  [saveSelected](SaveSelected_%28conso ... saves the selected entity to the
+  le_command%29 "SaveSelected (console .map file
+   command)")                          
+
+  [say](Say_%28console_command%29 "Say ... text chat
+   (console command)")                 
+
+  [sayTeam](SayTeam_%28console_command ... team text chat
+  %29 "SayTeam (console command)")     
+
+  [script](Script_%28console_command%2 ... executes a line of script
+  9 "Script (console command)")        
+
+  [serverForceReady](ServerForceReady_ ... force all players ready
+  %28console_command%29 "ServerForceRe 
+  ady (console command)")              
+
+  [serverMapRestart](ServerMapRestart_ ... restart the current game
+  %28console_command%29 "ServerMapRest 
+  art (console command)")              
+
+  [serverNextMap](ServerNextMap_%28con ... change to the next map
+  sole_command%29 "ServerNextMap (cons 
+  ole command)")                       
+
+  [setInstance](SetInstance_%28console 
+  _command%29 "SetInstance (console co 
+  mmand)")                             
+
+  [setPlayerGravity](SetPlayerGravity_ 
+  %28console_command%29 "SetPlayerGrav 
+  ity (console command)")              
+
+  [setPMconsole                        
+  commands](SetPMconsole_commands_%28c 
+  onsole_command%29 "SetPMconsole comm 
+  ands (console command)")             
+
+  [setviewpos](Setviewpos_%28console_c ... sets the current view position
+  ommand%29 "Setviewpos (console comma 
+  nd)")                                
+
+  [spawn](Spawn_%28console_command%29  ... spawns a game entity
+  "Spawn (console command)")           
+
+  [teleport](Teleport_%28console_comma ... teleports the player to an
+  nd%29 "Teleport (console command)")  entity location
+
+  [testAnim](TestAnim_%28console_comma ... tests an animation
+  nd%29 "TestAnim (console command)")  
+
+  [testBlend](TestBlend_%28console_com ... tests animation blending
+  mand%29 "TestBlend (console command) 
+  ")                                   
+
+  [testDamage](TestDamage_%28console_c ... tests a damage def
+  ommand%29 "TestDamage (console comma 
+  nd)")                                
+
+  [testDeath](TestDeath_%28console_com ... tests death
+  mand%29 "TestDeath (console command) 
+  ")                                   
+
+  [testid](Testid_%28console_command%2 ... output the string for the
+  9 "Testid (console command)")        specified id.
+
+  [testLight](TestLight_%28console_com ... tests a light
+  mand%29 "TestLight (console command) 
+  ")                                   
+
+  [testModel](TestModel_%28console_com ... tests a model
+  mand%29 "TestModel (console command) 
+  ")                                   
+
+  [testParticleStopTime](TestParticleS ... tests particle stop time on a
+  topTime_%28console_command%29 "TestP test model
+  articleStopTime (console command)")  
+
+  [testPointLight](TestPointLight_%28c ... tests a point light
+  onsole_command%29 "TestPointLight (c 
+  onsole command)")                    
+
+  [testSave](TestSave_%28console_comma ... writes out a test savegame
+  nd%29 "TestSave (console command)")  
+
+  [testShaderParm](TestShaderParm_%28c ... sets a shaderParm on an existing
+  onsole_command%29 "TestShaderParm (c testModel
+  onsole command)")                    
+
+  [testSkin](TestSkin_%28console_comma ... tests a skin on an existing
+  nd%29 "TestSkin (console command)")  testModel
+
+  [trigger](Trigger_%28console_command ... triggers an entity
+  %29 "Trigger (console command)")     
+
+  [unbindRagdoll](UnbindRagdoll_%28con ... unbinds the selected ragdoll
+  sole_command%29 "UnbindRagdoll (cons 
+  ole command)")                       
+
+  [undying](Undying_%28console_command 
+  %29 "Undying (console command)")     
+
+  [verifyServerSettings](VerifyServerS 
+  ettings_%28console_command%29 "Verif 
+  yServerSettings (console command)")  
+
+  [weaponSplat](WeaponSplat_%28console ... projects a blood splat on the
+  _command%29 "WeaponSplat (console co player weapon
+  mmand)")                             
+
+  [where](Where_%28console_command%29  ... prints the current view position
+  "Where (console command)")           
+  ------------------------------------ ------------------------------------
 
 Renderer commands
 -----------------
 
-|------------------------------------------------------------------|------------------------------------------------------|
-| [benchmark](Benchmark\_(console\_command))                   | ... benchmark                                        |
-| combineCubeImages                                                |                                                      |
-| [envshot](Envshot\_(console\_command))                       | ... takes an environment shot                        |
-| [gfxInfo](GfxInfo\_(console\_command))                       | ... show graphics info                               |
-| listGuis                                                         | ... lists guis                                       |
-| listImageReferences                                              |                                                      |
-| [listImages](ListImages\_(console\_command))                 | ... lists images                                     |
-| listImagesRaven                                                  |                                                      |
-| listModels                                                       | ... lists all models                                 |
-| listModes                                                        | ... lists all video modes                            |
-| listRenderEffectDefs                                             |                                                      |
-| listRenderEntityDefs                                             | ... lists the entity defs                            |
-| listRenderLightDefs                                              | ... lists the light defs                             |
-| listVertexCache                                                  | ... lists vertex cache                               |
-| makeAmbientMap                                                   | ... makes an ambient map                             |
-| [MakeMegaTexture](MakeMegaTexture\_(console\_command))       | ... processes giant images                           |
-| modulateLights                                                   | ... modifies shader parms on all lights              |
-| printModel                                                       | ... prints model info                                |
-| regenerateWorld                                                  | ... regenerates all interactions                     |
-| reloadARBprograms                                                | ... reloads ARB programs                             |
-| reloadGuis                                                       | ... reloads guis                                     |
-| [reloadImages](ReloadImages\_(console\_command))             | ... reloads images                                   |
-| reloadModels                                                     | ... reloads models                                   |
-| reloadShaders                                                    |                                                      |
-| [reloadSurface](ReloadSurface\_(console\_command))           | ... reloads the decl and images for selected surface |
-| reportImageDuplication                                           | ... checks all referenced images for duplications    |
-| reportSurfaceAreas                                               | ... lists all used materials sorted by surface area  |
-| [screenshot](Screenshot\_(console\_command))                 | ... takes a screenshot                               |
-| screenshotJpeg                                                   |                                                      |
-| showInteractionMemory                                            | ... shows memory used by interactions                |
-| showTriSurfMemory                                                | ... shows memory used by triangle surfaces           |
-| sizeDown                                                         | ... makes the rendered view smaller                  |
-| sizeUp                                                           | ... makes the rendered view larger                   |
-| testImage                                                        | ... displays the given image centered on screen      |
-| testStandaloneVideo                                              |                                                      |
-| testVideo                                                        | ... displays the given cinematic                     |
-| touchGui                                                         | ... touches a gui                                    |
-| touchModel                                                       | ... touches a model                                  |
-| [vid\_restart](Vid\_restart\_(console\_command))             | ... restarts renderSystem                            |
-| [writeProgramImages](WriteProgramImages\_(console\_command)) |                                                      |
-| writeRDF                                                         |                                                      |
+  ------------------------------------ ------------------------------------
+  [benchmark](Benchmark_%28console_com ... benchmark
+  mand%29 "Benchmark (console command) 
+  ")                                   
+
+  [combineCubeImages](CombineCubeImage 
+  s_%28console_command%29 "CombineCube 
+  Images (console command)")           
+
+  [envshot](Envshot_%28console_command ... takes an environment shot
+  %29 "Envshot (console command)")     
+
+  [gfxInfo](GfxInfo_%28console_command ... show graphics info
+  %29 "GfxInfo (console command)")     
+
+  [listGuis](ListGuis_%28console_comma ... lists guis
+  nd%29 "ListGuis (console command)")  
+
+  [listImageReferences](ListImageRefer 
+  ences_%28console_command%29 "ListIma 
+  geReferences (console command)")     
+
+  [listImages](ListImages_%28console_c ... lists images
+  ommand%29 "ListImages (console comma 
+  nd)")                                
+
+  [listImagesRaven](ListImagesRaven_%2 
+  8console_command%29 "ListImagesRaven 
+   (console command)")                 
+
+  [listModels](ListModels_%28console_c ... lists all models
+  ommand%29 "ListModels (console comma 
+  nd)")                                
+
+  [listModes](ListModes_%28console_com ... lists all video modes
+  mand%29 "ListModes (console command) 
+  ")                                   
+
+  [listRenderEffectDefs](ListRenderEff 
+  ectDefs_%28console_command%29 "ListR 
+  enderEffectDefs (console command)")  
+
+  [listRenderEntityDefs](ListRenderEnt ... lists the entity defs
+  ityDefs_%28console_command%29 "ListR 
+  enderEntityDefs (console command)")  
+
+  [listRenderLightDefs](ListRenderLigh ... lists the light defs
+  tDefs_%28console_command%29 "ListRen 
+  derLightDefs (console command)")     
+
+  [listVertexCache](ListVertexCache_%2 ... lists vertex cache
+  8console_command%29 "ListVertexCache 
+   (console command)")                 
+
+  [makeAmbientMap](MakeAmbientMap_%28c ... makes an ambient map
+  onsole_command%29 "MakeAmbientMap (c 
+  onsole command)")                    
+
+  [MakeMegaTexture](MakeMegaTexture_%2 ... processes giant images
+  8console_command%29 "MakeMegaTexture 
+   (console command)")                 
+
+  [modulateLights](ModulateLights_%28c ... modifies shader parms on all
+  onsole_command%29 "ModulateLights (c lights
+  onsole command)")                    
+
+  [printModel](PrintModel_%28console_c ... prints model info
+  ommand%29 "PrintModel (console comma 
+  nd)")                                
+
+  [regenerateWorld](RegenerateWorld_%2 ... regenerates all interactions
+  8console_command%29 "RegenerateWorld 
+   (console command)")                 
+
+  [reloadARBprograms](ReloadARBprogram ... reloads ARB programs
+  s_%28console_command%29 "ReloadARBpr 
+  ograms (console command)")           
+
+  [reloadGuis](ReloadGuis_%28console_c ... reloads guis
+  ommand%29 "ReloadGuis (console comma 
+  nd)")                                
+
+  [reloadImages](ReloadImages_%28conso ... reloads images
+  le_command%29 "ReloadImages (console 
+   command)")                          
+
+  [reloadModels](ReloadModels_%28conso ... reloads models
+  le_command%29 "ReloadModels (console 
+   command)")                          
+
+  [reloadShaders](ReloadShaders_%28con 
+  sole_command%29 "ReloadShaders (cons 
+  ole command)")                       
+
+  [reloadSurface](ReloadSurface_%28con ... reloads the decl and images for
+  sole_command%29 "ReloadSurface (cons selected surface
+  ole command)")                       
+
+  [reportImageDuplication](ReportImage ... checks all referenced images for
+  Duplication_%28console_command%29 "R duplications
+  eportImageDuplication (console comma 
+  nd)")                                
+
+  [reportSurfaceAreas](ReportSurfaceAr ... lists all used materials sorted
+  eas_%28console_command%29 "ReportSur by surface area
+  faceAreas (console command)")        
+
+  [screenshot](Screenshot_%28console_c ... takes a screenshot
+  ommand%29 "Screenshot (console comma 
+  nd)")                                
+
+  [screenshotJpeg](ScreenshotJpeg_%28c 
+  onsole_command%29 "ScreenshotJpeg (c 
+  onsole command)")                    
+
+  [showInteractionMemory](ShowInteract ... shows memory used by
+  ionMemory_%28console_command%29 "Sho interactions
+  wInteractionMemory (console command) 
+  ")                                   
+
+  [showTriSurfMemory](ShowTriSurfMemor ... shows memory used by triangle
+  y_%28console_command%29 "ShowTriSurf surfaces
+  Memory (console command)")           
+
+  [sizeDown](SizeDown_%28console_comma ... makes the rendered view smaller
+  nd%29 "SizeDown (console command)")  
+
+  [sizeUp](SizeUp_%28console_command%2 ... makes the rendered view larger
+  9 "SizeUp (console command)")        
+
+  [testImage](TestImage_%28console_com ... displays the given image
+  mand%29 "TestImage (console command) centered on screen
+  ")                                   
+
+  [testStandaloneVideo](TestStandalone 
+  Video_%28console_command%29 "TestSta 
+  ndaloneVideo (console command)")     
+
+  [testVideo](TestVideo_%28console_com ... displays the given cinematic
+  mand%29 "TestVideo (console command) 
+  ")                                   
+
+  [touchGui](TouchGui_%28console_comma ... touches a gui
+  nd%29 "TouchGui (console command)")  
+
+  [touchModel](TouchModel_%28console_c ... touches a model
+  ommand%29 "TouchModel (console comma 
+  nd)")                                
+
+  [vid\_restart](Vid_restart_%28consol ... restarts renderSystem
+  e_command%29 "Vid restart (console c 
+  ommand)")                            
+
+  [writeProgramImages](WriteProgramIma 
+  ges_%28console_command%29 "WriteProg 
+  ramImages (console command)")        
+
+  [writeRDF](WriteRDF_%28console_comma 
+  nd%29 "WriteRDF (console command)")  
+  ------------------------------------ ------------------------------------
 
 Sound commands
 --------------
 
-|-------------------|--------------------------------|
-| fadeSoundClass    |                                |
-| listActiveSounds  |                                |
-| listSoundDecoders | ... list active sound decoders |
-| listSounds        | ... lists all sounds           |
-| reloadSounds      | ... reloads all sounds         |
-| s\_restart        | ... restarts the sound system  |
-| soundLog          |                                |
-| testSound         | ... tests a sound              |
+  ------------------------------------ ------------------------------------
+  [fadeSoundClass](FadeSoundClass_%28c 
+  onsole_command%29 "FadeSoundClass (c 
+  onsole command)")                    
+
+  [listActiveSounds](ListActiveSounds_ 
+  %28console_command%29 "ListActiveSou 
+  nds (console command)")              
+
+  [listSoundDecoders](ListSoundDecoder ... list active sound decoders
+  s_%28console_command%29 "ListSoundDe 
+  coders (console command)")           
+
+  [listSounds](ListSounds_%28console_c ... lists all sounds
+  ommand%29 "ListSounds (console comma 
+  nd)")                                
+
+  [reloadSounds](ReloadSounds_%28conso ... reloads all sounds
+  le_command%29 "ReloadSounds (console 
+   command)")                          
+
+  [s\_restart](S_restart_%28console_co ... restarts the sound system
+  mmand%29 "S restart (console command 
+  )")                                  
+
+  [soundLog](SoundLog_%28console_comma 
+  nd%29 "SoundLog (console command)")  
+
+  [testSound](TestSound_%28console_com ... tests a sound
+  mand%29 "TestSound (console command) 
+  ")                                   
+  ------------------------------------ ------------------------------------
 
 System commands
 ---------------
 
-|----------------------------------------------------|---------------------------------------------------------------------------------|
-| addFriend                                          |                                                                                 |
-| aviCmdDemo                                         | ... writes AVIs for a command demo                                              |
-| [aviDemo](AviDemo\_(console\_command))         | ... writes AVIs for a demo                                                      |
-| aviGame                                            | ... writes AVIs for the current game                                            |
-| [bind](Bind\_(console\_command))               | ... binds a command to a key                                                    |
-| bindunbindtwo                                      | ... binds a key but unbinds it first if there are more than two binds           |
-| buildNotes                                         |                                                                                 |
-| checkNewVersion                                    | ... check if a new version of the game is available                             |
-| clear                                              | ... clears the console                                                          |
-| clearAssetLog                                      |                                                                                 |
-| compressDemo                                       | ... compresses a demo file                                                      |
-| [conDump](ConDump\_(console\_command))         | ... dumps the console text to a file                                            |
-| connect                                            | ... connects to a server                                                        |
-| crash                                              | ... causes a crash                                                              |
-| console command\_restart                           |                                                                                 |
-| dec                                                |                                                                                 |
-| Decrementconsole command                           |                                                                                 |
-| [demoShot](DemoShot\_(console\_command))       | ... writes a screenshot for a demo                                              |
-| [devmap](Devmap\_(console\_command))           | ... loads a map in developer mode                                               |
-| [dir](Dir\_(console\_command))                 | ... lists a folder                                                              |
-| [dirtree](Dirtree\_(console\_command))         | ... lists a folder with subfolders                                              |
-| [disconnect](Disconnect\_(console\_command))   | ... disconnects from a game                                                     |
-| [echo](Echo\_(console\_command))               | ... prints text                                                                 |
-| editconsole commands                               |                                                                                 |
-| error                                              | ... causes an error                                                             |
-| [exec](Exec\_(console\_command))               | ... executes a config file                                                      |
-| execMachineSpec                                    | ... execs the appropriate config files and sets cvars based on com\_machineSpec |
-| execMPMachineSpec                                  |                                                                                 |
-| [exit](Exit\_(console\_command))               | ... exits the game                                                              |
-| exitCmdDemo                                        | ... exits a command demo                                                        |
-| finishBuild                                        | ... finishes the build process                                                  |
-| freeze                                             | ... freezes the game for a number of seconds                                    |
-| getFriends                                         |                                                                                 |
-| getServers                                         |                                                                                 |
-| heartbeat                                          | ... send a heartbeat to the the master servers                                  |
-| help                                               |                                                                                 |
-| hitch                                              | ... hitches the game                                                            |
-| in\_restart                                        | ... restarts the input system                                                   |
-| inc                                                |                                                                                 |
-| Incrementconsole command                           |                                                                                 |
-| kick                                               | ... kick a client by connection number                                          |
-| lanScan                                            |                                                                                 |
-| listAF                                             | ... lists articulated figures                                                   |
-| listAllDecls                                       |                                                                                 |
-| listAudios                                         | ... lists Audios                                                                |
-| listBinds                                          | ... lists key bindings                                                          |
-| listClients                                        |                                                                                 |
-| [listCmds](ListCmds\_(console\_command))       | ... lists commands                                                              |
-| listconsole commands                               |                                                                                 |
-| listDecls                                          |                                                                                 |
-| listDictKeys                                       | ... lists all keys used by dictionaries                                         |
-| listDictValues                                     | ... lists all values used by dictionaries                                       |
-| listEffects                                        |                                                                                 |
-| listEmails                                         | ... lists Emails                                                                |
-| listEntityDefs                                     | ... lists entity defs                                                           |
-| listGameCmds                                       | ... lists game commands                                                         |
-| listHuffmanFrequencies                             | ... lists decl text character frequencies                                       |
-| listLipsyncs                                       |                                                                                 |
-| listMaterials                                      | ... lists materials                                                             |
-| listMaterialTypes                                  |                                                                                 |
-| listModelDefs                                      | ... lists model defs                                                            |
-| listPDAs                                           | ... lists PDAs                                                                  |
-| listPlaybacks                                      |                                                                                 |
-| listRendererCmds                                   | ... lists renderer commands                                                     |
-| listServers                                        | ... lists scanned servers                                                       |
-| listSkins                                          | ... lists skins                                                                 |
-| listSoundCmds                                      | ... lists sound commands (???)                                                  |
-| listSoundShaders                                   | ... lists sound shaders (???)                                                   |
-| listSystemCmds                                     | ... lists system commands                                                       |
-| listTables                                         | ... lists tables                                                                |
-| listToolCmds                                       | ... lists tool commands                                                         |
-| listVideos                                         | ... lists Videos                                                                |
-| loadGame                                           | ... loads a game                                                                |
-| localizeGuis                                       | ... localize guis                                                               |
-| localizeLipsyncs                                   |                                                                                 |
-| localizeMaps                                       | ... localize maps                                                               |
-| localizeValidateLipsyncs                           |                                                                                 |
-| localizeValidateStrings                            |                                                                                 |
-| [map](Map\_(console\_command))                 | ... loads a map                                                                 |
-| memoryDump                                         | ... creates a memory dump                                                       |
-| memoryDumpCompressed                               | ... creates a compressed memory dump                                            |
-| netScan                                            |                                                                                 |
-| nextMap                                            | ... loads the next map on the server                                            |
-| parse                                              | ... prints tokenized string                                                     |
-| [path](Path\_(console\_command))               | ... lists search paths                                                          |
-| playCmdDemo                                        | ... plays back a command demo                                                   |
-| playDemo                                           | ... plays back a demo                                                           |
-| playNetDemo                                        |                                                                                 |
-| playNetTimeDemo                                    |                                                                                 |
-| printAF                                            | ... prints an articulated figure                                                |
-| printAudio                                         | ... prints an Video (???)                                                       |
-| printEffects                                       |                                                                                 |
-| printEmail                                         | ... prints an Email                                                             |
-| printEntityDef                                     | ... prints an entity def                                                        |
-| printLipsyncs                                      |                                                                                 |
-| printMaterial                                      | ... prints a material                                                           |
-| printMaterialTypes                                 |                                                                                 |
-| printMemInfo                                       | ... **to\_be\_replaced**                                                        |
-| printModelDefs                                     | ... prints a model def                                                          |
-| printPDA                                           | ... prints an PDA                                                               |
-| printPlaybacks                                     |                                                                                 |
-| printSkin                                          | ... prints a skin                                                               |
-| printSoundShader                                   | ... prints a sound shader                                                       |
-| printTable                                         | ... prints a table                                                              |
-| printVideo                                         | ... prints a Audio (???)                                                        |
-| promptKey                                          | ... prompt and sets the CD Key                                                  |
-| QANotes                                            |                                                                                 |
-| [quit](Quit\_(console\_command))               | ... quits the game                                                              |
-| rcon                                               | ... sends remote console command to server                                      |
-| reconnect                                          | ... reconnect to the last server we tried to connect to                         |
-| [recordDemo](RecordDemo\_(console\_command))   | ... records a demo                                                              |
-| recordNetDemo                                      |                                                                                 |
-| [reloadDecls](ReloadDecls\_(console\_command)) | ... reloads decls                                                               |
-| reloadEngine                                       | ... reloads the engine down to including the file system                        |
-| reloadFAS                                          |                                                                                 |
-| reloadLanguage                                     | ... reload language dict                                                        |
-| removeFriend                                       |                                                                                 |
-| resaveDecl                                         |                                                                                 |
-| rescanSI                                           | ... rescan serverinfo cvars and tell game                                       |
-| reset                                              | ... resets a cvar                                                               |
-| saveGame                                           | ... saves a game                                                                |
-| SaveGameRefreshList                                |                                                                                 |
-| serverInfo                                         | ... shows server info                                                           |
-| [set](Set\_(console\_command))                 | ... sets a cvar                                                                 |
-| [seta](Seta\_(console\_command))               | ... sets a cvar and flags it as archive                                         |
-| setMachineSpec                                     | ... detects system capabilities and sets com\_machineSpec to appropriate value  |
-| sets                                               | ... sets a cvar and flags it as server info                                     |
-| sett                                               | ... sets a cvar and flags it as tool                                            |
-| setu                                               | ... sets a cvar and flags it as user info                                       |
-| showDictMemory                                     | ... shows memory used by dictionaries                                           |
-| showStringMemory                                   | ... shows memory used by strings                                                |
-| spawnGUI                                           |                                                                                 |
-| [spawnServer](SpawnServer\_(console\_command)) | ... spawns a server                                                             |
-| [startBuild](StartBuild\_(console\_command))   | ... prepares to make a build                                                    |
-| stopNetDemo                                        |                                                                                 |
-| stopRecording                                      | ... stops demo recording                                                        |
-| tabComplete                                        |                                                                                 |
-| testGUI                                            | ... tests a gui                                                                 |
-| [testmap](Testmap\_(console\_command))         | ... tests a map                                                                 |
-| testSIMD                                           | ... test SIMD code                                                              |
-| timeCmdDemo                                        | ... times a command demo                                                        |
-| [timeDemo](TimeDemo\_(console\_command))       | ... times a demo                                                                |
-| timeDemoQuit                                       | ... times a demo and quits                                                      |
-| [toggle](Toggle\_(console\_command))           | ... toggles a cvar                                                              |
-| [touch](Touch\_(console\_command))             | ... touches a decl                                                              |
-| touchFile                                          | ... touches a file                                                              |
-| touchFileList                                      | ... touches a list of files                                                     |
-| unbind                                             | ... unbinds any command from a key                                              |
-| unbindall                                          | ... unbinds any commands from all keys                                          |
-| updateUI                                           | ... cause a sync down of game-modified userinfo                                 |
-| viewNotes                                          |                                                                                 |
-| vstr                                               | ... inserts the current value of a cvar as command text                         |
-| wait                                               | ... delays remaining buffered commands one or more frames                       |
-| writeAssetLog                                      |                                                                                 |
-| writeCmdDemo                                       | ... writes a command demo                                                       |
-| writeConfig                                        | ... writes a config file                                                        |
-| WriteConfiguration                                 |                                                                                 |
-| writeDeclFile                                      |                                                                                 |
-| writePrecache                                      | ... writes precache commands                                                    |
-| WriteServerConfig                                  |                                                                                 |
+  ------------------------------------ ------------------------------------
+  [addFriend](AddFriend_%28console_com 
+  mand%29 "AddFriend (console command) 
+  ")                                   
+
+  [aviCmdDemo](AviCmdDemo_%28console_c ... writes AVIs for a command demo
+  ommand%29 "AviCmdDemo (console comma 
+  nd)")                                
+
+  [aviDemo](AviDemo_%28console_command ... writes AVIs for a demo
+  %29 "AviDemo (console command)")     
+
+  [aviGame](AviGame_%28console_command ... writes AVIs for the current game
+  %29 "AviGame (console command)")     
+
+  [bind](Bind_%28console_command%29 "B ... binds a command to a key
+  ind (console command)")              
+
+  [bindunbindtwo](Bindunbindtwo_%28con ... binds a key but unbinds it first
+  sole_command%29 "Bindunbindtwo (cons if there are more than two binds
+  ole command)")                       
+
+  [buildNotes](BuildNotes_%28console_c 
+  ommand%29 "BuildNotes (console comma 
+  nd)")                                
+
+  [checkNewVersion](CheckNewVersion_%2 ... check if a new version of the
+  8console_command%29 "CheckNewVersion game is available
+   (console command)")                 
+
+  [clear](Clear_%28console_command%29  ... clears the console
+  "Clear (console command)")           
+
+  [clearAssetLog](ClearAssetLog_%28con 
+  sole_command%29 "ClearAssetLog (cons 
+  ole command)")                       
+
+  [compressDemo](CompressDemo_%28conso ... compresses a demo file
+  le_command%29 "CompressDemo (console 
+   command)")                          
+
+  [conDump](ConDump_%28console_command ... dumps the console text to a file
+  %29 "ConDump (console command)")     
+
+  [connect](Connect_%28console_command ... connects to a server
+  %29 "Connect (console command)")     
+
+  [crash](Crash_%28console_command%29  ... causes a crash
+  "Crash (console command)")           
+
+  [console                             
+  command\_restart](Console_command_re 
+  start_%28console_command%29 "Console 
+   command restart (console command)") 
+
+  [dec](Dec_%28console_command%29 "Dec 
+   (console command)")                 
+
+  [Decrementconsole                    
+  command](Decrementconsole_command_%2 
+  8console_command%29 "Decrementconsol 
+  e command (console command)")        
+
+  [demoShot](DemoShot_%28console_comma ... writes a screenshot for a demo
+  nd%29 "DemoShot (console command)")  
+
+  [devmap](Devmap_%28console_command%2 ... loads a map in developer mode
+  9 "Devmap (console command)")        
+
+  [dir](Dir_%28console_command%29 "Dir ... lists a folder
+   (console command)")                 
+
+  [dirtree](Dirtree_%28console_command ... lists a folder with subfolders
+  %29 "Dirtree (console command)")     
+
+  [disconnect](Disconnect_%28console_c ... disconnects from a game
+  ommand%29 "Disconnect (console comma 
+  nd)")                                
+
+  [echo](Echo_%28console_command%29 "E ... prints text
+  cho (console command)")              
+
+  [editconsole                         
+  commands](Editconsole_commands_%28co 
+  nsole_command%29 "Editconsole comman 
+  ds (console command)")               
+
+  [error](Error_%28console_command%29  ... causes an error
+  "Error (console command)")           
+
+  [exec](Exec_%28console_command%29 "E ... executes a config file
+  xec (console command)")              
+
+  [execMachineSpec](ExecMachineSpec_%2 ... execs the appropriate config
+  8console_command%29 "ExecMachineSpec files and sets cvars based on
+   (console command)")                 com\_machineSpec
+
+  [execMPMachineSpec](ExecMPMachineSpe 
+  c_%28console_command%29 "ExecMPMachi 
+  neSpec (console command)")           
+
+  [exit](Exit_%28console_command%29 "E ... exits the game
+  xit (console command)")              
+
+  [exitCmdDemo](ExitCmdDemo_%28console ... exits a command demo
+  _command%29 "ExitCmdDemo (console co 
+  mmand)")                             
+
+  [finishBuild](FinishBuild_%28console ... finishes the build process
+  _command%29 "FinishBuild (console co 
+  mmand)")                             
+
+  [freeze](Freeze_%28console_command%2 ... freezes the game for a number of
+  9 "Freeze (console command)")        seconds
+
+  [getFriends](GetFriends_%28console_c 
+  ommand%29 "GetFriends (console comma 
+  nd)")                                
+
+  [getServers](GetServers_%28console_c 
+  ommand%29 "GetServers (console comma 
+  nd)")                                
+
+  [heartbeat](Heartbeat_%28console_com ... send a heartbeat to the the
+  mand%29 "Heartbeat (console command) master servers
+  ")                                   
+
+  [help](Help_%28console_command%29 "H 
+  elp (console command)")              
+
+  [hitch](Hitch_%28console_command%29  ... hitches the game
+  "Hitch (console command)")           
+
+  [in\_restart](In_restart_%28console_ ... restarts the input system
+  command%29 "In restart (console comm 
+  and)")                               
+
+  [inc](Inc_%28console_command%29 "Inc 
+   (console command)")                 
+
+  [Incrementconsole                    
+  command](Incrementconsole_command_%2 
+  8console_command%29 "Incrementconsol 
+  e command (console command)")        
+
+  [kick](Kick_%28console_command%29 "K ... kick a client by connection
+  ick (console command)")              number
+
+  [lanScan](LanScan_%28console_command 
+  %29 "LanScan (console command)")     
+
+  [listAF](ListAF_%28console_command%2 ... lists articulated figures
+  9 "ListAF (console command)")        
+
+  [listAllDecls](ListAllDecls_%28conso 
+  le_command%29 "ListAllDecls (console 
+   command)")                          
+
+  [listAudios](ListAudios_%28console_c ... lists Audios
+  ommand%29 "ListAudios (console comma 
+  nd)")                                
+
+  [listBinds](ListBinds_%28console_com ... lists key bindings
+  mand%29 "ListBinds (console command) 
+  ")                                   
+
+  [listClients](ListClients_%28console 
+  _command%29 "ListClients (console co 
+  mmand)")                             
+
+  [listCmds](ListCmds_%28console_comma ... lists commands
+  nd%29 "ListCmds (console command)")  
+
+  [listconsole                         
+  commands](Listconsole_commands_%28co 
+  nsole_command%29 "Listconsole comman 
+  ds (console command)")               
+
+  [listDecls](ListDecls_%28console_com 
+  mand%29 "ListDecls (console command) 
+  ")                                   
+
+  [listDictKeys](ListDictKeys_%28conso ... lists all keys used by
+  le_command%29 "ListDictKeys (console dictionaries
+   command)")                          
+
+  [listDictValues](ListDictValues_%28c ... lists all values used by
+  onsole_command%29 "ListDictValues (c dictionaries
+  onsole command)")                    
+
+  [listEffects](ListEffects_%28console 
+  _command%29 "ListEffects (console co 
+  mmand)")                             
+
+  [listEmails](ListEmails_%28console_c ... lists Emails
+  ommand%29 "ListEmails (console comma 
+  nd)")                                
+
+  [listEntityDefs](ListEntityDefs_%28c ... lists entity defs
+  onsole_command%29 "ListEntityDefs (c 
+  onsole command)")                    
+
+  [listGameCmds](ListGameCmds_%28conso ... lists game commands
+  le_command%29 "ListGameCmds (console 
+   command)")                          
+
+  [listHuffmanFrequencies](ListHuffman ... lists decl text character
+  Frequencies_%28console_command%29 "L frequencies
+  istHuffmanFrequencies (console comma 
+  nd)")                                
+
+  [listLipsyncs](ListLipsyncs_%28conso 
+  le_command%29 "ListLipsyncs (console 
+   command)")                          
+
+  [listMaterials](ListMaterials_%28con ... lists materials
+  sole_command%29 "ListMaterials (cons 
+  ole command)")                       
+
+  [listMaterialTypes](ListMaterialType 
+  s_%28console_command%29 "ListMateria 
+  lTypes (console command)")           
+
+  [listModelDefs](ListModelDefs_%28con ... lists model defs
+  sole_command%29 "ListModelDefs (cons 
+  ole command)")                       
+
+  [listPDAs](ListPDAs_%28console_comma ... lists PDAs
+  nd%29 "ListPDAs (console command)")  
+
+  [listPlaybacks](ListPlaybacks_%28con 
+  sole_command%29 "ListPlaybacks (cons 
+  ole command)")                       
+
+  [listRendererCmds](ListRendererCmds_ ... lists renderer commands
+  %28console_command%29 "ListRendererC 
+  mds (console command)")              
+
+  [listServers](ListServers_%28console ... lists scanned servers
+  _command%29 "ListServers (console co 
+  mmand)")                             
+
+  [listSkins](ListSkins_%28console_com ... lists skins
+  mand%29 "ListSkins (console command) 
+  ")                                   
+
+  [listSoundCmds](ListSoundCmds_%28con ... lists sound commands (???)
+  sole_command%29 "ListSoundCmds (cons 
+  ole command)")                       
+
+  [listSoundShaders](ListSoundShaders_ ... lists sound shaders (???)
+  %28console_command%29 "ListSoundShad 
+  ers (console command)")              
+
+  [listSystemCmds](ListSystemCmds_%28c ... lists system commands
+  onsole_command%29 "ListSystemCmds (c 
+  onsole command)")                    
+
+  [listTables](ListTables_%28console_c ... lists tables
+  ommand%29 "ListTables (console comma 
+  nd)")                                
+
+  [listToolCmds](ListToolCmds_%28conso ... lists tool commands
+  le_command%29 "ListToolCmds (console 
+   command)")                          
+
+  [listVideos](ListVideos_%28console_c ... lists Videos
+  ommand%29 "ListVideos (console comma 
+  nd)")                                
+
+  [loadGame](LoadGame_%28console_comma ... loads a game
+  nd%29 "LoadGame (console command)")  
+
+  [localizeGuis](LocalizeGuis_%28conso ... localize guis
+  le_command%29 "LocalizeGuis (console 
+   command)")                          
+
+  [localizeLipsyncs](LocalizeLipsyncs_ 
+  %28console_command%29 "LocalizeLipsy 
+  ncs (console command)")              
+
+  [localizeMaps](LocalizeMaps_%28conso ... localize maps
+  le_command%29 "LocalizeMaps (console 
+   command)")                          
+
+  [localizeValidateLipsyncs](LocalizeV 
+  alidateLipsyncs_%28console_command%2 
+  9 "LocalizeValidateLipsyncs (console 
+   command)")                          
+
+  [localizeValidateStrings](LocalizeVa 
+  lidateStrings_%28console_command%29  
+  "LocalizeValidateStrings (console co 
+  mmand)")                             
+
+  [map](Map_%28console_command%29 "Map ... loads a map
+   (console command)")                 
+
+  [memoryDump](MemoryDump_%28console_c ... creates a memory dump
+  ommand%29 "MemoryDump (console comma 
+  nd)")                                
+
+  [memoryDumpCompressed](MemoryDumpCom ... creates a compressed memory dump
+  pressed_%28console_command%29 "Memor 
+  yDumpCompressed (console command)")  
+
+  [netScan](NetScan_%28console_command 
+  %29 "NetScan (console command)")     
+
+  [nextMap](NextMap_%28console_command ... loads the next map on the server
+  %29 "NextMap (console command)")     
+
+  [parse](Parse_%28console_command%29  ... prints tokenized string
+  "Parse (console command)")           
+
+  [path](Path_%28console_command%29 "P ... lists search paths
+  ath (console command)")              
+
+  [playCmdDemo](PlayCmdDemo_%28console ... plays back a command demo
+  _command%29 "PlayCmdDemo (console co 
+  mmand)")                             
+
+  [playDemo](PlayDemo_%28console_comma ... plays back a demo
+  nd%29 "PlayDemo (console command)")  
+
+  [playNetDemo](PlayNetDemo_%28console 
+  _command%29 "PlayNetDemo (console co 
+  mmand)")                             
+
+  [playNetTimeDemo](PlayNetTimeDemo_%2 
+  8console_command%29 "PlayNetTimeDemo 
+   (console command)")                 
+
+  [printAF](PrintAF_%28console_command ... prints an articulated figure
+  %29 "PrintAF (console command)")     
+
+  [printAudio](PrintAudio_%28console_c ... prints an Video (???)
+  ommand%29 "PrintAudio (console comma 
+  nd)")                                
+
+  [printEffects](PrintEffects_%28conso 
+  le_command%29 "PrintEffects (console 
+   command)")                          
+
+  [printEmail](PrintEmail_%28console_c ... prints an Email
+  ommand%29 "PrintEmail (console comma 
+  nd)")                                
+
+  [printEntityDef](PrintEntityDef_%28c ... prints an entity def
+  onsole_command%29 "PrintEntityDef (c 
+  onsole command)")                    
+
+  [printLipsyncs](PrintLipsyncs_%28con 
+  sole_command%29 "PrintLipsyncs (cons 
+  ole command)")                       
+
+  [printMaterial](PrintMaterial_%28con ... prints a material
+  sole_command%29 "PrintMaterial (cons 
+  ole command)")                       
+
+  [printMaterialTypes](PrintMaterialTy 
+  pes_%28console_command%29 "PrintMate 
+  rialTypes (console command)")        
+
+  [printMemInfo](PrintMemInfo_%28conso ... **to\_be\_replaced**
+  le_command%29 "PrintMemInfo (console 
+   command)")                          
+
+  [printModelDefs](PrintModelDefs_%28c ... prints a model def
+  onsole_command%29 "PrintModelDefs (c 
+  onsole command)")                    
+
+  [printPDA](PrintPDA_%28console_comma ... prints an PDA
+  nd%29 "PrintPDA (console command)")  
+
+  [printPlaybacks](PrintPlaybacks_%28c 
+  onsole_command%29 "PrintPlaybacks (c 
+  onsole command)")                    
+
+  [printSkin](PrintSkin_%28console_com ... prints a skin
+  mand%29 "PrintSkin (console command) 
+  ")                                   
+
+  [printSoundShader](PrintSoundShader_ ... prints a sound shader
+  %28console_command%29 "PrintSoundSha 
+  der (console command)")              
+
+  [printTable](PrintTable_%28console_c ... prints a table
+  ommand%29 "PrintTable (console comma 
+  nd)")                                
+
+  [printVideo](PrintVideo_%28console_c ... prints a Audio (???)
+  ommand%29 "PrintVideo (console comma 
+  nd)")                                
+
+  [promptKey](PromptKey_%28console_com ... prompt and sets the CD Key
+  mand%29 "PromptKey (console command) 
+  ")                                   
+
+  [QANotes](QANotes_%28console_command 
+  %29 "QANotes (console command)")     
+
+  [quit](Quit_%28console_command%29 "Q ... quits the game
+  uit (console command)")              
+
+  [rcon](Rcon_%28console_command%29 "R ... sends remote console command to
+  con (console command)")              server
+
+  [reconnect](Reconnect_%28console_com ... reconnect to the last server we
+  mand%29 "Reconnect (console command) tried to connect to
+  ")                                   
+
+  [recordDemo](RecordDemo_%28console_c ... records a demo
+  ommand%29 "RecordDemo (console comma 
+  nd)")                                
+
+  [recordNetDemo](RecordNetDemo_%28con 
+  sole_command%29 "RecordNetDemo (cons 
+  ole command)")                       
+
+  [reloadDecls](ReloadDecls_%28console ... reloads decls
+  _command%29 "ReloadDecls (console co 
+  mmand)")                             
+
+  [reloadEngine](ReloadEngine_%28conso ... reloads the engine down to
+  le_command%29 "ReloadEngine (console including the file system
+   command)")                          
+
+  [reloadFAS](ReloadFAS_%28console_com 
+  mand%29 "ReloadFAS (console command) 
+  ")                                   
+
+  [reloadLanguage](ReloadLanguage_%28c ... reload language dict
+  onsole_command%29 "ReloadLanguage (c 
+  onsole command)")                    
+
+  [removeFriend](RemoveFriend_%28conso 
+  le_command%29 "RemoveFriend (console 
+   command)")                          
+
+  [resaveDecl](ResaveDecl_%28console_c 
+  ommand%29 "ResaveDecl (console comma 
+  nd)")                                
+
+  [rescanSI](RescanSI_%28console_comma ... rescan serverinfo cvars and tell
+  nd%29 "RescanSI (console command)")  game
+
+  [reset](Reset_%28console_command%29  ... resets a cvar
+  "Reset (console command)")           
+
+  [saveGame](SaveGame_%28console_comma ... saves a game
+  nd%29 "SaveGame (console command)")  
+
+  [SaveGameRefreshList](SaveGameRefres 
+  hList_%28console_command%29 "SaveGam 
+  eRefreshList (console command)")     
+
+  [serverInfo](ServerInfo_%28console_c ... shows server info
+  ommand%29 "ServerInfo (console comma 
+  nd)")                                
+
+  [set](Set_%28console_command%29 "Set ... sets a cvar
+   (console command)")                 
+
+  [seta](Seta_%28console_command%29 "S ... sets a cvar and flags it as
+  eta (console command)")              archive
+
+  [setMachineSpec](SetMachineSpec_%28c ... detects system capabilities and
+  onsole_command%29 "SetMachineSpec (c sets com\_machineSpec to appropriate
+  onsole command)")                    value
+
+  [sets](Sets_%28console_command%29 "S ... sets a cvar and flags it as
+  ets (console command)")              server info
+
+  [sett](Sett_%28console_command%29 "S ... sets a cvar and flags it as tool
+  ett (console command)")              
+
+  [setu](Setu_%28console_command%29 "S ... sets a cvar and flags it as user
+  etu (console command)")              info
+
+  [showDictMemory](ShowDictMemory_%28c ... shows memory used by
+  onsole_command%29 "ShowDictMemory (c dictionaries
+  onsole command)")                    
+
+  [showStringMemory](ShowStringMemory_ ... shows memory used by strings
+  %28console_command%29 "ShowStringMem 
+  ory (console command)")              
+
+  [spawnGUI](SpawnGUI_%28console_comma 
+  nd%29 "SpawnGUI (console command)")  
+
+  [spawnServer](SpawnServer_%28console ... spawns a server
+  _command%29 "SpawnServer (console co 
+  mmand)")                             
+
+  [startBuild](StartBuild_%28console_c ... prepares to make a build
+  ommand%29 "StartBuild (console comma 
+  nd)")                                
+
+  [stopNetDemo](StopNetDemo_%28console 
+  _command%29 "StopNetDemo (console co 
+  mmand)")                             
+
+  [stopRecording](StopRecording_%28con ... stops demo recording
+  sole_command%29 "StopRecording (cons 
+  ole command)")                       
+
+  [tabComplete](TabComplete_%28console 
+  _command%29 "TabComplete (console co 
+  mmand)")                             
+
+  [testGUI](TestGUI_%28console_command ... tests a gui
+  %29 "TestGUI (console command)")     
+
+  [testmap](Testmap_%28console_command ... tests a map
+  %29 "Testmap (console command)")     
+
+  [testSIMD](TestSIMD_%28console_comma ... test SIMD code
+  nd%29 "TestSIMD (console command)")  
+
+  [timeCmdDemo](TimeCmdDemo_%28console ... times a command demo
+  _command%29 "TimeCmdDemo (console co 
+  mmand)")                             
+
+  [timeDemo](TimeDemo_%28console_comma ... times a demo
+  nd%29 "TimeDemo (console command)")  
+
+  [timeDemoQuit](TimeDemoQuit_%28conso ... times a demo and quits
+  le_command%29 "TimeDemoQuit (console 
+   command)")                          
+
+  [toggle](Toggle_%28console_command%2 ... toggles a cvar
+  9 "Toggle (console command)")        
+
+  [touch](Touch_%28console_command%29  ... touches a decl
+  "Touch (console command)")           
+
+  [touchFile](TouchFile_%28console_com ... touches a file
+  mand%29 "TouchFile (console command) 
+  ")                                   
+
+  [touchFileList](TouchFileList_%28con ... touches a list of files
+  sole_command%29 "TouchFileList (cons 
+  ole command)")                       
+
+  [unbind](Unbind_%28console_command%2 ... unbinds any command from a key
+  9 "Unbind (console command)")        
+
+  [unbindall](Unbindall_%28console_com ... unbinds any commands from all
+  mand%29 "Unbindall (console command) keys
+  ")                                   
+
+  [updateUI](UpdateUI_%28console_comma ... cause a sync down of
+  nd%29 "UpdateUI (console command)")  game-modified userinfo
+
+  [viewNotes](ViewNotes_%28console_com 
+  mand%29 "ViewNotes (console command) 
+  ")                                   
+
+  [vstr](Vstr_%28console_command%29 "V ... inserts the current value of a
+  str (console command)")              cvar as command text
+
+  [wait](Wait_%28console_command%29 "W ... delays remaining buffered
+  ait (console command)")              commands one or more frames
+
+  [writeAssetLog](WriteAssetLog_%28con 
+  sole_command%29 "WriteAssetLog (cons 
+  ole command)")                       
+
+  [writeCmdDemo](WriteCmdDemo_%28conso ... writes a command demo
+  le_command%29 "WriteCmdDemo (console 
+   command)")                          
+
+  [writeConfig](WriteConfig_%28console ... writes a config file
+  _command%29 "WriteConfig (console co 
+  mmand)")                             
+
+  [WriteConfiguration](WriteConfigurat 
+  ion_%28console_command%29 "WriteConf 
+  iguration (console command)")        
+
+  [writeDeclFile](WriteDeclFile_%28con 
+  sole_command%29 "WriteDeclFile (cons 
+  ole command)")                       
+
+  [writePrecache](WritePrecache_%28con ... writes precache commands
+  sole_command%29 "WritePrecache (cons 
+  ole command)")                       
+
+  [WriteServerConfig](WriteServerConfi 
+  g_%28console_command%29 "WriteServer 
+  Config (console command)")           
+  ------------------------------------ ------------------------------------
 
 Tool commands
 -------------
 
-|----------------------------------------------------------|----------------------------------------------------|
-| activateEditor                                           |                                                    |
-| bundler                                                  |                                                    |
-| createCM                                                 |                                                    |
-| debugger                                                 | ... launches the Script Debugger                   |
-| [dmap](Dmap\_(console\_command))                     | ... compiles a map                                 |
-| [editAFs](EditAFs\_(console\_command))               | ... launches the in-game Articulated Figure Editor |
-| editDecls                                                | ... launches the in-game Declaration Editor        |
-| [editFX](EditFX\_(console\_command))                 |                                                    |
-| editFX\_play                                             |                                                    |
-| editFX\_playlooping                                      |                                                    |
-| editFX\_stop                                             |                                                    |
-| editGUIs                                                 | ... launches the GUI Editor                        |
-| editLights                                               | ... launches the in-game Light Editor              |
-| editMaterials                                            |                                                    |
-| [editor](Editor\_(console\_command))                 | ... launches the level editor Radiant              |
-| editPDAs                                                 | ... launches the in-game PDA Editor                |
-| editPlaybacks                                            |                                                    |
-| editReverb                                               |                                                    |
-| editScripts                                              | ... launches the in-game Script Editor             |
-| [editSounds](EditSounds\_(console\_command))         | ... launches the in-game Sound Editor              |
-| entview                                                  |                                                    |
-| exportCmpMD5R                                            |                                                    |
-| exportMD5R                                               |                                                    |
-| logview                                                  |                                                    |
-| makeLoadScreens                                          |                                                    |
-| modview                                                  |                                                    |
-| phonemeGen                                               |                                                    |
-| [renderbump](Renderbump\_(console\_command))         | ... renders a bump map                             |
-| [renderbumpFlat](RenderbumpFlat\_(console\_command)) | ... renders a flat bump map                        |
-| renderbumpFlatGUI                                        |                                                    |
-| [roq](Roq\_(console\_command))                       | ... encodes a roq file                             |
-| runAAS                                                   | ... compiles an AAS file for a map                 |
-| runAASDir                                                | ... compiles AAS files for all maps in a folder    |
-| runAASTactical                                           |                                                    |
-| runReach                                                 | ... calculates reachability for an AAS file        |
-| shakesGen                                                |                                                    |
-| showMemAlloc                                             |                                                    |
-| showMemory                                               |                                                    |
+  ------------------------------------ ------------------------------------
+  [activateEditor](ActivateEditor_%28c 
+  onsole_command%29 "ActivateEditor (c 
+  onsole command)")                    
+
+  [bundler](Bundler_%28console_command 
+  %29 "Bundler (console command)")     
+
+  [createCM](CreateCM_%28console_comma 
+  nd%29 "CreateCM (console command)")  
+
+  [debugger](Debugger_%28console_comma ... launches the Script Debugger
+  nd%29 "Debugger (console command)")  
+
+  [dmap](Dmap_%28console_command%29 "D ... compiles a map
+  map (console command)")              
+
+  [editAFs](EditAFs_%28console_command ... launches the in-game Articulated
+  %29 "EditAFs (console command)")     Figure Editor
+
+  [editDecls](EditDecls_%28console_com ... launches the in-game Declaration
+  mand%29 "EditDecls (console command) Editor
+  ")                                   
+
+  [editFX](EditFX_%28console_command%2 
+  9 "EditFX (console command)")        
+
+  [editFX\_play](EditFX_play_%28consol 
+  e_command%29 "EditFX play (console c 
+  ommand)")                            
+
+  [editFX\_playlooping](EditFX_playloo 
+  ping_%28console_command%29 "EditFX p 
+  laylooping (console command)")       
+
+  [editFX\_stop](EditFX_stop_%28consol 
+  e_command%29 "EditFX stop (console c 
+  ommand)")                            
+
+  [editGUIs](EditGUIs_%28console_comma ... launches the GUI Editor
+  nd%29 "EditGUIs (console command)")  
+
+  [editLights](EditLights_%28console_c ... launches the in-game Light
+  ommand%29 "EditLights (console comma Editor
+  nd)")                                
+
+  [editMaterials](EditMaterials_%28con 
+  sole_command%29 "EditMaterials (cons 
+  ole command)")                       
+
+  [editor](Editor_%28console_command%2 ... launches the level editor
+  9 "Editor (console command)")        Radiant
+
+  [editPDAs](EditPDAs_%28console_comma ... launches the in-game PDA Editor
+  nd%29 "EditPDAs (console command)")  
+
+  [editPlaybacks](EditPlaybacks_%28con 
+  sole_command%29 "EditPlaybacks (cons 
+  ole command)")                       
+
+  [editReverb](EditReverb_%28console_c 
+  ommand%29 "EditReverb (console comma 
+  nd)")                                
+
+  [editScripts](EditScripts_%28console ... launches the in-game Script
+  _command%29 "EditScripts (console co Editor
+  mmand)")                             
+
+  [editSounds](EditSounds_%28console_c ... launches the in-game Sound
+  ommand%29 "EditSounds (console comma Editor
+  nd)")                                
+
+  [entview](Entview_%28console_command 
+  %29 "Entview (console command)")     
+
+  [exportCmpMD5R](ExportCmpMD5R_%28con 
+  sole_command%29 "ExportCmpMD5R (cons 
+  ole command)")                       
+
+  [exportMD5R](ExportMD5R_%28console_c 
+  ommand%29 "ExportMD5R (console comma 
+  nd)")                                
+
+  [logview](Logview_%28console_command 
+  %29 "Logview (console command)")     
+
+  [makeLoadScreens](MakeLoadScreens_%2 
+  8console_command%29 "MakeLoadScreens 
+   (console command)")                 
+
+  [modview](Modview_%28console_command 
+  %29 "Modview (console command)")     
+
+  [phonemeGen](PhonemeGen_%28console_c 
+  ommand%29 "PhonemeGen (console comma 
+  nd)")                                
+
+  [renderbump](Renderbump_%28console_c ... renders a bump map
+  ommand%29 "Renderbump (console comma 
+  nd)")                                
+
+  [renderbumpFlat](RenderbumpFlat_%28c ... renders a flat bump map
+  onsole_command%29 "RenderbumpFlat (c 
+  onsole command)")                    
+
+  [renderbumpFlatGUI](RenderbumpFlatGU 
+  I_%28console_command%29 "RenderbumpF 
+  latGUI (console command)")           
+
+  [roq](Roq_%28console_command%29 "Roq ... encodes a roq file
+   (console command)")                 
+
+  [runAAS](RunAAS_%28console_command%2 ... compiles an AAS file for a map
+  9 "RunAAS (console command)")        
+
+  [runAASDir](RunAASDir_%28console_com ... compiles AAS files for all maps
+  mand%29 "RunAASDir (console command) in a folder
+  ")                                   
+
+  [runAASTactical](RunAASTactical_%28c 
+  onsole_command%29 "RunAASTactical (c 
+  onsole command)")                    
+
+  [runReach](RunReach_%28console_comma ... calculates reachability for an
+  nd%29 "RunReach (console command)")  AAS file
+
+  [shakesGen](ShakesGen_%28console_com 
+  mand%29 "ShakesGen (console command) 
+  ")                                   
+
+  [showMemAlloc](ShowMemAlloc_%28conso 
+  le_command%29 "ShowMemAlloc (console 
+   command)")                          
+
+  [showMemory](ShowMemory_%28console_c 
+  ommand%29 "ShowMemory (console comma 
+  nd)")                                
+  ------------------------------------ ------------------------------------
 
 

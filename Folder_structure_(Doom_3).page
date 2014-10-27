@@ -1,135 +1,317 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: Folder_structure_(Doom_3).page
-...
-Folder structure (Doom 3)
-=========================
+<div align="left"
+style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
 
-<div style="padding: 1px; border: 0px solid #000000" align="left">
-<font size="18px"><font color="black">![](/images/images_c_cb_D3square_bg.png) The information on this page is specific to [Doom 3](Doom\_3).</font></font>
+![](/images/c/cb/D3square_bg.png) The information on this page is
+specific to [Doom 3](Doom_3 "Doom 3") .
 
 </div>
 
 ------------------------------------------------------------------------
 
-This is the folder structure of Doom 3. It should be noted that these folders are not present in the base folder itself. Instead, these folders and the assets contained therein are stored in [PK4 archives](PK4\_(file\_format)).
+This is the folder structure of Doom 3. It should be noted that these
+folders are not present in the base folder itself. Instead, these
+folders and the assets contained therein are stored in [PK4
+archives](PK4_%28file_format%29 "PK4 (file format)") .
 
-<table>
-<colgroup>
-<col width="2%" />
-<col width="8%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><font color="#000"></p>
-<div style="padding: .4em .9em .9em">
-<h3>Folder structure:</h3>
-<div style="text-align: left; margin-left: 10px">
-<p><code>
-
-* /[base](Folder_structure_(Doom_3)#.2Fbase)
-** /[af](Folder_structure_(Doom_3)#.2Fbase.2Faf)
-** /[dds](Folder_structure_(Doom_3)#.2Fbase.2Fdds)
-** /[def](Folder_structure_(Doom_3)#.2Fbase.2Fdef)
-** /[demos](Folder_structure_(Doom_3)#.2Fbase.2Fdemos)
-** /[efxs](Folder_structure_(Doom_3)#.2Fbase.2Fefxs)
-** /[env](Folder_structure_(Doom_3)#.2Fbase.2Fenv)
-** /[fonts](Folder_structure_(Doom_3)#.2Fbase.2Ffonts)
-** /[fx](Folder_structure_(Doom_3)#.2Fbase.2Ffx.2F)
-** /[glprogs](Folder_structure_(Doom_3)#.2Fbase.2Fglprogs)
-** /[guis](Folder_structure_(Doom_3)#.2Fbase.2Fguis)
-** /[lights](Folder_structure_(Doom_3)#.2Fbase.2Flights)
-** /[maps](Folder_structure_(Doom_3)#.2Fbase.2Fmaps)
-** /[materials](Folder_structure_(Doom_3)#.2Fbase.2Fmaterials)
-** /[models](Folder_structure_(Doom_3)#.2Fbase.2Fmodels)
-** /[newpdas](Folder_structure_(Doom_3)#.2Fbase.2Fnewpdas)
-** /[particles](Folder_structure_(Doom_3)#.2Fbase.2Fparticles)
-** /[script](Folder_structure_(Doom_3)#.2Fbase.2Fscript)
-** /[skins](Folder_structure_(Doom_3)#.2Fbase.2Fskins)
-** /[sound](Folder_structure_(Doom_3)#.2Fbase.2Fsound)
-** /[strings](Folder_structure_(Doom_3)#.2Fbase.2Fstrings)
-** /[textures](Folder_structure_(Doom_3)#.2Fbase.2Ftextures)
-** /[ui](Folder_structure_(Doom_3)#.2Fbase.2Fui)
-** /[video](Folder_structure_(Doom_3)#.2Fbase.2Fvideo)
-
-</code></p>
-</div>
-</div>
-<p></font></p></td>
-<td align="left"><h2>/base</h2>
-<p>This is the default Doom 3 mod directory. The contents of this directory include all the game assets used in the game. Mods for Doom 3 should be created in their own directory in the main Doom3 installation folder as a brother folder to /base. In the engine code your mods' base name is always called &quot;base&quot; no matter the actual physical name. You set the game to use a different folder as base with the [fs_game](Fs_game_(cvar)) cvar.</p>
-<div>
-<p><img src="images_2_23_D3square_25.png" title="fig:Image:D3square_25.png" alt="Image:D3square_25.png" /> <strong>Note:</strong> Doom 3: ROE only:</p>
-<dl>
-
-<dd><em>The default base folder for Doom 3: Resurrection of Evil is /d3xp.</em>
-</dd>
-</dl>
-</div>
-<p>With the release of patch v1.3 you can set the [fs_game_base](Fs_game_base_(cvar)) cvar to let you base a mod off base game and your own content as usual as well as an additional mod. For instance, if you want to create a mod that also uses content from the Doom 3: Resurrection of Evil expansion you should set &quot;fs_game &lt;yourmodname&gt;&quot; as well as &quot;fs_game_base d3xp&quot;.</p>
-<p><strong>Note:</strong> While you probably want to work on your mod with the assets decompressed and available in the Doom 3 folder structure, when you release your mod you should put them into .[PK4](PK4_(file_format)) files.</p>
-<h2>/base/af</h2>
-<p>This folder contains .AF files which setup the [articulated figure declarations](Af_(decl)).</p>
-<h2>/base/dds</h2>
-<p>This folder contains .[DDS](DDS_(file_format)) files which are compressed textures.</p>
-<h2>/base/def</h2>
-<p>This folder contains .[DEF](DEF_(file_format)) files which contain [declarations](Declarations).</p>
-<h2>/base/demos</h2>
-<p>This folder contains .[DEMO](DEMO_(file_format)) files which are gameplay recordings.</p>
-<h2><span align="absbottom"><img src="images_2_23_D3square_25.png" title="fig:Image:D3square_25.png" alt="Image:D3square_25.png" /> /base/efxs</span></h2>
-<dl>
-
-<dd><em>The information in this section is specific to [Doom 3: Resurrection of Evil](Doom_3).</em>
-</dd>
-</dl>
-<p>This folder contains .EFX files which have reverb information about a map.</p>
-<h2>/base/env</h2>
-<p>This folder contains [images](Images) for [environment maps](Cube_maps) which are textures applied to the inside faces of a skybox to give the appearance of large spaces.</p>
-<h2>/base/fonts</h2>
-<h2>/base/fx</h2>
-<h2>/base/glprogs</h2>
-<p>This folder contains .[VFP](VFP_(file_format)) and .[VP](VP_(file_format)) files which become available for use in [materials](Material_(decl)) for [visual special effects](Vertex_and_fragment_programs).</p>
-<h2>/base/guis</h2>
-<p>This folder contains .GUI files which setup the [graphical user interfaces](GUIs).</p>
-<p><br /></p>
-<h2>/base/lights</h2>
-<p>This folder contains .[TGA](TGA_(file_format)) files which become available for use in [light materials](Material_(decl)) to create 'light styles' that modulate what light projects onto the surfaces of the world.</p>
-<h2>/base/maps</h2>
-<p>This folder contains the .[MAP](MAP_(file_format)), .[CM](CM_(file_format)), .[PROC](PROC_(file_format)), and .[AAS](AAS_(file_format)) files for each map. Should there be any .BAK files there they should be removed prior to distribution as these are just backup versions created by the [map editor](Map_editor).</p>
-<h2>/base/materials</h2>
-<p>This folder contains .MTR files which setup the [material declarations](Material_(decl)).</p>
-<h2>/base/models</h2>
-<p>This folder contains numerous sub-directories where the following file formats can be found:</p>
-<dl>
-<dt>Model formats</dt>
-<dd>.[ASE](ASE_(file_format)), .[LWO](LWO_(file_format)), .[MD5](MD5_(file_format)).
-</dd>
-<dt>Image formats</dt>
-<dd>.[TGA](TGA_(file_format)), .[DDS](DDS_(file_format)), .[JPG](JPG_(file_format)).
-</dd>
-<dt>Other formats</dt>
-<dd>.[CM](CM_(file_format)).
-</dd>
-</dl>
-<h2>/base/newpdas</h2>
-<h2>/base/particles</h2>
-<h2>/base/script</h2>
-<h2>/base/skins</h2>
-<p>This folder contains .SKIN files which setup the [skin declarations](Skin_(decl)).</p>
-<h2>/base/sound</h2>
-<h2>/base/strings</h2>
-<p>This folder contains .[LANG](LANG_(file_format)) files which are used for localization. The engine loads all of the files from this folder and parses the numbered strings within these files to make them available to the code, [GUIs](GUIs) and [maps](Mapping).</p>
-<h2>/base/textures</h2>
-<p>This folder contains .[TGA](TGA_(file_format)) or .[JPG](JPG_(file_format)) files which become available for use as assets in [material declarations](Material_(decl)).</p>
-<h2>/base/ui</h2>
-<p>This folder contains .[TGA](TGA_(file_format)) files used in the user interface.</p>
-<h2>/base/video</h2>
-<p>This folder contains .[ROQ](ROQ_(file_format)) files which are movies.</p>
-<p><br /></p></td>
-</tr>
-</tbody>
-</table>
++--------------------------------------+--------------------------------------+
+| <div                                 | /base                                |
+| style="padding: .4em .9em .9em;">    | -----                                |
+|                                      |                                      |
+| ### Folder structure:                | This is the default Doom 3 mod       |
+|                                      | directory. The contents of this      |
+| <div                                 | directory include all the game       |
+| style="text-align: left; margin-left | assets used in the game. Mods for    |
+| : 10px;">                            | Doom 3 should be created in their    |
+|                                      | own directory in the main Doom3      |
+| `         `                          | installation folder as a brother     |
+| -   /                                | folder to /base. In the engine code  |
+|     [base](Folder_structure_%28Doom_ | your mods' base name is always       |
+| 3%29#.2Fbase "Folder structure (Doom | called "base" no matter the actual   |
+|  3)")                                | physical name. You set the game to   |
+|     -   /                            | use a different folder as base with  |
+|         [af](Folder_structure_%28Doo | the                                  |
+| m_3%29#.2Fbase.2Faf "Folder structur | [fs\_game](Fs_game_%28cvar%29 "Fs ga |
+| e (Doom 3)")                         | me (cvar)")                          |
+|     -   /                            | cvar.                                |
+|         [dds](Folder_structure_%28Do |                                      |
+| om_3%29#.2Fbase.2Fdds "Folder struct | <div>                                |
+| ure (Doom 3)")                       |                                      |
+|     -   /                            | ![](/images/2/23/D3square_25.png)    |
+|         [def](Folder_structure_%28Do | **Note:** Doom 3: ROE only:          |
+| om_3%29#.2Fbase.2Fdef "Folder struct | *The default base folder for Doom 3: |
+| ure (Doom 3)")                       | Resurrection of Evil is /d3xp.*      |
+|     -   /                            |                                      |
+|         [demos](Folder_structure_%28 | </div>                               |
+| Doom_3%29#.2Fbase.2Fdemos "Folder st |                                      |
+| ructure (Doom 3)")                   | With the release of patch v1.3 you   |
+|     -   /                            | can set the                          |
+|         [efxs](Folder_structure_%28D | [fs\_game\_base](Fs_game_base_%28cva |
+| oom_3%29#.2Fbase.2Fefxs "Folder stru | r%29 "Fs game base (cvar)")          |
+| cture (Doom 3)")                     | cvar to let you base a mod off base  |
+|     -   /                            | game and your own content as usual   |
+|         [env](Folder_structure_%28Do | as well as an additional mod. For    |
+| om_3%29#.2Fbase.2Fenv "Folder struct | instance, if you want to create a    |
+| ure (Doom 3)")                       | mod that also uses content from the  |
+|     -   /                            | Doom 3: Resurrection of Evil         |
+|         [fonts](Folder_structure_%28 | expansion you should set "fs\_game   |
+| Doom_3%29#.2Fbase.2Ffonts "Folder st | \<yourmodname\>" as well as          |
+| ructure (Doom 3)")                   | "fs\_game\_base d3xp".               |
+|     -   /                            |                                      |
+|         [fx](Folder_structure_%28Doo | **Note:** While you probably want to |
+| m_3%29#.2Fbase.2Ffx.2F "Folder struc | work on your mod with the assets     |
+| ture (Doom 3)")                      | decompressed and available in the    |
+|     -   /                            | Doom 3 folder structure, when you    |
+|         [glprogs](Folder_structure_% | release your mod you should put them |
+| 28Doom_3%29#.2Fbase.2Fglprogs "Folde | into .                               |
+| r structure (Doom 3)")               | [PK4](PK4_%28file_format%29 "PK4 (fi |
+|     -   /                            | le format)")                         |
+|         [guis](Folder_structure_%28D | files.                               |
+| oom_3%29#.2Fbase.2Fguis "Folder stru |                                      |
+| cture (Doom 3)")                     | /base/af                             |
+|     -   /                            | --------                             |
+|         [lights](Folder_structure_%2 |                                      |
+| 8Doom_3%29#.2Fbase.2Flights "Folder  | This folder contains .AF files which |
+| structure (Doom 3)")                 | setup the [articulated figure        |
+|     -   /                            | declarations](Af_%28decl%29 "Af (dec |
+|         [maps](Folder_structure_%28D | l)")                                 |
+| oom_3%29#.2Fbase.2Fmaps "Folder stru | .                                    |
+| cture (Doom 3)")                     |                                      |
+|     -   /                            | /base/dds                            |
+|         [materials](Folder_structure | ---------                            |
+| _%28Doom_3%29#.2Fbase.2Fmaterials "F |                                      |
+| older structure (Doom 3)")           | This folder contains .               |
+|     -   /                            | [DDS](DDS_%28file_format%29 "DDS (fi |
+|         [models](Folder_structure_%2 | le format)")                         |
+| 8Doom_3%29#.2Fbase.2Fmodels "Folder  | files which are compressed textures. |
+| structure (Doom 3)")                 |                                      |
+|     -   /                            | /base/def                            |
+|         [newpdas](Folder_structure_% | ---------                            |
+| 28Doom_3%29#.2Fbase.2Fnewpdas "Folde |                                      |
+| r structure (Doom 3)")               | This folder contains .               |
+|     -   /                            | [DEF](DEF_%28file_format%29 "DEF (fi |
+|         [particles](Folder_structure | le format)")                         |
+| _%28Doom_3%29#.2Fbase.2Fparticles "F | files which contain                  |
+| older structure (Doom 3)")           | [declarations](Declarations "Declara |
+|     -   /                            | tions")                              |
+|         [script](Folder_structure_%2 | .                                    |
+| 8Doom_3%29#.2Fbase.2Fscript "Folder  |                                      |
+| structure (Doom 3)")                 | /base/demos                          |
+|     -   /                            | -----------                          |
+|         [skins](Folder_structure_%28 |                                      |
+| Doom_3%29#.2Fbase.2Fskins "Folder st | This folder contains .               |
+| ructure (Doom 3)")                   | [DEMO](DEMO_%28file_format%29 "DEMO  |
+|     -   /                            | (file format)")                      |
+|         [sound](Folder_structure_%28 | files which are gameplay recordings. |
+| Doom_3%29#.2Fbase.2Fsound "Folder st |                                      |
+| ructure (Doom 3)")                   | <span align="absbottom"> ![](/images |
+|     -   /                            | /2/23/D3square_25.png) /base/efxs </ |
+|         [strings](Folder_structure_% | span>                                |
+| 28Doom_3%29#.2Fbase.2Fstrings "Folde | ------------------------------------ |
+| r structure (Doom 3)")               | ------------------------------------ |
+|     -   /                            | -----                                |
+|         [textures](Folder_structure_ |                                      |
+| %28Doom_3%29#.2Fbase.2Ftextures "Fol | *The information in this section is  |
+| der structure (Doom 3)")             | specific to [Doom 3: Resurrection of |
+|     -   /                            | Evil](Doom_3 "Doom 3") .*            |
+|         [ui](Folder_structure_%28Doo | This folder contains .               |
+| m_3%29#.2Fbase.2Fui "Folder structur | [EFX](EFX_%28file_format%29 "EFX (fi |
+| e (Doom 3)")                         | le format)")                         |
+|     -   /                            | files which have reverb information  |
+|         [video](Folder_structure_%28 | about a map.                         |
+| Doom_3%29#.2Fbase.2Fvideo "Folder st |                                      |
+| ructure (Doom 3)")                   | /base/env                            |
+|                                      | ---------                            |
+| </div>                               |                                      |
+|                                      | This folder contains                 |
+| </div>                               | [images](Images "Images") for        |
+|                                      | [environment                         |
+|                                      | maps](Cube_maps "Cube maps") which   |
+|                                      | are textures applied to the inside   |
+|                                      | faces of a skybox to give the        |
+|                                      | appearance of large spaces.          |
+|                                      |                                      |
+|                                      | /base/fonts                          |
+|                                      | -----------                          |
+|                                      |                                      |
+|                                      | /base/fx                             |
+|                                      | --------                             |
+|                                      |                                      |
+|                                      | /base/glprogs                        |
+|                                      | -------------                        |
+|                                      |                                      |
+|                                      | This folder contains .               |
+|                                      | [VFP](VFP_%28file_format%29 "VFP (fi |
+|                                      | le format)")                         |
+|                                      | and .                                |
+|                                      | [VP](VP_%28file_format%29 "VP (file  |
+|                                      | format)")                            |
+|                                      | files which become available for use |
+|                                      | in                                   |
+|                                      | [materials](Material_%28decl%29 "Mat |
+|                                      | erial (decl)")                       |
+|                                      | for [visual special                  |
+|                                      | effects](Vertex_and_fragment_program |
+|                                      | s "Vertex and fragment programs")    |
+|                                      | .                                    |
+|                                      |                                      |
+|                                      | /base/guis                           |
+|                                      | ----------                           |
+|                                      |                                      |
+|                                      | This folder contains .GUI files      |
+|                                      | which setup the [graphical user      |
+|                                      | interfaces](GUIs "GUIs") .           |
+|                                      |                                      |
+|                                      | \                                    |
+|                                      |                                      |
+|                                      | /base/lights                         |
+|                                      | ------------                         |
+|                                      |                                      |
+|                                      | This folder contains .               |
+|                                      | [TGA](TGA_%28file_format%29 "TGA (fi |
+|                                      | le format)")                         |
+|                                      | files which become available for use |
+|                                      | in [light                            |
+|                                      | materials](Material_%28decl%29 "Mate |
+|                                      | rial (decl)")                        |
+|                                      | to create 'light styles' that        |
+|                                      | modulate what light projects onto    |
+|                                      | the surfaces of the world.           |
+|                                      |                                      |
+|                                      | /base/maps                           |
+|                                      | ----------                           |
+|                                      |                                      |
+|                                      | This folder contains the .           |
+|                                      | [MAP](MAP_%28file_format%29 "MAP (fi |
+|                                      | le format)")                         |
+|                                      | , .                                  |
+|                                      | [CM](CM_%28file_format%29 "CM (file  |
+|                                      | format)")                            |
+|                                      | , .                                  |
+|                                      | [PROC](PROC_%28file_format%29 "PROC  |
+|                                      | (file format)")                      |
+|                                      | , and .                              |
+|                                      | [AAS](AAS_%28file_format%29 "AAS (fi |
+|                                      | le format)")                         |
+|                                      | files for each map. Should there be  |
+|                                      | any .BAK files there they should be  |
+|                                      | removed prior to distribution as     |
+|                                      | these are just backup versions       |
+|                                      | created by the [map                  |
+|                                      | editor](Map_editor "Map editor") .   |
+|                                      |                                      |
+|                                      | /base/materials                      |
+|                                      | ---------------                      |
+|                                      |                                      |
+|                                      | This folder contains .MTR files      |
+|                                      | which setup the [material            |
+|                                      | declarations](Material_%28decl%29 "M |
+|                                      | aterial (decl)")                     |
+|                                      | .                                    |
+|                                      |                                      |
+|                                      | /base/models                         |
+|                                      | ------------                         |
+|                                      |                                      |
+|                                      | This folder contains numerous        |
+|                                      | sub-directories where the following  |
+|                                      | file formats can be found:           |
+|                                      |                                      |
+|                                      |  Model formats                       |
+|                                      | :   .                                |
+|                                      |     [ASE](ASE_%28file_format%29 "ASE |
+|                                      |  (file format)")                     |
+|                                      |     , .                              |
+|                                      |     [LWO](LWO_%28file_format%29 "LWO |
+|                                      |  (file format)")                     |
+|                                      |     , .                              |
+|                                      |     [MD5](MD5_%28file_format%29 "MD5 |
+|                                      |  (file format)")                     |
+|                                      |     .                                |
+|                                      |                                      |
+|                                      |  Image formats                       |
+|                                      | :   .                                |
+|                                      |     [TGA](TGA_%28file_format%29 "TGA |
+|                                      |  (file format)")                     |
+|                                      |     , .                              |
+|                                      |     [DDS](DDS_%28file_format%29 "DDS |
+|                                      |  (file format)")                     |
+|                                      |     , .                              |
+|                                      |     [JPG](JPG_%28file_format%29 "JPG |
+|                                      |  (file format)")                     |
+|                                      |     .                                |
+|                                      |                                      |
+|                                      |  Other formats                       |
+|                                      | :   .                                |
+|                                      |     [CM](CM_%28file_format%29 "CM (f |
+|                                      | ile format)")                        |
+|                                      |     .                                |
+|                                      |                                      |
+|                                      | /base/newpdas                        |
+|                                      | -------------                        |
+|                                      |                                      |
+|                                      | /base/particles                      |
+|                                      | ---------------                      |
+|                                      |                                      |
+|                                      | /base/script                         |
+|                                      | ------------                         |
+|                                      |                                      |
+|                                      | /base/skins                          |
+|                                      | -----------                          |
+|                                      |                                      |
+|                                      | This folder contains .SKIN files     |
+|                                      | which setup the [skin                |
+|                                      | declarations](Skin_%28decl%29 "Skin  |
+|                                      | (decl)")                             |
+|                                      | .                                    |
+|                                      |                                      |
+|                                      | /base/sound                          |
+|                                      | -----------                          |
+|                                      |                                      |
+|                                      | /base/strings                        |
+|                                      | -------------                        |
+|                                      |                                      |
+|                                      | This folder contains .               |
+|                                      | [LANG](LANG_%28file_format%29 "LANG  |
+|                                      | (file format)")                      |
+|                                      | files which are used for             |
+|                                      | localization. The engine loads all   |
+|                                      | of the files from this folder and    |
+|                                      | parses the numbered strings within   |
+|                                      | these files to make them available   |
+|                                      | to the code, [GUIs](GUIs "GUIs") and |
+|                                      | [maps](Mapping "Mapping") .          |
+|                                      |                                      |
+|                                      | /base/textures                       |
+|                                      | --------------                       |
+|                                      |                                      |
+|                                      | This folder contains .               |
+|                                      | [TGA](TGA_%28file_format%29 "TGA (fi |
+|                                      | le format)")                         |
+|                                      | or .                                 |
+|                                      | [JPG](JPG_%28file_format%29 "JPG (fi |
+|                                      | le format)")                         |
+|                                      | files which become available for use |
+|                                      | as assets in [material               |
+|                                      | declarations](Material_%28decl%29 "M |
+|                                      | aterial (decl)")                     |
+|                                      | .                                    |
+|                                      |                                      |
+|                                      | /base/ui                             |
+|                                      | --------                             |
+|                                      |                                      |
+|                                      | This folder contains .               |
+|                                      | [TGA](TGA_%28file_format%29 "TGA (fi |
+|                                      | le format)")                         |
+|                                      | files used in the user interface.    |
+|                                      |                                      |
+|                                      | /base/video                          |
+|                                      | -----------                          |
+|                                      |                                      |
+|                                      | This folder contains .               |
+|                                      | [ROQ](ROQ_%28file_format%29 "ROQ (fi |
+|                                      | le format)")                         |
+|                                      | files which are movies.              |
+|                                      |                                      |
+|                                      | \                                    |
++--------------------------------------+--------------------------------------+
 
 

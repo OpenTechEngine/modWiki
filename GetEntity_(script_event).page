@@ -1,16 +1,10 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: GetEntity
-...
-GetEntity (script event)
-========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type [idThread](Thread\_(scripting)), accessible via [sys](Scripting\_basics#sys) identifier.
+This event operates on an instance of the [game
+class](Game_class "Game class") type
+[idThread](Thread_%28scripting%29 "Thread (scripting)") , accessible via
+[sys](Scripting_basics#sys "Scripting basics") identifier.
 
 Description
 -----------
@@ -20,7 +14,8 @@ Returns a reference to the entity with the specified name.
 Usage
 -----
 
-*[entity](Data\_types#entity)* getEntity( *[string](Data\_types#string)* **name** )
+*[entity](Data_types#entity "Data types")* getEntity(
+*[string](Data_types#string "Data types")* **name** )
 
 Parameters
 ----------
@@ -30,12 +25,15 @@ Parameters
 Examples
 --------
 
-` `
-`ent = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`getEntity`</font><font color="#000000">`(`</font><font color="#666666">`"func_door_1"`</font><font color="#000000">`)`</font>`;`
+     
+    ent = sys.getEntity("func_door_1");
 
 Notes
 -----
 
-This script event returns the entity that matches the given name or [null]($null\_entity\_(scripting)) if not found.
+This script event returns the entity that matches the given name or
+[null](%24null_entity_%28scripting%29 "$null entity (scripting)") if not
+found.
 
+\
 

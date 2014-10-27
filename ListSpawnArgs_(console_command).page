@@ -1,23 +1,15 @@
----
-format: Markdown
-categories: console_command
-toc: yes
-title: ListSpawnArgs
-...
-ListSpawnArgs (console command)
-===============================
-
 Description
 -----------
 
-This command will list the key/value pairs a.k.a. spawn arguments for the specified entity.
+This command will list the key/value pairs a.k.a. spawn arguments for
+the specified entity.
 
 Usage
 -----
 
 At the console type...
 
-`listSpawnArgs [entity]`
+    listSpawnArgs [entity]
 
 Parameters
 ----------
@@ -29,4 +21,5 @@ Notes
 
 None.
 
+\
 

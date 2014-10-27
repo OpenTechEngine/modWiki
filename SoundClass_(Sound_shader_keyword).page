@@ -1,27 +1,8 @@
----
-format: Markdown
-categories: Sound_shader_keyword
-toc: yes
-title: SoundClass
-...
-SoundClass (Sound shader keyword)
-=================================
-
-|----------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                    
- Contents                                                                                                                                
- --------                                                                                                                                
-                                                                                                                                         
- </div>                                                                                                                                  
- -   [<span class="tocnumber">1</span> <span class="toctext">Description</span>](SoundClass\_(Sound\_shader\_keyword)#Description)  
- -   [<span class="tocnumber">2</span> <span class="toctext">Usage</span>](SoundClass\_(Sound\_shader\_keyword)#Usage)              
- -   [<span class="tocnumber">3</span> <span class="toctext">Example</span>](SoundClass\_(Sound\_shader\_keyword)#Example)          
- -   [<span class="tocnumber">4</span> <span class="toctext">Notes</span>](SoundClass\_(Sound\_shader\_keyword)#Notes)              |
-
 Description
 -----------
 
-Sound classes are used to fade most sounds down inside cinematics, leaving dialog flagged with a non-zero class full volume
+Sound classes are used to fade most sounds down inside cinematics,
+leaving dialog flagged with a non-zero class full volume
 
 Usage
 -----

@@ -1,21 +1,14 @@
----
-format: Markdown
-categories: Material_stage_keyword
-toc: yes
-title: Nopicmip
-...
-Nopicmip (Material stage keyword)
-=================================
-
 Description
 -----------
 
-The **nopicmip** keyword causes this stage to ignore the effects of the CVar [image\_downSize](Image\_downSize\_(cvar)).
+The **nopicmip** keyword causes this stage to ignore the effects of the
+CVar
+[image\_downSize](Image_downSize_%28cvar%29 "Image downSize (cvar)") .
 
 Usage
 -----
 
-`nopicmip`
+    nopicmip
 
 Parameters
 ----------
@@ -32,4 +25,5 @@ Notes
 
 Not available.
 
+\
 

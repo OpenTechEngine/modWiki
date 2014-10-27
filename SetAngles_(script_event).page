@@ -1,21 +1,14 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: SetAngles
-...
-SetAngles (script event)
-========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Sets the current orientation of this entity (relative to bind parent if any).
+Sets the current orientation of this entity (relative to bind parent if
+any).
 
 Usage
 -----
@@ -30,11 +23,12 @@ Parameters
 Examples
 --------
 
-<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`setAngles`</font><font color="#000000">`(`</font>` '`<font color="#0000dd">`20`</font>` `<font color="#0000dd">`51`</font>` `<font color="#0000dd">`42`</font>`' `<font color="#000000">`)`</font>`;`
+    $my_entity.setAngles( '20 51 42' );
 
 Notes
 -----
 
 This script event does not return any values.
 
+\
 

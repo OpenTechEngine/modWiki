@@ -1,0 +1,46 @@
+[idAI](Src/game/ai/AI.cpp_%28source_file%29 "Src/game/ai/AI.cpp (source file)") ::PointReachableAreaNum
+-------------------------------------------------------------------------------------------------------
+
+This method is a wrapper around what eventually leads to an engine call
+of the same name. it will do some prep work setting up and idBounds and
+travel flags and call into
+[idAASLocal::PointReachableAreaNum](IdAASLocal::PointReachableAreaNum "IdAASLocal::PointReachableAreaNum")
+
+     
+    /*
+    =====================
+    idAI::PointReachableAreaNum
+    =====================
+    */
+    int idAI::PointReachableAreaNum( const idVec3 &pos, const float boundsScale ) const {
+        int areaNum;
+        idVec3 size;
+        idBounds bounds;
+     
+        if ( !aas ) {
+            return 0;
+        }
+        // set up the bounding box that is used for reachability
+        size = aas->GetSettings()->boundingBoxes[0][1] * boundsScale;
+        bounds[0] = -size;
+        size.z = 32.0f;
+        bounds[1] = size;
+     
+        if ( move.moveType == MOVETYPE_FLY ) {
+            areaNum = aas->PointReachableAreaNum( pos, bounds, AREA_REACHABLE_WALK | AREA_REACHABLE_FLY );
+        } else {
+            // get 
+            areaNum = aas->PointReachableAreaNum( pos, bounds, AREA_REACHABLE_WALK );
+        }
+     
+        return areaNum;
+    }
+
+Here is what brian at iddevnet had to say about PointReachableAreaNum
+
+It returns the closest reachable area to the specified point. If the
+point is in a reachable area already, it just returns that point,
+otherwise (for example if the given point is outside the world or inside
+some geometry) it will scan the bounding box given searching for
+reachable areas.
+

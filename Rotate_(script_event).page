@@ -1,21 +1,14 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: Rotate
-...
-Rotate (script event)
-=====================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-This function causes an entity to continuously rotate N degrees in one second.
+This function causes an entity to continuously rotate N degrees in one
+second.
 
 Usage
 -----
@@ -25,16 +18,27 @@ Usage
 Parameters
 ----------
 
-[rotateAxis] - The axis around which the entity will rotate in order Y Z X.
+[rotateAxis] - The axis around which the entity will rotate in order Y Z
+X.
 
 Examples
 --------
 
-<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`rotate`</font><font color="#000000">`(`</font>` '`<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>` `<font color="#0000dd">`90`</font>`' `<font color="#000000">`)`</font>`;`
+    $my_entity.rotate( '0 0 90' );
 
 Notes
 -----
 
-This script event does not return any values. This event differs from [rotateOnce](RotateOnce\_(script\_event)) in that rotate will force an entity to continuing rotating for the duration of the game. The above example will cause the entity to complete a 90 degree rotation on the x-axis in one second then repeat endlessly. The [time](Time\_(script\_event)) function has no effect here except in combination with something like [decelTime](DecelTime\_(script\_event)) when the time value will then define the duration that the entity continues to rotate.
+This script event does not return any values. This event differs from
+[rotateOnce](RotateOnce_%28script_event%29 "RotateOnce (script event)")
+in that rotate will force an entity to continuing rotating for the
+duration of the game. The above example will cause the entity to
+complete a 90 degree rotation on the x-axis in one second then repeat
+endlessly. The [time](Time_%28script_event%29 "Time (script event)")
+function has no effect here except in combination with something like
+[decelTime](DecelTime_%28script_event%29 "DecelTime (script event)")
+when the time value will then define the duration that the entity
+continues to rotate.
 
+\
 

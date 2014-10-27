@@ -1,31 +1,27 @@
----
-format: Markdown
-categories: GUI_item_property
-toc: yes
-title: Step
-...
-Step (GUI item property)
-========================
-
 ??
 
-This is synonym to the [stepsize](Stepsize\_(GUI\_item\_property)) property.
+This is synonym to the
+[stepsize](Stepsize_%28GUI_item_property%29 "Stepsize (GUI item property)")
+property.
 
-This property is restricted to the [sliderDef](SliderDef\_(GUI\_item\_type)) item type.
+This property is restricted to the
+[sliderDef](SliderDef_%28GUI_item_type%29 "SliderDef (GUI item type)")
+item type.
 
 Syntax
 ------
 
-`step `*`value`*
+    step value
 
 Default value
 -------------
 
-`Unknown`
+    Unknown
 
 Example(s)
 ----------
 
-`step   0.5`
+    step 0.5
 
+\
 

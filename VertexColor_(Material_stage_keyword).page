@@ -1,21 +1,13 @@
----
-format: Markdown
-categories: Material_stage_keyword
-toc: yes
-title: VertexColor
-...
-VertexColor (Material stage keyword)
-====================================
-
 Description
 -----------
 
-The *vertexColor* keyword instructs the engine to multiply the given stage by the vertex color of the mesh to which the material is applied.
+The *vertexColor* keyword instructs the engine to multiply the given
+stage by the vertex color of the mesh to which the material is applied.
 
 Usage
 -----
 
-`vertexColor`
+    vertexColor
 
 Parameters
 ----------
@@ -25,44 +17,51 @@ This keyword does not accept parameters.
 Example
 -------
 
-The following stage will take the vertex color of the mesh into account...
+The following stage will take the vertex color of the mesh into
+account...
 
-`{`
-` map           textures/custom/image1`
-` vertexColor`
-`}`
+    {
+     map           textures/custom/image1
+     vertexColor
+    }
 
 Notes
 -----
 
 This keyword uses color math where...
 
-`[Image Map] x [Vertex Color] = [Result]`
+    [Image Map] x [Vertex Color] = [Result]
 
-So for each texel across the surface of a mesh, the color of the image map and vertex color are sampled and then a result is calculated.
+So for each texel across the surface of a mesh, the color of the image
+map and vertex color are sampled and then a result is calculated.
 
 So using the above formula here are some examples...
 
-`1.0 x 1.0  = 1.0`
-`1.0 x 0.75 = 0.75`
-`1.0 x 0.5  = 0.5`
-`0.5 x 1.0  = 0.5`
-`0.5 x 0.75 = 0.375`
-`0.5 x 0.5  = 0.25`
+    1.0 x 1.0  = 1.0
+    1.0 x 0.75 = 0.75
+    1.0 x 0.5  = 0.5
+    0.5 x 1.0  = 0.5
+    0.5 x 0.75 = 0.375
+    0.5 x 0.5  = 0.25
 
-Generally speaking, as the vertex color shifts from white to black, the image map will darken. If the vertex color is white, result is the same as the image map. If the vertex color is black, the result is black.
+Generally speaking, as the vertex color shifts from white to black, the
+image map will darken. If the vertex color is white, result is the same
+as the image map. If the vertex color is black, the result is black.
 
-This keyword is commonly used in conjunction with inverseVertexColor to create a material that blends between two textures based on vertex color. A very basic example would be like so...
+This keyword is commonly used in conjunction with inverseVertexColor to
+create a material that blends between two textures based on vertex
+color. A very basic example would be like so...
 
-`{`
-` blend         add`
-` map           textures/custom/image1`
-` vertexColor`
-`}`
-`{`
-` blend         add`
-` map           textures/custom/image2`
-` inverseVertexColor`
-`}`
+    {
+     blend         add
+     map           textures/custom/image1
+     vertexColor
+    }
+    {
+     blend         add
+     map           textures/custom/image2
+     inverseVertexColor
+    }
 
+\
 

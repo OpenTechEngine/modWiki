@@ -1,23 +1,16 @@
----
-format: Markdown
-categories: cvar
-toc: yes
-title: Image_useOfflineCompression
-...
-Image useOfflineCompression (cvar)
-==================================
-
 Description
 -----------
 
-Enables writing a batch file for offline compression of .[DDS](DDS\_(file\_format)) and .[OGG](OGG\_(file\_format)) files.
+Enables writing a batch file for offline compression of .
+[DDS](DDS_%28file_format%29 "DDS (file format)") and .
+[OGG](OGG_%28file_format%29 "OGG (file format)") files.
 
 Usage
 -----
 
 At the console type...
 
-`image_useOfflineCompression [Boolean]`
+    image_useOfflineCompression [Boolean]
 
 Parameters
 ----------
@@ -29,32 +22,70 @@ Parameters
 Flags
 -----
 
-| Flag              | Enabled | Description                                  |
-|-------------------|---------|----------------------------------------------|
-| CVAR\_ALL         |         | all flags                                    |
-| CVAR\_BOOL        | X       | variable is a boolean                        |
-| CVAR\_INTEGER     |         | variable is an integer                       |
-| CVAR\_FLOAT       |         | variable is a float                          |
-| CVAR\_SYSTEM      |         | system variable                              |
-| CVAR\_RENDERER    | X       | renderer variable                            |
-| CVAR\_SOUND       |         | sound variable                               |
-| CVAR\_GUI         |         | gui variable                                 |
-| CVAR\_GAME        |         | game variable                                |
-| CVAR\_TOOL        |         | tool variable                                |
-| CVAR\_USERINFO    |         | sent to servers, available to menu           |
-| CVAR\_SERVERINFO  |         | sent from servers, available to menu         |
-| CVAR\_NETWORKSYNC |         | cvar is synced from the server to clients    |
-| CVAR\_STATIC      | X       | statically declared, not user created        |
-| CVAR\_CHEAT       | X       | variable is considered a cheat               |
-| CVAR\_NOCHEAT     |         | variable is not considered a cheat           |
-| CVAR\_INIT        |         | can only be set from the command-line        |
-| CVAR\_ROM         |         | display only, cannot be set by user at all   |
-| CVAR\_ARCHIVE     |         | set to cause it to be saved to a config file |
-| CVAR\_MODIFIED    | X       | set when the variable is modified            |
+  --------------------------------------------------------------------------
+  Flag                     Enabled                  Description
+  ------------------------ ------------------------ ------------------------
+  CVAR\_ALL                                         all flags
+
+  CVAR\_BOOL               X                        variable is a boolean
+
+  CVAR\_INTEGER                                     variable is an integer
+
+  CVAR\_FLOAT                                       variable is a float
+
+  CVAR\_SYSTEM                                      system variable
+
+  CVAR\_RENDERER           X                        renderer variable
+
+  CVAR\_SOUND                                       sound variable
+
+  CVAR\_GUI                                         gui variable
+
+  CVAR\_GAME                                        game variable
+
+  CVAR\_TOOL                                        tool variable
+
+  CVAR\_USERINFO                                    sent to servers,
+                                                    available to menu
+
+  CVAR\_SERVERINFO                                  sent from servers,
+                                                    available to menu
+
+  CVAR\_NETWORKSYNC                                 cvar is synced from the
+                                                    server to clients
+
+  CVAR\_STATIC             X                        statically declared, not
+                                                    user created
+
+  CVAR\_CHEAT              X                        variable is considered a
+                                                    cheat
+
+  CVAR\_NOCHEAT                                     variable is not
+                                                    considered a cheat
+
+  CVAR\_INIT                                        can only be set from the
+                                                    command-line
+
+  CVAR\_ROM                                         display only, cannot be
+                                                    set by user at all
+
+  CVAR\_ARCHIVE                                     set to cause it to be
+                                                    saved to a config file
+
+  CVAR\_MODIFIED           X                        set when the variable is
+                                                    modified
+  --------------------------------------------------------------------------
 
 Notes
 -----
 
-This CVar by itself is not very useful and has to be used with the [com\_makingBuild](Com\_makingBuild\_(cvar)) CVar and the startbuild and [map](Map\_(console\_command)) console commands. See the [modding](Modding) page for a wholesome use of this CVar.
+This CVar by itself is not very useful and has to be used with the
+[com\_makingBuild](Com_makingBuild_%28cvar%29 "Com makingBuild (cvar)")
+CVar and the
+[startbuild](Startbuild_%28console_command%29 "Startbuild (console command)")
+and [map](Map_%28console_command%29 "Map (console command)") console
+commands. See the [modding](Modding "Modding") page for a wholesome use
+of this CVar.
 
+\
 

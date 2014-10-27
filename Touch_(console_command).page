@@ -1,23 +1,15 @@
----
-format: Markdown
-categories: console_command
-toc: yes
-title: Touch
-...
-Touch (console command)
-=======================
-
 Description
 -----------
 
-This command will verify the specified declaration exists and/or is loaded.
+This command will verify the specified declaration exists and/or is
+loaded.
 
 Usage
 -----
 
 At the console type...
 
-`touch [type] [name]`
+    touch [type] [name]
 
 Parameters
 ----------
@@ -28,6 +20,8 @@ Parameters
 Notes
 -----
 
-This command will only return results if the specified declaration cannot be found in memory.
+This command will only return results if the specified declaration
+cannot be found in memory.
 
+\
 

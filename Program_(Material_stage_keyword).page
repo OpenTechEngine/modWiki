@@ -1,43 +1,41 @@
----
-format: Markdown
-categories: Material_stage_keyword
-toc: yes
-title: Program
-...
-Program (Material stage keyword)
-================================
-
 Description
 -----------
 
-The **program** keyword is an alias for the keywords [fragmentProgram](FragmentProgram\_(Material\_stage\_keyword)) and [vertexProgram](VertexProgram\_(Material\_stage\_keyword)).
+The **program** keyword is an alias for the keywords
+[fragmentProgram](FragmentProgram_%28Material_stage_keyword%29 "FragmentProgram (Material stage keyword)")
+and
+[vertexProgram](VertexProgram_%28Material_stage_keyword%29 "VertexProgram (Material stage keyword)")
+.
 
 Usage
 -----
 
-`program [prog]`
+    program [prog]
 
 Parameters
 ----------
 
--   [prog] = The vfp file containing both the vertex and fragment programs to exectute.
+-   [prog] = The vfp file containing both the vertex and fragment
+    programs to exectute.
 
 Example
 -------
 
-Distorts the current frame using the normal map helmet\_local.tga and heatHazeWithMaskAndVertex.vfp...
+Distorts the current frame using the normal map helmet\_local.tga and
+heatHazeWithMaskAndVertex.vfp...
 
-`{`
-`   program         heatHazeWithMaskAndVertex.vfp`
-`   vertexParm      0               0                                          // texture scrolling`
-`   vertexParm      1               10                                         // magnitude of the distortion`
-`   fragmentMap     0               _currentRender`
-`   fragmentMap     1               models/characters/sarge2/helmet_local.tga  // the normal map for distortion`
-`}`
+    {
+       program         heatHazeWithMaskAndVertex.vfp
+       vertexParm      0               0                                          // texture scrolling
+       vertexParm      1               10                                         // magnitude of the distortion
+       fragmentMap     0               _currentRender
+       fragmentMap     1               models/characters/sarge2/helmet_local.tga  // the normal map for distortion
+    }
 
 Notes
 -----
 
 Not available.
 
+\
 

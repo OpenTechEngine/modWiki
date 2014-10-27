@@ -1,15 +1,24 @@
----
-format: Markdown
-categories: Entity
-toc: yes
-title: Func_tramGateDoor1
-...
-Func tramGateDoor1 (entity)
-===========================
+<div class="plainlinks"
+style="border: 1px grey solid; padding: 0.25em;">
 
-> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
+help by verifying and
+[completing](Func_tramGateDoor1_%28entity%29 "http://modwiki.net/w/index.php?title=Func_tramGateDoor1_%28entity%29&action=edit")
+the info on this page.*
 
-> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+</div>
+
+<div id="stub" class="boilerplate metadata">
+
+*This article is a
+[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
+. You can help us by <span class="plainlinks"> [expanding
+it](Func_tramGateDoor1_%28entity%29 "http://modwiki.net/w/index.php?title=Func_tramGateDoor1_%28entity%29&action=edit")
+</span> .*
+
+</div>
+
+\
 
 Description
 -----------
@@ -19,87 +28,88 @@ Door.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+The following is a list of key/value pairs, also known as spawn
+arguments, that function with this entity.\
 
-| KEY                   | DESCRIPTION                                        |
-|-----------------------|----------------------------------------------------|
-| angle                 | determines the opening direction.                  |
-| anim                  | Description not available.                         |
-| bind                  | Description not available.                         |
-| bindOrientated        | Description not available.                         |
-| bindToBody            | Description not available.                         |
-| bindToJoint           | Description not available.                         |
-| bindanim              | Description not available.                         |
-| cameraTarget          | Description not available.                         |
-| cinematic             | Description not available.                         |
-| classname             | Description not available.                         |
-| clipmodel             | Description not available.                         |
-| cone                  | Description not available.                         |
-| crusher               | Description not available.                         |
-| cylinder              | Description not available.                         |
-| def\_persona          | Description not available.                         |
-| dmg                   | damage to inflict when blocked.                    |
-| dodecahedron          | Description not available.                         |
-| editor\_bool XXXX     | Description not available.                         |
-| editor\_color         | Description not available.                         |
-| editor\_ignore        | Description not available.                         |
-| editor\_maxs          | Description not available.                         |
-| editor\_mins          | Description not available.                         |
-| editor\_mover         | Description not available.                         |
-| editor\_snd XXXX      | Description not available.                         |
-| editor\_usage         | Door.                                              |
-| editor\_var XXXX      | Description not available.                         |
-| guiTarget             | Description not available.                         |
-| health                | if set, the door must be shot open.                |
-| hide                  | Description not available.                         |
-| hidesurface           | Description not available.                         |
-| inherit               | Description not available.                         |
-| instance              | Description not available.                         |
-| lip                   | lip remaining at end of move.                      |
-| maxs                  | Description not available.                         |
-| mins                  | Description not available.                         |
-| model                 | Description not available.                         |
-| name                  | Description not available.                         |
-| networkSync           | Description not available.                         |
-| neverDormant          | Description not available.                         |
-| no\_touch             | Description not available.                         |
-| noclipmodel           | Description not available.                         |
-| origin                | Description not available.                         |
-| rotation              | Description not available.                         |
-| scriptobject          | Description not available.                         |
-| shadow\_lod\_distance | Description not available.                         |
-| size                  | Description not available.                         |
-| snd\_close            | Description not available.                         |
-| snd\_closed           | Description not available.                         |
-| snd\_locked           | Description not available.                         |
-| snd\_open             | Description not available.                         |
-| snd\_opened           | Description not available.                         |
-| snd\_unlocked         | Description not available.                         |
-| solidForTeam          | Description not available.                         |
-| spawnclass            | Description not available.                         |
-| speed                 | movement speed.                                    |
-| start\_open           | Description not available.                         |
-| target                | Description not available.                         |
-| this XXXX             | Description not available.                         |
-| triggerSize           | Description not available.                         |
-| trigger\_anim         | Description not available.                         |
-| triggersize           | sets the amount the trigger extends from the door. |
-| usable                | Description not available.                         |
-| wait                  | Description not available.                         |
+  KEY                     DESCRIPTION
+  ----------------------- ----------------------------------------------------
+  angle                   determines the opening direction.
+  anim                    Description not available.
+  bind                    Description not available.
+  bindOrientated          Description not available.
+  bindToBody              Description not available.
+  bindToJoint             Description not available.
+  bindanim                Description not available.
+  cameraTarget            Description not available.
+  cinematic               Description not available.
+  classname               Description not available.
+  clipmodel               Description not available.
+  cone                    Description not available.
+  crusher                 Description not available.
+  cylinder                Description not available.
+  def\_persona            Description not available.
+  dmg                     damage to inflict when blocked.
+  dodecahedron            Description not available.
+  editor\_bool XXXX       Description not available.
+  editor\_color           Description not available.
+  editor\_ignore          Description not available.
+  editor\_maxs            Description not available.
+  editor\_mins            Description not available.
+  editor\_mover           Description not available.
+  editor\_snd XXXX        Description not available.
+  editor\_usage           Door.
+  editor\_var XXXX        Description not available.
+  guiTarget               Description not available.
+  health                  if set, the door must be shot open.
+  hide                    Description not available.
+  hidesurface             Description not available.
+  inherit                 Description not available.
+  instance                Description not available.
+  lip                     lip remaining at end of move.
+  maxs                    Description not available.
+  mins                    Description not available.
+  model                   Description not available.
+  name                    Description not available.
+  networkSync             Description not available.
+  neverDormant            Description not available.
+  no\_touch               Description not available.
+  noclipmodel             Description not available.
+  origin                  Description not available.
+  rotation                Description not available.
+  scriptobject            Description not available.
+  shadow\_lod\_distance   Description not available.
+  size                    Description not available.
+  snd\_close              Description not available.
+  snd\_closed             Description not available.
+  snd\_locked             Description not available.
+  snd\_open               Description not available.
+  snd\_opened             Description not available.
+  snd\_unlocked           Description not available.
+  solidForTeam            Description not available.
+  spawnclass              Description not available.
+  speed                   movement speed.
+  start\_open             Description not available.
+  target                  Description not available.
+  this XXXX               Description not available.
+  triggerSize             Description not available.
+  trigger\_anim           Description not available.
+  triggersize             sets the amount the trigger extends from the door.
+  usable                  Description not available.
+  wait                    Description not available.
 
 Inheritance
 -----------
 
 This entity is derived from the following:
 
--   '' idEntity''
-    -   '' idMover\_Binary''
-        -   '' idDoor''
-            -   [func\_door](Func\_door\_(entity))
-                -   [func\_tramGateDoor](Func\_tramGateDoor\_(entity))
-                    -   *' func\_tramGateDoor1*'
+-   *[idEntity](IdEntity_%28class%29 "IdEntity (class)")*
+    -   *[idMover\_Binary](IdMover_Binary_%28class%29 "IdMover Binary (class)")*
+        -   *[idDoor](IdDoor_%28class%29 "IdDoor (class)")*
+            -   [func\_door](Func_door_%28entity%29 "Func door (entity)")
+                -   [func\_tramGateDoor](Func_tramGateDoor_%28entity%29 "Func tramGateDoor (entity)")
+                    -   **func\_tramGateDoor1**
 
-**Note**: Entries marked in italics are classes defined in the SDK.
+**Note** : Entries marked in italics are classes defined in the SDK.
 
 Notes
 -----

@@ -1,51 +1,50 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: How_to_add_custom_console_commands.page
-...
-How to add custom console commands
-==================================
-
 Introduction
 ------------
 
-This is a quick tutorial demonstrating how to add custom [commands](Console) to the console.
+This is a quick tutorial demonstrating how to add custom
+[commands](Console "Console") to the console.
 
 Adding the function to Doom 3
 -----------------------------
 
-Open up src/game/gamesys/SysCmds.cpp (source file). The largest thing to note is near the bottom:
+Open up [src/game/gamesys/SysCmds.cpp (source
+file)](Src/game/gamesys/SysCmds.cpp_%28source_file%29 "Src/game/gamesys/SysCmds.cpp (source file)")
+. The largest thing to note is near the bottom:
 
-<font color="#0000ff">`void`</font>` idGameLocal::`<font color="#00aabb">`InitConsoleCommands`</font><font color="#000000">`(`</font>` `<font color="#0000ff">`void`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
+    void idGameLocal::InitConsoleCommands( void ) {
 
-Inside here, there are many calls to cmdSystem-\>AddCommand. Pick a line, and add one of your own.
+Inside here, there are many calls to cmdSystem-\>AddCommand. Pick a
+line, and add one of your own.
 
-`cmdSystem->AddCommand`<font color="#000000">`(`</font>` `<font color="#666666">`"testcommand"`</font>`, Cmd_testcommand, CMD_FL_GAME, `<font color="#666666">`"test command"`</font>` `<font color="#000000">`)`</font>`;`
+    cmdSystem->AddCommand( "testcommand", Cmd_testcommand, CMD_FL_GAME, "test command" );
 
 The parameters are as follows:
 
-`cmdSystem->AddCommand`<font color="#000000">`(`</font>` <name of command to be used in the Doom `<font color="#0000dd">`3`</font>` console>, <the name of the C++ function to be called>, <Various flags>, <description of command>`
+    cmdSystem->AddCommand( <name of command to be used in the Doom 3 console>, <the name of the C++ function to be called>, <Various flags>, <description of command>
 
-The two exampled flags in the file are CMD\_FL\_GAME and CMD\_FL\_CHEAT. Use CMD\_FL\_GAME for everything, and bitwise OR ( | ) it with CMD\_FL\_CHEAT for anything that allows the player to cheat. If anyone knows any more about these flags, please update the wiki!
+The two exampled flags in the file are CMD\_FL\_GAME and CMD\_FL\_CHEAT.
+Use CMD\_FL\_GAME for everything, and bitwise OR ( | ) it with
+CMD\_FL\_CHEAT for anything that allows the player to
+[cheat](Cheat "Cheat") . If anyone knows any more about these flags,
+please update the wiki!
 
 Writing the function
 --------------------
 
 Now, scroll up a bit, and add your own function.
 
-<font color="#0000ff">`void`</font>` Cmd_testcommand `<font color="#000000">`(`</font>` `<font color="#0000ff">`const`</font>` idCmdArgs &args `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-` `
-` common->Printf`<font color="#000000">`(`</font><font color="#666666">`"This is an example!"`</font><font color="#000000">`)`</font>`;`
-` `
-` `<font color="#000000">`}`</font>
+    void Cmd_testcommand ( const idCmdArgs &args ) {
+     
+     common->Printf("This is an example!");
+     
+     }
 
-Arguments to functions are counted with args.Argc() and referenced using args.Argv();
+Arguments to functions are counted with args.Argc() and referenced using
+args.Argv();
 
-<font color="#0000ff">`void`</font>` Cmd_testcommand `<font color="#000000">`(`</font>` `<font color="#0000ff">`const`</font>` idCmdArgs &args`<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-` `
-` common->Printf`<font color="#000000">`(`</font>`args.`<font color="#00aabb">`Argc`</font><font color="#000000">`(`</font><font color="#000000">`)`</font><font color="#000000">`)`</font>`;`
-` common->Printf`<font color="#000000">`(`</font>`args.`<font color="#00aabb">`Argv`</font><font color="#000000">`(`</font>` `<font color="#0000dd">`1`</font>` `<font color="#000000">`)`</font>`;`
-` `
-` `<font color="#000000">`}`</font>
-
+    void Cmd_testcommand ( const idCmdArgs &args) {
+     
+     common->Printf(args.Argc());
+     common->Printf(args.Argv( 1 );
+     
+     }

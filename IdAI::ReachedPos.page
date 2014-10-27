@@ -1,0 +1,34 @@
+bool idAI::ReachedPos( const idVec3 &pos, const moveCommand\_t moveCommand ) const
+----------------------------------------------------------------------------------
+
+Not much here, a collision detection algorithm.
+
+     
+    /*
+    =====================
+    idAI::ReachedPos
+    =====================
+    */
+    // tests for collision detection with destination
+    bool idAI::ReachedPos( const idVec3 &pos, const moveCommand_t moveCommand ) const {
+        if ( move.moveType == MOVETYPE_SLIDE ) {
+            idBounds bnds( idVec3( -4, -4.0f, -8.0f ), idVec3( 4.0f, 4.0f, 64.0f ) );
+            bnds.TranslateSelf( physicsObj.GetOrigin() ); 
+            if ( bnds.ContainsPoint( pos ) ) {
+                return true;
+            }
+        } else {
+            if ( ( moveCommand == MOVE_TO_ENEMY ) || ( moveCommand == MOVE_TO_ENTITY ) ) {
+                if ( physicsObj.GetAbsBounds().IntersectsBounds( idBounds( pos ).Expand( 8.0f ) ) ) {
+                    return true;
+                }
+            } else {
+                idBounds bnds( idVec3( -16.0, -16.0f, -8.0f ), idVec3( 16.0, 16.0f, 64.0f ) );
+                bnds.TranslateSelf( physicsObj.GetOrigin() ); 
+                if ( bnds.ContainsPoint( pos ) ) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }

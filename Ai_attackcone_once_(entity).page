@@ -1,15 +1,24 @@
----
-format: Markdown
-categories: Entity
-toc: yes
-title: Ai_attackcone_once
-...
-Ai attackcone once (entity)
-===========================
+<div class="plainlinks"
+style="border: 1px grey solid; padding: 0.25em;">
 
-> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
+help by verifying and
+[completing](Ai_attackcone_once_%28entity%29 "http://www.modwiki.net/w/index.php?title=Ai_attackcone_once_%28entity%29&action=edit")
+the info on this page.*
 
-> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+</div>
+
+<div id="stub" class="boilerplate metadata">
+
+*This article is a
+[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
+. You can help us by <span class="plainlinks"> [expanding
+it](Ai_attackcone_once_%28entity%29 "http://www.modwiki.net/w/index.php?title=Ai_attackcone_once_%28entity%29&action=edit")
+</span> .*
+
+</div>
+
+\
 
 Description
 -----------
@@ -17,75 +26,141 @@ Description
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+The following is a list of key/value pairs, also known as spawn
+arguments, that function with this entity.\
 
-| KEY                | DESCRIPTION                                                                                                                                  |
-|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| angle              | Description not available.                                                                                                                   |
-| anim               | Animation prefix for attack type                                                                                                             |
-| bind               | Description not available.                                                                                                                   |
-| bindOrientated     | Description not available.                                                                                                                   |
-| bindToBody         | Description not available.                                                                                                                   |
-| bindToJoint        | Description not available.                                                                                                                   |
-| bindanim           | Description not available.                                                                                                                   |
-| cameraTarget       | Description not available.                                                                                                                   |
-| cinematic          | Description not available.                                                                                                                   |
-| classname          | Description not available.                                                                                                                   |
-| clipmodel          | Description not available.                                                                                                                   |
-| cone               | Description not available.                                                                                                                   |
-| cylinder           | Description not available.                                                                                                                   |
-| editor\_color      | Description not available.                                                                                                                   |
-| editor\_combatnode | Description not available.                                                                                                                   |
-| editor\_copy1      | Description not available.                                                                                                                   |
-| editor\_copy2      | Description not available.                                                                                                                   |
-| editor\_copy3      | Description not available.                                                                                                                   |
-| editor\_copy4      | Description not available.                                                                                                                   |
-| editor\_copy5      | Description not available.                                                                                                                   |
-| editor\_maxs       | Description not available.                                                                                                                   |
-| editor\_mins       | Description not available.                                                                                                                   |
-| editor\_usage      |                                                                                                                                              |
-| editor\_var XXXX   | Description not available.                                                                                                                   |
-| fov                | Angle width of the cone                                                                                                                      |
-| guiTarget          | Description not available.                                                                                                                   |
-| health             | Description not available.                                                                                                                   |
-| height             | Specifies the Z height of the cone centered around the origin of the entity. This means it goes down half the height and up half the height. |
-| hide               | Description not available.                                                                                                                   |
-| max                | Maximum distance player can be from node                                                                                                     |
-| max\_wait          | Maximum amount of time to wait between attacks                                                                                               |
-| maxs               | Description not available.                                                                                                                   |
-| min                | Minimum distance player can be from node                                                                                                     |
-| min\_wait          | Minimum amount of time to wait between attacks                                                                                               |
-| mins               | Description not available.                                                                                                                   |
-| model              | Description not available.                                                                                                                   |
-| name               | Description not available.                                                                                                                   |
-| networkSync        | Description not available.                                                                                                                   |
-| neverDormant       | Description not available.                                                                                                                   |
-| noGrab             | Description not available.                                                                                                                   |
-| noclipmodel        | Description not available.                                                                                                                   |
-| num\_shots         | Max number of shots to fire per attack                                                                                                       |
-| offset             | Vector amount to offset cone from origin of entity                                                                                           |
-| origin             | Description not available.                                                                                                                   |
-| rotation           | Description not available.                                                                                                                   |
-| scriptobject       | Description not available.                                                                                                                   |
-| size               | Description not available.                                                                                                                   |
-| skin\_xray         | Description not available.                                                                                                                   |
-| slowmo             | Description not available.                                                                                                                   |
-| solidForTeam       | Description not available.                                                                                                                   |
-| spawnclass         | Description not available.                                                                                                                   |
-| target             | Description not available.                                                                                                                   |
-| use\_once          | When set, node is disabled after it's used.                                                                                                  |
-| wait\_anim         | Description not available.                                                                                                                   |
+  -------------------------------------------------------------------------
+  KEY                                  DESCRIPTION
+  ------------------------------------ ------------------------------------
+  angle                                Description not available.
+
+  anim                                 Animation prefix for attack type
+
+  bind                                 Description not available.
+
+  bindOrientated                       Description not available.
+
+  bindToBody                           Description not available.
+
+  bindToJoint                          Description not available.
+
+  bindanim                             Description not available.
+
+  cameraTarget                         Description not available.
+
+  cinematic                            Description not available.
+
+  classname                            Description not available.
+
+  clipmodel                            Description not available.
+
+  cone                                 Description not available.
+
+  cylinder                             Description not available.
+
+  editor\_color                        Description not available.
+
+  editor\_combatnode                   Description not available.
+
+  editor\_copy1                        Description not available.
+
+  editor\_copy2                        Description not available.
+
+  editor\_copy3                        Description not available.
+
+  editor\_copy4                        Description not available.
+
+  editor\_copy5                        Description not available.
+
+  editor\_maxs                         Description not available.
+
+  editor\_mins                         Description not available.
+
+  editor\_usage                        
+
+  editor\_var XXXX                     Description not available.
+
+  fov                                  Angle width of the cone
+
+  guiTarget                            Description not available.
+
+  health                               Description not available.
+
+  height                               Specifies the Z height of the cone
+                                       centered around the origin of the
+                                       entity. This means it goes down half
+                                       the height and up half the height.
+
+  hide                                 Description not available.
+
+  max                                  Maximum distance player can be from
+                                       node
+
+  max\_wait                            Maximum amount of time to wait
+                                       between attacks
+
+  maxs                                 Description not available.
+
+  min                                  Minimum distance player can be from
+                                       node
+
+  min\_wait                            Minimum amount of time to wait
+                                       between attacks
+
+  mins                                 Description not available.
+
+  model                                Description not available.
+
+  name                                 Description not available.
+
+  networkSync                          Description not available.
+
+  neverDormant                         Description not available.
+
+  noGrab                               Description not available.
+
+  noclipmodel                          Description not available.
+
+  num\_shots                           Max number of shots to fire per
+                                       attack
+
+  offset                               Vector amount to offset cone from
+                                       origin of entity
+
+  origin                               Description not available.
+
+  rotation                             Description not available.
+
+  scriptobject                         Description not available.
+
+  size                                 Description not available.
+
+  skin\_xray                           Description not available.
+
+  slowmo                               Description not available.
+
+  solidForTeam                         Description not available.
+
+  spawnclass                           Description not available.
+
+  target                               Description not available.
+
+  use\_once                            When set, node is disabled after
+                                       it's used.
+
+  wait\_anim                           Description not available.
+  -------------------------------------------------------------------------
 
 Inheritance
 -----------
 
 This entity is derived from the following:
 
--   *[idEntity](IdEntity\_(class))*
-    -   '' idCombatNode''
-        -   *' ai\_attackcone\_once*'
+-   *[idEntity](IdEntity_%28class%29 "IdEntity (class)")*
+    -   *[idCombatNode](IdCombatNode_%28class%29 "IdCombatNode (class)")*
+        -   **ai\_attackcone\_once**
 
-**Note**: Entries marked in italics are classes defined in the SDK.
+**Note** : Entries marked in italics are classes defined in the SDK.
 
 Notes
 -----

@@ -1,21 +1,13 @@
----
-format: Markdown
-categories: Material_stage_keyword
-toc: yes
-title: MaskRed
-...
-MaskRed (Material stage keyword)
-================================
-
 Description
 -----------
 
-The **maskRed** keyword causes the red channel of this stage to be ignored.
+The **maskRed** keyword causes the red channel of this stage to be
+ignored.
 
 Usage
 -----
 
-`maskRed`
+    maskRed
 
 Parameters
 ----------
@@ -27,14 +19,15 @@ Example
 
 Masking the red channel.
 
-`{`
-`   maskRed`
-`   map path/to/image.tga`
-`}`
+    {
+       maskRed
+       map path/to/image.tga
+    }
 
 Notes
 -----
 
 Not available.
 
+\
 

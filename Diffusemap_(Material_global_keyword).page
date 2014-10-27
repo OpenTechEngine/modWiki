@@ -1,37 +1,31 @@
----
-format: Markdown
-categories: Material_global_keyword
-toc: yes
-title: Diffusemap
-...
-Diffusemap (Material global keyword)
-====================================
-
 Description
 -----------
 
-Creates a [diffuse map](Texturing) stage in a material shader.
+Creates a [diffuse map](Texturing "Texturing") stage in a material
+shader.
 
 Usage
 -----
 
 In the global section of your material shader type...
 
-`diffusemap [map]`
+    diffusemap [map]
 
 Parameters
 ----------
 
--   [map] - the relative path and file name from base to the specified diffuse map image.
+-   [map] - the relative path and file name from base to the specified
+    diffuse map image.
 
 Notes
 -----
 
 This keyword is shorthand for...
 
-`{`
-` blend diffusemap`
-` map [map]`
-`}`
+    {
+     blend diffusemap
+     map [map]
+    }
 
+\
 

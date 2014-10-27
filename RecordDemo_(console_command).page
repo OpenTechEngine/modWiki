@@ -1,23 +1,15 @@
----
-format: Markdown
-categories: console_command
-toc: yes
-title: RecordDemo
-...
-RecordDemo (console command)
-============================
-
 Description
 -----------
 
-Records a rolling .[DEMO](DEMO\_(file\_format)) file.
+Records a rolling . [DEMO](DEMO_%28file_format%29 "DEMO (file format)")
+file.
 
 Usage
 -----
 
 At the console type...
 
-`recorddemo [Filename]`
+    recorddemo [Filename]
 
 Parameters
 ----------
@@ -27,6 +19,9 @@ Parameters
 Notes
 -----
 
-These demos can be benchmarked with the [timeDemo](TimeDemo\_(console\_command)) console command.
+These demos can be benchmarked with the
+[timeDemo](TimeDemo_%28console_command%29 "TimeDemo (console command)")
+console command.
 
+\
 

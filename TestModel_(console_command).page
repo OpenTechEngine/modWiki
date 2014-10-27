@@ -1,23 +1,15 @@
----
-format: Markdown
-categories: console_command
-toc: yes
-title: TestModel
-...
-TestModel (console command)
-===========================
-
 Description
 -----------
 
-This command spawns a placeholder entity that utilizes the specified model for testing purposes.
+This command spawns a placeholder entity that utilizes the specified
+model for testing purposes.
 
 Usage
 -----
 
 At the console type...
 
-`testModel [name]`
+    testModel [name]
 
 Parameters
 ----------
@@ -27,6 +19,8 @@ Parameters
 Notes
 -----
 
-This command is best suited for use with other [animation related console commands](Commands\_(Doom\_3)#Animation).
+This command is best suited for use with other [animation related
+console commands](Commands_%28Doom_3%29#Animation "Commands (Doom 3)") .
 
+\
 

@@ -1,23 +1,15 @@
----
-format: Markdown
-categories: Material_global_keyword
-toc: yes
-title: BackSided
-...
-BackSided (Material global keyword)
-===================================
-
 Description
 -----------
 
-Causes only the back face of a polygon with this material applied to render.
+Causes only the back face of a polygon with this material applied to
+render.
 
 Usage
 -----
 
 In the global section of your material shader type...
 
-`backSided`
+    backSided
 
 Parameters
 ----------
@@ -27,6 +19,9 @@ Not Available.
 Notes
 -----
 
-This keyword also activates the [noShadows](NoShadows\_(Material\_global\_keyword)) automatically.
+This keyword also activates the
+[noShadows](NoShadows_%28Material_global_keyword%29 "NoShadows (Material global keyword)")
+automatically.
 
+\
 

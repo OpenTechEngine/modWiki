@@ -1,43 +1,37 @@
----
-format: Markdown
-categories: Image_program_function
-toc: yes
-title: InvertColor
-...
-InvertColor (Image program function)
-====================================
-
 Description
 -----------
 
-This function will invert the red, green, and blue channels of the specified image.
+This function will invert the red, green, and blue channels of the
+specified image.
 
 Usage
 -----
 
-`invertColor ([map])`
+    invertColor ([map])
 
 Parameters
 ----------
 
--   [map] - The image containing the red, green, and blue channels to invert.
+-   [map] - The image containing the red, green, and blue channels to
+    invert.
 
 Example
 -------
 
 Invert the color channels...
 
-`textures/inverted_color`
-`{`
-`   {`
-`      blend diffusemap`
-`      map   invertColor(textures/custom/image_1.tga)`
-`   }`
-`}`
+    textures/inverted_color
+    {
+       {
+          blend diffusemap
+          map   invertColor(textures/custom/image_1.tga)
+       }
+    }
 
 Notes
 -----
 
 None.
 
+\
 

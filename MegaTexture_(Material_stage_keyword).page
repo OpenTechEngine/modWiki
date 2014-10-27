@@ -1,18 +1,16 @@
----
-format: Markdown
-categories: Material_stage_keyword
-toc: yes
-title: MegaTexture
-...
-MegaTexture (Material stage keyword)
-====================================
+<div align="center"
+style="background: #FFFFCC; padding: 5px; border: 1px solid #000000;">
 
-<div style="background: #FFFFCC; padding: 5px; border: 1px solid #000000">
-<center>
-**NOTE:** Megatexture functionality is broken in the stock versions of Doom 3, Quake 4, and Prey due to a missing fragment program, megatexture.vfp. However, with a suitable replacement, the information documented in this article is still applicable. At present, you can find a mod that provides you with the necessary file [here](http://web.archive.org/web/20090108201840/http://doom3.filefront.com/file/Megatexture_Technology_Mod;72779).
+**NOTE:** Megatexture functionality is broken in the stock versions of
+Doom 3, Quake 4, and Prey due to a missing fragment program,
+megatexture.vfp. However, with a suitable replacement, the information
+documented in this article is still applicable. At present, you can find
+a mod that provides you with the necessary file
+[here](http://doom3.filefront.com/file/Megatexture_Technology_Mod;72779 "http://doom3.filefront.com/file/Megatexture_Technology_Mod;72779")
+.
 
-</center>
 </div>
+
 Description
 -----------
 
@@ -21,7 +19,7 @@ The **megaTexture** keyword assigns an megatexture to the current stage.
 Usage
 -----
 
-`megaTexture [mega]`
+    megaTexture [mega]
 
 Parameters
 ----------
@@ -33,14 +31,15 @@ Example
 
 The following simply assigns an megatexture to a stage...
 
-`{`
-`   blend gl_one, gl_zero`
-`   megaTexture mymega.mega`
-`}`
+    {
+       blend gl_one, gl_zero
+       megaTexture mymega.mega
+    }
 
 Notes
 -----
 
 Not Available.
 
+\
 

@@ -1,26 +1,20 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: StartSound
-...
-StartSound (script event)
-=========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Plays the sound specified by the snd\_\* key/value pair on the channel and returns the length of the sound.
+Plays the sound specified by the snd\_\* key/value pair on the channel
+and returns the length of the sound.
 
 Usage
 -----
 
-*float* startSound( *string* **sound**, *float* **channel**, *float* **netSync** )
+*float* startSound( *string* **sound** , *float* **channel** , *float*
+**netSync** )
 
 Parameters
 ----------
@@ -32,14 +26,16 @@ Parameters
 Examples
 --------
 
-` `
-<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`startSound`</font><font color="#000000">`(`</font><font color="#666666">`"snd_target_lost"`</font>`, `<font color="#0000dd">`1`</font>`, `<font color="#0000dd">`1`</font><font color="#000000">`)`</font>`;`
+     
+    $my_entity.startSound("snd_target_lost", 1, 1);
 
 Notes
 -----
 
 This script event does not return any values.
 
-This is the preferred method for playing sounds on an entity since it ensures that the sound is precached.
+This is the preferred method for playing sounds on an entity since it
+ensures that the sound is precached.
 
+\
 

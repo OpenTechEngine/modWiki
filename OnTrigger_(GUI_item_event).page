@@ -1,20 +1,14 @@
----
-format: Markdown
-categories: GUI_item_event
-toc: yes
-title: OnTrigger
-...
-OnTrigger (GUI item event)
-==========================
-
 Called when the entity this GUI is attached to is triggered.
 
-Should be used on the [Desktop GUI item](Desktop\_GUI\_item).
+Should be used on the [Desktop GUI
+item](Desktop_GUI_item "Desktop GUI item") .
 
 Example(s)
 ----------
 
-`onTrigger {`
-`   ...`
-`}`
+    onTrigger {
+        ...
+    }
+
+\
 

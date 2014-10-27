@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: SetColor
-...
-SetColor (script event)
-=======================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -20,7 +12,8 @@ Sets the RGB color of this entity (shader parms Parm0, Parm1, Parm2).
 Usage
 -----
 
-*void* setColor( *float* **red**, *float* **green**, *float* **blue** )
+*void* setColor( *float* **red** , *float* **green** , *float* **blue**
+)
 
 Parameters
 ----------
@@ -32,12 +25,13 @@ Parameters
 Examples
 --------
 
-` `
-<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`setColor`</font><font color="#000000">`(`</font><font color="#0000dd">`0`</font>`.`<font color="#0000dd">`1`</font>`, `<font color="#0000dd">`0`</font>`.`<font color="#0000dd">`8`</font>`, `<font color="#0000dd">`0`</font>`.`<font color="#0000dd">`6`</font><font color="#000000">`)`</font>`;`
+     
+    $my_entity.setColor(0.1, 0.8, 0.6);
 
 Notes
 -----
 
 This script event does not return any values.
 
+\
 

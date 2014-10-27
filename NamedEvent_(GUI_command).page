@@ -1,24 +1,20 @@
----
-format: Markdown
-categories: GUI_command
-toc: yes
-title: NamedEvent
-...
-NamedEvent (GUI command)
-========================
-
-Runs an [onNamedEvent](OnNamedEvent\_(GUI\_item\_event)) function defined by the user inside current GUI script.
+Runs an
+[onNamedEvent](OnNamedEvent_%28GUI_item_event%29 "OnNamedEvent (GUI item event)")
+function defined by the user inside current GUI script.
 
 Syntax
 ------
 
-`namedEvent `*`event_name`*
+    namedEvent event_name
 
-*event\_name* is the name of a script event to run. On Quake 4, this is usually a way to execute event without source recompiling and it's mainly used in Hud scripts.
+*event\_name* is the name of a script event to run. On Quake 4, this is
+usually a way to execute event without source recompiling and it's
+mainly used in Hud scripts.
 
 Example(s)
 ----------
 
-`namedEvent "updateHealth";`
+    namedEvent "updateHealth";
 
+\
 

@@ -1,23 +1,14 @@
----
-format: Markdown
-categories: console_command
-toc: yes
-title: Editor
-...
-Editor (console command)
-========================
-
 Description
 -----------
 
-This command starts the [level editor](DoomEdit).
+This command starts the [level editor](DoomEdit "DoomEdit") .
 
 Usage
 -----
 
 At the console type...
 
-`editor`
+    editor
 
 Parameters
 ----------
@@ -27,6 +18,9 @@ This console command does not accept parameters.
 Notes
 -----
 
-To be able to use to Light Inspector you must use the editor in [windowed](R\_fullscreen\_(cvar)) mode. See also the [mapping](Mapping) section.
+To be able to use to Light Inspector you must use the editor in
+[windowed](R_fullscreen_%28cvar%29 "R fullscreen (cvar)") mode. See also
+the [mapping](Mapping "Mapping") section.
 
+\
 

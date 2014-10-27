@@ -1,15 +1,24 @@
----
-format: Markdown
-categories: Entity
-toc: yes
-title: Hand_null
-...
-Hand null (entity)
-==================
+<div class="plainlinks"
+style="border: 1px grey solid; padding: 0.25em;">
 
-> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
+help by verifying and
+[completing](Hand_null_%28entity%29 "http://modwiki.net/w/index.php?title=Hand_null_%28entity%29&action=edit")
+the info on this page.*
 
-> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+</div>
+
+<div id="stub" class="boilerplate metadata">
+
+*This article is a
+[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
+. You can help us by <span class="plainlinks"> [expanding
+it](Hand_null_%28entity%29 "http://modwiki.net/w/index.php?title=Hand_null_%28entity%29&action=edit")
+</span> .*
+
+</div>
+
+\
 
 Description
 -----------
@@ -19,29 +28,30 @@ Description not available.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+The following is a list of key/value pairs, also known as spawn
+arguments, that function with this entity.\
 
-| KEY           | DESCRIPTION                |
-|---------------|----------------------------|
-| aside\_weapon | Description not available. |
-| handedness    | Description not available. |
-| inherit       | Description not available. |
-| lower\_weapon | Description not available. |
-| model         | Description not available. |
-| priority      | Description not available. |
-| skin          | Description not available. |
-| spawnclass    | Description not available. |
+  KEY             DESCRIPTION
+  --------------- ----------------------------
+  aside\_weapon   Description not available.
+  handedness      Description not available.
+  inherit         Description not available.
+  lower\_weapon   Description not available.
+  model           Description not available.
+  priority        Description not available.
+  skin            Description not available.
+  spawnclass      Description not available.
 
 Inheritance
 -----------
 
 This entity is derived from the following:
 
--   [hand\_default](Hand\_default\_(entity))
-    -   [guihand\_normal](Guihand\_normal\_(entity))
-        -   *' hand\_null*'
+-   [hand\_default](Hand_default_%28entity%29 "Hand default (entity)")
+    -   [guihand\_normal](Guihand_normal_%28entity%29 "Guihand normal (entity)")
+        -   **hand\_null**
 
-**Note**: Entries marked in italics are classes defined in the SDK.
+**Note** : Entries marked in italics are classes defined in the SDK.
 
 Notes
 -----

@@ -1,21 +1,14 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: UpdateFloorInfo
-...
-UpdateFloorInfo (script event)
-==============================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Call after changing floor related key/values to update the floor information of the elevator
+Call after changing floor related key/values to update the floor
+information of the elevator
 
 Usage
 -----
@@ -30,11 +23,12 @@ Parameters
 Examples
 --------
 
-` none`
+     none
 
 Notes
 -----
 
 tba
 
+\
 

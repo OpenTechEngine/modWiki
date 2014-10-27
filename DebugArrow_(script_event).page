@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: DebugArrow
-...
-DebugArrow (script event)
-=========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -20,7 +12,8 @@ Line drawing for debug visualization.
 Usage
 -----
 
-*void* debugArrow( *vector* **color**, *vector* **start**, *vector* **end**, *float* **size**, *float* **lifetime** )
+*void* debugArrow( *vector* **color** , *vector* **start** , *vector*
+**end** , *float* **size** , *float* **lifetime** )
 
 Parameters
 ----------
@@ -34,8 +27,8 @@ Parameters
 Examples
 --------
 
-` `
-<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`debugArrow`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>` `<font color="#0000dd">`1`</font>`', '`<font color="#0000dd">`68`</font>` `<font color="#0000dd">`84`</font>` `<font color="#0000dd">`58`</font>`', '`<font color="#0000dd">`87`</font>` `<font color="#0000dd">`87`</font>` `<font color="#0000dd">`54`</font>`', `<font color="#0000dd">`4`</font>`, `<font color="#0000dd">`1`</font><font color="#000000">`)`</font>`;`
+     
+    sys.debugArrow('0 0 1', '68 84 58', '87 87 54', 4, 1);
 
 Notes
 -----
@@ -44,4 +37,5 @@ This script event does not return any values.
 
 Lifetime of 0 == 1 frame.
 
+\
 

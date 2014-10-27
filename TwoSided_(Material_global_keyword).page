@@ -1,23 +1,15 @@
----
-format: Markdown
-categories: Material_global_keyword
-toc: yes
-title: TwoSided
-...
-TwoSided (Material global keyword)
-==================================
-
 Description
 -----------
 
-The twoSided global keyword allows a surface to be viewed from both sides.
+The twoSided global keyword allows a surface to be viewed from both
+sides.
 
 Usage
 -----
 
 In the global section of your material shader type...
 
-`twoSided`
+    twoSided
 
 Parameters
 ----------
@@ -27,8 +19,16 @@ None.
 Notes
 -----
 
-By default, polygons will not be rendered at all from the reverse side, which facilitates an important optimisation known as backface culling. However, this is incorrect behaviour in some situations such as when a [patch](Patch) is used to represent a grating or spiderweb. In this case, the twoSided keyword is used to make the material appear from both sides.
+By default, polygons will not be rendered at all from the reverse side,
+which facilitates an important optimisation known as backface culling.
+However, this is incorrect behaviour in some situations such as when a
+[patch](Patch "Patch") is used to represent a grating or spiderweb. In
+this case, the twoSided keyword is used to make the material appear from
+both sides.
 
-Using this keyword also implies the [noShadows](NoShadows\_(Material\_global\_keyword)) keyword.
+Using this keyword also implies the
+[noShadows](NoShadows_%28Material_global_keyword%29 "NoShadows (Material global keyword)")
+keyword.
 
+\
 

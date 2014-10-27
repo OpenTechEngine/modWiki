@@ -1,143 +1,126 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: IdEntity_(class).page
-...
-IdEntity (class)
-================
-
-|------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                          
- Contents                                                                                                                      
- --------                                                                                                                      
-                                                                                                                               
- </div>                                                                                                                        
- -   [<span class="tocnumber">1</span> <span class="toctext">Description</span>](IdEntity\_(class)#Description)           
- -   [<span class="tocnumber">2</span> <span class="toctext">Spawn Arguments</span>](IdEntity\_(class)#Spawn\_Arguments)  
- -   [<span class="tocnumber">3</span> <span class="toctext">Inheritance</span>](IdEntity\_(class)#Inheritance)           
- -   [<span class="tocnumber">4</span> <span class="toctext">Events</span>](IdEntity\_(class)#Events)                     
- -   [<span class="tocnumber">5</span> <span class="toctext">Notes</span>](IdEntity\_(class)#Notes)                       |
-
 Description
 -----------
 
-idEntity is the base [spawn class](Spawn\_class) of [entities](Entity).
+idEntity is the base [spawn class](Spawn_class "Spawn class") of
+[entities](Entity "Entity") .
 
-All other spawn classes inherit its functions, variables and events, but may override them to produce different behavior than idEntity.
+All other spawn classes inherit its functions, variables and events, but
+may override them to produce different behavior than idEntity.
 
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as [spawn arguments](SpawnArgs), that function with this entity.
+The following is a list of key/value pairs, also known as [spawn
+arguments](SpawnArgs "SpawnArgs") , that function with this entity.\
 
-| KEY                   | DESCRIPTION                                                                                       |
-|-----------------------|---------------------------------------------------------------------------------------------------|
-| angle                 | Yaw angle of entity.                                                                              |
-| bind                  | Entity to bind to.                                                                                |
-| bindOrientated        | Description not available.                                                                        |
-| bindToBody            | Description not available.                                                                        |
-| bindToJoint           | Description not available.                                                                        |
-| bindanim              | Description not available.                                                                        |
-| cameraTarget          | Description not available.                                                                        |
-| cinematic             | Description not available.                                                                        |
-| classname             | [EntityDef](Entitydef\_(decl)) to load [spawnArgs](SpawnArgs) from.                       |
-| clipmodel             | Name of clip model to load.                                                                       |
-| cone                  | Set up clip model as cone with this number of sides. Use mins/maxs to set bounds.                 |
-| cylinder              | Set up clip model as cone with this number of sides. Use mins/maxs to set bounds.                 |
-| guiTarget             | Description not available.                                                                        |
-| health                | Health.                                                                                           |
-| hide                  | Hide visual model and disable clip.                                                               |
-| maxs                  | Max bounds of clip model.                                                                         |
-| mins                  | Min bounds of clip model.                                                                         |
-| model                 | name of visual model.                                                                             |
-| name                  | Unique name of entity.                                                                            |
-| networkSync           | Description not available.                                                                        |
-| neverDormant          | Description not available.                                                                        |
-| noclipmodel           | Do not set up a clip model.                                                                       |
-| origin                | Initial world coordinates of entity.                                                              |
-| rotation              | rotation matrix.                                                                                  |
-| scriptobject          | Type of [script object](Script\_object) for entity to use.                                    |
-| size                  | Size of clip model, alternative to mins/maxs.                                                     |
-| solidForTeam          | Description not available.                                                                        |
-| spawnclass            | The [spawn class](Spawn\_class) type as string.                                               |
-| target                | Prefix, entity to add to target list.                                                             |
-| noDynamicInteractions | Don't create any light and shadow interactions for this entity after the level load is completed. |
+  KEY                     DESCRIPTION
+  ----------------------- --------------------------------------------------------------------------------------------------------------
+  angle                   Yaw angle of entity.
+  bind                    Entity to bind to.
+  bindOrientated          Description not available.
+  bindToBody              Description not available.
+  bindToJoint             Description not available.
+  bindanim                Description not available.
+  cameraTarget            Description not available.
+  cinematic               Description not available.
+  classname               [EntityDef](Entitydef_%28decl%29 "Entitydef (decl)") to load [spawnArgs](SpawnArgs "SpawnArgs") from.
+  clipmodel               Name of [clip model](Clip_model "Clip model") to load.
+  cone                    Set up clip model as cone with this number of sides. Use mins/maxs to set bounds.
+  cylinder                Set up [clip model](Clip_model "Clip model") as cone with this number of sides. Use mins/maxs to set bounds.
+  guiTarget               Description not available.
+  health                  Health.
+  hide                    Hide visual model and disable clip.
+  maxs                    Max bounds of [clip model](Clip_model "Clip model") .
+  mins                    Min bounds of [clip model](Clip_model "Clip model") .
+  model                   name of visual model.
+  name                    Unique name of entity.
+  networkSync             Description not available.
+  neverDormant            Description not available.
+  noclipmodel             Do not set up a [clip model](Clip_model "Clip model") .
+  origin                  Initial world coordinates of entity.
+  rotation                rotation matrix.
+  scriptobject            Type of [script object](Script_object "Script object") for entity to use.
+  size                    Size of [clip model](Clip_model "Clip model") , alternative to mins/maxs.
+  solidForTeam            Description not available.
+  spawnclass              The [spawn class](Spawn_class "Spawn class") type as string.
+  target                  Prefix, entity to add to [target](Targets "Targets") list.
+  noDynamicInteractions   Don't create any light and shadow interactions for this entity after the level load is completed.
 
 Inheritance
 -----------
 
 This entity is derived from the following:
 
--   *[idClass](IdClass\_(class))*
-    -   **'' idEntity**''
+-   *[idClass](IdClass_%28class%29 "IdClass (class)")*
+    -   ***idEntity***
 
-**Note**: Entries marked in italics are classes defined in the [game code](Coding#Game\_code).
+**Note** : Entries marked in italics are classes defined in the [game
+code](Coding#Game_code "Coding") .
 
 Events
 ------
 
--   [activate](Activate\_(script\_event))
--   [activateTargets](ActivateTargets\_(script\_event))
--   [bind](Bind\_(script\_event))
--   [bindPosition](BindPosition\_(script\_event))
--   [bindToJoint](BindToJoint\_(script\_event))
--   [cacheSoundShader](CacheSoundShader\_(script\_event))
--   [callFunction](CallFunction\_(script\_event))
--   [clearSignal](ClearSignal\_(script\_event))
--   [distanceTo](DistanceTo\_(script\_event))
--   [distanceToPoint](DistanceToPoint\_(script\_event))
--   [fadeSound](FadeSound\_(script\_event))
--   [getAngles](GetAngles\_(script\_event))
--   [getAngularVelocity](GetAngularVelocity\_(script\_event))
--   [getColor](GetColor\_(script\_event))
--   [getEntityKey](GetEntityKey\_(script\_event))
--   [getFloatKey](GetFloatKey\_(script\_event))
--   [getIntKey](GetIntKey\_(script\_event))
--   [getKey](GetKey\_(script\_event))
--   [getLinearVelocity](GetLinearVelocity\_(script\_event))
--   [getMaxs](GetMaxs\_(script\_event))
--   [getMins](GetMins\_(script\_event))
--   [getName](GetName\_(script\_event))
--   [getNextKey](GetNextKey\_(script\_event))
--   [getOrigin](GetOrigin\_(script\_event))
--   [getShaderParm](GetShaderParm\_(script\_event))
--   [getSize](GetSize\_(script\_event))
--   [getTarget](GetTarget\_(script\_event))
--   [getVectorKey](GetVectorKey\_(script\_event))
--   [getWorldOrigin](GetWorldOrigin\_(script\_event))
--   [hasFunction](HasFunction\_(script\_event))
--   [hide](Hide\_(script\_event))
--   [isHidden](IsHidden\_(script\_event))
--   [numTargets](NumTargets\_(script\_event))
--   [randomTarget](RandomTarget\_(script\_event))
--   [remove](Remove\_(script\_event))
--   [removeBinds](RemoveBinds\_(script\_event))
--   [restorePosition](RestorePosition\_(script\_event))
--   [setAngles](SetAngles\_(script\_event))
--   [setAngularVelocity](SetAngularVelocity\_(script\_event))
--   [setColor](SetColor\_(script\_event))
--   [setGuiFloat](SetGuiFloat\_(script\_event))
--   [setGuiParm](SetGuiParm\_(script\_event))
--   [setKey](SetKey\_(script\_event))
--   [setLinearVelocity](SetLinearVelocity\_(script\_event))
--   [setModel](SetModel\_(script\_event))
--   [setName](SetName\_(script\_event))
--   [setNeverDormant](SetNeverDormant\_(script\_event))
--   [setOrigin](SetOrigin\_(script\_event))
--   [setOwner](SetOwner\_(script\_event))
--   [setShaderParm](SetShaderParm\_(script\_event))
--   [setShaderParms](SetShaderParms\_(script\_event))
--   [setSize](SetSize\_(script\_event))
--   [setSkin](SetSkin\_(script\_event))
--   [setWorldOrigin](SetWorldOrigin\_(script\_event))
--   [show](Show\_(script\_event))
--   [startFx](StartFx\_(script\_event))
--   [startSound](StartSound\_(script\_event))
--   [startSoundShader](StartSoundShader\_(script\_event))
--   [stopSound](StopSound\_(script\_event))
--   [touches](Touches\_(script\_event))
--   [unbind](Unbind\_(script\_event))
+-   [activate](Activate_%28script_event%29 "Activate (script event)")
+-   [activateTargets](ActivateTargets_%28script_event%29 "ActivateTargets (script event)")
+-   [bind](Bind_%28script_event%29 "Bind (script event)")
+-   [bindPosition](BindPosition_%28script_event%29 "BindPosition (script event)")
+-   [bindToJoint](BindToJoint_%28script_event%29 "BindToJoint (script event)")
+-   [cacheSoundShader](CacheSoundShader_%28script_event%29 "CacheSoundShader (script event)")
+-   [callFunction](CallFunction_%28script_event%29 "CallFunction (script event)")
+-   [clearSignal](ClearSignal_%28script_event%29 "ClearSignal (script event)")
+-   [distanceTo](DistanceTo_%28script_event%29 "DistanceTo (script event)")
+-   [distanceToPoint](DistanceToPoint_%28script_event%29 "DistanceToPoint (script event)")
+-   [fadeSound](FadeSound_%28script_event%29 "FadeSound (script event)")
+-   [getAngles](GetAngles_%28script_event%29 "GetAngles (script event)")
+-   [getAngularVelocity](GetAngularVelocity_%28script_event%29 "GetAngularVelocity (script event)")
+-   [getColor](GetColor_%28script_event%29 "GetColor (script event)")
+-   [getEntityKey](GetEntityKey_%28script_event%29 "GetEntityKey (script event)")
+-   [getFloatKey](GetFloatKey_%28script_event%29 "GetFloatKey (script event)")
+-   [getIntKey](GetIntKey_%28script_event%29 "GetIntKey (script event)")
+-   [getKey](GetKey_%28script_event%29 "GetKey (script event)")
+-   [getLinearVelocity](GetLinearVelocity_%28script_event%29 "GetLinearVelocity (script event)")
+-   [getMaxs](GetMaxs_%28script_event%29 "GetMaxs (script event)")
+-   [getMins](GetMins_%28script_event%29 "GetMins (script event)")
+-   [getName](GetName_%28script_event%29 "GetName (script event)")
+-   [getNextKey](GetNextKey_%28script_event%29 "GetNextKey (script event)")
+-   [getOrigin](GetOrigin_%28script_event%29 "GetOrigin (script event)")
+-   [getShaderParm](GetShaderParm_%28script_event%29 "GetShaderParm (script event)")
+-   [getSize](GetSize_%28script_event%29 "GetSize (script event)")
+-   [getTarget](GetTarget_%28script_event%29 "GetTarget (script event)")
+-   [getVectorKey](GetVectorKey_%28script_event%29 "GetVectorKey (script event)")
+-   [getWorldOrigin](GetWorldOrigin_%28script_event%29 "GetWorldOrigin (script event)")
+-   [hasFunction](HasFunction_%28script_event%29 "HasFunction (script event)")
+-   [hide](Hide_%28script_event%29 "Hide (script event)")
+-   [isHidden](IsHidden_%28script_event%29 "IsHidden (script event)")
+-   [numTargets](NumTargets_%28script_event%29 "NumTargets (script event)")
+-   [randomTarget](RandomTarget_%28script_event%29 "RandomTarget (script event)")
+-   [remove](Remove_%28script_event%29 "Remove (script event)")
+-   [removeBinds](RemoveBinds_%28script_event%29 "RemoveBinds (script event)")
+-   [restorePosition](RestorePosition_%28script_event%29 "RestorePosition (script event)")
+-   [setAngles](SetAngles_%28script_event%29 "SetAngles (script event)")
+-   [setAngularVelocity](SetAngularVelocity_%28script_event%29 "SetAngularVelocity (script event)")
+-   [setColor](SetColor_%28script_event%29 "SetColor (script event)")
+-   [setGuiFloat](SetGuiFloat_%28script_event%29 "SetGuiFloat (script event)")
+-   [setGuiParm](SetGuiParm_%28script_event%29 "SetGuiParm (script event)")
+-   [setKey](SetKey_%28script_event%29 "SetKey (script event)")
+-   [setLinearVelocity](SetLinearVelocity_%28script_event%29 "SetLinearVelocity (script event)")
+-   [setModel](SetModel_%28script_event%29 "SetModel (script event)")
+-   [setName](SetName_%28script_event%29 "SetName (script event)")
+-   [setNeverDormant](SetNeverDormant_%28script_event%29 "SetNeverDormant (script event)")
+-   [setOrigin](SetOrigin_%28script_event%29 "SetOrigin (script event)")
+-   [setOwner](SetOwner_%28script_event%29 "SetOwner (script event)")
+-   [setShaderParm](SetShaderParm_%28script_event%29 "SetShaderParm (script event)")
+-   [setShaderParms](SetShaderParms_%28script_event%29 "SetShaderParms (script event)")
+-   [setSize](SetSize_%28script_event%29 "SetSize (script event)")
+-   [setSkin](SetSkin_%28script_event%29 "SetSkin (script event)")
+-   [setWorldOrigin](SetWorldOrigin_%28script_event%29 "SetWorldOrigin (script event)")
+-   [show](Show_%28script_event%29 "Show (script event)")
+-   [startFx](StartFx_%28script_event%29 "StartFx (script event)")
+-   [startSound](StartSound_%28script_event%29 "StartSound (script event)")
+-   [startSoundShader](StartSoundShader_%28script_event%29 "StartSoundShader (script event)")
+-   [stopSound](StopSound_%28script_event%29 "StopSound (script event)")
+-   [touches](Touches_%28script_event%29 "Touches (script event)")
+-   [unbind](Unbind_%28script_event%29 "Unbind (script event)")
 
 Notes
 -----

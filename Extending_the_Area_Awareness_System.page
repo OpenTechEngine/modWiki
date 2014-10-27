@@ -1,960 +1,1048 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: Extending_the_Area_Awareness_System.page
-...
-Extending the Area Awareness System
-===================================
+I recently finished up some work extending the AAS compiler. I was able
+to add elevator and transporter capabilities to the navigation graph. I
+did this by adding new reachabilities between areas based on each idPlat
+in a map.
 
-I recently finished up some work extending the AAS compiler. I was able to add elevator and transporter capabilities to the navigation graph. I did this by adding new reachabilities between areas based on each idPlat in a map.
+I have summarized the work below and included a download link for the
+code, **the aas code in the download is one version behind and needs to
+be updated.**
 
-I have summarized the work below and included a download link for the code, **the aas code in the download is one version behind and needs to be updated.**
-
-The changes below could be used for adding the same ability for other AI characters in doom 3.
+The changes below could be used for adding the same ability for other AI
+characters in doom 3.
 
 **Is there any way to decrease tab indentation in code on the wiki?**
-
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <div id="toctitle">                                                                                                                                                                           
- Contents                                                                                                                                                                                       
- --------                                                                                                                                                                                       
-                                                                                                                                                                                                
- </div>                                                                                                                                                                                         
- -   [<span class="tocnumber">1</span> <span class="toctext">Overview</span>](Extending\_the\_Area\_Awareness\_System#Overview)                                                            
- -   [<span class="tocnumber">2</span> <span class="toctext">Setup Code</span>](Extending\_the\_Area\_Awareness\_System#Setup\_Code)                                                       
- -   [<span class="tocnumber">3</span> <span class="toctext">Adding Elevator Reachabilities</span>](Extending\_the\_Area\_Awareness\_System#Adding\_Elevator\_Reachabilities)              
- -   [<span class="tocnumber">4</span> <span class="toctext">Elevator Screenshots</span>](Extending\_the\_Area\_Awareness\_System#Elevator\_Screenshots)                                   
- -   [<span class="tocnumber">5</span> <span class="toctext">Adding Transporter Reachabilities</span>](Extending\_the\_Area\_Awareness\_System#Adding\_Transporter\_Reachabilities)        
- -   [<span class="tocnumber">6</span> <span class="toctext">Helper Routines</span>](Extending\_the\_Area\_Awareness\_System#Helper\_Routines)                                             
- -   [<span class="tocnumber">7</span> <span class="toctext">Clean Up Code</span>](Extending\_the\_Area\_Awareness\_System#Clean\_Up\_Code)                                                
- -   [<span class="tocnumber">8</span> <span class="toctext">Source Download and Mod Integration</span>](Extending\_the\_Area\_Awareness\_System#Source\_Download\_and\_Mod\_Integration)  |
 
 Overview
 --------
 
-When doom 3 shipped it did so without support for elevators. So paths like the following resulted even though the elevator would be a better choice.
+When doom 3 shipped it did so without support for elevators. So paths
+like the following resulted even though the elevator would be a better
+choice.
 
-<div class="thumb tnone">
-<div style="width: 182px">
-![](/images/images_thumb_b_b4_Bot_noelevator.jpg_180px-Bot_noelevator.jpg "images_thumb_b_b4_Bot_noelevator.jpg_180px-Bot_noelevator.jpg")
+![](/images/thumb/b/b4/Bot_noelevator.jpg/180px-Bot_noelevator.jpg)\
+ **
 
-<div class="thumbcaption">
-<div class="magnify" style="float: right">
-![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
-
-</div>
-</div>
-</div>
-</div>
-What follows is an overview of how elevators capabilities were added and some tips if you want to incorporate this capability into your mod.
+What follows is an overview of how elevators capabilities were added and
+some tips if you want to incorporate this capability into your mod.
 
 Setup Code
 ----------
 
-Each time a map is loaded you will need to call the routines to add the reachabilities to the AAS system. I had to reorganize just a little bit to make the map entities load before the AAS files were loaded and processed.
+Each time a map is loaded you will need to call the routines to add the
+reachabilities to the AAS system. I had to reorganize just a little bit
+to make the map entities load before the AAS files were loaded and
+processed.
 
-` `
-*<font color="#339900">`/*` `===================` `idGameLocal::LoadMap` `Initializes` `all` `map` `variables` `common` `to` `both` `save` `games` `and` `spawned` `games.` `===================` `*/`</font>*
-<font color="#0000ff">`void`</font>` idGameLocal::`<font color="#00aabb">`LoadMap`</font><font color="#000000">`(`</font>` `<font color="#0000ff">`const`</font>` `<font color="#0000ff">`char`</font>` *mapName, `<font color="#0000ff">`int`</font>` randseed `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-` `
-<font color="#339900">`// removed irrelevant code`</font>
-` `
-`playerConnectedAreas.`<font color="#00aabb">`i`</font>` = -`<font color="#0000dd">`1`</font>`;`
-` `
-<font color="#339900">`#ifndef MOD_BOTS // cusTom3 - aas extensions - moved to later in InitFromNewMap so entities are spawned`</font>
-`   `<font color="#0000ff">`int`</font>` i;`
-`   `<font color="#339900">`// load navigation system for all the different monster sizes`</font>
-`   `<font color="#0000ff">`for`</font><font color="#000000">`(`</font>` i = `<font color="#0000dd">`0`</font>`; i < aasNames.`<font color="#00aabb">`Num`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`; i++ `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       aasList`<font color="#000000">`[`</font>` i `<font color="#000000">`]`</font>`->Init`<font color="#000000">`(`</font>` idStr`<font color="#000000">`(`</font>` mapFileName `<font color="#000000">`)`</font>`.`<font color="#00aabb">`SetFileExtension`</font><font color="#000000">`(`</font>` aasNames`<font color="#000000">`[`</font>` i `<font color="#000000">`]`</font>` `<font color="#000000">`)`</font>`.`<font color="#00aabb">`c_str`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`, mapFile->GetGeometryCRC`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>`;`
-`   `<font color="#000000">`}`</font>
-<font color="#339900">`#endif`</font>
-` `
-`   `<font color="#339900">`// clear the smoke particle free list`</font>
-`   smokeParticles->Init`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+     
+    /*
+    ===================
+    idGameLocal::LoadMap
+     
+    Initializes all map variables common to both save games and spawned games.
+    ===================
+    */
+    void idGameLocal::LoadMap( const char *mapName, int randseed ) {
+     
+    // removed irrelevant code
+     
+    playerConnectedAreas.i = -1;
+     
+    #ifndef MOD_BOTS // cusTom3 - aas extensions - moved to later in InitFromNewMap so entities are spawned
+        int i;
+        // load navigation system for all the different monster sizes
+        for( i = 0; i < aasNames.Num(); i++ ) {
+            aasList[ i ]->Init( idStr( mapFileName ).SetFileExtension( aasNames[ i ] ).c_str(), mapFile->GetGeometryCRC() );
+        }
+    #endif
+     
+        // clear the smoke particle free list
+        smokeParticles->Init();
 
-When the AAS files are loaded they need to have data added to them. In order to calculate that data the rest of the map needs to be loaded. Moving the AAS initialization to later in the process after MapPopulate takes care of this.
+When the AAS files are loaded they need to have data added to them. In
+order to calculate that data the rest of the map needs to be loaded.
+Moving the AAS initialization to later in the process after MapPopulate
+takes care of this.
 
-` `
-*<font color="#339900">`/*` `===================` `idGameLocal::InitFromNewMap` `===================` `*/`</font>*
-<font color="#0000ff">`void`</font>` idGameLocal::`<font color="#00aabb">`InitFromNewMap`</font><font color="#000000">`(`</font>` `<font color="#0000ff">`const`</font>` `<font color="#0000ff">`char`</font>` *mapName, idRenderWorld *renderWorld, idSoundWorld *soundWorld, `<font color="#0000ff">`bool`</font>` isServer, `<font color="#0000ff">`bool`</font>` isClient, `<font color="#0000ff">`int`</font>` randseed `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-` `
-<font color="#339900">`// removed irrelevant code`</font>
-` `
-`   MapPopulate`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-` `
-<font color="#339900">`#ifdef MOD_BOTS // cusTom3 - aas extensions - moved here from LoadMap so entities are spawned for botaas calculations`</font>
-`   `<font color="#339900">`// load navigation system for all the different monster sizes`</font>
-`   `<font color="#0000ff">`int`</font>` i;`
-`   `<font color="#0000ff">`for`</font><font color="#000000">`(`</font>` i = `<font color="#0000dd">`0`</font>`; i < aasNames.`<font color="#00aabb">`Num`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`; i++ `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       aasList`<font color="#000000">`[`</font>` i `<font color="#000000">`]`</font>`->Init`<font color="#000000">`(`</font>` idStr`<font color="#000000">`(`</font>` mapFileName `<font color="#000000">`)`</font>`.`<font color="#00aabb">`SetFileExtension`</font><font color="#000000">`(`</font>` aasNames`<font color="#000000">`[`</font>` i `<font color="#000000">`]`</font>` `<font color="#000000">`)`</font>`.`<font color="#00aabb">`c_str`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`, mapFile->GetGeometryCRC`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>`;`
-`   `<font color="#000000">`}`</font>
-<font color="#339900">`#endif`</font>
-` `
-`   mpGame.`<font color="#00aabb">`Reset`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+     
+    /*
+    ===================
+    idGameLocal::InitFromNewMap
+    ===================
+    */
+    void idGameLocal::InitFromNewMap( const char *mapName, idRenderWorld *renderWorld, idSoundWorld *soundWorld, bool isServer, bool isClient, int randseed ) {
+     
+    // removed irrelevant code
+     
+        MapPopulate();
+     
+    #ifdef MOD_BOTS // cusTom3 - aas extensions - moved here from LoadMap so entities are spawned for botaas calculations
+        // load navigation system for all the different monster sizes
+        int i;
+        for( i = 0; i < aasNames.Num(); i++ ) {
+            aasList[ i ]->Init( idStr( mapFileName ).SetFileExtension( aasNames[ i ] ).c_str(), mapFile->GetGeometryCRC() );
+        }
+    #endif
+     
+        mpGame.Reset();
 
-When Init is called on each idAAS the actual work to find and add the extensions is done. For now the only file that is processed is the aas48 file. If someone wants to incorporate the player class changing code we could have bots with any model, and any AAS size. If you do this, you will need to change the check to include the appropriate extension. other modifications later may also be necessary.
+When Init is called on each idAAS the actual work to find and add the
+extensions is done. For now the only file that is processed is the aas48
+file. If someone wants to incorporate the player class changing code we
+could have bots with any model, and any AAS size. If you do this, you
+will need to change the check to include the appropriate extension.
+other modifications later may also be necessary.
 
-` `
-*<font color="#339900">`/*` `============` `idAASLocal::Init` `============` `*/`</font>*
-<font color="#0000ff">`bool`</font>` idAASLocal::`<font color="#00aabb">`Init`</font><font color="#000000">`(`</font>` `<font color="#0000ff">`const`</font>` idStr &mapName, `<font color="#0000ff">`unsigned`</font>` `<font color="#0000ff">`int`</font>` mapFileCRC `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`   `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` `<font color="#0000ff">`file`</font>` && mapName.`<font color="#00aabb">`Icmp`</font><font color="#000000">`(`</font>` file->GetName`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` == `<font color="#0000dd">`0`</font>` && mapFileCRC == file->GetCRC`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       common->Printf`<font color="#000000">`(`</font>` `<font color="#666666">`"Keeping %s`**<font color="#666666">`\n`</font>**`"`</font>`, file->GetName`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>`;`
-`       RemoveAllObstacles`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`   `<font color="#000000">`}`</font>
-`   `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>
-`       Shutdown`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-` `
-`       `<font color="#0000ff">`file`</font>` = AASFileManager->LoadAAS`<font color="#000000">`(`</font>` mapName, mapFileCRC `<font color="#000000">`)`</font>`;`
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` !`<font color="#0000ff">`file`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           common->DWarning`<font color="#000000">`(`</font>` `<font color="#666666">`"Couldn't load AAS file: '%s'"`</font>`, mapName.`<font color="#00aabb">`c_str`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>`;`
-`           `<font color="#0000ff">`return`</font>` `<font color="#0000ff">`false`</font>`;`
-`       `<font color="#000000">`}`</font>
-` `
-<font color="#339900">`#ifdef MOD_BOTS // cusTom3 - aas extensions `</font>
-`       `<font color="#339900">`// TODO: don't need a builder unless it is a 48, but Init's for now, look at later`</font>
-`       `<font color="#339900">`// if class changing is added models could change, would have to handle that here`</font>
-`       botAASBuilder->Init`<font color="#000000">`(`</font>` `<font color="#0000dd">`this`</font>` `<font color="#000000">`)`</font>`;`
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>`mapName.`<font color="#00aabb">`Find`</font><font color="#000000">`(`</font>` `<font color="#666666">`"aas48"`</font>`, `<font color="#0000ff">`false`</font>` `<font color="#000000">`)`</font>` > `<font color="#0000dd">`0`</font><font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           botAASBuilder->AddReachabilities`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`       `<font color="#000000">`}`</font>
-<font color="#339900">`#endif // TODO: save the new information out to a file so it doesn't have to be processed each map load`</font>
-`       `
-`       SetupRouting`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`   `<font color="#000000">`}`</font>
-`   `<font color="#0000ff">`return`</font>` `<font color="#0000ff">`true`</font>`;`
-<font color="#000000">`}`</font>
+     
+    /*
+    ============
+    idAASLocal::Init
+    ============
+    */
+    bool idAASLocal::Init( const idStr &mapName, unsigned int mapFileCRC ) {
+        if ( file && mapName.Icmp( file->GetName() ) == 0 && mapFileCRC == file->GetCRC() ) {
+            common->Printf( "Keeping %s\n", file->GetName() );
+            RemoveAllObstacles();
+        }
+        else {
+            Shutdown();
+     
+            file = AASFileManager->LoadAAS( mapName, mapFileCRC );
+            if ( !file ) {
+                common->DWarning( "Couldn't load AAS file: '%s'", mapName.c_str() );
+                return false;
+            }
+     
+    #ifdef MOD_BOTS // cusTom3 - aas extensions 
+            // TODO: don't need a builder unless it is a 48, but Init's for now, look at later
+            // if class changing is added models could change, would have to handle that here
+            botAASBuilder->Init( this );
+            if (mapName.Find( "aas48", false ) > 0) {
+                botAASBuilder->AddReachabilities();
+            }
+    #endif // TODO: save the new information out to a file so it doesn't have to be processed each map load
+            
+            SetupRouting();
+        }
+        return true;
+    }
 
-Just for reference the botAASBuilder variable is declared in AAS\_local.h as an instance of BotAASBuild, which had to get up close and personal to idAASLocal.
+Just for reference the botAASBuilder variable is declared in
+AAS\_local.h as an instance of BotAASBuild, which had to get up close
+and personal to idAASLocal.
 
-` `
-` `
-`class idAASLocal : `<font color="#0000ff">`public`</font>` idAAS `<font color="#000000">`{`</font>
-<font color="#339900">`#ifdef MOD_BOTS // cusTom3 - aas extensions`</font>
-`   `<font color="#0000ff">`friend`</font>` class BotAASBuild;`
-<font color="#339900">`#endif`</font>
-` `
-<font color="#339900">`// removed irrelevant code`</font>
-` `
-<font color="#339900">`#ifdef MOD_BOTS // cusTom3 - aas extensions`</font>
-<font color="#0000ff">`private`</font>`:  `
-`   BotAASBuild *               botAASBuilder;`
-<font color="#339900">`#endif`</font>
+     
+     
+    class idAASLocal : public idAAS {
+    #ifdef MOD_BOTS // cusTom3 - aas extensions
+        friend class BotAASBuild;
+    #endif
+     
+    // removed irrelevant code
+     
+    #ifdef MOD_BOTS // cusTom3 - aas extensions
+    private:   
+        BotAASBuild *               botAASBuilder;
+    #endif
 
-The call to AddReachabilities is where it gets fun. It turns out that the engine exe and the game dll have separate heaps. So in order to extend the AAS navigation graph I had to hack around some memory allocation issues. What it amounts to is I back up the original server allocated lists and replace them with my own dll allocated list. The original list data is appended to the local list, and now we are free to add as much data as we want.
+The call to AddReachabilities is where it gets fun. It turns out that
+the engine exe and the game dll have separate heaps. So in order to
+extend the AAS navigation graph I had to hack around some memory
+allocation issues. What it amounts to is I back up the original server
+allocated lists and replace them with my own dll allocated list. The
+original list data is appended to the local list, and now we are free to
+add as much data as we want.
 
-` `
-*<font color="#339900">`/*` `============` `BotAASBuild::AddReachabilities` `============` `*/`</font>*
-<font color="#0000ff">`void`</font>` BotAASBuild::`<font color="#00aabb">`AddReachabilities`</font><font color="#000000">`(`</font>` `<font color="#0000ff">`void`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`   `
-`   `<font color="#339900">`// steal the portals list so i can manipulate it`</font>
-`   originalPortals.`<font color="#00aabb">`list`</font>` = file->portals.`<font color="#00aabb">`list`</font>`;`
-`   originalPortals.`<font color="#00aabb">`granularity`</font>` = file->portals.`<font color="#00aabb">`granularity`</font>`;`
-`   originalPortals.`<font color="#00aabb">`num`</font>` = file->portals.`<font color="#00aabb">`num`</font>`;`
-`   originalPortals.`<font color="#00aabb">`size`</font>` = file->portals.`<font color="#00aabb">`size`</font>`;`
-` `
-`   portals.`<font color="#00aabb">`Append`</font><font color="#000000">`(`</font>`file->portals`<font color="#000000">`)`</font>`;`
-`   file->portals.`<font color="#00aabb">`list`</font>` = portals.`<font color="#00aabb">`list`</font>`;`
-` `
-`   originalPortalIndex.`<font color="#00aabb">`list`</font>` = file->portalIndex.`<font color="#00aabb">`list`</font>`;`
-`   originalPortalIndex.`<font color="#00aabb">`granularity`</font>` = file->portalIndex.`<font color="#00aabb">`granularity`</font>`;`
-`   originalPortalIndex.`<font color="#00aabb">`num`</font>` = file->portalIndex.`<font color="#00aabb">`num`</font>`;`
-`   originalPortalIndex.`<font color="#00aabb">`size`</font>` = file->portalIndex.`<font color="#00aabb">`size`</font>`;`
-` `
-`   portalIndex.`<font color="#00aabb">`Append`</font><font color="#000000">`(`</font>`file->portalIndex`<font color="#000000">`)`</font>`;`
-`   file->portalIndex.`<font color="#00aabb">`list`</font>` = portalIndex.`<font color="#00aabb">`list`</font>`;`
-` `
-`   AddElevatorReachabilities`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`   AddTransporterReachabilities`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`   `<font color="#339900">`//TryToAddLadders();`</font>
-<font color="#000000">`}`</font>
+     
+    /*
+    ============
+    BotAASBuild::AddReachabilities
+    ============
+    */
+    void BotAASBuild::AddReachabilities( void ) {
+        
+        // steal the portals list so i can manipulate it
+        originalPortals.list = file->portals.list;
+        originalPortals.granularity = file->portals.granularity;
+        originalPortals.num = file->portals.num;
+        originalPortals.size = file->portals.size;
+     
+        portals.Append(file->portals);
+        file->portals.list = portals.list;
+     
+        originalPortalIndex.list = file->portalIndex.list;
+        originalPortalIndex.granularity = file->portalIndex.granularity;
+        originalPortalIndex.num = file->portalIndex.num;
+        originalPortalIndex.size = file->portalIndex.size;
+     
+        portalIndex.Append(file->portalIndex);
+        file->portalIndex.list = portalIndex.list;
+     
+        AddElevatorReachabilities();
+        AddTransporterReachabilities();
+        //TryToAddLadders();
+    }
 
 Adding Elevator Reachabilities
 ------------------------------
 
-The add AddElevatorReachabilies method became a MONSTER. There may be simpler implementations, but then again, this one started out simpler at one point too. I will only cover this routine at a high level, explaining some of the reasons for the design. I would suggest you read the comments and skim the code unless your are truly interested in the messy implementation.
+The add AddElevatorReachabilies method became a MONSTER. There may be
+simpler implementations, but then again, this one started out simpler at
+one point too. I will only cover this routine at a high level,
+explaining some of the reasons for the design. I would suggest you read
+the comments and skim the code unless your are truly interested in the
+messy implementation.
 
-My apologies for any formatting crapiness :( is there a way to get wiki not to indent so far???
+My apologies for any formatting crapiness :( is there a way to get wiki
+not to indent so far???
 
-` `
-*<font color="#339900">`/*` `============` `BotAASBuild::AddElevatorReachabilities` `cusTom3` `-` `welcome` `to` `the` `longest,` `largest,` `monolithic` `beast` `i` `can` `ever` `credit` `myself` `to` `writing` `-` `the` `original` `idea` `started` `fairly` `simple` `as` `a` `port` `from` `the` `original` `q3` `implementation` `-` `it` `just` `grew` `as` `different` `cases` `were` `tacked` `on,` `yes,` `it` `could` `use` `a` `rewrite` `with` `a` `simpler` `idea` `but...` `-` `favors` `reachabilties` `starting` `at` `outer` `edge` `of` `plat` `for` `navigation` `system` `usage.` `-` `if` `the` `top` `and` `bottom` `of` `the` `plat` `are` `in` `the` `same` `cluster` `reachabilities` `are` `created` `directly` `from` `top` `to` `bottom` `-` `if` `they` `are` `in` `different` `clusters` `and` `a` `portal` `exists` `between` `them` `the` `reachabilities` `use` `the` `portal` `-` `if` `there` `is` `no` `cluster` `portal` `this` `will` `try` `to` `create` `them` `-` `TODO:` `should` `improve` `this` `logic` `to` `try` `areas` `for` `shared` `edges` `going` `up` `center` `trace` `-` `look` `at` `using` `PushPointIntoAreaNum` `after` `PointReachableAreaNum` `-` `preliminary` `test` `didn't` `look` `good :(` `============` `*/`</font>*
-<font color="#0000ff">`void`</font>` BotAASBuild::`<font color="#00aabb">`AddElevatorReachabilities`</font><font color="#000000">`(`</font>` `<font color="#0000ff">`void`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`   idAASFile *`<font color="#0000ff">`file`</font>`;`
-`   `<font color="#0000ff">`file`</font>` = aas->file;`
-` `
-`   idEntity *ent;`
-`   `<font color="#339900">`// for each entity in the map`</font>
-`   `<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` ent = gameLocal.`<font color="#00aabb">`spawnedEntities`</font>`.`<font color="#00aabb">`Next`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`; ent != `<font color="#0000ff">`NULL`</font>`; ent = ent->spawnNode.`<font color="#00aabb">`Next`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       `<font color="#339900">`// that is an elevator`</font>
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` ent->IsType`<font color="#000000">`(`</font>` idPlat::`<font color="#00aabb">`Type`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           idPlat *platform = static_cast<idPlat *>`<font color="#000000">`(`</font>`ent`<font color="#000000">`)`</font>`;`
+     
+    /*
+    ============
+    BotAASBuild::AddElevatorReachabilities
+     
+    cusTom3 - welcome to the longest, largest, monolithic beast i can ever credit myself to writing
+        - the original idea started fairly simple as a port from the original q3 implementation
+        - it just grew as different cases were tacked on, yes, it could use a rewrite with a simpler idea but...
+        - favors reachabilties starting at outer edge of plat for navigation system usage.
+        - if the top and bottom of the plat are in the same cluster reachabilities are created directly from top to bottom
+        - if they are in different clusters and a portal exists between them the reachabilities use the portal
+        - if there is no cluster portal this will try to create them
+            - TODO: should improve this logic to try areas for shared edges going up center trace
+        - look at using PushPointIntoAreaNum after PointReachableAreaNum - preliminary test didn't look good :(
+    ============
+    */
+    void BotAASBuild::AddElevatorReachabilities( void ) {
+        idAASFile *file;
+        file = aas->file;
+     
+        idEntity *ent;
+        // for each entity in the map
+        for ( ent = gameLocal.spawnedEntities.Next(); ent != NULL; ent = ent->spawnNode.Next() ) {
+            // that is an elevator
+            if ( ent->IsType( idPlat::Type ) ) {
+                idPlat *platform = static_cast<idPlat *>(ent);
 
-This is why we needed the map populated ;) this first part just says, find each platform in the map.
+This is why we needed the map populated ;) this first part just says,
+find each platform in the map.
 
 Then a bunch of variables and stuff:
 
-` `
-`   `<font color="#339900">`// TODO: play with how much to expand this`</font>
-`   idBounds bounds = model->GetAbsBounds`<font color="#000000">`(`</font><font color="#000000">`)`</font>`.`<font color="#00aabb">`Expand`</font><font color="#000000">`(`</font>` `<font color="#0000dd">`0`</font>` `<font color="#000000">`)`</font>`;`
-`       `
-`   `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` aas_showElevators.`<font color="#00aabb">`GetBool`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       gameRenderWorld->DebugBounds`<font color="#000000">`(`</font>` colorGreen, bounds, vec3_origin, `<font color="#0000dd">`200000`</font>` `<font color="#000000">`)`</font>`;`
-`   `<font color="#000000">`}`</font>
-` `
-`   `<font color="#339900">`// top and bottom of plat (located in center, slightly above)`</font>
-`   idVec3 top, bottom, center;`
-`   center = bounds.`<font color="#00aabb">`GetCenter`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`   bottom = center;`
-`   bottom`<font color="#000000">`[`</font><font color="#0000dd">`2`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`2`</font><font color="#000000">`]`</font>` + `<font color="#0000dd">`2`</font>`; `
-`   top = center;`
-`   top`<font color="#000000">`[`</font><font color="#0000dd">`2`</font><font color="#000000">`]`</font>` = bottom`<font color="#000000">`[`</font><font color="#0000dd">`2`</font><font color="#000000">`]`</font>` + `<font color="#000000">`(`</font>` platform->GetPosition2`<font color="#000000">`(`</font><font color="#000000">`)`</font><font color="#000000">`[`</font><font color="#0000dd">`2`</font><font color="#000000">`]`</font>` - platform->GetPosition1`<font color="#000000">`(`</font><font color="#000000">`)`</font><font color="#000000">`[`</font><font color="#0000dd">`2`</font><font color="#000000">`]`</font>` `<font color="#000000">`)`</font>`; `
-` `
-`   `<font color="#339900">`// start of possible reach (on bottom), end of possible reach (on top) and thier area and cluster numbers`</font>
-`   idVec3 start, end;`
-`   `<font color="#0000ff">`int`</font>` topAreaNum, bottomAreaNum;`
-`   `<font color="#0000ff">`int`</font>` topClusterNum, bottomClusterNum;`
-`   `<font color="#339900">`// for last ditch effort to create a reach`</font>
-`   idVec3 bottomNeedPortal, topNeedPortal;`
-`   `<font color="#0000ff">`bool`</font>` needPortal;`
-` `
-`   `<font color="#339900">`// check for portals going up the plat before processing`</font>
-`   idVec3 firstPortal, lastPortal;`
-`   `<font color="#0000ff">`int`</font>` firstPortalNum, lastPortalNum;`
-`   firstPortalNum = lastPortalNum = `<font color="#0000dd">`0`</font>`;`
-`   `<font color="#0000ff">`bool`</font>` reachabilityCreated = `<font color="#0000ff">`false`</font>`;`
+     
+        // TODO: play with how much to expand this
+        idBounds bounds = model->GetAbsBounds().Expand( 0 );
+            
+        if ( aas_showElevators.GetBool() ) {
+            gameRenderWorld->DebugBounds( colorGreen, bounds, vec3_origin, 200000 );
+        }
+     
+        // top and bottom of plat (located in center, slightly above)
+        idVec3 top, bottom, center;
+        center = bounds.GetCenter();
+        bottom = center;
+        bottom[2] = bounds[1][2] + 2; 
+        top = center;
+        top[2] = bottom[2] + ( platform->GetPosition2()[2] - platform->GetPosition1()[2] ); 
+     
+        // start of possible reach (on bottom), end of possible reach (on top) and thier area and cluster numbers
+        idVec3 start, end;
+        int topAreaNum, bottomAreaNum;
+        int topClusterNum, bottomClusterNum;
+        // for last ditch effort to create a reach
+        idVec3 bottomNeedPortal, topNeedPortal;
+        bool needPortal;
+     
+        // check for portals going up the plat before processing
+        idVec3 firstPortal, lastPortal;
+        int firstPortalNum, lastPortalNum;
+        firstPortalNum = lastPortalNum = 0;
+        bool reachabilityCreated = false;
 
-The first thing the routine does when it finds a plat is trace up the “elevator shaft�? to see if there are any cluster portals separating the top and bottom positions of the plat. if the trace finds one, it is stored for processing later, and we continue up in search of more. If it finds more it creates reachabilities to them now.
+The first thing the routine does when it finds a plat is trace up the
+“elevator shaft�? to see if there are any cluster portals separating the
+top and bottom positions of the plat. if the trace finds one, it is
+stored for processing later, and we continue up in search of more. If it
+finds more it creates reachabilities to them now.
 
-` `
-<font color="#339900">`// look for portals up the elevator shaft and create reachabilities `</font>
-`   start = bottom;`
-`   bottomAreaNum = aas->PointReachableAreaNum`<font color="#000000">`(`</font>` start, DefaultBotBounds`<font color="#000000">`(`</font><font color="#000000">`)`</font>`, travelFlags `<font color="#000000">`)`</font>`;`
-`   bottomClusterNum = file->areas`<font color="#000000">`[`</font>`bottomAreaNum`<font color="#000000">`]`</font>`.`<font color="#00aabb">`cluster`</font>`;`
-` `
-`   `<font color="#339900">`// trace from bottom to top getting areas to look for portals`</font>
-`   aasTrace_t trace;`
-`   `<font color="#0000ff">`int`</font>` areas`<font color="#000000">`[`</font><font color="#0000dd">`10`</font><font color="#000000">`]`</font>`;  `
-`   idVec3 points`<font color="#000000">`[`</font><font color="#0000dd">`10`</font><font color="#000000">`]`</font>`; `
-`   trace.`<font color="#00aabb">`maxAreas`</font>` = `<font color="#0000dd">`10`</font>`;`
-`   trace.`<font color="#00aabb">`areas`</font>` = areas;`
-`   trace.`<font color="#00aabb">`points`</font>` = points;`
-`   file->Trace`<font color="#000000">`(`</font>` trace, bottom, top `<font color="#000000">`)`</font>`;`
-`   `<font color="#339900">`// for each area in trace (ignoring start area)`</font>
-`   `<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` `<font color="#0000ff">`int`</font>` q = `<font color="#0000dd">`1`</font>`; q < trace.`<font color="#00aabb">`numAreas`</font>`; q++ `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       aasArea_t area = file->areas`<font color="#000000">`[`</font>`trace.`<font color="#00aabb">`areas`</font><font color="#000000">`[`</font>`q`<font color="#000000">`]`</font><font color="#000000">`]`</font>`; `
-`       `<font color="#339900">`// only want portal areas`</font>
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` area.`<font color="#00aabb">`cluster`</font>` > `<font color="#0000dd">`0`</font>` `<font color="#000000">`)`</font>` `<font color="#0000ff">`continue`</font>`;`
-`       `<font color="#339900">`// trace is returning the same area 2 times in a row???`</font>
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` trace.`<font color="#00aabb">`areas`</font><font color="#000000">`[`</font>`q`<font color="#000000">`]`</font>` == trace.`<font color="#00aabb">`areas`</font><font color="#000000">`[`</font>`q-`<font color="#0000dd">`1`</font><font color="#000000">`]`</font>` `<font color="#000000">`)`</font>` `<font color="#0000ff">`continue`</font>`;`
-` `
-`       aasPortal_t p = file->portals`<font color="#000000">`[`</font>`-area.`<font color="#00aabb">`cluster`</font><font color="#000000">`]`</font>`;`
-`       `<font color="#339900">`// make sure the portal just found is a portal to the bottom cluster (gets set to next bottom)`</font>
-`       `<font color="#339900">`// TODO: there is a possibility that an edge point around the bottom`</font>
-`       `<font color="#339900">`// is in a different cluster than the bottom center point and a usable portal would be missed`</font>
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` bottomClusterNum > `<font color="#0000dd">`0`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           `<font color="#0000ff">`if`</font><font color="#000000">`(`</font>` !`<font color="#000000">`(`</font>` p.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` == bottomClusterNum || p.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` == bottomClusterNum `<font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#0000ff">`continue`</font>`;   `
-`       `<font color="#000000">`}`</font>
-`       `<font color="#339900">`// would need an else if < 0 here`</font>
-`       `<font color="#0000ff">`else`</font>` `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` bottomClusterNum < `<font color="#0000dd">`0`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>` `<font color="#339900">`// the bottom is also a portal - need to check that both portals share one cluster`</font>
-`           aasPortal_t b = file->portals`<font color="#000000">`[`</font>`-bottomClusterNum`<font color="#000000">`]`</font>`;`
-`           `<font color="#0000ff">`if`</font><font color="#000000">`(`</font>` !`<font color="#000000">`(`</font>` p.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` == b.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` || p.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` == b.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` || p.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` == b.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` || p.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` == b.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#0000ff">`continue`</font>`;  `
-`       `<font color="#000000">`}`</font>
-`       `<font color="#339900">`// if it is 0, the center bottom of plat is out of bounds (d3ctf3 small circle plat)`</font>
-` `
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` !firstPortalNum `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>` `<font color="#339900">`// just save the first portal for later reachability processing`</font>
-`           firstPortalNum = trace.`<font color="#00aabb">`areas`</font><font color="#000000">`[`</font>`q`<font color="#000000">`]`</font>`;`
-`           firstPortal = trace.`<font color="#00aabb">`points`</font><font color="#000000">`[`</font>`q`<font color="#000000">`]`</font>`;`
-`       `<font color="#000000">`}`</font>
-`       `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>` `<font color="#339900">`// create reaches from portal to portal up the shaft now`</font>
-`           `<font color="#339900">`// found a portal up the elevator shaft to create reaches to`</font>
-`           aasArea_t bottomArea = file->areas`<font color="#000000">`[`</font>`bottomAreaNum`<font color="#000000">`]`</font>`;`
-`           CreateReachability`<font color="#000000">`(`</font>` start, trace.`<font color="#00aabb">`points`</font><font color="#000000">`[`</font>`q`<font color="#000000">`]`</font>`, bottomAreaNum, trace.`<font color="#00aabb">`areas`</font><font color="#000000">`[`</font>`q`<font color="#000000">`]`</font>`, TFL_ELEVATOR `<font color="#000000">`)`</font>`;`
-`           reachabilityCreated = `<font color="#0000ff">`true`</font>`;`
-`       `<font color="#000000">`}`</font>` `<font color="#339900">`// end else q == 1`</font>
-` `
-`       `<font color="#339900">`// will be used for top processing`</font>
-`       lastPortal = trace.`<font color="#00aabb">`points`</font><font color="#000000">`[`</font>`q`<font color="#000000">`]`</font>`;`
-`       lastPortalNum = trace.`<font color="#00aabb">`areas`</font><font color="#000000">`[`</font>`q`<font color="#000000">`]`</font>`;`
-` `
-`       `<font color="#339900">`// reset the bottom area up to the portal just found and keep looking up the shaft from there`</font>
-`       bottomAreaNum = trace.`<font color="#00aabb">`areas`</font><font color="#000000">`[`</font>`q`<font color="#000000">`]`</font>`;`
-`       bottomClusterNum = area.`<font color="#00aabb">`cluster`</font>`;`
-`       start = trace.`<font color="#00aabb">`points`</font><font color="#000000">`[`</font>`q`<font color="#000000">`]`</font>`;`
-`   `<font color="#000000">`}`</font>` `<font color="#339900">`// end for each area `</font>
-` `
+\
 
-When the above code is done if there was one portal on the way up the point where it is first hit will be in firstPortal. If there were more than one (think 3 story plat) the point where the last portal found (nearest top) will be in lastPortal and a reachability will have been created between the portals. none of the portal checking code would be required if the portals were created after the reachabilies were, oh well, it was fun learning it.
+     
+    // look for portals up the elevator shaft and create reachabilities 
+        start = bottom;
+        bottomAreaNum = aas->PointReachableAreaNum( start, DefaultBotBounds(), travelFlags );
+        bottomClusterNum = file->areas[bottomAreaNum].cluster;
+     
+        // trace from bottom to top getting areas to look for portals
+        aasTrace_t trace;
+        int areas[10];  
+        idVec3 points[10]; 
+        trace.maxAreas = 10;
+        trace.areas = areas;
+        trace.points = points;
+        file->Trace( trace, bottom, top );
+        // for each area in trace (ignoring start area)
+        for ( int q = 1; q < trace.numAreas; q++ ) {
+            aasArea_t area = file->areas[trace.areas[q]]; 
+            // only want portal areas
+            if ( area.cluster > 0 ) continue;
+            // trace is returning the same area 2 times in a row???
+            if ( trace.areas[q] == trace.areas[q-1] ) continue;
+     
+            aasPortal_t p = file->portals[-area.cluster];
+            // make sure the portal just found is a portal to the bottom cluster (gets set to next bottom)
+            // TODO: there is a possibility that an edge point around the bottom
+            // is in a different cluster than the bottom center point and a usable portal would be missed
+            if ( bottomClusterNum > 0 ) {
+                if( !( p.clusters[0] == bottomClusterNum || p.clusters[1] == bottomClusterNum ) ) continue;   
+            }
+            // would need an else if < 0 here
+            else if ( bottomClusterNum < 0 ) { // the bottom is also a portal - need to check that both portals share one cluster
+                aasPortal_t b = file->portals[-bottomClusterNum];
+                if( !( p.clusters[0] == b.clusters[0] || p.clusters[0] == b.clusters[1] || p.clusters[1] == b.clusters[0] || p.clusters[1] == b.clusters[1]) ) continue;  
+            }
+            // if it is 0, the center bottom of plat is out of bounds (d3ctf3 small circle plat)
+     
+            if ( !firstPortalNum ) { // just save the first portal for later reachability processing
+                firstPortalNum = trace.areas[q];
+                firstPortal = trace.points[q];
+            }
+            else { // create reaches from portal to portal up the shaft now
+                // found a portal up the elevator shaft to create reaches to
+                aasArea_t bottomArea = file->areas[bottomAreaNum];
+                CreateReachability( start, trace.points[q], bottomAreaNum, trace.areas[q], TFL_ELEVATOR );
+                reachabilityCreated = true;
+            } // end else q == 1
+     
+            // will be used for top processing
+            lastPortal = trace.points[q];
+            lastPortalNum = trace.areas[q];
+     
+            // reset the bottom area up to the portal just found and keep looking up the shaft from there
+            bottomAreaNum = trace.areas[q];
+            bottomClusterNum = area.cluster;
+            start = trace.points[q];
+        } // end for each area 
+     
 
-Next the routine starts looking around the bottom of the platform for places to start using the plat. It looks a little like this as it searches around the bottom position of the plat:
+When the above code is done if there was one portal on the way up the
+point where it is first hit will be in firstPortal. If there were more
+than one (think 3 story plat) the point where the last portal found
+(nearest top) will be in lastPortal and a reachability will have been
+created between the portals. none of the portal checking code would be
+required if the portals were created after the reachabilies were, oh
+well, it was fun learning it.
 
-` `
-*<font color="#339900">`/*` `================` `4-----1-----5` `|` `|` `|` `|` `|` `0` `2` `|Y` `|` `|` `|____` `|` `|` `X` `7-----3-----6` `================` `*/`</font>*
+Next the routine starts looking around the bottom of the platform for
+places to start using the plat. It looks a little like this as it
+searches around the bottom position of the plat:
+
+     
+    /*
+    ================
+        4-----1-----5
+        |       |           
+        |       |       |
+        0       2       |Y
+        |       |       |____
+        |       |           X
+        7-----3-----6
+    ================
+    */
 
 this is q3 inspired ;)
 
-` `
-<font color="#0000ff">`float`</font>` x`<font color="#000000">`[`</font><font color="#0000dd">`8`</font><font color="#000000">`]`</font>`, y`<font color="#000000">`[`</font><font color="#0000dd">`8`</font><font color="#000000">`]`</font>`, x_top`<font color="#000000">`[`</font><font color="#0000dd">`8`</font><font color="#000000">`]`</font>`, y_top`<font color="#000000">`[`</font><font color="#0000dd">`8`</font><font color="#000000">`]`</font>`;`
-`x`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`; x`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` = center`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`; x`<font color="#000000">`[`</font><font color="#0000dd">`2`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`; x`<font color="#000000">`[`</font><font color="#0000dd">`3`</font><font color="#000000">`]`</font>` = center`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`;`
-`x`<font color="#000000">`[`</font><font color="#0000dd">`4`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`; x`<font color="#000000">`[`</font><font color="#0000dd">`5`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`; x`<font color="#000000">`[`</font><font color="#0000dd">`6`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`; x`<font color="#000000">`[`</font><font color="#0000dd">`7`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`;`
-` `
-`y`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` = center`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`; y`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`; y`<font color="#000000">`[`</font><font color="#0000dd">`2`</font><font color="#000000">`]`</font>` = center`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`; y`<font color="#000000">`[`</font><font color="#0000dd">`3`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`;`
-`y`<font color="#000000">`[`</font><font color="#0000dd">`4`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`; y`<font color="#000000">`[`</font><font color="#0000dd">`5`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`; y`<font color="#000000">`[`</font><font color="#0000dd">`6`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`; y`<font color="#000000">`[`</font><font color="#0000dd">`7`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`;`
-` `
-<font color="#339900">`// find adjacent areas around the bottom of the plat`</font>
-<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` `<font color="#0000ff">`int`</font>` i = `<font color="#0000dd">`0`</font>`; i < `<font color="#0000dd">`9`</font>`; i++ `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`   `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` i < `<font color="#0000dd">`8`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>`  `<font color="#339900">`//loops around the outside of the plat`</font>
-`       start`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` = x`<font color="#000000">`[`</font>`i`<font color="#000000">`]`</font>`;`
-`       start`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` = y`<font color="#000000">`[`</font>`i`<font color="#000000">`]`</font>`;`
-`       start`<font color="#000000">`[`</font><font color="#0000dd">`2`</font><font color="#000000">`]`</font>` = bottom`<font color="#000000">`[`</font><font color="#0000dd">`2`</font><font color="#000000">`]`</font>`;  `
-`       bottomAreaNum = aas->PointReachableAreaNum`<font color="#000000">`(`</font>` start, DefaultBotBounds`<font color="#000000">`(`</font><font color="#000000">`)`</font>`, travelFlags `<font color="#000000">`)`</font>`;`
-` `
-`       `<font color="#0000ff">`int`</font>` k; `<font color="#339900">`// TODO: try to eliminate this loop once and see what results`</font>
-`       `<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` k = `<font color="#0000dd">`0`</font>`; k < `<font color="#0000dd">`4`</font>`; k++ `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           `<font color="#0000ff">`if`</font><font color="#000000">`(`</font>` bottomAreaNum && file->GetArea`<font color="#000000">`(`</font>` bottomAreaNum `<font color="#000000">`)`</font>`.`<font color="#00aabb">`flags`</font>` & AREA_REACHABLE_WALK `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`               `<font color="#339900">`//gameRenderWorld->DebugCone( colorCyan, start, idVec3( 0, 0, 1 ), 0, 1);`</font>
-`               `<font color="#0000ff">`break`</font>`;`
-`           `<font color="#000000">`}`</font>
-`           start`<font color="#000000">`[`</font><font color="#0000dd">`2`</font><font color="#000000">`]`</font>` += `<font color="#0000dd">`2`</font>`; `
-`           bottomAreaNum = aas->PointReachableAreaNum`<font color="#000000">`(`</font>` start, DefaultBotBounds`<font color="#000000">`(`</font><font color="#000000">`)`</font>`, travelFlags `<font color="#000000">`)`</font>`;`
-`       `<font color="#000000">`}`</font>
-`       `<font color="#339900">`// couldn't find a reachable area - no need to process  for this point`</font>
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` k >= `<font color="#0000dd">`4`</font>` `<font color="#000000">`)`</font>` `<font color="#0000ff">`continue`</font>`;`
-`       bottomClusterNum = file->areas`<font color="#000000">`[`</font>`bottomAreaNum`<font color="#000000">`]`</font>`.`<font color="#00aabb">`cluster`</font>`;`
-`   `<font color="#000000">`}`</font>
-`   `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>`  `<font color="#339900">`// check at the middle of the plat (or the portal if there was one)`</font>
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` lastPortalNum `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           start = lastPortal;`
-`           bottomAreaNum = lastPortalNum;`
-`       `<font color="#000000">`}`</font>
-`       `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>
-`           start = bottom;`
-`           bottomAreaNum = aas->PointReachableAreaNum`<font color="#000000">`(`</font>` start, DefaultBotBounds`<font color="#000000">`(`</font><font color="#000000">`)`</font>`, travelFlags `<font color="#000000">`)`</font>`;`
-`           `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` !bottomAreaNum `<font color="#000000">`)`</font>` `<font color="#0000ff">`continue`</font>`; `
-`       `<font color="#000000">`}`</font>
-`       bottomClusterNum = file->areas`<font color="#000000">`[`</font>`bottomAreaNum`<font color="#000000">`]`</font>`.`<font color="#00aabb">`cluster`</font>`;`
-`   `<font color="#000000">`}`</font>
+     
+    float x[8], y[8], x_top[8], y_top[8];
+    x[0] = bounds[0][0]; x[1] = center[0]; x[2] = bounds[1][0]; x[3] = center[0];
+    x[4] = bounds[0][0]; x[5] = bounds[1][0]; x[6] = bounds[1][0]; x[7] = bounds[0][0];
+     
+    y[0] = center[1]; y[1] = bounds[1][1]; y[2] = center[1]; y[3] = bounds[0][1];
+    y[4] = bounds[1][1]; y[5] = bounds[1][1]; y[6] = bounds[0][1]; y[7] = bounds[0][1];
+     
+    // find adjacent areas around the bottom of the plat
+    for ( int i = 0; i < 9; i++ ) {
+        if ( i < 8 ) {  //loops around the outside of the plat
+            start[0] = x[i];
+            start[1] = y[i];
+            start[2] = bottom[2];  
+            bottomAreaNum = aas->PointReachableAreaNum( start, DefaultBotBounds(), travelFlags );
+     
+            int k; // TODO: try to eliminate this loop once and see what results
+            for ( k = 0; k < 4; k++ ) {
+                if( bottomAreaNum && file->GetArea( bottomAreaNum ).flags & AREA_REACHABLE_WALK ) {
+                    //gameRenderWorld->DebugCone( colorCyan, start, idVec3( 0, 0, 1 ), 0, 1);
+                    break;
+                }
+                start[2] += 2; 
+                bottomAreaNum = aas->PointReachableAreaNum( start, DefaultBotBounds(), travelFlags );
+            }
+            // couldn't find a reachable area - no need to process  for this point
+            if ( k >= 4 ) continue;
+            bottomClusterNum = file->areas[bottomAreaNum].cluster;
+        }
+        else {  // check at the middle of the plat (or the portal if there was one)
+            if ( lastPortalNum ) {
+                start = lastPortal;
+                bottomAreaNum = lastPortalNum;
+            }
+            else {
+                start = bottom;
+                bottomAreaNum = aas->PointReachableAreaNum( start, DefaultBotBounds(), travelFlags );
+                if ( !bottomAreaNum ) continue; 
+            }
+            bottomClusterNum = file->areas[bottomAreaNum].cluster;
+        }
 
-If it finds a location that is valid to start from, it then starts trying to find a place to get to at the top. It will first search around the top just like it did around the bottom. This makes the routine favor direct reachabilities from top to bottom. On the 9th iteration it checks for a portal up the elevator shaft and creates the reachability to the portal if it is there.
+If it finds a location that is valid to start from, it then starts
+trying to find a place to get to at the top. It will first search around
+the top just like it did around the bottom. This makes the routine favor
+direct reachabilities from top to bottom. On the 9th iteration it checks
+for a portal up the elevator shaft and creates the reachability to the
+portal if it is there.
 
-` `
-<font color="#339900">`//look at adjacent areas around the top of the plat make larger steps to outside the plat everytime`</font>
-`idBounds topBounds = bounds; `
-<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` `<font color="#0000ff">`int`</font>` n = `<font color="#0000dd">`0`</font>`; n < `<font color="#0000dd">`3`</font>`; n++ `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`   topBounds.`<font color="#00aabb">`ExpandSelf`</font><font color="#000000">`(`</font>` `<font color="#0000dd">`2`</font>` * n `<font color="#000000">`)`</font>`;`
-` `
-`   x_top`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` = topBounds`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`; x_top`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` = center`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`; x_top`<font color="#000000">`[`</font><font color="#0000dd">`2`</font><font color="#000000">`]`</font>` = topBounds`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`; x_top`<font color="#000000">`[`</font><font color="#0000dd">`3`</font><font color="#000000">`]`</font>` = center`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`;`
-`   x_top`<font color="#000000">`[`</font><font color="#0000dd">`4`</font><font color="#000000">`]`</font>` = topBounds`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`; x_top`<font color="#000000">`[`</font><font color="#0000dd">`5`</font><font color="#000000">`]`</font>` = topBounds`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`; x_top`<font color="#000000">`[`</font><font color="#0000dd">`6`</font><font color="#000000">`]`</font>` = topBounds`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`; x_top`<font color="#000000">`[`</font><font color="#0000dd">`7`</font><font color="#000000">`]`</font>` = topBounds`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`;`
-`   y_top`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` = center`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`; y_top`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` = topBounds`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`; y_top`<font color="#000000">`[`</font><font color="#0000dd">`2`</font><font color="#000000">`]`</font>` = center`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`; y_top`<font color="#000000">`[`</font><font color="#0000dd">`3`</font><font color="#000000">`]`</font>` = topBounds`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`;`
-`   y_top`<font color="#000000">`[`</font><font color="#0000dd">`4`</font><font color="#000000">`]`</font>` = topBounds`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`; y_top`<font color="#000000">`[`</font><font color="#0000dd">`5`</font><font color="#000000">`]`</font>` = topBounds`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`; y_top`<font color="#000000">`[`</font><font color="#0000dd">`6`</font><font color="#000000">`]`</font>` = topBounds`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`; y_top`<font color="#000000">`[`</font><font color="#0000dd">`7`</font><font color="#000000">`]`</font>` = topBounds`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`;`
-` `
-`   `<font color="#339900">`// circle around top plat position looking for areas`</font>
-`   `<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` `<font color="#0000ff">`int`</font>` j = `<font color="#0000dd">`0`</font>`; j < `<font color="#0000dd">`9`</font>`; j++ `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       `<font color="#339900">`// for the last round check for portal`</font>
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` j >= `<font color="#0000dd">`8`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` firstPortalNum `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`               end = firstPortal;`
-`               topAreaNum = firstPortalNum;`
-`           `<font color="#000000">`}`</font>` `
-`           `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>
-`               `<font color="#0000ff">`continue`</font>`;`
-`           `<font color="#000000">`}`</font>
-`       `<font color="#000000">`}`</font>
-`       `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>
-`           end`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` = x_top`<font color="#000000">`[`</font>`j`<font color="#000000">`]`</font>`;`
-`           end`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` = y_top`<font color="#000000">`[`</font>`j`<font color="#000000">`]`</font>`;`
-`           end`<font color="#000000">`[`</font><font color="#0000dd">`2`</font><font color="#000000">`]`</font>` = top`<font color="#000000">`[`</font><font color="#0000dd">`2`</font><font color="#000000">`]`</font>`;  `
-`           topAreaNum = aas->PointReachableAreaNum`<font color="#000000">`(`</font>` end, DefaultBotBounds`<font color="#000000">`(`</font><font color="#000000">`)`</font>`, travelFlags `<font color="#000000">`)`</font>`;`
-`           `
-`           `<font color="#0000ff">`int`</font>` l; `<font color="#339900">`// trace up a little higher`</font>
-`           `<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` l = `<font color="#0000dd">`0`</font>`; l < `<font color="#0000dd">`8`</font>`; l++ `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`               `<font color="#339900">`// gameRenderWorld->DebugArrow(colorPurple, start, end, 3, 200000);`</font>
-`               `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` topAreaNum && file->GetArea`<font color="#000000">`(`</font>` topAreaNum `<font color="#000000">`)`</font>`.`<font color="#00aabb">`flags`</font>` & AREA_REACHABLE_WALK`<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`                   `<font color="#339900">`// found a reachable area near top of plat - trace to see if we can reach it from center`</font>
-`                   aasTrace_t trace; `<font color="#339900">`// TODO: trace with a bounding box (don't know how)???`</font>
-`                   aas->Trace`<font color="#000000">`(`</font>`trace, top, end`<font color="#000000">`)`</font>`;`
-`                   `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` trace.`<font color="#00aabb">`fraction`</font>` >= `<font color="#0000dd">`1`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`                       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` aas_showElevators.`<font color="#00aabb">`GetBool`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`                           gameRenderWorld->DebugArrow`<font color="#000000">`(`</font>` colorPurple, top, end, `<font color="#0000dd">`1`</font>`, `<font color="#0000dd">`200000`</font>` `<font color="#000000">`)`</font>`;`
-`                       `<font color="#000000">`}`</font>
-`                       `<font color="#339900">`// TODO: Need to trace down to the floor here and check trace.distance > plat.height (d3dm1)`</font>
-`                       `<font color="#0000ff">`break`</font>`; `
-`                   `<font color="#000000">`}`</font>` `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>` `<font color="#339900">`// failed trace`</font>
-`                       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` aas_showElevators.`<font color="#00aabb">`GetBool`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`                           gameRenderWorld->DebugArrow`<font color="#000000">`(`</font>` colorOrange, top, end, `<font color="#0000dd">`1`</font>`, `<font color="#0000dd">`200000`</font>` `<font color="#000000">`)`</font>`;`
-`                       `<font color="#000000">`}`</font>
-`                   `<font color="#000000">`}`</font>
-`               `<font color="#000000">`}`</font>
-`               end`<font color="#000000">`[`</font><font color="#0000dd">`2`</font><font color="#000000">`]`</font>` += `<font color="#0000dd">`4`</font>`;`
-`               topAreaNum = aas->PointReachableAreaNum`<font color="#000000">`(`</font>` end, DefaultBotBounds`<font color="#000000">`(`</font><font color="#000000">`)`</font>`, travelFlags `<font color="#000000">`)`</font>`;`
-`           `<font color="#000000">`}`</font>
-`           `<font color="#339900">`// couldn't find top area`</font>
-`           `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` l >= `<font color="#0000dd">`8`</font>` `<font color="#000000">`)`</font>` `<font color="#0000ff">`continue`</font>`;`
+     
+    //look at adjacent areas around the top of the plat make larger steps to outside the plat everytime
+    idBounds topBounds = bounds; 
+    for ( int n = 0; n < 3; n++ ) {
+        topBounds.ExpandSelf( 2 * n );
+     
+        x_top[0] = topBounds[0][0]; x_top[1] = center[0]; x_top[2] = topBounds[1][0]; x_top[3] = center[0];
+        x_top[4] = topBounds[0][0]; x_top[5] = topBounds[1][0]; x_top[6] = topBounds[1][0]; x_top[7] = topBounds[0][0];
+        y_top[0] = center[1]; y_top[1] = topBounds[1][1]; y_top[2] = center[1]; y_top[3] = topBounds[0][1];
+        y_top[4] = topBounds[1][1]; y_top[5] = topBounds[1][1]; y_top[6] = topBounds[0][1]; y_top[7] = topBounds[0][1];
+     
+        // circle around top plat position looking for areas
+        for ( int j = 0; j < 9; j++ ) {
+            // for the last round check for portal
+            if ( j >= 8 ) {
+                if ( firstPortalNum ) {
+                    end = firstPortal;
+                    topAreaNum = firstPortalNum;
+                } 
+                else {
+                    continue;
+                }
+            }
+            else {
+                end[0] = x_top[j];
+                end[1] = y_top[j];
+                end[2] = top[2];  
+                topAreaNum = aas->PointReachableAreaNum( end, DefaultBotBounds(), travelFlags );
+                
+                int l; // trace up a little higher
+                for ( l = 0; l < 8; l++ ) {
+                    // gameRenderWorld->DebugArrow(colorPurple, start, end, 3, 200000);
+                    if ( topAreaNum && file->GetArea( topAreaNum ).flags & AREA_REACHABLE_WALK) {
+                        // found a reachable area near top of plat - trace to see if we can reach it from center
+                        aasTrace_t trace; // TODO: trace with a bounding box (don't know how)???
+                        aas->Trace(trace, top, end);
+                        if ( trace.fraction >= 1 ) {
+                            if ( aas_showElevators.GetBool() ) {
+                                gameRenderWorld->DebugArrow( colorPurple, top, end, 1, 200000 );
+                            }
+                            // TODO: Need to trace down to the floor here and check trace.distance > plat.height (d3dm1)
+                            break; 
+                        } else { // failed trace
+                            if ( aas_showElevators.GetBool() ) {
+                                gameRenderWorld->DebugArrow( colorOrange, top, end, 1, 200000 );
+                            }
+                        }
+                    }
+                    end[2] += 4;
+                    topAreaNum = aas->PointReachableAreaNum( end, DefaultBotBounds(), travelFlags );
+                }
+                // couldn't find top area
+                if ( l >= 8 ) continue;
 
-If it has found a valid bottom and top position vector it checks to make sure a reachability between the two makes sense, checking for things like the top and bottom being in the same area, or in different clusters, etc. if they are in different clusters the routine will look for possible portal areas along the way.
+If it has found a valid bottom and top position vector it checks to make
+sure a reachability between the two makes sense, checking for things
+like the top and bottom being in the same area, or in different
+clusters, etc. if they are in different clusters the routine will look
+for possible portal areas along the way.
 
-` `
-<font color="#339900">`// don't create reachabilities to the same area (worthless)`</font>
-`       `<font color="#0000ff">`if`</font><font color="#000000">`(`</font>` bottomAreaNum == topAreaNum `<font color="#000000">`)`</font>` `<font color="#0000ff">`continue`</font>`;`
-` `
-`   `<font color="#339900">`// area from which we will create a reachability`</font>
-`   aasArea_t area = file->areas`<font color="#000000">`[`</font>`bottomAreaNum`<font color="#000000">`]`</font>`;`
-`   idReachability *reach;`
-`   `<font color="#0000ff">`bool`</font>` create = `<font color="#0000ff">`true`</font>`;`
-` `
-`   `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` j < `<font color="#0000dd">`8`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       `<font color="#339900">`// if a reachability in the area already points to the area don't create another one`</font>
-`       `<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` reach = area.`<font color="#00aabb">`reach`</font>`; reach; reach = reach->next `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` reach->fromAreaNum == bottomAreaNum && reach->toAreaNum == topAreaNum `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`               create = `<font color="#0000ff">`false`</font>`;`
-`               `<font color="#0000ff">`break`</font>`;`
-`           `<font color="#000000">`}`</font>
-`       `<font color="#000000">`}`</font>
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` !create `<font color="#000000">`)`</font>` `<font color="#0000ff">`continue`</font>`;`
-`   `<font color="#000000">`}`</font>
-`   `<font color="#339900">`// area to create reachability to`</font>
-`   aasArea_t dest = file->areas`<font color="#000000">`[`</font>`topAreaNum`<font color="#000000">`]`</font>`;`
-` `
-`   `<font color="#339900">`// if goal area is portal it needs to be a portal for the bottom cluster`</font>
-`   `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` dest.`<font color="#00aabb">`cluster`</font>` < `<font color="#0000dd">`0`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` bottomClusterNum > `<font color="#0000dd">`0`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           `<font color="#0000ff">`const`</font>` aasPortal_t p = file->GetPortal`<font color="#000000">`(`</font>` -dest.`<font color="#00aabb">`cluster`</font>` `<font color="#000000">`)`</font>`;`
-`           `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` p.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` != bottomClusterNum && p.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` != bottomClusterNum `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`               `<font color="#0000ff">`continue`</font>`;`
-`           `<font color="#000000">`}`</font>
-`       `<font color="#000000">`}`</font>
-`       `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>` `<font color="#339900">`// if they are both portals they need to share a cluster`</font>
-`           `<font color="#0000ff">`const`</font>` aasPortal_t e = file->GetPortal`<font color="#000000">`(`</font>` -dest.`<font color="#00aabb">`cluster`</font>` `<font color="#000000">`)`</font>`;`
-`           `<font color="#0000ff">`const`</font>` aasPortal_t s = file->GetPortal`<font color="#000000">`(`</font>` -bottomClusterNum `<font color="#000000">`)`</font>`;`
-`           `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>`! `<font color="#000000">`(`</font>` s.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` == e.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` || s.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` == e.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` || s.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` == e.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` || s.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` == e.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`               `<font color="#0000ff">`continue`</font>`;`
-`           `<font color="#000000">`}`</font>
-`       `<font color="#000000">`}`</font>
-`   `<font color="#000000">`}`</font>
-` `
-`   `<font color="#339900">`// if areas are not portals and are in different clusters`</font>
-`   `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` area.`<font color="#00aabb">`cluster`</font>` > `<font color="#0000dd">`0`</font>` && dest.`<font color="#00aabb">`cluster`</font>` > `<font color="#0000dd">`0`</font>` && area.`<font color="#00aabb">`cluster`</font>` != dest.`<font color="#00aabb">`cluster`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       topClusterNum = dest.`<font color="#00aabb">`cluster`</font>`;`
-`       create = `<font color="#0000ff">`false`</font>`;`
-`       `<font color="#339900">`// if any face in the area bounds both clusters make it a portal`</font>
-`       `<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` `<font color="#0000ff">`int`</font>` j = `<font color="#0000dd">`0`</font>`; j < area.`<font color="#00aabb">`numFaces`</font>`; j++ `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           `<font color="#0000ff">`const`</font>` aasFace_t face = file->GetFace`<font color="#000000">`(`</font>` `<font color="#0000dd">`abs`</font><font color="#000000">`(`</font>` file->GetFaceIndex`<font color="#000000">`(`</font>` area.`<font color="#00aabb">`firstFace`</font>` + j `<font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`)`</font>`;`
-`           `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` file->GetArea`<font color="#000000">`(`</font>` face.`<font color="#00aabb">`areas`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`)`</font>`.`<font color="#00aabb">`cluster`</font>` == bottomClusterNum && file->GetArea`<font color="#000000">`(`</font>` face.`<font color="#00aabb">`areas`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`)`</font>`.`<font color="#00aabb">`cluster`</font>`== topClusterNum || file->GetArea`<font color="#000000">`(`</font>` face.`<font color="#00aabb">`areas`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`)`</font>`.`<font color="#00aabb">`cluster`</font>` == topClusterNum && file->GetArea`<font color="#000000">`(`</font>` face.`<font color="#00aabb">`areas`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`)`</font>`.`<font color="#00aabb">`cluster`</font>` == bottomClusterNum `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`               gameLocal.`<font color="#00aabb">`Printf`</font><font color="#000000">`(`</font><font color="#666666">`"create a portal here"`</font><font color="#000000">`)`</font>`;`
-`               create = `<font color="#0000ff">`true`</font>`;`
-`               `<font color="#0000ff">`break`</font>`;`
-`           `<font color="#000000">`}`</font>
-`       `<font color="#000000">`}`</font>
-`       `<font color="#339900">`// if the bottom area can be made a cluster make it`</font>
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` create `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           CreatePortal`<font color="#000000">`(`</font>` bottomAreaNum, bottomClusterNum, topClusterNum `<font color="#000000">`)`</font>`;                           `
-`       `<font color="#000000">`}`</font>
-`       `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>` `<font color="#339900">`// UGLY: check the top area same as we just checked the bottom`</font>
-`           `<font color="#339900">`// TODO: see if this ever gets used, if not think about getting rid of it for now?`</font>
-`           `<font color="#339900">`// TODO: break out the common code into ConvertAreaToPortal`</font>
-`           `<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` `<font color="#0000ff">`int`</font>` j = `<font color="#0000dd">`0`</font>`; j < dest.`<font color="#00aabb">`numFaces`</font>`; j++ `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`               `<font color="#0000ff">`const`</font>` aasFace_t face = file->GetFace`<font color="#000000">`(`</font>` `<font color="#0000dd">`abs`</font><font color="#000000">`(`</font>` file->GetFaceIndex`<font color="#000000">`(`</font>` dest.`<font color="#00aabb">`firstFace`</font>` + j `<font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`)`</font>`;`
-`               `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` file->GetArea`<font color="#000000">`(`</font>` face.`<font color="#00aabb">`areas`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`)`</font>`.`<font color="#00aabb">`cluster`</font>` == bottomClusterNum && file->GetArea`<font color="#000000">`(`</font>` face.`<font color="#00aabb">`areas`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`)`</font>`.`<font color="#00aabb">`cluster`</font>`== topClusterNum || file->GetArea`<font color="#000000">`(`</font>` face.`<font color="#00aabb">`areas`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`)`</font>`.`<font color="#00aabb">`cluster`</font>` == topClusterNum && file->GetArea`<font color="#000000">`(`</font>` face.`<font color="#00aabb">`areas`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`)`</font>`.`<font color="#00aabb">`cluster`</font>` == bottomClusterNum `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`                   create = `<font color="#0000ff">`true`</font>`;`
-`                   `<font color="#0000ff">`break`</font>`;`
-`               `<font color="#000000">`}`</font>
-`           `<font color="#000000">`}`</font>
-`           `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` create `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`               `<font color="#339900">`// make the top area a portal`</font>
-`               CreatePortal`<font color="#000000">`(`</font>` topAreaNum, topClusterNum, bottomClusterNum`<font color="#000000">`)`</font>`;`
-`           `<font color="#000000">`}`</font>
-`           `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>` `<font color="#339900">`// areas are in different clusters and neither made a portal`</font>
-`               `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` area.`<font color="#00aabb">`rev_reach`</font>` && dest.`<font color="#00aabb">`reach`</font><font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`                   bottomNeedPortal = start;`
-`                   topNeedPortal = end;`
-`                   needPortal = `<font color="#0000ff">`true`</font>`;`
-`               `<font color="#000000">`}`</font>
-`               `<font color="#0000ff">`continue`</font>`; `
-`           `<font color="#000000">`}`</font>
-`       `<font color="#000000">`}`</font>
-`   `<font color="#000000">`}`</font>
+     
+    // don't create reachabilities to the same area (worthless)
+        if( bottomAreaNum == topAreaNum ) continue;
+     
+        // area from which we will create a reachability
+        aasArea_t area = file->areas[bottomAreaNum];
+        idReachability *reach;
+        bool create = true;
+     
+        if ( j < 8 ) {
+            // if a reachability in the area already points to the area don't create another one
+            for ( reach = area.reach; reach; reach = reach->next ) {
+                if ( reach->fromAreaNum == bottomAreaNum && reach->toAreaNum == topAreaNum ) {
+                    create = false;
+                    break;
+                }
+            }
+            if ( !create ) continue;
+        }
+        // area to create reachability to
+        aasArea_t dest = file->areas[topAreaNum];
+     
+        // if goal area is portal it needs to be a portal for the bottom cluster
+        if ( dest.cluster < 0 ) {
+            if ( bottomClusterNum > 0 ) {
+                const aasPortal_t p = file->GetPortal( -dest.cluster );
+                if ( p.clusters[0] != bottomClusterNum && p.clusters[1] != bottomClusterNum ) {
+                    continue;
+                }
+            }
+            else { // if they are both portals they need to share a cluster
+                const aasPortal_t e = file->GetPortal( -dest.cluster );
+                const aasPortal_t s = file->GetPortal( -bottomClusterNum );
+                if (! ( s.clusters[0] == e.clusters[0] || s.clusters[0] == e.clusters[1] || s.clusters[1] == e.clusters[0] || s.clusters[1] == e.clusters[1] ) ) {
+                    continue;
+                }
+            }
+        }
+     
+        // if areas are not portals and are in different clusters
+        if ( area.cluster > 0 && dest.cluster > 0 && area.cluster != dest.cluster ) {
+            topClusterNum = dest.cluster;
+            create = false;
+            // if any face in the area bounds both clusters make it a portal
+            for ( int j = 0; j < area.numFaces; j++ ) {
+                const aasFace_t face = file->GetFace( abs( file->GetFaceIndex( area.firstFace + j ) ) );
+                if ( file->GetArea( face.areas[0]).cluster == bottomClusterNum && file->GetArea( face.areas[1]).cluster== topClusterNum || file->GetArea( face.areas[0]).cluster == topClusterNum && file->GetArea( face.areas[1]).cluster == bottomClusterNum ) {
+                    gameLocal.Printf("create a portal here");
+                    create = true;
+                    break;
+                }
+            }
+            // if the bottom area can be made a cluster make it
+            if ( create ) {
+                CreatePortal( bottomAreaNum, bottomClusterNum, topClusterNum );                           
+            }
+            else { // UGLY: check the top area same as we just checked the bottom
+                // TODO: see if this ever gets used, if not think about getting rid of it for now?
+                // TODO: break out the common code into ConvertAreaToPortal
+                for ( int j = 0; j < dest.numFaces; j++ ) {
+                    const aasFace_t face = file->GetFace( abs( file->GetFaceIndex( dest.firstFace + j ) ) );
+                    if ( file->GetArea( face.areas[0]).cluster == bottomClusterNum && file->GetArea( face.areas[1]).cluster== topClusterNum || file->GetArea( face.areas[0]).cluster == topClusterNum && file->GetArea( face.areas[1]).cluster == bottomClusterNum ) {
+                        create = true;
+                        break;
+                    }
+                }
+                if ( create ) {
+                    // make the top area a portal
+                    CreatePortal( topAreaNum, topClusterNum, bottomClusterNum);
+                }
+                else { // areas are in different clusters and neither made a portal
+                    if ( area.rev_reach && dest.reach) {
+                        bottomNeedPortal = start;
+                        topNeedPortal = end;
+                        needPortal = true;
+                    }
+                    continue; 
+                }
+            }
+        }
 
-If we got passed all that ugliness then we are ready to create a reachability.
+If we got passed all that ugliness then we are ready to create a
+reachability.
 
-` `
-`   `<font color="#339900">`// if got to this point there is a valid to area and from area for a reachability`</font>
-`   CreateReachability`<font color="#000000">`(`</font>` start, end, bottomAreaNum, topAreaNum, TFL_ELEVATOR `<font color="#000000">`)`</font>`;`
-`   reachabilityCreated = `<font color="#0000ff">`true`</font>`;`
-`   `<font color="#339900">`//don't go any further to the outside`</font>
-`   n = `<font color="#0000dd">`9999`</font>`;`
-<font color="#000000">`}`</font>
+     
+        // if got to this point there is a valid to area and from area for a reachability
+        CreateReachability( start, end, bottomAreaNum, topAreaNum, TFL_ELEVATOR );
+        reachabilityCreated = true;
+        //don't go any further to the outside
+        n = 9999;
+    }
 
-This type of pattern will continue until each spot in the bottom rotation has been checked against each spot in the top rotation, and the first and last portals have also been connected. Finally, if all the coagulation above couldn’t create something usable, one last attempt is made creating a portal that doesn’t REALLY share an edge between two clusters, but it works ;)
+This type of pattern will continue until each spot in the bottom
+rotation has been checked against each spot in the top rotation, and the
+first and last portals have also been connected. Finally, if all the
+coagulation above couldn’t create something usable, one last attempt is
+made creating a portal that doesn’t REALLY share an edge between two
+clusters, but it works ;)
 
-` `
-`   `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` !reachabilityCreated `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` aas_showElevators.`<font color="#00aabb">`GetBool`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           `<font color="#339900">`// give a little warning visually ;)`</font>
-`           gameRenderWorld->DebugBounds`<font color="#000000">`(`</font>` colorPink, bounds, vec3_origin, `<font color="#0000dd">`200000`</font>` `<font color="#000000">`)`</font>`;`
-`       `<font color="#000000">`}`</font>
-`       `<font color="#339900">`// could try many different things for a last ditch effort. (d3dm3 plats)`</font>
-`       `<font color="#339900">`// for now try and create a portal at top and one reach from bottom (could use list from bottom)`</font>
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` needPortal `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           topAreaNum = aas->PointReachableAreaNum`<font color="#000000">`(`</font>` topNeedPortal, DefaultBotBounds`<font color="#000000">`(`</font><font color="#000000">`)`</font>`, travelFlags `<font color="#000000">`)`</font>`;`
-`           aasArea_t topArea = file->areas`<font color="#000000">`[`</font>`topAreaNum`<font color="#000000">`]`</font>`;`
-`           topClusterNum = topArea.`<font color="#00aabb">`cluster`</font>`;`
-`           `<font color="#0000dd">`assert`</font><font color="#000000">`(`</font>`topClusterNum > `<font color="#0000dd">`0`</font><font color="#000000">`)`</font>`;`
-`           bottomAreaNum = aas->PointReachableAreaNum`<font color="#000000">`(`</font>` bottomNeedPortal, DefaultBotBounds`<font color="#000000">`(`</font><font color="#000000">`)`</font>`, travelFlags `<font color="#000000">`)`</font>`;`
-`           bottomClusterNum = file->GetArea`<font color="#000000">`(`</font>` bottomAreaNum `<font color="#000000">`)`</font>`.`<font color="#00aabb">`cluster`</font>`;`
-`           `<font color="#0000dd">`assert`</font><font color="#000000">`(`</font>` bottomClusterNum `<font color="#000000">`)`</font>`;`
-`           `<font color="#339900">`// TODO: this wacked out the points way crazy like in some spots`</font>
-`           `<font color="#339900">`//aas->PushPointIntoAreaNum(topAreaNum, topNeedPortal);`</font>
-`           `<font color="#339900">`//aas->PushPointIntoAreaNum(bottomAreaNum, bottomNeedPortal);`</font>
-`           CreatePortal`<font color="#000000">`(`</font>` topAreaNum, topClusterNum, bottomClusterNum `<font color="#000000">`)`</font>`;`
-`           CreateReachability`<font color="#000000">`(`</font>` bottomNeedPortal, topNeedPortal, bottomAreaNum, topAreaNum, TFL_ELEVATOR `<font color="#000000">`)`</font>`; `
-`       `<font color="#000000">`}`</font>
-`   `<font color="#000000">`}`</font>
+     
+        if ( !reachabilityCreated ) {
+            if ( aas_showElevators.GetBool() ) {
+                // give a little warning visually ;)
+                gameRenderWorld->DebugBounds( colorPink, bounds, vec3_origin, 200000 );
+            }
+            // could try many different things for a last ditch effort. (d3dm3 plats)
+            // for now try and create a portal at top and one reach from bottom (could use list from bottom)
+            if ( needPortal ) {
+                topAreaNum = aas->PointReachableAreaNum( topNeedPortal, DefaultBotBounds(), travelFlags );
+                aasArea_t topArea = file->areas[topAreaNum];
+                topClusterNum = topArea.cluster;
+                assert(topClusterNum > 0);
+                bottomAreaNum = aas->PointReachableAreaNum( bottomNeedPortal, DefaultBotBounds(), travelFlags );
+                bottomClusterNum = file->GetArea( bottomAreaNum ).cluster;
+                assert( bottomClusterNum );
+                // TODO: this wacked out the points way crazy like in some spots
+                //aas->PushPointIntoAreaNum(topAreaNum, topNeedPortal);
+                //aas->PushPointIntoAreaNum(bottomAreaNum, bottomNeedPortal);
+                CreatePortal( topAreaNum, topClusterNum, bottomClusterNum );
+                CreateReachability( bottomNeedPortal, topNeedPortal, bottomAreaNum, topAreaNum, TFL_ELEVATOR ); 
+            }
+        }
 
-Here are some pics to help explain. let me know if they are too dark ( my old monitor sucks a$$) also, **the image policy page is empty** so I took the safe route and uploaded crappy resolution images, if we thumbnail them can we upload nicer ones?
+Here are some pics to help explain. let me know if they are too dark (
+my old monitor sucks a\$\$) also, **the image policy page is empty** so
+I took the safe route and uploaded crappy resolution images, if we
+thumbnail them can we upload nicer ones?
 
 Elevator Screenshots
 --------------------
 
-This is what a plat looks like when the top and bottom are in the same cluster. Yes, there are probably too many reachabilities. I just haven’t tweaked enough.
+This is what a plat looks like when the top and bottom are in the same
+cluster. Yes, there are probably too many reachabilities. I just haven’t
+tweaked enough.
 
-<div class="thumb tnone">
-<div style="width: 182px">
-![](/images/images_thumb_4_4b_Plat_reachability_1.jpg_180px-Plat_reachability_1.jpg "images_thumb_4_4b_Plat_reachability_1.jpg_180px-Plat_reachability_1.jpg")
+![](/images/thumb/4/4b/Plat_reachability_1.jpg/180px-Plat_reachability_1.jpg)\
+ **
 
-<div class="thumbcaption">
-<div class="magnify" style="float: right">
-![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
+The Edge 2 turned out good, yes you also see a transporter reachability
+in there ;)
 
-</div>
-</div>
-</div>
-</div>
-The Edge 2 turned out good, yes you also see a transporter reachability in there ;)
+![](/images/thumb/5/57/Plat_reachability_2.jpg/180px-Plat_reachability_2.jpg)\
+ **
 
-<div class="thumb tnone">
-<div style="width: 182px">
-![](/images/images_thumb_5_57_Plat_reachability_2.jpg_180px-Plat_reachability_2.jpg "images_thumb_5_57_Plat_reachability_2.jpg_180px-Plat_reachability_2.jpg")
+This one has a cluster portal up the center. It was important to make
+sure the reachabilities still started at the outer edge so that the AI
+would know they were looking to do plat navigation before they
+accidentally ended up on or under it.
 
-<div class="thumbcaption">
-<div class="magnify" style="float: right">
-![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
+![](/images/thumb/8/88/Plat_reachability_2_portal.jpg/180px-Plat_reachability_2_portal.jpg)\
+ **
 
-</div>
-</div>
-</div>
-</div>
-This one has a cluster portal up the center. It was important to make sure the reachabilities still started at the outer edge so that the AI would know they were looking to do plat navigation before they accidentally ended up on or under it.
-
-<div class="thumb tnone">
-<div style="width: 182px">
-![](/images/images_thumb_8_88_Plat_reachability_2_portal.jpg_180px-Plat_reachability_2_portal.jpg "images_thumb_8_88_Plat_reachability_2_portal.jpg_180px-Plat_reachability_2_portal.jpg")
-
-<div class="thumbcaption">
-<div class="magnify" style="float: right">
-![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
-
-</div>
-</div>
-</div>
-</div>
 There were a couple that were stubborn…
 
-<div class="thumb tnone">
-<div style="width: 182px">
-![](/images/images_thumb_8_86_Plat_reachability_skinny.jpg_180px-Plat_reachability_skinny.jpg "images_thumb_8_86_Plat_reachability_skinny.jpg_180px-Plat_reachability_skinny.jpg")
+![](/images/thumb/8/86/Plat_reachability_skinny.jpg/180px-Plat_reachability_skinny.jpg)\
+ **
 
-<div class="thumbcaption">
-<div class="magnify" style="float: right">
-![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
+The two story plats have more than one cluster portal up the elevator
+shaft:
 
-</div>
-</div>
-</div>
-</div>
-The two story plats have more than one cluster portal up the elevator shaft:
+![](/images/thumb/a/af/Plat_reachability_2story.jpg/180px-Plat_reachability_2story.jpg)\
+ **
 
-<div class="thumb tnone">
-<div style="width: 182px">
-![](/images/images_thumb_a_af_Plat_reachability_2story.jpg_180px-Plat_reachability_2story.jpg "images_thumb_a_af_Plat_reachability_2story.jpg_180px-Plat_reachability_2story.jpg")
-
-<div class="thumbcaption">
-<div class="magnify" style="float: right">
-![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
-
-</div>
-</div>
-</div>
-</div>
 Will bots be playing CTF soon?
 
-<div class="thumb tnone">
-<div style="width: 182px">
-![](/images/images_thumb_7_72_Plat_hit_them_all.jpg_180px-Plat_hit_them_all.jpg "images_thumb_7_72_Plat_hit_them_all.jpg_180px-Plat_hit_them_all.jpg")
+![](/images/thumb/7/72/Plat_hit_them_all.jpg/180px-Plat_hit_them_all.jpg)\
+ **
 
-<div class="thumbcaption">
-<div class="magnify" style="float: right">
-![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
-
-</div>
-</div>
-</div>
-</div>
 Adding Transporter Reachabilities
 ---------------------------------
 
 Just for reference:
 
-` `
-*<font color="#339900">`/*` `============` `BotAASBuild::AddTransporterReachabilities` `cusTom3` `-` `needs` `some` `work,` `but` `is` `functional` `for` `purpose` `for` `now ;)` `============` `*/`</font>*
-<font color="#0000ff">`void`</font>` BotAASBuild::`<font color="#00aabb">`AddTransporterReachabilities`</font><font color="#000000">`(`</font>` `<font color="#0000ff">`void`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`   `<font color="#339900">`// teleporters - if trigger and destination are in the same area just ignore them???? (not likely but test map had it) `</font>
-`   `
-`   idEntity *ent;`
-`   `<font color="#339900">`// for each entity in the map`</font>
-`   `<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` ent = gameLocal.`<font color="#00aabb">`spawnedEntities`</font>`.`<font color="#00aabb">`Next`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`; ent != `<font color="#0000ff">`NULL`</font>`; ent = ent->spawnNode.`<font color="#00aabb">`Next`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       `<font color="#339900">`// that is an elevator`</font>
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` ent->IsType`<font color="#000000">`(`</font>` idTrigger_Multi::`<font color="#00aabb">`Type`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           `<font color="#0000ff">`const`</font>` `<font color="#0000ff">`char`</font>` *targetName;`
-`           `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` ent->spawnArgs.`<font color="#00aabb">`GetString`</font><font color="#000000">`(`</font>` `<font color="#666666">`"target"`</font>`, `<font color="#666666">`""`</font>`, &targetName `<font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`               idEntity *target = gameLocal.`<font color="#00aabb">`FindEntity`</font><font color="#000000">`(`</font>` targetName `<font color="#000000">`)`</font>`;`
-`               `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` target && target->IsType`<font color="#000000">`(`</font>` idPlayerStart::`<font color="#00aabb">`Type`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`                   `<font color="#0000ff">`int`</font>` startArea, targetArea, startCluster, targetCluster;`
-`                   `<font color="#0000ff">`bool`</font>` needsPortal = `<font color="#0000ff">`false`</font>`;`
-`                   `<font color="#339900">`// get the areas the trigger multi bounds is in (just origin for now)`</font>
-`                   startArea = aas->PointReachableAreaNum`<font color="#000000">`(`</font>` ent->GetPhysics`<font color="#000000">`(`</font><font color="#000000">`)`</font>`->GetOrigin`<font color="#000000">`(`</font><font color="#000000">`)`</font>`, DefaultBotBounds`<font color="#000000">`(`</font><font color="#000000">`)`</font>`, travelFlags `<font color="#000000">`)`</font>`;`
-`                   `<font color="#339900">`// get the areas the info_player_teleport is in (just origin for now) -- expanded bounding box 10 here to get a target area on d3dm1`</font>
-`                   targetArea = aas->PointReachableAreaNum`<font color="#000000">`(`</font>` target->GetPhysics`<font color="#000000">`(`</font><font color="#000000">`)`</font>`->GetOrigin`<font color="#000000">`(`</font><font color="#000000">`)`</font>`, DefaultBotBounds`<font color="#000000">`(`</font><font color="#000000">`)`</font>`.`<font color="#00aabb">`Expand`</font><font color="#000000">`(`</font>` `<font color="#0000dd">`10`</font>` `<font color="#000000">`)`</font>`, travelFlags `<font color="#000000">`)`</font>`;`
-`                   `<font color="#339900">`// if both are in valid areas (should be)`</font>
-`                   `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` startArea && targetArea `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`                       startCluster = aas->file->GetArea`<font color="#000000">`(`</font>` startArea `<font color="#000000">`)`</font>`.`<font color="#00aabb">`cluster`</font>`;`
-`                       targetCluster = aas->file->GetArea`<font color="#000000">`(`</font>` targetArea `<font color="#000000">`)`</font>`.`<font color="#00aabb">`cluster`</font>`;`
-`                       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` startCluster > `<font color="#0000dd">`0`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`                           `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` targetCluster > `<font color="#0000dd">`0`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`                               `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` startCluster != targetCluster `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`                                   needsPortal = `<font color="#0000ff">`true`</font>`;`
-`                               `<font color="#000000">`}`</font>
-`                           `<font color="#000000">`}`</font>` `
-`                           `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>` `<font color="#339900">`// target area is a cluster portal`</font>
-`                               `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` file->GetPortal`<font color="#000000">`(`</font>` -targetCluster `<font color="#000000">`)`</font>`.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` != startCluster && file->GetPortal`<font color="#000000">`(`</font>` -targetCluster `<font color="#000000">`)`</font>`.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` != startCluster `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`                                   needsPortal = `<font color="#0000ff">`true`</font>`;`
-`                               `<font color="#000000">`}`</font>
-`                           `<font color="#000000">`}`</font>
-`                       `<font color="#000000">`}`</font>
-`                       `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>` `<font color="#339900">`// start area is a cluster portal`</font>
-`                           `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` targetCluster > `<font color="#0000dd">`0`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`                               `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` file->GetPortal`<font color="#000000">`(`</font>` -startCluster `<font color="#000000">`)`</font>`.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` != targetCluster && file->GetPortal`<font color="#000000">`(`</font>` -startCluster `<font color="#000000">`)`</font>`.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` != targetCluster `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`                                   needsPortal = `<font color="#0000ff">`true`</font>`;`
-`                               `<font color="#000000">`}`</font>
-`                           `<font color="#000000">`}`</font>
-`                           `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>` `<font color="#339900">`// both portals`</font>
-`                               `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` `<font color="#000000">`(`</font>`file->GetPortal`<font color="#000000">`(`</font>` -startCluster `<font color="#000000">`)`</font>`.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` != file->GetPortal`<font color="#000000">`(`</font>` -targetCluster `<font color="#000000">`)`</font>`.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`)`</font>` &&`
-`                                    `<font color="#000000">`(`</font>`file->GetPortal`<font color="#000000">`(`</font>` -startCluster `<font color="#000000">`)`</font>`.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` != file->GetPortal`<font color="#000000">`(`</font>` -targetCluster `<font color="#000000">`)`</font>`.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`)`</font>` &&`
-`                                    `<font color="#000000">`(`</font>`file->GetPortal`<font color="#000000">`(`</font>` -startCluster `<font color="#000000">`)`</font>`.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` != file->GetPortal`<font color="#000000">`(`</font>` -targetCluster `<font color="#000000">`)`</font>`.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`)`</font>` &&`
-`                                    `<font color="#000000">`(`</font>`file->GetPortal`<font color="#000000">`(`</font>` -startCluster `<font color="#000000">`)`</font>`.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` != file->GetPortal`<font color="#000000">`(`</font>` -targetCluster `<font color="#000000">`)`</font>`.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`                                        `<font color="#339900">`// need a portal and both are already portals, won't work?`</font>
-`                                        `<font color="#0000ff">`continue`</font>`;`
-`                               `<font color="#000000">`}`</font>
-`                           `<font color="#000000">`}`</font>
-`                       `<font color="#000000">`}`</font>
-`                   `<font color="#000000">`}`</font>
-`                   `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` needsPortal `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>` `
-`                       CreatePortal`<font color="#000000">`(`</font>` startArea, startCluster, targetCluster `<font color="#000000">`)`</font>`;`
-`                   `<font color="#000000">`}`</font>
-`                   CreateReachability`<font color="#000000">`(`</font>` ent->GetPhysics`<font color="#000000">`(`</font><font color="#000000">`)`</font>`->GetOrigin`<font color="#000000">`(`</font><font color="#000000">`)`</font>`, target->GetPhysics`<font color="#000000">`(`</font><font color="#000000">`)`</font>`->GetOrigin`<font color="#000000">`(`</font><font color="#000000">`)`</font>`, startArea, targetArea, TFL_TELEPORT `<font color="#000000">`)`</font>`;`
-`               `<font color="#000000">`}`</font>
-`           `<font color="#000000">`}`</font>
-`       `<font color="#000000">`}`</font>
-`   `<font color="#000000">`}`</font>
-<font color="#000000">`}`</font>
+     
+    /*
+    ============
+    BotAASBuild::AddTransporterReachabilities
+     
+     cusTom3    - needs some work, but is functional for purpose for now ;)
+    ============
+    */
+    void BotAASBuild::AddTransporterReachabilities( void ) {
+        // teleporters - if trigger and destination are in the same area just ignore them???? (not likely but test map had it) 
+        
+        idEntity *ent;
+        // for each entity in the map
+        for ( ent = gameLocal.spawnedEntities.Next(); ent != NULL; ent = ent->spawnNode.Next() ) {
+            // that is an elevator
+            if ( ent->IsType( idTrigger_Multi::Type ) ) {
+                const char *targetName;
+                if ( ent->spawnArgs.GetString( "target", "", &targetName ) ) {
+                    idEntity *target = gameLocal.FindEntity( targetName );
+                    if ( target && target->IsType( idPlayerStart::Type ) ) {
+                        int startArea, targetArea, startCluster, targetCluster;
+                        bool needsPortal = false;
+                        // get the areas the trigger multi bounds is in (just origin for now)
+                        startArea = aas->PointReachableAreaNum( ent->GetPhysics()->GetOrigin(), DefaultBotBounds(), travelFlags );
+                        // get the areas the info_player_teleport is in (just origin for now) -- expanded bounding box 10 here to get a target area on d3dm1
+                        targetArea = aas->PointReachableAreaNum( target->GetPhysics()->GetOrigin(), DefaultBotBounds().Expand( 10 ), travelFlags );
+                        // if both are in valid areas (should be)
+                        if ( startArea && targetArea ) {
+                            startCluster = aas->file->GetArea( startArea ).cluster;
+                            targetCluster = aas->file->GetArea( targetArea ).cluster;
+                            if ( startCluster > 0 ) {
+                                if ( targetCluster > 0 ) {
+                                    if ( startCluster != targetCluster ) {
+                                        needsPortal = true;
+                                    }
+                                } 
+                                else { // target area is a cluster portal
+                                    if ( file->GetPortal( -targetCluster ).clusters[0] != startCluster && file->GetPortal( -targetCluster ).clusters[1] != startCluster ) {
+                                        needsPortal = true;
+                                    }
+                                }
+                            }
+                            else { // start area is a cluster portal
+                                if ( targetCluster > 0 ) {
+                                    if ( file->GetPortal( -startCluster ).clusters[0] != targetCluster && file->GetPortal( -startCluster ).clusters[1] != targetCluster ) {
+                                        needsPortal = true;
+                                    }
+                                }
+                                else { // both portals
+                                    if ( (file->GetPortal( -startCluster ).clusters[0] != file->GetPortal( -targetCluster ).clusters[0]) &&
+                                         (file->GetPortal( -startCluster ).clusters[1] != file->GetPortal( -targetCluster ).clusters[0]) &&
+                                         (file->GetPortal( -startCluster ).clusters[0] != file->GetPortal( -targetCluster ).clusters[1]) &&
+                                         (file->GetPortal( -startCluster ).clusters[1] != file->GetPortal( -targetCluster ).clusters[1]) ) {
+                                             // need a portal and both are already portals, won't work?
+                                             continue;
+                                    }
+                                }
+                            }
+                        }
+                        if ( needsPortal ) { 
+                            CreatePortal( startArea, startCluster, targetCluster );
+                        }
+                        CreateReachability( ent->GetPhysics()->GetOrigin(), target->GetPhysics()->GetOrigin(), startArea, targetArea, TFL_TELEPORT );
+                    }
+                }
+            }
+        }
+    }
 
 Helper Routines
 ---------------
 
-A few routines were broken out for reuse. I started reading Large Scale Software Development in C++ after implementing all of this and would probably design the component different now if i did it again.
+A few routines were broken out for reuse. I started reading Large Scale
+Software Development in C++ after implementing all of this and would
+probably design the component different now if i did it again.
 
-` `
-*<font color="#339900">`/*` `============` `BotAASBuild::CreateReachability` `============` `*/`</font>*
-<font color="#0000ff">`void`</font>` BotAASBuild::`<font color="#00aabb">`CreateReachability`</font><font color="#000000">`(`</font>` `<font color="#0000ff">`const`</font>` idVec3 &start, `<font color="#0000ff">`const`</font>` idVec3 &end, `<font color="#0000ff">`int`</font>` fromAreaNum, `<font color="#0000ff">`int`</font>` toAreaNum, `<font color="#0000ff">`int`</font>` travelFlags `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`   `<font color="#339900">`// TODO: this should probably return a pointer to the reachability created`</font>
-`   idReachability *r = AllocReachability`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`   idReachability *reach;`
-`   `
-`   `<font color="#339900">`// add the reach to the end of the start areas reachability list `</font>
-`   `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` reach = file->areas`<font color="#000000">`[`</font>`fromAreaNum`<font color="#000000">`]`</font>`.`<font color="#00aabb">`reach`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       `<font color="#339900">`// get to the last reach in the list - he he`</font>
-`       `<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` ; reach->next; reach = reach->next `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font><font color="#000000">`}`</font>
-`       reach->next = r;`
-`   `<font color="#000000">`}`</font>` `
-`   `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>
-`       `<font color="#339900">`// will be only reachability in start area list`</font>
-`       file->areas`<font color="#000000">`[`</font>`fromAreaNum`<font color="#000000">`]`</font>`.`<font color="#00aabb">`reach`</font>` = r; `
-`   `<font color="#000000">`}`</font>
-` `
-`   r->next = `<font color="#0000ff">`NULL`</font>`; `
-`   r->start = start; `
-`   r->end = end;`
-`   r->fromAreaNum = fromAreaNum;`
-`   r->toAreaNum = toAreaNum;`
-`   r->travelType = travelFlags;`
-`   r->travelTime = `<font color="#0000dd">`1`</font>`; `<font color="#339900">`// TODO: distance calculation here `</font>
-`   r->edgeNum = `<font color="#0000dd">`0`</font>`; `<font color="#339900">`// TODO: elevator height here, portal wouldn't share edge either? make parameter if needed?`</font>
-`   r->areaTravelTimes = `<font color="#0000ff">`NULL`</font>`;`
-`   `<font color="#0000ff">`if`</font><font color="#000000">`(`</font>` reach = file->areas`<font color="#000000">`[`</font>`toAreaNum`<font color="#000000">`]`</font>`.`<font color="#00aabb">`rev_reach`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       `<font color="#339900">`// get to the end of the rev_reach list`</font>
-`       `<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` ; reach->rev_next; reach = reach->rev_next `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font><font color="#000000">`}`</font>
-`       reach->rev_next = r;`
-`   `<font color="#000000">`}`</font>` `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>
-`       `<font color="#339900">`// will be only one in list`</font>
-`       file->areas`<font color="#000000">`[`</font>`toAreaNum`<font color="#000000">`]`</font>`.`<font color="#00aabb">`rev_reach`</font>` = r; `
-`   `<font color="#000000">`}`</font>
-`   `<font color="#339900">`//return r;`</font>
-<font color="#000000">`}`</font>
+     
+    /*
+    ============
+    BotAASBuild::CreateReachability
+    ============
+    */
+    void BotAASBuild::CreateReachability( const idVec3 &start, const idVec3 &end, int fromAreaNum, int toAreaNum, int travelFlags ) {
+        // TODO: this should probably return a pointer to the reachability created
+        idReachability *r = AllocReachability();
+        idReachability *reach;
+        
+        // add the reach to the end of the start areas reachability list 
+        if ( reach = file->areas[fromAreaNum].reach ) {
+            // get to the last reach in the list - he he
+            for ( ; reach->next; reach = reach->next ) {}
+            reach->next = r;
+        } 
+        else {
+            // will be only reachability in start area list
+            file->areas[fromAreaNum].reach = r; 
+        }
+     
+        r->next = NULL; 
+        r->start = start; 
+        r->end = end;
+        r->fromAreaNum = fromAreaNum;
+        r->toAreaNum = toAreaNum;
+        r->travelType = travelFlags;
+        r->travelTime = 1; // TODO: distance calculation here 
+        r->edgeNum = 0; // TODO: elevator height here, portal wouldn't share edge either? make parameter if needed?
+        r->areaTravelTimes = NULL;
+        if( reach = file->areas[toAreaNum].rev_reach ) {
+            // get to the end of the rev_reach list
+            for ( ; reach->rev_next; reach = reach->rev_next ) {}
+            reach->rev_next = r;
+        } else {
+            // will be only one in list
+            file->areas[toAreaNum].rev_reach = r; 
+        }
+        //return r;
+    }
 
-` `
-*<font color="#339900">`/*` `============` `BotAASBuild::CreatePortal` `============` `*/`</font>*
-<font color="#0000ff">`void`</font>` BotAASBuild::`<font color="#00aabb">`CreatePortal`</font><font color="#000000">`(`</font>` `<font color="#0000ff">`int`</font>` areaNum, `<font color="#0000ff">`int`</font>` cluster, `<font color="#0000ff">`int`</font>` joinCluster `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`   `<font color="#339900">`// TODO: could just pass in a reference to the area??`</font>
-`   aasPortal_t portal;`
-`   portal.`<font color="#00aabb">`areaNum`</font>` = areaNum;`
-`   portal.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` = cluster;`
-`   portal.`<font color="#00aabb">`clusterAreaNum`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` = aas->ClusterAreaNum`<font color="#000000">`(`</font>` cluster, areaNum `<font color="#000000">`)`</font>`;`
-`   portal.`<font color="#00aabb">`clusters`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` = joinCluster;`
-`   portal.`<font color="#00aabb">`clusterAreaNum`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` = file->GetCluster`<font color="#000000">`(`</font>` joinCluster `<font color="#000000">`)`</font>`.`<font color="#00aabb">`numReachableAreas`</font>`;`
-`   `<font color="#0000ff">`int`</font>` portalIndex = file->portals.`<font color="#00aabb">`Append`</font><font color="#000000">`(`</font>` portal `<font color="#000000">`)`</font>`;`
-`   `
-`   `<font color="#339900">`// adding an area to the joinCluster, update cluster stats `</font>
-`   file->clusters`<font color="#000000">`[`</font>`joinCluster`<font color="#000000">`]`</font>`.`<font color="#00aabb">`numAreas`</font>`++;`
-`   file->clusters`<font color="#000000">`[`</font>`joinCluster`<font color="#000000">`]`</font>`.`<font color="#00aabb">`numPortals`</font>`++;`
-`   file->clusters`<font color="#000000">`[`</font>`joinCluster`<font color="#000000">`]`</font>`.`<font color="#00aabb">`numReachableAreas`</font>`++;`
-`       `
-`   `<font color="#339900">`// update the files portalIndex`</font>
-`   `<font color="#0000ff">`int`</font>` insertat = file->clusters`<font color="#000000">`[`</font>`joinCluster`<font color="#000000">`]`</font>`.`<font color="#00aabb">`firstPortal`</font>`;`
-`   file->portalIndex.`<font color="#00aabb">`Insert`</font><font color="#000000">`(`</font>` portalIndex, insertat `<font color="#000000">`)`</font>`;`
-` `
-`   `<font color="#339900">`// reset the clusters firstPortal member to new locations`</font>
-`   `<font color="#0000ff">`int`</font>` current = `<font color="#0000dd">`0`</font>`;`
-`   `<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` `<font color="#0000ff">`int`</font>` c = `<font color="#0000dd">`1`</font>`; c < file->GetNumClusters`<font color="#000000">`(`</font><font color="#000000">`)`</font>`; c++ `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       file->clusters`<font color="#000000">`[`</font>`c`<font color="#000000">`]`</font>`.`<font color="#00aabb">`firstPortal`</font>` = current;`
-`       current += file->clusters`<font color="#000000">`[`</font>`c`<font color="#000000">`]`</font>`.`<font color="#00aabb">`numPortals`</font>`;`
-`   `<font color="#000000">`}`</font>
-`   `
-`   `<font color="#339900">`// adding a portal to the current cluster, update cluster stats`</font>
-`   file->clusters`<font color="#000000">`[`</font>`cluster`<font color="#000000">`]`</font>`.`<font color="#00aabb">`numPortals`</font>`++;`
-`   insertat = file->clusters`<font color="#000000">`[`</font>`cluster`<font color="#000000">`]`</font>`.`<font color="#00aabb">`firstPortal`</font>`;`
-`   file->portalIndex.`<font color="#00aabb">`Insert`</font><font color="#000000">`(`</font>` portalIndex, insertat `<font color="#000000">`)`</font>`;`
-` `
-`   `<font color="#339900">`// reset the clusters firstPortal member to new locations (again)`</font>
-`   current = `<font color="#0000dd">`0`</font>`;`
-`   `<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` `<font color="#0000ff">`int`</font>` c = `<font color="#0000dd">`1`</font>`; c < file->GetNumClusters`<font color="#000000">`(`</font><font color="#000000">`)`</font>`; c++ `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       file->clusters`<font color="#000000">`[`</font>`c`<font color="#000000">`]`</font>`.`<font color="#00aabb">`firstPortal`</font>` = current;`
-`       current += file->clusters`<font color="#000000">`[`</font>`c`<font color="#000000">`]`</font>`.`<font color="#00aabb">`numPortals`</font>`;`
-`   `<font color="#000000">`}`</font>
-`   `
-`   `<font color="#339900">`// update the area `</font>
-`   file->areas`<font color="#000000">`[`</font>`areaNum`<font color="#000000">`]`</font>`.`<font color="#00aabb">`cluster`</font>` = -portalIndex;`
-`   file->areas`<font color="#000000">`[`</font>`areaNum`<font color="#000000">`]`</font>`.`<font color="#00aabb">`contents`</font>` |= AREACONTENTS_CLUSTERPORTAL;`
-<font color="#000000">`}`</font>
-` `
+     
+    /*
+    ============
+    BotAASBuild::CreatePortal
+    ============
+    */
+    void BotAASBuild::CreatePortal( int areaNum, int cluster, int joinCluster ) {
+        // TODO: could just pass in a reference to the area??
+        aasPortal_t portal;
+        portal.areaNum = areaNum;
+        portal.clusters[0] = cluster;
+        portal.clusterAreaNum[0] = aas->ClusterAreaNum( cluster, areaNum );
+        portal.clusters[1] = joinCluster;
+        portal.clusterAreaNum[1] = file->GetCluster( joinCluster ).numReachableAreas;
+        int portalIndex = file->portals.Append( portal );
+        
+        // adding an area to the joinCluster, update cluster stats 
+        file->clusters[joinCluster].numAreas++;
+        file->clusters[joinCluster].numPortals++;
+        file->clusters[joinCluster].numReachableAreas++;
+            
+        // update the files portalIndex
+        int insertat = file->clusters[joinCluster].firstPortal;
+        file->portalIndex.Insert( portalIndex, insertat );
+     
+        // reset the clusters firstPortal member to new locations
+        int current = 0;
+        for ( int c = 1; c < file->GetNumClusters(); c++ ) {
+            file->clusters[c].firstPortal = current;
+            current += file->clusters[c].numPortals;
+        }
+        
+        // adding a portal to the current cluster, update cluster stats
+        file->clusters[cluster].numPortals++;
+        insertat = file->clusters[cluster].firstPortal;
+        file->portalIndex.Insert( portalIndex, insertat );
+     
+        // reset the clusters firstPortal member to new locations (again)
+        current = 0;
+        for ( int c = 1; c < file->GetNumClusters(); c++ ) {
+            file->clusters[c].firstPortal = current;
+            current += file->clusters[c].numPortals;
+        }
+        
+        // update the area 
+        file->areas[areaNum].cluster = -portalIndex;
+        file->areas[areaNum].contents |= AREACONTENTS_CLUSTERPORTAL;
+    }
+     
 
 Clean Up Code
 -------------
 
-When a map unloads all the AAS file additions need to be undone before the engine tries do free the AAS data. If this isn’t done correctly you may spend hours and days reading about things like heap corruption and linking to the CRT runtime and many other things C++ :)
+When a map unloads all the AAS file additions need to be undone before
+the engine tries do free the AAS data. If this isn’t done correctly you
+may spend hours and days reading about things like heap corruption and
+linking to the CRT runtime and many other things C++ :)
 
-` `
-*<font color="#339900">`/*` `============` `idAASLocal::Shutdown` `============` `*/`</font>*
-<font color="#0000ff">`void`</font>` idAASLocal::`<font color="#00aabb">`Shutdown`</font><font color="#000000">`(`</font>` `<font color="#0000ff">`void`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`   `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` `<font color="#0000ff">`file`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-` `
-<font color="#339900">`#ifdef MOD_BOTS // cusTom3 - aas extensions `</font>
-`   `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>`idStr`<font color="#000000">`(`</font>`file->GetName`<font color="#000000">`(`</font><font color="#000000">`)`</font><font color="#000000">`)`</font>`.`<font color="#00aabb">`Find`</font><font color="#000000">`(`</font>` `<font color="#666666">`"aas48"`</font>`, `<font color="#0000ff">`false`</font>` `<font color="#000000">`)`</font>` > `<font color="#0000dd">`0`</font><font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       botAASBuilder->FreeAAS`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`   `<font color="#000000">`}`</font>
-<font color="#339900">`#endif // TODO: save the new information out to a file so it doesn't have to be processed each map load`</font>
-`       `
-`       ShutdownRouting`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`       RemoveAllObstacles`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`       AASFileManager->FreeAAS`<font color="#000000">`(`</font>` `<font color="#0000ff">`file`</font>` `<font color="#000000">`)`</font>`;`
-`       `<font color="#0000ff">`file`</font>` = `<font color="#0000ff">`NULL`</font>`;`
-`   `<font color="#000000">`}`</font>
-<font color="#000000">`}`</font>
+     
+    /*
+    ============
+    idAASLocal::Shutdown
+    ============
+    */
+    void idAASLocal::Shutdown( void ) {
+        if ( file ) {
+     
+    #ifdef MOD_BOTS // cusTom3 - aas extensions 
+        if (idStr(file->GetName()).Find( "aas48", false ) > 0) {
+            botAASBuilder->FreeAAS();
+        }
+    #endif // TODO: save the new information out to a file so it doesn't have to be processed each map load
+            
+            ShutdownRouting();
+            RemoveAllObstacles();
+            AASFileManager->FreeAAS( file );
+            file = NULL;
+        }
+    }
 
-This calls into a clean up routine that puts the lists back into place, cleans up the remainder of the new ones and unlinks all the reachabilities from the data structures.
+This calls into a clean up routine that puts the lists back into place,
+cleans up the remainder of the new ones and unlinks all the
+reachabilities from the data structures.
 
-` `
-*<font color="#339900">`/*` `============` `BotAASBuild::FreeAAS` `============` `*/`</font>*
-<font color="#0000ff">`void`</font>` BotAASBuild::`<font color="#00aabb">`FreeAAS`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`   `<font color="#339900">`//OutputAASReachInfo( file );`</font>
-`   `
-`   `<font color="#339900">`// remove the references that point to engine objects - as innefficiently as possible ;)`</font>
-`   `<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` `<font color="#0000ff">`int`</font>` i = `<font color="#0000dd">`0`</font>`; i < originalPortals.`<font color="#00aabb">`Num`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`; i++ `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       `<font color="#339900">`// remove the first one from the list, it will move the rest (go backwards at least lazy man)`</font>
-`       file->portals.`<font color="#00aabb">`RemoveIndex`</font><font color="#000000">`(`</font>` `<font color="#0000dd">`0`</font>` `<font color="#000000">`)`</font>`;`
-`   `<font color="#000000">`}`</font>
-`   `
-`   `<font color="#339900">`// if file->portals was resized, portals points to a place that has been deleted. `</font>
-`   portals.`<font color="#00aabb">`list`</font>` = file->portals.`<font color="#00aabb">`list`</font>`;`
-`   portals.`<font color="#00aabb">`num`</font>` = file->portals.`<font color="#00aabb">`num`</font>`;`
-`   portals.`<font color="#00aabb">`size`</font>` = file->portals.`<font color="#00aabb">`size`</font>`;`
-`   portals.`<font color="#00aabb">`granularity`</font>` = file->portals.`<font color="#00aabb">`granularity`</font>`;`
-` `
-`   `<font color="#339900">`// reset the aas portals list back to the orignal`</font>
-`   file->portals.`<font color="#00aabb">`list`</font>` = originalPortals.`<font color="#00aabb">`list`</font>`;`
-`   file->portals.`<font color="#00aabb">`size`</font>` = originalPortals.`<font color="#00aabb">`size`</font>`;`
-`   file->portals.`<font color="#00aabb">`num`</font>`= originalPortals.`<font color="#00aabb">`num`</font>`;`
-`   file->portals.`<font color="#00aabb">`granularity`</font>` = originalPortals.`<font color="#00aabb">`granularity`</font>`;`
-` `
-`   `<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` `<font color="#0000ff">`int`</font>` i = `<font color="#0000dd">`0`</font>`; i < originalPortalIndex.`<font color="#00aabb">`Num`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`; i++ `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       `<font color="#339900">`// remove the first one from the list, it will move the rest (go backwards at least lazy man)`</font>
-`       file->portalIndex.`<font color="#00aabb">`RemoveIndex`</font><font color="#000000">`(`</font>` `<font color="#0000dd">`0`</font>` `<font color="#000000">`)`</font>`;`
-`   `<font color="#000000">`}`</font>
-` `
-`   `<font color="#339900">`// if file->portalIndex was resized, portalIndex points to a place that has been deleted. `</font>
-`   portalIndex.`<font color="#00aabb">`list`</font>` = file->portalIndex.`<font color="#00aabb">`list`</font>`;`
-`   portalIndex.`<font color="#00aabb">`num`</font>` = file->portalIndex.`<font color="#00aabb">`num`</font>`;`
-`   portalIndex.`<font color="#00aabb">`size`</font>` = file->portalIndex.`<font color="#00aabb">`size`</font>`;`
-`   portalIndex.`<font color="#00aabb">`granularity`</font>` = file->portalIndex.`<font color="#00aabb">`granularity`</font>`;`
-` `
-`   `<font color="#339900">`// reset the aas portalIndex list back to the orignal`</font>
-`   file->portalIndex.`<font color="#00aabb">`list`</font>` = originalPortalIndex.`<font color="#00aabb">`list`</font>`;`
-`   file->portalIndex.`<font color="#00aabb">`size`</font>` = originalPortalIndex.`<font color="#00aabb">`size`</font>`;`
-`   file->portalIndex.`<font color="#00aabb">`num`</font>`= originalPortalIndex.`<font color="#00aabb">`num`</font>`;`
-`   file->portalIndex.`<font color="#00aabb">`granularity`</font>` = originalPortalIndex.`<font color="#00aabb">`granularity`</font>`;`
-` `
-`   portals.`<font color="#00aabb">`Clear`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`   portalIndex.`<font color="#00aabb">`Clear`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-` `
-`   `<font color="#339900">`// for each reachability added unmanipulate aas file`</font>
-`   `<font color="#0000ff">`int`</font>` numReach = reachabilities.`<font color="#00aabb">`Num`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`   `
-`   `<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` `<font color="#0000ff">`int`</font>` i = `<font color="#0000dd">`0`</font>`; i < numReach; i++ `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       idReachability *r = reachabilities`<font color="#000000">`[`</font>` i `<font color="#000000">`]`</font>`;`
-`       `<font color="#339900">`// remove this reach from the list - reaches are added to end of the reach list so 0 represents no other reach in list`</font>
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` r->number > `<font color="#0000dd">`0`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           aas->GetAreaReachability`<font color="#000000">`(`</font>` r->fromAreaNum, r->number - `<font color="#0000dd">`1`</font>` `<font color="#000000">`)`</font>`->next = r->next;`
-`           `<font color="#339900">`// removing the reach from the list above f's up the reach numbers - renumber now so if 2 reaches were added the next one through works`</font>
-`           `<font color="#0000ff">`int`</font>` j = `<font color="#0000dd">`0`</font>`;`
-`           `<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` idReachability *reach = file->areas`<font color="#000000">`[`</font>`r->fromAreaNum`<font color="#000000">`]`</font>`.`<font color="#00aabb">`reach`</font>`; reach; reach = reach->next, j++ `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`               reach->number = j;`
-`           `<font color="#000000">`}`</font>
-`       `<font color="#000000">`}`</font>` `
-`       `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>
-`           `<font color="#339900">`// only one in list - tell area list is now empty`</font>
-`           file->areas`<font color="#000000">`[`</font>`r->fromAreaNum`<font color="#000000">`]`</font>`.`<font color="#00aabb">`reach`</font>` = `<font color="#0000ff">`NULL`</font>`;`
-`       `<font color="#000000">`}`</font>
-`       `
-`       `<font color="#339900">`// rev_reach has no numbers`</font>
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` r == file->areas`<font color="#000000">`[`</font>`r->toAreaNum`<font color="#000000">`]`</font>`.`<font color="#00aabb">`rev_reach`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           `<font color="#339900">`// only one in list, tell area`</font>
-`           file->areas`<font color="#000000">`[`</font>`r->toAreaNum`<font color="#000000">`]`</font>`.`<font color="#00aabb">`rev_reach`</font>` = `<font color="#0000ff">`NULL`</font>`;`
-`       `<font color="#000000">`}`</font>
-`       `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>
-`           `<font color="#339900">`// have to find the reach before me`</font>
-`           `<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` idReachability *rev = file->areas`<font color="#000000">`[`</font>`r->toAreaNum`<font color="#000000">`]`</font>`.`<font color="#00aabb">`rev_reach`</font>`; rev; rev = rev->rev_next `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`               `<font color="#339900">`// if the next reach pointer points to the same thing i do? `</font>
-`               `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` r == rev->rev_next `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`                   rev->rev_next = r->rev_next;`
-`                   `<font color="#0000ff">`break`</font>`;`
-`               `<font color="#000000">`}`</font>
-`           `<font color="#000000">`}`</font>`  `
-`       `<font color="#000000">`}`</font>
-`   `<font color="#000000">`}`</font>
-`   `<font color="#339900">`// free memory allocated.`</font>
-`   reachabilities.`<font color="#00aabb">`DeleteContents`</font><font color="#000000">`(`</font>` `<font color="#0000ff">`true`</font>` `<font color="#000000">`)`</font>`;`
-`   `<font color="#0000ff">`file`</font>` = `<font color="#0000ff">`NULL`</font>`;`
-`   aas = `<font color="#0000ff">`NULL`</font>`;`
-` `
-`   `<font color="#339900">`//OutputAASReachInfo( file ); `</font>
-<font color="#000000">`}`</font>
+     
+    /*
+    ============
+    BotAASBuild::FreeAAS
+     
+    ============
+    */
+    void BotAASBuild::FreeAAS() {
+        //OutputAASReachInfo( file );
+        
+        // remove the references that point to engine objects - as innefficiently as possible ;)
+        for ( int i = 0; i < originalPortals.Num(); i++ ) {
+            // remove the first one from the list, it will move the rest (go backwards at least lazy man)
+            file->portals.RemoveIndex( 0 );
+        }
+        
+        // if file->portals was resized, portals points to a place that has been deleted. 
+        portals.list = file->portals.list;
+        portals.num = file->portals.num;
+        portals.size = file->portals.size;
+        portals.granularity = file->portals.granularity;
+     
+        // reset the aas portals list back to the orignal
+        file->portals.list = originalPortals.list;
+        file->portals.size = originalPortals.size;
+        file->portals.num= originalPortals.num;
+        file->portals.granularity = originalPortals.granularity;
+     
+        for ( int i = 0; i < originalPortalIndex.Num(); i++ ) {
+            // remove the first one from the list, it will move the rest (go backwards at least lazy man)
+            file->portalIndex.RemoveIndex( 0 );
+        }
+     
+        // if file->portalIndex was resized, portalIndex points to a place that has been deleted. 
+        portalIndex.list = file->portalIndex.list;
+        portalIndex.num = file->portalIndex.num;
+        portalIndex.size = file->portalIndex.size;
+        portalIndex.granularity = file->portalIndex.granularity;
+     
+        // reset the aas portalIndex list back to the orignal
+        file->portalIndex.list = originalPortalIndex.list;
+        file->portalIndex.size = originalPortalIndex.size;
+        file->portalIndex.num= originalPortalIndex.num;
+        file->portalIndex.granularity = originalPortalIndex.granularity;
+     
+        portals.Clear();
+        portalIndex.Clear();
+     
+        // for each reachability added unmanipulate aas file
+        int numReach = reachabilities.Num();
+        
+        for ( int i = 0; i < numReach; i++ ) {
+            idReachability *r = reachabilities[ i ];
+            // remove this reach from the list - reaches are added to end of the reach list so 0 represents no other reach in list
+            if ( r->number > 0 ) {
+                aas->GetAreaReachability( r->fromAreaNum, r->number - 1 )->next = r->next;
+                // removing the reach from the list above f's up the reach numbers - renumber now so if 2 reaches were added the next one through works
+                int j = 0;
+                for ( idReachability *reach = file->areas[r->fromAreaNum].reach; reach; reach = reach->next, j++ ) {
+                    reach->number = j;
+                }
+            } 
+            else {
+                // only one in list - tell area list is now empty
+                file->areas[r->fromAreaNum].reach = NULL;
+            }
+            
+            // rev_reach has no numbers
+            if ( r == file->areas[r->toAreaNum].rev_reach ) {
+                // only one in list, tell area
+                file->areas[r->toAreaNum].rev_reach = NULL;
+            }
+            else {
+                // have to find the reach before me
+                for ( idReachability *rev = file->areas[r->toAreaNum].rev_reach; rev; rev = rev->rev_next ) {
+                    // if the next reach pointer points to the same thing i do? 
+                    if ( r == rev->rev_next ) {
+                        rev->rev_next = r->rev_next;
+                        break;
+                    }
+                }  
+            }
+        }
+        // free memory allocated.
+        reachabilities.DeleteContents( true );
+        file = NULL;
+        aas = NULL;
+     
+        //OutputAASReachInfo( file ); 
+    }
 
 Source Download and Mod Integration
 -----------------------------------
 
 The source can be downloaded from:
 
-[<http://home.comcast.net/~matkatamibakundo/bots.src.zip>](http://web.archive.org/web/20080608025104/http://home.comcast.net/~matkatamibakundo/bots.src.zip)
+<http://home.comcast.net/~matkatamibakundo/bots.src.zip>
 
-thanks to chuck at [<http://home.comcast.net/~chuckdoodbmx/>](http://web.archive.org/web/20080608025104/http://home.comcast.net/~chuckdoodbmx/) for hosting ;)
+thanks to chuck at <http://home.comcast.net/~chuckdoodbmx/> for
+hosting ;)
 
 To integrate this into your mod you can search for:
 
-` `
-<font color="#339900">`#ifdef MOD_BOTS // cusTom3 - aas extensions`</font>
+     
+    #ifdef MOD_BOTS // cusTom3 - aas extensions
 
-Every change necessary was wrapped in with that. After you have the AAS extensions integrated you will need to code the AI logic to use the elevators. The teleporters should just work ;). Tinman has sabot using the plats and has scripted the logic necessary. You can check out his source when it is released if you need an example of how to do this.
+Every change necessary was wrapped in with that. After you have the AAS
+extensions integrated you will need to code the AI logic to use the
+elevators. The teleporters should just work ;). Tinman has sabot using
+the plats and has scripted the logic necessary. You can check out his
+source when it is released if you need an example of how to do this.
 
 Here are a couple of routines I knocked out to help with that effort.
 
-` `
-*<font color="#339900">`/*` `================` `botAi::Event_IsUnderPlat` `================` `*/`</font>*
-<font color="#0000ff">`void`</font>` botAi::`<font color="#00aabb">`Event_IsUnderPlat`</font><font color="#000000">`(`</font>` idEntity *ent `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`   `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` ent->IsType`<font color="#000000">`(`</font>` idPlat::`<font color="#00aabb">`Type`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       idPlat *plat = static_cast<idPlat *>`<font color="#000000">`(`</font>`ent`<font color="#000000">`)`</font>`;`
-`       `<font color="#339900">`// this will represent the volume under the plat`</font>
-`       idBounds floorToPlat = plat->GetPhysics`<font color="#000000">`(`</font><font color="#000000">`)`</font>`->GetAbsBounds`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`       `
-`       `<font color="#339900">`// adjust the mins z value to bottom pos`</font>
-`       floorToPlat`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`.`<font color="#00aabb">`z`</font>` = plat->GetPosition1`<font color="#000000">`(`</font><font color="#000000">`)`</font>`.`<font color="#00aabb">`z`</font>`;  `
-`       `<font color="#339900">`// adjust the maxs z value to top of plat minus arbitrary value to get below it  `</font>
-`       floorToPlat`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`.`<font color="#00aabb">`z`</font>` = plat->GetPhysics`<font color="#000000">`(`</font><font color="#000000">`)`</font>`->GetAbsBounds`<font color="#000000">`(`</font><font color="#000000">`)`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`.`<font color="#00aabb">`z`</font>` - `<font color="#0000dd">`10`</font>`;`
-` `
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` ai_debugMove.`<font color="#00aabb">`GetBool`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           gameRenderWorld->DebugBounds`<font color="#000000">`(`</font>` colorGreen, floorToPlat, vec3_origin, gameLocal.`<font color="#00aabb">`msec`</font>`  `<font color="#000000">`)`</font>`;`
-`       `<font color="#000000">`}`</font>
-`       `<font color="#339900">`// is player inside bounds just created?`</font>
-`       `<font color="#0000ff">`bool`</font>` under =  floorToPlat.`<font color="#00aabb">`IntersectsBounds`</font><font color="#000000">`(`</font>` physicsObject->GetAbsBounds`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>`;`
-`       `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` under && ai_debugMove.`<font color="#00aabb">`GetBool`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           gameRenderWorld->DebugBounds`<font color="#000000">`(`</font>` colorYellow, physicsObject->GetAbsBounds`<font color="#000000">`(`</font><font color="#000000">`)`</font>`, vec3_origin, gameLocal.`<font color="#00aabb">`msec`</font>`  `<font color="#000000">`)`</font>`;`
-`           `<font color="#339900">`// Event_GetWaitPosition( ent ); was testing it, lol here only for visuals`</font>
-`       `<font color="#000000">`}`</font>
-`       idThread::`<font color="#00aabb">`ReturnInt`</font><font color="#000000">`(`</font>` under `<font color="#000000">`)`</font>`;`
-`       `<font color="#0000ff">`return`</font>`;`
-`   `<font color="#000000">`}`</font>
-`   idThread::`<font color="#00aabb">`ReturnInt`</font><font color="#000000">`(`</font>` `<font color="#0000ff">`false`</font>` `<font color="#000000">`)`</font>`;`
-<font color="#000000">`}`</font>
-` `
-` `
-*<font color="#339900">`/*` `================` `botAi::Event_GetWaitPosition` `Find` `a` `position` `out` `from` `under` `plat` `cusTom3` `had` `this` `funny` `idea` `to` `draw` `a` `picture` `for` `the` `search` `arrays ;)` `4-----1-----5` `|` `|` `|` `|` `|` `0` `2` `|Y` `|` `|` `|____` `|` `|` `X` `7-----3-----6` `================` `*/`</font>*
-<font color="#0000ff">`void`</font>` botAi::`<font color="#00aabb">`Event_GetWaitPosition`</font><font color="#000000">`(`</font>` idEntity *ent `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`   idVec3 result = physicsObject->GetOrigin`<font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-` `
-`   `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` ent->IsType`<font color="#000000">`(`</font>` idPlat::`<font color="#00aabb">`Type`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       idPlat *plat = static_cast<idPlat *>`<font color="#000000">`(`</font>`ent`<font color="#000000">`)`</font>`;`
-`       `
-`       `<font color="#339900">`// expand 24 for player bounding box and another 6 to get out past it`</font>
-`       idBounds bounds = plat->GetPhysics`<font color="#000000">`(`</font><font color="#000000">`)`</font>`->GetAbsBounds`<font color="#000000">`(`</font><font color="#000000">`)`</font>`.`<font color="#00aabb">`Expand`</font><font color="#000000">`(`</font>` `<font color="#0000dd">`30`</font>` `<font color="#000000">`)`</font>`;`
-` `
-`       `<font color="#339900">`// rotate around the bounds looking for good spot to wait for plat`</font>
-`       idVec3 center = bounds.`<font color="#00aabb">`GetCenter`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`       `<font color="#0000ff">`float`</font>` x`<font color="#000000">`[`</font><font color="#0000dd">`8`</font><font color="#000000">`]`</font>`, y`<font color="#000000">`[`</font><font color="#0000dd">`8`</font><font color="#000000">`]`</font>`, z;`
-`       x`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`; x`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` = center`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`; x`<font color="#000000">`[`</font><font color="#0000dd">`2`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`; x`<font color="#000000">`[`</font><font color="#0000dd">`3`</font><font color="#000000">`]`</font>` = center`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`;`
-`       x`<font color="#000000">`[`</font><font color="#0000dd">`4`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`; x`<font color="#000000">`[`</font><font color="#0000dd">`5`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`; x`<font color="#000000">`[`</font><font color="#0000dd">`6`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`; x`<font color="#000000">`[`</font><font color="#0000dd">`7`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>`;`
-`       y`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` = center`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`; y`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`; y`<font color="#000000">`[`</font><font color="#0000dd">`2`</font><font color="#000000">`]`</font>` = center`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`; y`<font color="#000000">`[`</font><font color="#0000dd">`3`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`;`
-`       y`<font color="#000000">`[`</font><font color="#0000dd">`4`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`; y`<font color="#000000">`[`</font><font color="#0000dd">`5`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`; y`<font color="#000000">`[`</font><font color="#0000dd">`6`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`; y`<font color="#000000">`[`</font><font color="#0000dd">`7`</font><font color="#000000">`]`</font>` = bounds`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font><font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`;`
-`       z = playerEnt->GetEyePosition`<font color="#000000">`(`</font><font color="#000000">`)`</font>`.`<font color="#00aabb">`z`</font>`; `<font color="#339900">`// not sure what z value would be good, trying eye level`</font>
-`       `
-`       idVec3 search;`
-`       `<font color="#0000ff">`float`</font>` closest = idMath::`<font color="#00aabb">`INFINITY`</font>`; `<font color="#339900">`// biger than big`</font>
-`       `<font color="#0000ff">`for`</font>` `<font color="#000000">`(`</font>` `<font color="#0000ff">`int`</font>` i = `<font color="#0000dd">`0`</font>`; i < `<font color="#0000dd">`8`</font>`; i++ `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`           search`<font color="#000000">`[`</font><font color="#0000dd">`0`</font><font color="#000000">`]`</font>` = x`<font color="#000000">`[`</font>`i`<font color="#000000">`]`</font>`;`
-`           search`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>` = y`<font color="#000000">`[`</font><font color="#0000dd">`1`</font><font color="#000000">`]`</font>`;`
-`           search`<font color="#000000">`[`</font><font color="#0000dd">`2`</font><font color="#000000">`]`</font>` = z;`
-`           `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` PointReachableAreaNum`<font color="#000000">`(`</font>` search `<font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`               `<font color="#339900">`// found a reachable spot, if it is closer than the last one we found use it instead`</font>
-`               `<font color="#0000ff">`float`</font>` distance = `<font color="#000000">`(`</font>` search - physicsObject->GetOrigin`<font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>`.`<font color="#00aabb">`LengthSqr`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`               `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` distance < closest `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`                   closest = distance;`
-`                   result = search;`
-`               `<font color="#000000">`}`</font>
-`           `<font color="#000000">`}`</font>
-`       `<font color="#000000">`}`</font>
-`   `<font color="#000000">`}`</font>
-`   `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` ai_debugMove.`<font color="#00aabb">`GetBool`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`       gameRenderWorld->DebugArrow`<font color="#000000">`(`</font>` colorCyan, physicsObject->GetOrigin`<font color="#000000">`(`</font><font color="#000000">`)`</font>`, result, `<font color="#0000dd">`1`</font><font color="#000000">`)`</font>`;`
-`   `<font color="#000000">`}`</font>
-`   idThread::`<font color="#00aabb">`ReturnVector`</font><font color="#000000">`(`</font>` result `<font color="#000000">`)`</font>`;`
-<font color="#000000">`}`</font>
+     
+    /*
+    ================
+    botAi::Event_IsUnderPlat
+    ================
+    */
+    void botAi::Event_IsUnderPlat( idEntity *ent ) {
+        if ( ent->IsType( idPlat::Type ) ) {
+            idPlat *plat = static_cast<idPlat *>(ent);
+            // this will represent the volume under the plat
+            idBounds floorToPlat = plat->GetPhysics()->GetAbsBounds();
+            
+            // adjust the mins z value to bottom pos
+            floorToPlat[0].z = plat->GetPosition1().z;  
+            // adjust the maxs z value to top of plat minus arbitrary value to get below it  
+            floorToPlat[1].z = plat->GetPhysics()->GetAbsBounds()[1].z - 10;
+     
+            if ( ai_debugMove.GetBool() ) {
+                gameRenderWorld->DebugBounds( colorGreen, floorToPlat, vec3_origin, gameLocal.msec  );
+            }
+            // is player inside bounds just created?
+            bool under =  floorToPlat.IntersectsBounds( physicsObject->GetAbsBounds() );
+            if ( under && ai_debugMove.GetBool() ) {
+                gameRenderWorld->DebugBounds( colorYellow, physicsObject->GetAbsBounds(), vec3_origin, gameLocal.msec  );
+                // Event_GetWaitPosition( ent ); was testing it, lol here only for visuals
+            }
+            idThread::ReturnInt( under );
+            return;
+        }
+        idThread::ReturnInt( false );
+    }
+     
+     
+    /*
+    ================
+    botAi::Event_GetWaitPosition
+     
+    Find a position out from under plat
+    cusTom3 had this funny idea to draw a picture for the search arrays ;)
+     
+        4-----1-----5
+        |       |           
+        |       |       |
+        0       2       |Y
+        |       |       |____
+        |       |           X
+        7-----3-----6
+    ================
+    */
+    void botAi::Event_GetWaitPosition( idEntity *ent ) {
+        idVec3 result = physicsObject->GetOrigin();
+     
+        if ( ent->IsType( idPlat::Type ) ) {
+            idPlat *plat = static_cast<idPlat *>(ent);
+            
+            // expand 24 for player bounding box and another 6 to get out past it
+            idBounds bounds = plat->GetPhysics()->GetAbsBounds().Expand( 30 );
+     
+            // rotate around the bounds looking for good spot to wait for plat
+            idVec3 center = bounds.GetCenter();
+            float x[8], y[8], z;
+            x[0] = bounds[0][0]; x[1] = center[0]; x[2] = bounds[1][0]; x[3] = center[0];
+            x[4] = bounds[0][0]; x[5] = bounds[1][0]; x[6] = bounds[1][0]; x[7] = bounds[0][0];
+            y[0] = center[1]; y[1] = bounds[1][1]; y[2] = center[1]; y[3] = bounds[0][1];
+            y[4] = bounds[1][1]; y[5] = bounds[1][1]; y[6] = bounds[0][1]; y[7] = bounds[0][1];
+            z = playerEnt->GetEyePosition().z; // not sure what z value would be good, trying eye level
+            
+            idVec3 search;
+            float closest = idMath::INFINITY; // biger than big
+            for ( int i = 0; i < 8; i++ ) {
+                search[0] = x[i];
+                search[1] = y[1];
+                search[2] = z;
+                if ( PointReachableAreaNum( search ) ) {
+                    // found a reachable spot, if it is closer than the last one we found use it instead
+                    float distance = ( search - physicsObject->GetOrigin() ).LengthSqr();
+                    if ( distance < closest ) {
+                        closest = distance;
+                        result = search;
+                    }
+                }
+            }
+        }
+        if ( ai_debugMove.GetBool() ) {
+            gameRenderWorld->DebugArrow( colorCyan, physicsObject->GetOrigin(), result, 1);
+        }
+        idThread::ReturnVector( result );
+    }
 
-''' Side Note: ''' The modifications have been made to the game-d3xp project so that bots will be able to run in vanilla d3 and roe expansion pack installs. Many modifications to the source were necessary to make the d3xp project buildable and functional without \_D3XP and \_CTF defined. If you would like to use these changes as well extract the zip over a clean 1.3 sdk src folder and open the bot.sln you should be good to go.
+**Side Note:** The modifications have been made to the game-d3xp project
+so that bots will be able to run in vanilla d3 and roe expansion pack
+installs. Many modifications to the source were necessary to make the
+d3xp project buildable and functional without \_D3XP and \_CTF defined.
+If you would like to use these changes as well extract the zip over a
+clean 1.3 sdk src folder and open the bot.sln you should be good to go.
 
 if you have any questions feel free to ask them up on d3w ;)
 

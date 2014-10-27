@@ -1,83 +1,94 @@
----
-format: Markdown
-categories: Entity
-toc: yes
-title: Path_anim
-...
-Path anim (entity)
-==================
+<div class="plainlinks"
+style="border: 1px grey solid; padding: 0.25em;">
 
-> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
+help by verifying and
+[completing](Path_anim_%28entity%29 "http://www.modwiki.net/w/index.php?title=Path_anim_%28entity%29&action=edit")
+the info on this page.*
 
-> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+</div>
+
+<div id="stub" class="boilerplate metadata">
+
+*This article is a
+[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
+. You can help us by <span class="plainlinks"> [expanding
+it](Path_anim_%28entity%29 "http://www.modwiki.net/w/index.php?title=Path_anim_%28entity%29&action=edit")
+</span> .*
+
+</div>
+
+\
 
 Description
 -----------
 
-Character will play the specified animation. Set angles to direction to face.
+Character will play the specified animation. Set angles to direction to
+face.
 
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+The following is a list of key/value pairs, also known as spawn
+arguments, that function with this entity.\
 
-| KEY               | DESCRIPTION                                                                   |
-|-------------------|-------------------------------------------------------------------------------|
-| angle             | Description not available.                                                    |
-| anim              | anim to play.                                                                 |
-| bind              | Description not available.                                                    |
-| bindOrientated    | Description not available.                                                    |
-| bindToBody        | Description not available.                                                    |
-| bindToJoint       | Description not available.                                                    |
-| bindanim          | Description not available.                                                    |
-| blend\_in         | 1.  frame to blend in to anim.                                                |
-| blend\_out        | 1.  frame to blend out of anim.                                               |
-| cameraTarget      | Description not available.                                                    |
-| cinematic         | Description not available.                                                    |
-| classname         | Description not available.                                                    |
-| clipmodel         | Description not available.                                                    |
-| cone              | Description not available.                                                    |
-| cylinder          | Description not available.                                                    |
-| editor\_color     | Description not available.                                                    |
-| editor\_maxs      | Description not available.                                                    |
-| editor\_mins      | Description not available.                                                    |
-| editor\_rotatable | Description not available.                                                    |
-| editor\_showangle | Description not available.                                                    |
-| editor\_usage     | Character will play the specified animation. Set angles to direction to face. |
-| editor\_var XXXX  | Description not available.                                                    |
-| guiTarget         | Description not available.                                                    |
-| health            | Description not available.                                                    |
-| hide              | Description not available.                                                    |
-| inherit           | Description not available.                                                    |
-| maxs              | Description not available.                                                    |
-| mins              | Description not available.                                                    |
-| model             | Description not available.                                                    |
-| name              | Description not available.                                                    |
-| networkSync       | Description not available.                                                    |
-| neverDormant      | Description not available.                                                    |
-| noGrab            | Description not available.                                                    |
-| noclipmodel       | Description not available.                                                    |
-| origin            | Description not available.                                                    |
-| rotation          | Description not available.                                                    |
-| scriptobject      | Description not available.                                                    |
-| size              | Description not available.                                                    |
-| skin\_xray        | Description not available.                                                    |
-| slowmo            | Description not available.                                                    |
-| solidForTeam      | Description not available.                                                    |
-| spawnclass        | Description not available.                                                    |
-| target            | next path entity.                                                             |
+  KEY                 DESCRIPTION
+  ------------------- -------------------------------------------------------------------------------
+  angle               Description not available.
+  anim                anim to play.
+  bind                Description not available.
+  bindOrientated      Description not available.
+  bindToBody          Description not available.
+  bindToJoint         Description not available.
+  bindanim            Description not available.
+  blend\_in           \# frame to blend in to anim.
+  blend\_out          \# frame to blend out of anim.
+  cameraTarget        Description not available.
+  cinematic           Description not available.
+  classname           Description not available.
+  clipmodel           Description not available.
+  cone                Description not available.
+  cylinder            Description not available.
+  editor\_color       Description not available.
+  editor\_maxs        Description not available.
+  editor\_mins        Description not available.
+  editor\_rotatable   Description not available.
+  editor\_showangle   Description not available.
+  editor\_usage       Character will play the specified animation. Set angles to direction to face.
+  editor\_var XXXX    Description not available.
+  guiTarget           Description not available.
+  health              Description not available.
+  hide                Description not available.
+  inherit             Description not available.
+  maxs                Description not available.
+  mins                Description not available.
+  model               Description not available.
+  name                Description not available.
+  networkSync         Description not available.
+  neverDormant        Description not available.
+  noGrab              Description not available.
+  noclipmodel         Description not available.
+  origin              Description not available.
+  rotation            Description not available.
+  scriptobject        Description not available.
+  size                Description not available.
+  skin\_xray          Description not available.
+  slowmo              Description not available.
+  solidForTeam        Description not available.
+  spawnclass          Description not available.
+  target              next path entity.
 
 Inheritance
 -----------
 
 This entity is derived from the following:
 
--   *[idEntity](IdEntity\_(class))*
-    -   '' idPathCorner''
-        -   [path\_default](Path\_default\_(entity))
-            -   *' path\_anim*'
+-   *[idEntity](IdEntity_%28class%29 "IdEntity (class)")*
+    -   *[idPathCorner](IdPathCorner_%28class%29 "IdPathCorner (class)")*
+        -   [path\_default](Path_default_%28entity%29 "Path default (entity)")
+            -   **path\_anim**
 
-**Note**: Entries marked in italics are classes defined in the SDK.
+**Note** : Entries marked in italics are classes defined in the SDK.
 
 Notes
 -----

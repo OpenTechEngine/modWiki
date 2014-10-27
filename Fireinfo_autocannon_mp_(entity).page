@@ -1,15 +1,24 @@
----
-format: Markdown
-categories: Entity
-toc: yes
-title: Fireinfo_autocannon_mp
-...
-Fireinfo autocannon mp (entity)
-===============================
+<div class="plainlinks"
+style="border: 1px grey solid; padding: 0.25em;">
 
-> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
+help by verifying and
+[completing](Fireinfo_autocannon_mp_%28entity%29 "http://modwiki.net/w/index.php?title=Fireinfo_autocannon_mp_%28entity%29&action=edit")
+the info on this page.*
 
-> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+</div>
+
+<div id="stub" class="boilerplate metadata">
+
+*This article is a
+[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
+. You can help us by <span class="plainlinks"> [expanding
+it](Fireinfo_autocannon_mp_%28entity%29 "http://modwiki.net/w/index.php?title=Fireinfo_autocannon_mp_%28entity%29&action=edit")
+</span> .*
+
+</div>
+
+\
 
 Description
 -----------
@@ -19,47 +28,48 @@ Description not available.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+The following is a list of key/value pairs, also known as spawn
+arguments, that function with this entity.\
 
-| KEY                    | DESCRIPTION                |
-|------------------------|----------------------------|
-| ammoRequired           | Description not available. |
-| ammoType               | Description not available. |
-| clipSize               | Description not available. |
-| crosshair              | Description not available. |
-| def\_projectile        | Description not available. |
-| flashColor             | Description not available. |
-| flashSize              | Description not available. |
-| flashTime              | Description not available. |
-| fx\_muzzleFlash        | Description not available. |
-| inherit                | Description not available. |
-| joint\_barrel          | Description not available. |
-| joint\_barrel2         | Description not available. |
-| lowAmmo                | Description not available. |
-| mtr\_flashShader       | Description not available. |
-| muzzle\_kick\_angles   | Description not available. |
-| muzzle\_kick\_maxtime  | Description not available. |
-| muzzle\_kick\_offset   | Description not available. |
-| muzzle\_kick\_time     | Description not available. |
-| muzzlelocation         | Description not available. |
-| net\_clientProjectiles | Description not available. |
-| numProjectiles         | Description not available. |
-| recoilpitch            | Description not available. |
-| recoilyaw              | Description not available. |
-| spawnclass             | Description not available. |
-| spread                 | Description not available. |
-| viewSpring             | Description not available. |
+  KEY                      DESCRIPTION
+  ------------------------ ----------------------------
+  ammoRequired             Description not available.
+  ammoType                 Description not available.
+  clipSize                 Description not available.
+  crosshair                Description not available.
+  def\_projectile          Description not available.
+  flashColor               Description not available.
+  flashSize                Description not available.
+  flashTime                Description not available.
+  fx\_muzzleFlash          Description not available.
+  inherit                  Description not available.
+  joint\_barrel            Description not available.
+  joint\_barrel2           Description not available.
+  lowAmmo                  Description not available.
+  mtr\_flashShader         Description not available.
+  muzzle\_kick\_angles     Description not available.
+  muzzle\_kick\_maxtime    Description not available.
+  muzzle\_kick\_offset     Description not available.
+  muzzle\_kick\_time       Description not available.
+  muzzlelocation           Description not available.
+  net\_clientProjectiles   Description not available.
+  numProjectiles           Description not available.
+  recoilpitch              Description not available.
+  recoilyaw                Description not available.
+  spawnclass               Description not available.
+  spread                   Description not available.
+  viewSpring               Description not available.
 
 Inheritance
 -----------
 
 This entity is derived from the following:
 
--   '' hhAutoCannonFireController''
-    -   <span class="deadlink"> fireinfo\_autocannon</span>
-        -   *' fireinfo\_autocannon\_mp*'
+-   *[hhAutoCannonFireController](HhAutoCannonFireController_%28class%29 "HhAutoCannonFireController (class)")*
+    -   [fireinfo\_autocannon](Fireinfo_autocannon_%28entity%29 "Fireinfo autocannon (entity)")
+        -   **fireinfo\_autocannon\_mp**
 
-**Note**: Entries marked in italics are classes defined in the SDK.
+**Note** : Entries marked in italics are classes defined in the SDK.
 
 Notes
 -----

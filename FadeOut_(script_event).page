@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: FadeOut
-...
-FadeOut (script event)
-======================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -20,7 +12,7 @@ Fades from the given color over the given time in seconds.
 Usage
 -----
 
-*void* fadeOut( *vector* **color**, *float* **time** )
+*void* fadeOut( *vector* **color** , *float* **time** )
 
 Parameters
 ----------
@@ -31,12 +23,13 @@ Parameters
 Examples
 --------
 
-` `
-<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`fadeOut`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>`', `<font color="#0000dd">`10`</font><font color="#000000">`)`</font>`;`
+     
+    sys.fadeOut('0 0 0', 10);
 
 Notes
 -----
 
 This script event does not return any values.
 
+\
 

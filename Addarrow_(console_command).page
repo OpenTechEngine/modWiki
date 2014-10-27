@@ -1,29 +1,23 @@
----
-format: Markdown
-categories: console_command
-toc: yes
-title: Addarrow
-...
-Addarrow (console command)
-==========================
-
 Description
 -----------
 
-This command draws an arrow from the starting point to the end point in the specified color.
+This command draws an arrow from the starting point to the end point in
+the specified color.
 
 Usage
 -----
 
 At the console type...
 
-`addArrow [Starting Point] [End Point] [Color]`
+    addArrow [Starting Point] [End Point] [Color]
 
 Parameters
 ----------
 
--   [Starting Point] - Spacial coordinates in X Y Z vector format. Defines the starting point of the arrow.
--   [End Point] - Spacial coordinates in X Y Z vector format. Defines the ending point of the arrow.
+-   [Starting Point] - Spacial coordinates in X Y Z vector format.
+    Defines the starting point of the arrow.
+-   [End Point] - Spacial coordinates in X Y Z vector format. Defines
+    the ending point of the arrow.
 -   [Color] - Color defined in R G B vector format.
 
 Notes
@@ -31,4 +25,5 @@ Notes
 
 You must be running a map for this command to work.
 
+\
 

@@ -1,26 +1,22 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: WaitFrame
-...
-WaitFrame (script event)
-========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type [idThread](Thread\_(scripting)), accessible via [sys](Scripting\_basics#sys) identifier.
+This event operates on an instance of the [game
+class](Game_class "Game class") type
+[idThread](Thread_%28scripting%29 "Thread (scripting)") , accessible via
+[sys](Scripting_basics#sys "Scripting basics") identifier.
 
 Description
 -----------
 
-Suspends execution of current [thread](Thread\_(scripting)) for one game frame.
+Suspends execution of current
+[thread](Thread_%28scripting%29 "Thread (scripting)") for one game
+frame.
 
 Usage
 -----
 
-*[void](Data\_types#void)* waitFrame()
+*[void](Data_types#void "Data types")* waitFrame()
 
 Parameters
 ----------
@@ -30,12 +26,14 @@ This script event does not accept parameters.
 Examples
 --------
 
-` `
-<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`waitFrame`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+     
+    sys.waitFrame();
 
 Notes
 -----
 
-See [threads](Thread\_(scripting)) for more information.
+See [threads](Thread_%28scripting%29 "Thread (scripting)") for more
+information.
 
+\
 

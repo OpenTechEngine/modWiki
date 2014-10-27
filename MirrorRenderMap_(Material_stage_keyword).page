@@ -1,21 +1,13 @@
----
-format: Markdown
-categories: Material_stage_keyword
-toc: yes
-title: MirrorRenderMap
-...
-MirrorRenderMap (Material stage keyword)
-========================================
-
 Description
 -----------
 
-The **mirrorRenderMap** keyword defines a buffer in which a reflection is rendered into.
+The **mirrorRenderMap** keyword defines a buffer in which a reflection
+is rendered into.
 
 Usage
 -----
 
-`mirrorRenderMap`
+    mirrorRenderMap
 
 Parameters
 ----------
@@ -28,13 +20,19 @@ Example
 
 Renders a map with a dimension of 128 by 128...
 
-`{`
-`   mirrorRenderMap   128 128`
-`}`
+    {
+       mirrorRenderMap   128 128
+    }
 
 Notes
 -----
 
-The results produced by this keyword often times require some manipulation via the [translate](Translate\_(Material\_stage\_keyword)) and [scale](Scale\_(Material\_stage\_keyword)) keywords in order to be useful.
+The results produced by this keyword often times require some
+manipulation via the
+[translate](Translate_%28Material_stage_keyword%29 "Translate (Material stage keyword)")
+and
+[scale](Scale_%28Material_stage_keyword%29 "Scale (Material stage keyword)")
+keywords in order to be useful.
 
+\
 

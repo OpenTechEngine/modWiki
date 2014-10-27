@@ -1,24 +1,17 @@
----
-format: Markdown
-categories: GUI_command
-toc: yes
-title: Play
-...
-Play (GUI command)
-==================
-
 Used to make a GUI trigger a sound shader to play.
 
 Syntax
 ------
 
-`play <sound shader>`
+    play <sound shader>
 
-*sound shader* is the name of the sound shader to play. The command needs to be used with [set](Set\_(GUI\_command)).
+*sound shader* is the name of the sound shader to play. The command
+needs to be used with [set](Set_%28GUI_command%29 "Set (GUI command)") .
 
 Example(s)
 ----------
 
-`set "cmd" "play guisounds_click3";`
+    set "cmd" "play guisounds_click3";
 
+\
 

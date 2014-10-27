@@ -1,26 +1,19 @@
----
-format: Markdown
-categories: Material_stage_keyword
-toc: yes
-title: Videomap
-...
-Videomap (Material stage keyword)
-=================================
-
 Description
 -----------
 
-This keyword instructs a stage to use a video stream in the place of an image map. This keyword is useful for animated textures.
+This keyword instructs a stage to use a video stream in the place of an
+image map. This keyword is useful for animated textures.
 
 Usage
 -----
 
-`videoMap [loop] [video]`
+    videoMap [loop] [video]
 
 Parameters
 ----------
 
--   [loop] - This parameter is optional and determines whether the specified video "loops".
+-   [loop] - This parameter is optional and determines whether the
+    specified video "loops".
 -   [video] - the path and filename of the video.
 
 Example
@@ -28,26 +21,31 @@ Example
 
 {
 
-`   blend add`
-`   texgen skybox`
-`   videoMap loop video/mysky.roq`
-`}`
+       blend add
+       texgen skybox
+       videoMap loop video/mysky.roq
+    }
 
 Notes
 -----
 
-Video must be in [RoQ](ROQ\_(file\_format)) format.
+Video must be in [RoQ](ROQ_%28file_format%29 "ROQ (file format)")
+format.
 
-This keyword can be used for [cube maps](Cube\_maps) however you must meet the following requirements...
+This keyword can be used for [cube maps](Cube_maps "Cube maps") however
+you must meet the following requirements...
 
 -   The video can be no larger than 256x1536 pixels.
--   Each of the 6 sides of the cubemap are stacked from top to bottom like so...
+-   Each of the 6 sides of the cubemap are stacked from top to bottom
+    like so...
     -   PX
     -   NX
     -   PY
     -   NY
     -   PZ
     -   NZ
--   The PX and NX sides must be rotated so the orientation is the same as if it were a cubemap.
+-   The PX and NX sides must be rotated so the orientation is the same
+    as if it were a cubemap.
 
+\
 

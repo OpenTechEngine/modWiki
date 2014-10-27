@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: Open
-...
-Open (script event)
-===================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -30,21 +22,22 @@ Parameters
 Examples
 --------
 
-<font color="#339900">`// Opens or closes a door depending on it's current state ...`</font>
-` `
-<font color="#0000ff">`void`</font>` doorToggle`<font color="#000000">`(`</font>`ent door`<font color="#000000">`)`</font>
-<font color="#000000">`{`</font>
-`        `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>`door.`<font color="#ff0000">`isOpen`</font><font color="#000000">`(`</font><font color="#000000">`)`</font><font color="#000000">`)`</font>
-`        `<font color="#000000">`{`</font>
-`                door.`<font color="#ff0000">`close`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`        `<font color="#000000">`}`</font>` `<font color="#0000ff">`else`</font>`  `<font color="#000000">`{`</font>
-`                door.`<font color="#ff0000">`open`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`        `<font color="#000000">`}`</font>
-<font color="#000000">`}`</font>
+    // Opens or closes a door depending on it's current state ...
+     
+    void doorToggle(ent door)
+    {
+            if (door.isOpen())
+            {
+                    door.close();
+            } else  {
+                    door.open();
+            }
+    }
 
 Notes
 -----
 
 tba
 
+\
 

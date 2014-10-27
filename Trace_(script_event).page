@@ -1,35 +1,33 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: Trace
-...
-Trace (script event)
-====================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Returns the fraction of movement completed before the box from 'mins' to 'maxs' hits solid geometry // when moving from 'start' to 'end'. The 'passEntity' is considered non-solid during the move.
+Returns the fraction of movement completed before the box from 'mins' to
+'maxs' hits solid geometry // when moving from 'start' to 'end'. The
+'passEntity' is considered non-solid during the move.
 
 Usage
 -----
 
-float trace( vector start, vector end, vector mins, vector maxs, float contents\_mask, entity passEntity )
+float trace( vector start, vector end, vector mins, vector maxs, float
+contents\_mask, entity passEntity )
 
 Parameters
 ----------
 
 -   [start] - The starting point for the trace operation.
 -   [end] - The ending point for the trace operation.
--   [mins] - A point used in conjunction with **maxs** to define the size of the bounding box used.
--   [maxs] - A point used in conjunction with **mins** to define the size of the bounding box used.
--   [contents\_mask] - A flag to define the types of surfaces to ignore. These masks are defined in doom\_defs.script.
+-   [mins] - A point used in conjunction with **maxs** to define the
+    size of the bounding box used.
+-   [maxs] - A point used in conjunction with **mins** to define the
+    size of the bounding box used.
+-   [contents\_mask] - A flag to define the types of surfaces to ignore.
+    These masks are defined in doom\_defs.script.
     -   MASK\_ALL
     -   MASK\_SOLID
     -   MASK\_MONSTERSOLID
@@ -44,18 +42,21 @@ Parameters
 Examples
 --------
 
-<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`trace`</font><font color="#000000">`(`</font>` begin, send, '`<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>`', '`<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>` `<font color="#0000dd">`0`</font>`', MASK_SOLID|CONTENTS_RENDERMODEL, `<font color="#000055">`$crane_hang`</font>` `<font color="#000000">`)`</font>`;`
+    sys.trace( begin, send, '0 0 0', '0 0 0', MASK_SOLID|CONTENTS_RENDERMODEL, $crane_hang );
 
 Notes
 -----
 
-Once a trace has been issued, other special events can be called to return more detailed information about the trace. See the following articles...
+Once a trace has been issued, other special events can be called to
+return more detailed information about the trace. See the following
+articles...
 
--   [getTraceBody](GetTraceBody\_(script\_event))
--   [getTraceEndPos](GetTraceEndPos\_(script\_event))
--   [getTraceEntity](GetTraceEntity\_(script\_event))
--   [getTraceFraction](GetTraceFraction\_(script\_event))
--   [getTraceJoint](GetTraceJoint\_(script\_event))
--   [getTraceNormal](GetTraceNormal\_(script\_event))
+-   [getTraceBody](GetTraceBody_%28script_event%29 "GetTraceBody (script event)")
+-   [getTraceEndPos](GetTraceEndPos_%28script_event%29 "GetTraceEndPos (script event)")
+-   [getTraceEntity](GetTraceEntity_%28script_event%29 "GetTraceEntity (script event)")
+-   [getTraceFraction](GetTraceFraction_%28script_event%29 "GetTraceFraction (script event)")
+-   [getTraceJoint](GetTraceJoint_%28script_event%29 "GetTraceJoint (script event)")
+-   [getTraceNormal](GetTraceNormal_%28script_event%29 "GetTraceNormal (script event)")
 
+\
 

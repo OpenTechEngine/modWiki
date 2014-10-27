@@ -1,15 +1,24 @@
----
-format: Markdown
-categories: Entity
-toc: yes
-title: SfxDoor_biolab_panelL
-...
-SfxDoor biolab panelL (entity)
-==============================
+<div class="plainlinks"
+style="border: 1px grey solid; padding: 0.25em;">
 
-> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
+help by verifying and
+[completing](SfxDoor_biolab_panelL_%28entity%29 "http://www.modwiki.net/w/index.php?title=SfxDoor_biolab_panelL_%28entity%29&action=edit")
+the info on this page.*
 
-> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+</div>
+
+<div id="stub" class="boilerplate metadata">
+
+*This article is a
+[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
+. You can help us by <span class="plainlinks"> [expanding
+it](SfxDoor_biolab_panelL_%28entity%29 "http://www.modwiki.net/w/index.php?title=SfxDoor_biolab_panelL_%28entity%29&action=edit")
+</span> .*
+
+</div>
+
+\
 
 Description
 -----------
@@ -19,28 +28,29 @@ Description not available.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+The following is a list of key/value pairs, also known as spawn
+arguments, that function with this entity.\
 
-| KEY             | DESCRIPTION                |
-|-----------------|----------------------------|
-| inherit         | Description not available. |
-| model           | Description not available. |
-| rot\_angle      | Description not available. |
-| rot\_vector     | Description not available. |
-| section\_offset | Description not available. |
-| spawnclass      | Description not available. |
+  KEY               DESCRIPTION
+  ----------------- ----------------------------
+  inherit           Description not available.
+  model             Description not available.
+  rot\_angle        Description not available.
+  rot\_vector       Description not available.
+  section\_offset   Description not available.
+  spawnclass        Description not available.
 
 Inheritance
 -----------
 
 This entity is derived from the following:
 
--   '' hhProxDoorSection''
-    -   '' hhProxDoorRotator''
-        -   <span class="deadlink"> proxdoor\_rotator</span>
-            -   *' sfxDoor\_biolab\_panelL*'
+-   *[hhProxDoorSection](HhProxDoorSection_%28class%29 "HhProxDoorSection (class)")*
+    -   *[hhProxDoorRotator](HhProxDoorRotator_%28class%29 "HhProxDoorRotator (class)")*
+        -   [proxdoor\_rotator](Proxdoor_rotator_%28entity%29 "Proxdoor rotator (entity)")
+            -   **sfxDoor\_biolab\_panelL**
 
-**Note**: Entries marked in italics are classes defined in the SDK.
+**Note** : Entries marked in italics are classes defined in the SDK.
 
 Notes
 -----

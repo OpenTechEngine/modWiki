@@ -1,53 +1,42 @@
----
-format: Markdown
-categories: GUI_item_type
-toc: yes
-title: ChoiceDef
-...
-ChoiceDef (GUI item type)
-=========================
+**Missing image:
+*/w/images/thumb/c/c7/Gui\_example\_choicedef.png/180px-Gui\_example\_choicedef.png*
+A choiceDef from Doom3**
 
-<div class="thumb tright">
-<div style="width: 182px">
-![A choiceDef from Doom3](/images/images_thumb_c_c7_Gui_example_choicedef.png_180px-Gui_example_choicedef.png "A choiceDef from Doom3")
+\
+ *A choiceDef from Doom3*
 
-<div class="thumbcaption">
-<div class="magnify" style="float: right">
-![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
-
-</div>
-A choiceDef from Doom3
-
-</div>
-</div>
-</div>
-A choice field. It lets the user select from a range of choices by clicking on the item to cycle through the different options.
+A choice field. It lets the user select from a range of choices by
+clicking on the item to cycle through the different options.
 
 Additional properties
 ---------------------
 
--   [choices](Choices\_(GUI\_item\_property))
--   [cvar](Cvar\_(GUI\_item\_property))
--   cvarGroup
--   [choiceType](ChoiceType\_(GUI\_item\_property))
--   [currentChoice](CurrentChoice\_(GUI\_item\_property))
--   [gui](Gui\_(GUI\_item\_property))
--   [liveUpdate](LiveUpdate\_(GUI\_item\_property))
--   [updateGroup](UpdateGroup\_(GUI\_item\_property))
--   [values](Values\_(GUI\_item\_property))
+-   [choices](Choices_%28GUI_item_property%29 "Choices (GUI item property)")
+-   [cvar](Cvar_%28GUI_item_property%29 "Cvar (GUI item property)")
+-   [cvarGroup](CvarGroup_%28GUI_item_property%29 "CvarGroup (GUI item property)")
+-   [choiceType](ChoiceType_%28GUI_item_property%29 "ChoiceType (GUI item property)")
+-   [currentChoice](CurrentChoice_%28GUI_item_property%29 "CurrentChoice (GUI item property)")
+-   [gui](Gui_%28GUI_item_property%29 "Gui (GUI item property)")
+-   [liveUpdate](LiveUpdate_%28GUI_item_property%29 "LiveUpdate (GUI item property)")
+-   [updateGroup](UpdateGroup_%28GUI_item_property%29 "UpdateGroup (GUI item property)")
+-   [values](Values_%28GUI_item_property%29 "Values (GUI item property)")
 
 Example(s)
 ----------
 
-`choiceDef OG10Primary {`
-`   rect        220, 1, 50, 14`
-`   choices     "#str_04221"`
-`   cvar        "in_freeLook"`
-`   choiceType  0`
-`   font        "fonts/bank"`
-`   textscale   0.25`
-`   textalign   1`
-`   textaligny  -6`
-`   forecolor   0.6, 0.8, 0.8, 1`
-`}`
+    choiceDef OG10Primary {
+        rect        220, 1, 50, 14
+        choices     "#str_04221"
+        cvar        "in_freeLook"
+        choiceType  0
+        font        "fonts/bank"
+        textscale   0.25
+        textalign   1
+        textaligny  -6
+        forecolor   0.6, 0.8, 0.8, 1
+    }
+
+\
+
+\
 

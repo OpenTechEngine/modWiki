@@ -1,21 +1,14 @@
----
-format: Markdown
-categories: Material_stage_keyword
-toc: yes
-title: Colored
-...
-Colored (Material stage keyword)
-================================
-
 Description
 -----------
 
-The **colored** keyword multiples all channels of the associated map by the corresponding shader parameters gathered from the entity which this material shader is applied.
+The **colored** keyword multiples all channels of the associated map by
+the corresponding shader parameters gathered from the entity which this
+material shader is applied.
 
 Usage
 -----
 
-`colored`
+    colored
 
 Parameters
 ----------
@@ -32,4 +25,5 @@ Notes
 
 Not Available.
 
+\
 

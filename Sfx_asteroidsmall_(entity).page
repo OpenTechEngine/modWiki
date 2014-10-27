@@ -1,15 +1,24 @@
----
-format: Markdown
-categories: Entity
-toc: yes
-title: Sfx_asteroidsmall
-...
-Sfx asteroidsmall (entity)
-==========================
+<div class="plainlinks"
+style="border: 1px grey solid; padding: 0.25em;">
 
-> _This page has been added by **[PyBot](PyBot)**. You can help by verifying and completing the info on this page._
+*This page has been added by a [bot](User:PyBot "User:PyBot") . You can
+help by verifying and
+[completing](Sfx_asteroidsmall_%28entity%29 "http://modwiki.net/w/index.php?title=Sfx_asteroidsmall_%28entity%29&action=edit")
+the info on this page.*
 
-> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+</div>
+
+<div id="stub" class="boilerplate metadata">
+
+*This article is a
+[stub](http://en.wikipedia.org/wiki/Perfect_stub_article "http://en.wikipedia.org/wiki/Perfect_stub_article")
+. You can help us by <span class="plainlinks"> [expanding
+it](Sfx_asteroidsmall_%28entity%29 "http://modwiki.net/w/index.php?title=Sfx_asteroidsmall_%28entity%29&action=edit")
+</span> .*
+
+</div>
+
+\
 
 Description
 -----------
@@ -19,51 +28,52 @@ Description not available.
 Spawn Arguments
 ---------------
 
-The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+The following is a list of key/value pairs, also known as spawn
+arguments, that function with this entity.\
 
-| KEY                   | DESCRIPTION                |
-|-----------------------|----------------------------|
-| DamageOnCollision     | Description not available. |
-| DetonateOnCollision   | Description not available. |
-| ShuttleAttachable     | Description not available. |
-| angularFriction       | Description not available. |
-| bouncyness            | Description not available. |
-| decal\_size           | Description not available. |
-| decal\_trace          | Description not available. |
-| def\_damage           | Description not available. |
-| def\_trigger          | Description not available. |
-| density               | Description not available. |
-| friction              | Description not available. |
-| fx\_detonate          | Description not available. |
-| gravity               | Description not available. |
-| health                | Description not available. |
-| inherit               | Description not available. |
-| linearFriction        | Description not available. |
-| matter                | Description not available. |
-| maxs                  | Description not available. |
-| mins                  | Description not available. |
-| model                 | Description not available. |
-| mtr\_decal            | Description not available. |
-| nodrop                | Description not available. |
-| respawn               | Description not available. |
-| respawn\_delay        | Description not available. |
-| scalein               | Description not available. |
-| snd\_explode          | Description not available. |
-| snd\_idle             | Description not available. |
-| spawnclass            | Description not available. |
-| splash\_damage\_delay | Description not available. |
-| velocity              | Description not available. |
+  KEY                     DESCRIPTION
+  ----------------------- ----------------------------
+  DamageOnCollision       Description not available.
+  DetonateOnCollision     Description not available.
+  ShuttleAttachable       Description not available.
+  angularFriction         Description not available.
+  bouncyness              Description not available.
+  decal\_size             Description not available.
+  decal\_trace            Description not available.
+  def\_damage             Description not available.
+  def\_trigger            Description not available.
+  density                 Description not available.
+  friction                Description not available.
+  fx\_detonate            Description not available.
+  gravity                 Description not available.
+  health                  Description not available.
+  inherit                 Description not available.
+  linearFriction          Description not available.
+  matter                  Description not available.
+  maxs                    Description not available.
+  mins                    Description not available.
+  model                   Description not available.
+  mtr\_decal              Description not available.
+  nodrop                  Description not available.
+  respawn                 Description not available.
+  respawn\_delay          Description not available.
+  scalein                 Description not available.
+  snd\_explode            Description not available.
+  snd\_idle               Description not available.
+  spawnclass              Description not available.
+  splash\_damage\_delay   Description not available.
+  velocity                Description not available.
 
 Inheritance
 -----------
 
 This entity is derived from the following:
 
--   '' hhMine''
-    -   [sfx\_asteroid](Sfx\_asteroid\_(entity))
-        -   *' sfx\_asteroidsmall*'
+-   *[hhMine](HhMine_%28class%29 "HhMine (class)")*
+    -   [sfx\_asteroid](Sfx_asteroid_%28entity%29 "Sfx asteroid (entity)")
+        -   **sfx\_asteroidsmall**
 
-**Note**: Entries marked in italics are classes defined in the SDK.
+**Note** : Entries marked in italics are classes defined in the SDK.
 
 Notes
 -----

@@ -1,23 +1,15 @@
----
-format: Markdown
-categories: Material_global_keyword
-toc: yes
-title: Description
-...
-Description (Material global keyword)
-=====================================
-
 Description
 -----------
 
-Displays the specifed text in a bar at the bottom of the main editor window when this material is selected.
+Displays the specifed text in a bar at the bottom of the main editor
+window when this material is selected.
 
 Usage
 -----
 
 In the global section of your material shader type...
 
-`description [string]`
+    description [string]
 
 Parameters
 ----------
@@ -29,4 +21,5 @@ Notes
 
 Not Available.
 
+\
 

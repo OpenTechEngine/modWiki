@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: WeaponReady
-...
-WeaponReady (script event)
-==========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -30,17 +22,19 @@ This event does not accept parameters.
 Examples
 --------
 
-`  `<font color="#0000ff">`if`</font>` `<font color="#000000">`(`</font>` !`<font color="#0000ff">`ammoInClip`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>` `<font color="#000000">`)`</font>` `<font color="#000000">`{`</font>
-`    `<font color="#0000ff">`weaponOutOfAmmo`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`  `<font color="#000000">`}`</font>` `<font color="#0000ff">`else`</font>` `<font color="#000000">`{`</font>
-`    `<font color="#0000ff">`weaponReady`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
-`  `<font color="#000000">`}`</font>
+      if ( !ammoInClip() ) {
+        weaponOutOfAmmo();
+      } else {
+        weaponReady();
+      }
 
 Notes
 -----
 
 This script event does not return any values.
 
-It can be found in every weapon script in code similar to that depicted in the example.
+It can be found in every weapon script in code similar to that depicted
+in the example.
 
+\
 

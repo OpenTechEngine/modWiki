@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: GetMins
-...
-GetMins (script event)
-======================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -30,12 +22,14 @@ This script event does not accept parameters.
 Examples
 --------
 
-` `
-`minBB = `<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`getMins`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+     
+    minBB = $my_entity.getMins();
 
 Notes
 -----
 
-This script event returns the minimum corner of this entity's bounding box as a vector.
+This script event returns the minimum corner of this entity's bounding
+box as a vector.
 
+\
 

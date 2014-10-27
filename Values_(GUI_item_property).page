@@ -1,30 +1,26 @@
----
-format: Markdown
-categories: GUI_item_property
-toc: yes
-title: Values
-...
-Values (GUI item property)
-==========================
-
 ??
 
-This property is restricted to the [choiceDef](ChoiceDef\_(GUI\_item\_type)) item type.
+This property is restricted to the
+[choiceDef](ChoiceDef_%28GUI_item_type%29 "ChoiceDef (GUI item type)")
+item type.
 
 Syntax
 ------
 
-`values `*`values`*
+    values values
 
 Default value
 -------------
 
-`Unknown`
+    Unknown
 
 Example(s)
 ----------
 
-`values "3;4;5;6;7;8"`
-`values "0.022;-0.022"`
+    values "3;4;5;6;7;8"
+    values "0.022;-0.022"
 
+\
+
+\
 

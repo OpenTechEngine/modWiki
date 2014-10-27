@@ -1,18 +1,12 @@
----
-format: Markdown
-categories: nocategory
-toc: yes
-title: GUI_variable_types.page
-...
-GUI variable types
-==================
-
-Variables can be declared before the actual code blocks on a item, usually right after the item properties. They are meant to be used by [command statements](GUI\_commands) inside [event blocks](GUI\_item\_events).
+Variables can be declared before the actual code blocks on a item,
+usually right after the item properties. They are meant to be used by
+[command statements](GUI_commands "GUI commands") inside [event
+blocks](GUI_item_events "GUI item events") .
 
 Available variables types
 -------------------------
 
--   definefloat
--   definevec4
--   float
+-   [definefloat](Definefloat_%28GUI_variable_declaration%29 "Definefloat (GUI variable declaration)")
+-   [definevec4](Definevec4_%28GUI_variable_declaration%29 "Definevec4 (GUI variable declaration)")
+-   [float](Float_%28GUI_variable_declaration%29 "Float (GUI variable declaration)")
 

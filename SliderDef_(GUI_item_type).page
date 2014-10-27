@@ -1,53 +1,37 @@
----
-format: Markdown
-categories: GUI_item_type
-toc: yes
-title: SliderDef
-...
-SliderDef (GUI item type)
-=========================
+![A sliderDef from
+Doom3](/images/thumb/0/0f/Gui_example_sliderdef.png/180px-Gui_example_sliderdef.png)\
+ *A sliderDef from Doom3*
 
-<div class="thumb tright">
-<div style="width: 182px">
-![A sliderDef from Doom3](/images/images_thumb_0_0f_Gui_example_sliderdef.png_180px-Gui_example_sliderdef.png "A sliderDef from Doom3")
-
-<div class="thumbcaption">
-<div class="magnify" style="float: right">
-![Enlarge](skins_common_images_magnify-clip.png "Enlarge")
-
-</div>
-A sliderDef from Doom3
-
-</div>
-</div>
-</div>
-A slider that can hold numeric values from an specific range. Much like a scrollbar.
+A slider that can hold numeric values from an specific range. Much like
+a scrollbar.
 
 Additional properties
 ---------------------
 
--   [cvar](Cvar\_(GUI\_item\_property))
--   cvarGroup
--   [liveUpdate](LiveUpdate\_(GUI\_item\_property))
--   [low](Low\_(GUI\_item\_property))
--   [high](High\_(GUI\_item\_property))
--   scrollbar
--   [step](Step\_(GUI\_item\_property))
--   [stepsize](Stepsize\_(GUI\_item\_property))
--   thumbshader
--   vertical
+-   [cvar](Cvar_%28GUI_item_property%29 "Cvar (GUI item property)")
+-   [cvarGroup](CvarGroup_%28GUI_item_property%29 "CvarGroup (GUI item property)")
+-   [liveUpdate](LiveUpdate_%28GUI_item_property%29 "LiveUpdate (GUI item property)")
+-   [low](Low_%28GUI_item_property%29 "Low (GUI item property)")
+-   [high](High_%28GUI_item_property%29 "High (GUI item property)")
+-   [scrollbar](Scrollbar_%28GUI_item_property%29 "Scrollbar (GUI item property)")
+-   [step](Step_%28GUI_item_property%29 "Step (GUI item property)")
+-   [stepsize](Stepsize_%28GUI_item_property%29 "Stepsize (GUI item property)")
+-   [thumbshader](Thumbshader_%28GUI_item_property%29 "Thumbshader (GUI item property)")
+-   [vertical](Vertical_%28GUI_item_property%29 "Vertical (GUI item property)")
 
 Example(s)
 ----------
 
-`sliderDef OG8Primary {`
-`   rect        210, 5, 71, 8`
-`   forecolor   0.8, 1, 1, 1`
-`   matcolor    1, 1, 1, 1`
-`   low     1`
-`   high        8`
-`   step        1`
-`   thumbShader "guis/assets/mainmenu/slider_bar"`
-`   cvar        "m_smooth"  `
-`}`
+    sliderDef OG8Primary {
+        rect        210, 5, 71, 8
+        forecolor   0.8, 1, 1, 1
+        matcolor    1, 1, 1, 1
+        low     1
+        high        8
+        step        1
+        thumbShader "guis/assets/mainmenu/slider_bar"
+        cvar        "m_smooth"  
+    }
+
+\
 

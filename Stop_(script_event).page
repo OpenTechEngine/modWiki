@@ -1,21 +1,14 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: Stop
-...
-Stop (script event)
-===================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Stops a func\_camera\_anim if it was playing an [MD5Anim](MD5ANIM\_(file\_format)) file.
+Stops a func\_camera\_anim if it was playing an
+[MD5Anim](MD5ANIM_%28file_format%29 "MD5ANIM (file format)") file.
 
 Usage
 -----
@@ -30,11 +23,12 @@ None.
 Examples
 --------
 
-<font color="#000055">`$mycamera`</font>`.`<font color="#ff0000">`stop`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>
+    $mycamera.stop()
 
 Notes
 -----
 
 This script event does not return any values.
 
+\
 

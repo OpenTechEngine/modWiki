@@ -1,16 +1,8 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: AngToForward
-...
-AngToForward (script event)
-===========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
@@ -25,17 +17,19 @@ Usage
 Parameters
 ----------
 
--   [angles] - A vector that's indivudual components correspond with heading, pitch, and bank angles.
+-   [angles] - A vector that's indivudual components correspond with
+    heading, pitch, and bank angles.
 
 Examples
 --------
 
-` `
-`fwdVec = `<font color="#0000ff">`sys`</font>`.`<font color="#ff0000">`angToForward`</font><font color="#000000">`(`</font>`'`<font color="#0000dd">`50`</font>` `<font color="#0000dd">`64`</font>` `<font color="#0000dd">`21`</font>`'`<font color="#000000">`)`</font>`;`
+     
+    fwdVec = sys.angToForward('50 64 21');
 
 Notes
 -----
 
 This script event returns a forward vector.
 
+\
 

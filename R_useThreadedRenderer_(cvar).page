@@ -1,0 +1,108 @@
+<div align="left"
+style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+
+![](/images/f/f9/Etqwsquare_bg.png) The information on this page is
+specific to [Enemy Territory: Quake
+Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
+
+</div>
+
+------------------------------------------------------------------------
+
+Description
+-----------
+
+Enable the game to use a multi-threaded renderer backend.
+
+Usage
+-----
+
+At the console type...
+
+    r_useThreadedRenderer [int]
+
+Parameters
+----------
+
+-   [int]
+    -   0 - Disable multi-threading in the renderer.
+    -   1 - Enables multi-threading in the renderer but locked to game
+        frames (debugging).
+    -   2 - Enables multi-threading in the renderer unlocked from game
+        frames.
+
+Flags
+-----
+
+  --------------------------------------------------------------------------
+  Flag                     Enabled                  Description
+  ------------------------ ------------------------ ------------------------
+  CVAR\_ALL                                         all flags
+
+  CVAR\_BOOL                                        variable is a boolean
+
+  CVAR\_INTEGER            X                        variable is an integer
+
+  CVAR\_FLOAT                                       variable is a float
+
+  CVAR\_SYSTEM                                      system variable
+
+  CVAR\_RENDERER           X                        renderer variable
+
+  CVAR\_SOUND                                       sound variable
+
+  CVAR\_GUI                                         gui variable
+
+  CVAR\_GAME                                        game variable
+
+  CVAR\_TOOL                                        tool variable
+
+  CVAR\_USERINFO                                    sent to servers,
+                                                    available to menu
+
+  CVAR\_SERVERINFO                                  sent from servers,
+                                                    available to menu
+
+  CVAR\_NETWORKSYNC                                 cvar is synced from the
+                                                    server to clients
+
+  CVAR\_STATIC                                      statically declared, not
+                                                    user created
+
+  CVAR\_CHEAT                                       variable is considered a
+                                                    cheat
+
+  CVAR\_NOCHEAT                                     variable is not
+                                                    considered a cheat
+
+  CVAR\_INIT                                        can only be set from the
+                                                    command-line
+
+  CVAR\_ROM                                         display only, cannot be
+                                                    set by user at all
+
+  CVAR\_ARCHIVE            X                        set to cause it to be
+                                                    saved to a config file
+
+  CVAR\_MODIFIED           X                        set when the variable is
+                                                    modified
+  --------------------------------------------------------------------------
+
+Notes
+-----
+
+This CVar was added on [version 1.2 of ETQW](Id_Tech_4 "Id Tech 4") .
+Caution:
+
+-   This CVar should only be changed before a game is started.
+-   This CVar should only be changed if you have a CPU with dual cores
+    or better.
+-   This CVar should not be set to "1" as that was only used for
+    debugging.
+-   This CVar should be set to "0" when running any mod tools or
+    editors.
+-   Setting this CVar to anything other than "0" may cause screenshots
+    to be corrupted.
+
+\
+

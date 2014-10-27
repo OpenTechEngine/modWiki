@@ -1,0 +1,67 @@
+[idAI](Src/game/ai/AI.cpp_%28source_file%29 "Src/game/ai/AI.cpp (source file)") ::PathToGoal
+--------------------------------------------------------------------------------------------
+
+PathToGoal acts as a functional gateway for the idAI component to
+communicate with the AAS system. Any of the MoveToSomething methods
+eventually use PathToGoal which will, given a starting area and
+position, and goal area and position, fill a path passed to it if one is
+available. It returns a bool indicating if a path was successfully
+found.
+
+It starts out like:
+
+     
+    /*
+    =====================
+    idAI::PathToGoal
+    =====================
+    */
+    bool idAI::PathToGoal( aasPath_t &path, int areaNum, const idVec3 &origin, int goalAreaNum, const idVec3 &goalOrigin ) const {
+        idVec3 org;
+        idVec3 goal;
+        
+        if ( !aas ) {
+            return false;
+        }
+
+org here will represent our starting point, our origin. goal will be
+where we want to go.
+
+a quick check for aas, if we don’t have aas, you don’t get a path,
+return false to caller.
+
+     
+    org = origin;
+    aas->PushPointIntoAreaNum( areaNum, org );
+    if ( !areaNum ) {
+        return false;
+    }
+
+The point behind this snippet is to set up our starting point and ensure
+that the org is actually in the area we say it is for the call to
+WalkPathToGoal. If you pass in an areaNum that is less than 0 you will
+get false returned
+
+     
+    goal = goalOrigin;
+    aas->PushPointIntoAreaNum( goalAreaNum, goal );
+    if ( !goalAreaNum ) {
+        return false;
+    }
+
+Same thing, but for the goal position. Now that our org and goal are
+ensured to be in the areas specified, we check the current movement type
+and call into the aas system.
+
+     
+    if ( move.moveType == MOVETYPE_FLY ) {
+        return aas->FlyPathToGoal( path, areaNum, org, goalAreaNum, goal, travelFlags );
+    } else {
+        return aas->WalkPathToGoal( path, areaNum, org, goalAreaNum, goal, travelFlags );
+    }
+
+If you are interested in the AAS code have a look at
+[idAASLocal::WalkPathToGoal](IdAASLocal::WalkPathToGoal "IdAASLocal::WalkPathToGoal")
+. It is where the actual paths are set up and path optimization
+(smoothing) happens.
+

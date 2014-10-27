@@ -1,21 +1,17 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: GetAngularVelocity
-...
-GetAngularVelocity (script event)
-=================================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Gets the current angular velocity of this entity. The angular velocity of a physics object is a vector that passes through the center of mass. The direction of this vector defines the axis of rotation and the magnitude defines the rate of rotation about the axis in radians per second.
+Gets the current angular velocity of this entity. The angular velocity
+of a physics object is a vector that passes through the center of mass.
+The direction of this vector defines the axis of rotation and the
+magnitude defines the rate of rotation about the axis in radians per
+second.
 
 Usage
 -----
@@ -30,12 +26,13 @@ This script event does not accept parameters.
 Examples
 --------
 
-` `
-`velocity = `<font color="#000055">`$my_entity`</font>`.`<font color="#ff0000">`getAngularVelocity`</font><font color="#000000">`(`</font><font color="#000000">`)`</font>`;`
+     
+    velocity = $my_entity.getAngularVelocity();
 
 Notes
 -----
 
 This script event returns the angular velocity as a vector.
 
+\
 

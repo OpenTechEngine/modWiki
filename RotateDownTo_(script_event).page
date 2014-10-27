@@ -1,21 +1,15 @@
----
-format: Markdown
-categories: script_event
-toc: yes
-title: RotateDownTo
-...
-RotateDownTo (script event)
-===========================
-
 Game class
 ----------
 
-This event operates on an instance of the [game class](Game\_class) type {{{gameclass}}}
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
 
 Description
 -----------
 
-Initiates a rotation about the given axis by decreasing the current angle towards the given angle. // Uses the current speed/time and acceleration and deceleration settings.
+Initiates a rotation about the given axis by decreasing the current
+angle towards the given angle. // Uses the current speed/time and
+acceleration and deceleration settings.
 
 Usage
 -----
@@ -25,18 +19,23 @@ void rotateDownTo( float axis, float angle )
 Parameters
 ----------
 
-[axis] - The Axis to rotate around in float format. 0 (zero) = X, 1 = Y & 2 = Z
+[axis] - The Axis to rotate around in float format. 0 (zero) = X, 1 = Y
+& 2 = Z
 
 [angle] = angle in degrees to rotate to
 
 Examples
 --------
 
-` `<font color="#000055">`$light_`<font color="#0000dd">`02`</font>`_rot`</font>`.`<font color="#ff0000">`rotateDownTo`</font><font color="#000000">`(`</font><font color="#0000dd">`0`</font>`, -`<font color="#0000dd">`70`</font><font color="#000000">`)`</font>`;`
+     $light_02_rot.rotateDownTo(0, -70);
 
 Notes
 -----
 
-Same usage as [rotateUpTo](RotateUpTo\_(script\_event)) except it of increasing the current angle to get to the destination, it decreases the angle.
+Same usage as
+[rotateUpTo](RotateUpTo_%28script_event%29 "RotateUpTo (script event)")
+except it of increasing the current angle to get to the destination, it
+decreases the angle.
 
+\
 

@@ -1,26 +1,21 @@
----
-format: Markdown
-categories: GUI_item_property
-toc: yes
-title: Visible
-...
-Visible (GUI item property)
-===========================
-
 Determines whether an item is visible (1) or not (0).
 
 Syntax
 ------
 
-`visible `*`flag`*
+    visible flag
 
 Default value
 -------------
 
-`1`
+    1
 
 Example(s)
 ----------
 
-`visible 0`
+    visible 0
+
+\
+
+\
 

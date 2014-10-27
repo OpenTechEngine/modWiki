@@ -1,42 +1,42 @@
----
-format: Markdown
-categories: Material_stage_keyword
-toc: yes
-title: CameraCubeMap
-...
-CameraCubeMap (Material stage keyword)
-======================================
-
 Description
 -----------
 
-The **cameraCubeMap** keyword is used instead of a **map** keyword to specify that the associated stage should render a [cube map](Cube\_maps) rather than an ordinary image. Typically a cube map stage would be blended into a material to present the appearance of environmental reflection.
+The **cameraCubeMap** keyword is used instead of a **map** keyword to
+specify that the associated stage should render a [cube
+map](Cube_maps "Cube maps") rather than an ordinary image. Typically a
+cube map stage would be blended into a material to present the
+appearance of environmental reflection.
 
 Usage
 -----
 
-`cubeMap env/name_without_prefix`
+    cubeMap env/name_without_prefix
 
 Parameters
 ----------
 
-The path to the cube map images should be given, including the name up to but not including the directional suffixes (\_forward, \_back, \_left, ect...)
+The path to the cube map images should be given, including the name up
+to but not including the directional suffixes (\_forward, \_back,
+\_left, ect...)
 
 Example
 -------
 
-The following stage blends the env/cloudy environment map onto a material...
+The following stage blends the env/cloudy environment map onto a
+material...
 
-`{`
-`   blend           gl_dst_alpha , gl_one`
-`   cameraCubeMap   env/cloudy  `
-`   texgen          reflect`
-`   rgb             .6`
-`}`
+    {
+       blend           gl_dst_alpha , gl_one
+       cameraCubeMap   env/cloudy  
+       texgen          reflect
+       rgb             .6
+    }
 
 Notes
 -----
 
-This keyword expects the six environment map images to use the filename suffixes \_forward, \_back, \_left, \_right, \_up, and \_down.
+This keyword expects the six environment map images to use the filename
+suffixes \_forward, \_back, \_left, \_right, \_up, and \_down.
 
+\
 

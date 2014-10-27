@@ -1,29 +1,23 @@
----
-format: Markdown
-categories: GUI_item_property
-toc: yes
-title: High
-...
-High (GUI item property)
-========================
-
 ??
 
-This property is restricted to the [sliderDef](SliderDef\_(GUI\_item\_type)) item type.
+This property is restricted to the
+[sliderDef](SliderDef_%28GUI_item_type%29 "SliderDef (GUI item type)")
+item type.
 
 Syntax
 ------
 
-`high `*`value`*
+    high value
 
 Default value
 -------------
 
-`Unknown`
+    Unknown
 
 Example(s)
 ----------
 
-`high   30`
+    high 30
 
+\
 
