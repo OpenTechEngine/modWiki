@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: R sb singleSide (cvar)
+...
+
 Description
 -----------
 
@@ -146,5 +153,4 @@ Notes
 -----
 
 This CVar is for the use of shadow buffers and it's not used by Doom 3. With a usual shadow buffers implementation point lights use cubemaps. This CVar sets which one side of the cubemap is drawn for testing purposes.
-
 

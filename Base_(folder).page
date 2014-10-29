@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Folders
+toc: no
+title: Base (folder)
+...
+
 This is the default Doom 3 mod directory. The contents of this directory include all the game assets used in the game. The extra content for the "Doom 3: Resurrection of Evil" expansion pack is located in the "d3xp" directory in the main Doom 3 installation folder. Mods for Doom 3 should be created in their own directory in the main Doom3 installation folder. In the engine your mods base name is always called "base" no matter the actual physical name. You set the game to use a different folder as base with the [fs\_game](Fs_game_%28cvar%29 "Fs game (cvar)") cvar.
 
 With the release of patch v1.3 you can set the [fs\_game\_base](Fs_game_base_%28cvar%29 "Fs game base (cvar)") cvar to let you base a mod off base game and your own content as usual as well as an additional mod. For instance, if you want to create a mod that also uses content from the Doom 3: Resurrection of Evil expansion you should set "fs\_game \<yourmodname\>" as well as "fs\_game\_base d3xp".

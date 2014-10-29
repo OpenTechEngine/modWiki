@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: R sb occluderFacing (cvar)
+...
+
 Description
 -----------
 
@@ -142,5 +149,4 @@ Notes
 -----
 
 This CVar is for the use of shadow buffers and it's not used by Doom 3. With a usual shadow buffers implementation if you lights take snapshots of the world and save it as textures. Option "2" render two shadow buffers: one using the front facing triangles to the light and one using the back facing triangles to the light and then combines them together to find a midpoint value between all of the surfaces. Midpoint renderings is a higher quality option with a performance cost.
-
 

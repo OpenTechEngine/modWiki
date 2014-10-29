@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Coding
+toc: yes
+title: Extending the Area Awareness System
+...
+
 I recently finished up some work extending the AAS compiler. I was able to add elevator and transporter capabilities to the navigation graph. I did this by adding new reachabilities between areas based on each idPlat in a map.
 
 I have summarized the work below and included a download link for the code, **the aas code in the download is one version behind and needs to be updated.**

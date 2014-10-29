@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Mapping
+toc: no
+title: Brush
+...
+
 ![](/images/b/bc/Brush.png)
 
 A brush is convex volume bounded by four or more planes. Each plane will form one face of the brush and will have it's own properties. Each face is stored together with these properties in the mapfile. These properties include

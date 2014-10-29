@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: CopySpawnArgs (script event)
+...
+
 Game class
 ----------
 
@@ -35,5 +42,4 @@ Notes
 This script event does not return any values.
 
 After using copySpawnArgs, you may need to use [setSpawnArg](SetSpawnArg_%28script_event%29 "SetSpawnArg (script event)") to set explicitly those spawn args which need to be changed.
-
 

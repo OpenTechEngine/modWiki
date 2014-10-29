@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: Trace (script event)
+...
+
 Game class
 ----------
 
@@ -48,5 +55,4 @@ Once a trace has been issued, other special events can be called to return more 
 -   [getTraceFraction](GetTraceFraction_%28script_event%29 "GetTraceFraction (script event)")
 -   [getTraceJoint](GetTraceJoint_%28script_event%29 "GetTraceJoint (script event)")
 -   [getTraceNormal](GetTraceNormal_%28script_event%29 "GetTraceNormal (script event)")
-
 

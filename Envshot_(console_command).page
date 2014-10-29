@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Console_commands
+toc: yes
+title: Envshot (console command)
+...
+
 Description
 -----------
 
@@ -27,5 +34,4 @@ The player is included in captures if the CVar [pm\_thirdperson](Pm_thirdPerson_
 Images are saved as 24-bit tgas to the [env](Env_%28folder%29 "Env (folder)") directory.
 
 There have been reports that under certain circumstances this command does not export seamless cubemaps. The current cause is believed to be the screen resolution. The command is reported to work properly when running the game at 640 x 480.
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: Com guid (cvar)
+...
+
 Description
 -----------
 
@@ -145,5 +152,4 @@ The master server authenticates the supplied CD keys, generates a guid value and
 It is speculated that the "client unknown to auth" error is caused by trying to join a game before validating your CD keys with the master server.
 
 When the game connects to an online server the value of com\_guid is used to allow the server to identify the player and either accept or reject the connection. Mods that have player management (banning etc) use it to track player data.
-
 

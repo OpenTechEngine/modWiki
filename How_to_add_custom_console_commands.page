@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Tutorials, Coding
+toc: yes
+title: How to add custom console commands
+...
+
 Introduction
 ------------
 
@@ -39,3 +46,4 @@ Arguments to functions are counted with args.Argc() and referenced using args.Ar
      common->Printf(args.Argv( 1 );
      
      }
+

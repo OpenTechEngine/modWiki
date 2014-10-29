@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: R useThreadedRenderer (cvar)
+...
+
 ![](/images/f/f9/Etqwsquare_bg.png) The information on this page is specific to [Enemy Territory: Quake Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
 
 ------------------------------------------------------------------------
@@ -152,5 +159,4 @@ This CVar was added on [version 1.2 of ETQW](Id_Tech_4 "Id Tech 4") . Caution:
 -   This CVar should not be set to "1" as that was only used for debugging.
 -   This CVar should be set to "0" when running any mod tools or editors.
 -   Setting this CVar to anything other than "0" may cause screenshots to be corrupted.
-
 

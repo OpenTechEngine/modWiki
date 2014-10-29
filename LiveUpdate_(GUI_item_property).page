@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_item_properties
+toc: yes
+title: LiveUpdate (GUI item property)
+...
+
 If set, the cvar is changed as the text is changed, and the text changes as the cvar changes. Otherwise only changes when "cvar read" or "cvar write" is sent This property is restricted to the [editDef](EditDef_%28GUI_item_type%29 "EditDef (GUI item type)") , [choiceDef](ChoiceDef_%28GUI_item_type%29 "ChoiceDef (GUI item type)") and [sliderDef](SliderDef_%28GUI_item_type%29 "SliderDef (GUI item type)") item types.
 
 Syntax
@@ -14,5 +21,4 @@ Example(s)
 ----------
 
     liveUpdate   1liveUpdate    0
-
 

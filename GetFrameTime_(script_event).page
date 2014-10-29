@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: GetFrameTime (script event)
+...
+
 Game class
 ----------
 
@@ -30,5 +37,4 @@ Notes
 This script event returns the length of time between game frames as a float.
 
 This is not related to renderer frame rate.
-
 

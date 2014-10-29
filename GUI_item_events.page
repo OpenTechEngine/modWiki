@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_scripting
+toc: yes
+title: GUI item events
+...
+
 Events are blocks with [commands](GUI_commands "GUI commands") that are executed when a certain condition is met. This can be a condition created by the user - for example, moving the mouse over a windowDef element - or a noninteractive event - for example, when a certain time is reached.
 
 Available events

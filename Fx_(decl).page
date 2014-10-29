@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Declarations, Mapping, Texturing
+toc: yes
+title: Fx (decl)
+...
+
 Fx declarations reference the sounds, materials, lights, particles (each defined in a separate stage), and the parameters needed to reproduce an effect in game.
 
 Syntax
@@ -44,5 +51,4 @@ Keywords
 | trackorigin \<bool\>                                              | Move around with the entity (vs stationary after spawning)                                                                                               |
 | particleTrackVelocity                                             | Not used                                                                                                                                                 |
 | sound \<sndshader\>                                               | Start a sound (on any channel)                                                                                                                           |
-
 

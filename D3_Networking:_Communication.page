@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Coding
+toc: yes
+title: D3 Networking: Communication
+...
+
 To get a multiplayer game working, the computers from the players have to 'talk' to each other. In Doom3 this is done using the TCP/IP protocol. Basically we can differ between Client to Server communication and more importantly Server to Client communication. There is some traffic between the master server and the clients as well to scan the network for games going on. But that is not relevant to modding and will only be briefly touched in this article.
 
 Server to Client

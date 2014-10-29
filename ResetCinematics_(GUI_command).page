@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_commands
+toc: no
+title: ResetCinematics (GUI command)
+...
+
 "Resets the cinematics playing in the window to frame 0" (from [iddevnet](http://www.iddevnet.com/doom3/guis.php "http://www.iddevnet.com/doom3/guis.php") ).
 
 Syntax
@@ -9,5 +16,4 @@ Example(s)
 ----------
 
     resetCinematics;
-
 

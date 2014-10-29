@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: Move (script event)
+...
+
 Game class
 ----------
 
@@ -56,5 +63,4 @@ You can pass an arbitrary number to the script event but you'll find that it onl
 That said, you could rotate your entity to face the intended path of travel you could tell it to move forward and it would work as intended. This can prove to be tedious however and alternative script events like [moveTo](MoveTo_%28script_event%29 "MoveTo (script event)") or [moveToPos](MoveToPos_%28script_event%29 "MoveToPos (script event)") may be more suitable.
 
 Note that distance can be a positive or negative value; something like ( WEST, -20 ) will actually result in movement 20 units to the East.
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: StrToFloat (script event)
+...
+
 Game class
 ----------
 
@@ -30,5 +37,4 @@ Notes
 -----
 
 If the string contains non-numerals the result will always be zero.
-
 

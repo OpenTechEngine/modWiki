@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Materials
+toc: yes
+title: Shaderparm
+...
+
 Shaderparms are a common set of variables, applicable to most all entities, whose values represent a property or state. These values can be retrieved and used in expressions within a [material shader](Material_%28decl%29 "Material (decl)") allowing for dynamic effects which otherwise would not be possible.
 
 There are 8 shaderparms. You can assign values to them via the [entity inspector](Map_editor#The_entity_inspector "Map editor") with the keys "parm0" through "parm7". You can also assign them in a [script](SCRIPT_%28file_format%29 "SCRIPT (file format)") using the event [setShaderParm](SetShaderParm_%28script_event%29 "SetShaderParm (script event)") or with the entity [target\_setshaderparm](Target_setshaderparm_%28entity%29 "Target setshaderparm (entity)") .

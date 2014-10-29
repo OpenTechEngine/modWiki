@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Mapping, Modelling
+toc: yes
+title: Models vs brushes
+...
+
 Unlike previous games, where [models](Modelling "Modelling") and level geometry had distinct and non-overlapping functions, the unified lighting model of [id Tech 4](Id_Tech_4 "Id Tech 4") gives [mappers](Mapping "Mapping") an unprecedented level of choice in the techniques used to create geometry. Some mappers build almost everything in a 3D application, and use the level editors only to assemble pre-built models, whereas others prefer to create complex structures out of brushes and [patches](Patch "Patch") avoiding 3D applications entirely.
 
 The ideal division between the usage of models and in-editor geometry is a source of perpetual debate amongst mappers.

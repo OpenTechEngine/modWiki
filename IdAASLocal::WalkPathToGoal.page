@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Annotated_API, Urgent_attention_needed
+toc: yes
+title: IdAASLocal::WalkPathToGoal
+...
+
 **This page is in urgent need of attention because: *Unfinished***
 
 If you disagree with this, please explain why on [its talk page](Talk:IdAASLocal::WalkPathToGoal "Talk:IdAASLocal::WalkPathToGoal") .
@@ -101,4 +108,4 @@ TODO: Finish this routine up
     const int     maxWalkPathIterations       = 10;
     const float       maxWalkPathDistance     = 500.0f;
     const float       walkPathSampleDistance      = 8.0f; 
-     
+

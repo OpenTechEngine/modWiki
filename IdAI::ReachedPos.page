@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Annotated_API
+toc: yes
+title: IdAI::ReachedPos
+...
+
 bool idAI::ReachedPos( const idVec3 &pos, const moveCommand\_t moveCommand ) const
 ----------------------------------------------------------------------------------
 
@@ -32,3 +39,4 @@ Not much here, a collision detection algorithm.
         }
         return false;
     }
+

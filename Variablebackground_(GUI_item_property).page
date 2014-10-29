@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_item_properties
+toc: yes
+title: Variablebackground (GUI item property)
+...
+
 This may be needed when the [background property](Background_%28GUI_item_property%29 "Background (GUI item property)") uses a variable instead of a constant value, but it does not appear to be a real property. Variable-based [background properties](Background_%28GUI_item_property%29 "Background (GUI item property)") do function without this property, but the texture referred to draws absolutely-last, even drawing on top of the GUI cursor. This property would appear to be a workaround, but it does not appear to function, and is not referenced on iddevnet.com.
 
 Syntax
@@ -15,5 +22,4 @@ Example(s)
 
     background       "gui::itemicon"
     variablebackground  1
-
 

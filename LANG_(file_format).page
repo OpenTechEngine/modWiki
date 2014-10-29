@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: File_formats
+toc: yes
+title: LANG (file format)
+...
+
 .LANG files are used for localization purposes. For every language there is a different set of files available. Each of these files contains a numbered string that is referenced from within code, GUIs or maps. Each string has to have a unique number so there are no conflicts when referenced. Language strings are simply referenced by typing "\#str\_20000" in the textfield. Replace 20000 with the intended string number.
 
 Syntax

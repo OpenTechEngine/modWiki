@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Console_commands
+toc: yes
+title: GfxInfo (console command)
+...
+
 Description
 -----------
 
@@ -19,5 +26,4 @@ Notes
 -----
 
 You can use this command to see which rendering paths are potentially available in your video card for use with the [r\_renderer](R_renderer_%28cvar%29 "R renderer (cvar)") CVar.
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_item_properties
+toc: yes
+title: Forecolor (GUI item property)
+...
+
 The foreground color, used by text characters.
 
 Syntax
@@ -16,5 +23,4 @@ Example(s)
 ----------
 
     forecolor 1, 1, 1, 0.5
-
 

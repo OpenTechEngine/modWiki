@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: StartSoundShader (script event)
+...
+
 Game class
 ----------
 
@@ -70,5 +77,4 @@ You should use the function [cacheSoundShader (script command)sys.cacheSoundShad
 It seems that this can be called from any entity - including moving ones. Of course with a speaker entity you can set options such as volume, looping and occlusion. I cannot find a way of scripting these things.
 
 You can use [entity.stopSound()](StopSound_%28script_command%29 "StopSound (script command)") to stop a sound.
-
 

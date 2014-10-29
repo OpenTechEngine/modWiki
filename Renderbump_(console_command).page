@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Console_commands
+toc: yes
+title: Renderbump (console command)
+...
+
 Description
 -----------
 
@@ -25,5 +32,4 @@ Specifically, it looks at the [renderbump](Renderbump_%28Material_global_keyword
 Failure to provide the engine with enough free memory to work with can result in a **cant malloc x megs** error.
 
 It's recommended that you free up as much system memory (RAM) as possible before issuing this command by closing unnecessary programs and that you ensure your pagefile (virtual memory) is set to allocate at least as much hard drive space as your system memory if not one and a half times that amount.
-
 

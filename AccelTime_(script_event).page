@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: AccelTime (script event)
+...
+
 Game class
 ----------
 
@@ -27,5 +34,4 @@ Notes
 -----
 
 This script event does not return any values. In the example above it will cause the entity to take 3 seconds to accelerate up to its maximum speed for its particular movement. An entity's accelTime should not be higher than the entity's time. Logically, you can't take 4 seconds to accelerate, when the time for an object is only 2 seconds long.
-
 

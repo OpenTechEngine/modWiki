@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_item_properties
+toc: yes
+title: Invertrect (GUI item property)
+...
+
 Whether the [rect](Rect_%28GUI_item_property%29 "Rect (GUI item property)") of this item has a normal coordinate system (xy point at top left corner) or an invert one (xy point at the bottom right corner). By using invertrect 1, you can resize this item from the right or bottom instead of the normal top and left position, so it's handier on a few situations (even though you could do a complete resize on the rect to achieve the same effect). Using a rect value of "100, 100, 200, 200" is the same as using a rect value of "300, 300, 200, 200" with invertrect 1. The content of the item is unaffected (nothing is flipped), and the children items still have their positions relative to the top left corner of the item. More information [here](https://web.archive.org/web/20121122073648/http://www.doom3world.org/phpbb2/viewtopic.php?p=51332#51332 "http://www.doom3world.org/phpbb2/viewtopic.php?p=51332#51332") .
 
 The value of this property cannot be changed at runtime.
@@ -16,5 +23,4 @@ Example(s)
 ----------
 
     invertrect 1
-
 

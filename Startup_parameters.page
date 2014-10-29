@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Modding
+toc: yes
+title: Startup parameters
+...
+
 Startup parameters are remnants of the time that an OS consisted of nothing more then a console. A command was then started by giving it's name and optionally some parameters to change the command's behavior. (Take DOS as an example, or even a modern Linux terminal.) All games built on the [id Tech 4](Id_Tech_4 "Id Tech 4") engine allow you to start them with parameters as well to get a specific behaviour.
 
 Shortcuts
@@ -155,5 +162,4 @@ This will make the game run in fullscreen or in windowed mode. Mostly in combana
 
  [r\_multisamples](R_multiSamples_%28cvar%29 "R multiSamples (cvar)")   
 Enables [antialiasing](Antialiasing "Antialiasing") and sets the number of passes.
-
 

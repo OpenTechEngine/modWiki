@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: GetEntityKey (script event)
+...
+
 Game class
 ----------
 
@@ -27,5 +34,4 @@ Notes
 -----
 
 This script event returns the entity specified as an entity. See [getEntity (script event)](GetEntity_%28script_event%29 "GetEntity (script event)") for getting a reference directly by name.
-
 

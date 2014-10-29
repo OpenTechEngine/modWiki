@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: Image writePrecompressedTextures (cvar)
+...
+
 Description
 -----------
 
@@ -141,5 +148,4 @@ Notes
 -----
 
 -   Other games based on the Doom 3 engine may write the DDS file to the same directory as the original image asset. These games should load the DDS file from this location, though Doom 3 does not.
-
 

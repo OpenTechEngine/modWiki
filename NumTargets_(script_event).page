@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: NumTargets (script event)
+...
+
 Game class
 ----------
 
@@ -28,5 +35,4 @@ Notes
 -----
 
 This script event returns the number of entities this entity has targeted as a float.
-
 

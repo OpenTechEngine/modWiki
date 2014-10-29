@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_items
+toc: yes
+title: RenderDef (GUI item type)
+...
+
 Much like windowDef, but it can contain a 3D model (in the [LWO](LWO_%28file_format%29 "LWO (file format)") format).
 
 Additional properties
@@ -31,5 +38,4 @@ Example(s)
         definevec4  "$marsRotate"   0, time * 0.001, 0, 0
         float starmove  0
     }
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_item_properties
+toc: yes
+title: Textscale (GUI item property)
+...
+
 The scale of the text within the item, in relation to the original font size (a value of 1 would use the original size, while a value of 2 would be two times that size).
 
 Syntax
@@ -15,5 +22,4 @@ Example(s)
 
     textscale    0.35
     textscale   1.1
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: IsOpen (script event)
+...
+
 Game class
 ----------
 
@@ -37,5 +44,4 @@ Notes
 -----
 
 This script event does not report the correct status for doors with the "start\_open" key/value pair set to 1. Instead it reports true when the door is closed and vice versa.
-
 

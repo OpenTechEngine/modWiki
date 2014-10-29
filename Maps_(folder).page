@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Folders, Mapping
+toc: yes
+title: Maps (folder)
+...
+
 The maps directory contains a sub-directory, "game". Within this directory are the files of the actual Doom 3 levels. All files here are named after the level that the file belongs to. Maps in Doom 3 are defined by four different files, all of which are in ascii (plain text) so it should be very easy for other people to write editors and tools for them. For a map to work properly, all four files must be included (the only exception is that .AAS files are not needed for multiplayer maps).
 
 Mapping Filetypes
@@ -20,5 +27,4 @@ The .PROC contains all the pre-processed geometry in the map. It stores all the 
 
  [levelname]. [AAS](AAS_%28file_format%29 "AAS (file format)") [suffix]   
 The .AAS files contain the 'area awareness' data for the AI to navigate through the level. The .AAS file is generated to reflect the playable volume of the map that the monsters are allowed to roam about. For Doom 3 there are several different types of .AAS files signified by the suffix. These are used depending on the physical dimensions of monsters. For example, most monsters use .AAS48, while larger demons like the hell-knight use .AAS96. In addition, there are also special .AAS files for special monster types, .AAS\_CYBERDEMON, .AAS\_GUARDIAN, .AAS\_MANCUBUS, .AAS\_SABAOTH.
-
 

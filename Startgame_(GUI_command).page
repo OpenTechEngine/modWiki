@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_commands
+toc: no
+title: Startgame (GUI command)
+...
+
 Starts a map defined by the argument.
 
 Syntax
@@ -11,5 +18,4 @@ Example(s)
 ----------
 
     set "cmd" "startgame map/mars_city1";
-
 

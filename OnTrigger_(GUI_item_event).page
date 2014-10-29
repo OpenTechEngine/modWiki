@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_item_events
+toc: no
+title: OnTrigger (GUI item event)
+...
+
 Called when the entity this GUI is attached to is triggered.
 
 Should be used on the [Desktop GUI item](Desktop_GUI_item "Desktop GUI item") .
@@ -8,5 +15,4 @@ Example(s)
     onTrigger {
         ...
     }
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Annotated_API
+toc: yes
+title: IdAASLocal::PullPlayer
+...
+
  PullPlayer is located in AAS\_debug with many other aas debugging utility methods. It is used to pull the player along a walk path to a goal area. Usage: "aas\_pullPlayer 30" I am personally very interested in this method because it shows how some low level code can directly manipulate the player (like bot code could)
 
      

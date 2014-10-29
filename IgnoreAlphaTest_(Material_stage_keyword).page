@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Material_stage_keywords
+toc: yes
+title: IgnoreAlphaTest (Material stage keyword)
+...
+
 Description
 -----------
 
@@ -37,5 +44,4 @@ Notes
 -----
 
 To elaborate: [alphaTest](AlphaTest_%28Material_stage_keyword%29 "AlphaTest (Material stage keyword)") is a stage specific keyword (i.e. it can only be put in a certain stage, never in the global section) but it has an effect on all stages. So, ignoreAlphaTest disables this effect on the stages where it is specified.
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: R showLightCount (cvar)
+...
+
 Description
 -----------
 
@@ -155,5 +162,4 @@ The colours represent the number of light interactions as follows:
 Please note that surfaces whose materials use [vertex and fragment programs](Vertex_and_fragment_programs "Vertex and fragment programs") are coloured black.
 
 It can also help to set " [r\_showTris](R_showTris_%28cvar%29 "R showTris (cvar)") 3" and " [r\_showLightScissors](R_showLightScissors_%28cvar%29 "R showLightScissors (cvar)") 1".
-
 

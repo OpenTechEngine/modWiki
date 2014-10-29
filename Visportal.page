@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Mapping
+toc: yes
+title: Visportal
+...
+
 The Doom 3 engine uses **visportals** to determine which sections of the map need to be processed for rendering. Visportals allow the engine to efficiently discard sections of the level that cannot possibly be seen from the current vantage point, thus avoiding wasted CPU and GPU time. The careful use of visportals is critical to the design of a playable level, as the performance of anything more complex than a few empty rooms will drop dramatically if visportals are not used.
 
 How visportals work

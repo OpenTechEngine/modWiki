@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: SetKey (script event)
+...
+
 Game class
 ----------
 
@@ -31,5 +38,4 @@ Notes
 This script event does not return any values.
 
 Note that most spawn args are evaluated when this entity spawns in, so this will not change the entity's behavior in most cases. This is chiefly for saving data the script needs in an entity for later retrieval.
-
 

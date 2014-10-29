@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: RestorePosition (script event)
+...
+
 Game class
 ----------
 
@@ -30,5 +37,4 @@ Notes
 This script event does not return any values.
 
 This is the position the entity was spawned in unless the "origin" key is changed. Note that there is no guarantee that the entity won't be stuck in another entity when moved, so care should be taken to make sure that isn't possible.
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_item_properties
+toc: yes
+title: NeedsRender (GUI item property)
+...
+
 ??
 
 This property is restricted to the [renderDef](RenderDef_%28GUI_item_type%29 "RenderDef (GUI item type)") item type.
@@ -16,5 +23,4 @@ Example(s)
 ----------
 
     needsRender  1
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Declarations
+toc: yes
+title: Modeldef (decl)
+...
+
 Model declarations define parameters for the engine to take into account when dealing with a specific animated model.
 
 Syntax
@@ -117,5 +124,4 @@ The following events are aliases for hardcoded events that do not accept paramet
 | enableLegIK               | enableLegIK         |
 | disableLegIK              | disableLegIK        |
 | prevent\_idle\_override   | ???                 |
-
 

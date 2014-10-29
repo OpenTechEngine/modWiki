@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: SetHealth (script event)
+...
+
 Game class
 ----------
 
@@ -44,5 +51,4 @@ Event on idAI: Calling this event will set the **takesdamage** flag of the entit
 Event on idProjectile.
 
 sdScriptEntity: Calls script object function OnPostDamage **
-
 

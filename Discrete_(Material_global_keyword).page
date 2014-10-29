@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Material_global_keywords
+toc: yes
+title: Discrete (Material global keyword)
+...
+
 Description
 -----------
 
@@ -19,5 +26,4 @@ Notes
 -----
 
 Discrete surfaces will not be clipped to the world, and it is suggested that this keyword is used in surfaces like [GUIs](GUIs "GUIs") or mirrors. Surfaces with this option can be used to facilitate [brush carving](Brush_carving "Brush carving") , by allowing manually-split brushes to remain separate after compilation, although extensive use of this keyword may lead to a suboptimal number of polygons in the map.
-
 

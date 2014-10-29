@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: LogFile (cvar)
+...
+
 Description
 -----------
 
@@ -142,5 +149,4 @@ Notes
 -----
 
 Unless specified otherwise by [logFileName](LogFileName_%28cvar%29 "LogFileName (cvar)") the log is stored in qconsole.log.
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Mapping
+toc: yes
+title: Entity
+...
+
 **Entities** are functional objects placed in a map ("actors" to the Unreal mappers). [Lights](Light "Light") , monsters, items, doors, ect... are all examples of entities.
 
 An entity is a combination of an [entityDef](Entitydef_%28decl%29 "Entitydef (decl)") type and a [spawn class](Spawn_class "Spawn class") , and in many cases a [map entity dictionary](Map_entity_dictionary "Map entity dictionary") and/or a [script object](Script_object "Script object") . Entities also have a name unique from any other entity in the world.

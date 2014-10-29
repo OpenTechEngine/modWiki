@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Material_global_keywords
+toc: yes
+title: ForceShadows (Material global keyword)
+...
+
 Description
 -----------
 
@@ -19,5 +26,4 @@ Notes
 -----
 
 This keyword is useful for forcing materials to cast shadows that would otherwise not. For instance, textures/common/nodraw does not cast shadows but could be made to through use of this global keyword.
-
 

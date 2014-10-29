@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: R customHeight (cvar)
+...
+
 Description
 -----------
 
@@ -139,5 +146,4 @@ Notes
 -----
 
 Custom resolutions can not be used unless the CVar [r\_mode](R_mode_%28cvar%29 "R mode (cvar)") is set to -1.
-
 

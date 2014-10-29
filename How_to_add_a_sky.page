@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Tutorials, Mapping
+toc: yes
+title: How to add a sky
+...
+
 This article shows the various options to include a sky in a map. A sky is essentially a collection of six [textures](Texturing "Texturing") called a [cube map](Cube_maps "Cube maps") stored in the / [env](Env_%28folder%29 "Env (folder)") folder. These cube maps are then referenced by a [material declaration](Material_%28decl%29 "Material (decl)") using the [TexGen](TexGen_%28Material_stage_keyword%29 "TexGen (Material stage keyword)") instruction; it is this material that is important for mappers.
 
 If you have further questions about this tutorial please put them in this article's [Talk](Talk:How_to_add_a_sky "Talk:How to add a sky") page.

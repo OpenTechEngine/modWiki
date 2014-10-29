@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Material_stage_keywords
+toc: yes
+title: Alpha (Material stage keyword)
+...
+
 Description
 -----------
 
@@ -32,5 +39,4 @@ An image with no transparency has an alpha channel of constant 1.0, therefore th
 Photoshop 7 does not save transparency information into an alpha channel when dealing with targa images. You must download the updated [Targa export plugin](http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544 "http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544") from [Adobe](http://www.adobe.com/ "http://www.adobe.com") . All other versions of Photoshop work correctly.
 
  This keyword is particularly useful for controlling the strength of a [mirrorRenderMap](MirrorRenderMap "MirrorRenderMap") or [cubeMap](CubeMap "CubeMap") stage.
-
 

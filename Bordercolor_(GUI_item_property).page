@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_item_properties
+toc: yes
+title: Bordercolor (GUI item property)
+...
+
 The color of the border that's used by the item, when the [bordersize](Bordersize_%28GUI_item_property%29 "Bordersize (GUI item property)") property is higher than 0.
 
 Syntax
@@ -16,5 +23,4 @@ Example(s)
 ----------
 
     bordercolor 0.4, 0.6, 0.6, 0
-
 

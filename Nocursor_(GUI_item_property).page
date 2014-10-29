@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_item_properties
+toc: yes
+title: Nocursor (GUI item property)
+...
+
 Whether the cursor should be shown on this GUI or not. Should be used on the desktop item.
 
 The value of this property cannot be changed at runtime.
@@ -16,5 +23,4 @@ Example(s)
 ----------
 
     nocursor 1
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: Com preciseTic (cvar)
+...
+
 Description
 -----------
 
@@ -145,5 +152,4 @@ There are two threads running in Doom 3, the main thread, and the 'async' thread
 The async thread wakes up every 16 milliseconds (60fps) to run an update. If more than 16ms have elapsed since the last update, it will run multiple updates to catch up (for example if 51ms have elapsed, it will run 3 updates). Similarly, if the update is called too soon, it gets ignored. When com\_preciseTic is set to 0, it skips this bit of logic and always runs a single update no matter what.
 
 --from binaryc post @ [http://www.doom3world.org/phpbb2/viewtopic.php?p=106823&highlight=\#106823](https://web.archive.org/web/20100407101237/http://www.doom3world.org/phpbb2/viewtopic.php?p=106823&highlight=#106823 "http://www.doom3world.org/phpbb2/viewtopic.php?p=106823&highlight=#106823")
-
 

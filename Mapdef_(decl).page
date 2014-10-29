@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Declarations, Mapping
+toc: yes
+title: Mapdef (decl)
+...
+
 Mapdefs are [declarations](Declarations "Declarations") that contain a list of general map properties. These declarations are required if you wish for your map to be displayed during the setup of a multiplayer game.
 
 Syntax
@@ -30,3 +37,4 @@ Alternatively you can create a batch file to do this for you. A batch file is an
 The batch file itself can be anywhere if you set the right paths but in the example above it's supposed to be put in the Doom 3 folder. This will update the corresponding MapDef entry with the correct sizes. If the map is multiplayer only then do:
 
     doom3 +com_updateLoadSize 1 +si_map <mappath>\<mapname>.map +si_pure 0 +spawnserver +quit
+

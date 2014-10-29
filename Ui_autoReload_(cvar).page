@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: Ui autoReload (cvar)
+...
+
 Description
 -----------
 
@@ -139,5 +146,4 @@ Notes
 -----
 
 this does not override manual reload. this command is only available to weapons that use ammunition. this command is only handled when attack is pressed, ammo is available in inventory, but weapons' clip is empty
-
 

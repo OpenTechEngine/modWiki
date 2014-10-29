@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Console_commands
+toc: yes
+title: Testmap (console command)
+...
+
 Description
 -----------
 
@@ -23,5 +30,4 @@ Notes
 -----
 
 See the [dmap](Dmap_%28console_command%29 "Dmap (console command)") console command for more information on map compilation. Testmap automatically tries to load . [AAS](AAS_%28file_format%29 "AAS (file format)") files so you may see the error "WARNING: Couldn't load AAS file".
-
 

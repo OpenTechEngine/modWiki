@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_commands
+toc: no
+title: SetFocus (GUI command)
+...
+
 Sets the user focus to an specific item.
 
 Syntax
@@ -9,5 +16,4 @@ Example(s)
 ----------
 
     setFocus "PromtEntryBox";
-
 

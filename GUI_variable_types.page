@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_scripting
+toc: no
+title: GUI variable types
+...
+
 Variables can be declared before the actual code blocks on a item, usually right after the item properties. They are meant to be used by [command statements](GUI_commands "GUI commands") inside [event blocks](GUI_item_events "GUI item events") .
 
 Available variables types

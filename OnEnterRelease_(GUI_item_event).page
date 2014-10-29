@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_item_events
+toc: no
+title: OnEnterRelease (GUI item event)
+...
+
 Called when the user lets go of the enter key on an [editDef](EditDef_%28GUI_item_type%29 "EditDef (GUI item type)") .
 
 *Must check if this works in normal windowDefs!*
@@ -8,5 +15,4 @@ Example(s)
     onEnteRelease {
         ...
     }
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: Time (script event)
+...
+
 Game class
 ----------
 
@@ -27,5 +34,4 @@ Notes
 -----
 
 This script event does not return any values. The example above will cause the entity to take 3 seconds to perform whichever movement command comes after its time is set.
-
 

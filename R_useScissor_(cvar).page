@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: R useScissor (cvar)
+...
+
 Description
 -----------
 
@@ -145,5 +152,4 @@ This CVar should always be enabled to reduce the number of polygons processed by
 This CVar also makes a big difference to **light count** - if r\_usescissor is disabled, the lightcount for a whole polygon will be equal to the number of lights that touch that polygon at any point. If r\_usescissor is enabled, the lightcount will increase only within the portion of the polygon that is contained within the light's own scissor rectangle (approximately equal to the light volume projected into screen space).
 
 Note that the r\_usescissor cvar is automatically set to 0 when the [screenshot](Screenshot_%28console_command%29 "Screenshot (console command)") command is given, and is reset to 1 (whether or not it was 1 initially) immediately after the screenshot is written to disk. This has two effects: the view with scissors enabled cannot be captured, and the cvar will become activated after a screenshot.
-
 

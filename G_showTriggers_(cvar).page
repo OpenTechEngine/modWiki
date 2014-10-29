@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: G showTriggers (cvar)
+...
+
 Description
 -----------
 
@@ -139,5 +146,4 @@ Notes
 -----
 
 This shows the bounding box for triggers, not the triggers themselves. If a trigger is removed upon being trigger, it will disapear. If a trigger is not activated until triggered, it will not show until activated.
-
 

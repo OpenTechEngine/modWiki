@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: File_formats
+toc: yes
+title: SCRIPT (file format)
+...
+
 Script files define a sequence of events grouped into 1 or more blocks. They are used in [different fields](Scripting#Different_fields "Scripting") like eg. level scripting or GUI actions. Scripts use a custom language with a syntax similar to C++ and are stored in plain-text ASCII files.
 
 Syntax

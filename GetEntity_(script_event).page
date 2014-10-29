@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: GetEntity (script event)
+...
+
 Game class
 ----------
 
@@ -28,5 +35,4 @@ Notes
 -----
 
 This script event returns the entity that matches the given name or [null](%24null_entity_%28scripting%29 "$null entity (scripting)") if not found.
-
 

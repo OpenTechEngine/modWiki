@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Material_global_keywords
+toc: yes
+title: NoSelfShadow (Material global keyword)
+...
+
 Description
 -----------
 
@@ -19,5 +26,4 @@ Notes
 -----
 
 Because of the way the [engine](Id_Tech_4 "Id Tech 4") works, surfaces which have NoSelfShadow set also don't cast any shadows onto any other surface which also has the NoSelfShadow keyword. See also the [NoShadows](NoShadows_%28Material_global_keyword%29 "NoShadows (Material global keyword)") keyword.
-
 

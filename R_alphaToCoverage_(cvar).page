@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: R alphaToCoverage (cvar)
+...
+
 Description
 -----------
 
@@ -141,5 +148,4 @@ Notes
 -----
 
 This CVar resolves an issue where partially transparent textures like grates do not render properly with anti-aliasing enabled.
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_commands
+toc: yes
+title: Set (GUI command)
+...
+
 To change the GUI state (properties and values) or execute a GUI client command.
 
 State change
@@ -117,5 +124,4 @@ Example(s)
     set "cmd" "resetCvars";
     set "cmd" "play guisounds_menuclickup";
     set "cmd" "runScript map_cpuboss::bridge_rotate_east ; play guisounds_action";
-
 

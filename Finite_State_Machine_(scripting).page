@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Scripting
+toc: yes
+title: Finite State Machine (scripting)
+...
+
 In terms of scripting, a Finite State Machine, or FSM, is a method of organising code into different behaviors or states.
 
 For script objects it's used to manage run time behavior, logic that runs for the lifetime of an entity, by breaking it into states.

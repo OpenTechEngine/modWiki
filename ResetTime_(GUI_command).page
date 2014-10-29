@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_commands
+toc: yes
+title: ResetTime (GUI command)
+...
+
 Resets the time for a given item. This is used to "go back in time" and restart pieces of code executed on [onTime](OnTime_%28GUI_item_event%29 "OnTime (GUI item event)") event blocks.
 
 Syntax
@@ -14,5 +21,4 @@ Example(s)
 
     resetTime "animHandler" "0";
     resetTime "10";
-
 

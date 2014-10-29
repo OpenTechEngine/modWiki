@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: Si pure (cvar)
+...
+
 Description
 -----------
 
@@ -141,5 +148,4 @@ Notes
 Setting this CVar to 0 will cause the game to load any and all unarchived assets including gamex86.dll. This is useful when you are coding as it spares you from archiving your modified .DLL in a [PK4](PK4_%28file_format%29 "PK4 (file format)") file every time you want to test a change.
 
 This CVar can only be modified on the command line.
-
 

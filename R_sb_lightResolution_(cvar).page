@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: R sb lightResolution (cvar)
+...
+
 Description
 -----------
 
@@ -139,5 +146,4 @@ Notes
 -----
 
 This CVar is for the use of shadow buffers and it's not used by Doom 3. With a usual shadow buffers implementation lights take snapshots of the world and save it as a texture. Settting higher values with this CVar increases shadow resolution at the expense of more memory and speed.
-
 

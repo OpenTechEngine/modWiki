@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_items
+toc: no
+title: Desktop GUI item
+...
+
 The *Desktop* is the main [item](GUI_items "GUI items") that makes a [GUI](GUIs "GUIs") . As the first item, it contains all other items nested on it, as well as some special [GUI item events](GUI_item_events "GUI item events") .
 
 The desktop GUI is a [windowDef](WindowDef_%28GUI_item_type%29 "WindowDef (GUI item type)") item and follows the same syntax of other items, with a few reservations. For example:

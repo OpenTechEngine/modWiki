@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_item_properties
+toc: yes
+title: Cvar (GUI item property)
+...
+
 ??
 
 This property is restricted to the [bindDef](BindDef_%28GUI_item_type%29 "BindDef (GUI item type)") , [editDef](EditDef_%28GUI_item_type%29 "EditDef (GUI item type)") and [sliderDef](SliderDef_%28GUI_item_type%29 "SliderDef (GUI item type)") item types.
@@ -16,5 +23,4 @@ Example(s)
 ----------
 
     cvar "ui_showGun"
-
 

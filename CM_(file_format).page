@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: File_formats
+toc: yes
+title: CM (file format)
+...
+
 .CM files store collision model data. Collision models are a [binary space partitioning](http://en.wikipedia.org/wiki/Binary_space_partitioning "http://en.wikipedia.org/wiki/Binary_space_partitioning") based format used for collision detection.
 
 They are most commonly used with maps but can also be used with moveable physics objects.

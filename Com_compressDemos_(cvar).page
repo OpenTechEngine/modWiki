@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: Com compressDemos (cvar)
+...
+
 Description
 -----------
 
@@ -141,5 +148,4 @@ Notes
 -----
 
 Compression reduces filesize by almost half but because decompression is on the fly it can slow down playback. This is especially relevant if you are recording a demo for use with the [timedemo](TimeDemo_%28console_command%29 "TimeDemo (console command)") console command where the results will be skewed by the fact the CPU will be busy decompressing the demo.
-
 

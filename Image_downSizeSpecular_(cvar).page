@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: Image downSizeSpecular (cvar)
+...
+
 Description
 -----------
 
@@ -141,5 +148,4 @@ Notes
 -----
 
 The cutoff resolution is determined by [image\_downSizeSpecularLimit](Image_downSizeSpecularLimit_%28cvar%29 "Image downSizeSpecularLimit (cvar)") . A [vid\_restart](Vid_restart_%28console_command%29 "Vid restart (console command)") command must be issued to see the effects of a change to this CVar.
-
 

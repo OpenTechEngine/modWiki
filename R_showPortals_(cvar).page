@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: R showPortals (cvar)
+...
+
 Description
 -----------
 
@@ -141,5 +148,4 @@ Notes
 -----
 
 This CVar is used primarily to test whether a visportal is working and how efficient the optimisation is. Portals outlined in green mean they are open and that all geometry in that area is being processed. When a portal is red it means the area behind it is being ignored by the renderer. When they are used, there will always be at least one green portal. See also the [r\_useScissor](R_useScissor_%28cvar%29 "R useScissor (cvar)") and [r\_showTris](R_showTris_%28cvar%29 "R showTris (cvar)") CVars.
-
 

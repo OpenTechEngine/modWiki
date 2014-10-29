@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Console_commands
+toc: yes
+title: Spawn (console command)
+...
+
 Description
 -----------
 
@@ -24,5 +31,4 @@ Key/value pairs are assigned using quotation marks around each individual key an
     spawn monster_demon_imp "name" "turdburgler"
 
 ... would spawn an imp with the name turdburgler.
-
 

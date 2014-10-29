@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_item_properties
+toc: yes
+title: TabAligns (GUI item property)
+...
+
 ??
 
 This property is restricted to the [listDef](ListDef_%28GUI_item_type%29 "ListDef (GUI item type)") item type.
@@ -16,5 +23,4 @@ Example(s)
 ----------
 
     tabAligns "0, 1, 1, 0, 0"
-
 

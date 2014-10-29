@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Material_stage_keywords
+toc: yes
+title: CameraCubeMap (Material stage keyword)
+...
+
 Description
 -----------
 
@@ -29,5 +36,4 @@ Notes
 -----
 
 This keyword expects the six environment map images to use the filename suffixes \_forward, \_back, \_left, \_right, \_up, and \_down.
-
 

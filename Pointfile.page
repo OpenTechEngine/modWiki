@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Stub, Mapping
+toc: no
+title: Pointfile
+...
+
 A pointfile is a special file generated during map compilation when there is a leak. This file is created in the same directory and with the same filename as the . [MAP](MAP_%28file_format%29 "MAP (file format)") file but with the . [LIN](LIN_%28file_format%29 "LIN (file format)") extension instead.
 
 To use a pointfile, load [DoomEdit](DoomEdit "DoomEdit") and go to File \> Pointfile and the editor will draw a red line. You can then use [shift + ctrl + k](DoomEdit_hotkeys "DoomEdit hotkeys") and shift + ctrl + l to move back and forth along the line to find the leak.

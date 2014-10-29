@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Declarations
+toc: yes
+title: Model (decl)
+...
+
 Model declarations define a model reference that associates a mesh, it's animations, and any additional settings with a given name so that they can be referenced as a group. This can prove useful. For instance, allowing you to reuse animations with different models provided they share the same skeleton.
 
 It's generally used with animated models although there doesn't appear to be any indication that you couldn't use them with a static model as well.
@@ -301,5 +308,4 @@ Starts an aviGame. Useful for making animations to be used on video screens (suc
 | disableWalkIK             | event disableWalkIK       |
 | enableLegIK               | event enableLegIK         |
 | disableLegIK              | event disableLegIK        |
-
 

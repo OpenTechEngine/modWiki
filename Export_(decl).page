@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Declarations
+toc: yes
+title: Export (decl)
+...
+
 Export declarations defining a group of files and the arguments to use during conversion from Maya Binary to MD5 format. Essentially you are defining a batch of files and parameters to process.
 
 Syntax
@@ -273,5 +280,4 @@ Define a joint that should be exported irrespective of whether it's used by a me
     -keep [name]
 
 -   [name] - The name of a joint
-
 

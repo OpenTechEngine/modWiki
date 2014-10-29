@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: File_formats, Modelling
+toc: no
+title: MB (file format)
+...
+
 Maya binary model format.
 
 This filetype is not directly useable by idTech4 games. However, it can be interpreted by the engine when converting models and animations into [MD5](MD5_%28file_format%29 "MD5 (file format)") formats using the [exportmodels](Exportmodels_%28console_command%29 "Exportmodels (console command)") console command.

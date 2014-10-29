@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: R sb linearFilter (cvar)
+...
+
 Description
 -----------
 
@@ -146,5 +153,4 @@ This CVar is for the use of shadow buffers and it's not used by Doom 3. With a u
     GL_LINEAR: Returns the weighted average of the four fragments that are closest to the centre of the pixel being textured.
 
 GL\_NEAREST is faster than GL\_LINEAR, but it can introduce artefacts.
-
 

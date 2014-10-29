@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: Win allowMultipleInstances (cvar)
+...
+
 Description
 -----------
 
@@ -143,5 +150,4 @@ Notes
 This option can be useful for debugging in a multiplayer game as you can start the [listen server](Listen_server "Listen server") and a [client](Client "Client") on the same computer.
 
 Multiple instances of a [dedicated server](Dedicated_server "Dedicated server") can be run without setting this parameter.
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: GetNextKey (script event)
+...
+
 Game class
 ----------
 
@@ -39,5 +46,4 @@ This is usefull for when you have multiple values to look up, like when you targ
 To find the next matching key, pass in the previous result and the next key returned will be the first one that matches after the previous result. Pass in "" to get the first match. Returns "" when no more keys match.
 
 Note to coders: this is the same as MatchPrefix in the game code.
-
 

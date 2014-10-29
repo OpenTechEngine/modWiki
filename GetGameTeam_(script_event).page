@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: GetGameTeam (script event)
+...
+
 ![](/images/f/f9/Etqwsquare_bg.png) The information on this page is specific to [Enemy Territory: Quake Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
 
 ------------------------------------------------------------------------
@@ -37,5 +44,4 @@ Returns object pointer of team. Named object pointers for teams are **gdfTeam** 
 The following [spawn classes](Spawn_class "Spawn class") can have their team set: **idActor** , **idItem** , **idProjectile** , **idPlayer** , **sdScriptEntity** .
 
 Has counterpart [setGameTeam](SetGameTeam_%28script_event%29 "SetGameTeam (script event)") .
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: Image useOfflineCompression (cvar)
+...
+
 Description
 -----------
 
@@ -141,5 +148,4 @@ Notes
 -----
 
 This CVar by itself is not very useful and has to be used with the [com\_makingBuild](Com_makingBuild_%28cvar%29 "Com makingBuild (cvar)") CVar and the [startbuild](Startbuild_%28console_command%29 "Startbuild (console command)") and [map](Map_%28console_command%29 "Map (console command)") console commands. See the [modding](Modding "Modding") page for a wholesome use of this CVar.
-
 

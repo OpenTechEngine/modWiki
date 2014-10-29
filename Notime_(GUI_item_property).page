@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_item_properties
+toc: yes
+title: Notime (GUI item property)
+...
+
 Whether or not [onTime events](OnTime_%28GUI_item_event%29 "OnTime (GUI item event)") will execute by themselves as soon as the GUI is shown. If this value is set to 1, they won't execute; instead, a [resetTime](ResetTime_%28GUI_command%29 "ResetTime (GUI command)") command should be issued so the animation will run. This is useful to have separate items with nested animations that are triggered elsewhere on the script, simulating a kind of timeline control.
 
 Syntax
@@ -14,5 +21,4 @@ Example(s)
 ----------
 
     notime 1
-
 

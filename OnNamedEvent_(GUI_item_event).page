@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_item_events
+toc: no
+title: OnNamedEvent (GUI item event)
+...
+
 Called when a certain special event happens elsewhere in the game code. The list of named events vary depending on the scope you're running the GUI script from (ie, HUD, scoreboard, etc), and new events can be created by mod authors, so it's mainly a way of the game to fire up commands inside a GUI.
 
 For existing Doom 3 GUIs, check the [GUIs folder](Guis_%28folder%29 "Guis (folder)") page for a list of some available named events.
@@ -8,5 +15,4 @@ Example(s)
     onNamedEvent newWeapon {
         ...
     }
-
 

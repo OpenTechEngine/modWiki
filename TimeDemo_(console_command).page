@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Console_commands
+toc: yes
+title: TimeDemo (console command)
+...
+
 Description
 -----------
 
@@ -20,5 +27,4 @@ Notes
 -----
 
 When running a timedemo the engine ignores the tic rate (60Hz) and runs at maximum speed. Unless you use the precache option you should run timedemo more than once so that the framerate is not affected by background loading. Demos store the physics and AI of the live run so during a timedemo the CPU will not be as stressed as if the game was being played. See also the [benchmark](Benchmark_%28console_command%29 "Benchmark (console command)") console command.
-
 

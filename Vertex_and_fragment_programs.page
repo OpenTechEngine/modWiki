@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Texturing
+toc: no
+title: Vertex and fragment programs
+...
+
 Traditionally, APIs such as OpenGL and Direct3D have worked in such a way that you feed it all of the data that makes up your world (vertices, triangles, etc.), and it has a predefined method of how these are put together to create the scene you see on your screen. They had certain parameters that you could set to customize this for your needs, but you could never redefine the core logic. This is called a fixed function pipeline.
 
 Vertex and fragment programs let you do just that. You can use one of these programs to create your own logic for the API to use to transform the input data supplied by the engine into the pixels you see on your screen - a programmable pipeline. Doom 3 does this through . [VFP](VFP_%28file_format%29 "VFP (file format)") files, located in the / [glprogs](Glprogs_%28folder%29 "Glprogs (folder)") folder of your . [PK4](PK4_%28file_format%29 "PK4 (file format)") or mod folder.

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_item_properties
+toc: yes
+title: Choices (GUI item property)
+...
+
 Define the choices available on this choiceDef, separated by semicolons. Just like the [text](Text_%28GUI_item_property%29 "Text (GUI item property)") property, can also take string parameters in the "\#str\_nnnnn" format.
 
 This property is restricted to the [choiceDef](ChoiceDef_%28GUI_item_type%29 "ChoiceDef (GUI item type)") item type.
@@ -17,5 +24,4 @@ Example(s)
 
     choices "No;Yes"
     choices "#str_04221"
-
 

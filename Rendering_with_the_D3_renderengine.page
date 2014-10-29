@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Coding
+toc: yes
+title: Rendering with the D3 renderengine
+...
+
 In our mod I had the problem that I needed a rendering which makes a screenshot. This itself is pretty easy to do, but to make it more challenging, I needed the playermodel to NOT show up in my rendering. Instead I have a seperate model, that I need to put in the screenshot and ONLY there. In order to achieve this it took a lot of time to find out how to do such a thing properly, so I thought I will share it here. If there are some errors, please point them out so I can correct them.
 
 Incidently this information can also help you to create a rearview mirror, or other stuff that you may find usefull for other types of mods, though there may be better ways to do this. It is still usefull for debugging mirrors or surveillance cameras in realtime though.

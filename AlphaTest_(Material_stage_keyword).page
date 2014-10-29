@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Material_stage_keywords
+toc: yes
+title: AlphaTest (Material stage keyword)
+...
+
 Description
 -----------
 
@@ -34,5 +41,4 @@ While alphaTest is a stage specific keyword, it has an effect on all stages. To 
 Photoshop 7 does not save transparency information into an alpha channel when dealing with targa images. You must download the updated [Targa export plugin](http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544 "http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544") from [Adobe](http://www.adobe.com/ "http://www.adobe.com") . All other versions of Photoshop work correctly.
 
 Applying an alphatested material to a brush will make it so that the brush cannot be used to seal off the map from the void. This can be noticed when the pointfile line goes straight through a brush.
-
 

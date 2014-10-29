@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_item_properties
+toc: yes
+title: Rect (GUI item property)
+...
+
 The position and size of the item on the screen, in pixels in relation to a 640x480 "virtual" screen, counting from 0. The first two values are the top left corner of the windowdef, and the last two values are its width and height (see the [invertrect](Invertrect_%28GUI_item_property%29 "Invertrect (GUI item property)") property for an exception to this).
 
 Also note that, in nested items, the *x* and *y* values are relative to the top left corner of the parent item, not the desktop (main) [windowDef](WindowDef_%28GUI_item_type%29 "WindowDef (GUI item type)") . Also, the parent item's border is taken into account, so 0, 0 in a child item would be the topmost, leftmost pixel that is not a border pixel inside of the parent item.
@@ -16,5 +23,4 @@ Example(s)
 ----------
 
     rect 0, 0, 640, 480
-
 

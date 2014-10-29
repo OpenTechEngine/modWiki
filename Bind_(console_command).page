@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Console_commands
+toc: yes
+title: Bind (console command)
+...
+
 Description
 -----------
 
@@ -26,5 +33,4 @@ Instructions that require spaces should be enclosed in quotation marks like so..
 Multiple instructions can be bound to a key by using semicolons as separators...
 
     bind F11 "r_useOptimizedShadows 0;r_lightSourceRadius 5;screenshot 1024 768 64"
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: RandomTarget (script event)
+...
+
 Game class
 ----------
 
@@ -30,5 +37,4 @@ Notes
 This script event returns a random targeted entity as an entity.
 
 Pass an entity name as ignoreName to skip that entity.
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Declarations
+toc: yes
+title: Af (decl)
+...
+
 An articulated figure declaration defines the parameters for a ragdoll to react physically in the game. It's purpose is to assign collision bodies and joint restraints to the skeleton of an MD5mesh. These declarations are used explicitly for ragdolls.
 
 Syntax

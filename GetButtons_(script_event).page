@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: GetButtons (script event)
+...
+
 Game class
 ----------
 
@@ -85,5 +92,4 @@ The value returned bares relation to the status of eight possible buttons as def
 Each button's status is stored as a single bit in a eight bit binary number. Each button is represented by either a 1 or 0 which corresponds with either an on or off state. The resulting binary number therefore represents the status of each button.
 
 The example above depicts a way to determine which buttons are being pressed via getButtons.
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Mapping
+toc: yes
+title: CSG
+...
+
 CSG or Constructive Solid Geometry is a set operations common to many modelling software packages based on primitives (a cube, sphere, cone, etc.) to create more complex structures. Where it pertains to editing [id Tech 4](Id_Tech_4 "Id Tech 4") maps, CSG applies only to [brushes](Brush "Brush") with just two possible operations: boolean union and difference. The former combines two brushes into one and the later subtracts pieces off a brush.
 
 Tools of the trade

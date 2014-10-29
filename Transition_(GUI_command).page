@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_commands
+toc: yes
+title: Transition (GUI command)
+...
+
 Animates an item property from one value to another. This is equivalent to what's usually called an 'easing' or 'tweening' animation somewhere else. It works a lot like the [set](Set_%28GUI_command%29 "Set (GUI command)") command, except that it interpolates the values in-between during a certain time to create smooth visual transitions.
 
 Syntax
@@ -24,5 +31,4 @@ Example(s)
     transition "WeapBox::rect" "234 330 408 55" "229 330 408 93" "200" "0" "0.7";
     transition "menu_2::rect" "32, 64, 160, 32" "32, 96, 160,32" "400" "1" "1"; // An 'eased', smooth animation
     transition "menu_2::rect" "32, 64, 160, 32" "32, 96, 160,32" "400" "0" "0"; // A 'linear' animation
-
 

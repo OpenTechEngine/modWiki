@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_item_properties
+toc: yes
+title: Forceaspectwidth (GUI item property)
+...
+
 This parameter is used to force the GUI renderer to assume a different aspect ratio for a particular item. So, if you have a GUI that doesn't fit into the 4:3 normal aspect ratio, you can still use it and have text with a perfect ratio.
 
 I'm still unsure on how to use this, but apparently, it assumes the new width is the total width of the item. So a forceaspectwidth of half your normal width would result on a flatten-looking text.
@@ -24,5 +31,4 @@ Example(s)
         rect    0,0,0,0
         visible 1
     }
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Console_commands
+toc: yes
+title: Devmap (console command)
+...
+
 Description
 -----------
 
@@ -21,5 +28,4 @@ Notes
 The map must have been previously compiled. See also the [testmap](Testmap_%28console_command%29 "Testmap (console command)") and [map](Map_%28console_command%29 "Map (console command)") console commands.
 
 The devmap command appears to do the same thing as the map command. However, the name implies that it is used for development testing in which case there may be some benefit to it's use although currently any difference between the commands is not known.
-
 

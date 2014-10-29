@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_item_events
+toc: no
+title: OnAction (GUI item event)
+...
+
 On most item types, called when the user clicks on a [GUI item](GUI_items "GUI items") with the mouse.
 
 On [editDefs](EditDef_%28GUI_item_type%29 "EditDef (GUI item type)") , this is called when the text changes.
@@ -10,5 +17,4 @@ Example(s)
     onAction {
         ...
     }
-
 

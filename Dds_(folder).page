@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Folders, Texturing
+toc: no
+title: Dds (folder)
+...
+
 DDS (Direct Draw Surface) files are a texture file format much like . [JPG](JPG_%28file_format%29 "JPG (file format)") or . [TGA](TGA_%28file_format%29 "TGA (file format)") files. The primary advantage of [DDS](DDS_%28file_format%29 "DDS (file format)") files is that they can be used to store compressed and uncompressed pixel formats with various mipmap levels.
 
 Doom 3 makes use of .DDS files when running at a quality setting lower than "Ultra" in order to save texture memory (Although "High" quality level uses .DDS files for diffuse maps). Uncompressed textures are saved in duplicate .TGA format in the "base/ [textures](Textures_%28folder%29 "Textures (folder)") " directory.

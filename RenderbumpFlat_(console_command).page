@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Console_commands
+toc: yes
+title: RenderbumpFlat (console command)
+...
+
 Description
 -----------
 
@@ -30,5 +37,4 @@ Models must be oriented towards a specific axis in order to be captured during t
 -   .ASE - ???
 
 A color map is also exported. The colors are determined by the base color of each polygon. For clarification, base color does not refer to vertex colors, procedural textures or texture maps but rather the color of a polygon when no texture is applied.
-
 

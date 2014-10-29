@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Tutorials, Mapping, Texturing
+toc: yes
+title: How to add water
+...
+
 This article shows the various options to include water in a map. Water is a special effect composed of several functions: visually it should have some measure of transparency, refraction and reflection whilst it should also allow swimming through object buoyancy.
 
 Modders should also bear in mind that not all water effects need be created equally: a very shallow water puddle with perhaps very dirty or polluted water doesn't need transparency. By the same token it's completely unnecessary to add water physics to it or other bodies of water the player is never supposed to enter in the first place.

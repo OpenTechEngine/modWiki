@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: R useTwoSidedStencil (cvar)
+...
+
 Description
 -----------
 
@@ -141,5 +148,4 @@ Notes
 -----
 
 Instead of submitting each stencil volume twice, once with front faces and once with back faces, this optimisation allows the renderer to submit the stencil volume once with two sets of stencil operations which helps reduce vertex bottlenecks.
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: R showTris (cvar)
+...
+
 Description
 -----------
 
@@ -143,5 +150,4 @@ Notes
 -----
 
 This CVar is helpful in determining polycounts in a given scene, investigate compilation problems and the efficiency of visportals. See also the [r\_useScissor](R_useScissor_%28cvar%29 "R useScissor (cvar)") and [r\_showLightCount](R_showLightCount_%28cvar%29 "R showLightCount (cvar)") CVars.
-
 

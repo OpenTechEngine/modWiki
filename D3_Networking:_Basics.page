@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Coding
+toc: yes
+title: D3 Networking: Basics
+...
+
 Doom3 Network Architecture
 --------------------------
 
@@ -32,5 +39,4 @@ Assuming the above mentioned 50 ms server-sided wait and an average client ping 
 | 4          | get moved      | client 1 moved | process jump   
                                                  post jump      |
 | 5          | client2 jumped | jump up        | -              |
-
 

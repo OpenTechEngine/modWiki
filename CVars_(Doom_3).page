@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Engine_reference
+toc: yes
+title: CVars (Doom 3)
+...
+
 ![](/images/c/cb/D3square_bg.png) The information on this page is specific to [Doom 3](Doom_3 "Doom 3") .
 
 ------------------------------------------------------------------------
@@ -2850,5 +2857,4 @@ Removed CVar's:
 | [r\_sb\_useCulling](R_sb_useCulling_%28cvar%29 "R sb useCulling (cvar)")                      | ... cull geometry to individual side frustums            |
 | [r\_sb\_usePbuffer](R_sb_usePbuffer_%28cvar%29 "R sb usePbuffer (cvar)")                      | ... draw offscreen                                       |
 | [r\_sb\_viewResolution](R_sb_viewResolution_%28cvar%29 "R sb viewResolution (cvar)")          | ... Width of screen space shadow sampling                |
-
 

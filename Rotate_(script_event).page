@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: Rotate (script event)
+...
+
 Game class
 ----------
 
@@ -27,5 +34,4 @@ Notes
 -----
 
 This script event does not return any values. This event differs from [rotateOnce](RotateOnce_%28script_event%29 "RotateOnce (script event)") in that rotate will force an entity to continuing rotating for the duration of the game. The above example will cause the entity to complete a 90 degree rotation on the x-axis in one second then repeat endlessly. The [time](Time_%28script_event%29 "Time (script event)") function has no effect here except in combination with something like [decelTime](DecelTime_%28script_event%29 "DecelTime (script event)") when the time value will then define the duration that the entity continues to rotate.
-
 

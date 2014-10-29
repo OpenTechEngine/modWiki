@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Scripting
+toc: yes
+title: Data types
+...
+
 Overview
 --------
 
@@ -77,3 +84,4 @@ Combined entity reference and [script object](Script_object "Script object") typ
     monster_base myMonster;
     myMonster = sys.getEntity("monster_sam");
     myMonster.wake_on_trigger();
+

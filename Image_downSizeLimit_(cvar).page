@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: Image downSizeLimit (cvar)
+...
+
 Description
 -----------
 
@@ -142,5 +149,4 @@ Notes
 -----
 
 The value of this CVar is used to determine when a non-bump or non-specular image is downsampled when [image\_downSize](Image_downSize_%28cvar%29 "Image downSize (cvar)") is enabled.
-
 

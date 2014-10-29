@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Coding
+toc: yes
+title: D3 Networking: Setting up a test session
+...
+
 Setup
 -----
 
@@ -60,5 +67,4 @@ When enabled this one gives you info about the entities and the amount of traffi
 -   Green - Entity is currently transmitting traffic
 -   Yellow - Entity is a network entity, but not producing any traffic (gets deltified away - more on this later))
 -   Grey - Entity is a map entitiy (spawns on the client, when the map is loaded)
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: R mode (cvar)
+...
+
 Description
 -----------
 
@@ -149,5 +156,4 @@ Notes
 -----
 
 If you set this CVar from the console, changes will not take effect until you restart the renderer by typing [vid\_restart](Vid_restart_%28console_command%29 "Vid restart (console command)") in the console.
-
 

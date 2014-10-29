@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: R showShadowCount (cvar)
+...
+
 Description
 -----------
 
@@ -145,5 +152,4 @@ This CVar is the used similarly to **r\_showLightCount** for optimisation purpos
 -   disabling shadow-casting on some lights
 -   adding the key **noshadows** with value **1** to [func\_statics](Func_static "Func static")
 -   reducing polycount, such as by subdividing [patches](Patch "Patch") .
-
 

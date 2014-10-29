@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Declarations
+toc: yes
+title: Entitydef (decl)
+...
+
 Entity definitions are simply a list of key/value pairs or spawn arguments.
 
 When the engine [spawns](Spawn "Spawn") an [entity](Entity "Entity") , the entityDef is looked up to build the [spawnArgs](SpawnArgs "SpawnArgs") dictionary of the [spawn class](Spawn_class "Spawn class") .
@@ -110,3 +117,4 @@ If you wanted to create a new type of monster\_zombie\_fat with a health value o
         "inherit"       "monster_zombie_fat"
         "health"        "200"
     }
+

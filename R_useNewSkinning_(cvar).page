@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: R useNewSkinning (cvar)
+...
+
 ![](/images/6/69/Q4square_bg.png) The information on this page is specific to [Quake 4](Quake_4 "Quake 4") .
 
 ------------------------------------------------------------------------
@@ -145,5 +152,4 @@ Notes
 -----
 
 This CVar should only be enabled when used with [DX9 class](Vertex_and_fragment_programs "Vertex and fragment programs") video cards. Even so it might be advantageous to disable this CVar if your video card is low-end and/or if you have a very fast CPU in which case the original method might still prove to be faster.
-
 

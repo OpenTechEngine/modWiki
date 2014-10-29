@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_commands
+toc: no
+title: Activate (GUI command)
+...
+
 Used to make a GUI trigger any target entities attached to the GUI entity.
 
 Syntax
@@ -11,5 +18,4 @@ Example(s)
 ----------
 
     set "cmd" "activate";
-
 

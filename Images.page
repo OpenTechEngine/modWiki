@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Texturing
+toc: no
+title: Images
+...
+
 Every graphical element in an id tech 4 based game makes use of images. From the geometry in a [map](Mapping "Mapping") , to [models](Modelling "Modelling") , to the elements of [GUI](GUI_scripting "GUI scripting") .
 
 In most cases these elements reference images indirectly through the use of [material declarations](Material_%28decl%29 "Material (decl)") but a few stock assets reference images directly using their relative path. It's advised that you don't follow suit as referencing images directly comes with it's own set of consequences (no illumination or blend modes can be applied) so it's best that you become familiar with writing material declarations as in most cases that's what will be required to achive the desired effect.

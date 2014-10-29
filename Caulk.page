@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Mapping
+toc: yes
+title: Caulk
+...
+
 The **caulk** texture is applied to surfaces which must necessarily exist, but should not be rendered. The use of this texture on unseen surfaces such as brushes behind [patches](Patch "Patch") (sealing leaks), or the tops of columns and beams, provides a reduction in rendered polygons and an increase in performance. It is *not* necessary to apply caulk to surfaces outside the level (in contact with the void), as these surfaces will be automatically culled by dmap's "flood" phase.
 
 How caulk works

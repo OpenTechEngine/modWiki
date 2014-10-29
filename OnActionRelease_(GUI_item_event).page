@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: GUI_item_events
+toc: no
+title: OnActionRelease (GUI item event)
+...
+
 Called when the user releases the mouse button when the mouse cursor is on this [GUI item](GUI_items "GUI items") area.
 
 Example(s)
@@ -6,5 +13,4 @@ Example(s)
     onActionRelease {
         ...
     }
-
 

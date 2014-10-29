@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Mapping
+toc: no
+title: Brush carving
+...
+
 **Brush carving** is a technique used to improve performance by splitting large faces into smaller ones in such a way as to reduce the numbers of lights hitting any one surface. The *light count* of a surface is important in Doom 3 as it affects the number of operations performed by the shaders in order to correctly render lighting on that surface.
 
 A level designer has three options with regard to brush carving.

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: Image downSizeSpecularLimit (cvar)
+...
+
 Description
 -----------
 
@@ -142,5 +149,4 @@ Notes
 -----
 
 The value of this CVar is used to determine when an image is too large and needs to be downsampled when [image\_downSizeSpecular](Image_downSizeSpecular_%28cvar%29 "Image downSizeSpecular (cvar)") is enabled.
-
 

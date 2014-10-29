@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Material_global_keywords
+toc: yes
+title: UnsmoothedTangents (Material global keyword)
+...
+
 Description
 -----------
 
@@ -23,5 +30,4 @@ Notes
 -----
 
 It will still be necessary to unweld faces that must not be smooth-shaded (such as the sides of a cube), even when this keyword is used.
-
 

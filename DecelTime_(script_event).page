@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: DecelTime (script event)
+...
+
 Game class
 ----------
 
@@ -28,5 +35,4 @@ Notes
 -----
 
 This script event does not return any values. In the example above it will cause the entity to take 3 seconds to decelerate from its maximum speed. An entity's decelTime should not be higher than the entity's time. Logically, you can't take 4 seconds to decelerate, when the time for an object is only 2 seconds long.
-
 

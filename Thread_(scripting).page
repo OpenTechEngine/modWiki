@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Scripting
+toc: yes
+title: Thread (scripting)
+...
+
 A script thread is the line of execution managed by the [game code](Coding#Game_code "Coding") by the [game class](Game_class "Game class") idThread.
 
 It is typically created for a script function call from game code and deleted when that function exits.

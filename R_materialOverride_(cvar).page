@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: R materialOverride (cvar)
+...
+
 Description
 -----------
 
@@ -143,5 +150,4 @@ This CVar is useful for testing material shaders.
 You can disable the effect by passing the CVar a null value like so...
 
     r_materialOverride ""
-
 

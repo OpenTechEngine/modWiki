@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Coding
+toc: no
+title: Spawn class
+...
+
 The spawn class is the C++ class in the [game code](Coding#game_code "Coding") that defines an entities logic.
 
 Spawn classes use single inheritance with [idEntity](IdEntity_%28class%29 "IdEntity (class)") being the lowest level that can be [spawned](Spawn "Spawn") .

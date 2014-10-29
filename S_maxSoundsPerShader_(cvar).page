@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: S maxSoundsPerShader (cvar)
+...
+
 Description
 -----------
 
@@ -139,5 +146,4 @@ Notes
 -----
 
 If set to 0 there is no limit and the engine will randomly choose which sound to play from the sound shader whenever that shader is triggered. Any other number means that only from the first up to the \<number chosen\> sounds are loaded into memory and used by the engine. In this case the order in which the sound files are defined in the sound shader matters.
-
 

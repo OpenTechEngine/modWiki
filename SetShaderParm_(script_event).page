@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Script_events
+toc: yes
+title: SetShaderParm (script event)
+...
+
 Game class
 ----------
 
@@ -30,5 +37,4 @@ Notes
 This script event does not return any values.
 
 The **parm** parameter can be specified explicitly like in the example, or by using one of the **SHADERPARM\_** constants found in *doom\_defs.script* .
-
 

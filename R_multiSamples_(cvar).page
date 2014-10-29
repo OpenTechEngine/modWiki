@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: R multiSamples (cvar)
+...
+
 Description
 -----------
 
@@ -139,5 +146,4 @@ Notes
 -----
 
 This CVar is changed automatically by the Options \> System \> Advanced Options \> Antialiasing. Current ATi hardware is only capable of using up to 6 antialiased samples (using MSAA) while nVidia is capable of up to 8 samples but only as a MSAA/SSAA combination (only 4 samples using straight MSAA). What this means is that setting a value higher than 4 or 8 depending on the hardware used will produce no changes. To avoid overriding this CVar by the settings in the graphics display control panel, the anti-aliasing settings should be set to "Application Preference" in the control panel. This CVar requires the [vid\_restart](Vid_restart_%28console_command%29 "Vid restart (console command)") console command to produce any change.
-
 

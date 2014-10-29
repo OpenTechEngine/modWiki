@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Material_stage_keywords
+toc: yes
+title: Highquality (Material stage keyword)
+...
+
 Description
 -----------
 
@@ -34,5 +41,4 @@ This keyword is useful for [sky](Cube_maps "Cube maps") textures which can look 
 This keyword has no effect in Low quality mode, and the [forceHighQuality](ForceHighQuality_%28Material_stage_keyword%29 "ForceHighQuality (Material stage keyword)") keyword must be used instead.
 
 If the [image\_ignoreHighQuality](Image_ignoreHighQuality_%28cvar%29 "Image ignoreHighQuality (cvar)") [CVar](Console "Console") is set to 1, this keyword will be ignored.
-
 

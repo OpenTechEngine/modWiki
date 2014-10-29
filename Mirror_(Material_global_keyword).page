@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Material_global_keywords
+toc: yes
+title: Mirror (Material global keyword)
+...
+
 Description
 -----------
 
@@ -28,5 +35,4 @@ This turns the entire surface into a mirror (see also the [mirrorRenderMap](Mirr
  *By using visportals to divide a map into areas, one can prevent the space immediately behind a mirror from affecting the mirror. (Click to Enlarge)*](/images/b/b8/Mirror.png "By using visportals to divide a map into areas, one can prevent the space immediately behind a mirror from affecting the mirror.")
 
 In the image to the right, two visportals divide the space into three areas. Because of this, the space with the mirror is independant from the area behind it and thus the mirror renders correctly.
-
 

@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: File_formats
+toc: no
+title: WAV (file format)
+...
+
 WAV (or WAVE), short for WAVE form audio format, is a Microsoft and IBM audio file format standard for storing audio on PCs. It is a variant of the RIFF bitstream format method for storing data in "chunks", and thus also close to the IFF and the AIFF format used on Macintosh computers. It takes into account some peculiarities of the Intel CPU such as little-endian byte order. The RIFF format acts as a "wrapper" for various audio compression codecs. It is the main format used on Windows systems for raw audio.
 
 Though a WAV file can hold audio compressed with any codec, by far the most common format is pulse-code modulation audio data. Since PCM uses an uncompressed, lossless storage method which keeps all the samples of an audio track, professional users or audio experts may use the WAV format for maximum audio quality. WAV audio can also be edited and manipulated with relative ease using software.

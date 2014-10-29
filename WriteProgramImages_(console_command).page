@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Console_commands
+toc: yes
+title: WriteProgramImages (console command)
+...
+
 Description
 -----------
 
@@ -21,5 +28,4 @@ Notes
 This command is useful when you want to see the result an image program function has on a given stage of a material shader.
 
 This command takes a good while to execute as every image referenced by a image program function is exported.
-
 

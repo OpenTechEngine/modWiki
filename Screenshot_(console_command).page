@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Console_commands
+toc: yes
+title: Screenshot (console command)
+...
+
 Description
 -----------
 
@@ -25,5 +32,4 @@ Notes
 This command will generate a . [TGA](TGA_%28file_format%29 "TGA (file format)") . The [Samples] value will provide artificial [Antialiasing](Antialiasing "Antialiasing") by blending all the shots together. If you'd like to simulate soft shadows in a Doom 3 screenshot you can set the following in your [autoexec.cfg](CFG_%28file_format%29 "CFG (file format)") :
 
     bind F11 "r_useOptimizedShadows 0;r_lightSourceRadius 5;screenshot 1024 768 64"
-
 

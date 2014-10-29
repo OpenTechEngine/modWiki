@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars, Urgent_attention_needed
+toc: yes
+title: Net serverDlBaseURL (cvar)
+...
+
 **This page is in urgent need of attention because: *This article is missing the CVar flags.***
 
 If you disagree with this, please explain why on [its talk page](Talk:Net_serverDlBaseURL_%28cvar%29 "Talk:Net serverDlBaseURL (cvar)") .
@@ -153,5 +160,4 @@ This same file must be stored in a relative location on your file server such as
 In this case the correct setting for net\_serverDlBaseURL would be ...
 
     net_serverDlBaseURL "http://www.your-web-server.com/doom3"
-
 

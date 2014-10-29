@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: CVars
+toc: yes
+title: R showLightScissors (cvar)
+...
+
 Description
 -----------
 
@@ -141,5 +148,4 @@ Notes
 -----
 
 The rectangles show the size in screen-space of the clipping done to light volumes: anything outside the rectangles has not been touched by the light. The different colours are for easier viewing of multiple lights/rectangles.
-
 

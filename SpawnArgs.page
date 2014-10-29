@@ -1,3 +1,10 @@
+---
+format: Markdown
+categories: Coding, Scripting
+toc: no
+title: SpawnArgs
+...
+
 The term spawnArgs (or *spawn arguments* ) refers to a dictionary - a list of key/value pairs - that an [entity](Entity "Entity") uses to set up attributes or define behavior.
 
 The spawnArgs dictionary is defined in the base [spawn class](Spawn_class "Spawn class") [idEntity](IdEntity_%28class%29 "IdEntity (class)") . Thus all spawn classes gain it via inheritance.
