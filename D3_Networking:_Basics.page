@@ -31,12 +31,15 @@ Assuming the above mentioned 50 ms server-sided wait and an average client ping 
 | Servertime | Client 1       | Client 2       | Server         |
 |------------|----------------|----------------|----------------|
 | 1          | shoot          | -              | -              |
-| 2          | move           | -              | process shot   
-                                                 post shot      |
-| 3          | -              | get shot       
-                                jump           | process move   
-                                                 post movement  |
-| 4          | get moved      | client 1 moved | process jump   
-                                                 post jump      |
+|------------|----------------|----------------|----------------|
+| 2          | move           | -              | process shot   |
+|            |                |                | post shot      |
+|------------|----------------|----------------|----------------|
+| 3          | -              | get shot       | process move   |
+|            |                | jump           | post movement  |
+|------------|----------------|----------------|----------------|
+| 4          | get moved      | client 1 moved | process jump   |
+|            |                |                | post jump      |
+|------------|----------------|----------------|----------------|
 | 5          | client2 jumped | jump up        | -              |
 
