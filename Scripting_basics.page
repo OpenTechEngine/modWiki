@@ -45,14 +45,14 @@ General Syntax
 
 The following is a list of special characters with a special meaning; they need to be remembered.
 
- ;   
+ `;`   
 Follows all commands. More than one command may exist on a single line. Informs the engine that the following is the end of a command.
 
 <!-- -->
 
     sys.print;
 
- //   
+ `//`   
 Comment. Declares the text from this point to the end of the line a comment and is not executed. Can also be used to null out a line of code for debugging.
 
 <!-- -->
@@ -60,7 +60,7 @@ Comment. Declares the text from this point to the end of the line a comment and 
     // This text will not be executed. 
      
 
- /\* and \*/   
+ `\*` and `*/`   
 Comment. Declares the text from /\* to \*/ a comment and the text contained therein is not executed. Can also be used to null out a portion of code for debugging.
 
 <!-- -->
@@ -132,23 +132,23 @@ Luckily, we can do basic operations with values. They can be as easy as this:
 
 A few of the supported operations are:
 
--   +
+-   `+`
 
 Addition
 
--   -
+-   `-`
 
 Subtraction
 
--   \*
+-   `*`
 
 Multiplication
 
--   /
+-   `/`
 
 Division
 
--   %
+-   `%`
 
 Modulo (Results in the remainder of a division)
 
@@ -192,35 +192,35 @@ Seeing how only *condition1* is set to true, only the statements inside the firs
 
 Logical operators are symbols which return a boolean value, just like the arithmetic operators return a number. However, these operators work on more than just **float** -type variables. See the list below for details, the data types the operators work on are between parentheses.
 
--   ==
+-   `==`
 
 Equals (float, boolean, string?, entity?)
 
--   \<
+-   `<`
 
 Less than (float)
 
--   \<=
+-   `<=`
 
 Lesser or equals (float)
 
--   \>
+-   `>`
 
 Greater than (float)
 
--   \>=
+-   `>=`
 
 Greater or equals (float)
 
--   !
+-   `!`
 
 Negation (boolean)
 
--   &&
+-   `&&`
 
 Logical And (boolean)
 
--   ||
+-   `||`
 
 Logical Or (boolean)
 
