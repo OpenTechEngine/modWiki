@@ -7,7 +7,6 @@ title: How to add a sky
 
 This article shows the various options to include a sky in a map. A sky is essentially a collection of six [textures](Texturing "Texturing") called a [cube map](Cube_maps "Cube maps") stored in the / [env](Env_%28folder%29 "Env (folder)") folder. These cube maps are then referenced by a [material declaration](Material_%28decl%29 "Material (decl)") using the [TexGen](TexGen_%28Material_stage_keyword%29 "TexGen (Material stage keyword)") instruction; it is this material that is important for mappers.
 
-If you have further questions about this tutorial please put them in this article's [Talk](Talk:How_to_add_a_sky "Talk:How to add a sky") page.
 
 Skybox
 ------
@@ -29,8 +28,8 @@ A skyportal is an illusion created through a portal. Put simply, a skyportal is 
 3.  Create a small hallow box somewhere on your map and give those brushes the appropriate sky material.
 4.  In the centre of this box put a "info\_portalsky" [entity](Entity "Entity") ; the "origin" key/value pair of the entity determines the centre of the sky in relation to the rest of the map. The "angle" key/value pair of the entity determines which part of the sky will be North, etc.
 
-![](/images/e/e8/Q4square_25.png) **Note:** Quake 4 only:
-*The material should be "sky\_caulk" instead of "portal\_sky".*
+![](/images/e/e8/Q4square_25.png) Note: _Quake 4 only:_
+ ~  The material should be "sky\_caulk" instead of "portal\_sky".
 
 The big advantage skyportals have over regular skyboxes is that you can put geometry inside your small hallow box and those will, through the illusion of skyportals, appear big in the real map. The skyportal scale is 1:16 which means objects inside the small hallow box will appear sixteen times bigger when playing the map. If you add geometry to the hallow box don't forget to add lights too: skies are always fullbright but not standard geometry.
 

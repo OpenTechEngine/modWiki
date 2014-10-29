@@ -7,7 +7,6 @@ title: How to add a terrain
 
 This step-by-step tutorial will demonstrate how level designers, with no prior modelling experience, can easily create good terrains for [3D skyboxes](How_to_add_a_sky "How to add a sky") as well as interactive terrain with a little more work using only free applications. Whereas many more utilities and procedures could be thrown in, an effort has been paid on optimising the art pipeline. Once you are familiar with this method you can easily branch out and seek more specialized knowledge.
 
-If you have further questions about this tutorial please put them in this article's [Talk](Talk:How_to_add_a_terrain "Talk:How to add a terrain") page.
 
 Overview
 --------
@@ -214,8 +213,8 @@ Save the file; it should now look like this:
 
 You can set the **\*BITMAP "\\\\q4base\\textures\\myterrainmat.tga"** line to anything you want just make sure you include **\\\\base\\** (or **\\\\q4base\\** if you’re editing for Quake 4) and that it points to a valid material name, not texture (the .TGA extension is not needed). For this tutorial we’re going to create this material called **myterrainmat** . Before we do that, let’s put all the textures into place.
 
-![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake Wars only:
-*Instead of editing the **\*BITMAP** line, ETQW expects the material name in the line **\*MATERIAL\_NAME** . For example: \*MATERIAL\_NAME "textures/myterrainmat".*
+![](/images/7/7e/Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
+ ~  Instead of editing the **\*BITMAP** line, ETQW expects the material name in the line **\*MATERIAL\_NAME**. For example: \*MATERIAL\_NAME "textures/myterrainmat".
 
 As you may know, there is a [naming convention](Texturing "Texturing") when editing textures for id Tech 4 engine. The diffusemap should have the “\_d” suffix, the normalmap should have the “\_local” suffix, etc. Take the previously exported “texturemap.bmp”, convert it to .TGA (24-bit uncompressed) and save it as “myterrainmat\_d.tga” into the “/textures/” folder. Do the same for the “normalmap.bmp” and save it as “myterrainmat\_local.tga”. Now let’s create the [material declaration](Material_%28decl%29 "Material (decl)") :
 
@@ -253,12 +252,13 @@ All id Tech 4 engine games released so far have plenty of similar looking textur
 
 Finally, we add back the texture we used for the diffuse map to restore the original hue removed by the [filter stage](Blend_%28Material_stage_keyword%29 "Blend (Material stage keyword)") .
 
-![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake Wars only:
-*If you intend to use a [MegaTexture](MEGA_%28file_format%29 "MEGA (file format)") with your terrain you should reference the following material instead:*
-
-    material megatextures/myterrainmat {
-        useTemplate megatextures/default_ambient< "myterrainmat" >
+![](/images/7/7e/Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
+ ~  If you intend to use a MegaTexture with your terrain you should reference the following material instead:  
+    ```  
+    material megatextures/myterrainmat {
+       useTemplate megatextures/default_ambient< "myterrainmat" >
     }
+    ```
 
 Wrapping it up
 --------------

@@ -32,8 +32,8 @@ title: Console
 
 The console is a fundamental part of [id Tech 4](Id_Tech_4 "Id Tech 4") games: it is used for example to relate debug to the developer and status information for troubleshooting general game problems. To access the console you need to press "Ctrl + Alt + ~". To simplify access to the console take a look [here](Com_allowConsole_%28cvar%29 "Com allowConsole (cvar)") . Aside from gaining information you can also interact with the engine through CVars and Commands.
 
-![](/images/9/97/Rtcw2square_25.png) **Note:** Wolfenstein only:
-*(SP) [com\_allowConsole](Com_allowConsole_%28cvar%29 "Com allowConsole (cvar)") must be set via command line or wolf.cfg for console access.*
+![](/images/9/97/Rtcw2square_25.png) Note: _Wolfenstein only_:
+ ~  (SP) [com\_allowConsole](Com_allowConsole_(cvar) "Com allowConsole (cvar)") must be set via command line or wolf.cfg for console access.*
 
 CVars
 -----

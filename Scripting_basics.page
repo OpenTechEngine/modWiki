@@ -7,7 +7,6 @@ title: Scripting basics
 
 **This page is in urgent need of attention because: *Unfinished sections***
 
-If you disagree with this, please explain why on [its talk page](Talk:Scripting_basics "Talk:Scripting basics") .
 
 [SCRIPT](SCRIPT_%28file_format%29 "SCRIPT (file format)") files define a scripted sequence of events, the behavior of weapons, or the AI of actors. The files themselves are ascii (plain text) and can be edited/created in a text editor like notepad.
 
@@ -413,8 +412,8 @@ Immediate references are simple: if you know the name of the entity in the map, 
 
 In this case there would have to be an entity named "my\_entity" in the map.
 
-![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake Wars only:
-*(Enemy Territory does not have support for immediate references.)*
+![](/images/7/7e/Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
+ ~  Enemy Territory does not have support for immediate references.
 
 ### The calling
 

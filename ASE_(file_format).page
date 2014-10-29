@@ -58,19 +58,16 @@ Occasionally, for some unknown reason this reference doesn't work in which case 
 
     *BITMAP "//doom3/base/models/mapobjects/myModel/myShader"
 
-![](/images/e/e8/Q4square_25.png) **Note:** Quake 4 only:
-*instead of //base or //purgatory/purgatory Q4 seems to use C:\\Ritual\\Q4ritual\\game\\q4base*
-    *BITMAP "C:\Ritual\Q4ritual\game\q4base\material\name"
+![](/images/images_e_e8_Q4square_25.png) Note: _Quake 4 only:_
+ ~  *instead of //base or //purgatory/purgatory Q4 seems to use C:\\Ritual\\Q4ritual\\game\\q4base*  
+    `*BITMAP "C:\Ritual\Q4ritual\game\q4base\material\name"`
 
-**
 
-![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake Wars only:
-*use*
-    *MATERIAL_NAME "material/name"
 
-eg
+![](/images/images_7_7e_Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
+ ~  *use* `*MATERIAL_NAME "material/name"`  
+    eg `*MATERIAL_NAME "textures/models/mymodel"`
 
-\*MATERIAL\_NAME " *textures/models/mymodel* " **
 
 Notes
 -----

@@ -15,8 +15,8 @@ Brushes with the material monster clip (a misnomer since it only clips the aas m
 
 As noted the aas compiler works on brushes, and ignores models an patches. There is an exception with patch support being a command line option, however with the common usage of using patches for decals it is not an efficient option.
 
-![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake Wars only:
-*The aas compiler has been extended to support compiling the terrain mesh into the aas.*
+![](/images/7/7e/Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
+ ~  The aas compiler has been extended to support compiling the terrain mesh into the aas.
 
 One of the most useful cvars for debugging AAS maps is: [Aas\_showAreas](Aas_showAreas_%28cvar%29 "Aas showAreas (cvar)")
 

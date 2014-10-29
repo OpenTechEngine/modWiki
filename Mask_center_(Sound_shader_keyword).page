@@ -5,7 +5,7 @@ toc: yes
 title: Mask center (Sound shader keyword)
 ...
 
-![](/images/c/cb/D3square_bg.png) The information on this page is specific to [Doom 3](Doom_3 "Doom 3") .
+![](/images/c/cb/D3square_bg.png) The information on this page is specific to [Doom 3](Doom_3 "Doom 3") and [Quake 4](Quake\_4).
 
 ------------------------------------------------------------------------
 
@@ -38,6 +38,5 @@ Notes
 
 When this is in use, sound only comes from that channel when 5.1 surround is used. If you use 2 channel (stereo) sound the channel will be muted and this sound will not be played.
 
-![](/images/e/e8/Q4square_25.png) **Note:** Quake 4 only:
-*Quake 4 uses [center](Center_%28Sound_shader_keyword%29 "Center (Sound shader keyword)") to do the same thing.*
-
+![](/images/e/e8/Q4square_25.png) Note: _Quake 4 only:_
+ ~  *Quake 4 uses center to do the same thing.*

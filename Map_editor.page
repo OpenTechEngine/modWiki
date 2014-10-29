@@ -363,11 +363,11 @@ The options on the right apply to both types of light. The three options on top 
 
 The colour button allows you to pick a particular colour for the light from a palette. Finally, you can choose a specific material in the "texture" dropdown list. These will modulate the light and light volume and while some will respect the colour you pick in the palette others will override that.
 
-![](/images/2/23/D3square_25.png) **Note:** Doom 3 only:
-*The "brightness" slider is obsolete and doesn't work.*
+![](/images/2/23/D3square_25.png) Note: _Doom 3 only_:
+ ~  The "brightness" slider is obsolete and doesn't work.
 
-![](/images/e/e8/Q4square_25.png) **Note:** Quake 4 only:
-*The "detail" area allows you to set a detail value for each light. The lower the value the more likely it is to be ignored by the engine when running at lower quality settings.*
+![](/images/e/e8/Q4square_25.png) Note: _Quake 4 only_:
+ ~  The "detail" area allows you to set a detail value for each light. The lower the value the more likely it is to be ignored by the engine when running at lower quality settings.
 
 The black area the dropdown list is to preview the light material currently selected. Right-click drag will move the surface around while ALT + right-click drag will move the surface closer or farther away. If you want to remove a light material you will need to delete its path and name from the "texture" list.
 
@@ -388,6 +388,6 @@ The "fit" button scales the texture enough to fit the particular surface perfect
 
 Finally if you are selecting a patch and enable the "subdivide patch" option you can then control how complex that patch is with the slider. More subdivisions means higher quality but lower performance.
 
-![](/images/2/23/D3square_25.png) **Note:** Doom 3 only:
-*The "texture tool goes here" area of the inspector doesn't work.*
+![](/images/2/23/D3square_25.png) Note: _Doom 3 only_:
+ ~  The "texture tool goes here" area of the inspector doesn't work.
 

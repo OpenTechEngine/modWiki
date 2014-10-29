@@ -35,14 +35,14 @@ There are 3 types of folders in the game directory to place assets in:
  base   
 The game assets folder. All the [PK4's](PK4_%28file_format%29 "PK4 (file format)") of the retail game are in this folder. Only game updates and paks should be placed there, *mods need their own folder* .
 
-![](/images/e/e8/Q4square_25.png) **Note:** Quake 4 only:
-*Unlike other games, Quake 4's base folder is called **/q4base***
+![](/images/e/e8/Q4square_25.png) Note: _Quake 4 only:_
+ ~  Unlike other games, Quake 4's base folder is called **/q4base**
 
  expansion   
 A folder reserved for expansion packs containing additional assets.
 
-![](/images/2/23/D3square_25.png) **Note:** Doom 3: ROE only:
-*The name of the expansion folder is **/d3xp***
+![](/images/2/23/D3square_25.png) Note: _Doom 3: ROE only:_
+ ~  The name of the expansion folder is **/d3xp**
 
  mod   
 Folders with various names containing everything needed to run the mod. Every mod folder is isolated so that no assets of one mod influence another. Mods can use the assets from the base and expansion folders.
@@ -55,11 +55,11 @@ To start your mod, you could either start the game and use the "mods" selection 
 
 This starts Doom 3, with the mod folder set to "mymod". For further information, see [Startup parameters](Startup_parameters "Startup parameters") .
 
-![](/images/2/23/D3square_25.png) **Note:** Doom 3: ROE only:
-*If you are modding for the Doom 3: Resurrection of Evil expansion, add "+set [fs\_game\_base](Fs_game_base_%28cvar%29 "Fs game base (cvar)") d3xp" to the shortcut*
+![](/images/2/23/D3square_25.png) Note: _Doom 3: ROE only:_
+ ~  If you are modding for the Doom 3: Resurrection of Evil expansion, add "+set [fs\_game\_base](Fs\_game\_base\_(cvar)) d3xp" to the shortcut
 
-![](/images/e/e8/Q4square_25.png) **Note:** Quake 4 only:
-*Since there has been no announcement for expansion packs, the "expansion folder" feature can be used to use assets from the base folder and another mod folder.*
+![](/images/e/e8/Q4square_25.png) Note: _Quake 4 only:_
+ ~  Since there has been no announcement for expansion packs, the "expansion folder" feature can be used to use assets from the base folder and another mod folder.
 
 Changing the game
 -----------------
@@ -139,8 +139,8 @@ You should pack all your custom files into PK4 files. It is important that you h
 -   *binary.conf* - This **must** be included if the PK4 contains compiled game code. Without binary.conf the id Tech engine will not load your modified binaries.
 -   *mapname\_readme.txt* - Your readme file, if you choose to add one. It's generally a bad idea to just call this readme.txt as anyone extracting the pack contents may overwrite an already existing readme.txt file.
 
-![](/images/2/23/D3square_25.png) **Note:** Doom 3 only:
-*Pre-1.3 versions of Doom 3 would copy your "doomkey" (and "xpkey" if you have the Doom 3: Resurrection of Evil expansion) file to all your mod folders. This means you have to be careful that you do NOT distribute this file along with your mod if you are still using these older versions of the game. Even if you upgraded to v1.3 you should make sure your mod folder does not have this file.*
+![](/images/2/23/D3square_25.png) Note: _Doom 3: ROE only:_
+ ~  Pre-1.3 versions of Doom 3 would copy your "doomkey" (and "xpkey" if you have the Doom 3: Resurrection of Evil expansion) file to all your mod folders. This means you have to be careful that you do NOT distribute this file along with your mod if you are still using these older versions of the game. Even if you upgraded to v1.3 you should make sure your mod folder does not have this file.
 
 ### Autodownload
 

@@ -87,13 +87,13 @@ The mesh ordered list contains 3 indexed lists: vertices, triangles, and weights
 -   meshName - The name of the mesh.
 -   materialName - The material shader to apply to this mesh.
 
-![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake Wars only:
-*After the parameters, an extra ordered list follows for specifying extra flags.*
+![](/images/7/7e/Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
+ ~  After the parameters, an extra ordered list follows for specifying extra flags.
 
 ##### Flags
 
-![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake Wars only:
-*This type of ordered list only exists in ET:QW.*
+![](/images/7/7e/Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
+ ~  This type of ordered list only exists in ET:QW.
 
 The ordered list should be defined even when empty. Each line may specify one of the following known flags:
 

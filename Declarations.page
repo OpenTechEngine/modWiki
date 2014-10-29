@@ -28,8 +28,8 @@ Syntax
 
 A single declaration consists of a header and body. The header is composed of a name and sometimes a descriptor that defines the type of declaration (descriptors are not needed if the declaration is put in its respective [file format](File_formats#Declaration_containers "File formats") ; for example you wouldn't need to put "material" before your material decls in an . [MTR](MTR_%28file_format%29 "MTR (file format)") file). The body of a definition is enclosed in curly brackets.
 
-![](/images/7/7e/Etqwsquare_25.png) **Note:** Enemy Territory: Quake Wars only:
-*Declaration descriptors are always needed*
+![](/images/7/7e/Etqwsquare_25.png) Note: _Enemy Territory: Quake Wars only:_
+ ~  Declaration descriptors are always needed
 
 . [DEF](DEF_%28file_format%29 "DEF (file format)") files are the standard container for declarations.
 
