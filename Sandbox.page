@@ -1,0 +1,87 @@
+---
+format: Markdown
+categories: nocategory
+toc: yes
+title: The Sandbox
+...
+
+Note the Meta-Data above, that can be used to switch on/off the Table Of Contents (TOC) and to set categories (a comma seperated list of words without spaces)
+
+Use this page to try out Markdown without damaging any "real" page.
+
+# A Section
+
+bla
+
+## A Sub-Section
+
+blub
+
+### A Sub-Sub-Section
+
+Another Section, with a table!
+=============================
+
+
+| Fruit   | color   | taste   |
+|---------|---------|---------|
+| Oranges | orange  | sweet   |
+| Lemons  | yellow  | sour    |
+| Apples  | red     | sweet   |
+| Cucumbers | green | disgusting |
+
+And another Subsection with Lists in it
+----------------------
+
+List:
+
+* foo
+    - foobar
+* bar
+* baz
+
+List with numbers:
+
+1. first point
+2. second point
+3. third point
+1. fourth point (ha!)
+
+Some term
+ ~  a definition, which can even go over
+    several lines, if indented accordingly
+
+Another term
+ ~  another definition, note that if you leave two spaces  
+    at the end of the line, it'll linebreak in the output
+
+# This section is about Code
+
+You can write code with syntax-hilighting, just like on github:
+
+```c++
+int main(int arg, char** argv)
+{
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+If you want to write code in-line, displayed in monospaced font and without parsing any tags, like the `<pre>` tag in HTML, just use backticks, e.g.
+```
+This is some horrible uninteresting text about HTML-tags making text fat, like `<b>` and `<strong>`.
+```
+Will result in:  
+This is some horrible uninteresting text about HTML-tags making text fat, like `<b>` and `<strong>`.
+
+# Of course, we can also have links and images:
+
+[The Wikis Home Page, an example for an internal Link](/Home)
+
+[Look, the Coding category!](/_category/Coding)
+
+![A picture of our awesome Logo](/img/logo.png)
+
+Now the greatest thing ever:  
+[![](/images/images_2_2c_Q4square.png)](/Quake_4)  
+yes, it's a picture with a link!
