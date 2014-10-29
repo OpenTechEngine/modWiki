@@ -67,7 +67,7 @@ int main(int arg, char** argv)
 }
 ```
 
-If you want to write code in-line, displayed in monospaced font and without parsing any tags, like the `<pre>` tag in HTML, just use backticks, e.g.
+If you want to write code in-line, displayed in monospaced font and without parsing any tags, like the `<code>` tag in HTML, just use backticks, e.g.
 ```
 This is some horrible uninteresting text about HTML-tags making text fat, like `<b>` and `<strong>`.
 ```
