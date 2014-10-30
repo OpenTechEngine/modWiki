@@ -57,7 +57,18 @@ Another term
 
 # This section is about Code
 
-You can write code with syntax-hilighting, just like on github:
+You can write code-blocks with syntax-highlighting, using three backticks (<code>```</code>) as delimiters
+and specifying the programming language for highliting after the begin-of-codeblock-backticks, just like on github:
+
+    ```c++
+    int main(int arg, char** argv)
+    {
+        std::cout << "Hello, World!" << std::endl;
+        return 0;
+    }
+    ```
+
+will result in:
 
 ```c++
 int main(int arg, char** argv)
@@ -75,6 +86,8 @@ Will result in:
 This is some horrible uninteresting text about HTML-tags making text fat, like `<b>` and `<strong>`.
 
 # Of course, we can also have links and images:
+
+[An external link to OpenTechBFG](https://github.com/OpenTechEngine/OpenTechBFG)
 
 [The Wikis Home Page, an example for an internal Link](/Home)
 
