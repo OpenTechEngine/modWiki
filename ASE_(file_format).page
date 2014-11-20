@@ -17,7 +17,8 @@ Export
 
 -   [iddevnet model export page](http://www.iddevnet.com/doom3/modelexport.php "http://www.iddevnet.com/doom3/modelexport.php")
 -   Maya can export ASE's using the ActorX plugin.
--   Blender via [export plugin @doom3world](https://web.archive.org/web/20121205062642/http://www.doom3world.org/phpbb2/viewtopic.php?t=9275 "http://www.doom3world.org/phpbb2/viewtopic.php?t=9275")
+-   Blender via [export plugin @doom3world](https://web.archive.org/web/20121205062642/http://www.doom3world.org/phpbb2/viewtopic.php?t=9275)
+-   Blender Exporter for newer Blender Versions: [ase-export-vmc](https://code.google.com/p/ase-export-vmc/)
 
 File Format Syntax
 ------------------
@@ -76,3 +77,7 @@ Notes
 -   Models must be composed entirely of triangles.
 -   Smoothing groups are ignored by the engine.
 
+Further information
+-------------------
+
+Format Specification, a bit more complete than above: [Inofficial File Format Specification at BeyondUnreal](http://wiki.beyondunreal.com/Legacy:ASE_File_Format)
