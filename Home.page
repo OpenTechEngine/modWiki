@@ -1,23 +1,26 @@
 ---
 format: Markdown
 categories: WikiInternal
-toc: yes
+toc: no
 title: ModWiki
 ...
 
+## This is the resurrection of **modwiki.net**, a wiki dedicated to modding *[id Tech 4](Id_Tech_4)* games like *[Doom3](Doom_3)*, *[Quake4](Quake_4)*, *[Enemy Territory: Quake Wars](/Enemy_Territory:_Quake_Wars)* or *[Prey]()*.  
+The original *modwiki.net* went offline due to spam problems, this wiki is recreated from [archive.org backups of modwiki.net](https://web.archive.org/web/20121205045219/http://www.modwiki.net/wiki/Main_Page).  
+All spam has (hopefully!) been removed and we decided to use [Gitit](http://github.com/jgm/gitit/tree/master/) with [Markdown](http://daringfireball.net/projects/markdown) Syntax instead of Mediawiki - we had to convert the articles from HTML anyway, as we only had the pages from archive.org, not the original wiki database (that would have contained the articles in Mediawiki syntax).
 
-
-Please see [the Categories page](_categories) or the game-specific pages linked below (on their logos) for structured content.
+Please see [the Categories page](_categories) or the game-specific pages linked below (click their logos) for structured content.
 
 This is still a work in progress, any contribution is welcome.  
 To gain access, just answer to the [corresponding issue on Github](https://github.com/OpenTechEngine/modWiki/issues/7) or ping *kordex* and/or *caedes\_\_* on the [#iodoom3 chan on freenode](irc://irc.freenode.net/iodoom3) and we will add you into the organization.  
-The authentication is done using [Gitit's authentication through Github feature](https://github.com/jgm/gitit#authentication-through-github) so you'll need a Github account to log in.
+The authentication is done using [Gitit's authentication through Github feature](https://github.com/jgm/gitit#authentication-through-github) so you'll need a Github account to log in.  
+*(Sorry that you need a Github account, but this seemed like the best way to prevent spam.)*
 
 You can contribute by editing pages like you might be used to from mediawiki or whatever, or you can [clone the whole wiki on Github](https://github.com/OpenTechEngine/modWiki) and submit pull requests for mass editings.  
-Note that this wiki doesn't use mediawiki syntax (as wikipedia and the old modwiki do/did), but [Markdown](http://daringfireball.net/projects/markdown) with [some extensions](http://johnmacfarlane.net/pandoc/README.html#pandocs-markdown). It's mostly the same syntax as used on Github.
+Note that this wiki doesn't use Mediawiki syntax (as wikipedia and the old modwiki do/did), but [Markdown](http://daringfireball.net/projects/markdown) with [some extensions](http://johnmacfarlane.net/pandoc/README.html#pandocs-markdown). It's mostly the same syntax as used on Github and really easy to use.
 
 Feel free to use the [Sandbox]() page to try out Markdown!
 
 See also the [Excavated Doom3World forums](https://modwiki.xnet.fi/doom3world/) which also are a work in progress.
 
-[![](/images/images_2_2c_Q4square.png)](/Quake_4) [![](/images/images_b_bf_D3square.png)](/Doom_3) [![](/images/images_f_f3_Rtcw2square.png)](/Wolfenstein) [![](/images/images_f_ff_Etqwsquare.png)](/Enemy_Territory:_Quake_Wars)
+[![](/images/images_2_2c_Q4square.png)](/Quake_4) [![](/images/images_b_bf_D3square.png)](/Doom_3) [![](/images/images_f_f3_Rtcw2square.png)](/Wolfenstein) [![](/images/images_f_ff_Etqwsquare.png)](/Enemy_Territory:_Quake_Wars) [![](/images/images_a_a1_Preysquare.png)](/Prey)
