@@ -19,6 +19,12 @@ Contains animation sequence data, the positions of bones etc. during animation.
  . [MD5CAMERA](MD5CAMERA_%28file_format%29 "MD5CAMERA (file format)")   
 Animated cameras for use in cut scenes.
 
+ . [BMD5MESH](BMD5MESH_%28file_format%29 "BMD5MESH (file format)")   
+MD5MESH compressed into a binary format. Used by the Doom 3: BFG edition.
+
+ . [BMD5ANIM](BMD5ANIM_%28file_format%29 "BMD5ANIM (file format)")   
+MD5ANIM compressed into a binary format. Used by the Doom 3: BFG edition.
+
 Export
 ------
 
