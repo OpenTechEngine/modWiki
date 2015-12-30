@@ -167,14 +167,14 @@ For more information, please take a look at the [AAS (file format)](AAS_%28file_
 
 To find out more about scripts, please take a look at the [scripting page](Scripting "Scripting") .
 
-|-------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [debugger](Debugger_%28console_command%29 "Debugger (console command)")             | ... launches the Script Debugger                                                                                                                              |
-| [disasmScript](DisasmScript_%28console_command%29 "DisasmScript (console command)") | ... disassembles script                                                                                                                                       |
-| [editScripts](EditScripts_%28console_command%29 "EditScripts (console command)")    | ... launches the in-game Script Editor                                                                                                                        
-                                                                                        **Note:** id recommends to invoke the editor with editDecls [[1]](http://iddevnet.com/doom3/editor_script.php "http://iddevnet.com/doom3/editor_script.php")  |
-| [listThreads](ListThreads_%28console_command%29 "ListThreads (console command)")    | ... lists script threads                                                                                                                                      |
-| [reloadScript](ReloadScript_%28console_command%29 "ReloadScript (console command)") | ... reloads scripts                                                                                                                                           |
-| [script](Script_%28console_command%29 "Script (console command)")                   | ... executes a line of script                                                                                                                                 |
+|-------------------------------------------------------------------------------------|----------------------------------------|
+| [debugger](Debugger_%28console_command%29 "Debugger (console command)")             | ... launches the Script Debugger       |  
+| [disasmScript](DisasmScript_%28console_command%29 "DisasmScript (console command)") | ... disassembles script                |
+| [editScripts](EditScripts_%28console_command%29 "EditScripts (console command)")    | ... launches the in-game Script Editor |                                                                                                                      
+| **Note:** id recommends to invoke the editor with [editDecls](EditDecls_%28console_command%29 "EditDecls (console command)") [[1]](http://iddevnet.com/doom3/editor_script.php)  |            |
+| [listThreads](ListThreads_%28console_command%29 "ListThreads (console command)")    | ... lists script threads               |
+| [reloadScript](ReloadScript_%28console_command%29 "ReloadScript (console command)") | ... reloads scripts                    | 
+| [script](Script_%28console_command%29 "Script (console command)")                   | ... executes a line of script          |
 
 ### Sound
 
@@ -387,4 +387,3 @@ To be Sorted Further
 | [touchFileList](TouchFileList_%28console_command%29 "TouchFileList (console command)")                            | ... touches a list of files                                           |
 | [updateUI](UpdateUI_%28console_command%29 "UpdateUI (console command)")                                           | ... cause a sync down of game-modified userinfo                       |
 | [writePrecache](WritePrecache_%28console_command%29 "WritePrecache (console command)")                            | ... writes precache commands                                          |
-
