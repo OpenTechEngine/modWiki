@@ -1,0 +1,30 @@
+---
+format: Markdown
+categories: Console_commands
+toc: yes
+title: ReloadScript (console command)
+...
+
+Description
+-----------
+
+Reloads and recompiles the game scripts at run time.
+
+Usage
+-----
+
+At the console type...
+
+    reloadScript
+
+Notes
+-----
+
+reloadScript will exit you from the map, so you must reload the map manually from the console. If reloadScript works successfully, you will see this message:
+
+    ***********************************************
+    ERROR: Exiting map to reload scripts
+    ***********************************************
+
+That is the only error that indicates a success condition. If you see a different error, your script did not compile and the game will not run.
+
