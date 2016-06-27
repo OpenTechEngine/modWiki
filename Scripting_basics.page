@@ -565,9 +565,51 @@ Now both functions run in a separate thread and run happily ever after.
 
 ### Special uses
 
-> _This page is a **[Stub](http://en.wikipedia.org/wiki/Perfect_stub_article)**. You can help us by expanding it._
+in case we want to control a thread, start it, kill it, we have two methods, giving the thread a name, and use it to kill it or using a float variable as thread id and terminate the thread with that float variable:
 
-TODO: explain threadnames, killThread, thread-ids and terminate.
+consider that case:
+
+    float t_number = 0; // this will be the thread id number handler
+
+    float threadFunction( float whateverVariable ) { //notice the float data type, threads always return a float id number
+        float numberCopy;
+        sys.threadname( "superCoolThread" );
+        while ( true ) {
+            ...
+            some code using whateverVariable
+            ...
+
+            if ( condition to kill the thread is met ) {
+                numberCopy = t_number;
+                t_number = 0; // this makes possible to recreate the thread if needed again in the future
+                sys.terminate( numberCopy ); // this kills the thread form within when it's no longer necessary
+            }
+
+            waitFrame();
+        }
+    }
+
+    void function_that_initiates_the_thread() {
+        if ( t_number == 0 ) {
+            // initiates the thread and stores it's reference (as a number) in the t_number float variable.
+            // so if t_number is not 0 it means the  thread is running
+            // the number stored changes per thread created
+            t_number = thread threadFunction(); 
+        }
+    }
+
+    void function_that_kills_the_thread() {
+        if ( t_number != 0 ) { // just attempt to kill the thread if there is one going on
+            sys.killthread( "superCoolThread" ); //kills the thread that has that name
+            /*
+            float numberCopy = t_number;
+            t_number = 0;
+            sys.terminate( numberCopy ); //<-- it could be killed that way too
+            */
+        }
+    }
+
+so threads can be killed form within themselves, and from outside too using those methods
 
 Namespaces
 ----------
