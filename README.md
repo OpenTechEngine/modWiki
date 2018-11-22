@@ -3,7 +3,7 @@ modWiki
 
 See https://modwiki.xnet.fi/ for the wiki.
 
-Converted from HTML (downloaded from archive.org) to [gitit](http://gitit.net) Markdown.
+Converted from HTML (downloaded from archive.org) to [gitit](https://github.com/jgm/gitit) Markdown.
 
 Feel free to fork and submit pull requests for mass edits (new entities, ...) or
 just ask us (in [the corresponding issue](https://github.com/OpenTechEngine/modWiki/issues/7) 
