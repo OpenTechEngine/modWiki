@@ -1,7 +1,7 @@
 modWiki
 =======
 
-See https://modwiki.xnet.fi/ for the wiki.
+See https://modwiki.dhewm3.org/ for the wiki.
 
 Converted from HTML (downloaded from archive.org) to [gitit](https://github.com/jgm/gitit) Markdown.
 
