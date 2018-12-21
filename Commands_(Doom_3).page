@@ -16,6 +16,7 @@ Common
 
 These commands are also useful for players.
 
+| Command Name | Short Description |
 |----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | [benchmark](Benchmark_%28console_command%29 "Benchmark (console command)")                   | ... benchmark                                                                   |
 | [bind](Bind_%28console_command%29 "Bind (console command)")                                  | ... binds a command to a key                                                    |
@@ -34,12 +35,14 @@ These commands are also useful for players.
 
 ### Console
 
+| Command Name | Short Description |
 |----------------------------------------------------------------------|--------------------------------------|
 | [clear](Clear_%28console_command%29 "Clear (console command)")       | ... clears the console               |
 | [conDump](ConDump_%28console_command%29 "ConDump (console command)") | ... dumps the console text to a file |
 
 ### Cvars
 
+| Command Name | Short Description |
 |-------------------------------------------------------------------|---------------------------------------------------------|
 | [reset](Reset_%28console_command%29 "Reset (console command)")    | ... resets a cvar                                       |
 | [set](Set_%28console_command%29 "Set (console command)")          | ... sets a cvar                                         |
@@ -52,6 +55,7 @@ These commands are also useful for players.
 
 ### Game controll
 
+| Command Name | Short Description |
 |-------------------------------------------------------------------------|--------------------|
 | [exit](Exit_%28console_command%29 "Exit (console command)")             | ... exits the game |
 | [quit](Quit_%28console_command%29 "Quit (console command)")             | ... quits the game |
@@ -61,6 +65,7 @@ These commands are also useful for players.
 
 ### Multiplayer
 
+| Command Name | Short Description |
 |----------------------------------------------------------------------------------|---------------------------------------------------------|
 | [connect](Connect_%28console_command%29 "Connect (console command)")             | ... connects to a server                                |
 | [disconnect](Disconnect_%28console_command%29 "Disconnect (console command)")    | ... disconnects from a game                             |
@@ -73,6 +78,7 @@ Demo
 
 Here you can find all commands concerning [Demo](Demo "Demo") recording.
 
+| Command Name | Short Description |
 |----------------------------------------------------------------------------------------|--------------------------------------|
 | [aviDemo](AviDemo_%28console_command%29 "AviDemo (console command)")                   | ... writes AVIs for a demo           |
 | [aviGame](AviGame_%28console_command%29 "AviGame (console command)")                   | ... writes AVIs for the current game |
@@ -88,6 +94,7 @@ Server
 
 Commands in this sections are probably most useful to server admins.
 
+| Command Name | Short Description |
 |-------------------------------------------------------------------------------------------------|------------------------------------------------|
 | [gameKick](GameKick_%28console_command%29 "GameKick (console command)")                         | ... same as kick, but recognizes player names  |
 | [heartbeat](Heartbeat_%28console_command%29 "Heartbeat (console command)")                      | ... send a heartbeat to the the master servers |
@@ -109,6 +116,7 @@ The following commands are mostly used while developing content for any id Tech 
 
 For more information, please take a look at the [AAS (file format)](AAS_%28file_format%29 "AAS (file format)")
 
+| Command Name | Short Description |
 |----------------------------------------------------------------------------|---------------------------------------------------------------|
 | [aasStats](AasStats_%28console_command%29 "AasStats (console command)")    | ... This command displays AAS file statistics in the console. |
 | [runAAS](RunAAS_%28console_command%29 "RunAAS (console command)")          | ... compiles an AAS file for a map                            |
@@ -117,6 +125,7 @@ For more information, please take a look at the [AAS (file format)](AAS_%28file_
 
 ### Animation
 
+| Command Name | Short Description |
 |----------------------------------------------------------------------------------|--------------------------------------------------|
 | [listAnims](ListAnims_%28console_command%29 "ListAnims (console command)")       | ... lists all animations                         |
 | [nextAnim](NextAnim_%28console_command%29 "NextAnim (console command)")          | ... shows next animation on test model           |
@@ -129,6 +138,7 @@ For more information, please take a look at the [AAS (file format)](AAS_%28file_
 
 ### Entities
 
+| Command Name | Short Description |
 |-------------------------------------------------------------------------------------------------------------|------------------------------------------------|
 | [damage](Damage_%28console_command%29 "Damage (console command)")                                           | ... apply damage to an entity                  |
 | [deleteSelected](DeleteSelected_%28console_command%29 "DeleteSelected (console command)")                   | ... deletes selected entity                    |
@@ -144,6 +154,7 @@ For more information, please take a look at the [AAS (file format)](AAS_%28file_
 
 ### GUIs
 
+| Command Name | Short Description |
 |-------------------------------------------------------------------------------------|-------------------------------------------------------------|
 | [editGUIs](EditGUIs_%28console_command%29 "EditGUIs (console command)")             | ... launches the GUI Editor                                 |
 | [nextGUI](NextGUI_%28console_command%29 "NextGUI (console command)")                | ... teleport the player to the next func\_static with a gui |
@@ -155,6 +166,7 @@ For more information, please take a look at the [AAS (file format)](AAS_%28file_
 
 ### Memory
 
+| Command Name | Short Description |
 |----------------------------------------------------------------------------------------------------------------|--------------------------------------------|
 | [memoryDump](MemoryDump_%28console_command%29 "MemoryDump (console command)")                                  | ... creates a memory dump                  |
 | [memoryDumpCompressed](MemoryDumpCompressed_%28console_command%29 "MemoryDumpCompressed (console command)")    | ... creates a compressed memory dump       |
@@ -167,6 +179,7 @@ For more information, please take a look at the [AAS (file format)](AAS_%28file_
 
 To find out more about scripts, please take a look at the [scripting page](Scripting "Scripting") .
 
+| Command Name | Short Description |
 |-------------------------------------------------------------------------------------|----------------------------------------|
 | [debugger](Debugger_%28console_command%29 "Debugger (console command)")             | ... launches the Script Debugger       |  
 | [disasmScript](DisasmScript_%28console_command%29 "DisasmScript (console command)") | ... disassembles script                |
@@ -180,6 +193,7 @@ To find out more about scripts, please take a look at the [scripting page](Scrip
 
 These commands can be used to control the sound system or get information about it.
 
+| Command Name | Short Description |
 |----------------------------------------------------------------------------------------------------|---------------------------------------|
 | [editSounds](EditSounds_%28console_command%29 "EditSounds (console command)")                      | ... launches the in-game Sound Editor |
 | [listSoundDecoders](ListSoundDecoders_%28console_command%29 "ListSoundDecoders (console command)") | ... list active sound decoders        |
@@ -192,6 +206,7 @@ These commands can be used to control the sound system or get information about 
 
 ### Tool commands
 
+| Command Name | Short Description |
 |-------------------------------------------------------------------------------------------|----------------------------------------------------|
 | [dmap](Dmap_%28console_command%29 "Dmap (console command)")                               | ... compiles a map                                 |
 | [editAFs](EditAFs_%28console_command%29 "EditAFs (console command)")                      | ... launches the in-game Articulated Figure Editor |
@@ -210,6 +225,7 @@ Internal or supposedly dead commands
 
 These commands are ether dead or internaly used by the engine so they should have little to no meaning to you.
 
+| Command Name | Short Description |
 |-------------------------------------------------------------------------------------------|--------------------------------------------|
 | [addChatLine](AddChatLine_%28console_command%29 "AddChatLine (console command)")          | ... internal use (core to game chat lines) |
 | [aviCmdDemo](AviCmdDemo_%28console_command%29 "AviCmdDemo (console command)")             | ... writes AVIs for a command demo         |
@@ -227,6 +243,7 @@ To be Sorted Further
 
 ### Game (to be sorted)
 
+| Command Name | Short Description |
 |-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
 | [addarrow](Addarrow_%28console_command%29 "Addarrow (console command)")                                     | ... adds a debug arrow                                                                    |
 | [addline](Addline_%28console_command%29 "Addline (console command)")                                        | ... adds a debug line                                                                     |
@@ -293,6 +310,7 @@ To be Sorted Further
 
 ### Renderer (to be sorted)
 
+| Command Name | Short Description |
 |-------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
 | [combineCubeImages](CombineCubeImages_%28console_command%29 "CombineCubeImages (console command)")                | ... combines six images for [roq](ROQ_%28file_format%29 "ROQ (file format)") compression |
 | [envshot](Envshot_%28console_command%29 "Envshot (console command)")                                              | ... takes an environment shot                                                            |
@@ -321,6 +339,7 @@ To be Sorted Further
 
 ### System (to be sorted)
 
+| Command Name | Short Description |
 |-------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | [bindunbindtwo](Bindunbindtwo_%28console_command%29 "Bindunbindtwo (console command)")                            | ... binds a key but unbinds it first if there are more than two binds |
 | [crash](Crash_%28console_command%29 "Crash (console command)")                                                    | ... causes a crash                                                    |
