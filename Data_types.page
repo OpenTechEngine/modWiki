@@ -39,7 +39,7 @@ When used in a normal assignment, the floats are in the order of 'X Y Z' indicat
     vector xcomp = tempvector_x;    // xcomp = '10 0 0' 
      
 
-**Note** : Vectors do not automatically convert to strings, and can't be set to equal floats. In these cases, the separate axis components need to be used. [[1]](http://www.iddevnet.com/quake4/ScriptVariable#vector "http://www.iddevnet.com/quake4/ScriptVariable#vector")
+**Note** : Vectors do not automatically convert to strings, and can't be set to equal floats. In these cases, the separate axis components need to be used. [[1]](https://iddevnet.dhewm3.org/quake4/ScriptVariable.html#vector)
 
 ### entity
 

@@ -10,7 +10,7 @@ title: GUI items
 
 Code wise, [GUIs](GUIs "GUIs") are made of several different *items* , each of them performing a slightly different task, such as acting as a button, as a noninteractive image, or as on-screen text. There also several different *item types* to do specific tasks, such as selecting an option from a range of choices, rendering a 3D model on a GUI, or editing text.
 
-Items are also officially called *windows* by [id Software's documentation](http://www.iddevnet.com/doom3/guis.php "http://www.iddevnet.com/doom3/guis.php") .
+Items are also officially called *windows* by [id Software's documentation](https://iddevnet.dhewm3.org/doom3/guis.html) .
 
 These items can be placed anywhere on a GUI, and can be nested - this can be useful to grouping items or to mask them. They also don't have to be always visible, so it's common to have hidden items that are displayed when certain events happen, or just items that are never shown but do specific programming tasks such as working as an event catalyzer or a virtual timeline that can be played.
 
