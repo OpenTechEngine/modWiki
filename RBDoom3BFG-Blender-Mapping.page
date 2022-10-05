@@ -1,0 +1,359 @@
+RBDoom3BFG + Blender
+Level design workflow
+__________________________
+D-Meat - October 2022
+dmeat.art@gmail.com - @D-Meat on the idTech 4 Discord server
+
+(Windows guide, I hope it helps also with Also OSs)
+
+**1. ENGINE AND FOLDERS SETUP**
+-------------------------------
+
+You should set up your game and it’s folders as described on the Github page or Takeshi’s tutorial :
+https://github.com/RobertBeckebans/RBDOOM-3-BFG
+https://youtu.be/LbiK5BD7Kcg
+
+Summary :
+    1. Create an empty RBDoom3BFG folder
+    2. Copy All the game files from your steam or GOG Doom 3 : BFG Edition folder to your new folder
+    3. Download the complete 1,3,0 package
+    4. Extract to your RBDoom3BFG folder – Overwrite everything that is asks for
+    5. Dowload the latest binaries from the #rbdoom3bfg lobby in the IdTech4 Discord Server ( https://discord.gg/53fBFBMS )
+    6. Extract to your RBDoom3BFG folder – Overwrite everything that is asks for
+    7. For convenience : 
+            ▪ Launch RBDoom3BFG,exe, 
+            ▪ get into windowed mode
+            ▪ Check if your key bindings are good
+            ▪ type “bind g screenshot” in the console to have a convenient screehshot shortcut (the screenshots are stored in base/screenshots/ )
+
+
+**2. BLENDER SET UP**
+---------------------
+
+        1. Download and install Blender – I use the latest version, 3.3. I haven’t tested the workflow with earlier versions)
+        2. Run Blender, Go to perferences → Add-ons
+        3. search for “gltf” in the search bar, the “Import-Export: glTF 2.0 format”, activate it if it’s not turned on.
+		Note : At the moment, I can’t remember if the exporter is shipped with Blender or if I installed it manually. If not, let me know and I’ll update this 
+        4. Go to file → export and check if the “glTF 2.0 ( .glb / gltf )” option shows up. Click it !
+        5. Let’s save the export parameters preset now so we have it ready for later :
+      
+      Set the options as in the image above :
+    • Include :
+- Limit to visible objects : I use this to keep some construction objects, or previous versions of objects
+      - Data : Custom Propreties : THIS ONE SHOULD BE ALWAYS TURNED ON or else RBDoom3BFG won’t get any of the info it needs to run the level
+    • Transform : Tick “+Y Up”
+
+    • Geometry :
+        ◦ Mesh : Uvs, Normals and Vertex Colors are ticked.
+        ◦ Material : Set “Materials” to “Export” and “Images” to “none”
+        ◦ PBR extensions and Compression : unticked
+    • Animation : Leave it as is : Animation On, Shape Keys On, Skinning On.
+
+NOTE : These parameters might change with new updates of the engine. Let me know if it’s not up to date !
+
+        6. Save the preset : Click the “+” button on the top
+
+		Name your preset “RBDoom3BFG” and save.
+        7. Saving a new “startup” file :
+           
+           The unit system used in Doom 3 is used as is in the moment in Blender. But Blender uses metric by default, so we have to adjust some things (or else the viewport gets glitchy):
+            1. Viewport setup : With the “huge” distances we’ll work with (compared to the Blender default), we have to adjust some things :
+
+	Type in the values above for “Clip Start” and “End”. It should be enough for most cases,
+            2. Optional : Set up the unit system to “none”
+
+**3. BASIC DOOM 3 ENTITIES KNOWLEDGE**
+--------------------------------------
+
+	In Doom 3 (and other idTech engines as far as I know), all the objects in the map file have at least one parameter for the engine to read and use expressed as the pair “Key + Value”.
+
+	First, every Entity has a classname. A few examples :
+    • worldspawn : The root of the level geometry, static, Obligatory,
+    • info_player_start : The spawning point of the player when he enters the level
+    • light : So that we can see something in this goddamn research facility !
+    • Monsters
+    • Movers : Doors, elevators, machinery, … (the Doom 3 engine offers almost unlimited creativity with these compared to Quake 3 !)
+
+	Then, the other Key + value pairs are specific to each entity’s type. For example :
+    • The direction in which the player is looking when he spawns
+    • You can set the color and power of the lights
+    • Specify the Health Points of a monster different from the default value
+    • etc
+
+Here’s a screenshot of the Entity properties panel in Trenchbroom :
+
+
+	In Blender, at the moment, you have to write all the keys + values as the object’s Custom Parameters, which we will see right after.
+
+**4. BLENDER FILE STRUCTURE**
+-----------------------------
+	This step is not required, but I prefer to keep my file organized, so this is the organization I came up with. It’s not carved in stone, anyone can come up with a way that better fits their needs.
+	
+	Here’s the contents of the default Blender startup file :
+
+
+	And here’s my proposition for a Doom 3 level :
+
+
+
+	The collection of Point Entities is pretty bare bones compared to the total amount of different entity types available, so anyone making a more complex level will customize this to their needs.
+
+**5. MINIMUM REQUIRED ENTITIES FOR A MAP**
+------------------------------------------
+
+	Okay ! Let’s make our first Box map !
+
+    1. (optional but recommended) reproduce the collection tree described in the previous chapter.
+
+    2. The Worldspawn Entity
+
+	The worldspawn entity isn’t actually required, but It can store some options for the level, so I advice to always have one included in your level in case you would need them.
+
+	In Blender, this materializes as an “empty” object located at the origin coordinates.
+    • Press [shift + a] → Empty → Plain Axes.
+    • Name it worldspawn.
+    • You can move it in the “Worldspawn / BSP” collection in the Outliner tab.
+    • Make sure it’s located at the origin coordinates :
+
+
+
+
+
+
+
+
+
+
+	No need to give it a different viewport display, the default “plain axes” is fine, also with the default size of 1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Then, The Custom Propreties have to be set up : 
+    • Click “new”, 
+    • Click the little gear
+    • set the type to “String”, 
+    • Property Name to ”classname”
+
+
+
+
+
+	Then type “worldspawn” in the field next to “classname”.
+
+	You should now have these info in :
+
+
+	The worldspawn entity can store other info useful for your level, such as the path to background music, custom gravity … You can check in TrenchBroom what’s available.
+
+    3. The Worldspawn Geometry
+
+        1. Add a cube, with a size of 1024 for example.
+        2. Press [tab] to get into Edit mode, select all, and invert the normals ([alt + n] → Flip). 
+        3. Let’s ignore any kind of UV unwrapping for the moment.
+        4. Optional : Move all the geometry or the bottom face 512 units up (press [g] grab) → press [z] (z axis) → type 512 + [enter].
+           (I like when the ground plane is at 0 ^^’)
+        5. In the Outliner, move the “Cube” into the “Worldspawn / BSP” and rename it “worldspawn.cube”
+        6. No need to add custom propreties :
+               [The compiler will take any objects with the “worldspawn.” prefix to make the level geometry structure]
+
+    4. The Player’s spawning point
+        1. Create a new Empty object, display type “Cube”
+        2. Set the size to “64”
+		(For the moment, we use a cube for visual guide, but in game the player size is 32x32x64)
+        3. (optional but good to do for consistency) Rename the object to info_player_spawn_0
+        4. Add the custom propreties : Classname : info_player_start
+
+
+        5. Move it a bit further from the origin point, and 32 units above the ground, and anywhere inside the cube on the horizontal plane
+        6. Save your file ! (Gotcha ! I’m sure you forgot about that !)
+
+    5. The Light
+
+        1. Add a Light → Point object.
+        2. Add the Custom Properties Classname : light as described earlier
+        3. Add another Custom proprety :
+			Type : String
+			Name : light
+			value : 512
+		 The default value of a light in Doom 3 is 300, if you don’t specify the value in the entity, it will revert to that,
+        4. If you use the Material preview or the viewport Cycles renderer, you have to multiply the light value entered here by 750 to have an approximation of the light’s radius in Blender. Yeah this gives absurdly high numbers, but it’s because of how point lights work in Blender
+
+**6. Exporting and testing**
+----------------------------
+
+    • Go to file → Export → glTF 2.0 ( .glb / gltf )
+    • Save the ,glb file in base/maps
+		(I usually create another subfolder, all the compiling creates additional files and the main folder can easily get crowded)
+    • Run RBDoom3BFG.exe
+    • Open the console, type dmap myboxmap.glb (it should be almost instantaneous)
+    • type map myboxmap.glb
+    • You should spawn and have a view that looks somewhat like that : 
+
+
+
+    • Congratulations ! 
+
+
+	When in doubt, open the idTech4 wiki or Trenchbroom, look at the list of all available entities, and all the available key + value pairs you can use. 
+    7. Common user errors
+
+	Multiple times, the map wouldn’t load, or my entities would not show up ingame after exporting the map. The mistake was that I didn’t enter the custom propreties in the right tab. IT HAS TO BE IN THE OBJECT TAB !
+	Also, watch out for typos !
+
+
+    8. Future plans
+
+	There are some plans by @SomaZ on the Discord Server to develop an Add-on that makes adding key + value pairs more convenient that inserting them manually in the Custom Propreties tab. Also update the light power value directly from what you enter for the entity. And a simple button to export the map without having to talke the long road through the menu and dialog.And possibly more features, but let’s wait for a release to document everything.
+
+**6. TEXTURES / MATERIALS**
+---------------------------
+
+	I will make assumption you know how to set up materials in Doom 3 / RBDoom3BFG.
+
+
+
+	To assign a material to a mesh and have it display correctly ingame, it’s really simple :
+    1. Create a new material in the corresponding tab while having your mesh object selected (worldspawn.cube in the previous chapter for example)
+
+    2. Rename it with the material’s path and name in your Doom 3 folder. Example :
+       textures/base_floor/a_sofloor3_d 
+           (which I like a lot)
+
+
+
+
+
+
+	But since we didn’t UV Unwrap our Cube, it looks like shit : 
+
+
+        1. Let’s fix that quickly.
+
+	Divide your workspace with with a 3D viewport, a UV Editor, and a Shader Editor. Select your textures/base_floor/a_sofloor3_d01f And set up a “dummy” material. I use the word “dummy” because it’s only for visualisation in Blender, this has no incidence in RBDoom3BFG, because it only relies on the material defined in the .mtr files.You can find the corresponding image files to any of the doom 3 textures you want in the following folder : /base/_tb/textures/*.
+
+
+
+	If you want to use the original Doom 3 textures, you can also explore the texture browser in Trenchbroom to find one you like, and then type in the name in Blender + browse to get the corresponding image file. We might have a texture browser in the future, along with all the game entities, all conveniently using Blender’s new Asset Browser. But it’s not done at the time I’m writing this.
+        2. In the 3D viewport, press [tab] / go to Edit Mode, press [u], select Cube Projection, press Enter. In the UV Editor, you cans select all faces and scale them by 16 for example. It should start to look more natural in Blender :
+
+
+	And Also in RBDoom3BFG after re-exporting and re-compinling the map :
+
+	Warning : If there is a spelling error in the texture name you entered, the dmap compilation will say the map is leaking. Watch out !
+
+
+    7. MAKING A MORE COMPLEX MAP AND USING VISPORTAL
+
+	Okay, let’s spice things a little. One of the most important features if idTech engines since Quake 1 is the ability to hide the parts of the level that aren’t seen in a very efficient way. This is also achievable here without using a traditional level editor.
+
+        1. Make a quick layout with several rooms connected by corridors or simple doorways. You can start with the Cube we made earlier or start from a fresh piece of geometry. Make sure the geometry is “airtight” with no duplicate / overlapping vertices or holes, AND that your object is still named “worldspawn.something” (and in the “Worldspawn / BSP” collection”).
+
+
+
+        2. In Edit mode, take the frame of the entrance of a corridor, and make a face out of it (press [f]). Press [p] to separate it from the mesh into a new object.
+Give it a new material called “textures/editor/visportal”.
+→ No need to load a texture or UV unwrap this, just add a base color to the material (purple for example, to mimic the tone it has in Trenchbroom or Radiant) to make your work more readable in the 3D view.
+
+        3. Repeat previous point for all the corridor and room entrances
+        4. Export and try it out !
+After loading the map, type in the console :
+            ▪ r_showPortals 1
+            ▪ r_showTris 2
+
+The portals are shown in green and red. Without portals, you would be able to see the curved corridor that’s around the corner, which start where the red portal is.
+
+        5. Pretty easy isn’t it ?
+
+
+**8. WORLDSPAWN VS FUNC_STATIC**
+--------------------------------
+	Okay, having some basic level geometry is nice, but what if I want some nicer, more complicated things ?
+
+	For this application, it is not needed – and not recommended – to use geometry as worldspawn.* objects, like we did previously. We will use an entity classname called func_static.
+
+        1. For this example, I’ll add a Torus. You are free to insert any mesh you want, even a complete modeled and textured asset you prepared earlier.
+I’ll modify it a bit to make it weird and quickly unwrap it (again, this is just to show an example, no time to make a nice intricate thing).
+Give it a name (in the Object tab or in the Outliner) so you can distinguish it from everything else.
+
+
+
+
+
+<<The Great Bowel Ring>>
+
+        2. Move the object in the “Static Geometry” collection and add these in the custom propreties tab :
+            ▪ “Classname : func_static” 
+            ▪ “model : yourobjectsname”
+
+
+
+
+
+        3. Export, compile and run the map to check it out !
+
+
+
+
+
+**9. MOVABLES AND ENTITY ORIGINS**
+----------------------------------
+
+	So, we have covered most of the things, this last one is almost a bonus, but it’s just to make an intro on the most magical of subjects : Moving things ! Things that move !
+
+	For the example’s sake, I’ll be making some func_rotating, but in Doom 3, it’s when using the func_mover that you can get the most freedom. But you control them using level scripts, so it’s out of the scope of this document. Normally you should now have enough knowledge to explore further, I’m sure you can do it !
+
+Let’s stay with my fleshy torus here, and make it into a rotating flesh torus
+
+        1. Move the torus into the Movers Collection we had created earlier in chapter 4
+           
+        2. In the Custom Properties tab :
+        ◦ Change Classname from func_static to func_rotating
+        ◦ The model string stays the same, as we didn’t change the name of the object.
+        ◦ Add the following keys and value : 
+	 x_axis : 1
+	 speed : 200
+        3. Save, export, compile and run. Your object should be turning around !
+
+
+
+	Final note : for all the moving mesh entities in Doom 3, the object’s origin is used as the pivot point. For objects that are only moved around, this is not too important, but at the moment where you want to turn it around, it’s this origin point that will be used as the center. Define it correctly if you want it to move in the way you want !
+
+**10. TRIGGERS**
+----------------
+
+	Triggers are invisible volume entity that get activated when the player (or any other game entity) goes through them. When activated, in Doom 3, they are usually used to call script functions.
+
+	I won’t add screenshots here as this process uses all of the techniques we’ve seen earlier.
+
+	To learn how to set triggers up, I’ll be using a trigger_hurt, that simply hurts the player – The effect is clearly visible when activated, so you can see right away if you did it right or not.
+
+    1. Create a shallow platform with a different texture, as a func_static, as described earlier, anywhere on the ground of the map. This is to help visualize and move where it is to try it out,
+    2. On top of it, add a new object, a cube or a cylinder, at least 64 units high to match the height of the player. Call it “trigger_hurt_test” for example, and move it to the “triggers” collection (add it if you don’t have it).
+    3. Create a new material for it, called “textures/common/trigger”. Like for the visportal earlier, you can give it a custom color, in TrenchBroom and Radiant it’s usually yellow. And no need to find a texture image for it.
+    4. In the Custom properties, add the following :
+        ◦ Classname : trigger_hurt
+        ◦ model : trigger_hurt_test
+    5. Save, export, compile and try it out ! When moving on the platform, PAIN should happen.
+
+
+**CONCLUSION**
+--------------
+
+	Congratulations if you made it through ! I hope this document was helpful for you, in the same way that I find it liberating to be able to use Blender as a level editor for RBDoom3BFG. Even before talking about making a standalone game, having the freedom to use a modern and feature packed tool like Blender is really exciting to me !
+
+	If you’re new to level design for Doom 3, then most of the general tutorials you can find online can be applied in Blender
+
