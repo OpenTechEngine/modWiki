@@ -1,11 +1,12 @@
 **RBDOOM-3-BFG is a modernization effort of [DOOM-3-BFG](DOOM-3-BFG "DOOM-3-BFG").**
-------------------------------------------------------------------------
+
 
 RBDOOM-3-BFG is based on DOOM-3-BFG and the goal of this port is to bring DOOM-3-BFG up to latest technology in 2021 making it closer to Doom 2016 while still remaining a DOOM 3 port regarding the gameplay.
 
 I started this project in 2012 and focused on making this code being future proof so other cool projects can build interesting things on top of it without the need to fix a lot of stuff first. Over 40 people all over the world contributed cool patches. Some results are:
 
 **Gaming / Graphics Related**
+-----------------------------
 
 -    Physically Based Rendering using GGX Cook-Torrence as in other modern engines (UE4, Unity) and 3D authoring tools like Blender 2.93 or Adobe Substance
 -    Baked Global Illumination using Irradiance Volumes and Image Based Lighting that fix the pitch black areas
@@ -19,6 +20,7 @@ I started this project in 2012 and focused on making this code being future proo
 -    Netcode fixes to allow multiplayer sessions to friends with +connect (manual port forwarding required)
 
 **Programming and Code Quality**
+--------------------------------
 
 -    Flexible build system using CMake allowing to add optional features like Vulkan rendering, FFmpeg for videos or OpenAL for sound
 -    Linux support for both GCC and Clang with a proper SDL 2 OS layer including gamepad support
@@ -32,6 +34,7 @@ I started this project in 2012 and focused on making this code being future proo
 -    Updated idRenderLog to support RenderDoc and Nvidia's Nsight and only issue OpenGL or Vulkan debug commands if the debug extensions are detected. Reference: https://devblogs.nvidia.com/best-practices-gpu-performance-events/
 
 **Modding Support**
+-------------------
 
 RBDOOM-3-BFG allows mod editing and has many tiny fixes so custom content can be put into mod directories and the engine accepts it like vanilla Doom 3. DOOM 3 BFG wasn't designed for actual development or modding support. Many things like reading anything outside of the packed resource files was not supported. I also fixed many things in the renderer like r_showTris.
 
