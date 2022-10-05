@@ -1,0 +1,58 @@
+**RBDOOM-3-BFG is a modernization effort of [DOOM-3-BFG](DOOM-3-BFG "DOOM-3-BFG").**
+------------------------------------------------------------------------
+
+RBDOOM-3-BFG is based on DOOM-3-BFG and the goal of this port is to bring DOOM-3-BFG up to latest technology in 2021 making it closer to Doom 2016 while still remaining a DOOM 3 port regarding the gameplay.
+
+I started this project in 2012 and focused on making this code being future proof so other cool projects can build interesting things on top of it without the need to fix a lot of stuff first. Over 40 people all over the world contributed cool patches. Some results are:
+
+**Gaming / Graphics Related**
+
+-    Physically Based Rendering using GGX Cook-Torrence as in other modern engines (UE4, Unity) and 3D authoring tools like Blender 2.93 or Adobe Substance
+-    Baked Global Illumination using Irradiance Volumes and Image Based Lighting that fix the pitch black areas
+-    Soft shadows using PCF hardware shadow mapping. All 3 light types (point, spot, parallel/sun) are supported which means parallel lights (sun) use scene independent cascaded shadow mapping.
+-    True internal 64 bit HDR lighting with filmic ACES tone mapping and gamma-correct rendering in linear RGB space
+-    Enhanced Subpixel Morphological Antialiasing as a cheap alternative for MSAA and that works well with HDR. For more information see "Anti-Aliasing Methods in CryENGINE 3" and the docs at http://www.iryoku.com/smaa/
+-    Filmic post process effects like Chromatic Aberration and Dithering
+-    Screen Space Ambient Occlusion http://graphics.cs.williams.edu/papers/SAOHPG12/ used to only dim down the Global Illumination contribution like in the Frostbite engine
+-    Bink video playback through libbinkdec (thanks to Daniel Gibson) or FFmpeg (thanks to Carl Kenner)
+-    Cinematic sequences can be skipped (thanks to Biel Bestué de Luna)
+-    Netcode fixes to allow multiplayer sessions to friends with +connect (manual port forwarding required)
+
+**Programming and Code Quality**
+
+-    Flexible build system using CMake allowing to add optional features like Vulkan rendering, FFmpeg for videos or OpenAL for sound
+-    Linux support for both GCC and Clang with a proper SDL 2 OS layer including gamepad support
+-    Win64 support and Visual Studio support up to VS 2019
+-    macOS support (updated in 2021 thanks to Stephen Saunders)
+-    OpenAL Soft sound backend primarily developed for Linux but works on Windows as well
+-    Sourcecode cleanup using the Artistic Style C++ beautifier to ensure the Git diffs and logs are clean
+-    Fixed tons of warnings using the Clang compiler
+-    Fast compile times using precompiled header support which allows to compile the entire engine and builtin tools in less than 30 seconds on a Ryzen 9
+-    Although not really supported but runs on exotic hardware like MIPS64, PPC64, ARM64 and E2K architectures
+-    Updated idRenderLog to support RenderDoc and Nvidia's Nsight and only issue OpenGL or Vulkan debug commands if the debug extensions are detected. Reference: https://devblogs.nvidia.com/best-practices-gpu-performance-events/
+
+**Modding Support**
+
+RBDOOM-3-BFG allows mod editing and has many tiny fixes so custom content can be put into mod directories and the engine accepts it like vanilla Doom 3. DOOM 3 BFG wasn't designed for actual development or modding support. Many things like reading anything outside of the packed resource files was not supported. I also fixed many things in the renderer like r_showTris.
+
+-    TrenchBroom Mapping Support - see more information in the TrenchBroom section
+-    New PBR related material keywords like basecolormap, normalmap, rmaomap
+-    invertGreen( normalmap.png ) material keyword to allow flipping the Y-Axis for tangent space normal maps
+-    PNG image support
+-    Collada .DAE model support in addition to .ase and .lwo for static map models
+-    Wavefront OBJ model support to make it easier getting static models from Blender/Maya/3D Studio Max into TrenchBroom
+-    Added back dmap and aas compilers (mapping tools, thanks to Pat Raynor) and improved them to work with TrenchBroom
+-    Added in-engine Flash debugging tools and new console variables
+-    Added Steel Storm 2 Engine render demo fixes
+-    Merged LordHavoc's image compression progress bar which shows up in the map loading screen when loading and compressing new images from mods
+-    Added support for Mikkelsen tangent space standard for new assets (thanks to Stephen Pridham)
+-    Bumped the static vertex cache limit of 31 MB to roughly ~ 128 MB to help with some custom models and maps by the Doom 3 community
+-    com_showFPS bigger than 1 uses ImGui to show more detailed renderer stats like the original console prints with r_speeds
+
+If you want to start mod from a directory, you should first specify your mod directory adding the following command to the launcher:
+
+"+set fs_game modDirectoryName"
+
+so it would end up looking like: RBDoom3BFG +set fs_game modDirectoryName
+
+IMPORTANT: RBDOOM-3-BFG does not support old Doom 3 modifications that include sourcecode modifications in binary form (.dll) You can fork RBDOOM-3-BFG and create a new renamed binary that includes all required C++ game code modifications.
