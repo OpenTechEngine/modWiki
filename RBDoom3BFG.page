@@ -1,5 +1,9 @@
+**About the Port**
+==================
+
 **RBDOOM-3-BFG is a modernization effort of [DOOM-3-BFG](DOOM-3-BFG "DOOM-3-BFG").**
 
+![](/rbdoom3bfg_shot1.png)
 
 RBDOOM-3-BFG is based on DOOM-3-BFG and the goal of this port is to bring DOOM-3-BFG up to latest technology in 2021 making it closer to Doom 2016 while still remaining a DOOM 3 port regarding the gameplay.
 
@@ -54,8 +58,18 @@ RBDOOM-3-BFG allows mod editing and has many tiny fixes so custom content can be
 
 If you want to start mod from a directory, you should first specify your mod directory adding the following command to the launcher:
 
-"+set fs_game modDirectoryName"
+' +set fs_game modDirectoryName '
 
 so it would end up looking like: RBDoom3BFG +set fs_game modDirectoryName
 
 IMPORTANT: RBDOOM-3-BFG does not support old Doom 3 modifications that include sourcecode modifications in binary form (.dll) You can fork RBDOOM-3-BFG and create a new renamed binary that includes all required C++ game code modifications.
+
+**Links**
+========
+
+* [Official Github Page](https://github.com/RobertBeckebans/RBDOOM-3-BFG)
+* [Complete v1.3.0 package](https://www.moddb.com/mods/rbdoom-3-bfg)
+* [Installation guide](https://github.com/RobertBeckebans/RBDOOM-3-BFG#installation)
+* [Latest binaries (10/01/2022)](https://drive.google.com/file/d/1Aa7amVAaDlJIPyzb3d933eApiiGuEN9a/view)
+* [Video Tutorial for installation and making a map with Trenchbroom](https://www.youtube.com/watch?v=LbiK5BD7Kcg) ( [German version here](https://www.youtube.com/watch?v=RwLRhl42cqk&t=907s))
+* [Mapping tutorial using Blender and GLTF format](https://modwiki.dhewm3.org/RBDoom3BFG-Blender-Mapping)
