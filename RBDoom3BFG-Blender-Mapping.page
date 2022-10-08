@@ -427,7 +427,7 @@ I'll update this</span></i></p>
 
 <p>
 	<figure>
-	<img src="/BlendTut-6-4-ingame-view.jpg" alt="ingame View"><figcaption>ingame View</figcaption>
+	<img src="/BlendTut-6-4-ingame-view.jpg" alt="ingame View" width="100%"><figcaption>ingame View</figcaption>
 	</figure>
 </p>
 
@@ -491,7 +491,7 @@ will say the map is leaking. Watch out !</p>
 	
 <p>
 	<figure>
-	<img src="/BlendTut-7-4-visportal-ingame.jpg" alt="ingame View"><figcaption>ingame View</figcaption>
+	<img src="/BlendTut-7-4-visportal-ingame.jpg" alt="ingame View" width="100%"><figcaption>ingame View</figcaption>
 	</figure>
 </p>
 
@@ -544,7 +544,7 @@ will say the map is leaking. Watch out !</p>
 
 <p>
 	<figure>
-	<img src="/BlendTut-8-3-ingame.jpg" alt="ingame View"><figcaption>ingame View</figcaption>
+	<img src="/BlendTut-8-3-ingame.jpg" alt="ingame View" width="100%"><figcaption>ingame View</figcaption>
 	</figure>
 </p>
 
@@ -584,7 +584,7 @@ will say the map is leaking. Watch out !</p>
 
 <p>
 	<figure>
-	<img src="/BlendTut-9-func-rotating.jpg" alt="func_rotating in action"><figcaption>func_rotating in action</figcaption>
+	<img src="/BlendTut-9-func-rotating.jpg" alt="func_rotating in action" width="100%"><figcaption>func_rotating in action</figcaption>
 	</figure>
 </p>
 
@@ -605,9 +605,12 @@ will say the map is leaking. Watch out !</p>
 <p>To learn how to set triggers up, I'll be using a trigger_hurt, that simply hurts the player &ndash; The effect is clearly visible when activated, so you can see right away if you did it right or not.</p>
 
 <ol>
-	<li><p>Create a shallow platform with a	different texture, as a func_static, as described earlier, anywhere	on the ground of the map. This is to help visualize and move where it is to try it out,</p></li>
+	<li><p>Create a shallow platform with a	different texture, as a func_static (as described earlier), anywhere on the ground of the map. This is to help visualize and move where it is to try it out,</p></li>
+	
 	<li><p>On top of it, add a new object, a cube or a cylinder, at least 64 units high to match the height of the player. Call it <b>"trigger_hurt_test"</b> for example, and move it to the "triggers" collection (add it if you don't have it).</p></li>
+	
 	<li><p>Create a new material for it, called <b>"textures/common/trigger"</b>. Like for the <b>visportal</b> earlier, you can give it a custom color, in TrenchBroom and Radiant it's usually yellow. And no need to find a texture image for it.</p></li>
+	
 	<li><p>In the <b>Custom properties</b>, add the following :</p>
 
 	<ul>
