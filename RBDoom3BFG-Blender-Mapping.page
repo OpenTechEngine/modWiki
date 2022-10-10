@@ -24,6 +24,7 @@ title: RBDoom3BFG Blender Mapping Tutorial
 
 
 <ul>
+
 <!--___________________________________________________________________________-->
 	<li id="1-ENGINE-AND-FOLDERS-SETUP"><h1><b>1. ENGINE AND FOLDERS SETUP</b></h1>
 	
@@ -34,19 +35,20 @@ title: RBDoom3BFG Blender Mapping Tutorial
 
 <p><b>Summary</b></p>
 <ol>
-	<li><Create an empty RBDoom3BFG folder
-	<li>Copy	All the game files from your steam or GOG Doom 3 : BFG Edition folder to your new folder
-	<li>Download the complete 1,3,0 package
-	<li>Extract to your RBDoom3BFG folder &ndash; Overwrite everything that is asks for
-	<li>Dowload the latest binaries from the #rbdoom3bfg lobby in the IdTech4 Discord Server ( <a href="https://discord.gg/53fBFBMS">https://discord.gg/53fBFBMS</a>)
-	<li>Extract to your RBDoom3BFG folder &ndash; Overwrite everything that is asks for
+	<li>Create an empty RBDoom3BFG folder</li>
+	<li>Copy	All the game files from your steam or GOG Doom 3 : BFG Edition folder to your new folder</li>
+	<li>Download the complete 1,3,0 package</li>
+	<li>Extract to your RBDoom3BFG folder &ndash; Overwrite everything that is asks for</li>
+	<li>Dowload the latest binaries from the #rbdoom3bfg lobby in the IdTech4 Discord Server ( <a href="https://discord.gg/53fBFBMS">https://discord.gg/53fBFBMS</a>)</li>
+	<li>Extract to your RBDoom3BFG folder &ndash; Overwrite everything that is asks for</li>
 	<li>For convenience :
-	<ul>
-		<li>Launch RBDoom3BFG.exe.
-		<li>Get into windowed mode
-		<li>Check if your key bindings are good
-		<li>type "bind g screenshot" in the console to have a convenient screehshot shortcut (the screenshots are stored in base/screenshots/ )
-	</ul>
+		<ul>
+			<li>Launch RBDoom3BFG.exe.</li>
+			<li>Get into windowed mode</li>
+			<li>Check if your key bindings are good</li>
+			<li>type "bind g screenshot" in the console to have a convenient screehshot shortcut (the screenshots are stored in base/screenshots/ )</li>
+		</ul>
+	</li>
 </ol>
 
 </li>
@@ -56,16 +58,20 @@ title: RBDoom3BFG Blender Mapping Tutorial
 	
 
 <ol>
-	<li>Download and install Blender &ndash; I use the latest version, 3.3. I haven't tested the workflow with earlier versions)
-	<li>Run Blender, Go to perferences &rarr; Add-ons
+	<li>Download and install Blender &ndash; I use the latest version, 3.3. I haven't tested the workflow with earlier versions)</li>
+	
+	<li>Run Blender, Go to perferences &rarr; Add-ons</li>
+	
 	<li>search for ".gltf" in the search bar, the <b>"Import-Export: glTF 2.0 format"</b>, activate it if it's not turned on.
 
 <p><i><span style="background: #ffaa95">Note: At the moment, I can't remember if the exporter is shipped
 with Blender or if I installed it manually. If not, let me know and
 I'll update this</span></i></p>
-
-		<li>Go to file &rarr; export and check if the <b>"glTF 2.0 ( .glb / gltf )"</b>option shows up. Click it !
-		<li>Let's save the export parameters preset now so we have it ready for later :
+	</li>
+	
+	<li>Go to file &rarr; export and check if the <b>"glTF 2.0 ( .glb / gltf )"</b>option shows up. Click it !</li>
+		
+	<li>Let's save the export parameters preset now so we have it ready for later :
 
 
 <p>
@@ -78,22 +84,28 @@ I'll update this</span></i></p>
 	<ul>
 		<li><b>Include</b> : 
 			<ul>
-				<li>Limit to visible objects : I use this to keep some construction objects, or previous versions of objects
-				<li>Data : <b>Custom Propreties</b> : <b>THIS ONE SHOULD BE ALWAYS TURNED ON or else RBDoom3BFG won't get any of the info it needs to run the level</b>
+				<li>Limit to visible objects : I use this to keep some construction objects, or previous versions of objects</li>
+				<li>Data : <b>Custom Propreties</b> : <b>THIS ONE SHOULD BE ALWAYS TURNED ON or else RBDoom3BFG won't get any of the info it needs to run the level</b></li>
 			</ul>
+		</li>
 			
-	<li><b>Transform</b> : <b>Tick "+Y Up"</b>
+	<li><b>Transform</b> : <b>Tick "+Y Up"</b></li>
 
-	<li><b>Geometry :</b>
-		<ul>
-			<li>Mesh : <b>Uvs, Normals and Vertex Colors </b>are ticked.
-			<li>Material : Set "Materials" to "Export" and "Images" to "none"
-			<li>PBR extensions and Compression : unticked
-		</ul>
-		<li><b>Animation:</b> Leave	it as is : Animation On, Shape Keys On, Skinning On.
+		<li><b>Geometry :</b>
+			<ul>
+				<li>Mesh : <b>Uvs, Normals and Vertex Colors </b>are ticked.</li>
+				<li>Material : Set "Materials" to "Export" and "Images" to "none"</li>
+				<li>PBR extensions and Compression : unticked</li>
+			</ul>
+		</li>
+		<li><b>Animation:</b> Leave	it as is : Animation On, Shape Keys On, Skinning On.</li>
 	</ul>
 
 	<p><b><span style="background: #ff5429">NOTE : These parameters might change with new updates of the engine. Let me know if it's not up to date !</b></p>
+
+	</li>
+	
+	</li>
 
 	<li><p><b>Save the preset : Click the "+" button on the top</b></p>
 
@@ -105,8 +117,9 @@ I'll update this</span></i></p>
 
 <p>Name your preset "RBDoom3BFG" and save.</p>
 
+	</li>
 
-		<li><b>Saving	a new "startup" file :</b>
+	<li><b>Saving	a new "startup" file :</b>
 
 		<p>The unit system used in Doom 3 is used <b>as is</b> in the moment in Blender. But Blender uses metric by default, so we have to adjust some things (or else the viewport gets glitchy):</p>
 		
@@ -121,6 +134,8 @@ I'll update this</span></i></p>
 
 <p>Type in the values above for "Clip Start" and "End". It should be enough for most cases,</p>
 
+		</li>
+
 		<li><p><b>Optional :</b> Set up the unit system to "none" :</p>
 
 <p>
@@ -128,32 +143,36 @@ I'll update this</span></i></p>
 	<img src="/BlendTut-2-4-units.jpg" alt="Setting Unit System to None"><figcaption>Setting Unit System to None</figcaption>
 	</figure>
 </p>
+		</li>
+	</ol>
+	</li>
+	
+	<li><p>You can now save your blender file in the base/maps folder so you have it on hand. You can add to it what we will cover in chapter 4 and 5.</p></li>
 
-			<li><p>You can now save your blender file in the base/maps folder so you have it on hand. You can add to it what we will cover in chapter 4 and 5.</p></li>
-		</ol>
 </ol>
 
 </li>
+
 
 <!--___________________________________________________________________________-->
 	<li id="3-BASIC-DOOM-3-ENTITIES-KNOWLEDGE"><h1><b>3. BASIC DOOM 3 ENTITIES KNOWLEDGE</b></h1>
 	
 	<p>	In Doom 3 (and other idTech engines as far as I know), all the objects in the map file have at least one parameter for the engine to read and use expressed as the pair <b>"Key + Value".</b></p>
 
-<p>First, every Entity has a <b>classname</b>. A few examples :</p>
+	<p>First, every Entity has a <b>classname</b>. A few examples :</p>
 <ul>
-	<li>worldspawn : The root of the level geometry, static, Obligatory,
-	<li>info_player_start : The spawningpoint of the player when he enters the level
-	<li>light : So that we can see something in this goddamn research facility !
-	<li>Monsters
-	<li>Movers : Doors, elevators, machinery,... (the Doom 3 engine offers almost unlimited creativity with	these compared to Quake 3 !)
+	<li>worldspawn : The root of the level geometry, static, Obligatory,</li>
+	<li>info_player_start : The spawningpoint of the player when he enters the level</li>
+	<li>light : So that we can see something in this goddamn research facility !</li>
+	<li>Monsters</li>
+	<li>Movers : Doors, elevators, machinery,... (the Doom 3 engine offers almost unlimited creativity with	these compared to Quake 3 !)</li>
 </ul>
 <p>Then, the other Key + value pairs are specific to each entity's type. For example :</p>
 <ul>
-	<li>The direction in which the player is looking when he spawns
-	<li>You can set the color and power of	the lights
-	<li>Specify the Health Points of a monster different from the default value
-	<li>etc
+	<li>The direction in which the player is looking when he spawns</li>
+	<li>You can set the color and power of	the lights</li>
+	<li>Specify the Health Points of a monster different from the default value</li>
+	<li>etc</li>
 </ul>
 <p>Here's a screenshot of the <b>Entity properties</b> panel in <b>Trenchbroom :</b></p>
 
@@ -607,18 +626,16 @@ will say the map is leaking. Watch out !</p>
 	<li><p>Create a new material for it, called <b>"textures/common/trigger"</b>. Like for the <b>visportal</b> earlier, you can give it a custom color, in TrenchBroom and Radiant it's usually yellow. And no need to find a texture image for it.</p></li>
 	
 	<li><p>In the <b>Custom properties</b>, add the following :</p>
-
-	<ul>
-		<li><p><b>Classname : trigger_hurt</b></p></li>
-		<li><p><b>model : trigger_hurt_test</b></p></li>
-	</ul>
+		<ul>
+			<li><b>Classname : trigger_hurt</b></li>
+			<li><b>model : trigger_hurt_test</b></li>
+		</ul>
 	</li>
 
 	<li><p>Save, export, compile and try it out ! When moving on the platform, PAIN should happen.</p></li>
 </ol>
 <p style="font-style: normal; line-height: 100%; margin-bottom: 0cm">
 
-	
 </li>
 
 <!--___________________________________________________________________________-->
@@ -635,3 +652,5 @@ will say the map is leaking. Watch out !</p>
 <p> Credits : Tutorial written in october 2022 by D-Meat (dmeat.art@gmail.com - @D-Meat on the [idTech4 Discord Server](https://discord.gg/B4Hx8SSs))
 
 </li>
+
+</ul>
