@@ -2,11 +2,12 @@
 format: html
 categories: tutorial, tutorials, rbdoom3bfg
 toc: no
-title: RBDoom3BFG Blender Mapping Tutorial
+title: RBDoom3BFG Blender/GLTF2 Mapping Tutorial
 ...
 
 <p>(Windows guide, I hope it helps also with Also OSs)</p>
 
+<p><i><b>Note</b>: Blender v3.x is used to create the GLTF2 file that the engine will use to load maps and models. Earlier versions of blender will not work since the GLTF exporter has changed/improved over time. Binary (.glb) and Ascii (.gltf) files are both supported. Other programs that can export to an GLTF2 file should work too, but have not been tested. IF you want to use another program, read this document carefully and make sure the other program allows for similar GLTF export options.</i></p>
 <p><b>CONTENTS :</b></p>
 <ul>
 	<li><a href="#1-ENGINE-AND-FOLDERS-SETUP">1. ENGINE AND FOLDERS SETUP</a></li>
@@ -182,8 +183,34 @@ title: RBDoom3BFG Blender Mapping Tutorial
 </li>
 
 <!--___________________________________________________________________________-->
-	<li id="4-BLENDER-FILE-STRUCTURE"><h1><b>4. BLENDER FILE STRUCTURE</b></h1>
+	<li id="4-BLENDER-FILE-STRUCTURE"><h1><b>4. BLENDER/GLTF FILE STRUCTURE</b></h1>
 
+<p>
+<h2> Maps, Models and Scenes </h2>
+Blender can be used to create maps <i>and</i> models!
+<h3> Mapping </h3>
+When running "<i>dmap myFirstGltfMap.glb</i>" the engine will try and proces the scene named <b><i>"Scene"</i></b> by default. This is also the default scene name for blender when creating a new file.
+This can be changed to "MyMapScene" by setting the cvar : "<i>gltf_MapSceneName MyMapScene</i>". 
+<h3> Modeling </h3>
+There are 2 ways to create models with Blender/GLTF for use in RBDoom3BFG
+<ol>
+
+<li><p>Using a unique .glb export per model</p>
+</i>All</i> meshes and their submeshes in the scene that was active while exporting will be used as a single model/mesh in game.
+</li>
+
+<li><p>Using the same/one  .glb to map <i>and</i> model. <b><i>(Advanced)</b></i></p>
+As mentioned above, a specific scene is used to create the map and can be changed. Similary the <b><i>"models"</i></b> scene will per default be used to lookup models if you want to store multiple models in the same glb. You can change this by setting the cvar : "<i>gltf_ModelSceneName MyModelScene</i>". 
+When specifing the the model in a .def file or model property you have to explicitly specify the model you want to load like so:
+<p><code>"model" "maps/mymap.<b>chair</b>.glb"</code></p>
+In the example above, the model tag will try and resolve the model <b>chair</b> from the models scene in the <b>mymap.glb</b> file. Same applies when specifing a mesh. 
+<p>See <a href="advanced_gltf_mapping">Advanced Mapping and Modeling with Blender/GLTF</a> for more info about using collections and animations.</p>
+</li>
+
+</ol>
+</p>
+
+<p><h2> Example map/scene setup </h2></p>
 <p>This step is not required, but I prefer to keep my file organized, so this is the organization I came up with. It's not carved in stone, anyone can come up with a way that better fits their needs.</p>
 
 <p>Here's the contents of the default Blender startup file :</p>
@@ -559,6 +586,14 @@ will say the map is leaking. Watch out !</p>
 </p>
 
 	</li>
+<li><p>
+If you want to use an seperate model/mesh as func_static but you do not want the geomerty to be included in the worldspawn geomerty/bsp but as a seperate model, you can do so by using the <b><i>inline : 0</i></b> property. This is usefull when you want to keep your dmap compile time low.</p>
+
+		<ul>
+			<li><b>"Classname : func_static"</b></li>
+			<li><b>"model : myModel.glb</b></li>
+                        <li><b><i>"inline: 0</i></b></li>
+		</ul>
 </ol>
 
 	
