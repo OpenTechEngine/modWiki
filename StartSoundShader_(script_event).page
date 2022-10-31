@@ -76,5 +76,4 @@ You should use the function [cacheSoundShader (script command)sys.cacheSoundShad
 
 It seems that this can be called from any entity - including moving ones. Of course with a speaker entity you can set options such as volume, looping and occlusion. I cannot find a way of scripting these things.
 
-You can use [entity.stopSound()](StopSound_%28script_command%29 "StopSound (script command)") to stop a sound.
-
+You can use [$entity.stopSound()](StopSound_%28script_event%29 "StopSound (script event)") to stop a sound. Sounds started with StartSoundShader() don't set `netSync`, so pass `0` as second argument, like `$speaker1.stopSound(SND_CHANNEL_ANY, 0);`
