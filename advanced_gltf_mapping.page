@@ -1,6 +1,7 @@
 Under construction.
 
 Animations:
-Mesh cannot be a child object of the armature. 
-Armature needs to have an "origin" bone.
-All actions that you want to export need to be pushed onto the stash for the target armature in the "Nonlinear animations" window in blender. The name it has there will be used as identifier within a model tag <b><i>not the action name itself</i></b>
+
+* Mesh cannot be a child object of the armature. 
+* Armature needs to have an "origin" bone.
+* All actions that you want to export need to be pushed onto the stash for the target armature in the "Nonlinear animations" window in blender. The name it has there will be used as identifier within a model tag <b><i>not the action name itself</i></b>
