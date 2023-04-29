@@ -8,24 +8,6 @@ title: RBDoom3BFG Blender/GLTF2 Mapping Tutorial
 <p>(Windows guide, I hope it helps also with Also OSs)</p>
 
 <p><i><b>Note</b>: Blender v3.x is used to create the GLTF2 file that the engine will use to load maps and models. Earlier versions of blender will not work since the GLTF exporter has changed/improved over time. Binary (.glb) and Ascii (.gltf) files are both supported. Other programs that can export to an GLTF2 file should work too, but have not been tested. IF you want to use another program, read this document carefully and make sure the other program allows for similar GLTF export options.</i></p>
-<p><b>CONTENTS :</b></p>
-<ul>
-    <li><a href="#1-ENGINE-AND-FOLDERS-SETUP">1. ENGINE AND FOLDERS SETUP</a></li>
-    <li><a href="#2-BLENDER-SET-UP">2. BLENDER SET-UP</a></li>
-    <li><a href="#3-BASIC-DOOM-3-ENTITIES-KNOWLEDGE">3. BASIC DOOM 3 ENTITIES KNOWLEDGE</a></li>
-    <li><a href="#4-BLENDER-FILE-STRUCTURE">4. BLENDER FILE STRUCTURE</a></li>
-    <li><a href="#5-MINIMUM-REQUIRED-ENTITIES-FOR-A-MAP">5. MINIMUM REQUIRED ENTITIES FOR A MAP</a></li>
-    <li><a href="#6-TEXTURES-MATERIALS">6. TEXTURES	/ MATERIALS</a></li>
-    <li><a href="#7-VISPORTAL">7. MAKING A MORE COMPLEX MAP AND USING VISPORTAL</a></li>
-    <li><a href="#8-WORLDSPAWN-VS-FUNC-STATIC">8. WORLDSPAWN VS FUNC_STATIC</a></li>
-    <li><a href="#9-MOVABLES-AND-ENTITY-ORIGINS">9. MOVABLES AND ENTITY ORIGINS</a></li>
-    <li><a href="#10-TRIGGERS">10. TRIGGERS</a></li>
-    <li><a href="#11-DEBUG-OPTIONS">11. DEBUG OPTIONS</a></li>
-    <li><a href="#12-CONCLUSION">12. CONCLUSION</a></li>
-</ul>
-
-
-<ul>
     <!--___________________________________________________________________________-->
     <li id="1-ENGINE-AND-FOLDERS-SETUP">
         <h1><b>1. ENGINE AND FOLDERS SETUP</b></h1>
