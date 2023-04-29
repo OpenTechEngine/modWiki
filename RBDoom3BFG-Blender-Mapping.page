@@ -723,7 +723,7 @@ title: RBDoom3BFG Blender/GLTF2 Mapping Tutorial
 <li id="11-DEBUG-OPTIONS">
     <h1><b>11. DEBUG OPTIONS</b></h1>
 
-    <p> gltf_parseVerbose 1 | 0 !</p>
+    <p> gltf_parseVerbose 1 | 0 </p>
 
     <p> This will print every property / gltf item to the console while the GLTF is parsed. In essence it shows you the .gltf content (which is also present in a glb, but then packed) </p>
 
