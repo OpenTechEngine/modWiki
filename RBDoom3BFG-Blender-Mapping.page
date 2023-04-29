@@ -20,7 +20,8 @@ title: RBDoom3BFG Blender/GLTF2 Mapping Tutorial
 	<li><a href="#8-WORLDSPAWN-VS-FUNC-STATIC">8. WORLDSPAWN VS FUNC_STATIC</a></li>
 	<li><a href="#9-MOVABLES-AND-ENTITY-ORIGINS">9. MOVABLES AND ENTITY ORIGINS</a></li>
 	<li><a href="#10-TRIGGERS">10. TRIGGERS</a></li>
-	<li><a href="#11-CONCLUSION">11. CONCLUSION</a></li>
+	<li><a href="#11-DEBUG-OPTIONS">11. DEBUG OPTIONS</a></li>
+	<li><a href="#12-CONCLUSION">12. CONCLUSION</a></li>
 </ul>
 
 
@@ -671,7 +672,17 @@ If you want to use an seperate model/mesh as func_static but you do not want the
 
 <!--___________________________________________________________________________-->
 
-	<li id="11-CONCLUSION"><h1><b>11. CONCLUSION</b></h1>
+	<li id="11-DEBUG-OPTIONS"><h1><b>11. DEBUG OPTIONS</b></h1>
+	
+<p> gltf_parseVerbose 1 | 0 !</p>
+
+<p> This will print every property / gltf item to the console while the GLTF is parsed. In essence it shows you the .gltf content (which is also present in a glb, but then packed) </p
+
+</li>
+
+<!--___________________________________________________________________________-->
+
+	<li id="12-CONCLUSION"><h1><b>12. CONCLUSION</b></h1>
 	
 <p>Congratulations if you made it through !</p>
 
