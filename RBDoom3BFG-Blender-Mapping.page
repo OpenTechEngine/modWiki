@@ -1,7 +1,7 @@
 ---
 format: html
 categories: tutorial, tutorials, rbdoom3bfg
-toc: no
+toc: yes
 title: RBDoom3BFG Blender/GLTF2 Mapping Tutorial
 ...
 
@@ -10,688 +10,738 @@ title: RBDoom3BFG Blender/GLTF2 Mapping Tutorial
 <p><i><b>Note</b>: Blender v3.x is used to create the GLTF2 file that the engine will use to load maps and models. Earlier versions of blender will not work since the GLTF exporter has changed/improved over time. Binary (.glb) and Ascii (.gltf) files are both supported. Other programs that can export to an GLTF2 file should work too, but have not been tested. IF you want to use another program, read this document carefully and make sure the other program allows for similar GLTF export options.</i></p>
 <p><b>CONTENTS :</b></p>
 <ul>
-	<li><a href="#1-ENGINE-AND-FOLDERS-SETUP">1. ENGINE AND FOLDERS SETUP</a></li>
-	<li><a href="#2-BLENDER-SET-UP">2. BLENDER SET-UP</a></li>
-	<li><a href="#3-BASIC-DOOM-3-ENTITIES-KNOWLEDGE">3. BASIC DOOM 3 ENTITIES KNOWLEDGE</a></li>
-	<li><a href="#4-BLENDER-FILE-STRUCTURE">4. BLENDER FILE STRUCTURE</a></li>
-	<li><a href="#5-MINIMUM-REQUIRED-ENTITIES-FOR-A-MAP">5. MINIMUM REQUIRED ENTITIES FOR A MAP</a></li>
-	<li><a href="#6-TEXTURES-MATERIALS">6. TEXTURES	/ MATERIALS</a></li>
-	<li><a href="#7-VISPORTAL">7. MAKING A MORE COMPLEX MAP AND USING VISPORTAL</a></li>
-	<li><a href="#8-WORLDSPAWN-VS-FUNC-STATIC">8. WORLDSPAWN VS FUNC_STATIC</a></li>
-	<li><a href="#9-MOVABLES-AND-ENTITY-ORIGINS">9. MOVABLES AND ENTITY ORIGINS</a></li>
-	<li><a href="#10-TRIGGERS">10. TRIGGERS</a></li>
-	<li><a href="#11-DEBUG-OPTIONS">11. DEBUG OPTIONS</a></li>
-	<li><a href="#12-CONCLUSION">12. CONCLUSION</a></li>
+    <li><a href="#1-ENGINE-AND-FOLDERS-SETUP">1. ENGINE AND FOLDERS SETUP</a></li>
+    <li><a href="#2-BLENDER-SET-UP">2. BLENDER SET-UP</a></li>
+    <li><a href="#3-BASIC-DOOM-3-ENTITIES-KNOWLEDGE">3. BASIC DOOM 3 ENTITIES KNOWLEDGE</a></li>
+    <li><a href="#4-BLENDER-FILE-STRUCTURE">4. BLENDER FILE STRUCTURE</a></li>
+    <li><a href="#5-MINIMUM-REQUIRED-ENTITIES-FOR-A-MAP">5. MINIMUM REQUIRED ENTITIES FOR A MAP</a></li>
+    <li><a href="#6-TEXTURES-MATERIALS">6. TEXTURES	/ MATERIALS</a></li>
+    <li><a href="#7-VISPORTAL">7. MAKING A MORE COMPLEX MAP AND USING VISPORTAL</a></li>
+    <li><a href="#8-WORLDSPAWN-VS-FUNC-STATIC">8. WORLDSPAWN VS FUNC_STATIC</a></li>
+    <li><a href="#9-MOVABLES-AND-ENTITY-ORIGINS">9. MOVABLES AND ENTITY ORIGINS</a></li>
+    <li><a href="#10-TRIGGERS">10. TRIGGERS</a></li>
+    <li><a href="#11-DEBUG-OPTIONS">11. DEBUG OPTIONS</a></li>
+    <li><a href="#12-CONCLUSION">12. CONCLUSION</a></li>
 </ul>
 
 
 <ul>
+    <!--___________________________________________________________________________-->
+    <li id="1-ENGINE-AND-FOLDERS-SETUP">
+        <h1><b>1. ENGINE AND FOLDERS SETUP</b></h1>
 
-<!--___________________________________________________________________________-->
-	<li id="1-ENGINE-AND-FOLDERS-SETUP"><h1><b>1. ENGINE AND FOLDERS SETUP</b></h1>
-	
-	
-	<p>You should set up your game and it's folders as described on the Github page or Takeshi's tutorial :</p>
-	<p><a href="https://github.com/RobertBeckebans/RBDOOM-3-BFG">https://github.com/RobertBeckebans/RBDOOM-3-BFG</a></p>
-	<p><a href="https://youtu.be/LbiK5BD7Kcg">https://youtu.be/LbiK5BD7Kcg/</a></p>
 
-<p><b>Summary</b></p>
-<ol>
-	<li>Create an empty RBDoom3BFG folder</li>
-	<li>Copy	All the game files from your steam or GOG Doom 3 : BFG Edition folder to your new folder</li>
-	<li>Download the complete 1,3,0 package</li>
-	<li>Extract to your RBDoom3BFG folder &ndash; Overwrite everything that is asks for</li>
-	<li>Dowload the latest binaries from the #rbdoom3bfg lobby in the IdTech4 Discord Server ( <a href="https://discord.gg/53fBFBMS">https://discord.gg/53fBFBMS</a>)</li>
-	<li>Extract to your RBDoom3BFG folder &ndash; Overwrite everything that is asks for</li>
-	<li>For convenience :
-		<ul>
-			<li>Launch RBDoom3BFG.exe.</li>
-			<li>Get into windowed mode</li>
-			<li>Check if your key bindings are good</li>
-			<li>type "bind g screenshot" in the console to have a convenient screehshot shortcut (the screenshots are stored in base/screenshots/ )</li>
-		</ul>
-	</li>
-</ol>
+        <p>You should set up your game and it's folders as described on the Github page or Takeshi's tutorial :</p>
+        <p><a href="https://github.com/RobertBeckebans/RBDOOM-3-BFG">https://github.com/RobertBeckebans/RBDOOM-3-BFG</a></p>
+        <p><a href="https://youtu.be/LbiK5BD7Kcg">https://youtu.be/LbiK5BD7Kcg/</a></p>
+
+        <p><b>Summary</b></p>
+        <ol>
+            <li>Create an empty RBDoom3BFG folder</li>
+            <li>Copy	All the game files from your steam or GOG Doom 3 : BFG Edition folder to your new folder</li>
+            <li>Download the complete 1,3,0 package</li>
+            <li>Extract to your RBDoom3BFG folder &ndash; Overwrite everything that is asks for</li>
+            <li>Dowload the latest binaries from the #rbdoom3bfg lobby in the IdTech4 Discord Server ( <a href="https://discord.gg/53fBFBMS">https://discord.gg/53fBFBMS</a>)</li>
+            <li>Extract to your RBDoom3BFG folder &ndash; Overwrite everything that is asks for</li>
+            <li>
+                For convenience :
+                <ul>
+                    <li>Launch RBDoom3BFG.exe.</li>
+                    <li>Get into windowed mode</li>
+                    <li>Check if your key bindings are good</li>
+                    <li>type "bind g screenshot" in the console to have a convenient screehshot shortcut (the screenshots are stored in base/screenshots/ )</li>
+                </ul>
+            </li>
+        </ol>
+
+    </li>
+
+    <!--___________________________________________________________________________-->
+    <li id="2-BLENDER-SET-UP">
+        <h1><b>2. BLENDER SET-UP</b></h1>
+
+        <ol>
+            <li>Download and install Blender &ndash; I use the latest version, 3.3. I haven't tested the workflow with earlier versions)</li>
+
+            <li>Run Blender, Go to perferences &rarr; Add-ons</li>
+
+            <li>search for ".gltf" in the search bar, the <b>"Import-Export: glTF 2.0 format"</b>, activate it if it's not turned on.</li>
+
+            <li>Go to file &rarr; export and check if the <b>"glTF 2.0 ( .glb / gltf )"</b>option shows up. Click it !</li>
+
+            <li>
+                Let's save the export parameters preset now so we have it ready for later :
+
+
+                <p>
+                    <figure>
+                        <img src="/BlendTut-2-1-export-setup.jpg" alt="Export setup"><figcaption>.GLB export setup</figcaption>
+                    </figure>
+                </p>
+                <p><i>Set the options as in the image above :</i></p>
+
+                <ul>
+                    <li>
+                        <b>Include</b> :
+                        <ul>
+                            <li>Limit to visible objects : I use this to keep some construction objects, or previous versions of objects</li>
+                            <li>Data : <b>Custom Propreties</b> : <b>THIS ONE SHOULD BE ALWAYS TURNED ON or else RBDoom3BFG won't get any of the info it needs to run the level</b></li>
+                        </ul>
+                    </li>
+
+                    <li><b>Transform</b> : <b>Tick "+Y Up"</b></li>
+
+                    <li>
+                        <b>Geometry :</b>
+                        <ul>
+                            <li>Mesh : <b>Uvs, Normals and Vertex Colors </b>are ticked.</li>
+                            <li>Material : Set "Materials" to "Export" and "Images" to "none"</li>
+                            <li>PBR extensions and Compression : unticked</li>
+                        </ul>
+                    </li>
+                    <li><b>Animation:</b> Leave	it as is : Animation On, Shape Keys On, Skinning On.</li>
+                </ul>
+
+                <p><b><span style="background: #ff5429">NOTE : These parameters might change with new updates of the engine. Let me know if it's not up to date !</b></p>
+
+            </li>
+
+            <li>
+                <p><b>Save the preset : Click the "+" button on the top</b></p>
+
+                <p>
+                    <figure>
+                        <img src="/BlendTut-2-2-preset-save.jpg" alt="Preset save"><figcaption>Preset save</figcaption>
+                    </figure>
+                </p>
+
+                <p>Name your preset "RBDoom3BFG" and save.</p>
+
+            </li>
+
+            <li>
+                <b>Saving	a new "startup" file :</b>
+
+                <p>The unit system used in Doom 3 is used <b>as is</b> in the moment in Blender. But Blender uses metric by default, so we have to adjust some things (or else the viewport gets glitchy):</p>
+
+                <ol>
+                    <li>
+                        <p><b>Viewport setup :</b> With the "huge" distances we'll work with (compared to the Blender default), we have to adjust some things :</p>
+
+                        <p>
+                            <figure>
+                                <img src="/BlendTut-2-3-view-clipping.jpg" alt="Setting correct View Clipping distances"><figcaption>Setting correct View Clipping distances</figcaption>
+                            </figure>
+                        </p>
+
+                        <p>Type in the values above for "Clip Start" and "End". It should be enough for most cases,</p>
+
+                    </li>
+
+                    <li>
+                        <p><b>Optional :</b> Set up the unit system to "none" :</p>
+
+                        <p>
+                            <figure>
+                                <img src="/BlendTut-2-4-units.jpg" alt="Setting Unit System to None"><figcaption>Setting Unit System to None</figcaption>
+                            </figure>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+            <li><p>You can now save your blender file in the base/maps folder so you have it on hand. You can add to it what we will cover in chapter 4 and 5.</p></li>
+        </ol>
+    </li>
+
+
+    <!--___________________________________________________________________________-->
+    <li id="3-BASIC-DOOM-3-ENTITIES-KNOWLEDGE">
+        <h1><b>3. BASIC DOOM 3 ENTITIES KNOWLEDGE</b></h1>
+
+        <p>	In Doom 3 (and other idTech engines as far as I know), all the objects in the map file have at least one parameter for the engine to read and use expressed as the pair <b>"Key + Value".</b></p>
+
+        <p>First, every Entity has a <b>classname</b>. A few examples :</p>
+        <ul>
+            <li>worldspawn : The root of the level geometry, static, Obligatory,</li>
+            <li>info_player_start : The spawningpoint of the player when he enters the level</li>
+            <li>light : So that we can see something in this goddamn research facility !</li>
+            <li>Monsters</li>
+            <li>Movers : Doors, elevators, machinery,... (the Doom 3 engine offers almost unlimited creativity with	these compared to Quake 3 !)</li>
+        </ul>
+        <p>Then, the other Key + value pairs are specific to each entity's type. For example :</p>
+        <ul>
+            <li>The direction in which the player is looking when he spawns</li>
+            <li>You can set the color and power of	the lights</li>
+            <li>Specify the Health Points of a monster different from the default value</li>
+            <li>etc</li>
+        </ul>
+        <p>Here's a screenshot of the <b>Entity properties</b> panel in <b>Trenchbroom :</b></p>
+
+        <p>
+            <figure>
+                <img src="/BlendTut-3-1-Trenchbroom-entity-panel.jpg" alt="TrenchBroom's Entity Panel"><figcaption>TrenchBroom's Entity Panel</figcaption>
+            </figure>
+        </p>
+
+        <p>In <b>Blender</b>, at the moment, you have to write all the keys + values as the object's <b>Custom Parameters</b>, which we will see right after.</p>
+
+    </li>
+
+    <!--___________________________________________________________________________-->
+    <li id="4-BLENDER-FILE-STRUCTURE">
+        <h1><b>4. BLENDER/GLTF FILE STRUCTURE</b></h1>
+
+        <p>
+            <h2> Maps, Models and Scenes </h2>
+            Blender can be used to create maps <i>and</i> models!
+            <h3> Mapping </h3>
+            When running "<i>dmap myFirstGltfMap.glb</i>" the engine will try and proces the scene named <b><i>"Scene"</i></b> by default. This is also the default scene name for blender when creating a new file.
+            This can be changed to "MyMapScene" by setting the cvar : "<i>gltf_MapSceneName MyMapScene</i>".
+            <h3> Modeling </h3>
+            There are 2 ways to create models with Blender/GLTF for use in RBDoom3BFG
+            <ol>
+
+                <li>
+                    <p>Using a unique .glb export per model</p>
+                    </i>All</i> meshes and their submeshes in the scene that was active while exporting will be used as a single model/mesh in game.
+                </li>
+
+                <li>
+                    <p>Using the same/one  .glb to map <i>and</i> model. <b><i>(Advanced)</b></i></p>
+                    As mentioned above, a specific scene is used to create the map and can be changed. Similary the <b><i>"models"</i></b> scene will per default be used to lookup models if you want to store multiple models in the same glb. You can change this by setting the cvar : "<i>gltf_ModelSceneName MyModelScene</i>".
+                    When specifing the the model in a .def file or model property you have to explicitly specify the model you want to load like so:
+                    <p><code>"model" "maps/mymap.<b>chair</b>.glb"</code></p>
+                    In the example above, the model tag will try and resolve the model <b>chair</b> from the models scene in the <b>mymap.glb</b> file. Same applies when specifing a mesh.
+                    <p>See <a href="advanced_gltf_mapping">Advanced Mapping and Modeling with Blender/GLTF</a> for more info about using collections and animations.</p>
+                </li>
+
+            </ol>
+        </p>
+
+        <p><h2> Example map/scene setup </h2></p>
+        <p>This step is not required, but I prefer to keep my file organized, so this is the organization I came up with. It's not carved in stone, anyone can come up with a way that better fits their needs.</p>
+
+        <p>Here's the contents of the default Blender startup file :</p>
+
+        <p>
+            <figure>
+                <img src="/BlendTut-4-1-default-collection.jpg" alt="The default Blender collection in the Outliner"><figcaption>The default Blender collection in the Outliner</figcaption>
+            </figure>
+        </p>
+
+        <p>And here's my proposition for a Doom 3 level :</p>
+
+        <p>
+            <figure>
+                <img src="/BlendTut-4-2-doom3-collections.jpg" alt="My proposition for a set of relevant collections for a Doom 3 level"><figcaption>My proposition for a set of relevant collections for a Doom 3 level</figcaption>
+            </figure>
+        </p>
+
+        <p>The collection of Point Entities is pretty bare bones compared to the total amount of different entity types available, so anyone making a more complex level will customize this to their needs.</p>
+        <p><b>NOTE: Currently, entities that reside in collections will not be picked up! only meshes/geometry can be nested!</b></p>
+
+    </li>
+
+    <!--___________________________________________________________________________-->
+    <li id="5-MINIMUM-REQUIRED-ENTITIES-FOR-A-MAP">
+        <h1><b>5. MINIMUM REQUIRED ENTITIES FOR A MAP</b></h1>
+
+        <p><b>Okay ! Let's make our first Box map !</b></p>
+
+        <ol>
+            <li><p><b>(optional but recommended)</b> reproduce the collection tree described in the previous chapter.</p></li>
+
+            <li>
+                <p><b>The Worldspawn Entity</b></p>
+
+                <p><i>The worldspawn entity isn't actually required, but It can store some options for the level, so I advice to always have one included in your level in case you would need them.</i></p>
+
+                <p>In Blender, this materializes as an "empty" object located at the origin coordinates.</p>
+
+                <ul>
+                    <li>Press [shift + a] &rarr; <b>Empty</b> &rarr; <b>Plain Axes</b>.</li>
+                    <li>Name it <b>worldspawn</b>.</li>
+                    <li>You can move it in the "Worldspawn / BSP" collection in the Outliner tab.</li>
+                    <li>Make sure it's located at the origin coordinates :</li>
+                </ul>
+
+                <p>
+                    <figure>
+                        <img src="/BlendTut-5-1-worldspawn.jpg" alt="Worldspawn Origin at 0,0,0"><figcaption>Worldspawn Origin at 0,0,0</figcaption>
+                    </figure>
+                </p>
+
+                <p>
+                    <figure>
+                        <img src="/BlendTut-5-2-worldspawn-axes-size.jpg" alt="Empty axes size"><figcaption>Empty axes size</figcaption>
+                    </figure>
+                </p>
+
+                <p><i>No need to give it a different viewport display, the default "plain axes" is fine, also with the default size of 1.</i></p>
+
+                <p>Then, The <b>Custom Propreties</b> have to be set up :</p>
+                <ul>
+                    <li>Get back in the <b>Object Properties</b> panel (where we made sure the "empty" was at coordinates 0,0,0)</li>
+                    <li><p>Click "new",</p></li>
+                    <li><p>Click the <b>little gear</b></p></li>
+                    <li><p>set the <b>type</b> to <b>"String"</b>,</p></li>
+                    <li><p><b>Property Name</b> to <b>"classname"</b></p></li>
+                </ul>
+
+                <p>
+                    <figure>
+                        <img src="/BlendTut-5-3-adding-custom-property.jpg" alt="Adding a Custom Property"><figcaption>Adding a Custom Property</figcaption>
+                    </figure>
+                </p>
+
+                <p>Then type "<b>worldspawn</b>" in the field next to "classname".</p>
+
+                <p>You should now have these info in :</p>
+
+                <p>
+                    <figure>
+                        <img src="/BlendTut-5-4-worldspawn-classname.jpg" alt="Worldspawn Classname"><figcaption>Worldspawn Classname</figcaption>
+                    </figure>
+                </p>
+
+                <p>The worldspawn entity can store othe info useful for your level, such as the path to background music, custom gravity ... You can check in TrenchBroom what's available.</p>
+
+            </li>
+
+            <li>
+                <p><b>The Worldspawn Geometry</b></p>
+
+                <ol>
+                    <li><p>Add a cube, with a size of 1024 for example.</p></li>
+                    <li><p>Press [tab] to get into Edit mode, select all, and invert the normals ([alt + n] &rarr; Flip).</p></li>
+                    <li><p><i>Let's ignore any kind of UV unwrapping for the moment.</i></p></li>
+                    <li>
+                        <p>Optional : Move all the geometry or the bottom face 512 units up (press [g] <i>(grab)</i> &rarr; press[z] <i>(z axis)</i> &rarr;type 512 + [enter].</p>
+                        <p><i>(I like when the ground plane is at 0 ^^')</i></p>
+                    </li>
+                    <li><p>In the Outliner, move the "Cube" into the "Worldspawn / BSP" and <b>rename</b> it <b>"worldspawn.cube"</b></p></li>
+                    <li>
+                        <p>
+                            No need to add custom propreties :<br />
+                            <b>[The compiler will take any objects with the "worldspawn." prefix to make the level geometry structure]</b>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+
+            <li>
+                <p><b>The Player's spawning point</b></p>
+
+                <ol>
+                    <li><p>Create a new Empty object, display type <b>"Cube"</b></p></li>
+                    <li>
+                        <p>Set the size to "64"</p>
+                        <p><i>(For the moment, we use a cube for visual guide, but in game the player size is 32x32x64)</i></p>
+                    </li>
+                    <li><p><i>(optional but good to do for consistency) </i><b>Rename</b> the object to <b>info_player_spawn_0</b></p></li>
+                    <li>
+                        <p>Add the <b>custom propreties : Classname : info_player_start</b></p>
+
+                        <p>
+                            <figure>
+                                <img src="/BlendTut-5-5-info-player-spawn.jpg" alt="info_player_start"><figcaption>info_player_start</figcaption>
+                            </figure>
+                        </p>
+
+                    </li>
+
+                    <li><p>	Move it a bit further from the origin point, and 32 units above the ground, and anywhere inside	the cube on the horizontal plane</p></li>
+                    <li><p>	Save your file ! <i>(Gotcha ! I'm sure you forgot about that !)</i></p></li>
+
+                </ol>
+            </li>
+
+            <li>
+                <p><b>The Light</b></p>
+
+                <ol>
+                    <li><p>Add a Light &rarr; <b>Point</b> object.</p></li>
+                    <li><p>Add the Custom Properties <b>Classname : light </b>as described earlier</p></li>
+                    <li><p>Add another Custom proprety :</p></li>
+                    <ul>
+                        <li>Type : String</li>
+                        <li>Name : <b>light</b></li>
+                        <li>
+                            value : <b>512</b>
+                            <p><i> The default value of a light in Doom 3 is 300, if you don't specify the value in the entity, it will revert to that,</i></p>
+                        </li>
+                    </ul>
+
+                    <li><p>If you use the Material preview <u>or</u> the viewport Cycles renderer, you have to multiply the light value entered here <b>by 750</b> to have an approximation of the light's radius in Blender. Yeah this gives absurdly high numbers, but it's because of how point lights work in Blender</p></li>
+                </ol>
+
+            </li>
+
+            <li>
+                <p><b>Exporting and testing</b></p>
+
+
+                <ol>
+                    <li><p>Go to file &rarr; Export &rarr; <b>glTF 2.0 ( .glb / gltf )</b></p></li>
+                    <li>
+                        <p>Save the ,glb file in base/maps</p>
+                        <p><i>(I usually create another subfolder, all the compiling creates additional files and the main folder can easily get crowded)</i></p>
+                    </li>
+
+                    <li><p>Run RBDoom3BFG.exe</p></li>
+                    <li><p>Open the console, type dmap <i>myboxmap</i>.glb (it should be almost instantaneous)</p></li>
+                    <li><p>type	map <i>myboxmap</i>.glb</p></li>
+                    <li>
+                        <p>You should spawn and have a view that looks somewhat like that : </p>
+
+                        <p>
+                            <figure>
+                                <img src="/BlendTut-5-6-ingame-test.jpg" alt="ingame test" width="100%"><figcaption>ingame test</figcaption>
+                            </figure>
+                        </p>
+                    </li>
+                </ol>
+
+                <p><b>Congratulations !</b></p>
+
+
+                <p>When in doubt, open the idTech4 wiki or Trenchbroom, look at the list of all available entities, and all the available key + value pairs you can use.</p>
+
+            </li>
+
+            <li>
+                <p><b>Common user errors :</b></p>
+
+                <p>Multiple times, the map wouldn't load, or my entities would not show up ingame after exporting the map.</p>
+                <p><b>The mistake was that I didn't enter the custom propreties in the right tab. IT HAS TO BE IN THE OBJECT TAB !</b></p>
+
+                <p>Also, <b>watch out for <u>typos</u> !</b></p>
+
+                <p>
+                    <figure>
+                        <img src="/BlendTut-5-7-correct-properties-panel.jpg" alt="Correct Propreties Panel to use"><figcaption>Correct Propreties Panel to use</figcaption>
+                    </figure>
+                </p>
+            </li>
+
+            <li>
+                <p><b>Future plans</b></p>
+
+                <p>There are some plans by @SomaZ on the Discord Server to develop an Add-on that makes adding key + value pairs more convenient that inserting them manually in the Custom Propreties tab. Also update the light power value directly from what you enter for the entity. And a simple button to export the map without having to talke the long road through the menu and dialog. And possibly more features, but let's wait for a release to document everything.</p>
+            </li>
+        </ol>
+
+
+    </li>
+    <!--___________________________________________________________________________________-->
+
+    <li id="6-TEXTURES-MATERIALS">
+        <h1><b>6. TEXTURES / MATERIALS</b></h1>
+
+        <p>I will make assumption you know how to set up materials in Doom 3 / RBDoom3BFG.</p>
+
+        <p>
+            <figure>
+                <img src="/BlendTut-6-1-texture-name.jpg" alt="Material name"><figcaption>Material name</figcaption>
+            </figure>
+        </p>
+
+        <p>To assign a material to a mesh and have it display correctly ingame, it's really simple :</p>
+        <ol>
+            <li><p>Create a new material in the	corresponding tab while having your mesh object selected (worldspawn.cube in the previous chapter for example)</p></li>
+            <li>
+                <p>Rename it with the material's path and name in your Doom 3 folder. Example :</p>
+                <p><b>textures/base_floor/a_sofloor3_d</b> <i>(which I like a lot)</i></p>
+                <p><i>(Yes, it's as simple as that to have it working in game !</i></p>
+            </li>
+        </ol>
+
+        <p>But since we didn't UV Unwrap our Cube, it looks like shit : </p>
+
+        <p>
+            <figure>
+                <img src="/BlendTut-6-1-UV-stretched.jpg" alt="Stretched UVs"><figcaption>Stretched UVs</figcaption>
+            </figure>
+        </p>
+
+        <p>Let's fix that quickly.</p>
+
+        <ol>
+            <li><p>	Divide your workspace with with a 3D viewport, a UV Editor, and a Shader Editor.</p></li>
+
+            <li>
+                <p>
+                    Select your <b>t</b><b>extures/</b><b>base_floor/a_sofloor3_</b><b>d01f</b> And set up a "dummy" material.<br />
+                    <i>I use the word "dummy" because it's only for visualisation in Blender, this has no incidence in RBDoom3BFG, because it only relies on the material defined in the .mtr files.</i>
+                </p>
+            </li>
+
+            <li>
+                <p>You can find the corresponding image files to any of the doom 3 textures you want in the following folder : <b>/base/_tb/</b><b>textures/</b><b>*</b>.</p>
+
+                <p>
+                    <figure>
+                        <img src="/BlendTut-6-2-material-setup.jpg" alt="Material Setup"><figcaption>Material Setup</figcaption>
+                    </figure>
+                </p>
+
+                <p><i>If you want to use the original Doom 3 textures, you can also explore the texture browser in Trenchbroom to find one you like, and then type in the name in Blender + browse to get the corresponding image file. We might have a texture browser in the future, along with all the game entities, all conveniently using Blender's new Asset Browser. But it's not done at the time I'm writing this.</i></p>
+            </li>
+
+            <li>
+                <p>In the 3D viewport, press [tab] / go to Edit Mode, press [u], select Cube Projection, press Enter. In the UV Editor, you cans select all faces and scale them by 16 for example. It should start to look more natural in Blender :</p>
+
+
+                <p>
+                    <figure>
+                        <img src="/BlendTut-6-3-viewport-preview.jpg" alt="Viewport Preview"><figcaption>Viewport Preview</figcaption>
+                    </figure>
+                </p>
+
+                <p>And Also in RBDoom3BFG after re-exporting and re-compinling the map :</p>
+
+                <p>
+                    <figure>
+                        <img src="/BlendTut-6-4-ingame-view.jpg" alt="ingame View" width="100%"><figcaption>ingame View</figcaption>
+                    </figure>
+                </p>
+
+                <b>Warning</b> : If there is a
+                spelling error in the texture name you entered, the dmap compilation
+                will say the map is leaking. Watch out !</p>
+
+            </li>
+        </ol>
+
+    </li>
+
+    <!--___________________________________________________________________________-->
+
+    <li id="7-VISPORTAL">
+        <h1><b>7. MAKING A MORE COMPLEX MAP AND USING VISPORTAL</b></h1>
+
+
+        <p>Okay, let's spice things a little. One of the most important features if idTech engines since Quake 1 is the ability to hide the parts of the level that aren't seen in a very efficient way. This is also achievable here without using a traditional level editor.</p>
+
+        <ol>
+            <li>
+                <p>Make a quick layout with several rooms connected by corridors or simple doorways. You can start with the Cube we made earlier or start from a fresh piece of geometry. Make sure the geometry is "airtight" with no duplicate / overlapping vertices or holes, AND that your object is still	named <b>"worldspawn.</b><i><b>something</b></i><b>"</b> (and in the "Worldspawn / BSP" collection").</p>
+
+                <p>
+                    <figure>
+                        <img src="/BlendTut-7-1-level-layout.jpg" alt="An example Level Layout"><figcaption>An example Level Layout</figcaption>
+                    </figure>
+                </p>
+            </li>
+
+            <li>
+                <p>In Edit mode :</p>
+                <ul>
+                    <li>take the frame of the	entrance of a corridor, and make a face out of it (press [f]).</li>
+                    <li>Press [p] to separate it from the mesh into a new object.</li>
+                    <li>
+                        Give it a new material called <b>"textures/</b><b>editor</b><b>/visportal"</b>.<br />
+                        &rarr; <i>No need to load a texture or UV unwrap this, just add a base color to the material (purple for example, to mimic the tone it has in Trenchbroom or Radiant) to make your work more readable in the 3D view.</i>
+                </ul>
+
+                <p>
+                    <figure>
+                        <img src="/BlendTut-7-2-visportal-material.jpg" alt="Visportal Material Setup"><figcaption>Visportal Material Setup</figcaption>
+                    </figure>
+                </p>
+
+            </li>
+
+            <li>
+                <p>Repeat previous point for all the corridor and room entrances</p>
+                <p>
+                    <figure>
+                        <img src="/BlendTut-7-3-visportal-placement.jpg" alt="Visportal Placement"><figcaption>Visportal Placement</figcaption>
+                    </figure>
+                </p>
+            </li>
+
+            <li>
+                <p>Export and try it out !</p>
+                <p>After loading the map, type in the console :</p>
+                <p>
+                    <ul>
+                        <li>r_showPortals 1</li>
+                        <li>r_showTris 2</li>
+                    </ul>
+                </p>
+            </li>
+
+            <figure>
+                <img src="/BlendTut-7-4-visportal-ingame.jpg" alt="ingame View" width="100%"><figcaption>ingame View</figcaption>
+            </figure>
+            <i>The portals are shown in green and red. Without portals, you would be able to see the curved corridor that's around the corner, which start where the red portal is.</i>
+            <li><p>Pretty easy isn't it ?</p></li>
+        </ol>
+    </li>
+
+    <!--___________________________________________________________________________-->
+
+<li id="8-WORLDSPAWN-VS-FUNC-STATIC">
+    <h1><b>8.WORLDSPAWN VS FUNC_STATIC</b></h1>
+
+
+    <p>Okay, having some basic level geometry is nice, but what if I want some nicer, more complicated things ?</p>
+
+    <p>For this application, it is not needed &ndash; and not recommended &ndash; to use geometry as worldspawn.* objects, like we did previously. We will use an entity classname called <b>func_static</b>.</p>
+
+    <ol>
+        <li>
+            <p>For this example, I'll add a Torus. You are free to insert any mesh you want, even a complete modeled and textured asset you prepared earlier. I'll modify it a bit to make it weird and quickly unwrap it (again, this is just to show an example, no time to make a nice intricate thing).</p>
+            <p><b>Give it a name</b> (in the Object tab or in the Outliner) so you can distinguish it from everything else.</p>
+
+            <p>
+                <figure>
+                    <img src="/BlendTut-8-1-fleshy-torus.jpg" alt="A Fleshy Torus"><figcaption>A Fleshy Torus</figcaption>
+                </figure>
+            </p>
+
+            <p><i>&lt;&lt;</i><i>The Great Bowel Ring&gt;&gt;</i></p>
+        </li>
+
+        <li>
+            <p>Move the object in the <b>"Static Geometry" collection</b> and add these in the custom propreties tab :</p>
+            <ul>
+                <li><b>"Classname : func_static"</b></li>
+                <li><b>"model : <i>yourobjectsname"</i></b></li>
+            </ul>
+
+            <p>
+                <figure>
+                    <img src="/BlendTut-8-2-func-static.jpg" alt="func_static"><figcaption>func_static</figcaption>
+                </figure>
+            </p>
+
+        </li>
+
+        <li>
+            <p>	Export, compile and run the map to check it out !</p>
+
+            <p>
+                <figure>
+                    <img src="/BlendTut-8-3-ingame.jpg" alt="ingame View" width="100%"><figcaption>ingame View</figcaption>
+                </figure>
+            </p>
+
+        </li>
+        <li>
+            <p>
+                If you want to use an seperate model/mesh as func_static but you do not want the geomerty to be included in the worldspawn geomerty/bsp but as a seperate model, you can do so by using the <b><i>inline : 0</i></b> property. This is usefull when you want to keep your dmap compile time low.
+            </p>
+
+            <ul>
+                <li><b>"Classname : func_static"</b></li>
+                <li><b>"model : myModel.glb</b></li>
+                <li><b><i>"inline: 0</i></b></li>
+            </ul>
+    </ol>
+
 
 </li>
 
-<!--___________________________________________________________________________-->
-	<li id="2-BLENDER-SET-UP"><h1><b>2. BLENDER SET-UP</b></h1>
-	
+    <!--___________________________________________________________________________-->
 
-<ol>
-	<li>Download and install Blender &ndash; I use the latest version, 3.3. I haven't tested the workflow with earlier versions)</li>
-	
-	<li>Run Blender, Go to perferences &rarr; Add-ons</li>
-	
-	<li>search for ".gltf" in the search bar, the <b>"Import-Export: glTF 2.0 format"</b>, activate it if it's not turned on.</li>
-	
-	<li>Go to file &rarr; export and check if the <b>"glTF 2.0 ( .glb / gltf )"</b>option shows up. Click it !</li>
-		
-	<li>Let's save the export parameters preset now so we have it ready for later :
+<li id="9-MOVABLES-AND-ENTITY-ORIGINS">
+    <h1><b>9. MOVABLES AND ENTITY ORIGINS</b></h1>
 
+    <p>So, we have covered most of the things, this last one is almost a bonus, but it's just to make an intro on the most magical of subjects : <b><i>Moving things ! Things that move !</i></b></p>
 
-<p>
-	<figure>
-	<img src="/BlendTut-2-1-export-setup.jpg" alt="Export setup"><figcaption>.GLB export setup</figcaption>
-	</figure>
-</p>
-	<p><i>Set the options as in the image above :</i></p>
-	
-	<ul>
-		<li><b>Include</b> : 
-			<ul>
-				<li>Limit to visible objects : I use this to keep some construction objects, or previous versions of objects</li>
-				<li>Data : <b>Custom Propreties</b> : <b>THIS ONE SHOULD BE ALWAYS TURNED ON or else RBDoom3BFG won't get any of the info it needs to run the level</b></li>
-			</ul>
-		</li>
-			
-	<li><b>Transform</b> : <b>Tick "+Y Up"</b></li>
+    <p>For the example's sake, I'll be making some <b>func_rotating</b>, but in Doom 3, it's when using the <b>func_mover</b> that you can get the most freedom. But you control them using level scripts, so it's out of the scope of this document. Normally you should now have enough knowledge to explore further, I'm sure you can do it !</p>
 
-		<li><b>Geometry :</b>
-			<ul>
-				<li>Mesh : <b>Uvs, Normals and Vertex Colors </b>are ticked.</li>
-				<li>Material : Set "Materials" to "Export" and "Images" to "none"</li>
-				<li>PBR extensions and Compression : unticked</li>
-			</ul>
-		</li>
-		<li><b>Animation:</b> Leave	it as is : Animation On, Shape Keys On, Skinning On.</li>
-	</ul>
+    <p>Let's stay with my fleshy torus here, and make it into a rotating flesh torus</p>
 
-	<p><b><span style="background: #ff5429">NOTE : These parameters might change with new updates of the engine. Let me know if it's not up to date !</b></p>
+    <ol>
+        <li><p>Move	the torus into the <b>Movers Collection</b>	we had created earlier in chapter 4</p></li>
+        <li>
+            <p>In the Custom Properties tab :</p>
+            <ul>
+                <li><p>Change Classname from func_static to <b>func_rotating</b></p></li>
+                <li><p>The model string stays the same, as we didn't change the name of the object.</p></li>
+                <li>
+                    <p>Add the following keys and value :</p>
+                    <ul>
+                        <li><b>x_axis : 1</b></li>
+                        <li><b>speed : 200</b></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><p>Save, export, compile and run. Your object should be turning around !</li>
+    </ol>
+    </ol>
 
-	</li>
-	
-	</li>
+    <p>
+        <figure>
+            <img src="/BlendTut-9-func-rotating.jpg" alt="func_rotating in action" width="100%"><figcaption>func_rotating in action</figcaption>
+        </figure>
+    </p>
 
-	<li><p><b>Save the preset : Click the "+" button on the top</b></p>
-
-<p>
-	<figure>
-	<img src="/BlendTut-2-2-preset-save.jpg" alt="Preset save"><figcaption>Preset save</figcaption>
-	</figure>
-</p>
-
-<p>Name your preset "RBDoom3BFG" and save.</p>
-
-	</li>
-
-	<li><b>Saving	a new "startup" file :</b>
-
-		<p>The unit system used in Doom 3 is used <b>as is</b> in the moment in Blender. But Blender uses metric by default, so we have to adjust some things (or else the viewport gets glitchy):</p>
-		
-		<ol>
-			<li><p><b>Viewport setup :</b> With the "huge" distances we'll work with (compared to the Blender default), we have to adjust some things :</p>
-
-<p>
-	<figure>
-	<img src="/BlendTut-2-3-view-clipping.jpg" alt="Setting correct View Clipping distances"><figcaption>Setting correct View Clipping distances</figcaption>
-	</figure>
-</p>
-
-<p>Type in the values above for "Clip Start" and "End". It should be enough for most cases,</p>
-
-		</li>
-
-		<li><p><b>Optional :</b> Set up the unit system to "none" :</p>
-
-<p>
-	<figure>
-	<img src="/BlendTut-2-4-units.jpg" alt="Setting Unit System to None"><figcaption>Setting Unit System to None</figcaption>
-	</figure>
-</p>
-		</li>
-	</ol>
-	</li>
-	
-	<li><p>You can now save your blender file in the base/maps folder so you have it on hand. You can add to it what we will cover in chapter 4 and 5.</p></li>
-
-</ol>
+    <p>Final note : for all the moving mesh entities in Doom 3, <b>the object's origin is used as the pivot point</b>.</p>
+    <p>For objects that are only moved around, this is not too important, but at the moment where you want to turn it around, it's this origin point that will be used as the center. Define it correctly if you want it to move in the way you want !</p>
 
 </li>
 
+    <!--___________________________________________________________________________-->
 
-<!--___________________________________________________________________________-->
-	<li id="3-BASIC-DOOM-3-ENTITIES-KNOWLEDGE"><h1><b>3. BASIC DOOM 3 ENTITIES KNOWLEDGE</b></h1>
-	
-	<p>	In Doom 3 (and other idTech engines as far as I know), all the objects in the map file have at least one parameter for the engine to read and use expressed as the pair <b>"Key + Value".</b></p>
+<li id="10-TRIGGERS">
+    <h1><b>10. TRIGGERS</b></h1>
 
-	<p>First, every Entity has a <b>classname</b>. A few examples :</p>
-<ul>
-	<li>worldspawn : The root of the level geometry, static, Obligatory,</li>
-	<li>info_player_start : The spawningpoint of the player when he enters the level</li>
-	<li>light : So that we can see something in this goddamn research facility !</li>
-	<li>Monsters</li>
-	<li>Movers : Doors, elevators, machinery,... (the Doom 3 engine offers almost unlimited creativity with	these compared to Quake 3 !)</li>
-</ul>
-<p>Then, the other Key + value pairs are specific to each entity's type. For example :</p>
-<ul>
-	<li>The direction in which the player is looking when he spawns</li>
-	<li>You can set the color and power of	the lights</li>
-	<li>Specify the Health Points of a monster different from the default value</li>
-	<li>etc</li>
-</ul>
-<p>Here's a screenshot of the <b>Entity properties</b> panel in <b>Trenchbroom :</b></p>
+    <p>	Triggers are invisible volume entities that get activated when the player (or any other game entity) goes through them. When activated, in Doom 3, they are usually used to call script functions.</p>
 
-<p>
-	<figure>
-	<img src="/BlendTut-3-1-Trenchbroom-entity-panel.jpg" alt="TrenchBroom's Entity Panel"><figcaption>TrenchBroom's Entity Panel</figcaption>
-	</figure>
-</p>
+    <p><i>I won't add screenshots here as this process uses all of the techniques we've seen earlier.</i></p>
 
-<p>In <b>Blender</b>, at the moment, you have to write all the keys + values as the object's <b>Custom Parameters</b>, which we will see right after.</p>
+    <p>To learn how to set triggers up, I'll be using a trigger_hurt, that simply hurts the player &ndash; The effect is clearly visible when activated, so you can see right away if you did it right or not.</p>
 
-</li>
+    <ol>
+        <li><p>Create a shallow platform with a	different texture, as a func_static (as described earlier), anywhere on the ground of the map. This is to help visualize and move where it is to try it out,</p></li>
 
-<!--___________________________________________________________________________-->
-	<li id="4-BLENDER-FILE-STRUCTURE"><h1><b>4. BLENDER/GLTF FILE STRUCTURE</b></h1>
+        <li><p>On top of it, add a new object, a cube or a cylinder, at least 64 units high to match the height of the player. Call it <b>"trigger_hurt_test"</b> for example, and move it to the "triggers" collection (add it if you don't have it).</p></li>
 
-<p>
-<h2> Maps, Models and Scenes </h2>
-Blender can be used to create maps <i>and</i> models!
-<h3> Mapping </h3>
-When running "<i>dmap myFirstGltfMap.glb</i>" the engine will try and proces the scene named <b><i>"Scene"</i></b> by default. This is also the default scene name for blender when creating a new file.
-This can be changed to "MyMapScene" by setting the cvar : "<i>gltf_MapSceneName MyMapScene</i>". 
-<h3> Modeling </h3>
-There are 2 ways to create models with Blender/GLTF for use in RBDoom3BFG
-<ol>
+        <li><p>Create a new material for it, called <b>"textures/common/trigger"</b>. Like for the <b>visportal</b> earlier, you can give it a custom color, in TrenchBroom and Radiant it's usually yellow. And no need to find a texture image for it.</p></li>
 
-<li><p>Using a unique .glb export per model</p>
-</i>All</i> meshes and their submeshes in the scene that was active while exporting will be used as a single model/mesh in game.
-</li>
+        <li>
+            <p>In the <b>Custom properties</b>, add the following :</p>
+            <ul>
+                <li><b>Classname : trigger_hurt</b></li>
+                <li><b>model : trigger_hurt_test</b></li>
+            </ul>
+        </li>
 
-<li><p>Using the same/one  .glb to map <i>and</i> model. <b><i>(Advanced)</b></i></p>
-As mentioned above, a specific scene is used to create the map and can be changed. Similary the <b><i>"models"</i></b> scene will per default be used to lookup models if you want to store multiple models in the same glb. You can change this by setting the cvar : "<i>gltf_ModelSceneName MyModelScene</i>". 
-When specifing the the model in a .def file or model property you have to explicitly specify the model you want to load like so:
-<p><code>"model" "maps/mymap.<b>chair</b>.glb"</code></p>
-In the example above, the model tag will try and resolve the model <b>chair</b> from the models scene in the <b>mymap.glb</b> file. Same applies when specifing a mesh. 
-<p>See <a href="advanced_gltf_mapping">Advanced Mapping and Modeling with Blender/GLTF</a> for more info about using collections and animations.</p>
-</li>
-
-</ol>
-</p>
-
-<p><h2> Example map/scene setup </h2></p>
-<p>This step is not required, but I prefer to keep my file organized, so this is the organization I came up with. It's not carved in stone, anyone can come up with a way that better fits their needs.</p>
-
-<p>Here's the contents of the default Blender startup file :</p>
-
-<p>
-	<figure>
-	<img src="/BlendTut-4-1-default-collection.jpg" alt="The default Blender collection in the Outliner"><figcaption>The default Blender collection in the Outliner</figcaption>
-	</figure>
-</p>
-
-<p>And here's my proposition for a Doom 3 level :</p>
-
-<p>
-	<figure>
-	<img src="/BlendTut-4-2-doom3-collections.jpg" alt="My proposition for a set of relevant collections for a Doom 3 level"><figcaption>My proposition for a set of relevant collections for a Doom 3 level</figcaption>
-	</figure>
-</p>
-
-<p>The collection of Point Entities is pretty bare bones compared to the total amount of different entity types available, so anyone making a more complex level will customize this to their needs.</p>
-<p><b>NOTE: Currently, entities that reside in collections will not be picked up! only meshes/geometry can be nested!</b></p>
+        <li><p>Save, export, compile and try it out ! When moving on the platform, PAIN should happen.</p></li>
+    </ol>
+    <p style="font-style: normal; line-height: 100%; margin-bottom: 0cm">
 
 </li>
 
-<!--___________________________________________________________________________-->
-	<li id="5-MINIMUM-REQUIRED-ENTITIES-FOR-A-MAP"><h1><b>5. MINIMUM REQUIRED ENTITIES FOR A MAP</b></h1>
-	
-<p><b>Okay ! Let's make our first Box map !</b></p>
+    <!--___________________________________________________________________________-->
 
-<ol>
-	<li><p><b>(optional but recommended)</b> reproduce the collection tree described in the previous chapter.</p></li>
+<li id="11-DEBUG-OPTIONS">
+    <h1><b>11. DEBUG OPTIONS</b></h1>
 
-	<li><p><b>The Worldspawn Entity</b></p>
+    <p> gltf_parseVerbose 1 | 0 !</p>
 
-<p><i>The worldspawn entity isn't actually required, but It can store some options for the level, so I advice to always have one included in your level in case you would need them.</i></p>
-
-<p>In Blender, this materializes as an "empty" object located at the origin coordinates.</p>
-
-<ul>
-	<li>Press [shift + a] &rarr; <b>Empty</b> &rarr; <b>Plain Axes</b>.</li>
-	<li>Name it <b>worldspawn</b>.</li>
-	<li>You can move it in the "Worldspawn / BSP" collection in the Outliner tab.</li>
-	<li>Make sure it's located at the origin coordinates :</li>
-</ul>
-
-<p>
-	<figure>
-	<img src="/BlendTut-5-1-worldspawn.jpg" alt="Worldspawn Origin at 0,0,0"><figcaption>Worldspawn Origin at 0,0,0</figcaption>
-	</figure>
-</p>
-
-<p>
-	<figure>
-	<img src="/BlendTut-5-2-worldspawn-axes-size.jpg" alt="Empty axes size"><figcaption>Empty axes size</figcaption>
-	</figure>
-</p>
-
-<p><i>No need to give it a different viewport display, the default "plain axes" is fine, also with the default size of 1.</i></p>
-
-<p>Then, The <b>Custom Propreties</b> have to be set up :</p>
-<ul>
-	<li>Get back in the <b>Object Properties</b> panel (where we made sure the "empty" was at coordinates 0,0,0)</li>
-	<li><p>Click "new",</p></li>
-	<li><p>Click the <b>little gear</b></p></li>
-	<li><p>set the <b>type</b> to <b>"String"</b>,</p></li>
-	<li><p><b>Property Name</b> to <b>"classname"</b></p></li>
-</ul>
-
-<p>
-	<figure>
-	<img src="/BlendTut-5-3-adding-custom-property.jpg" alt="Adding a Custom Property"><figcaption>Adding a Custom Property</figcaption>
-	</figure>
-</p>
-
-<p>Then type "<b>worldspawn</b>" in the field next to "classname".</p>
-
-<p>You should now have these info in :</p>
-
-<p>
-	<figure>
-	<img src="/BlendTut-5-4-worldspawn-classname.jpg" alt="Worldspawn Classname"><figcaption>Worldspawn Classname</figcaption>
-	</figure>
-</p>
-
-<p>The worldspawn entity can store othe info useful for your level, such as the path to background music, custom gravity ... You can check in TrenchBroom what's available.</p>
+    <p> This will print every property / gltf item to the console while the GLTF is parsed. In essence it shows you the .gltf content (which is also present in a glb, but then packed) </p>
 
 </li>
 
-	<li><p><b>The Worldspawn Geometry</b></p>
+    <!--___________________________________________________________________________-->
 
-		<ol>
-			<li><p>Add a cube, with a size of 1024 for example.</p></li>
-			<li><p>Press [tab] to get into Edit mode, select all, and invert the normals ([alt + n] &rarr; Flip).</p></li>
-			<li><p><i>Let's ignore any kind of UV unwrapping for the moment.</i></p></li>
-			<li><p>Optional : Move all the geometry or the bottom face 512 units up (press [g] <i>(grab)</i> &rarr; press[z] <i>(z axis)</i> &rarr;type 512 + [enter].</p>
-				<p><i>(I like when the ground plane is at 0 ^^')</i></p></li>
-			<li><p>In the Outliner, move the "Cube" into the "Worldspawn / BSP" and <b>rename</b> it <b>"worldspawn.cube"</b></p></li>
-			<li><p>No need to add custom propreties :<br/>
-			<b>[The compiler will take any objects with the "worldspawn." prefix to make the level geometry structure]</b></p></li>
-		</ol>
-	</li>
+<li id="12-CONCLUSION">
+    <h1><b>12. CONCLUSION</b></h1>
 
-	<li><p><b>The Player's spawning point</b></p>
-	
-		<ol>
-			<li><p>Create a new Empty object, display type <b>"Cube"</b></p></li>
-			<li><p>Set the size to "64"</p>
-			<p><i>(For the moment, we use a cube for visual guide, but in game the player size is 32x32x64)</i></p></li>
-			<li><p><i>(optional but good to do for consistency) </i><b>Rename</b> the object to <b>info_player_spawn_0</b></p></li>
-			<li><p>Add the <b>custom propreties : Classname : info_player_start</b></p>
+    <p>Congratulations if you made it through !</p>
 
-<p>
-	<figure>
-	<img src="/BlendTut-5-5-info-player-spawn.jpg" alt="info_player_start"><figcaption>info_player_start</figcaption>
-	</figure>
-</p>
+    <p>I hope this document was helpful for you, in the same way that I find it liberating to be able to use Blender as a level editor for RBDoom3BFG. Even before talking about making a standalone game, having the freedom to use a modern and feature packed tool like Blender t make maps is really exciting to me !</p>
 
-</li>
+    <p>If you're new to level design for Doom 3, then most of the general tutorials you can find online can be applied in Blender</p>
 
-			<li><p>	Move it a bit further from the origin point, and 32 units above the ground, and anywhere inside	the cube on the horizontal plane</p></li>
-			<li><p>	Save your file ! <i>(Gotcha ! I'm sure you forgot about that !)</i></p></li>
 
-		</ol>
-	</li>
-	
-	<li><p><b>The Light</b></p>
-
-	<ol>
-		<li><p>Add a Light &rarr; <b>Point</b> object.</p></li>
-		<li><p>Add the Custom Properties <b>Classname : light </b>as described earlier</p></li>
-		<li><p>Add another Custom proprety :</p></li>
-		<ul>
-			<li>Type : String</li>
-			<li>Name : <b>light</b></li>
-			<li>value : <b>512</b>
-			<p><i> The default value of a light in Doom 3 is 300, if you don't specify the value in the entity, it will revert to that,</i></p></li>
-		</ul>
-
-		<li><p>If you use the Material preview <u>or</u> the viewport Cycles renderer, you have to multiply the light value entered here <b>by 750</b> to have an approximation of the light's radius in Blender. Yeah this gives absurdly high numbers, but it's because of how point lights work in Blender</p></li>
-	</ol>
-
-	</li>
-
-	<li><p><b>Exporting and testing</b></p>
-
-
-		<ol>
-			<li><p>Go to file &rarr; Export &rarr; <b>glTF 2.0 ( .glb / gltf )</b></p></li>
-			<li><p>Save the ,glb file in base/maps</p>
-			<p><i>(I usually create another subfolder, all the compiling creates additional files and the main folder can easily get crowded)</i></p></li>
-
-			<li><p>Run RBDoom3BFG.exe</p></li>
-			<li><p>Open the console, type dmap <i>myboxmap</i>.glb (it should be almost instantaneous)</p></li>
-			<li><p>type	map <i>myboxmap</i>.glb</p></li>
-			<li><p>You should spawn and have a view that looks somewhat like that : </p>
-		
-<p>
-	<figure>
-	<img src="/BlendTut-5-6-ingame-test.jpg" alt="ingame test" width="100%"><figcaption>ingame test</figcaption>
-	</figure>
-</p>
-		</li>
-	</ol>
-
-	<p><b>Congratulations !</b></p>
-
-
-<p>When in doubt, open the idTech4 wiki or Trenchbroom, look at the list of all available entities, and all the available key + value pairs you can use.</p>
-
-	</li>
-
-	<li><p><b>Common user errors :</b></p>
-
-<p>Multiple times, the map wouldn't load, or my entities would not show up ingame after exporting the map.</p>
-<p><b>The mistake was that I didn't enter the custom propreties in the right tab. IT HAS TO BE IN THE OBJECT TAB !</b></p>
-
-<p>Also, <b>watch out for <u>typos</u> !</b></p>
-
-<p>
-	<figure>
-	<img src="/BlendTut-5-7-correct-properties-panel.jpg" alt="Correct Propreties Panel to use"><figcaption>Correct Propreties Panel to use</figcaption>
-	</figure>
-</p>
-	</li>
-	
-	<li><p><b>Future plans</b></p>
-
-<p>There are some plans by @SomaZ on the Discord Server to develop an Add-on that makes adding key + value pairs more convenient that inserting them manually in the Custom Propreties tab. Also update the light power value directly from what you enter for the entity. And a simple button to export the map without having to talke the long road through the menu and dialog. And possibly more features, but let's wait for a release to document everything.</p>
-	</li>
-	</ol>
-
-
-</li>
-<!--___________________________________________________________________________________-->
-
-	<li id="6-TEXTURES-MATERIALS"><h1><b>6. TEXTURES / MATERIALS</b></h1>
-
-<p>I will make assumption you know how to set up materials in Doom 3 / RBDoom3BFG.</p>
-
-<p>
-	<figure>
-	<img src="/BlendTut-6-1-texture-name.jpg" alt="Material name"><figcaption>Material name</figcaption>
-	</figure>
-</p>
-
-<p>To assign a material to a mesh and have it display correctly ingame, it's really simple :</p>
-<ol>
-	<li><p>Create a new material in the	corresponding tab while having your mesh object selected (worldspawn.cube in the previous chapter for example)</p></li>
-	<li><p>Rename it with the material's path and name in your Doom 3 folder. Example :</p>
-	<p><b>textures/base_floor/a_sofloor3_d</b> <i>(which I like a lot)</i></p>
-	<p><i>(Yes, it's as simple as that to have it working in game !</i></p>
-	</li>
-</ol>
-
-<p>But since we didn't UV Unwrap our Cube, it looks like shit : </p>
-
-<p>
-	<figure>
-	<img src="/BlendTut-6-1-UV-stretched.jpg" alt="Stretched UVs"><figcaption>Stretched UVs</figcaption>
-	</figure>
-</p>
-
-<p>Let's fix that quickly.</p>
-
-	<ol>
-		<li><p>	Divide your workspace with with a 3D viewport, a UV Editor, and a Shader Editor.</p></li>
-		
-		<li><p>Select your <b>t</b><b>extures/</b><b>base_floor/a_sofloor3_</b><b>d01f</b> And set up a "dummy" material.<br/>
-		<i>I use the word "dummy" because it's only for visualisation in Blender, this has no incidence in RBDoom3BFG, because it only relies on the material defined in the .mtr files.</i></p></li>
-		
-		<li><p>You can find the corresponding image files to any of the doom 3 textures you want in the following folder : <b>/base/_tb/</b><b>textures/</b><b>*</b>.</p>
-
-<p>
-	<figure>
-	<img src="/BlendTut-6-2-material-setup.jpg" alt="Material Setup"><figcaption>Material Setup</figcaption>
-	</figure>
-</p>
-
-		<p><i>If you want to use the original Doom 3 textures, you can also explore the texture browser in Trenchbroom to find one you like, and then type in the name in Blender + browse to get the corresponding image file. We might have a texture browser in the future, along with all the game entities, all conveniently using Blender's new Asset Browser. But it's not done at the time I'm writing this.</i></p>
-		</li>
-
-		<li><p>In the 3D viewport, press [tab] / go to Edit Mode, press [u], select Cube Projection, press Enter. In the UV Editor, you cans select all faces and scale them by 16 for example. It should start to look more natural in Blender :</p>
-
-
-<p>
-	<figure>
-	<img src="/BlendTut-6-3-viewport-preview.jpg" alt="Viewport Preview"><figcaption>Viewport Preview</figcaption>
-	</figure>
-</p>
-
-<p>And Also in RBDoom3BFG after re-exporting and re-compinling the map :</p>
-
-<p>
-	<figure>
-	<img src="/BlendTut-6-4-ingame-view.jpg" alt="ingame View" width="100%"><figcaption>ingame View</figcaption>
-	</figure>
-</p>
-
-	<b>Warning</b> : If there is a
-spelling error in the texture name you entered, the dmap compilation
-will say the map is leaking. Watch out !</p>
-
-		</li>
-	</ol>
-	
-</li>
-
-<!--___________________________________________________________________________-->
-
-	<li id="7-VISPORTAL"><h1><b>7. MAKING A MORE COMPLEX MAP AND USING VISPORTAL</b></h1>
-	
-
-<p>Okay, let's spice things a little. One of the most important features if idTech engines since Quake 1 is the ability to hide the parts of the level that aren't seen in a very efficient way. This is also achievable here without using a traditional level editor.</p>
-
-	<ol>
-		<li><p>Make a quick layout with several rooms connected by corridors or simple doorways. You can start with the Cube we made earlier or start from a fresh piece of geometry. Make sure the geometry is "airtight" with no duplicate / overlapping vertices or holes, AND that your object is still	named <b>"worldspawn.</b><i><b>something</b></i><b>"</b> (and in the "Worldspawn / BSP" collection").</p>
-
-<p>
-	<figure>
-	<img src="/BlendTut-7-1-level-layout.jpg" alt="An example Level Layout"><figcaption>An example Level Layout</figcaption>
-	</figure>
-</p>
-		</li>
-
-		<li><p>In Edit mode :</p>
-		<ul>
-			<li>take the frame of the	entrance of a corridor, and make a face out of it (press [f]).</li>
-			<li>Press [p] to separate it from the mesh into a new object.</li>
-			<li>Give it a new material called <b>"textures/</b><b>editor</b><b>/visportal"</b>.<br/>
-			&rarr; <i>No need to load a texture or UV unwrap this, just add a base color to the material (purple for example, to mimic the tone it has in Trenchbroom or Radiant) to make your work more readable in the 3D view.</i>
-		</ul>
-
-<p>
-	<figure>
-	<img src="/BlendTut-7-2-visportal-material.jpg" alt="Visportal Material Setup"><figcaption>Visportal Material Setup</figcaption>
-	</figure>
-</p>
-
-</li>
-
-		<li><p>Repeat previous point for all the corridor and room entrances</p>
-<p>
-	<figure>
-	<img src="/BlendTut-7-3-visportal-placement.jpg" alt="Visportal Placement"><figcaption>Visportal Placement</figcaption>
-	</figure>
-</p>
-		</li>
-		
-		<li><p>Export and try it out !</p>
-			<p>After loading the map, type in the console :</p>
-				<p><ul>
-					<li>r_showPortals 1</li>
-					<li>r_showTris 2</li>
-				</p></ul>
-		</li>
-	
-<p>
-	<figure>
-	<img src="/BlendTut-7-4-visportal-ingame.jpg" alt="ingame View" width="100%"><figcaption>ingame View</figcaption>
-	</figure>
-</p>
-
-<p>
-<i>The portals are shown in green and red. Without portals, you would be able to see the curved corridor that's around the corner, which start where the red portal is.</i></p>
-
-		<li><p>Pretty easy isn't it ?</p></li>
-	</ol>
-
-	
-</li>
-
-<!--___________________________________________________________________________-->
-
-	<li id="8-WORLDSPAWN-VS-FUNC-STATIC"><h1><b>8.WORLDSPAWN VS FUNC_STATIC</b></h1>
-	
-
-<p>Okay, having some basic level geometry is nice, but what if I want some nicer, more complicated things ?</p>
-
-<p>For this application, it is not needed &ndash; and not recommended &ndash; to use geometry as worldspawn.* objects, like we did previously. We will use an entity classname called <b>func_static</b>.</p>
-
-<ol>
-	<li><p>For this example, I'll add a Torus. You are free to insert any mesh you want, even a complete modeled and textured asset you prepared earlier. I'll modify it a bit to make it weird and quickly unwrap it (again, this is just to show an example, no time to make a nice intricate thing).</p>
-	<p><b>Give it a name</b> (in the Object tab or in the Outliner) so you can distinguish it from everything else.</p>
-
-<p>
-	<figure>
-	<img src="/BlendTut-8-1-fleshy-torus.jpg" alt="A Fleshy Torus"><figcaption>A Fleshy Torus</figcaption>
-	</figure>
-</p>
-
-<p><i>&lt;&lt;</i><i>The Great Bowel Ring&gt;&gt;</i></p>
-	</li>
-
-	<li><p>Move the object in the <b>"Static Geometry" collection</b> and add these in the custom propreties tab :</p>
-		<ul>
-			<li><b>"Classname : func_static"</b></li>
-			<li><b>"model : <i>yourobjectsname"</i></b></li>
-		</ul>
-
-<p>
-	<figure>
-	<img src="/BlendTut-8-2-func-static.jpg" alt="func_static"><figcaption>func_static</figcaption>
-	</figure>
-</p>
-
-	</li>
-
-	<li><p>	Export, compile and run the map to check it out !</p>
-
-<p>
-	<figure>
-	<img src="/BlendTut-8-3-ingame.jpg" alt="ingame View" width="100%"><figcaption>ingame View</figcaption>
-	</figure>
-</p>
-
-	</li>
-<li><p>
-If you want to use an seperate model/mesh as func_static but you do not want the geomerty to be included in the worldspawn geomerty/bsp but as a seperate model, you can do so by using the <b><i>inline : 0</i></b> property. This is usefull when you want to keep your dmap compile time low.</p>
-
-		<ul>
-			<li><b>"Classname : func_static"</b></li>
-			<li><b>"model : myModel.glb</b></li>
-                        <li><b><i>"inline: 0</i></b></li>
-		</ul>
-</ol>
-
-	
-</li>
-
-<!--___________________________________________________________________________-->
-
-	<li id="9-MOVABLES-AND-ENTITY-ORIGINS"><h1><b>9. MOVABLES AND ENTITY ORIGINS</b></h1>
-	
-<p>So, we have covered most of the things, this last one is almost a bonus, but it's just to make an intro on the most magical of subjects : <b><i>Moving things ! Things that move !</i></b></p>
-
-<p>For the example's sake, I'll be making some <b>func_rotating</b>, but in Doom 3, it's when using the <b>func_mover</b> that you can get the most freedom. But you control them using level scripts, so it's out of the scope of this document. Normally you should now have enough knowledge to explore further, I'm sure you can do it !</p>
-
-<p>Let's stay with my fleshy torus here, and make it into a rotating flesh torus</p>
-
-	<ol>
-		<li><p>Move	the torus into the <b>Movers Collection</b>	we had created earlier in chapter 4</p></li>
-		<li><p>In the Custom Properties tab :</p>
-			<ul>
-				<li><p>Change Classname from func_static to <b>func_rotating</b></p></li>
-				<li><p>The model string stays the same, as we didn't change the name of the object.</p></li>
-				<li><p>Add the following keys and value :</p>
-					<ul>
-						<li><b>x_axis : 1</b></li>
-						<li><b>speed : 200</b></li>
-					</ul>
-				</li>
-			</ul>
-			</li>
-		<li><p>Save, export, compile and run. Your object should be turning around !</li>
-	</ol>
-</ol>
-
-<p>
-	<figure>
-	<img src="/BlendTut-9-func-rotating.jpg" alt="func_rotating in action" width="100%"><figcaption>func_rotating in action</figcaption>
-	</figure>
-</p>
-
-<p>Final note : for all the moving mesh entities in Doom 3, <b>the object's origin is used as the pivot point</b>.</p>
-<p>For objects that are only moved around, this is not too important, but at the moment where you want to turn it around, it's this origin point that will be used as the center. Define it correctly if you want it to move in the way you want !</p>
-
-</li>
-
-
-<!--___________________________________________________________________________-->
-
-	<li id="10-TRIGGERS"><h1><b>10. TRIGGERS</b></h1>
-	
-<p>	Triggers are invisible volume entities that get activated when the player (or any other game entity) goes through them. When activated, in Doom 3, they are usually used to call script functions.</p>
-
-<p><i>I won't add screenshots here as this process uses all of the techniques we've seen earlier.</i></p>
-
-<p>To learn how to set triggers up, I'll be using a trigger_hurt, that simply hurts the player &ndash; The effect is clearly visible when activated, so you can see right away if you did it right or not.</p>
-
-<ol>
-	<li><p>Create a shallow platform with a	different texture, as a func_static (as described earlier), anywhere on the ground of the map. This is to help visualize and move where it is to try it out,</p></li>
-	
-	<li><p>On top of it, add a new object, a cube or a cylinder, at least 64 units high to match the height of the player. Call it <b>"trigger_hurt_test"</b> for example, and move it to the "triggers" collection (add it if you don't have it).</p></li>
-	
-	<li><p>Create a new material for it, called <b>"textures/common/trigger"</b>. Like for the <b>visportal</b> earlier, you can give it a custom color, in TrenchBroom and Radiant it's usually yellow. And no need to find a texture image for it.</p></li>
-	
-	<li><p>In the <b>Custom properties</b>, add the following :</p>
-		<ul>
-			<li><b>Classname : trigger_hurt</b></li>
-			<li><b>model : trigger_hurt_test</b></li>
-		</ul>
-	</li>
-
-	<li><p>Save, export, compile and try it out ! When moving on the platform, PAIN should happen.</p></li>
-</ol>
-<p style="font-style: normal; line-height: 100%; margin-bottom: 0cm">
-
-</li>
-
-<!--___________________________________________________________________________-->
-
-	<li id="11-DEBUG-OPTIONS"><h1><b>11. DEBUG OPTIONS</b></h1>
-	
-<p> gltf_parseVerbose 1 | 0 !</p>
-
-<p> This will print every property / gltf item to the console while the GLTF is parsed. In essence it shows you the .gltf content (which is also present in a glb, but then packed) </p
-
-</li>
-
-<!--___________________________________________________________________________-->
-
-	<li id="12-CONCLUSION"><h1><b>12. CONCLUSION</b></h1>
-	
-<p>Congratulations if you made it through !</p>
-
-<p>I hope this document was helpful for you, in the same way that I find it liberating to be able to use Blender as a level editor for RBDoom3BFG. Even before talking about making a standalone game, having the freedom to use a modern and feature packed tool like Blender t make maps is really exciting to me !</p>
-
-<p>If you're new to level design for Doom 3, then most of the general tutorials you can find online can be applied in Blender</p>
-
-
-<p> Credits : Tutorial written in october 2022 by D-Meat (dmeat.art@gmail.com - @D-Meat on the [idTech4 Discord Server](https://discord.gg/B4Hx8SSs))
+    <p> Credits : Tutorial written in october 2022 by D-Meat (dmeat.art@gmail.com - @D-Meat on the [idTech4 Discord Server](https://discord.gg/B4Hx8SSs))
 
 </li>
 
