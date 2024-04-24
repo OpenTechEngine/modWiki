@@ -297,6 +297,8 @@ title: RBDoom3BFG Blender/GLTF2 Mapping Tutorial
                     <li><p>Add a cube, with a size of 1024 for example.</p></li>
                     <li><p>Press [tab] to get into Edit mode, select all, and invert the normals ([alt + n] &rarr; Flip).</p></li>
                     <li><p><i>Let's ignore any kind of UV unwrapping for the moment.</i></p></li>
+                    <li><p>Rename / add a new material, to an existing Doom 3 material, that is SOLID (if not, the map will leak and won't compile).</p>
+                    <p>For example : textures/base_floor/a_sofloor3_d</p></li>
                     <li>
                         <p>Optional : Move all the geometry or the bottom face 512 units up (press [g] <i>(grab)</i> &rarr; press[z] <i>(z axis)</i> &rarr;type 512 + [enter].</p>
                         <p><i>(I like when the ground plane is at 0 ^^')</i></p>
