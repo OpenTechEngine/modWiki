@@ -13,24 +13,24 @@ This function will scale the specified image by a defined amount.
 Usage
 -----
 
-    scale ([map], [scalar])
+    scale ([map], [float],[float],[float],[float])
 
 Parameters
 ----------
 
 -   [map] - The image to be scaled.
--   [scalar] - The amount to scale the image.
+-   [float] - RGBA
 
 Example
 -------
 
-Reduce the size by half...
+Reduce red by 50%
 
     textures/half_size
     {
       {      
         blend diffusemap
-        map   scale(textures/decals/plasma_burn.tga, 0.5)
+        map   scale(textures/decals/plasma_burn.tga, 0.5,1,1,1)
       }
     }
 
