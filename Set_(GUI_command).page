@@ -38,6 +38,12 @@ Command
 
 Execute a gui command on the client. By using "cmd" as the first property, you tell the game to execute some action on the player's own game. Commands are case insensitive. Commands are either handled by the engine or passed on to the [game code](Coding "Coding") , where there is further differentiation between menus and entities.
 
+These are **not** the usual console commands, but the ones in the list below.
+
+You can however execute a console command like this:
+
+    set "cmd" "exec" "vid_restart";
+
 ### Engine GUI Commands
 
 -   abort
