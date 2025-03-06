@@ -211,6 +211,20 @@ You can use the following command line arguments with ATI's The Compressonator:
     thecompressonator -convert "diffuse.tga" "diffuse.dds" DXT1 -mipmaps 
     thecompressonator -convert "diffuse.tga" "diffuse.dds" DXT3 -mipmaps
 
+### Update from the future (2025)
+
+Compressonator still exists and is open source: [https://github.com/GPUOpen-Tools/compressonator](https://github.com/GPUOpen-Tools/compressonator)  
+Make sure to use the latest version, there were versions that didn't create all required mipmap levels, which could result in Doom3/OpenGL silently rendering the texture as black!
+
+It now uses a different syntax, though, see its documentation.
+
+
+idTech4-specific info: To get the (misnamed) "RXGB" DXT5 textures for normalmaps, use the `-fd DXT5_xGBR` option of modern Compressonator.  
+*(Yes, the channel layout is actually xGBR, red is moved into the alpha channel, the real red channel either gets data from the alpha channel or 0. No idea why they called it "RXGB"...)*
+
+An alternative commandline tool that (despite its name) also supports DXT1/3/5 (which now, in the future, is usually called BC1/2/3) is (a special version of) [bc7enc](https://github.com/DanielGibson/bc7enc_rdo).  
+It has advanced options to massage the created files in a way to be better compressible, for example by the ZIP compression of .pk4 files.
+
 ### Compression Notes
 
 See the [modding](Modding "Modding") page for how to automatically compress all your assets for distribution.
@@ -257,7 +271,7 @@ See also
 ### DDS format
 
 -   [Nvidia DDS Thumbnail Viewer + DDS Utilities](https://developer.nvidia.com/legacy-texture-tools)
--   [ATI Compressonator](http://developer.amd.com/tools-and-sdks/archive/legacy-cpu-gpu-tools/the-compressonator/)
+-   [~~ATI~~ AMD Compressonator](https://gpuopen.com/compressonator/)
 -   [GIMP DDS Plugin](https://code.google.com/p/gimp-dds/)
 
 ### Cube maps
