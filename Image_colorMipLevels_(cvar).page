@@ -10,7 +10,9 @@ Description
 
 Colours the different mip levels to check filtering.
 
-Only works with uncompressed textures!
+Only works with uncompressed textures!  
+Also, as the mip levels are colored when loading the textures, it requires a `vid_restart` or setting it as a commandline parameter.
+
 
 Usage
 -----
