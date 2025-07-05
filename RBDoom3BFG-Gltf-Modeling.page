@@ -7,14 +7,16 @@ title: Exporting Gltf format models for RBDoom3BFG
 
 
 EXPORTING GLTF2 MODELS WITH WORKING VERTEX COLORS
+=================================================
 
 BLENDER 4.4.3
+-------------
 
 This tutorial is for models that are exported as separate map objects that are referenced un fun_static entities in your main map, this won't work with geometry that's inside the level and used as is in a func_static.
 
 __________________________________
 
-1. Check the TYPE of color attribute you used when painting your vertex colors :
+### 1. Check the TYPE of color attribute you used when painting your vertex colors :
 - In the mesh info tab (green triangle), go down to the "color attribute panel
 - Rename your Color Attribute to "_COLOR_0"
 - To the right of the name of the color attribute, there is the type of vertex color
@@ -23,7 +25,7 @@ __________________________________
 - Click "Convert Attribute"
 - Set domain to Vertex and Data type to Color
 
-2. Export Settings :
+### 2. Export Settings :
 - In the Gltf Export window :
 - Go in Data -> Mesh -> Vertex Color
 - Set "Use Vertex Color" to Active
@@ -32,7 +34,7 @@ __________________________________
 - Materials : Export
 - Images : None
 
-3. It should work.
+### 3. It should work.
 - In your Shader, the stage keyword is vertexColor, watch out for typos
 - The "map" color data (0 to 1 for each color channel) will be multiplied by the vertex color data.
 - To have only the vertex color appear, use map _white as base color.
