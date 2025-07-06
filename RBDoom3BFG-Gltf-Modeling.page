@@ -38,3 +38,41 @@ __________________________________
 - In your Shader, the stage keyword is vertexColor, watch out for typos
 - The "map" color data (0 to 1 for each color channel) will be multiplied by the vertex color data.
 - To have only the vertex color appear, use map _white as base color.
+
+### 4. Complete blending material example
+
+This material is taken from the "mod_unittest" on Robert "Takeshi" Beckeman's Github repositery.
+
+It blends correctly the diffuse color and the normal map, but the specularity has to be ignored.
+
+Having acomplete PBR blend has yet to be experimented
+
+	textures/polyhaven/terrain/rock/rocky_trail_snow_blend
+	{
+	stone
+	qer_editorimage	textures/polyhaven/terrain/snow/snow_02_diff_1k
+
+	normalmap	textures/polyhaven/terrain/snow/snow_02_nor_gl_1k
+	{
+		blend	basecolormap
+		map		textures/polyhaven/terrain/snow/snow_02_diff_1k
+		vertexColor
+	}
+	{
+		blend	specularmap
+		map		_black
+		vertexColor
+	}
+
+	normalmap	textures/polyhaven/terrain/rock/rocky_trail_nor_gl_1k
+	{
+		blend	basecolormap
+		map		textures/polyhaven/terrain/rock/rocky_trail_diff_1k
+		inverseVertexColor
+	}
+	{
+		blend	specularmap
+		map		_black
+		inverseVertexColor
+	}
+	}
