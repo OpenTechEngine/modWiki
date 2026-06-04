@@ -26,7 +26,7 @@ Parameters
 ### Types
 
  eyeBall   
-Used for eyeball materials on NPCs to allow for pupils to move along with whatever the NPC is looking at.
+Used for eyeball materials on NPCs to allow for pupils to move along with whatever the NPC is looking at. See below for more information
 
  expand \<amount\>   
 Expand the surface along it's normals.
@@ -59,6 +59,20 @@ Causes wave-like distortion based on the given table.
 Example:
 
     deform turbulent sinTable 0.05 (time * 1) 10
+
+About eyeballs
+--------------
+
+*Each* eyeball of a model is a drawsurf with an eyeball transform and consists of exactly three parts:
+
+* A single triangle (relatively closely) behind the eye mesh to indicate the origin of the eye (not rendered)
+* A single triangle (relatively far) in front of the eye mesh, for the looking direction (not rendered)
+* The eyeball mesh itself - up to 10 **contiguous / connected** triangles (20 in dhewm3 >= 1.5.5)
+
+Internally, each part is called a "triangle island", so if you get an Warning like **`R_EyeballDeform: 4 triangle islands`** (or any other number that's not 3) it means that more than the three required parts were detected (or less if it says 1 or 2).  
+If your mesh *looks* correct but you still get this error it probably means that your eyeball mesh has duplicate vertices, like two vertices at the same position used by neighboring triangles, possibly with different texture coordinates. Fix it so you don't have duplicate vertices and neighboring triangles share at least one vertex - then `R_EyeballDeform()` can detect them as a connected "island".
+
+Your eyeball mesh will usually not be a complete (round) eyeball but only the front part that's actually visible from outside.
 
 Notes
 -----
