@@ -47,7 +47,11 @@ If you have multiple materials in your object :
 - The "map" color data (0 to 1 for each color channel) will be multiplied by the vertex color data.
 - To have only the vertex color appear, use map _white as base color.
 
-### 4. Complete blending material example
+### 4. Material Definition
+- Use the keyword vertexColors - watch out for lowercase / uppercase typos !
+- Don't use the "rmaomap" keyword in RBDoom3BFG, it will override / ignore the vertex colors while still drawing the diffuse map correctly
+
+### 5. Complete blending material example
 
 This material is taken from the "mod_unittest" on Robert "Takeshi" Beckeman's Github repositery.
 
