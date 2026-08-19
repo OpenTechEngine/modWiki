@@ -18,17 +18,25 @@ __________________________________
 
 ### 1. Check the TYPE of color attribute you used when painting your vertex colors :
 - In the mesh info tab (green triangle), go down to the "color attribute panel
-- Rename your Color Attribute to "_COLOR_0"
+- Rename your Color Attribute to "Attribute"
 - To the right of the name of the color attribute, there is the type of vertex color
 - it should be "Vertex - Color"
 - if different, click on the small down V arrow under the + - buttons (on the right of the list)
 - Click "Convert Attribute"
 - Set domain to Vertex and Data type to Color
 
+### 3. Material setup
+The object needs a basic material set up in Blender in order to work.
+- Make sure the object has a material
+- In the Shader Editor, Add a Color Attribute node, and specify the name "Attribute" as we named it previously.
+
+If you have multiple materials in your object :
+- Be sure the material where you used the Color Attribute node is the first in the list.
+
 ### 2. Export Settings :
 - In the Gltf Export window :
 - Go in Data -> Mesh -> Vertex Color
-- Set "Use Vertex Color" to Active
+- Set "Use Vertex Color" to Name and type "Attribute"
 - Have the two checkboxes below ticked
 - Go in Data -> Material :
 - Materials : Export
