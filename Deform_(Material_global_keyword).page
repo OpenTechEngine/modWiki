@@ -25,35 +25,35 @@ Parameters
 
 ### Types
 
- eyeBall   
+ __eyeBall__   
 Used for eyeball materials on NPCs to allow for pupils to move along with whatever the NPC is looking at. See below for more information
 
- expand \<amount\>   
+ __expand__ \<amount\>   
 Expand the surface along it's normals.
 
- flare \<size\>   
+ __flare__ \<size\>   
 Used for light flares which are seen as bloom-like areas around light fixtures.
 
- move \<amount\>   
+ __move__ \<amount\>   
 Moves the surfaces along it's X axis.
 
 Example:
 
     deform move (time * 1)
 
- particle \<particleDecl\>   
+ __particle__ \<particleDecl\>   
 Emit the specified particles from the surface.
 
- particle2 \<particleDecl\>   
+ __particle2__ \<particleDecl\>   
 It will emit particles like **particle** while ignoring the surface area. As a result, small surfaces emit as much particles as large surfaces.
 
- sprite   
+ __sprite__   
 Causes any surface to which this material is applied to behave as a sprite in that it always faces the player.
 
- tube   
+ __tube__   
 Causes the surface to appear bent around a tube.
 
- turbulent \<table\> \<range\> \<timeoffset\> \<domain\>   
+ __turbulent__ \<table\> \<range\> \<timeoffset\> \<domain\>   
 Causes wave-like distortion based on the given table.
 
 Example:
