@@ -62,6 +62,22 @@ Example:
     deform turbulent sinTable 0.05 (time * 1) 10
 ![deform turbulent sinTable 0.05 (time * 1) 10](/deform-turbulence.gif)
 
+textures/dmt_cave/id4logo
+{
+	nonsolid
+	clamp
+	deform turbulent sinTable 0.05 (time * 1) 10
+	
+	{
+		blend			blend
+		map				textures/dmt_cave/idtech4_logo_icon.png
+		alphaTest		0.5
+		scale 1.2, 1.2
+		scroll -0.1, -0.1
+		
+	}
+}
+
 About eyeballs
 --------------
 
