@@ -54,7 +54,8 @@ Causes any surface to which this material is applied to behave as a sprite in th
 Causes the surface to appear bent around a tube.
 
  __turbulent__ \<table\> \<range\> \<timeoffset\> \<domain\>   
-Causes wave-like distortion based on the given table.
+Causes wave-like distortion __of the UV coordinates only__ based on the given table.
+This doesn't do Vertex movement in XYZ Like in Quake 3.
 
 Example:
 
